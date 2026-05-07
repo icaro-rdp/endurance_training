@@ -12,7 +12,7 @@
 % USER SETTINGS — update FTP and Threshold Pace here after each retest
 % =========================================================
 \def\currentFTP{260}    % cycling FTP in watts
-\def\currentCS{285}     % running Threshold Pace in seconds per km
+\def\currentCS{280}     % running Threshold Pace in seconds per km
                         %   240 = 4:00/km, 255 = 4:15/km, 270 = 4:30/km
                         % Estimate via 3-min all-out test, or two TTs
                         % (e.g. 3 min + 9 min): TP = (D2 - D1) / (T2 - T1).
@@ -79,7 +79,7 @@
 % PER-DAY CELL MACROS — one training per column
 % =========================================================
 
-% Monday — recovery spin (always identical)
+% WO1 — recovery spin (always identical)
 \newcommand{\DayMon}{%
   \hlZone\footnotesize\textbf{Z1 Spin}\par
   {\scriptsize 90'\,@\,\rng{45}{50}}%
@@ -96,6 +96,12 @@
 \newcommand{\DayRun}[4]{%
   \runcolor{#3}\footnotesize\textbf{#1 Run}\par
   {\scriptsize #2\,km @ #3--#4\%~TP\par(\rpace{#4}--\rpace{#3})}%
+}
+
+% Tempo interval run cell: \DayRunInt{sets}{duration}{lo%TP}{hi%TP}{rec}
+\newcommand{\DayRunInt}[5]{%
+  \runcolor{#3}\footnotesize\textbf{Tempo Intervals}\par
+  {\scriptsize #1$\times$#2' @ #3--#4\%~TP\par(\rpace{#4}--\rpace{#3})\par\textit{#5 jog rec}}%
 }
 
 % Weekend ride cell: \DayWE{day label}{hours}{lo%}{hi%}
@@ -140,40 +146,40 @@
 \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{0.5cm}|*{7}{Y|}}
 \hline
 \rowcolor{black!10}
-\textbf{W} & \textbf{Mon} & \textbf{Tue} & \textbf{Wed} & \textbf{Thu} & \textbf{Fri} & \textbf{Sat} & \textbf{Sun} \\
+\textbf{W} & \textbf{WO1} & \textbf{WO2} & \textbf{WO3} & \textbf{WO4} & \textbf{WO5} & \textbf{WO6} & \textbf{WO7} \\
 \hline
 
 % W1
 \textbf{1} &
 \DayMon &
 \DayBike{\hlSS}{SS Quality}{2x20' @ \rng{92}{94}}{4' rec, 85--95 rpm, baseline} &
-\DayRun{Tempo}{15}{89}{94} &
+\DayRunInt{3}{12}{89}{94}{2'} &
 \DayBike{\hlSS}{SS Long}{1x40' @ \rng{88}{90}}{continuous, TTE anchor} &
-\DayRun{Endurance}{12}{79}{87} &
-\DayWE{Sat Long Z2}{3}{65}{72} &
-\DayWE{Sun Med Z2}{2}{62}{70}
+\DayRun{Endurance}{10}{79}{87} &
+\DayWE{WO6 Long Z2}{3}{65}{72} &
+\DayWE{WO7 Med Z2}{2}{62}{70}
 \\ \hline
 
 % W2
 \textbf{2} &
 \DayMon &
 \DayBike{\hlSS}{SS Quality}{2x25' @ \rng{92}{94}}{4' rec, +5' per interval} &
-\DayRun{Tempo}{15}{89}{94} &
+\DayRunInt{3}{14}{89}{94}{2'} &
 \DayBike{\hlSS}{SS Long}{1x45' @ \rng{88}{90}}{continuous, +5' vs W1} &
 \DayRun{Endurance}{12}{79}{87} &
-\DayWE{Sat Long Z2}{3.5}{65}{72} &
-\DayWE{Sun Med Z2}{2}{62}{70}
+\DayWE{WO6 Long Z2}{3.5}{65}{72} &
+\DayWE{WO7 Med Z2}{2}{62}{70}
 \\ \hline
 
 % W3
 \textbf{3} &
 \DayMon &
 \DayBike{\hlSS}{SS Quality}{3x20' @ \rng{92}{94}}{4' rec, +1 set vs W1} &
-\DayRun{Tempo}{15}{89}{94} &
+\DayRunInt{2}{25}{89}{94}{2'} &
 \DayBike{\hlSS}{SS Long}{1x50' @ \rng{88}{90}}{continuous, +5' vs W2} &
-\DayRun{Endurance}{12}{79}{87} &
-\DayWE{Sat Long Z2}{4}{63}{72} &
-\DayWE{Sun Med Z2}{2.5}{62}{70}
+\DayRun{Endurance}{14}{79}{87} &
+\DayWE{WO6 Long Z2}{4}{63}{72} &
+\DayWE{WO7 Med Z2}{2.5}{62}{70}
 \\ \hline
 
 % W4 RECOVERY
@@ -192,40 +198,40 @@
 \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{0.5cm}|*{7}{Y|}}
 \hline
 \rowcolor{black!10}
-\textbf{W} & \textbf{Mon} & \textbf{Tue} & \textbf{Wed} & \textbf{Thu} & \textbf{Fri} & \textbf{Sat} & \textbf{Sun} \\
+\textbf{W} & \textbf{WO1} & \textbf{WO2} & \textbf{WO3} & \textbf{WO4} & \textbf{WO5} & \textbf{WO6} & \textbf{WO7} \\
 \hline
 
 % W5
 \textbf{5} &
 \DayMon &
 \DayBike{\hlZfour}{Threshold Entry}{4x8' @ \rng{100}{105}}{2' rec; stop if power drops} &
-\DayRun{Tempo}{15}{89}{94} &
+\DayRunInt{3}{12}{94}{98}{2'} &
 \DayBike{\hlZfour}{O/U Short}{3x10' (2' \sgl{106} / 3' \sgl{90})}{5' rec} &
-\DayRun{Endurance}{15}{79}{87} &
-\DayWE{Sat Long Z2}{3.5}{65}{72} &
-\DayWE{Sun Med Z2}{2}{62}{70}
+\DayRun{Endurance}{14}{79}{87} &
+\DayWE{WO6 Long Z2}{3.5}{65}{72} &
+\DayWE{WO7 Med Z2}{2}{62}{70}
 \\ \hline
 
 % W6
 \textbf{6} &
 \DayMon &
 \DayBike{\hlZfour}{Threshold Build}{5x8' @ \rng{102}{105}}{3' rec, even power} &
-\DayRun{Tempo}{15}{89}{94} &
+\DayRunInt{3}{14}{94}{98}{90''} &
 \DayBike{\hlZfour}{O/U Medium}{3x12' (2' \sgl{106} / 3' \sgl{90})}{5' rec} &
-\DayRun{Endurance}{15}{79}{87} &
-\DayWE{Sat Long Z2}{3.5}{65}{72} &
-\DayWE{Sun Med Z2}{2}{62}{70}
+\DayRun{Endurance}{16}{79}{87} &
+\DayWE{WO6 Long Z2}{3.5}{65}{72} &
+\DayWE{WO7 Med Z2}{2}{62}{70}
 \\ \hline
 
 % W7
 \textbf{7} &
 \DayMon &
 \DayBike{\hlZfour}{TTE Extension}{2x20' @ \rng{100}{102}}{5' rec, time-to-exhaust focus} &
-\DayRun{Tempo}{15}{89}{94} &
+\DayRunInt{2}{25}{94}{98}{2'} &
 \DayBike{\hlZfour}{O/U Long}{3x15' (2' \sgl{106} / 3' \sgl{90})}{5' rec, peak threshold} &
-\DayRun{Endurance}{15}{79}{87} &
-\DayWE{Sat Long Z2}{4}{63}{72} &
-\DayWE{Sun Med Z2}{2.5}{62}{70}
+\DayRun{Endurance}{18}{79}{87} &
+\DayWE{WO6 Long Z2}{4}{63}{72} &
+\DayWE{WO7 Med Z2}{2.5}{62}{70}
 \\ \hline
 
 % W8 RECOVERY + RETEST
@@ -252,7 +258,7 @@ Source: Rønnestad, Hansen \& Ellefsen, Scand J Med Sci Sports (2012).}
 \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{0.5cm}|*{7}{Y|}}
 \hline
 \rowcolor{black!10}
-\textbf{W} & \textbf{Mon} & \textbf{Tue} & \textbf{Wed} & \textbf{Thu} & \textbf{Fri} & \textbf{Sat} & \textbf{Sun} \\
+\textbf{W} & \textbf{WO1} & \textbf{WO2} & \textbf{WO3} & \textbf{WO4} & \textbf{WO5} & \textbf{WO6} & \textbf{WO7} \\
 \hline
 
 % W9 — HIT BLOCK (5 sessions)
@@ -270,22 +276,22 @@ Source: Rønnestad, Hansen \& Ellefsen, Scand J Med Sci Sports (2012).}
 \textbf{10} &
 \DayMon &
 \DayBike{\hlZfive}{Sole HIT}{5x6' @ \rng{108}{112}}{3' rec, max mean W} &
-\DayRun{Tempo}{15}{89}{94} &
-\DayWE{Thu Z2}{1.5}{60}{68} &
-\DayRun{Endurance}{15}{79}{87} &
-\DayWE{Sat Long Z2}{4}{63}{72} &
-\DayWE{Sun Med Z2}{2.5}{62}{70}
+\DayRunInt{3}{12}{95}{100}{2'} &
+\DayWE{WO4 Z2}{1.5}{60}{68} &
+\DayRun{Endurance}{14}{79}{87} &
+\DayWE{WO6 Long Z2}{4}{63}{72} &
+\DayWE{WO7 Med Z2}{2.5}{62}{70}
 \\ \hline
 
 % W11 — LIT focus, 1 HIT
 \textbf{11} &
 \DayMon &
 \DayBike{\hlZfive}{Sole HIT}{6x5' @ \rng{110}{115}}{2.5' rec, max mean W} &
-\DayRun{Tempo}{15}{89}{94} &
-\DayWE{Thu Z2}{1.5}{60}{68} &
-\DayRun{Endurance}{15}{79}{87} &
-\DayWE{Sat Long Z2}{4}{63}{72} &
-\DayWE{Sun Med Z2}{2.5}{62}{70}
+\DayRunInt{3}{14}{95}{100}{90''} &
+\DayWE{WO4 Z2}{1.5}{60}{68} &
+\DayRun{Endurance}{16}{79}{87} &
+\DayWE{WO6 Long Z2}{4}{63}{72} &
+\DayWE{WO7 Med Z2}{2.5}{62}{70}
 \\ \hline
 
 % W12 RECOVERY — delayed-effect window
