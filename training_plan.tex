@@ -1,0 +1,336 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[a4paper, landscape, top=1cm, bottom=1cm, left=1cm, right=1cm]{geometry}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{xfp}
+\usepackage[table]{xcolor}
+\usepackage{enumitem}
+\usepackage{mdframed}
+
+% =========================================================
+% USER SETTINGS — update FTP and CS here after each retest
+% =========================================================
+\def\currentFTP{260}    % cycling FTP in watts
+\def\currentCS{255}     % running Critical Speed in seconds per km
+                        %   240 = 4:00/km, 255 = 4:15/km, 270 = 4:30/km
+                        % Estimate via 3-min all-out test, or two TTs
+                        % (e.g. 3 min + 9 min): CS = (D2 - D1) / (T2 - T1).
+
+% =========================================================
+% ZONE COLORS
+% =========================================================
+\definecolor{cz1}{HTML}{A8D8EA}      % Z1  Recovery
+\definecolor{cz2}{HTML}{5AB49E}      % Z2  Endurance
+\definecolor{cz3}{HTML}{F4C36A}      % Z3  Tempo (used by run cells)
+\definecolor{css}{HTML}{FCD663}      % SS  Sweet Spot
+\definecolor{cz4}{HTML}{FE9C5B}      % Z4  Threshold
+\definecolor{cz5}{HTML}{E65476}      % Z5  VO2 Max
+\definecolor{recweek}{HTML}{E8E8E8}  % Recovery week rows
+
+% =========================================================
+% DYNAMIC HELPERS — FTP (cycling) and CS (running)
+% =========================================================
+
+% Watts at given % FTP: \W{90} -> "230"
+\newcommand{\W}[1]{\fpeval{round(\currentFTP*#1/100,0)}}
+
+% Single % FTP with watts: \sgl{106} -> "106% (270W)"
+\newcommand{\sgl}[1]{#1\%~{\scriptsize(\W{#1}W)}}
+
+% Range % FTP with watts: \rng{90}{94} -> "90-94% (230-240W)"
+\newcommand{\rng}[2]{#1--#2\%~{\scriptsize(\W{#1}--\W{#2}W)}}
+
+% Run pace at % of CS speed: \rpace{82} -> "4:53/km"
+% Round-then-split avoids "m:60" edge cases from float rounding.
+% NOTE: xfp in TeX Live 2022 has no mod(); we expand it inline as
+%       x - 60*floor(x/60), which is exact for integer total seconds.
+\newcommand{\rpace}[1]{%
+  \fpeval{floor(round(\currentCS/(#1/100),0)/60)}:%
+  \ifnum\fpeval{round(\currentCS/(#1/100),0)-60*floor(round(\currentCS/(#1/100),0)/60)}<10 0\fi%
+  \fpeval{round(\currentCS/(#1/100),0)-60*floor(round(\currentCS/(#1/100),0)/60)}/km%
+}
+
+% =========================================================
+% CELL BACKGROUND SHORTHANDS
+% =========================================================
+\newcommand{\hlZone}{\cellcolor{cz1!35}}
+\newcommand{\hlZtwo}{\cellcolor{cz2!35}}
+\newcommand{\hlZthree}{\cellcolor{cz3!35}}
+\newcommand{\hlSS}{\cellcolor{css!35}}
+\newcommand{\hlZfour}{\cellcolor{cz4!35}}
+\newcommand{\hlZfive}{\cellcolor{cz5!35}}
+\newcommand{\hlRec}{\cellcolor{recweek}}
+
+% Auto-select run cell color from %CS speed.
+% Boundaries follow the running-zone table:
+%   <65   R1  Recovery     -> cz1
+%   65-74 R2  Easy / Long  -> cz2
+%   75-94 R3  Tempo        -> cz3
+%   95-104 R4 Threshold    -> cz4
+%   >=105 R5  VO2 / Stride -> cz5
+\newcommand{\runcolor}[1]{%
+  \ifnum#1<65\hlZone\else
+  \ifnum#1<75\hlZtwo\else
+  \ifnum#1<95\hlZthree\else
+  \ifnum#1<105\hlZfour\else
+  \hlZfive\fi\fi\fi\fi
+}
+
+% =========================================================
+% PER-DAY CELL MACROS — one training per column
+% =========================================================
+
+% Monday — recovery spin (always identical)
+\newcommand{\DayMon}{%
+  \hlZone\footnotesize\textbf{Z1 Spin}\par
+  {\scriptsize 90'\,@\,\rng{45}{50}}%
+}
+
+% Bike workout cell: \DayBike{\hlSS}{title}{set spec}{rec / note}
+\newcommand{\DayBike}[4]{%
+  #1\footnotesize\textbf{#2}\par
+  {\scriptsize #3\par\textit{#4}}%
+}
+
+% Run cell: \DayRun{label}{km}{%CS}
+% Background color auto-selected by %CS via \runcolor.
+\newcommand{\DayRun}[3]{%
+  \runcolor{#3}\footnotesize\textbf{#1 Run}\par
+  {\scriptsize #2\,km @ #3\%~CS\par(\rpace{#3})}%
+}
+
+% Weekend ride cell: \DayWE{day label}{hours}{lo%}{hi%}
+\newcommand{\DayWE}[4]{%
+  \hlZtwo\footnotesize\textbf{#1}\par
+  {\scriptsize #2\,h @ #3--#4\%\par(\W{#3}--\W{#4}W)}%
+}
+
+% Recovery-week row spanning all 7 day columns
+\newcommand{\RecoveryRow}[2]{%
+  \textbf{#1} &
+  \multicolumn{7}{c|}{\cellcolor{recweek}\rule{0pt}{1.4cm}%
+    \textbf{RECOVERY WEEK --- #2}}\\
+  \hline
+}
+
+% =========================================================
+% TABLE GEOMETRY
+% =========================================================
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\renewcommand{\arraystretch}{1.4}
+
+% =========================================================
+% DOCUMENT
+% =========================================================
+\title{\textbf{\Huge Hybrid Aerobic Development Plan}\\[0.3em]
+       \large Base $\to$ Threshold $\to$ VO\textsubscript{2}Max \quad (12 Weeks)}
+\author{FTP: \currentFTP{}\,W \quad\textbullet\quad CS: \rpace{100} \\[0.2em]
+        \textit{\small Update \texttt{\textbackslash currentFTP} and
+                       \texttt{\textbackslash currentCS} --- all watts and paces recompute.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+% =========================================================
+% PHASE 1 — BASE
+% =========================================================
+\section*{Phase 1 --- Base: Sweet Spot \& Volume (Weeks 1--4)}
+
+\noindent
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{0.5cm}|*{7}{Y|}}
+\hline
+\rowcolor{black!10}
+\textbf{W} & \textbf{Mon} & \textbf{Tue} & \textbf{Wed} & \textbf{Thu} & \textbf{Fri} & \textbf{Sat} & \textbf{Sun} \\
+\hline
+
+% W1
+\textbf{1} &
+\DayMon &
+\DayBike{\hlSS}{SS Quality}{2x20' @ \rng{92}{94}}{4' rec, 85--95 rpm, baseline} &
+\DayRun{Tempo}{10}{82} &
+\DayBike{\hlSS}{SS Long}{1x40' @ \rng{88}{90}}{continuous, TTE anchor} &
+\DayRun{Endurance}{12}{72} &
+\DayWE{Sat Long Z2}{3}{65}{72} &
+\DayWE{Sun Med Z2}{2}{62}{70}
+\\ \hline
+
+% W2
+\textbf{2} &
+\DayMon &
+\DayBike{\hlSS}{SS Quality}{2x25' @ \rng{92}{94}}{4' rec, +5' per interval} &
+\DayRun{Tempo}{10}{82} &
+\DayBike{\hlSS}{SS Long}{1x45' @ \rng{88}{90}}{continuous, +5' vs W1} &
+\DayRun{Endurance}{12}{72} &
+\DayWE{Sat Long Z2}{3.5}{65}{72} &
+\DayWE{Sun Med Z2}{2}{62}{70}
+\\ \hline
+
+% W3
+\textbf{3} &
+\DayMon &
+\DayBike{\hlSS}{SS Quality}{3x20' @ \rng{92}{94}}{4' rec, +1 set vs W1} &
+\DayRun{Tempo}{10}{82} &
+\DayBike{\hlSS}{SS Long}{1x50' @ \rng{88}{90}}{continuous, +5' vs W2} &
+\DayRun{Endurance}{12}{72} &
+\DayWE{Sat Long Z2}{4}{63}{72} &
+\DayWE{Sun Med Z2}{2.5}{62}{70}
+\\ \hline
+
+% W4 RECOVERY
+\RecoveryRow{4}{Self-Managed}
+
+\end{tabularx}
+
+\newpage
+
+% =========================================================
+% PHASE 2 — THRESHOLD
+% =========================================================
+\section*{Phase 2 --- Threshold: FTP Ceiling Development (Weeks 5--8)}
+
+\noindent
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{0.5cm}|*{7}{Y|}}
+\hline
+\rowcolor{black!10}
+\textbf{W} & \textbf{Mon} & \textbf{Tue} & \textbf{Wed} & \textbf{Thu} & \textbf{Fri} & \textbf{Sat} & \textbf{Sun} \\
+\hline
+
+% W5
+\textbf{5} &
+\DayMon &
+\DayBike{\hlZfour}{Threshold Entry}{4x8' @ \rng{100}{105}}{2' rec; stop if power drops} &
+\DayRun{Tempo}{10}{82} &
+\DayBike{\hlZfour}{O/U Short}{3x10' (2' \sgl{106} / 3' \sgl{90})}{5' rec} &
+\DayRun{Endurance}{15}{72} &
+\DayWE{Sat Long Z2}{3.5}{65}{72} &
+\DayWE{Sun Med Z2}{2}{62}{70}
+\\ \hline
+
+% W6
+\textbf{6} &
+\DayMon &
+\DayBike{\hlZfour}{Threshold Build}{5x8' @ \rng{102}{105}}{3' rec, even power} &
+\DayRun{Tempo}{10}{82} &
+\DayBike{\hlZfour}{O/U Medium}{3x12' (2' \sgl{106} / 3' \sgl{90})}{5' rec} &
+\DayRun{Endurance}{15}{72} &
+\DayWE{Sat Long Z2}{3.5}{65}{72} &
+\DayWE{Sun Med Z2}{2}{62}{70}
+\\ \hline
+
+% W7
+\textbf{7} &
+\DayMon &
+\DayBike{\hlZfour}{TTE Extension}{2x20' @ \rng{100}{102}}{5' rec, time-to-exhaust focus} &
+\DayRun{Tempo}{10}{82} &
+\DayBike{\hlZfour}{O/U Long}{3x15' (2' \sgl{106} / 3' \sgl{90})}{5' rec, peak threshold} &
+\DayRun{Endurance}{15}{72} &
+\DayWE{Sat Long Z2}{4}{63}{72} &
+\DayWE{Sun Med Z2}{2.5}{62}{70}
+\\ \hline
+
+% W8 RECOVERY + RETEST
+\RecoveryRow{8}{Self-Managed + FTP/CS Retest}
+
+\end{tabularx}
+
+\newpage
+
+% =========================================================
+% PHASE 3 — VO2 MAX (Block Periodization per Rønnestad et al. 2012)
+% =========================================================
+\section*{Phase 3 --- VO\textsubscript{2}Max: Block Periodization (Weeks 9--12)}
+
+\noindent\emph{\footnotesize W9 is a 5-session HIT block: no long ride, running cut to one easy 6\,km.
+W10--11 carry one HIT/week with full LIT volume returned --- this is when the delayed adaptation surfaces.
+W12 recovery captures the supercompensation; retest at the END of W12, not the start.
+Interval format: alternating 6x5' and 5x6', all-out for highest mean power, 2.5'/3' recovery.
+Source: Rønnestad, Hansen \& Ellefsen, Scand J Med Sci Sports (2012).}
+
+\medskip
+
+\noindent
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{0.5cm}|*{7}{Y|}}
+\hline
+\rowcolor{black!10}
+\textbf{W} & \textbf{Mon} & \textbf{Tue} & \textbf{Wed} & \textbf{Thu} & \textbf{Fri} & \textbf{Sat} & \textbf{Sun} \\
+\hline
+
+% W9 — HIT BLOCK (5 sessions)
+\textbf{9} &
+\DayBike{\hlZfive}{HIT 1}{6x5' @ \rng{110}{115}}{2.5' rec, max mean W} &
+\DayBike{\hlZfive}{HIT 2}{5x6' @ \rng{108}{112}}{3' rec, max mean W} &
+\DayMon &
+\DayBike{\hlZfive}{HIT 3}{6x5' @ \rng{110}{115}}{2.5' rec, hold output} &
+\DayRun{Easy}{6}{68} &
+\DayBike{\hlZfive}{HIT 4}{5x6' @ \rng{108}{112}}{3' rec, accept lower W} &
+\DayBike{\hlZfive}{HIT 5}{6x5' @ \rng{110}{115}}{2.5' rec, finish block}
+\\ \hline
+
+% W10 — LIT focus, 1 HIT
+\textbf{10} &
+\DayMon &
+\DayBike{\hlZfive}{Sole HIT}{5x6' @ \rng{108}{112}}{3' rec, max mean W} &
+\DayRun{Tempo}{10}{82} &
+\DayWE{Thu Z2}{1.5}{60}{68} &
+\DayRun{Endurance}{15}{72} &
+\DayWE{Sat Long Z2}{4}{63}{72} &
+\DayWE{Sun Med Z2}{2.5}{62}{70}
+\\ \hline
+
+% W11 — LIT focus, 1 HIT
+\textbf{11} &
+\DayMon &
+\DayBike{\hlZfive}{Sole HIT}{6x5' @ \rng{110}{115}}{2.5' rec, max mean W} &
+\DayRun{Tempo}{10}{82} &
+\DayWE{Thu Z2}{1.5}{60}{68} &
+\DayRun{Endurance}{15}{72} &
+\DayWE{Sat Long Z2}{4}{63}{72} &
+\DayWE{Sun Med Z2}{2.5}{62}{70}
+\\ \hline
+
+% W12 RECOVERY — delayed-effect window
+\RecoveryRow{12}{Adaptation surfaces; FTP/CS retest at END of week}
+
+\end{tabularx}
+
+\vspace{1em}
+
+% =========================================================
+% APPENDIX: ZONE REFERENCES (FTP + CS side by side)
+% =========================================================
+\noindent\rule{\textwidth}{0.4pt}
+
+\begin{minipage}[t]{0.48\textwidth}
+\subsection*{Cycling Zones at FTP = \currentFTP{}\,W}
+\begin{tabular}{@{}lll@{}}
+\textbf{Zone} & \textbf{\% FTP} & \textbf{Watts} \\
+\hline
+Z1 Recovery     & $<$56\%      & $<$\W{56}W \\
+Z2 Endurance    & 56--75\%     & \W{56}--\W{75}W \\
+Z3 Tempo        & 76--87\%     & \W{76}--\W{87}W \\
+Sweet Spot      & 88--94\%     & \W{88}--\W{94}W \\
+Z4 Threshold    & 95--105\%    & \W{95}--\W{105}W \\
+Z5 VO2 Max      & 106--120\%   & \W{106}--\W{120}W \\
+Z6 Anaerobic    & $>$121\%     & $>$\W{121}W \\
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\subsection*{Running Zones at CS = \rpace{100}}
+\begin{tabular}{@{}lll@{}}
+\textbf{Zone} & \textbf{\% CS speed} & \textbf{Pace} \\
+\hline
+R1 Recovery        & $<$65\%       & slower than \rpace{65} \\
+R2 Easy / Long     & 65--75\%      & \rpace{75}--\rpace{65} \\
+R3 Steady / Tempo  & 75--88\%      & \rpace{88}--\rpace{75} \\
+R4 Threshold       & 95--100\%     & \rpace{100}--\rpace{95} \\
+R5 VO\textsubscript{2}Max & 105--115\% & \rpace{115}--\rpace{105} \\
+R6 Anaerobic       & $>$120\%      & faster than \rpace{120} \\
+\end{tabular}
+\end{minipage}
+
+\end{document}
