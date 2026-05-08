@@ -29,3 +29,9 @@
 ._*
 .Spotlight-V100
 .Trashes
+
+# environment files
+.env
+.venv
+venv/
+env/
