@@ -99,8 +99,9 @@
 }
 
 % Tempo interval run cell: \DayRunInt{sets}{duration}{lo%TP}{hi%TP}{rec}
+% Color uses hi% so threshold-range work renders as Z4, not Z3.
 \newcommand{\DayRunInt}[5]{%
-  \runcolor{#3}\footnotesize\textbf{Tempo Intervals}\par
+  \runcolor{#4}\footnotesize\textbf{Tempo Intervals}\par
   {\scriptsize #1$\times$#2' @ #3--#4\%~TP\par(\rpace{#4}--\rpace{#3})\par\textit{#5 jog rec}}%
 }
 
@@ -142,6 +143,15 @@
 % =========================================================
 \section*{Phase 1 --- Base: Sweet Spot \& Volume (Weeks 1--4)}
 
+\noindent\emph{\footnotesize Before W1: anchor zones with an open-ended ramp-up FTP test (start $\sim$20\,W
+below suspected FTP, build until you find the sustainable ceiling, hold as long as possible).
+Skip the ``95\%\ of 20-min'' shortcut --- individual error is high. Run an equivalent 3-min all-out
+or 9-min TT for threshold pace. If \texttt{\textbackslash currentFTP} / \texttt{\textbackslash currentCS}
+are inherited from an old number, retest first --- an overestimated FTP turns ``SS Quality'' (90\%)
+into threshold from day one.}
+
+\medskip
+
 \noindent
 \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{0.5cm}|*{7}{Y|}}
 \hline
@@ -152,7 +162,7 @@
 % W1
 \textbf{1} &
 \DayMon &
-\DayBike{\hlSS}{SS Quality}{2x20' @ \rng{92}{94}}{4' rec, 85--95 rpm, baseline} &
+\DayBike{\hlSS}{SS Quality}{2x20' @ \sgl{90}}{4' rec, 85--95 rpm, baseline} &
 \DayRunInt{3}{12}{89}{94}{2'} &
 \DayBike{\hlSS}{SS Long}{1x40' @ \rng{88}{90}}{continuous, TTE anchor} &
 \DayRun{Endurance}{10}{79}{87} &
@@ -163,7 +173,7 @@
 % W2
 \textbf{2} &
 \DayMon &
-\DayBike{\hlSS}{SS Quality}{2x25' @ \rng{92}{94}}{4' rec, +5' per interval} &
+\DayBike{\hlSS}{SS Quality}{2x25' @ \sgl{90}}{4' rec, +5' per interval} &
 \DayRunInt{3}{14}{89}{94}{2'} &
 \DayBike{\hlSS}{SS Long}{1x45' @ \rng{88}{90}}{continuous, +5' vs W1} &
 \DayRun{Endurance}{12}{79}{87} &
@@ -174,7 +184,7 @@
 % W3
 \textbf{3} &
 \DayMon &
-\DayBike{\hlSS}{SS Quality}{3x20' @ \rng{92}{94}}{4' rec, +1 set vs W1} &
+\DayBike{\hlSS}{SS Quality}{3x20' @ \sgl{90}}{4' rec, +1 set vs W1} &
 \DayRunInt{2}{25}{89}{94}{2'} &
 \DayBike{\hlSS}{SS Long}{1x50' @ \rng{88}{90}}{continuous, +5' vs W2} &
 \DayRun{Endurance}{14}{79}{87} &
@@ -205,7 +215,7 @@
 \textbf{5} &
 \DayMon &
 \DayBike{\hlZfour}{Threshold Entry}{3x12' @ \rng{95}{100}}{3' rec, start conservative} &
-\DayRunInt{3}{12}{94}{98}{2'} &
+\DayRunInt{3}{12}{89}{94}{2'} &
 \DayBike{\hlZfour}{O/U Short}{3x15' (1' \sgl{108} / 4' \sgl{90})}{5' rec} &
 \DayRun{Endurance}{14}{79}{87} &
 \DayWE{WO6 Long Z2}{3.5}{65}{72} &
@@ -216,7 +226,7 @@
 \textbf{6} &
 \DayMon &
 \DayBike{\hlZfour}{Threshold Build}{3x15' @ \rng{95}{100}}{3' rec, even power} &
-\DayRunInt{3}{14}{94}{98}{90''} &
+\DayRunInt{3}{14}{89}{94}{2'} &
 \DayBike{\hlZfour}{O/U Medium}{3x20' (1' \sgl{108} / 4' \sgl{90})}{5' rec} &
 \DayRun{Endurance}{16}{79}{87} &
 \DayWE{WO6 Long Z2}{3.5}{65}{72} &
@@ -226,8 +236,8 @@
 % W7
 \textbf{7} &
 \DayMon &
-\DayBike{\hlZfour}{TTE Extension}{2x20' @ \rng{100}{102}}{5' rec, time-to-exhaust focus} &
-\DayRunInt{2}{25}{94}{98}{2'} &
+\DayBike{\hlZfour}{TTE Extension}{3x20' @ \rng{95}{100}}{5' rec, continuous preferred if legs} &
+\DayRunInt{2}{25}{89}{94}{2'} &
 \DayBike{\hlZfour}{O/U Long}{3x25' (1' \sgl{108} / 4' \sgl{90})}{5' rec, peak threshold} &
 \DayRun{Endurance}{18}{79}{87} &
 \DayWE{WO6 Long Z2}{4}{63}{72} &
@@ -249,7 +259,11 @@
 \noindent\emph{\footnotesize W9 is a 5-session HIT block: no long ride, running cut to one easy 6\,km.
 W10--11 carry one HIT/week with full LIT volume returned --- this is when the delayed adaptation surfaces.
 W12 recovery captures the supercompensation; retest at the END of W12, not the start.
-Interval format: alternating 6x5' and 5x6', all-out for highest mean power, 2.5'/3' recovery.
+Interval format: alternating 6x5' and 5x6', \textbf{max sustainable mean power} for the set
+(not a fixed \%\ FTP) at \textbf{100--110 rpm} (cadence is the primary lever for cardiac preload),
+2.5'/3' recovery. Cue: breathing fully maxed in last 60--90s of each rep; let power fade if effort stays max.
+Plan runs a single late HIT block; Rønnestad's original 12-week protocol used three blocks (W1, 5, 9)
+--- Phases 1--2 here substitute targeted threshold work to raise the ceiling before VO\textsubscript{2} stress.
 Source: Rønnestad, Hansen \& Ellefsen, Scand J Med Sci Sports (2012).}
 
 \medskip
@@ -263,20 +277,20 @@ Source: Rønnestad, Hansen \& Ellefsen, Scand J Med Sci Sports (2012).}
 
 % W9 — HIT BLOCK (5 sessions)
 \textbf{9} &
-\DayBike{\hlZfive}{HIT 1}{6x5' @ \rng{110}{115}}{2.5' rec, max mean W} &
-\DayBike{\hlZfive}{HIT 2}{5x6' @ \rng{108}{112}}{3' rec, max mean W} &
+\DayBike{\hlZfive}{HIT 1}{6x5' max mean / 100--110 rpm}{2.5' rec, breathing maxed last 60--90s} &
+\DayBike{\hlZfive}{HIT 2}{5x6' max mean / 100--110 rpm}{3' rec, breathing maxed last 60--90s} &
 \DayMon &
-\DayBike{\hlZfive}{HIT 3}{6x5' @ \rng{110}{115}}{2.5' rec, hold output} &
+\DayBike{\hlZfive}{HIT 3}{6x5' max mean / 100--110 rpm}{2.5' rec, hold effort not power} &
 \DayRun{Easy}{6}{65}{77} &
-\DayBike{\hlZfive}{HIT 4}{5x6' @ \rng{108}{112}}{3' rec, accept lower W} &
-\DayBike{\hlZfive}{HIT 5}{6x5' @ \rng{110}{115}}{2.5' rec, finish block}
+\DayBike{\hlZfive}{HIT 4}{5x6' max mean / 100--110 rpm}{3' rec, accept lower W, max RPE} &
+\DayBike{\hlZfive}{HIT 5}{6x5' max mean / 100--110 rpm}{2.5' rec, finish block}
 \\ \hline
 
 % W10 — LIT focus, 1 HIT
 \textbf{10} &
 \DayMon &
-\DayBike{\hlZfive}{Sole HIT}{5x6' @ \rng{108}{112}}{3' rec, max mean W} &
-\DayRunInt{3}{12}{95}{100}{2'} &
+\DayBike{\hlZfive}{Sole HIT}{5x6' max mean / 100--110 rpm}{3' rec, breathing maxed last 60--90s} &
+\DayRunInt{3}{12}{89}{94}{2'} &
 \DayWE{WO4 Z2}{1.5}{60}{68} &
 \DayRun{Endurance}{14}{79}{87} &
 \DayWE{WO6 Long Z2}{4}{63}{72} &
@@ -286,8 +300,8 @@ Source: Rønnestad, Hansen \& Ellefsen, Scand J Med Sci Sports (2012).}
 % W11 — LIT focus, 1 HIT
 \textbf{11} &
 \DayMon &
-\DayBike{\hlZfive}{Sole HIT}{6x5' @ \rng{110}{115}}{2.5' rec, max mean W} &
-\DayRunInt{3}{14}{95}{100}{90''} &
+\DayBike{\hlZfive}{Sole HIT}{6x5' max mean / 100--110 rpm}{2.5' rec, breathing maxed last 60--90s} &
+\DayRunInt{3}{14}{89}{94}{2'} &
 \DayWE{WO4 Z2}{1.5}{60}{68} &
 \DayRun{Endurance}{16}{79}{87} &
 \DayWE{WO6 Long Z2}{4}{63}{72} &
