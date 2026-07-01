@@ -7,11 +7,36 @@
 \usepackage{array}
 \usepackage{xfp}
 \usepackage[table]{xcolor}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault} % sans-serif reads better at small sizes in dense tables
+\usepackage{titlesec}
+\usepackage{enumitem}
 
 % =========================================================
-% USER SETTINGS — update FTP and Threshold Pace here after each retest
+% VISUAL IDENTITY
 % =========================================================
-\def\currentFTP{260}    % cycling FTP in watts
+\definecolor{accent}{HTML}{34495E}   % neutral heading/rule color (Testing Protocol, Appendix)
+\definecolor{ssaccent}{HTML}{B8860B} % Phase 1 heading tint (Sweet Spot gold)
+\definecolor{z4accent}{HTML}{D2691E} % Phase 2 heading tint (Threshold orange)
+\definecolor{z5accent}{HTML}{C0334D} % Phase 3 heading tint (VO2 red)
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[{\color{accent}\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{2pt}{6pt}
+\titleformat{\subsection}{\normalsize\bfseries\color{accent}}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{0pt}{4pt}
+
+% Callout box for phase rationale / protocol notes — replaces plain italic paragraphs
+\newcommand{\NoteBox}[1]{%
+  \noindent\colorbox{accent!6}{\begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+  \footnotesize #1
+  \end{minipage}}%
+}
+
+% =========================================================
+% USER SETTINGS — update CP/W' and Threshold Pace here after each retest
+% =========================================================
+\def\currentCP{260}     % cycling Critical Power in watts (see Testing Protocol)
+\def\currentWprime{20}  % anaerobic work capacity W' in kJ, from the same CP test
 \def\currentCS{280}     % running Threshold Pace in seconds per km
                         %   240 = 4:00/km, 255 = 4:15/km, 270 = 4:30/km
                         % Estimate via 3-min all-out test, or two TTs
@@ -26,19 +51,20 @@
 \definecolor{css}{HTML}{FCD663}      % SS  Sweet Spot
 \definecolor{cz4}{HTML}{FE9C5B}      % Z4  Threshold
 \definecolor{cz5}{HTML}{E65476}      % Z5  VO2 Max
+\definecolor{cz6}{HTML}{8E44AD}      % Z6  Anaerobic (reference table only)
 \definecolor{recweek}{HTML}{E8E8E8}  % Recovery week rows
 
 % =========================================================
-% DYNAMIC HELPERS — FTP (cycling) and Threshold Pace (running)
+% DYNAMIC HELPERS — CP (cycling) and Threshold Pace (running)
 % =========================================================
 
-% Watts at given % FTP: \W{90} -> "230"
-\newcommand{\W}[1]{\fpeval{round(\currentFTP*#1/100,0)}}
+% Watts at given % CP: \W{90} -> "230"
+\newcommand{\W}[1]{\fpeval{round(\currentCP*#1/100,0)}}
 
-% Single % FTP with watts: \sgl{106} -> "106% (270W)"
+% Single % CP with watts: \sgl{106} -> "106% (270W)"
 \newcommand{\sgl}[1]{#1\%~{\scriptsize(\W{#1}W)}}
 
-% Range % FTP with watts: \rng{90}{94} -> "90-94% (230-240W)"
+% Range % CP with watts: \rng{90}{94} -> "90-94% (230-240W)"
 \newcommand{\rng}[2]{#1--#2\%~{\scriptsize(\W{#1}--\W{#2}W)}}
 
 % Run pace at % of Threshold Pace speed: \rpace{82} -> "4:53/km"
@@ -130,25 +156,35 @@
 % =========================================================
 \title{\textbf{\Huge Hybrid Aerobic Development Plan}\\[0.3em]
        \large Base $\to$ Threshold $\to$ VO\textsubscript{2}Max \quad (12 Weeks)}
-\author{FTP: \currentFTP{}\,W \quad\textbullet\quad Threshold Pace: \rpace{100} \\[0.2em]
-        \textit{\small Update \texttt{\textbackslash currentFTP} and
-                       \texttt{\textbackslash currentCS} --- all watts and paces recompute.}}
+\author{CP: \currentCP{}\,W ($W'$ \currentWprime{}\,kJ) \quad\textbullet\quad Threshold Pace: \rpace{100} \\[0.2em]
+        \textit{\small Update \texttt{\textbackslash currentCP}, \texttt{\textbackslash currentWprime} and
+                       \texttt{\textbackslash currentCS} --- all watts and paces recompute. See Testing Protocol.}}
 \date{\today}
 
 \begin{document}
 \maketitle
 
+
 % =========================================================
 % PHASE 1 — BASE
 % =========================================================
-\section*{Phase 1 --- Base: Sweet Spot \& Volume (Weeks 1--4)}
+\section*{\color{ssaccent!70!black}Phase 1 --- Base: Sweet Spot \& Volume (Weeks 1--4)}
 
-\noindent\emph{\footnotesize Before W1: anchor zones with an open-ended ramp-up FTP test (start $\sim$20\,W
-below suspected FTP, build until you find the sustainable ceiling, hold as long as possible).
-Skip the ``95\%\ of 20-min'' shortcut --- individual error is high. Run an equivalent 3-min all-out
-or 9-min TT for threshold pace. If \texttt{\textbackslash currentFTP} / \texttt{\textbackslash currentCS}
-are inherited from an old number, retest first --- an overestimated FTP turns ``SS Quality'' (90\%)
-into threshold from day one.}
+\NoteBox{Sweet Spot, not pure Zone 2, is the primary quality tool this phase. Zone 2 isn't
+intrinsically superior for raising thresholds or VO\textsubscript{2}max --- at matched work, zone
+3--5 training drives larger threshold/VO\textsubscript{2}max gains per unit of effort (Inglis et al.
+2024), and low-intensity volume is a complement to 2--3 weekly quality sessions, not a mandatory
+prerequisite before intervals (Matomäki 2025). Sweet spot is preferred over straight threshold here
+because it produces near-identical adaptations at meaningfully lower fatigue cost, letting SS Quality
+(WO2) and SS Long (WO4) coexist in the same week without compounding into an unrecoverable load.
+Progression is dosed as time-in-zone, not power: SS Quality adds a set/duration each week
+(2$\times$20$\to$2$\times$25$\to$3$\times$20) while SS Long extends continuously
+(40$\to$45$\to$50\,min) --- staying under the $\sim$2--2.5\,h per-session ceiling and the 2$\times$/week
+frequency guardrail past which sweet-spot fatigue starts to outpace its signal. Endurance runs and
+weekend Z2 rides progress the same way, duration before intensity, since extending duration is the
+correct lever until race-relevant duration is covered. \textbf{Before W1:} run the Critical Power /
+$W'$ test and the threshold-pace test in the Testing Protocol section --- don't reuse an old or
+estimated number; an overestimated CP turns ``SS Quality'' (90\%) into threshold from day one.}
 
 \medskip
 
@@ -202,7 +238,24 @@ into threshold from day one.}
 % =========================================================
 % PHASE 2 — THRESHOLD
 % =========================================================
-\section*{Phase 2 --- Threshold: FTP Ceiling Development (Weeks 5--8)}
+\section*{\color{z4accent!70!black}Phase 2 --- Threshold: CP Ceiling Development (Weeks 5--8)}
+
+\NoteBox{Threshold succeeds sweet spot once SS Long's TTE growth signals the natural next step: W5's
+Threshold Entry (3$\times$12' @ 95--100\%) starts conservative and extends toward TTE
+(3$\times$20' by W7), following the standard threshold progressive-overload rule --- add
+time-in-zone per session, not more sets. The second weekly quality day (WO4) uses over/unders
+instead of a second steady-state threshold session: O/Us carry no unique physiological edge over
+steady-state work, but substituting one threshold day for O/Us adds race-specific accelerate-and-recover
+practice and keeps the week varied \emph{without} adding load on top of the existing threshold day.
+Overs sit at 108\%\ CP ($\sim$+20\,W) rather than the commonly-misapplied 120\%\ --- that range
+crosses into VO\textsubscript{2}max territory and defeats the point of a threshold session; unders
+sit at sweet spot (90\%\ CP), matching the standard 1:4 bread-and-butter format (1\,min over /
+4\,min under) and its documented progression (3$\times$15$\to$3$\times$20$\to$3$\times$25\,min).
+W8's recovery and CP/TP retest closes the phase and is the decision gate: if threshold TTE and CP
+are still moving, more threshold work is still the right tool; if they've stalled, that's the signal
+to move to VO\textsubscript{2} work (Phase 3) rather than add more threshold volume.}
+
+\medskip
 
 \noindent
 \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{0.5cm}|*{7}{Y|}}
@@ -245,26 +298,32 @@ into threshold from day one.}
 \\ \hline
 
 % W8 RECOVERY + RETEST
-\RecoveryRow{8}{Self-Managed + FTP/TP Retest}
+\RecoveryRow{8}{Self-Managed + CP/TP Retest}
 
 \end{tabularx}
 
 \newpage
 
 % =========================================================
-% PHASE 3 — VO2 MAX (Block Periodization per Rønnestad et al. 2012)
+% PHASE 3 — VO2 MAX (Classical Distributed Periodization, Empirical Cycling protocol)
 % =========================================================
-\section*{Phase 3 --- VO\textsubscript{2}Max: Block Periodization (Weeks 9--12)}
+\section*{\color{z5accent!70!black}Phase 3 --- VO\textsubscript{2}Max: Progressive Development (Weeks 9--12)}
 
-\noindent\emph{\footnotesize W9 is a 5-session HIT block: no long ride, running cut to one easy 6\,km.
-W10--11 carry one HIT/week with full LIT volume returned --- this is when the delayed adaptation surfaces.
-W12 recovery captures the supercompensation; retest at the END of W12, not the start.
-Interval format: alternating 6x5' and 5x6', \textbf{max sustainable mean power} for the set
-(not a fixed \%\ FTP) at \textbf{100--110 rpm} (cadence is the primary lever for cardiac preload),
-2.5'/3' recovery. Cue: breathing fully maxed in last 60--90s of each rep; let power fade if effort stays max.
-Plan runs a single late HIT block; Rønnestad's original 12-week protocol used three blocks (W1, 5, 9)
---- Phases 1--2 here substitute targeted threshold work to raise the ceiling before VO\textsubscript{2} stress.
-Source: Rønnestad, Hansen \& Ellefsen, Scand J Med Sci Sports (2012).}
+\NoteBox{Two VO\textsubscript{2} sessions/week, not a concentrated block. A 5-session/week
+HIT block (Rønnestad et al. 2014) was considered and dropped: it compounds two variables --- session
+frequency and per-rep intensity --- that no cited study tested together, and it relies on a volume
+cutback and elite-level recovery capacity this plan doesn't assume. Progressive overload instead runs
+\textbf{within} the 2x/week format across the block: reps climb 4$\to$5$\to$6 and recovery trims
+3$\to$2.5$\to$2\,min week to week, while total work per session stays inside the 15--25\,min ceiling
+--- volume is not what's overloaded here, effort quality is.
+Per-interval execution follows the Empirical Cycling protocol: \textbf{no fixed power target} --- start
+each rep 20--30\% harder than you think you can hold, let power fade, keep pushing on perceived effort
+until breathing can no longer stay maxed. \textbf{Cadence 100--110\,rpm} throughout --- cadence, not
+power, is the primary lever for cardiac preload (stroke volume), which is the actual adaptation target.
+Recovery between reps: start shorter than instinct, add time only if the next rep can't reach max again.
+W9--11 carry full LIT volume alongside the 2 VO\textsubscript{2} days (easy run replaces tempo-interval
+running for this phase, protecting recovery around the two hard bike days). W12 is recovery; retest at
+the END of the week, not the start --- VO\textsubscript{2}max gains surface with a delay.}
 
 \medskip
 
@@ -275,98 +334,126 @@ Source: Rønnestad, Hansen \& Ellefsen, Scand J Med Sci Sports (2012).}
 \textbf{W} & \textbf{WO1} & \textbf{WO2} & \textbf{WO3} & \textbf{WO4} & \textbf{WO5} & \textbf{WO6} & \textbf{WO7} \\
 \hline
 
-% W9 — HIT BLOCK (5 sessions)
+% W9 — VO2 entry (4 reps, longer recovery)
 \textbf{9} &
-\DayBike{\hlZfive}{HIT 1}{6x5' max mean / 100--110 rpm}{2.5' rec, breathing maxed last 60--90s} &
-\DayBike{\hlZfive}{HIT 2}{5x6' max mean / 100--110 rpm}{3' rec, breathing maxed last 60--90s} &
 \DayMon &
-\DayBike{\hlZfive}{HIT 3}{6x5' max mean / 100--110 rpm}{2.5' rec, hold effort not power} &
-\DayRun{Easy}{6}{65}{77} &
-\DayBike{\hlZfive}{HIT 4}{5x6' max mean / 100--110 rpm}{3' rec, accept lower W, max RPE} &
-\DayBike{\hlZfive}{HIT 5}{6x5' max mean / 100--110 rpm}{2.5' rec, finish block}
+\DayBike{\hlZfive}{VO2 A}{4x4' max mean / 100--110 rpm}{3' rec, breathing maxed last 60--90s} &
+\DayRun{Easy}{12}{65}{77} &
+\DayWE{WO4 Z2}{1.5}{60}{68} &
+\DayBike{\hlZfive}{VO2 B}{4x5' max mean / 100--110 rpm}{3' rec, let power fade, hold effort} &
+\DayWE{WO6 Long Z2}{3.5}{65}{72} &
+\DayWE{WO7 Med Z2}{2}{62}{70}
 \\ \hline
 
-% W10 — LIT focus, 1 HIT
+% W10 — VO2 build (5 reps, recovery trimmed)
 \textbf{10} &
 \DayMon &
-\DayBike{\hlZfive}{Sole HIT}{5x6' max mean / 100--110 rpm}{3' rec, breathing maxed last 60--90s} &
-\DayRunInt{3}{12}{89}{94}{2'} &
+\DayBike{\hlZfive}{VO2 A}{5x4' max mean / 100--110 rpm}{2.5' rec, breathing maxed last 60--90s} &
+\DayRun{Easy}{14}{65}{77} &
 \DayWE{WO4 Z2}{1.5}{60}{68} &
-\DayRun{Endurance}{14}{79}{87} &
+\DayBike{\hlZfive}{VO2 B}{4x5' max mean / 100--110 rpm}{2.5' rec, let power fade, hold effort} &
 \DayWE{WO6 Long Z2}{4}{63}{72} &
 \DayWE{WO7 Med Z2}{2.5}{62}{70}
 \\ \hline
 
-% W11 — LIT focus, 1 HIT
+% W11 — VO2 peak (6 reps, shortest recovery, converges to target volume)
 \textbf{11} &
 \DayMon &
-\DayBike{\hlZfive}{Sole HIT}{6x5' max mean / 100--110 rpm}{2.5' rec, breathing maxed last 60--90s} &
-\DayRunInt{3}{14}{89}{94}{2'} &
+\DayBike{\hlZfive}{VO2 A}{6x4' max mean / 100--110 rpm}{2' rec, breathing maxed last 60--90s} &
+\DayRun{Easy}{16}{65}{77} &
 \DayWE{WO4 Z2}{1.5}{60}{68} &
-\DayRun{Endurance}{16}{79}{87} &
+\DayBike{\hlZfive}{VO2 B}{5x5' max mean / 100--110 rpm}{2' rec, let power fade, hold effort} &
 \DayWE{WO6 Long Z2}{4}{63}{72} &
 \DayWE{WO7 Med Z2}{2.5}{62}{70}
 \\ \hline
 
 % W12 RECOVERY — delayed-effect window
-\RecoveryRow{12}{Adaptation surfaces; FTP/TP retest at END of week}
+\RecoveryRow{12}{Adaptation surfaces; CP/TP retest at END of week}
 
 \end{tabularx}
 
-\vspace{1em}
-
+\newpage
 % =========================================================
-% APPENDIX: ZONE REFERENCES (FTP + Threshold Pace side by side)
+% APPENDIX: ZONE REFERENCES (CP + Threshold Pace side by side)
 % =========================================================
-\noindent\rule{\textwidth}{0.4pt}
+\section*{Appendix --- Zone Reference}
 
-\begin{minipage}[t]{0.30\textwidth}
-\subsection*{Cycling Zones at FTP = \currentFTP{}\,W}
+\begin{minipage}[t]{0.34\textwidth}
+\subsection*{Cycling Zones at CP = \currentCP{}\,W}
+\footnotesize
 \begin{tabular}{@{}lll@{}}
-\textbf{Zone} & \textbf{\% FTP} & \textbf{Watts} \\
+\textbf{Zone} & \textbf{\% CP} & \textbf{Watts} \\
 \hline
-Z1 Recovery     & $<$56\%      & $<$\W{56}W \\
-Z2 Endurance    & 56--75\%     & \W{56}--\W{75}W \\
-Z3 Tempo        & 76--87\%     & \W{76}--\W{87}W \\
-Sweet Spot      & 88--94\%     & \W{88}--\W{94}W \\
-Z4 Threshold    & 95--105\%    & \W{95}--\W{105}W \\
-Z5 VO2 Max      & 106--120\%   & \W{106}--\W{120}W \\
-Z6 Anaerobic    & $>$121\%     & $>$\W{121}W \\
+\rowcolor{cz1!35}     Z1 Recovery  & $<$56\%      & $<$\W{56}W \\
+\rowcolor{cz2!35}     Z2 Endurance & 56--75\%     & \W{56}--\W{75}W \\
+\rowcolor{cz3!35}     Z3 Tempo     & 76--87\%     & \W{76}--\W{87}W \\
+\rowcolor{css!35}     Sweet Spot   & 88--94\%     & \W{88}--\W{94}W \\
+\rowcolor{cz4!35}     Z4 Threshold & 95--105\%    & \W{95}--\W{105}W \\
+\rowcolor{cz5!35}     Z5 VO2 Max   & 106--120\%   & \W{106}--\W{120}W \\
+\rowcolor{cz6!35}     Z6 Anaerobic & $>$121\%     & $>$\W{121}W \\
 \end{tabular}
 \end{minipage}
-\hfill
-\begin{minipage}[t]{0.30\textwidth}
+\hspace{0.06\textwidth}%
+\begin{minipage}[t]{0.40\textwidth}
 \subsection*{Running Zones at Threshold Pace = \rpace{100}}
+\footnotesize
 \begin{tabular}{@{}lll@{}}
 \textbf{Zone} & \textbf{\% TP} & \textbf{Pace} \\
 \hline
-Z1 Recovery        & $<$77.5\%          & slower than \rpace{78} \\
-Z2 Endurance       & 78.5--87.7\%       & \rpace{88}--\rpace{79} \\
-Z3 Tempo           & 88.7--94.3\%       & \rpace{94}--\rpace{89} \\
-Z4 Threshold       & 95.3--100\%        & \rpace{100}--\rpace{95} \\
-Z5a VO\textsubscript{2}Max & 101--103.4\%  & \rpace{103}--\rpace{101} \\
-Z5b Anaerobic      & 104.4--111.5\%     & \rpace{112}--\rpace{104} \\
-Z5c Neuromuscular  & $>$112.5\%         & faster than \rpace{113} \\
+\rowcolor{cz1!35} Z1 Recovery       & $<$77.5\%      & slower than \rpace{78} \\
+\rowcolor{cz2!35} Z2 Endurance      & 78.5--87.7\%   & \rpace{88}--\rpace{79} \\
+\rowcolor{cz3!35} Z3 Tempo          & 88.7--94.3\%   & \rpace{94}--\rpace{89} \\
+\rowcolor{cz4!35} Z4 Threshold      & 95.3--100\%    & \rpace{100}--\rpace{95} \\
+\rowcolor{cz5!25} Z5a VO\textsubscript{2}Max & 101--103.4\%  & \rpace{103}--\rpace{101} \\
+\rowcolor{cz5!45} Z5b Anaerobic     & 104.4--111.5\% & \rpace{112}--\rpace{104} \\
+\rowcolor{cz5!65} Z5c Neuromuscular & $>$112.5\%     & faster than \rpace{113} \\
 \end{tabular}
 \end{minipage}
-\hfill
-\begin{minipage}[t]{0.30\textwidth}
-\subsection*{Pace Quick-Reference at TP = \rpace{100}}
-\begin{tabular}{@{}ll@{}}
-\textbf{\% TP} & \textbf{Pace} \\
-\hline
-65\%  & \rpace{65} \\
-70\%  & \rpace{70} \\
-75\%  & \rpace{75} \\
-80\%  & \rpace{80} \\
-85\%  & \rpace{85} \\
-90\%  & \rpace{90} \\
-95\%  & \rpace{95} \\
-100\% & \rpace{100} \\
-105\% & \rpace{105} \\
-110\% & \rpace{110} \\
-115\% & \rpace{115} \\
-\end{tabular}
-\end{minipage}
+
+\bigskip
+
+% =========================================================
+% TESTING PROTOCOL — Critical Power & W' (replaces the FTP-95%-of-20min shortcut)
+% =========================================================
+\section*{Testing Protocol --- Critical Power (CP) \& $W'$}
+
+\NoteBox{This plan anchors all zones to \textbf{Critical Power (CP)}, not the classic
+``95\%\ of 20-min'' FTP shortcut. Head-to-head studies (Morgan 2019, Karsten 2021) show FTP and CP agree
+on average across a group but diverge by up to 15\%\ for a given individual --- enough to turn an intended
+Sweet Spot session into unintentional threshold work. CP is the field-testable proxy for the Maximum
+Metabolic Steady State (the boundary between sustainable and rapidly-fatiguing effort), derived from the
+power--duration relationship across multiple maximal efforts rather than a single 20-min time trial.}
+
+\medskip
+
+\noindent\textbf{\footnotesize Protocol --- 3 maximal efforts, all-out:}
+\begin{itemize}[nosep, leftmargin=1.4em, itemsep=2pt, label=\textbf{\textcolor{accent}{--}}]
+\footnotesize
+  \item \textbf{Efforts:} 3\,min, 8\,min, 12--13\,min --- all above CP (severe-intensity domain). Not
+        shorter (risks hitting VO\textsubscript{2}max/exhaustion before the effort is even representative)
+        and not longer (glycogen, pacing, and motivation start dominating the result).
+  \item \textbf{Recovery between efforts:} $\geq$30\,min if done in one session, or spread across separate
+        days ($\geq$24\,h) to remove fatigue carry-over between trials --- prefer separate days if your
+        schedule allows it.
+  \item \textbf{Consistency:} same terrain across all three efforts (flat or a steady climb --- whichever
+        you train/race on most), same bike position, cadence held within $\pm$5\,rpm.
+  \item \textbf{Pacing:} controlled fast start ($\sim$10\%\ above goal power for the first 30\,s, not
+        all-out), even effort through the middle, a final 30\,s kick if you have it left. Pick a route free
+        of lights, traffic, and gradient changes.
+  \item \textbf{Fitting CP and $W'$:} plot power vs.\ duration (or total work vs.\ duration) and fit all
+        three standard models --- 2-parameter hyperbolic, linear power-vs-1/time, linear work-vs-time. Take
+        the \textbf{best individual fit}: whichever model gives the lowest combined error (SEE) for CP and
+        $W'$ on \emph{your} data, not a fixed default model.
+  \item \textbf{Quality check:} if CP's SEE exceeds 5\%\ or $W'$'s SEE exceeds 10\%\ across all three
+        models, re-run whichever trial looks like it was paced poorly rather than trusting the fit.
+\end{itemize}
+
+\medskip
+
+\NoteBox{Update \texttt{\textbackslash currentCP} and \texttt{\textbackslash currentWprime}
+with the result. Retest at the checkpoints already built into this plan: end of W8 (recovery week) and end
+of W12 (after the VO\textsubscript{2}max adaptation window closes, not before). For running Threshold Pace,
+estimate the same way with two to three all-out time trials (e.g.\ 3\,min + 9--13\,min) on a flat, consistent
+route: $TP = (D_2 - D_1)/(T_2 - T_1)$.}
 
 \end{document}
