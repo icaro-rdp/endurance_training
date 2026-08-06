@@ -1,3 +1,20 @@
+---
+title: Over/Unders — Complete Guide
+category: periodization
+topics:
+- FTP
+- VO2max
+- LT1_VT1
+- Aerobic_base
+source: Empirical Cycling Podcast — Kelly Moore & James McKay (Episodes 43–44)
+author: Endurance Research
+date: '2025-01-01'
+summary: Over/unders are structured intervals that alternate between a power target
+  **above** threshold ("overs") and a recovery target **below** threshold ("unders").
+  The overs recruit large motor units and briefly stress the anaerobic system; the
+  unders let you recover enough to repeat the over without blo
+---
+
 # Over/Unders — Complete Guide
 
 _Source: Empirical Cycling Podcast — Kelly Moore & James McKay (Episodes 43–44)_

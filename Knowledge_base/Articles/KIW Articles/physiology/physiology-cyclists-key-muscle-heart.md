@@ -1,3 +1,18 @@
+---
+title: 'The Cyclist''s Key Muscle: the Heart'
+category: physiology
+topics:
+- FTP
+- CP
+- Cardiac_hypertrophy
+source: 'knowledgeiswatt.substack.com/p/115-the-cyclists-key-muscle-the-heart Date:
+  November'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/115-the-cyclists-key-muscle-the-heart  November'
+summary: 21, 2025 Endurance performance is largely determined by the power of the
+  aerobic engine. When athletes rely
+---
+
 # The Cyclist's Key Muscle: the Heart
 
 **Source:** knowledgeiswatt.substack.com/p/115-the-cyclists-key-muscle-the-heart **Date:** November

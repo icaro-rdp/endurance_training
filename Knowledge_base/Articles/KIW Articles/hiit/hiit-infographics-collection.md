@@ -1,3 +1,19 @@
+---
+title: High Intensity Training (hit) Infographics Collection
+category: hiit
+topics:
+- VO2max
+- Short_intervals
+- Long_intervals
+- Fast_start_intervals
+- Sodium_bicarbonate
+source: 'knowledgeiswatt.substack.com/p/high-intensity-training-hit-infographics Date:'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/high-intensity-training-hit-infographics'
+summary: October 15, 2024 Here is the growing infographics library about all the relevant
+  researches on high intensity
+---
+
 # High Intensity Training (hit) Infographics Collection
 
 **Source:** knowledgeiswatt.substack.com/p/high-intensity-training-hit-infographics **Date:**

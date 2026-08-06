@@ -1,3 +1,17 @@
+---
+title: Training And Racing With A Power Meter
+category: general
+topics:
+- FTP
+source: Knowledge Base
+author: Endurance Research
+date: '2019-04-22T15:53:14+00:00'
+summary: '<p style="font-weight: 600"><em>Training and Racing with a Power Meter </em>brings
+  the advanced power-based training techniques of elite cyclists and triathletes to
+  everyone.</p> <p>A power meter can unlock more speed and endurance than any other
+  training tool—but only if you understand the data. Th'
+---
+
 **Title:** Training and Racing With a Power Meter
 **Authors:** Hunter Allen, Andrew R. Coggan, Phd, Stephen McGregor, Phd
 **Language:** en

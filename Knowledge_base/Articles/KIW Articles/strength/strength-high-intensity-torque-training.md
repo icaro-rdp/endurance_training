@@ -1,3 +1,20 @@
+---
+title: High Intensity Torque Training Can Increase Cycling Performance
+category: strength
+topics:
+- VO2max
+- LT1_VT1
+- Heavy_torque
+source: 'knowledgeiswatt.substack.com/p/58-high-intensity-torque-training Date: January
+  27,'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/58-high-intensity-torque-training  January
+  27,'
+summary: In a previous KisW Research Note, we saw that low cadence training did not
+  increase performance more than the same training at free cadence. In that study,
+  participants were amateur middle aged
+---
+
 # High Intensity Torque Training Can Increase Cycling Performance
 
 **Source:** knowledgeiswatt.substack.com/p/58-high-intensity-torque-training **Date:** January 27,

@@ -1,3 +1,19 @@
+---
+title: The 'pre-loaded' Short Intermittent Intervals
+category: hiit
+topics:
+- FTP
+- CP
+- VO2max
+- LT2_VT2
+- Short_intervals
+source: 'knowledgeiswatt.substack.com/p/7-optimizing-your-hit-aerobic-workouts Date:
+  January'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/7-optimizing-your-hit-aerobic-workouts  January'
+summary: 23, 2026 1. THE SCIENTIFIC BACKGROUND
+---
+
 # The 'pre-loaded' Short Intermittent Intervals
 
 **Source:** knowledgeiswatt.substack.com/p/7-optimizing-your-hit-aerobic-workouts **Date:** January

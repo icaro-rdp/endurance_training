@@ -1,3 +1,18 @@
+---
+title: Can They Be Used Interchangeably?
+category: metrics
+topics:
+- Metrics
+source: 'knowledgeiswatt.substack.com/p/62-flat-vs-uphill-power-output Date: February
+  27,'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/62-flat-vs-uphill-power-output  February
+  27,'
+summary: It is common feeling easier to produce watts when riding uphill compared
+  to flat terrain. Some coaches even recommend slightly higher power values for a
+  given training zone when riding
+---
+
 # Can They Be Used Interchangeably?
 
 **Source:** knowledgeiswatt.substack.com/p/62-flat-vs-uphill-power-output **Date:** February 27,

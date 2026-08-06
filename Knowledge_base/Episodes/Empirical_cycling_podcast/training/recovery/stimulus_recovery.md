@@ -1,3 +1,16 @@
+---
+title: 'Stimulus vs. Recovery: Diagnosing Performance Plateaus'
+category: periodization
+topics:
+- Periodization
+source: Knowledge Base
+author: Endurance Research
+date: '2025-01-01'
+summary: Worked scenarios applying the stimulus/recovery diagnosis above. Use these
+  as templates, not prescriptions — the numbers are illustrative. For coaching, consultation,
+  or training inquiries, contact **empiricalcycling@gmail.com**.
+---
+
 # Stimulus vs. Recovery: Diagnosing Performance Plateaus
 
 **Background from the prior study:**

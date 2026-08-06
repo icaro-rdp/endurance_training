@@ -1,3 +1,19 @@
+---
+title: 'Strength Training During Competition Period: Yes or No?'
+category: strength
+topics:
+- Durability
+- Short_intervals
+- Periodization
+- Unilateral
+- Double_threshold
+source: 'knowledgeiswatt.substack.com/p/64-strength-training-during-competition Date:
+  March'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/64-strength-training-during-competition  March'
+summary: '3, 2025 In previous KisW Research Notes, we saw that:'
+---
+
 # Strength Training During Competition Period: Yes or No?
 
 **Source:** knowledgeiswatt.substack.com/p/64-strength-training-during-competition **Date:** March

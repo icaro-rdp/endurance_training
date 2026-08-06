@@ -1,3 +1,16 @@
+---
+title: 'Glucose-fructose Ratio: Check What You Buy!'
+category: nutrition
+topics:
+- VO2max
+- Glucose_fructose
+source: 'knowledgeiswatt.substack.com/p/56-glucose-fructose-ratio-check-what Date:
+  January'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/56-glucose-fructose-ratio-check-what  January'
+summary: '17, 2025 In the previous KisW research notes, we saw that:'
+---
+
 # Glucose-fructose Ratio: Check What You Buy!
 
 **Source:** knowledgeiswatt.substack.com/p/56-glucose-fructose-ratio-check-what **Date:** January

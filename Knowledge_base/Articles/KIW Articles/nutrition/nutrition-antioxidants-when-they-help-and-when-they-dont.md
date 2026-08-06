@@ -1,3 +1,17 @@
+---
+title: 'Antioxidants for Endurance Performance: When They Help and When They Get in
+  the Way'
+category: nutrition
+topics:
+- Mitochondrial_density
+source: 'knowledgeiswatt.substack.com/p/118-antioxidants-for-endurance-performance
+  Date:'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/118-antioxidants-for-endurance-performance'
+summary: November 28, 2025 Endurance training is, at its core, a stress-and-adaptation
+  process. This stress is supposed to
+---
+
 # Antioxidants for Endurance Performance: When They Help and When They Get in the Way
 
 **Source:** knowledgeiswatt.substack.com/p/118-antioxidants-for-endurance-performance **Date:**

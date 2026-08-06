@@ -1,3 +1,21 @@
+---
+title: Aerobic Base & Zone 2 Training — Complete Guide
+category: periodization
+topics:
+- FTP
+- VO2max
+- FatMax
+- LT1_VT1
+- Aerobic_base
+source: Empirical Cycling Podcast — Kelly Moore & James McKay
+author: Endurance Research
+date: '2025-01-01'
+summary: '"Base" does not mean Zone 2 miles — it means **the sum of all aerobic work**
+  that has made you aerobically stronger across a season and a career. Threshold intervals,
+  VO2max work, and long endurance rides all contribute. > The bigger-base-higher-peak
+  pyramid model is misleading. Think food plate, no'
+---
+
 # Aerobic Base & Zone 2 Training — Complete Guide
 
 _Source: Empirical Cycling Podcast — Kelly Moore & James McKay_

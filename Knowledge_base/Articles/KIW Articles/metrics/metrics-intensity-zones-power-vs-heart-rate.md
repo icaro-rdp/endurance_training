@@ -1,3 +1,19 @@
+---
+title: Time Spent in Intensity Zones Differs If Using Power vs Heart Rate
+category: metrics
+topics:
+- Decreasing_intervals
+- Periodization
+source: 'knowledgeiswatt.substack.com/p/91-time-spent-in-intensity-zones Date: August
+  6, 2025'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/91-time-spent-in-intensity-zones  August
+  6, 2025'
+summary: Evaluating the time spent in zones (intensity distribution) is a very common
+  practice to evaluate training sessions to manage training stimulus and to evaluate
+  the physiological demands of races.
+---
+
 # Time Spent in Intensity Zones Differs If Using Power vs Heart Rate
 
 **Source:** knowledgeiswatt.substack.com/p/91-time-spent-in-intensity-zones **Date:** August 6, 2025

@@ -1,3 +1,21 @@
+---
+title: How to Apply Short High Intensity Intermittent Intervals with Progressive Overload
+category: hiit
+topics:
+- VO2max
+- LT2_VT2
+- Short_intervals
+- Long_intervals
+- Aerobic_base
+source: 'knowledgeiswatt.substack.com/p/3-how-to-apply-short-high-intensity Date:
+  October 31,'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/3-how-to-apply-short-high-intensity  October
+  31,'
+summary: 'SCIENTIFIC BACKGROUND: Short high intensity intermittent intervals are a
+  HIT format in which the work duration is 15sec-1'
+---
+
 # How to Apply Short High Intensity Intermittent Intervals with Progressive Overload
 
 **Source:** knowledgeiswatt.substack.com/p/3-how-to-apply-short-high-intensity **Date:** October 31,

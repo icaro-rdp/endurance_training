@@ -1,3 +1,14 @@
+---
+title: Training For The Uphill Athlete
+category: general
+topics:
+- General
+source: Knowledge Base
+author: Endurance Research
+date: '2019-03-12T06:00:00+00:00'
+summary: '![image](../images/00001.jpeg) ![image](../images/00002.jpeg)'
+---
+
 **Title:** Training for the Uphill Athlete
 **Authors:** Steve House, Scott Johnston, Kilian Jornet
 **Language:** en

@@ -1,3 +1,17 @@
+---
+title: Periodizzazione Dell'Allenamento Sportivo
+category: general
+topics:
+- General
+source: Knowledge Base
+author: Endurance Research
+date: '2017-03-05T23:00:00+00:00'
+summary: '<p>Il Prof. Tudor Bompa è stato pioniere di nuove concezioni in questo campo,
+  provando già molto tempo addietro come non solo il come e quanto duramente un atleta
+  lavorava in allenamento, ma anche il quando e il tipo di lavoro che egli sceglieva,
+  potessero determinare i suoi livelli di preparazione '
+---
+
 **Title:** Periodizzazione dell'allenamento sportivo: Nuova edizione
 **Authors:** Tudor Bompa, Carlo A. Buzzichelli
 **Language:** it

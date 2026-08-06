@@ -1,3 +1,18 @@
+---
+title: Unpacking the Science and Practical Use by Jeff Rothschild PhD
+category: nutrition
+topics:
+- Sodium_bicarbonate
+source: 'knowledgeiswatt.substack.com/p/51-sodium-bicarbonate-for-cycling Date: December
+  20,'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/51-sodium-bicarbonate-for-cycling  December
+  20,'
+summary: Disclaimer The information provided in this article is for educational and
+  informational purposes only and should not be considered medical advice. Always
+  consult with a qualified healthcare
+---
+
 # Unpacking the Science and Practical Use by Jeff Rothschild PhD
 
 **Source:** knowledgeiswatt.substack.com/p/51-sodium-bicarbonate-for-cycling **Date:** December 20,

@@ -1,3 +1,17 @@
+---
+title: Sweet Spot Training — Complete Guide
+category: periodization
+topics:
+- FTP
+source: Empirical Cycling Podcast — Kelly Moore & James McKay
+author: Endurance Research
+date: '2025-01-01'
+summary: 'Sweet spot is a training intensity sitting **~10% below FTP**, defined as
+  **90% of FTP**. No range needed for steady-state work — pick the number and ride
+  it. For over/unders, a tight ±5–10 watt window around the under target is acceptable.
+  | Method        | Value                                    '
+---
+
 # Sweet Spot Training — Complete Guide
 
 _Source: Empirical Cycling Podcast — Kelly Moore & James McKay_

@@ -1,3 +1,19 @@
+---
+title: The Key to Successful Seasons in Pro Cyclists
+category: periodization
+topics:
+- FTP
+- Aerobic_base
+source: 'knowledgeiswatt.substack.com/p/109-more-volume-at-low-intensity Date: October
+  20,'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/109-more-volume-at-low-intensity  October
+  20,'
+summary: In past KIW Research Notes and many times in general, we learn about cycling
+  science performance from ‘controlled’ training studies. What they are? They consists
+  in dividing cyclists into different
+---
+
 # The Key to Successful Seasons in Pro Cyclists
 
 **Source:** knowledgeiswatt.substack.com/p/109-more-volume-at-low-intensity **Date:** October 20,

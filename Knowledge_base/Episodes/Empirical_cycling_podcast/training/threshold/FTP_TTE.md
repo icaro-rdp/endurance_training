@@ -1,3 +1,18 @@
+---
+title: 'FTP and TTE: Why the One-Hour Rule Misleads — Complete Guide'
+category: periodization
+topics:
+- FTP
+- VO2max
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle (Spotify: [episode](https://open.spotify.com/episode/1EQufX5qpuNtxLqVCQX6b4?trackId=1EQufX5qpuNtxLqVCQX6b4))'
+author: Endurance Research
+date: '2025-01-01'
+summary: 'FTP is better understood as a physiological boundary than as a guaranteed
+  60-minute effort. The episode argues that the real variable is **time to exhaustion
+  (TTE)** at threshold: many athletes can hold FTP for less than an hour, and that
+  does not mean the number is wrong. > Practical summary: above'
+---
+
 # FTP and TTE: Why the One-Hour Rule Misleads — Complete Guide
 
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle (Spotify: [episode](https://open.spotify.com/episode/1EQufX5qpuNtxLqVCQX6b4?trackId=1EQufX5qpuNtxLqVCQX6b4))_

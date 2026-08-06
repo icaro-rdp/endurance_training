@@ -1,3 +1,14 @@
+---
+title: Injury Free Running   Your Illustrated Guide
+category: general
+topics:
+- General
+source: Knowledge Base
+author: Endurance Research
+date: '2025-01-01'
+summary: '![cover](images/cover.jpg) Injury-Free'
+---
+
 **Title:** Injury-Free Running
 **Authors:** Tom Michaud
 **Language:** en

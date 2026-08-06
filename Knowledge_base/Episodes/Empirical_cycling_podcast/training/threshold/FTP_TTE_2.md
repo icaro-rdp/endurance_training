@@ -1,3 +1,19 @@
+---
+title: 'FTP vs. TTE: Raising Power vs. Extending Duration — Complete Guide'
+category: periodization
+topics:
+- FTP
+- VO2max
+- Periodization
+source: Empirical Cycling Podcast — Kolie Moore & Rory
+author: Endurance Research
+date: '2025-01-01'
+summary: Functional Threshold Power (FTP) and Time to Exhaustion (TTE) represent two
+  distinct but deeply linked dimensions of aerobic performance. FTP is a **two-dimensional
+  metric** (Power × Duration). Treating FTP as a simple one-dimensional watt target
+  ignores how individual athletes fatigue.
+---
+
 # FTP vs. TTE: Raising Power vs. Extending Duration — Complete Guide
 
 _Source: Empirical Cycling Podcast — Kolie Moore & Rory_

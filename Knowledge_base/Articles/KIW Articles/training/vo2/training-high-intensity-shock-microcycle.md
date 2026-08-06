@@ -1,3 +1,21 @@
+---
+title: A High Intensity Shock Mycrocycle Boosts Performance!
+category: periodization
+topics:
+- FTP
+- CP
+- LT2_VT2
+- Periodization
+source: 'knowledgeiswatt.substack.com/p/81-optimal-tapering-a-high-intensity Date:
+  May 27,'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/81-optimal-tapering-a-high-intensity  May
+  27,'
+summary: When considering the annual training plan, linear classic periodization (a
+  progressive increase in volume first and intensity then while keeping or slightly
+  reducing the volume) is the most used
+---
+
 # A High Intensity Shock Mycrocycle Boosts Performance!
 
 **Source:** knowledgeiswatt.substack.com/p/81-optimal-tapering-a-high-intensity **Date:** May 27,

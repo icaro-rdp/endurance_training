@@ -1,3 +1,20 @@
+---
+title: 'Measuring Durability: the Guide'
+category: metrics
+topics:
+- FTP
+- VO2max
+- Durability
+source: 'knowledgeiswatt.substack.com/p/30-testing-durability-the-guide Date: September
+  20,'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/30-testing-durability-the-guide  September
+  20,'
+summary: Durability is the ability to decrease as less as possible performance during
+  prolonged exercise. In a previous post, we saw that durability is not related to
+  traditional endurance physiological or
+---
+
 # Measuring Durability: the Guide
 
 **Source:** knowledgeiswatt.substack.com/p/30-testing-durability-the-guide **Date:** September 20,

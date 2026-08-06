@@ -1,3 +1,19 @@
+---
+title: Ftp Vs Cp
+category: metrics
+topics:
+- FTP
+- CP
+- W_prime
+source: Knowledge Base
+author: Endurance Research
+date: '2025-01-01'
+summary: 'title: FTP vs. Critical Power — Complete Guide category: metrics'
+---
+
+  |'
+---
+
 # FTP vs. Critical Power — Complete Guide
 
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle_

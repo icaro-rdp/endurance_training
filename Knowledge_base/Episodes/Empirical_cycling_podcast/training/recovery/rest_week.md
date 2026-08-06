@@ -1,3 +1,18 @@
+---
+title: Rest Week — How Long Recovery Should Be
+category: periodization
+topics:
+- VO2max
+- Periodization
+source: Empirical Cycling Podcast
+author: Endurance Research
+date: '2025-01-01'
+summary: 'A rest week is a planned reduction in training load that gives the body
+  enough time to recover from accumulated stress. The basic idea is simple: training
+  creates the stimulus, but adaptation happens during recovery. A rest week is the
+  period where fatigue drops, the athlete repairs, and fitness can'
+---
+
 # Rest Week — How Long Recovery Should Be
 
 _Source: Empirical Cycling Podcast_

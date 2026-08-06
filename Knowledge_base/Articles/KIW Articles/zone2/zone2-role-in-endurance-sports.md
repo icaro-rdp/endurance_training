@@ -1,3 +1,20 @@
+---
+title: The Role of Zone 2 Training in Endurance Sports
+category: zone2
+topics:
+- VO2max
+- LT1_VT1
+- Aerobic_base
+source: 'knowledgeiswatt.substack.com/p/108-the-role-of-zone-2-training-in Date: October
+  15,'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/108-the-role-of-zone-2-training-in  October
+  15,'
+summary: In a very debated previous KIW Research Note, we saw that, when matching
+  total work (read energy expenditure), zone 2 (low intensity, below the first threshold)
+  induces less aerobic adaptations
+---
+
 # The Role of Zone 2 Training in Endurance Sports
 
 **Source:** knowledgeiswatt.substack.com/p/108-the-role-of-zone-2-training-in **Date:** October 15,

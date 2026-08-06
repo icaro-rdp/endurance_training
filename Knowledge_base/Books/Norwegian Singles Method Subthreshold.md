@@ -1,3 +1,19 @@
+---
+title: Norwegian Singles Method
+category: general
+topics:
+- LT1_VT1
+- LT2_VT2
+- Double_threshold
+source: Knowledge Base
+author: Endurance Research
+date: '2025-12-05T00:00:00+00:00'
+summary: Copyright Page© James Copeland 2025 All rights reserved. No part of this
+  publication may be reproduced, stored in a retrieval system, or transmitted in any
+  form or by any means, electronic, mechanical, photocopying, recording, or otherwise,
+  without the prior written permission of the copyright owner
+---
+
 **Title:** Norwegian Singles Method: Subthreshold Running Kept Simple
 **Authors:** James Copeland
 **Language:** en

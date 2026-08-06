@@ -1,3 +1,17 @@
+---
+title: Strength Training Infographics Collection
+category: strength
+topics:
+- Durability
+- Unilateral
+source: 'knowledgeiswatt.substack.com/p/strength-training-infographics-collection
+  Date:'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/strength-training-infographics-collection'
+summary: November 15, 2024 Here is the growing infographics library about all the
+  relevant researches on strength training and
+---
+
 # Strength Training Infographics Collection
 
 **Source:** knowledgeiswatt.substack.com/p/strength-training-infographics-collection **Date:**

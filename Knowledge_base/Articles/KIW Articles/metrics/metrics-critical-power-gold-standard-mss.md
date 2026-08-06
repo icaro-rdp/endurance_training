@@ -1,3 +1,20 @@
+---
+title: 'Critical Power: the Gold Standard for the Maximum Metabolic Steady State'
+category: metrics
+topics:
+- CP
+- VO2max
+- LT2_VT2
+- Aerobic_base
+- Periodization
+source: Knowledge Base
+author: Endurance Research
+date: '2025-01-01'
+summary: 'Properly identifying exercise intensity is essential in endurance sports:
+  in training, accurate intensity prescription allows for effective management of
+  physiological stress'
+---
+
 # Critical Power: the Gold Standard for the Maximum Metabolic Steady State
 
 Properly identifying exercise intensity is essential in endurance sports:

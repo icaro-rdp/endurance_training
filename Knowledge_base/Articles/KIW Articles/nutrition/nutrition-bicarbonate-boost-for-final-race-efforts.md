@@ -1,3 +1,22 @@
+---
+title: A Boost for the Final All-out Efforts!
+category: nutrition
+topics:
+- FTP
+- VO2max
+- LT1_VT1
+- LT2_VT2
+- Sodium_bicarbonate
+source: 'knowledgeiswatt.substack.com/p/126-bicarbonate-during-long-races Date: December
+  29,'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/126-bicarbonate-during-long-races  December
+  29,'
+summary: When exercising above the first—and especially the second—lactate threshold
+  (or above FTP/critical power), there is an exponential rise in hydrogen ions (H⁺),
+  which increases acidity and contributes
+---
+
 # A Boost for the Final All-out Efforts!
 
 **Source:** knowledgeiswatt.substack.com/p/126-bicarbonate-during-long-races **Date:** December 29,

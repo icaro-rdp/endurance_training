@@ -1,3 +1,21 @@
+---
+title: Yes, but Choose the Right Lab!
+category: metrics
+topics:
+- FTP
+- VO2max
+- FatMax
+- Aerobic_base
+- Sodium_bicarbonate
+source: 'knowledgeiswatt.substack.com/p/55-are-metabolic-carts-for-vo2max Date: January
+  14,'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/55-are-metabolic-carts-for-vo2max  January
+  14,'
+summary: VO2max, ventilatory thresholds and fuel utilisation (how many grams of carbs
+  and fats you use at each intensity) can be interesting parameters to know.
+---
+
 # Yes, but Choose the Right Lab!
 
 **Source:** knowledgeiswatt.substack.com/p/55-are-metabolic-carts-for-vo2max **Date:** January 14,

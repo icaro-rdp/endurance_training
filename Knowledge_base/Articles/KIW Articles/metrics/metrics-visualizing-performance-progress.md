@@ -1,3 +1,18 @@
+---
+title: Am I Doing Better? a Simple Way to Visualize Cycling Performance
+category: metrics
+topics:
+- Metrics
+source: 'knowledgeiswatt.substack.com/p/85-am-i-doing-better-a-simple-way Date: June
+  19, 2025'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/85-am-i-doing-better-a-simple-way  June
+  19, 2025'
+summary: In other sports like running and swimming the competition distance is fixed
+  (for example 5k, 10k, marathon), so it is very simple to quantify and compare performance
+  just using the finishing time of
+---
+
 # Am I Doing Better? a Simple Way to Visualize Cycling Performance
 
 **Source:** knowledgeiswatt.substack.com/p/85-am-i-doing-better-a-simple-way **Date:** June 19, 2025

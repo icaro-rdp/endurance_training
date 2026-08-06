@@ -1,3 +1,21 @@
+---
+title: Beta-alanine for Cycling by Jeff Rothschild PhD
+category: nutrition
+topics:
+- FTP
+- LT2_VT2
+- Periodization
+- Sodium_bicarbonate
+- Beta_alanine
+source: 'knowledgeiswatt.substack.com/p/beta-alanine-for-cycling-by-jeff Date: March
+  11, 2025'
+author: Endurance Research
+date: 'Source: knowledgeiswatt.substack.com/p/beta-alanine-for-cycling-by-jeff  March
+  11, 2025'
+summary: What is Beta-Alanine? Beta-alanine is a non-essential amino acid that serves
+  as a building block for carnosine, a compound
+---
+
 # Beta-alanine for Cycling by Jeff Rothschild PhD
 
 **Source:** knowledgeiswatt.substack.com/p/beta-alanine-for-cycling-by-jeff **Date:** March 11, 2025

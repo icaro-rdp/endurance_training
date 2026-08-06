@@ -1,3 +1,17 @@
+---
+title: FTP Testing — Complete Guide
+category: metrics
+topics:
+- FTP
+source: Empirical Cycling Podcast — Kolie Moore
+author: Endurance Research
+date: '2025-01-01'
+summary: FTP is the power output you can sustain at **maximal lactate steady state
+  (MLSS)** — the highest intensity at which lactate production and clearance are still
+  in balance. It is **not** 95% of 20-minute power and it is **not** a fixed duration
+  (e.g., "60-minute power"). It manifests as the **inflecti
+---
+
 # FTP Testing — Complete Guide
 
 _Source: Empirical Cycling Podcast — Kolie Moore_

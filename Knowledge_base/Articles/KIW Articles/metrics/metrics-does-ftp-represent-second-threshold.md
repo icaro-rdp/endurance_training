@@ -1,3 +1,18 @@
+---
+title: Does FTP Truly Represent the Second Exercise Threshold?
+category: metrics
+topics:
+- FTP
+- CP
+- LT2_VT2
+source: Knowledge Base
+author: Endurance Research
+date: '2025-01-01'
+summary: In the last KIW Research Notes, we saw that, in 2026, Critical Power (CP)
+  is the gold standard for identifying the second exercise threshold, also known as
+  Maximum
+---
+
 # Does FTP Truly Represent the Second Exercise Threshold?
 
 In the last KIW Research Notes, we saw that, in 2026, Critical Power (CP) is the gold standard for
