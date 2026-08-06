@@ -123,7 +123,7 @@ async def run_stdio_server():
                     "result": {
                         "protocolVersion": "2024-11-05",
                         "capabilities": {"tools": {}},
-                        "serverInfo": {"name": "endurance-kb-mcp", "version": "1.0.0"}
+                        "serverInfo": {"name": "endurance-knowledge-base", "version": "1.0.0"}
                     }
                 })
             elif method == "notifications/initialized":
