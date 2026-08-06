@@ -12,7 +12,7 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from main.kb_engine import KBEngine
+from main.utils.kb_engine import KBEngine
 
 engine = KBEngine()
 
@@ -45,7 +45,7 @@ TOOLS_LIST = [
         "inputSchema": {
             "type": "object",
             "properties": {
-                "rel_path": {"type": "string", "description": "Relative path e.g. Articles/KIW Articles/hiit/hiit-4x8-vs-4x4-vs-4x16.md"}
+                "rel_path": {"type": "string", "description": "Relative path e.g. Articles/knowledgeIsWatts/hiit/hiit-4x8-vs-4x4-vs-4x16.md"}
             },
             "required": ["rel_path"]
         }

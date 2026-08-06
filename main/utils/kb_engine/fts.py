@@ -7,24 +7,25 @@ import re
 import json
 import sqlite3
 from pathlib import Path
-from main.kb_engine.frontmatter import FrontmatterManager
+from main.utils.kb_engine.frontmatter import FrontmatterManager
+from .taxonomy import TaxonomyRegistry
+from .walker import iter_kb_documents
 
 class FTSSearchEngine:
-    def __init__(self, kb_dir: Path, db_path: Path):
+    def __init__(self, kb_dir: Path, db_path: Path, taxonomy: TaxonomyRegistry):
         self.kb_dir = kb_dir
         self.db_path = db_path
-        self.fm_manager = FrontmatterManager(kb_dir)
+        self.taxonomy = taxonomy
+        self.fm_manager = FrontmatterManager(kb_dir, taxonomy)
 
     def is_index_stale(self) -> bool:
         if not self.db_path.exists():
             return True
         db_mtime = self.db_path.stat().st_mtime
-        for root, _, files in os.walk(self.kb_dir):
-            for file in files:
-                if file.endswith(".md") and file not in ["INDEX.md", "TAXONOMY.md"]:
-                    f_mtime = (Path(root) / file).stat().st_mtime
-                    if f_mtime > db_mtime:
-                        return True
+        for file_path in iter_kb_documents(self.kb_dir):
+            f_mtime = file_path.stat().st_mtime
+            if f_mtime > db_mtime:
+                return True
         return False
 
     def build_index(self) -> int:
@@ -61,48 +62,45 @@ class FTSSearchEngine:
         """)
 
         chunk_count = 0
-        for root, _, files in os.walk(self.kb_dir):
-            for file in files:
-                if file.endswith(".md") and file not in ["INDEX.md", "TAXONOMY.md"]:
-                    file_path = Path(root) / file
-                    fm, body = self.fm_manager.parse_document(file_path)
+        for file_path in iter_kb_documents(self.kb_dir):
+            fm, body = self.fm_manager.parse_document(file_path)
 
-                    rel_path = str(file_path.relative_to(self.kb_dir))
-                    raw_sections = re.split(r"\n(?=##?\s+)", body)
-                    line_offset = file_path.read_text(encoding="utf-8", errors="replace").find(body)
-                    line_start_base = body[:line_offset].count("\n") + 1 if "---\n" in body else 1
+            rel_path = str(file_path.relative_to(self.kb_dir))
+            raw_sections = re.split(r"\n(?=##?\s+)", body)
+            line_offset = file_path.read_text(encoding="utf-8", errors="replace").find(body)
+            line_start_base = body[:line_offset].count("\n") + 1 if "---\n" in body else 1
 
-                    line_curr = line_start_base
-                    for section in raw_sections:
-                        section_str = section.strip()
-                        if not section_str:
-                            continue
-                        
-                        start_line = line_curr
-                        lines_count = section_str.count("\n") + 1
-                        end_line = start_line + lines_count - 1
-                        line_curr = end_line + 1
+            line_curr = line_start_base
+            for section in raw_sections:
+                section_str = section.strip()
+                if not section_str:
+                    continue
+                
+                start_line = line_curr
+                lines_count = section_str.count("\n") + 1
+                end_line = start_line + lines_count - 1
+                line_curr = end_line + 1
 
-                        cursor.execute("""
-                        INSERT INTO kb_chunks (title, category, topics, source, rel_path, abs_path, start_line, end_line, content)
-                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-                        """, (
-                            fm.get("title", file_path.stem),
-                            fm.get("category", "general"),
-                            json.dumps(fm.get("topics", [])),
-                            fm.get("source", ""),
-                            rel_path,
-                            str(file_path),
-                            start_line,
-                            end_line,
-                            section_str
-                        ))
-                        chunk_id = cursor.lastrowid
-                        cursor.execute("""
-                        INSERT INTO kb_fts (rowid, title, category, topics, content)
-                        VALUES (?, ?, ?, ?, ?)
-                        """, (chunk_id, fm.get("title", file_path.stem), fm.get("category", "general"), json.dumps(fm.get("topics", [])), section_str))
-                        chunk_count += 1
+                cursor.execute("""
+                INSERT INTO kb_chunks (title, category, topics, source, rel_path, abs_path, start_line, end_line, content)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, (
+                    fm.get("title", file_path.stem),
+                    fm.get("category", "general"),
+                    json.dumps(fm.get("topics", [])),
+                    fm.get("source", ""),
+                    rel_path,
+                    str(file_path),
+                    start_line,
+                    end_line,
+                    section_str
+                ))
+                chunk_id = cursor.lastrowid
+                cursor.execute("""
+                INSERT INTO kb_fts (rowid, title, category, topics, content)
+                VALUES (?, ?, ?, ?, ?)
+                """, (chunk_id, fm.get("title", file_path.stem), fm.get("category", "general"), json.dumps(fm.get("topics", [])), section_str))
+                chunk_count += 1
 
         conn.commit()
         conn.close()
