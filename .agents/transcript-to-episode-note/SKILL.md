@@ -50,4 +50,5 @@ Turn a raw transcript into a clean markdown note that reads like a reference gui
 
 ## Reference Template
 
-Use [references/episode-template.md](references/episode-template.md) when you want a starting point for formatting.
+Use [references/episode-template.md](references/episode-template.md) when you want a starting point for formatting, note that it's just a template and not a strict requirement. The goal is to produce a readable, structured note that captures the essence of the transcript.
+
