@@ -10,6 +10,15 @@ This document records the ubiquitous language, core domain concepts, and archite
 - **Frontmatter**: Standardized YAML header metadata (`title`, `category`, `topics`, `summary`, `source`, `date`) embedded at the top of every KB document.
 - **Taxonomy**: Canonical list of Categories (`metrics`, `hiit`, `zone2`, `strength`, `nutrition`, `physiology`, `periodization`, `book`) and Topics defined in `Knowledge_base/TAXONOMY.md`.
 - **Sitemap / Index**: Master document catalog located at `Knowledge_base/INDEX.md` generated dynamically from document frontmatters.
+- **Athlete Query**: A natural-language question about endurance-training concepts, decisions, or planning needs.
+- **Semantic Retrieval**: Finding and ranking Evidence Passages by the meaning and training concepts expressed in an Athlete Query, including relevant passages that do not repeat its exact wording or use the same language. English and Italian queries and sources are part of the same retrieval space.
+- **Diversified Retrieval**: Semantic Retrieval that balances relevance with coverage across distinct training concepts and Knowledge Sources for broad Athlete Queries.
+- **Focused Retrieval**: Semantic Retrieval that prioritizes the strongest-matching passages within an optionally constrained source or topic for deep investigation.
+- **Evidence Passage**: A bounded excerpt from a Knowledge Source with its document identity, author, language, source type, section hierarchy, stable location, and enough surrounding context to cite and inspect it accurately. Competing passages remain independently attributable when sources disagree.
+- **Grounded Synthesis**: An explanation, comparison, or plan produced by a connected LLM from retrieved Evidence Passages, with source claims traceable to citations and inference kept distinguishable from source evidence.
+- **Knowledge Source**: A curated article, podcast note, or book included in the Knowledge Base.
+- **Corpus Synchronization**: The explicit operation that rebuilds all Derived Indexes from the current Knowledge Sources, including additions, edits, renames, and deletions.
+- **Derived Index**: A reproducible local search artifact generated from Knowledge Sources. It is not a Knowledge Source and is invalid once the corpus changes.
 
 ---
 
