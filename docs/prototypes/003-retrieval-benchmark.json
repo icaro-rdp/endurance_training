@@ -1,0 +1,468 @@
+{
+  "version": "1.0.0",
+  "name": "Endurance Training Retrieval Benchmark",
+  "issue_id": 3,
+  "created_at": "2026-08-10",
+  "description": "Benchmark dataset and gold passages for evaluating lexical, semantic, cross-lingual, and negative query performance across the Knowledge Base.",
+  "acceptance_thresholds": {
+    "mrr_at_5": 0.85,
+    "ndcg_at_5": 0.80,
+    "recall_at_5": 0.85,
+    "latency_p95_ms": 500,
+    "negative_query_max_false_positives": 0
+  },
+  "queries": [
+    {
+      "id": "Q01",
+      "query": "How to increase my FTP over a 12-week block?",
+      "language": "en",
+      "category": "broad_planning",
+      "description": "Broad athletic planning query asking for FTP progression strategy across a structured micro/mesocycle.",
+      "expected_behavior": "Should retrieve top-tier FTP training guides emphasizing time-in-zone extension, progressive overload, and TTE before power ceiling expansion.",
+      "gold_passages": [
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/training/threshold/FTP_training.md",
+          "title": "FTP (Threshold) Training — Complete Guide",
+          "relevance_score": 3,
+          "start_line": 21,
+          "end_line": 60,
+          "target_snippet": "FTP (Functional Threshold Power) is the highest power you can sustain in a quasi-steady state for a prolonged effort"
+        },
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/training/threshold/FTP_decision_tree.md",
+          "title": "FTP Training Decision Tree — Complete Guide",
+          "relevance_score": 3,
+          "start_line": 24,
+          "end_line": 53,
+          "target_snippet": "Early Season vs. Late Season FTP Training strategy"
+        },
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/training/threshold/FTP_TTE_2.md",
+          "title": "FTP vs. TTE: Raising Power vs. Extending Duration — Complete Guide",
+          "relevance_score": 2,
+          "start_line": 1,
+          "end_line": 40,
+          "target_snippet": "Functional Threshold Power (FTP) and Time to Exhaustion (TTE) represent two distinct but deeply linked dimensions"
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "query": "Come strutturare la periodizzazione dell'allenamento per aumentare la potenza di soglia?",
+      "language": "it",
+      "category": "broad_planning",
+      "description": "Italian broad planning query for structuring periodization blocks to raise threshold power.",
+      "expected_behavior": "Should retrieve Italian periodization texts (Bompa) as well as primary threshold guides via cross-lingual matching.",
+      "gold_passages": [
+        {
+          "rel_path": "Books/Periodizzazione dell'allenamento sportivo.md",
+          "title": "Periodizzazione Dell'Allenamento Sportivo",
+          "relevance_score": 3,
+          "start_line": 21,
+          "end_line": 32,
+          "target_snippet": "programmi periodizzati possa condurre al picco della condizione in tempi ottimali, semplicemente manipolando le variabili"
+        },
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/training/threshold/FTP_training.md",
+          "title": "FTP (Threshold) Training — Complete Guide",
+          "relevance_score": 3,
+          "start_line": 21,
+          "end_line": 60,
+          "target_snippet": "FTP (Functional Threshold Power) is the highest power you can sustain"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/training/vo2/training-high-intensity-shock-microcycle.md",
+          "title": "A High Intensity Shock Mycrocycle Boosts Performance!",
+          "relevance_score": 2,
+          "start_line": 198,
+          "end_line": 240,
+          "target_snippet": "linear classic periodization (a progressive increase in volume first and intensity then)"
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "query": "What physiological changes occur in cardiac stroke volume and cardiac hypertrophy from endurance training?",
+      "language": "en",
+      "category": "physiology",
+      "description": "Specific cardiac physiology query focusing on left ventricular end-diastolic volume, stroke volume, and central cardiac remodeling.",
+      "expected_behavior": "Should match central cardiovascular physiological analysis documents in KIW and podcast episodes.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/physiology/physiology-cyclists-key-muscle-heart.md",
+          "title": "The Cyclist's Key Muscle: the Heart",
+          "relevance_score": 3,
+          "start_line": 21,
+          "end_line": 60,
+          "target_snippet": "Left Ventricle End Diastolic Volume and stroke volume differences between elite, sub-elite, and untrained"
+        },
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/training/threshold/FTP_decision_tree.md",
+          "title": "FTP Training Decision Tree — Complete Guide",
+          "relevance_score": 2,
+          "start_line": 24,
+          "end_line": 33,
+          "target_snippet": "central cardiovascular capacity (VO2max) and peripheral muscular adaptations"
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "query": "Qual è il ruolo dei tamponi come il bicarbonato di sodio nel gestire l'accumulo di ioni idrogeno ad alta intensità?",
+      "language": "it",
+      "category": "physiology",
+      "description": "Italian physiology query asking about sodium bicarbonate buffering mechanics against H+ accumulation during high intensity effort.",
+      "expected_behavior": "Should retrieve sodium bicarbonate nutrition articles in KnowledgeIsWatts.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/nutrition/nutrition-bicarbonate-boost-for-final-race-efforts.md",
+          "title": "A Boost for the Final All-out Efforts!",
+          "relevance_score": 3,
+          "start_line": 24,
+          "end_line": 40,
+          "target_snippet": "exponential rise in hydrogen ions (H+), which increases acidity... sodium bicarbonate acts as an acid buffer"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/nutrition/nutrition-bicarbonate-before-hit-boosts-adaptations.md",
+          "title": "Bicarbonate Before HIT Training Boosts Training Adaptations",
+          "relevance_score": 3,
+          "start_line": 162,
+          "end_line": 185,
+          "target_snippet": "When exercising at high intensity (above second threshold/FTP) a lot of hydrogen ions (H+) are"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/nutrition/nutrition-sodium-bicarbonate-science-and-practical-use.md",
+          "title": "Unpacking the Science and Practical Use by Jeff Rothschild PhD",
+          "relevance_score": 2,
+          "start_line": 170,
+          "end_line": 200,
+          "target_snippet": "Sodium Bicarbonate Science and Practical Use"
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "query": "Are 4x8 minute VO2max intervals more effective than 4x4 or 4x16 minute intervals?",
+      "language": "en",
+      "category": "hiit",
+      "description": "Specific interval duration comparison query evaluating Seiler's 4x8 vs 4x4 vs 4x16 HIT trial results.",
+      "expected_behavior": "Should precisely hit the KIW article specifically dedicated to 4x8 vs 4x4 vs 4x16 comparison.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/hiit/hiit-4x8-vs-4x4-vs-4x16.md",
+          "title": "4x8' Better Than 4x4' or 4x16'",
+          "relevance_score": 3,
+          "start_line": 71,
+          "end_line": 100,
+          "target_snippet": "High intensity training (HIT, that is doing intervals above second threshold/FTP/critical power)... 4x8 Better Than 4x4 or 4x16"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/hiit/hiit-short-vs-long-intervals-trained-cyclists.md",
+          "title": "Short vs Long Intervals in Trained Cyclists",
+          "relevance_score": 2,
+          "start_line": 95,
+          "end_line": 120,
+          "target_snippet": "performing intervals at an intensity above the second threshold"
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "query": "Come programmare gli intervalli brevi ad alta intensità con sovraccarico progressivo?",
+      "language": "it",
+      "category": "hiit",
+      "description": "Italian query on programming short intermittent high-intensity intervals (e.g. 30s/15s) with progressive overload.",
+      "expected_behavior": "Should retrieve KIW short intervals article with progressive overload guidance.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/hiit/hiit-short-intervals-with-progressive-overload.md",
+          "title": "How to Apply Short High Intensity Intermittent Intervals with Progressive Overload",
+          "relevance_score": 3,
+          "start_line": 83,
+          "end_line": 120,
+          "target_snippet": "Short high intensity intermittent intervals are a HIT format in which the work duration is 15sec-1"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/hiit/hiit-short-vs-long-intervals-pro-cyclists.md",
+          "title": "Short Vs. Long Intervals in Pro Cyclists",
+          "relevance_score": 2,
+          "start_line": 91,
+          "end_line": 115,
+          "target_snippet": "short intervals (3x13min 30s on-15s off) provides superior physiological and performance improvements"
+        }
+      ]
+    },
+    {
+      "id": "Q07",
+      "query": "Is Zone 2 training intrinsically superior to Zone 3 and Zone 4 for mitochondrial and aerobic adaptations?",
+      "language": "en",
+      "category": "zone2",
+      "description": "Debunking/nuance query on whether low-intensity Zone 2 is intrinsically better than higher zones when work is matched.",
+      "expected_behavior": "Should retrieve KIW articles directly addressing the Zone 2 vs higher intensity adaptation debate.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/zone2/zone2-not-intrinsically-better-than-higher-zones.md",
+          "title": "Zone 2 Training is not Intrinsically Better Than Zone 3, 4 and 5 to Promote Aerobic Adaptations!",
+          "relevance_score": 3,
+          "start_line": 116,
+          "end_line": 150,
+          "target_snippet": "zone 2 training... when matching total work... induces less aerobic adaptations"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/zone2/zone2-role-in-endurance-sports.md",
+          "title": "The Role of Zone 2 Training in Endurance Sports",
+          "relevance_score": 3,
+          "start_line": 108,
+          "end_line": 135,
+          "target_snippet": "when matching total work (read energy expenditure), zone 2... induces less aerobic adaptations"
+        },
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/training/base/Base_training.md",
+          "title": "Aerobic Base & Zone 2 Training — Complete Guide",
+          "relevance_score": 2,
+          "start_line": 200,
+          "end_line": 240,
+          "target_snippet": "Base does not mean Zone 2 miles — it means the sum of all aerobic work"
+        }
+      ]
+    },
+    {
+      "id": "Q08",
+      "query": "Come stimare l'intensità di FatMax senza un test di laboratorio con metabolimetro?",
+      "language": "it",
+      "category": "zone2",
+      "description": "Italian query on estimating FatMax power or HR range without laboratory gas analysis equipment.",
+      "expected_behavior": "Should match the KIW guide on FatMax estimation without lab testing.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/zone2/zone2-training-at-fatmax-without-lab.md",
+          "title": "Training at Fatmax Without Any Lab Test",
+          "relevance_score": 3,
+          "start_line": 112,
+          "end_line": 145,
+          "target_snippet": "Fatmax is the intensity at which the maximum rate of fat oxidation is elicited"
+        }
+      ]
+    },
+    {
+      "id": "Q09",
+      "query": "Should endurance cyclists perform unilateral or bilateral gym strength exercises?",
+      "language": "en",
+      "category": "strength",
+      "description": "Comparative strength training query on single-leg (unilateral) vs double-leg (bilateral) resistance exercises for cyclists.",
+      "expected_behavior": "Should match unilateral vs bilateral KIW research note and practical gym guidelines.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/strength/strength-unilateral-vs-bilateral-for-cycling.md",
+          "title": "Unilateral or Bilateral Gym Strength Training Exercises? Which is Better to Improve Cycling Performance?",
+          "relevance_score": 3,
+          "start_line": 141,
+          "end_line": 175,
+          "target_snippet": "heavy gym strength training benefits cycling... unilateral vs bilateral"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/strength/strength-endurance-cyclists-practical-guidelines.md",
+          "title": "Strength Training for Endurance Cyclists: Practical Guidelines",
+          "relevance_score": 3,
+          "start_line": 137,
+          "end_line": 165,
+          "target_snippet": "heavy gym strength training improves cycling 1s W/kg and 40min W/Kg as well as durability"
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "query": "È consigliabile continuare l'allenamento della forza in palestra durante il periodo agonistico o di gara?",
+      "language": "it",
+      "category": "strength",
+      "description": "Italian query on in-season strength maintenance vs cessation during competition phase.",
+      "expected_behavior": "Should match KIW article on strength training during competition period.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/strength/strength-during-competition-period.md",
+          "title": "Strength Training During Competition Period: Yes or No?",
+          "relevance_score": 3,
+          "start_line": 129,
+          "end_line": 155,
+          "target_snippet": "Strength Training During Competition Period"
+        }
+      ]
+    },
+    {
+      "id": "Q11",
+      "query": "What are Tudor Bompa's periodization phases for converting maximal strength into specific athletic endurance?",
+      "language": "en",
+      "category": "cross_lingual",
+      "description": "English query targeting Tudor Bompa's periodization phases (anatomical adaptation, hypertrophy, max strength, conversion, maintenance, tapering) found in Italian book text.",
+      "expected_behavior": "Must perform cross-lingual semantic matching to retrieve Bompa's Italian text.",
+      "gold_passages": [
+        {
+          "rel_path": "Books/Periodizzazione dell'allenamento sportivo.md",
+          "title": "Periodizzazione Dell'Allenamento Sportivo",
+          "relevance_score": 3,
+          "start_line": 21,
+          "end_line": 32,
+          "target_snippet": "attraverso sei fasi (adattamento anatomico, ipertrofia, forza massimale, conversione in forza specifica, mantenimento e tapering)"
+        }
+      ]
+    },
+    {
+      "id": "Q12",
+      "query": "How does muscular adaptation progress through anatomical adaptation and hypertrophy according to Italian periodization literature?",
+      "language": "en",
+      "category": "cross_lingual",
+      "description": "English query asking about anatomical adaptation (adattamento anatomico) and hypertrophy in Italian strength periodization.",
+      "expected_behavior": "Must resolve cross-lingual concepts in Bompa's Italian book.",
+      "gold_passages": [
+        {
+          "rel_path": "Books/Periodizzazione dell'allenamento sportivo.md",
+          "title": "Periodizzazione Dell'Allenamento Sportivo",
+          "relevance_score": 3,
+          "start_line": 21,
+          "end_line": 32,
+          "target_snippet": "adattamento anatomico, ipertrofia, forza massimale"
+        }
+      ]
+    },
+    {
+      "id": "Q13",
+      "query": "Quali sono i vantaggi dell'allenamento a basso numero di pedalate ad alta coppia torsionale (heavy torque training)?",
+      "language": "it",
+      "category": "cross_lingual",
+      "description": "Italian query asking about benefits of low cadence high torque cycling training, target document is English.",
+      "expected_behavior": "Must match English KIW high intensity torque training article.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/strength/strength-high-intensity-torque-training.md",
+          "title": "High Intensity Torque Training Can Increase Cycling Performance",
+          "relevance_score": 3,
+          "start_line": 125,
+          "end_line": 160,
+          "target_snippet": "low cadence training... high intensity (sprint and VO2max) intervals performed at low cadence (high torque)"
+        }
+      ]
+    },
+    {
+      "id": "Q14",
+      "query": "Perché la regola della potenza su un'ora per la FTP è fuorviante rispetto al Time to Exhaustion (TTE)?",
+      "language": "it",
+      "category": "cross_lingual",
+      "description": "Italian query asking why 1-hour rule for FTP misleads compared to TTE, target document is English podcast guide.",
+      "expected_behavior": "Must retrieve Empirical Cycling FTP & TTE guide in English.",
+      "gold_passages": [
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/training/threshold/FTP_TTE.md",
+          "title": "FTP and TTE: Why the One-Hour Rule Misleads — Complete Guide",
+          "relevance_score": 3,
+          "start_line": 224,
+          "end_line": 260,
+          "target_snippet": "FTP is better understood as a physiological boundary than as a guaranteed 60-minute effort... time to exhaustion (TTE)"
+        }
+      ]
+    },
+    {
+      "id": "Q15",
+      "query": "Is FTP defined as 95% of 20-minute power or as Maximal Lactate Steady State (MLSS) with variable TTE?",
+      "language": "en",
+      "category": "source_conflict",
+      "description": "Query highlighting conflict between simple 95% of 20-min test formula vs physiological MLSS definition with individual TTE.",
+      "expected_behavior": "Should retrieve testing & threshold guides resolving 20-min multiplier vs true MLSS definition.",
+      "gold_passages": [
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/testing/FTP_test.md",
+          "title": "FTP Testing — Complete Guide",
+          "relevance_score": 3,
+          "start_line": 38,
+          "end_line": 70,
+          "target_snippet": "FTP is the power output you can sustain at maximal lactate steady state (MLSS)... It is not 95% of 20-minute power"
+        },
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/training/threshold/FTP_training.md",
+          "title": "FTP (Threshold) Training — Complete Guide",
+          "relevance_score": 3,
+          "start_line": 21,
+          "end_line": 45,
+          "target_snippet": "physiologically approximated by maximal lactate steady state. It is not defined by any fixed test formula"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/metrics/metrics-does-ftp-represent-second-threshold.md",
+          "title": "Does FTP Truly Represent the Second Exercise Threshold?",
+          "relevance_score": 2,
+          "start_line": 34,
+          "end_line": 60,
+          "target_snippet": "Critical Power (CP) is the gold standard for identifying the second exercise threshold"
+        }
+      ]
+    },
+    {
+      "id": "Q16",
+      "query": "Does splitting daily workload into Norwegian double threshold sessions yield superior aerobic adaptations compared to single long sessions when total work is equal?",
+      "language": "en",
+      "category": "source_conflict",
+      "description": "Query evaluating the debate on double threshold training vs single session when total daily volume/work is matched.",
+      "expected_behavior": "Should retrieve Norwegian double threshold workload split research note and stress/recovery analysis.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/training/threshold/training-aerobic-adaptations-daily-workload-split.md",
+          "title": "Similar Aerobic Adaptations When Total Daily Workload is the Same",
+          "relevance_score": 3,
+          "start_line": 244,
+          "end_line": 270,
+          "target_snippet": "Norwegian Double-Threshold Days... Similar Aerobic Adaptations When Total Daily Workload is the Same"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/training/threshold/training-double-threshold-days-stress-and-recovery.md",
+          "title": "Effects on Physiological Stress and Recovery",
+          "relevance_score": 3,
+          "start_line": 208,
+          "end_line": 235,
+          "target_snippet": "Norwegian Double-Threshold Days have become very popular... stress and recovery"
+        },
+        {
+          "rel_path": "Books/Norwegian Singles Method Subthreshold.md",
+          "title": "Norwegian Singles Method",
+          "relevance_score": 2,
+          "start_line": 277,
+          "end_line": 300,
+          "target_snippet": "Norwegian Singles Method Subthreshold"
+        }
+      ]
+    },
+    {
+      "id": "Q17",
+      "query": "What is the optimal carb loading protocol for elite sprint kayaking performance?",
+      "language": "en",
+      "category": "negative",
+      "description": "Out-of-domain query (sprint kayaking). No relevant evidence exists in the KB.",
+      "expected_behavior": "System must return 0 gold passage matches and avoid false positive hallucinations.",
+      "gold_passages": []
+    },
+    {
+      "id": "Q18",
+      "query": "How to implement a ketogenic diet for competitive open water swimming?",
+      "language": "en",
+      "category": "negative",
+      "description": "Out-of-domain query (ketogenic diet for swimming). No relevant evidence exists in the KB.",
+      "expected_behavior": "System must return 0 gold passage matches.",
+      "gold_passages": []
+    },
+    {
+      "id": "Q19",
+      "query": "Quali sono le tecniche di ipertrofia muscolare per il bodybuilding naturale?",
+      "language": "it",
+      "category": "negative",
+      "description": "Out-of-domain Italian query (bodybuilding hypertrophy techniques). No relevant evidence in KB.",
+      "expected_behavior": "System must return 0 gold passage matches.",
+      "gold_passages": []
+    },
+    {
+      "id": "Q20",
+      "query": "Come prevenire l'infortunio al gomito del tennista nel tennis amatoriale?",
+      "language": "it",
+      "category": "negative",
+      "description": "Out-of-domain Italian query (tennis elbow prevention). No relevant evidence in KB.",
+      "expected_behavior": "System must return 0 gold passage matches.",
+      "gold_passages": []
+    }
+  ]
+}

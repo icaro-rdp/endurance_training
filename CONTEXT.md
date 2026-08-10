@@ -24,8 +24,12 @@ This document records the ubiquitous language, core domain concepts, and archite
 
 ## Architectural Seams & Modules
 
-- **`KBEngine` (Deep Module)**: Core Python module located at `main/kb_engine/` exposing `KBEngine` facade (`search()`, `build_index()`, `validate()`, `standardize()`). Encapsulates:
-  - `fts.py`: SQLite FTS5 database setup & BM25 query handling with automatic timestamp-based cache invalidation.
-  - `frontmatter.py`: Frontmatter parsing, standardization, and YAML schema rules.
+- **`KBEngine` (Deep Module)**: Core Python module located at `main/utils/kb_engine/` exposing `KBEngine` facade (`search()`, `build_index()`, `validate()`, `standardize()`). Encapsulates:
+  - `retrieval.py`: Local hybrid retrieval engine executing SQLite FTS5 BM25 + `intfloat/multilingual-e5-base` 768-dim dense vectors with `sqlite-vec`, fused via Reciprocal Rank Fusion (RRF $k=60$) and reranked using `BAAI/bge-reranker-base` cross-encoder.
+  - `chunker.py`: Structure-aware, citation-stable passage chunker (`StructureAwareChunker`) generating bounded excerpts with exact line ranges (`#L45-L89`), section hierarchy breadcrumbs, and deterministic chunk hashes.
+  - `frontmatter.py`: Frontmatter parsing, standardization, YAML schema rules, and `key_takeaways` validation.
   - `validator.py`: Link verification, taxonomy checks, and sitemap integrity.
-- **CLI Adapters**: Thin command-line wrappers (`kb_search.py`, `build_index.py`, `validate_kb.py`, `standardize_frontmatter.py`, `mcp_server.py`) that delegate execution directly to `KBEngine`.
+  - `sync.py`: Corpus SHA-256 state tracking and fail-fast `stale_index` verification.
+- **MCP Adapter (`main/mcp_server.py`)**: `FastMCP` server exposing 4 specialized stdio tools (`search_evidence`, `get_passage`, `get_document`, `get_kb_status`) with path containment isolation and structured `isError: true` domain error handling.
+- **CLI Adapters**: Thin command-line wrappers (`cli.py`, `build_index.py`, `validate_kb.py`) that delegate execution directly to `KBEngine`.
+
