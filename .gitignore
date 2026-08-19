@@ -35,3 +35,7 @@
 .venv
 venv/
 env/
+
+# Podcast transcripts
+**/raw_transcripts/
+transcripts/
