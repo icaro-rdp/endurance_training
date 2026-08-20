@@ -7,16 +7,20 @@ import os
 import re
 import sqlite3
 import tempfile
+from dataclasses import dataclass
 from pathlib import Path
+from typing import Literal
 
 from .chunker import StructureAwareChunker
 from .errors import (
+    CorpusChangedDuringSyncError,
     IndexNotBuiltError,
     InvalidIndexError,
     InvalidSearchError,
     StaleIndexError,
 )
 from .models import (
+    CorpusManifest,
     EvidencePassage,
     EvidenceSearchResult,
     IndexState,
@@ -24,7 +28,6 @@ from .models import (
     PassageSizeStatus,
 )
 from .sync import build_corpus_manifest
-from .walker import iter_kb_documents
 
 _SCHEMA_VERSION = "2"
 _PASSAGE_COLUMNS = """
@@ -47,6 +50,12 @@ _PASSAGE_COLUMNS = """
     p.citation AS citation,
     p.size_status AS size_status
 """
+
+
+@dataclass(frozen=True, slots=True)
+class _IndexSnapshot:
+    metadata: dict[str, str]
+    passage_count: int
 
 
 class PassageIndex:
@@ -74,7 +83,9 @@ class PassageIndex:
         temporary_path = Path(temporary_name)
 
         try:
-            passage_count = self._build_database(temporary_path, manifest.digest)
+            passage_count = self._build_database(temporary_path, manifest)
+            if build_corpus_manifest(self.kb_dir).digest != manifest.digest:
+                raise CorpusChangedDuringSyncError
             os.replace(temporary_path, self.db_path)
         finally:
             temporary_path.unlink(missing_ok=True)
@@ -100,9 +111,7 @@ class PassageIndex:
 
         try:
             with self._connect() as connection:
-                metadata = dict(connection.execute("SELECT key, value FROM meta"))
-                row = connection.execute("SELECT COUNT(*) FROM passages").fetchone()
-                passage_count = int(row[0]) if row else 0
+                snapshot = self._inspect_database(connection)
         except (sqlite3.DatabaseError, TypeError, ValueError):
             return IndexStatus(
                 state=IndexState.INVALID,
@@ -112,8 +121,11 @@ class PassageIndex:
                 indexed_digest=None,
             )
 
-        indexed_digest = metadata.get("corpus_digest")
-        if metadata.get("schema_version") != _SCHEMA_VERSION or not indexed_digest:
+        indexed_digest = snapshot.metadata.get("corpus_digest")
+        if (
+            snapshot.metadata.get("schema_version") != _SCHEMA_VERSION
+            or not indexed_digest
+        ):
             state = IndexState.INVALID
         elif indexed_digest == manifest.digest:
             state = IndexState.FRESH
@@ -122,7 +134,7 @@ class PassageIndex:
         return IndexStatus(
             state=state,
             document_count=manifest.document_count,
-            passage_count=passage_count,
+            passage_count=snapshot.passage_count,
             current_digest=manifest.digest,
             indexed_digest=indexed_digest,
         )
@@ -139,9 +151,7 @@ class PassageIndex:
             raise InvalidSearchError("limit must be between 1 and 20")
         tokens = [token for token in re.findall(r"\w+", query) if len(token) > 1]
         if not tokens:
-            raise InvalidSearchError(
-                "query must contain at least one searchable English term"
-            )
+            raise InvalidSearchError("query must contain at least one searchable term")
         self._require_fresh_index()
         fts_query = " OR ".join(f'"{token}"' for token in tokens)
 
@@ -189,15 +199,13 @@ class PassageIndex:
             ).fetchone()
         return self._passage_from_row(row) if row else None
 
-    def _build_database(self, path: Path, corpus_digest: str) -> int:
+    def _build_database(self, path: Path, manifest: CorpusManifest) -> int:
         with sqlite3.connect(path) as connection:
+            connection.row_factory = sqlite3.Row
             connection.execute("PRAGMA foreign_keys = ON")
             self._create_schema(connection)
             passage_count = 0
-            documents = sorted(
-                iter_kb_documents(self.kb_dir),
-                key=lambda source: source.relative_to(self.kb_dir).as_posix(),
-            )
+            documents = [self.kb_dir / rel_path for rel_path in manifest.source_paths]
             for source_path in documents:
                 passages = self.chunker.chunk_document(source_path)
                 if not passages:
@@ -209,15 +217,16 @@ class PassageIndex:
 
             metadata = {
                 "schema_version": _SCHEMA_VERSION,
-                "corpus_digest": corpus_digest,
-                "document_count": str(len(documents)),
+                "corpus_digest": manifest.digest,
+                "document_count": str(manifest.document_count),
                 "passage_count": str(passage_count),
             }
             connection.executemany(
                 "INSERT INTO meta (key, value) VALUES (?, ?)", metadata.items()
             )
             connection.commit()
-        return passage_count
+            snapshot = self._inspect_database(connection)
+        return snapshot.passage_count
 
     @staticmethod
     def _create_schema(connection: sqlite3.Connection) -> None:
@@ -334,6 +343,47 @@ class PassageIndex:
             ),
         )
 
+    @staticmethod
+    def _inspect_database(connection: sqlite3.Connection) -> _IndexSnapshot:
+        integrity = connection.execute("PRAGMA integrity_check").fetchone()
+        if not integrity or integrity[0] != "ok":
+            raise sqlite3.DatabaseError("SQLite integrity check failed")
+        if connection.execute("PRAGMA foreign_key_check").fetchone():
+            raise sqlite3.DatabaseError("SQLite foreign-key check failed")
+
+        metadata = {
+            str(row[0]): str(row[1])
+            for row in connection.execute("SELECT key, value FROM meta")
+        }
+        source_count = _table_count(connection, "sources")
+        passage_count = _table_count(connection, "passages")
+        fts_count = _table_count(connection, "passages_fts")
+
+        try:
+            expected_sources = int(metadata["document_count"])
+            expected_passages = int(metadata["passage_count"])
+        except (KeyError, ValueError) as error:
+            raise sqlite3.DatabaseError("index metadata is incomplete") from error
+        if source_count != expected_sources:
+            raise sqlite3.DatabaseError("source count does not match index metadata")
+        if passage_count != expected_passages or fts_count != passage_count:
+            raise sqlite3.DatabaseError("passage tables have inconsistent counts")
+        missing_fts_rows = connection.execute(
+            """
+            SELECT COUNT(*)
+            FROM passages p
+            LEFT JOIN passages_fts f ON f.rowid = p.id
+            WHERE f.rowid IS NULL
+            """
+        ).fetchone()
+        if not missing_fts_rows or int(missing_fts_rows[0]):
+            raise sqlite3.DatabaseError("passage search rows are incomplete")
+
+        return _IndexSnapshot(
+            metadata=metadata,
+            passage_count=passage_count,
+        )
+
     def _require_fresh_index(self) -> None:
         state = self.status().state
         if state is IndexState.MISSING:
@@ -378,3 +428,13 @@ def _last_row_id(cursor: sqlite3.Cursor) -> int:
     if row_id is None:
         raise sqlite3.DatabaseError("SQLite did not return an inserted row ID")
     return row_id
+
+
+def _table_count(
+    connection: sqlite3.Connection,
+    table: Literal["sources", "passages", "passages_fts"],
+) -> int:
+    row = connection.execute(f"SELECT COUNT(*) FROM {table}").fetchone()
+    if row is None:
+        raise sqlite3.DatabaseError(f"could not count index table: {table}")
+    return int(row[0])

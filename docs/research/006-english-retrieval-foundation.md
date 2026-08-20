@@ -26,7 +26,12 @@ This is the baseline against which later semantic retrieval must prove value.
 
 ## Benchmark status
 
-The former prototype query set was removed because it included unsupported-language queries and targets that are no longer Knowledge Sources. A new suite must be created before retrieval acceptance is wired to CI.
+The unsupported portions of the former prototype query set were removed. The
+retained English suite now contains nine reviewed queries, and its paths, gold
+ranges, snippets, and summary counts are checked against production Evidence
+Passages by `tests/test_retrieval_benchmark.py`. Retrieval scoring and retained
+per-query result artifacts still need an executable harness before any quality
+target can become an acceptance claim.
 
 A valid English benchmark must resolve gold evidence against production Evidence Passages and cover:
 
@@ -78,3 +83,4 @@ Any later model or backend selection requires an ADR update based on retained co
 - `main/utils/kb_engine/models.py`
 - `tests/test_chunker.py`
 - `tests/test_passage_index.py`
+- `tests/test_retrieval_benchmark.py`

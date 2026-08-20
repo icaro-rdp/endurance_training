@@ -19,7 +19,7 @@ engine = KBEngine()
 TOOLS_LIST = [
     {
         "name": "search_knowledge_base",
-        "description": "Perform full-text hybrid search across endurance training articles, podcasts, and books. Returns ranked snippets with exact file references.",
+        "description": "Perform lexical passage search across endurance training articles, podcasts, and books. Returns ranked excerpts with exact file references.",
         "inputSchema": {
             "type": "object",
             "properties": {

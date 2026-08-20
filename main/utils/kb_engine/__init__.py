@@ -4,6 +4,7 @@ Knowledge Base Deep Engine Package
 
 from .engine import KBEngine
 from .errors import (
+    CorpusChangedDuringSyncError,
     IndexNotBuiltError,
     InvalidIndexError,
     InvalidSearchError,
@@ -14,6 +15,7 @@ from .models import EvidencePassage, EvidenceSearchResult, IndexStatus
 from .taxonomy import TaxonomyRegistry
 
 __all__ = [
+    "CorpusChangedDuringSyncError",
     "EvidencePassage",
     "EvidenceSearchResult",
     "IndexNotBuiltError",

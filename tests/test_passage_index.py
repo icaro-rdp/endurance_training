@@ -11,7 +11,9 @@ from pathlib import Path
 from unittest.mock import patch
 
 from main.utils.kb_engine.errors import (
+    CorpusChangedDuringSyncError,
     IndexNotBuiltError,
+    InvalidIndexError,
     InvalidSearchError,
     StaleIndexError,
 )
@@ -154,7 +156,7 @@ source: Local test journal
 
         with self.assertRaises(InvalidSearchError) as query_error:
             self.index.search("!? --")
-        self.assertIn("English term", str(query_error.exception))
+        self.assertIn("searchable term", str(query_error.exception))
         self.assertFalse(self.db_path.exists())
 
     def test_synchronize_builds_the_passage_schema_and_reports_counts(self) -> None:
@@ -270,6 +272,44 @@ source: Local test journal
             self.index.get_passage(indexed_result.passage.chunk_id),
             indexed_result.passage,
         )
+
+    def test_corpus_change_during_sync_preserves_existing_database(self) -> None:
+        self.index.synchronize()
+        original_database = self.db_path.read_bytes()
+        chunk_document = self.index.chunker.chunk_document
+        original_alpha = self.alpha_path.read_text(encoding="utf-8")
+
+        def mutate_during_build(source_path: Path):
+            passages = chunk_document(source_path)
+            if source_path.resolve() == self.beta_path.resolve():
+                self.alpha_path.write_text(
+                    original_alpha + "\nConcurrent corpus edit.\n",
+                    encoding="utf-8",
+                )
+            return passages
+
+        with (
+            patch.object(
+                self.index.chunker,
+                "chunk_document",
+                side_effect=mutate_during_build,
+            ),
+            self.assertRaises(CorpusChangedDuringSyncError),
+        ):
+            self.index.synchronize()
+
+        self.assertEqual(self.db_path.read_bytes(), original_database)
+        self._assert_state("stale")
+
+    def test_missing_fts_table_is_reported_as_an_invalid_index(self) -> None:
+        self.index.synchronize()
+        with sqlite3.connect(self.db_path) as connection:
+            connection.execute("DROP TABLE passages_fts")
+
+        self._assert_state("invalid")
+        with self.assertRaises(InvalidIndexError) as caught:
+            self.index.search("cadencemarker")
+        self.assertEqual(caught.exception.code, "invalid_index")
 
     def test_editing_a_source_marks_the_index_stale(self) -> None:
         self.index.synchronize()

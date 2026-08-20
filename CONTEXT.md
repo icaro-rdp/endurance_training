@@ -10,7 +10,7 @@ This document records the ubiquitous language, core domain concepts, and active 
 - **Frontmatter**: Standardized YAML header metadata (`title`, `category`, `topics`, `summary`, `source`, `date`) embedded at the top of every KB document.
 - **Taxonomy**: Canonical list of Categories (`metrics`, `hiit`, `zone2`, `strength`, `nutrition`, `physiology`, `periodization`, `book`) and Topics defined in `Knowledge_base/TAXONOMY.md`.
 - **Sitemap / Index**: Master document catalog located at `Knowledge_base/INDEX.md` and generated from document frontmatter.
-- **Athlete Query**: An English natural-language question about endurance-training concepts, decisions, or planning needs.
+- **Athlete Query**: An English natural-language question about endurance-training concepts, decisions, or planning needs. Callers supply English; the retrieval foundation does not perform language identification.
 - **Passage Retrieval**: Finding and ranking Evidence Passages with SQLite FTS5 BM25 lexical search. The active baseline can match English terms present in passage text, titles, and indexed metadata; semantic retrieval is not yet part of the product.
 - **Focused Retrieval**: Passage Retrieval constrained by an optional category, topic, or Knowledge Source slug.
 - **Evidence Passage**: A bounded excerpt from one Knowledge Source with document identity, author, English language metadata, source type, section hierarchy, stable location, and enough surrounding context to cite and inspect it accurately. Competing passages remain independently attributable when sources disagree.

@@ -20,7 +20,7 @@ The first implementation increment must establish trustworthy passage ingestion 
 
 ## Decision Drivers
 
-- **English-Only Contract**: Active indexing and retrieval accept English Knowledge Sources and English Athlete Queries only.
+- **English-Only Contract**: Active indexing accepts English Knowledge Sources only. Retrieval supports and benchmarks English Athlete Queries; identifying query language is a caller-side precondition rather than an indexing dependency.
 - **Citation Provenance**: Every Evidence Passage carries its Knowledge Source identity, section hierarchy, and exact starting and ending source lines (`#L45-L89`).
 - **Offline Operation**: Index construction and retrieval require no network access or model-weight download.
 - **Low Operational Complexity**: One transactional SQLite file, with no background service or external vector database.

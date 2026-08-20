@@ -302,6 +302,20 @@ class TestStructureAwareChunker(unittest.TestCase):
         self.assertGreater(passage.word_count, policy.max_words)
         self.assertEqual(passage.size_status, "oversized_atomic_block")
 
+    def test_tilde_fenced_code_is_atomic_and_ignores_internal_headings(self) -> None:
+        code_words = " ".join(f"value{index:02d}" for index in range(1, 16))
+        content = f"~~~text\n## Not a document heading\n{code_words}\n~~~"
+        path = self._write("Articles/tilde-code.md", content)
+        policy = ChunkingPolicy(target_words=6, min_words=3, max_words=8)
+
+        passages = StructureAwareChunker(self.kb_dir, policy).chunk_document(path)
+
+        self.assertEqual(len(passages), 1)
+        passage = passages[0]
+        self.assertEqual(passage.content, content)
+        self.assertEqual(passage.section_hierarchy, ("tilde-code",))
+        self.assertEqual(passage.size_status, "oversized_atomic_block")
+
     def test_chunking_is_deterministic_across_instances(self) -> None:
         path = self._write(
             "Episodes/deterministic.md",

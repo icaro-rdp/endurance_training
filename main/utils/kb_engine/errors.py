@@ -49,6 +49,18 @@ class InvalidSearchError(KBEngineError):
         super().__init__(message)
 
 
+class CorpusChangedDuringSyncError(KBEngineError):
+    """Raised when Knowledge Sources change during synchronization."""
+
+    code = "corpus_changed_during_sync"
+
+    def __init__(self) -> None:
+        super().__init__(
+            "Knowledge Sources changed during synchronization; run "
+            "`endurance-kb build-index` again."
+        )
+
+
 class UnsupportedLanguageError(KBEngineError):
     """Raised when a non-English Knowledge Source enters the corpus."""
 

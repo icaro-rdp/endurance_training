@@ -1,6 +1,6 @@
 # English Evidence Passage Synchronization
 
-**Status:** Implementing  
+**Status:** Implemented
 **Parent:** GitHub issue #1  
 **Scope:** First production increment
 
@@ -10,6 +10,14 @@ The Knowledge Base accepts English sources and English queries only. This
 explicitly supersedes the multiple-language requirements in the parent issue
 and earlier research notes. The non-English book source is removed from the
 curated corpus rather than translated or indexed.
+
+English is the only supported and benchmarked query language. Query-language
+identification is a caller-side precondition; this increment deliberately does
+not add a language detector or claim behavior for unsupported query languages.
+
+**Tracker exception:** the available GitHub integration was read-only, so a
+scoped task ticket could not be created, assigned, or linked before work. The
+user directly authorized this implementation against the parent issue.
 
 This increment establishes the retrieval foundation before model-dependent
 semantic search or MCP expansion:

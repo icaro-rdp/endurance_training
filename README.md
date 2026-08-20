@@ -10,7 +10,7 @@ Index construction and search require no network access or model download. Dense
 
 - [`Knowledge_base/INDEX.md`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/INDEX.md) — Master Sitemaps and Document Catalog.
 - [`Knowledge_base/TAXONOMY.md`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/TAXONOMY.md) — Domain Taxonomy, Categories, Tags, and Frontmatter rules.
-- [`Knowledge_base/Episodes/Empirical_cycling_podcast/`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Episodes/Empirical_cycling_podcast/) — 201 curated reference guides organized into 5 core pillars:
+- [`Knowledge_base/Episodes/Empirical_cycling_podcast/`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Episodes/Empirical_cycling_podcast/) — 218 curated reference guides organized into 5 core pillars:
   - `physiology/` — Bioenergetics, mitochondrial signaling, cardiac remodeling, lactate shuttling.
   - `nutrition/` — Intra-ride fueling, hydration, carbohydrate ratios, RED-S, ergogenic aids.
   - `training/` — On-bike zones, intervals, base, threshold, periodization, recovery, racecraft.

@@ -30,6 +30,7 @@ _METADATA_HEADING = re.compile(
     re.IGNORECASE,
 )
 _H1 = re.compile(r"^#\s+(.+?)\s*$")
+_FENCE = re.compile(r"^\s*(`{3,}|~{3,})")
 
 
 @dataclass(frozen=True, slots=True)
@@ -245,15 +246,17 @@ class StructureAwareChunker:
         heading_stack: list[tuple[int, str]] = []
         hierarchy: tuple[str, ...] = (metadata.title,)
         current: list[tuple[int, str]] = []
-        in_code_fence = False
+        active_fence: str | None = None
 
         for index in range(metadata.content_start, len(lines)):
             line_number = index + 1
             line = lines[index]
-            if line.strip().startswith("```"):
-                in_code_fence = not in_code_fence
-
-            heading = None if in_code_fence else self._parse_heading(line)
+            fence = _fence_marker(line)
+            if fence and (active_fence is None or active_fence == fence):
+                active_fence = fence if active_fence is None else None
+                heading = None
+            else:
+                heading = None if active_fence else self._parse_heading(line)
             if heading:
                 self._append_section(sections, hierarchy, current)
                 current = []
@@ -358,7 +361,7 @@ class StructureAwareChunker:
     def _blocks(lines: tuple[tuple[int, str], ...]) -> tuple[_LineBlock, ...]:
         blocks: list[_LineBlock] = []
         current: list[tuple[int, str]] = []
-        in_code_fence = False
+        active_fence: str | None = None
 
         def flush() -> None:
             nonlocal current
@@ -368,7 +371,7 @@ class StructureAwareChunker:
                 return
             nonempty = [line.strip() for _, line in trimmed if line.strip()]
             atomic = (
-                any(line.startswith("```") for line in nonempty)
+                any(_fence_marker(line) for line in nonempty)
                 or all(line.startswith("|") for line in nonempty)
                 or all(line.startswith(">") for line in nonempty)
             )
@@ -377,11 +380,12 @@ class StructureAwareChunker:
 
         for item in lines:
             stripped = item[1].strip()
-            if stripped.startswith("```"):
-                in_code_fence = not in_code_fence
+            fence = _fence_marker(stripped)
+            if fence and (active_fence is None or active_fence == fence):
+                active_fence = fence if active_fence is None else None
                 current.append(item)
                 continue
-            if not stripped and not in_code_fence:
+            if not stripped and active_fence is None:
                 flush()
             else:
                 current.append(item)
@@ -514,6 +518,11 @@ def _clean_heading(value: str) -> str:
 
 def _normalized_heading(value: str) -> str:
     return re.sub(r"\W+", "", value).casefold()
+
+
+def _fence_marker(line: str) -> str | None:
+    match = _FENCE.match(line)
+    return match.group(1)[0] if match else None
 
 
 def _common_prefix(left: tuple[str, ...], right: tuple[str, ...]) -> tuple[str, ...]:
