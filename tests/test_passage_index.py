@@ -14,6 +14,7 @@ from main.utils.kb_engine.errors import (
     CorpusChangedDuringSyncError,
     IndexNotBuiltError,
     InvalidIndexError,
+    InvalidKnowledgeSourceError,
     InvalidSearchError,
     StaleIndexError,
 )
@@ -131,6 +132,18 @@ source: Local test journal
             self.index.search("cadencemarker")
         self.assertEqual(caught.exception.code, "stale_index")
 
+    def _assert_invalid_index(self) -> None:
+        self._assert_state("invalid")
+        with self.assertRaises(InvalidIndexError):
+            self.index.search("cadencemarker")
+        with self.assertRaises(InvalidIndexError):
+            self.index.get_passage("any-chunk")
+
+    def _corrupt_index(self, statement: str) -> None:
+        with sqlite3.connect(self.db_path) as connection:
+            connection.execute("PRAGMA ignore_check_constraints = ON")
+            connection.execute(statement)
+
     def test_missing_index_requires_explicit_synchronization(self) -> None:
         status = self._assert_state("missing")
         self.assertEqual(status.document_count, 3)
@@ -213,6 +226,30 @@ source: Local test journal
         self.assertEqual(second_sync.current_digest, first)
         self.assertEqual(second_sync.indexed_digest, first)
 
+    def test_synchronize_supplies_each_source_digest_to_the_chunker(self) -> None:
+        chunk_document = self.index.chunker.chunk_document
+        received_digests: dict[str, str] = {}
+
+        def record_digest(source_path: Path, *, expected_digest: str):
+            relative_path = source_path.relative_to(self.index.kb_dir).as_posix()
+            received_digests[relative_path] = expected_digest
+            return chunk_document(source_path)
+
+        with patch.object(
+            self.index.chunker,
+            "chunk_document",
+            side_effect=record_digest,
+        ):
+            self.index.synchronize()
+
+        expected_digests = {
+            path.resolve().relative_to(self.index.kb_dir).as_posix(): hashlib.sha256(
+                path.read_bytes()
+            ).hexdigest()
+            for path in (self.alpha_path, self.alpha_extended_path, self.beta_path)
+        }
+        self.assertEqual(received_digests, expected_digests)
+
     def test_search_reads_the_existing_index_without_rebuilding_it(self) -> None:
         self.index.synchronize()
         database_hash = hashlib.sha256(self.db_path.read_bytes()).digest()
@@ -248,10 +285,10 @@ source: Local test journal
         )
         chunk_document = self.index.chunker.chunk_document
 
-        def fail_on_beta(source_path: Path):
+        def fail_on_beta(source_path: Path, *, expected_digest: str):
             if source_path.resolve() == self.beta_path.resolve():
                 raise RuntimeError("simulated chunking failure")
-            return chunk_document(source_path)
+            return chunk_document(source_path, expected_digest=expected_digest)
 
         with (
             patch.object(
@@ -273,14 +310,52 @@ source: Local test journal
             indexed_result.passage,
         )
 
+    def test_source_without_passages_fails_without_replacing_the_index(self) -> None:
+        self.index.synchronize()
+        original_database = self.db_path.read_bytes()
+        chunk_document = self.index.chunker.chunk_document
+
+        def empty_beta(source_path: Path, *, expected_digest: str):
+            if source_path.resolve() == self.beta_path.resolve():
+                return ()
+            return chunk_document(source_path, expected_digest=expected_digest)
+
+        with (
+            patch.object(
+                self.index.chunker,
+                "chunk_document",
+                side_effect=empty_beta,
+            ),
+            self.assertRaises(InvalidKnowledgeSourceError) as caught,
+        ):
+            self.index.synchronize()
+
+        self.assertIn("Notes/beta.md", str(caught.exception))
+        self.assertIn("no Evidence Passages", str(caught.exception))
+        self.assertEqual(self.db_path.read_bytes(), original_database)
+
+    def test_synchronize_translates_sqlite_failures_to_an_index_error(self) -> None:
+        with (
+            patch.object(
+                PassageIndex,
+                "_create_schema",
+                side_effect=sqlite3.DatabaseError("simulated SQLite failure"),
+            ),
+            self.assertRaises(InvalidIndexError) as caught,
+        ):
+            self.index.synchronize()
+
+        self.assertEqual(caught.exception.code, "invalid_index")
+        self.assertFalse(self.db_path.exists())
+
     def test_corpus_change_during_sync_preserves_existing_database(self) -> None:
         self.index.synchronize()
         original_database = self.db_path.read_bytes()
         chunk_document = self.index.chunker.chunk_document
         original_alpha = self.alpha_path.read_text(encoding="utf-8")
 
-        def mutate_during_build(source_path: Path):
-            passages = chunk_document(source_path)
+        def mutate_during_build(source_path: Path, *, expected_digest: str):
+            passages = chunk_document(source_path, expected_digest=expected_digest)
             if source_path.resolve() == self.beta_path.resolve():
                 self.alpha_path.write_text(
                     original_alpha + "\nConcurrent corpus edit.\n",
@@ -310,6 +385,82 @@ source: Local test journal
         with self.assertRaises(InvalidIndexError) as caught:
             self.index.search("cadencemarker")
         self.assertEqual(caught.exception.code, "invalid_index")
+
+    def test_malformed_topics_json_is_reported_as_an_invalid_index(self) -> None:
+        self.index.synchronize()
+        self._corrupt_index("UPDATE sources SET topics = '{'")
+
+        self._assert_invalid_index()
+
+    def test_fts_payload_tampering_is_reported_as_an_invalid_index(self) -> None:
+        self.index.synchronize()
+        self._corrupt_index("UPDATE passages_fts SET content = 'poisonterm'")
+
+        self._assert_invalid_index()
+
+    def test_topics_must_be_a_json_array_of_strings(self) -> None:
+        for stored_topics in ("{}", '["valid", 1]'):
+            with self.subTest(stored_topics=stored_topics):
+                self.index.synchronize()
+                self._corrupt_index(f"UPDATE sources SET topics = '{stored_topics}'")
+
+                self._assert_invalid_index()
+
+    def test_section_hierarchy_must_be_a_json_array_of_strings(self) -> None:
+        for stored_hierarchy in ("{", "{}", '["Findings", 1]'):
+            with self.subTest(stored_hierarchy=stored_hierarchy):
+                self.index.synchronize()
+                self._corrupt_index(
+                    f"UPDATE passages SET section_hierarchy = '{stored_hierarchy}'"
+                )
+
+                self._assert_invalid_index()
+
+    def test_index_rejects_invalid_domain_values(self) -> None:
+        corruptions = (
+            ("language", "UPDATE sources SET language = 'it'"),
+            ("source type", "UPDATE sources SET source_type = 'essay'"),
+            ("size status", "UPDATE passages SET size_status = 'unbounded'"),
+        )
+        for field_name, statement in corruptions:
+            with self.subTest(field_name=field_name):
+                self.index.synchronize()
+                self._corrupt_index(statement)
+
+                self._assert_invalid_index()
+
+    def test_index_rejects_invalid_passage_measurements(self) -> None:
+        corruptions = (
+            ("word count", "UPDATE passages SET word_count = word_count + 1"),
+            ("word count type", "UPDATE passages SET word_count = 1.5"),
+            ("character count", "UPDATE passages SET char_count = char_count + 1"),
+            ("start line", "UPDATE passages SET start_line = 0"),
+            ("line order", "UPDATE passages SET end_line = start_line - 1"),
+        )
+        for field_name, statement in corruptions:
+            with self.subTest(field_name=field_name):
+                self.index.synchronize()
+                self._corrupt_index(statement)
+
+                self._assert_invalid_index()
+
+    def test_retrieval_translates_database_decode_and_enum_failures(self) -> None:
+        corruptions = (
+            ("database", "DROP TABLE passages"),
+            ("JSON", "UPDATE sources SET topics = '{'"),
+            ("enum", "UPDATE passages SET size_status = 'unbounded'"),
+        )
+        for failure_type, statement in corruptions:
+            with self.subTest(failure_type=failure_type):
+                fresh_status = self.index.synchronize()
+                chunk_id = self.index.search("cadencemarker")[0].passage.chunk_id
+                self._corrupt_index(statement)
+
+                with patch.object(self.index, "status", return_value=fresh_status):
+                    with self.assertRaises(InvalidIndexError):
+                        self.index.search("cadencemarker")
+                    with self.assertRaises(InvalidIndexError):
+                        self.index.get_passage(chunk_id)
 
     def test_editing_a_source_marks_the_index_stale(self) -> None:
         self.index.synchronize()
@@ -361,6 +512,43 @@ source: Local test journal
         self.assertEqual(status.current_digest, synchronized.current_digest)
         self.assertEqual(status.indexed_digest, synchronized.indexed_digest)
         self.assertTrue(self.index.search("cadencemarker"))
+
+    def test_summary_directory_is_not_part_of_the_curated_corpus(self) -> None:
+        self._write_source(
+            "Books/_summary/notes.md",
+            title="Administrative Summary",
+            category="physiology",
+            topics=("VO2max",),
+            marker="administrativemarker",
+        )
+
+        status = self.index.synchronize()
+
+        self.assertEqual(status.document_count, 3)
+        self.assertEqual(self.index.search("administrativemarker"), ())
+
+    def test_symbolic_link_source_is_rejected(self) -> None:
+        outside = self.root / "outside.md"
+        outside.write_text("# Outside evidence\n", encoding="utf-8")
+        link = self.kb_dir / "Articles" / "linked.md"
+        link.symlink_to(outside)
+
+        with self.assertRaises(InvalidKnowledgeSourceError):
+            self.index.synchronize()
+
+    def test_manifest_read_race_is_a_domain_error(self) -> None:
+        read_bytes = Path.read_bytes
+
+        def disappear_during_manifest(path: Path) -> bytes:
+            if path.resolve() == self.alpha_path.resolve():
+                raise FileNotFoundError(path)
+            return read_bytes(path)
+
+        with (
+            patch.object(Path, "read_bytes", disappear_during_manifest),
+            self.assertRaises(CorpusChangedDuringSyncError),
+        ):
+            self.index.synchronize()
 
     def test_filters_match_category_topic_and_source_slug_exactly(self) -> None:
         self.index.synchronize()

@@ -107,8 +107,15 @@ class CorpusManifest:
     """Deterministic identity of the current curated corpus."""
 
     digest: str
-    document_count: int
-    source_paths: tuple[str, ...]
+    source_digests: tuple[tuple[str, str], ...]
+
+    @property
+    def document_count(self) -> int:
+        return len(self.source_digests)
+
+    @property
+    def source_paths(self) -> tuple[str, ...]:
+        return tuple(rel_path for rel_path, _digest in self.source_digests)
 
 
 @dataclass(frozen=True, slots=True)

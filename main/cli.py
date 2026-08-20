@@ -6,6 +6,8 @@ Unified CLI for the Endurance Training Knowledge Base.
 import argparse
 import json
 import sys
+from collections.abc import Sequence
+from pathlib import Path
 
 from main.utils.kb_engine import KBEngine
 from main.utils.kb_engine.errors import KBEngineError
@@ -51,8 +53,8 @@ def handle_status(engine: KBEngine, _args: argparse.Namespace) -> None:
     print(json.dumps(engine.get_kb_status().to_dict(), indent=2))
 
 
-def handle_validate(engine: KBEngine, _args: argparse.Namespace) -> int:
-    res = engine.validate()
+def handle_validate(engine: KBEngine, args: argparse.Namespace) -> int:
+    res = engine.validate(source_rel_path=args.source)
 
     print("==========================================")
     print("      Knowledge Base Diagnostic Audit     ")
@@ -70,9 +72,10 @@ def handle_validate(engine: KBEngine, _args: argparse.Namespace) -> int:
 
     if res["warnings"]:
         print("WARNINGS:")
-        for warn in res["warnings"][:15]:
+        warning_limit = len(res["warnings"]) if args.source else 15
+        for warn in res["warnings"][:warning_limit]:
             print(f"  ⚠️  {warn}")
-        if len(res["warnings"]) > 15:
+        if len(res["warnings"]) > warning_limit:
             print(f"  ... and {len(res['warnings']) - 15} more warnings.")
         print()
 
@@ -84,14 +87,29 @@ def handle_validate(engine: KBEngine, _args: argparse.Namespace) -> int:
     return 0 if res["is_healthy"] else 1
 
 
-def handle_standardize(engine: KBEngine, args: argparse.Namespace) -> None:
-    count = engine.standardize(force=args.force)
+def handle_standardize(engine: KBEngine, _args: argparse.Namespace) -> None:
+    count = engine.standardize()
     print(f"Standardization complete! Updated frontmatter on {count} document(s).")
 
 
-def main() -> int:
+def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="Endurance Training Knowledge Base CLI"
+    )
+    parser.add_argument(
+        "--kb-dir",
+        type=Path,
+        default=None,
+        help=(
+            "Knowledge Base directory (default: ENDURANCE_KB_DIR, then "
+            "./Knowledge_base)"
+        ),
+    )
+    parser.add_argument(
+        "--db-path",
+        type=Path,
+        default=None,
+        help="Local SQLite Derived Index path",
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
 
@@ -108,7 +126,7 @@ def main() -> int:
         "--source", type=str, default=None, help="Filter by source slug"
     )
     parser_search.add_argument(
-        "--top", "-n", type=int, default=5, help="Number of results to return"
+        "--top", "-n", type=int, default=5, help="Number of results (1 to 20)"
     )
     parser_search.add_argument(
         "--format",
@@ -125,22 +143,25 @@ def main() -> int:
     subparsers.add_parser("status", help="Inspect Derived Index freshness")
 
     # validate
-    subparsers.add_parser("validate", help="Run diagnostic health checks")
+    parser_validate = subparsers.add_parser(
+        "validate", help="Run diagnostic health checks"
+    )
+    parser_validate.add_argument(
+        "--source",
+        default=None,
+        help="Validate one exact path relative to Knowledge_base",
+    )
 
     # standardize
-    parser_standardize = subparsers.add_parser(
-        "standardize", help="Standardize frontmatter"
-    )
-    parser_standardize.add_argument(
-        "--force",
-        action="store_true",
-        help="Force re-generate frontmatter for all files",
+    subparsers.add_parser(
+        "standardize",
+        help="Add safely inferred frontmatter only where it is absent",
     )
 
-    args = parser.parse_args()
-    engine = KBEngine()
+    args = parser.parse_args(argv)
 
     try:
+        engine = KBEngine(kb_dir=args.kb_dir, db_path=args.db_path)
         if args.command == "search":
             handle_search(engine, args)
         elif args.command == "build-index":

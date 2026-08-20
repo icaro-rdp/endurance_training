@@ -5,7 +5,7 @@ topics:
   - "Aerobic_base"
   - "Mitochondrial_density"
   - "Long_intervals"
-  - "Fatigue_management"
+  - "Durability"
   - "Progressive_overload"
 source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #49)"
 author: "Kolie Moore"

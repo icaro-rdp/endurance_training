@@ -5,7 +5,7 @@ topics:
   - "Progressive_overload"
   - "Microcycles"
   - "Durability"
-  - "Strength_endurance"
+  - "Periodization"
 source: "Empirical Cycling Podcast — Kolie Moore with Cole Tamburri"
 author: "Kolie Moore"
 date: "2024-09-23"

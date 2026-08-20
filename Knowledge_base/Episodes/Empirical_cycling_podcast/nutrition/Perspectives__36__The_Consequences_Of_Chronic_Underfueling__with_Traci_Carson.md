@@ -4,7 +4,7 @@ category: "nutrition"
 topics:
   - "Underfueling_REDs"
   - "Carbohydrate_ratio"
-  - "Fatigue_resistance"
+  - "Durability"
 source: "Empirical Cycling Podcast — Kolie Moore with Dr. Traci Carson"
 author: "Kolie Moore"
 date: "2024-11-24"

@@ -2,8 +2,8 @@
 title: "Ten Minute Tips #32: Where Training Zones Fall Short — Complete Guide"
 category: "metrics"
 topics:
-  - "Training_zones"
-  - "FTP_testing"
+  - "Power_vs_HR"
+  - "FTP"
   - "Lab_vs_field"
   - "TTA_TTE"
   - "Volume_quantification"

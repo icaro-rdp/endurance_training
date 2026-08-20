@@ -1,6 +1,6 @@
 ---
 title: Injury Free Running   Your Illustrated Guide
-category: general
+category: book
 topics:
 - General
 source: Knowledge Base

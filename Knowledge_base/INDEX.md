@@ -152,7 +152,7 @@ Total documents: 51
   - **Summary**: Provides expanded coaching frameworks on the physiological interaction between VO2max and FTP, detailing prerequisites for VO2max blocks, recovery timelines, high-cadence hemodynamics, and periodization strategies for long-term progression.
 
 - **[Ten Minute Tips #32: Where Training Zones Fall Short — Complete Guide](Episodes/Empirical_cycling_podcast/metrics/Ten_Minute_Tips__32__Where_Training_Zones_Fall_Short.md)** (`Episodes/Empirical_cycling_podcast/metrics/Ten_Minute_Tips__32__Where_Training_Zones_Fall_Short.md`)
-  - **Topics**: Training_zones, FTP_testing, Lab_vs_field, TTA_TTE, Volume_quantification
+  - **Topics**: Power_vs_HR, FTP, Lab_vs_field, TTA_TTE, Volume_quantification
   - **Summary**: Critiques the misuse of rigid power and heart rate training zones, illustrating why zones were created as descriptive rather than prescriptive tools, and presenting a practical 3-zone physiological framework based on muscular fatigue and progressive overload.
 
 - **[Ten Minute Tips #35: Higher FTP vs Longer TTE — Complete Guide](Episodes/Empirical_cycling_podcast/metrics/Ten_Minute_Tips__35__Higher_FTP_vs_Longer_TTE.md)** (`Episodes/Empirical_cycling_podcast/metrics/Ten_Minute_Tips__35__Higher_FTP_vs_Longer_TTE.md`)
@@ -488,7 +488,7 @@ Total documents: 23
   - **Summary**: An analytical critique of fat-adaptive (LCHF/ketogenic) diets in endurance cycling, examining why theoretical glycogen sparing fails during high-intensity efforts, the enzymatic downregulation of carbohydrate oxidation, and the metabolic realities of race-specific power demands.
 
 - **[Glucose-fructose Ratio: Check What You Buy!](Articles/knowledgeIsWatts/nutrition/nutrition-glucose-fructose-ratio.md)** (`Articles/knowledgeIsWatts/nutrition/nutrition-glucose-fructose-ratio.md`)
-  - **Topics**: VO2max, Glucose_fructose
+  - **Topics**: VO2max, Carbohydrate_ratio
   - **Summary**: 17, 2025 In the previous KisW research notes, we saw that:
 
 - **[Glycogen's Effects on AMPK: Molecular Glycogen Sensing vs. The 'Train Low' Fallacy — Complete Guide](Episodes/Empirical_cycling_podcast/nutrition/Watts_Doc__54__Glycogen_s_Effects_On_AMPK.md)** (`Episodes/Empirical_cycling_podcast/nutrition/Watts_Doc__54__Glycogen_s_Effects_On_AMPK.md`)
@@ -504,7 +504,7 @@ Total documents: 23
   - **Summary**: An in-depth biochemical breakdown of oxygen reduction in the mitochondrial electron transport chain, free radical (ROS) generation, endogenous antioxidant defense systems (SOD, catalase, glutathione), and how high-dose exogenous antioxidant supplementation blunts endurance training adaptations by disrupting PGC-1α signaling.
 
 - **[Perspectives #36: The Consequences Of Chronic Underfueling — Complete Guide](Episodes/Empirical_cycling_podcast/nutrition/Perspectives__36__The_Consequences_Of_Chronic_Underfueling__with_Traci_Carson.md)** (`Episodes/Empirical_cycling_podcast/nutrition/Perspectives__36__The_Consequences_Of_Chronic_Underfueling__with_Traci_Carson.md`)
-  - **Topics**: Underfueling_REDs, Carbohydrate_ratio, Fatigue_resistance
+  - **Topics**: Underfueling_REDs, Carbohydrate_ratio, Durability
   - **Summary**: A definitive clinical and physiological guide to Low Energy Availability (LEA) and Relative Energy Deficiency in Sport (RED-S), exploring within-day energy deficits, endocrine suppression, bone demineralization, and differential diagnosis in endurance athletes.
 
 - **[Perspectives #40: Energy Expenditure and Compensation — Complete Guide](Episodes/Empirical_cycling_podcast/nutrition/Perspectives__40__Energy_Expenditure_And_Compensation__with_Eric_Trexler.md)** (`Episodes/Empirical_cycling_podcast/nutrition/Perspectives__40__Energy_Expenditure_And_Compensation__with_Eric_Trexler.md`)
@@ -573,7 +573,7 @@ Total documents: 39
   - **Summary**: A definitive biological critique of substrate-centric training models (e.g., training to 'burn fat' or manipulate VLaMax), proving that aerobic adaptive signaling is driven by cellular energy state and mitochondrial flux rather than the specific macronutrient oxidized.
 
 - **[Endurance Intensity and Volume — Complete Guide](Episodes/Empirical_cycling_podcast/physiology/Watts_Doc__49__Endurance_Intensity_and_Volume.md)** (`Episodes/Empirical_cycling_podcast/physiology/Watts_Doc__49__Endurance_Intensity_and_Volume.md`)
-  - **Topics**: Aerobic_base, Mitochondrial_density, Long_intervals, Fatigue_management, Progressive_overload
+  - **Topics**: Aerobic_base, Mitochondrial_density, Long_intervals, Durability, Progressive_overload
   - **Summary**: A comprehensive meta-analytical breakdown of how training volume versus intensity drives skeletal muscle mitochondrial biogenesis, citrate synthase activity, and mass-specific respiratory function.
 
 - **[How Environmental Temperature Influence Road Cycling Performance? Men vs Women Differences?](Articles/knowledgeIsWatts/physiology/physiology-temperature-effect-on-performance-sex-differences.md)** (`Articles/knowledgeIsWatts/physiology/physiology-temperature-effect-on-performance-sex-differences.md`)
@@ -846,7 +846,7 @@ Total documents: 94
   - **Summary**: A rigorous analytical comparison of methodologies for quantifying endurance training load—Total Hours, Kilojoules (Work Done), and Training Stress Score (TSS)—evaluating sub-LT1 metabolic turnover, motor unit recruitment, and fatigue dynamics.
 
 - **[Perspectives #35: Continuously Realizing Potential — Complete Guide](Episodes/Empirical_cycling_podcast/training/Perspectives__35__Continuously_Realizing_Potential__with_Cole_Tamburri.md)** (`Episodes/Empirical_cycling_podcast/training/Perspectives__35__Continuously_Realizing_Potential__with_Cole_Tamburri.md`)
-  - **Topics**: Progressive_overload, Microcycles, Durability, Strength_endurance
+  - **Topics**: Progressive_overload, Microcycles, Durability, Periodization
   - **Summary**: A comprehensive case study on multi-year endurance athlete progression, analyzing the physiological realities of energy availability (RED-S), body composition vs. absolute power, athlete agency in microcycle execution, and year-round strength training.
 
 - **[Perspectives #37: Practical Performance Psychology — Complete Guide](Episodes/Empirical_cycling_podcast/training/Perspectives__37__Practical_Performance_Psychology__with_Billy_Ryan.md)** (`Episodes/Empirical_cycling_podcast/training/Perspectives__37__Practical_Performance_Psychology__with_Billy_Ryan.md`)
@@ -954,7 +954,7 @@ Total documents: 94
   - **Summary**: A practical periodization guide for managing the balance between competitive racing, in-season training, and strategic recovery, covering race prioritization (A/B/C), openers, and avoiding mid-season burnout.
 
 - **[Ten Minute Tips #39: Individualizing Training For Crits, CX, And MTB — Complete Guide](Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__39__Individualizing_Training_For_Crits__CX__And_MTB.md)** (`Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__39__Individualizing_Training_For_Crits__CX__And_MTB.md`)
-  - **Topics**: Block_periodization, Microcycles, Aerobic_base, Neuromuscular_power
+  - **Topics**: Block_periodization, Microcycles, Aerobic_base, Sprint_performance
   - **Summary**: An advanced coaching framework for individualizing training across high-intensity disciplines (criteriums, cyclocross, XC MTB), structuring dual-season periodization, separating skills drills from fitness fatigue, and managing in-season strength.
 
 - **[Ten Minute Tips #40: Training Mistakes Every Beginner Makes (And Solutions) — Complete Guide](Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__40__Training_Mistakes_Every_Beginner_Makes__And_Solutions_.md)** (`Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__40__Training_Mistakes_Every_Beginner_Makes__And_Solutions_.md`)
@@ -1083,22 +1083,22 @@ Total documents: 94
 
 ---
 
-### Category: `GENERAL`
+### Category: `BOOK`
 Total documents: 4
 
-- **[Injury Free Running   Your Illustrated Guide](Books/Injury-Free Running - Your Illustrated Guide.md)** (`Books/Injury-Free Running - Your Illustrated Guide.md`)
+- **[Injury Free Running   Your Illustrated Guide](<Books/Injury-Free Running - Your Illustrated Guide.md>)** (`Books/Injury-Free Running - Your Illustrated Guide.md`)
   - **Topics**: General
   - **Summary**: ![cover](images/cover.jpg) Injury-Free
 
-- **[Norwegian Singles Method](Books/Norwegian Singles Method Subthreshold.md)** (`Books/Norwegian Singles Method Subthreshold.md`)
+- **[Norwegian Singles Method](<Books/Norwegian Singles Method Subthreshold.md>)** (`Books/Norwegian Singles Method Subthreshold.md`)
   - **Topics**: LT1_VT1, LT2_VT2, Double_threshold
   - **Summary**: Copyright Page© James Copeland 2025 All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior written permission of the copyright owner
 
-- **[Training And Racing With A Power Meter](Books/Training and Racing with a Power Meter.md)** (`Books/Training and Racing with a Power Meter.md`)
+- **[Training And Racing With A Power Meter](<Books/Training and Racing with a Power Meter.md>)** (`Books/Training and Racing with a Power Meter.md`)
   - **Topics**: FTP
   - **Summary**: <p style="font-weight: 600"><em>Training and Racing with a Power Meter </em>brings the advanced power-based training techniques of elite cyclists and triathletes to everyone.</p> <p>A power meter can unlock more speed and endurance than any other training tool—but only if you understand the data. Th
 
-- **[Training For The Uphill Athlete](Books/Training for the Uphill Athlete.md)** (`Books/Training for the Uphill Athlete.md`)
+- **[Training For The Uphill Athlete](<Books/Training for the Uphill Athlete.md>)** (`Books/Training for the Uphill Athlete.md`)
   - **Topics**: General
   - **Summary**: ![image](../images/00001.jpeg) ![image](../images/00002.jpeg)
 

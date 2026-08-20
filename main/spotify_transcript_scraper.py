@@ -15,6 +15,7 @@ import sys
 import time
 from datetime import timedelta
 from pathlib import Path
+from typing import Any
 
 import requests
 from dotenv import dotenv_values
@@ -65,11 +66,12 @@ class SpotifyAPIClient:
         )
         if response.status_code != 200:
             raise RuntimeError(
-                f"Spotify Web API authentication failed ({response.status_code}): {response.text}"
+                "Spotify Web API authentication failed "
+                f"({response.status_code}): {response.text}"
             )
         return response.json()["access_token"]
 
-    def get_show_info(self, show_id: str) -> dict[str, any]:
+    def get_show_info(self, show_id: str) -> dict[str, Any]:
         """Gets show metadata."""
         headers = {"Authorization": f"Bearer {self.access_token}"}
         url = f"https://api.spotify.com/v1/shows/{show_id}?market=US"
@@ -77,7 +79,7 @@ class SpotifyAPIClient:
         resp.raise_for_status()
         return resp.json()
 
-    def get_all_episodes(self, show_id: str, limit: int | None) -> list[dict[str, any]]:
+    def get_all_episodes(self, show_id: str, limit: int | None) -> list[dict[str, Any]]:
         """Paginates through all episodes of a show."""
         headers = {"Authorization": f"Bearer {self.access_token}"}
         episodes = []
@@ -214,7 +216,7 @@ def infer_taxonomy(title: str, description: str) -> tuple[str, list[str]]:
 
 
 def format_transcript_paragraphs(
-    lines: list[dict[str, any]], paragraph_interval_ms: int = 45000
+    lines: list[dict[str, Any]], paragraph_interval_ms: int = 45000
 ) -> str:
     """
     Groups time-synced transcript lines into structured, readable paragraphs
@@ -268,7 +270,7 @@ def scan_existing_downloads(output_dir: Path) -> set[str]:
 
         # Read header to find spotify_url or episode ID
         try:
-            with open(file_path, "r", encoding="utf-8") as f:
+            with open(file_path, encoding="utf-8") as f:
                 head = f.read(1500)
                 # Match spotify URL e.g. https://open.spotify.com/episode/<id>
                 match = re.search(r"open\.spotify\.com/episode/([a-zA-Z0-9]+)", head)
@@ -281,8 +283,8 @@ def scan_existing_downloads(output_dir: Path) -> set[str]:
 
 
 def generate_markdown(
-    episode_info: dict[str, any],
-    transcript_lines: list[dict[str, any]] | None,
+    episode_info: dict[str, Any],
+    transcript_lines: list[dict[str, Any]] | None,
     show_name: str = "Empirical Cycling Podcast",
 ) -> str:
     """Generates a complete, structured Markdown document."""
@@ -386,7 +388,8 @@ def main():
 
     if not client_id or not client_secret:
         print(
-            "Error: SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET must be present in .env or environment."
+            "Error: SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET must be present "
+            "in .env or environment."
         )
         sys.exit(1)
 
@@ -398,9 +401,8 @@ def main():
     api = SpotifyAPIClient(client_id, client_secret)
     show_info = api.get_show_info(args.show_id)
     show_name = show_info.get("name", "Podcast")
-    print(
-        f"Target Show: {show_name} (Total episodes: {show_info.get('total_episodes', 'Unknown')})"
-    )
+    total_episodes = show_info.get("total_episodes", "Unknown")
+    print(f"Target Show: {show_name} (Total episodes: {total_episodes})")
 
     output_path = Path(args.output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
@@ -408,7 +410,8 @@ def main():
     # Scan existing downloads for duplicate prevention
     existing_downloads = scan_existing_downloads(output_path)
     print(
-        f"Existing files detected in output folder: {len(existing_downloads)} files/IDs indexed."
+        "Existing files detected in output folder: "
+        f"{len(existing_downloads)} files/IDs indexed."
     )
 
     # Initialize scraper client
@@ -476,7 +479,14 @@ def main():
                     ]
                     print(f"  -> Extracted {len(transcript_lines)} transcript lines!")
                     success_count += 1
-            except (requests.RequestException, OSError, ValueError, RuntimeError, AttributeError, KeyError) as e:
+            except (
+                requests.RequestException,
+                OSError,
+                ValueError,
+                RuntimeError,
+                AttributeError,
+                KeyError,
+            ) as e:
                 print(f"  -> No transcript found on Spotify ({e})")
                 no_transcript_count += 1
         else:

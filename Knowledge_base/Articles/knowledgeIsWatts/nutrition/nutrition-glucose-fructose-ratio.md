@@ -3,7 +3,7 @@ title: 'Glucose-fructose Ratio: Check What You Buy!'
 category: nutrition
 topics:
 - VO2max
-- Glucose_fructose
+- Carbohydrate_ratio
 source: 'knowledgeiswatt.substack.com/p/56-glucose-fructose-ratio-check-what Date:
   January'
 author: Endurance Research

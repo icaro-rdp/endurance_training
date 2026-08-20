@@ -5,19 +5,22 @@ from markitdown import MarkItDown
 
 
 class BookConverter:
-    """Utility class to convert books (EPUB, PDF, etc.) into Markdown format using MarkItDown."""
+    """Convert books (EPUB, PDF, etc.) to Markdown using MarkItDown."""
 
     def __init__(self, output_dir: Path | None = None):
         self.md = MarkItDown()
         self.output_dir = output_dir
 
-    def convert_file(self, file_path: Path, force: bool = False, delete_original: bool = False) -> Path:
+    def convert_file(
+        self, file_path: Path, force: bool = False, delete_original: bool = False
+    ) -> Path:
         """Converts a single book file to Markdown.
 
         Args:
             file_path: Path to the input book file.
             force: If True, overwrites existing markdown output.
-            delete_original: If True, deletes the source book file after successful conversion.
+            delete_original: If True, deletes the source book file after successful
+                conversion.
 
         Returns:
             Path to the generated markdown file.
@@ -32,7 +35,10 @@ class BookConverter:
         output_file = destination_dir / f"{file_path.stem}.md"
 
         if output_file.exists() and not force:
-            print(f"[SKIP] {output_file.name} already exists. Use force=True to overwrite.")
+            print(
+                f"[SKIP] {output_file.name} already exists. "
+                "Use force=True to overwrite."
+            )
             if delete_original and file_path.exists():
                 file_path.unlink()
                 print(f"[DELETED] Removed original file: {file_path.name}")
@@ -57,22 +63,25 @@ class BookConverter:
         input_dir: Path,
         extensions: list[str] | None = None,
         force: bool = False,
-        delete_original: bool = False
+        delete_original: bool = False,
     ) -> list[Path]:
         """Converts all matching book files in a directory.
 
         Args:
             input_dir: Path to the directory containing books.
-            extensions: List of extensions to convert (default: ['.epub', '.pdf', '.docx']).
+            extensions: Extensions to convert (default: .epub, .pdf, and .docx).
             force: If True, overwrites existing markdown outputs.
-            delete_original: If True, deletes source book files after successful conversion.
+            delete_original: If True, deletes source book files after successful
+                conversion.
 
         Returns:
             List of paths to converted markdown files.
         """
         input_dir = Path(input_dir)
         if not input_dir.exists() or not input_dir.is_dir():
-            raise ValueError(f"Input directory does not exist or is not a directory: {input_dir}")
+            raise ValueError(
+                f"Input directory does not exist or is not a directory: {input_dir}"
+            )
 
         if extensions is None:
             extensions = [".epub", ".pdf", ".docx"]
@@ -83,7 +92,8 @@ class BookConverter:
 
         converted_files = []
         book_files = [
-            f for f in input_dir.iterdir()
+            f
+            for f in input_dir.iterdir()
             if f.is_file() and f.suffix.lower() in ext_set
         ]
 
@@ -94,7 +104,9 @@ class BookConverter:
         print(f"Found {len(book_files)} book(s) to process in {input_dir}:")
         for book_file in sorted(book_files):
             try:
-                out_path = self.convert_file(book_file, force=force, delete_original=delete_original)
+                out_path = self.convert_file(
+                    book_file, force=force, delete_original=delete_original
+                )
                 converted_files.append(out_path)
             except (subprocess.SubprocessError, OSError, RuntimeError) as e:
                 print(f"[ERROR] Failed to convert {book_file.name}: {e}")

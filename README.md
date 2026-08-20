@@ -41,6 +41,19 @@ Dependency installation may contact the configured package registry. Once the
 locked environment is installed, building and searching the index are offline
 operations.
 
+The supported default workflow is a repository clone: the corpus is not bundled
+inside the Python wheel. An installed CLI can operate on an external clone by
+putting the global path options before the command:
+
+```bash
+endurance-kb --kb-dir /absolute/path/to/Knowledge_base \
+  --db-path /absolute/path/to/.kb_index.sqlite status
+```
+
+`ENDURANCE_KB_DIR` can supply the corpus path instead. An explicit `--kb-dir`
+always wins, followed by the environment variable and then
+`./Knowledge_base`.
+
 ## Repository map
 
 - [`Knowledge_base/`](Knowledge_base/) — curated Markdown Knowledge Sources.
@@ -99,6 +112,7 @@ index stale until `build-index` runs successfully.
 
 ```bash
 uv run endurance-kb validate
+uv run endurance-kb validate --source Articles/example/source.md
 ```
 
 Validation errors are blocking. Warnings are advisory and can be numerous for
@@ -109,17 +123,17 @@ all warnings for the new file.
 
 ### Standardize frontmatter
 
-`standardize` writes files; it is not a preview command. Without `--force`, it
-adds inferred frontmatter only to documents that have none. With `--force`, it
-replaces existing frontmatter across the corpus. Prefer writing and reviewing
-frontmatter manually for a new source.
+`standardize` writes files; it is not a preview command. It adds frontmatter
+only to documents that have none and never replaces existing metadata. Prefer
+writing and reviewing frontmatter manually for a new source. The command fails
+instead of inventing a category, topic, source, author, or date when those
+values cannot be inferred safely.
 
 ```bash
 uv run endurance-kb standardize
-uv run endurance-kb standardize --force  # destructive bulk metadata rewrite
 ```
 
-Do not run either command casually, especially `--force`.
+Review every resulting source edit before synchronization.
 
 ## Testing changes
 
@@ -127,16 +141,13 @@ Install the locked development environment with `uv sync --locked`, then run:
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 uv run python -m unittest discover -s tests -v
-uv run ruff check main/cli.py main/utils/kb_engine tests
-uv run ruff format --check main/cli.py main/utils/kb_engine tests
+uv run ruff check .
+uv run ruff format --check .
 uv run mypy
 git diff --check
 ```
 
-The Ruff paths intentionally cover the active retrieval implementation and its
-tests. Older conversion, scraper, and legacy MCP utilities are outside this
-formatting gate. The configured strict mypy scope is defined in
-`pyproject.toml`.
+The configured strict mypy scope is defined in `pyproject.toml`.
 
 To verify the local SQLite capabilities directly:
 
@@ -166,8 +177,9 @@ not indexed as Knowledge Sources.
 
 ### 2. Add reviewed frontmatter
 
-Read [`Knowledge_base/TAXONOMY.md`](Knowledge_base/TAXONOMY.md), then add
-frontmatter manually:
+Read the canonical frontmatter contract in
+[`Knowledge_base/TAXONOMY.md`](Knowledge_base/TAXONOMY.md), then add frontmatter
+manually:
 
 ```yaml
 ---
@@ -180,20 +192,29 @@ source: "Original URL, podcast, or book title"
 author: "Author or speaker"
 date: "YYYY-MM-DD"
 summary: "One or two faithful English sentences."
+---
+```
+
+When directly supported takeaways have been deliberately reviewed, add the
+optional field:
+
+```yaml
 key_takeaways:
   - "A takeaway directly supported by the source"
----
 ```
 
 Rules:
 
-- Every field shown in the template is part of the canonical new-source
-  contract. The current validator blocks only on `title`, `category`, `topics`,
-  and `summary`; that narrower automated check does not make the other fields
-  optional.
+- Every field in the main template is required by the canonical new-source
+  contract. Automated validation requires `title`, `category`, `topics`, and
+  `summary`, rejects malformed YAML and explicit non-English language metadata,
+  and reports noncanonical categories or topics as warnings. That narrower
+  automated check does not make the other main fields optional.
 - The complete source must be English. `language: en` documents that contract;
   ingestion rejects an explicitly non-English value but does not detect the
-  language of unlabelled prose.
+  language of unlabelled prose. Reviewed legacy sources without `language` are
+  interpreted as English, but new sources may not rely on that compatibility
+  rule.
 - Use one canonical category: `metrics`, `hiit`, `zone2`, `strength`,
   `nutrition`, `physiology`, `periodization`, or `book`.
 - Copy topic spelling and case from `TAXONOMY.md`. Do not invent a near-synonym
@@ -206,8 +227,8 @@ Rules:
   `YYYY-MM-DD` publication date; research or escalate a missing date rather than
   inventing one or changing the schema. Do not ingest evidence whose provenance
   cannot be established.
-- Keep only directly supported `key_takeaways`; use `key_takeaways: []` when no
-  takeaways have been deliberately curated.
+- `key_takeaways` is optional. Include only directly supported takeaways that
+  have been deliberately curated; otherwise omit the field.
 
 ### 3. Preserve attributable source content
 
@@ -219,8 +240,13 @@ ingesting a source.
 ### 4. Synchronize and verify
 
 ```bash
-# Fix all reported errors. Before synchronization, a sitemap warning for the
-# new file is expected.
+# Targeted validation prints every warning for the new source. Fix all errors;
+# before synchronization, its sitemap warning is expected.
+uv run endurance-kb validate \
+  --source Articles/example/threshold-testing.md
+
+# Global validation reports corpus health but displays only its first 15
+# warnings.
 uv run endurance-kb validate
 
 # Rebuild the passage database and generated master sitemap.
@@ -228,10 +254,10 @@ uv run endurance-kb build-index
 uv run endurance-kb status
 uv run endurance-kb validate
 
-# The validator CLI shows only the first 15 global warnings. This prints every
-# warning belonging to the new source; replace p with its relative .md path.
-uv run python -c \
-  'from main.utils.kb_engine import KBEngine; p="Articles/example/threshold-testing.md"; r=KBEngine().validate(); print(*(w for w in r["warnings"] if f"[{p}]" in w), sep="\n")'
+# Global validation shows only the first 15 warnings. Targeted validation shows
+# every warning for one exact path relative to Knowledge_base.
+uv run endurance-kb validate \
+  --source Articles/example/threshold-testing.md
 
 # Use the exact relative path without .md and a phrase unique to the new source.
 uv run endurance-kb search "distinct English phrase" \
@@ -246,8 +272,8 @@ Before committing:
 
 - confirm `status` is fresh and the source-filtered search returns the expected
   Evidence Passage;
-- review every warning printed by the targeted new-source command; blank output
-  means it found none for that path;
+- review every warning printed by the targeted new-source command;
+  `Warnings Found: 0` means it found none for that path;
 - include the new source and regenerated `Knowledge_base/INDEX.md`;
 - never hand-edit or commit `main/.kb_index.sqlite`;
 - update `Books/_summary/INDEX.md` only when the task explicitly includes a
@@ -281,6 +307,12 @@ Before changing the repository:
 | `missing_index` | No local Derived Index exists. | Run `uv run endurance-kb build-index`. |
 | `stale_index` | A source path/content or taxonomy changed. | Rebuild before searching. |
 | `invalid_index` | The database is corrupt or has an old schema. | Run `build-index`; transactional sync replaces it. |
+| `invalid_index_path` | The selected output could overwrite source data or is not an index filename. | Choose a nonsymlink `.sqlite`, `.sqlite3`, or `.db` path outside `Knowledge_base`. |
+| `knowledge_base_not_found` | The configured corpus directory does not exist. | Run from the repository root, set `ENDURANCE_KB_DIR`, or pass global `--kb-dir`. |
+| `invalid_knowledge_base` | The selected directory is not the canonical corpus root. | Select the `Knowledge_base` directory containing `TAXONOMY.md`. |
+| `empty_corpus` | The selected directory has no curated sources. | Correct `--kb-dir` or add a valid source before building. |
+| `invalid_source` | A source has malformed YAML or violates the ingestion shape. | Fix the named source; the previous database remains intact. |
+| `source_not_found` | A targeted validation path is not a curated source. | Use the exact case-sensitive path relative to `Knowledge_base`, including `.md`. |
 | `unsupported_language` | A source explicitly declares a non-English language. | Remove it from the curated corpus or provide a separately reviewed English source. |
 | `corpus_changed_during_sync` | Files changed while synchronization was running. | Stop concurrent edits and rerun `build-index`. |
 | `invalid_search` | The query is empty/non-searchable or `--top` is outside 1–20. | Correct the query or limit. |

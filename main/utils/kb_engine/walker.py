@@ -10,7 +10,9 @@ def iter_kb_documents(kb_dir: Path, exclude: set[str] | None = None) -> Iterator
     for root, dirs, files in os.walk(kb_dir):
         # Exclude raw_transcripts and hidden directories from curated index walk
         dirs[:] = sorted(
-            d for d in dirs if d != "raw_transcripts" and not d.startswith(".")
+            d
+            for d in dirs
+            if d not in {"raw_transcripts", "_summary"} and not d.startswith(".")
         )
         for file in sorted(files):
             if file.endswith(".md") and file not in exclude:

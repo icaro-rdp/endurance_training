@@ -1,6 +1,6 @@
 ---
 title: Training And Racing With A Power Meter
-category: general
+category: book
 topics:
 - FTP
 source: Knowledge Base

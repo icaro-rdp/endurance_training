@@ -28,7 +28,7 @@ Dense retrieval, reranking, and the final evidence-oriented MCP contract are not
 ### Environment Prerequisites
 
 - Python 3.10 or newer.
-- SQLite with FTS5 enabled (included in supported Python builds).
+- SQLite with FTS5 and JSON1 enabled.
 - `uv` for installation from the checked-in lockfile.
 - Git 2.30 or newer.
 
@@ -53,12 +53,13 @@ cd endurance_training
 
 ### Step 2: Install the Locked Environment
 
-Create the project environment from `pyproject.toml` and `uv.lock`, then verify Python, PyYAML, and SQLite FTS5:
+Create the project environment from `pyproject.toml` and `uv.lock`, then verify
+Python, PyYAML, SQLite FTS5, and SQLite JSON1:
 
 ```bash
 uv sync --locked
 uv run python --version
-uv run python -c "import sqlite3, yaml; assert sqlite3.sqlite_version_info"
+uv run python -c "import sqlite3, yaml; c=sqlite3.connect(':memory:'); c.execute('CREATE VIRTUAL TABLE smoke USING fts5(content)'); c.execute(\"SELECT value FROM json_each('[1]')\")"
 ```
 
 No embedding, vector-store, or reranker package is installed by the active retrieval baseline. Dependency installation may contact the configured package registry; index construction and retrieval themselves do not use the network.
@@ -126,6 +127,22 @@ Final MCP Inspector, path-containment, cross-platform clean-install, and semanti
 
 - **`missing_index`**: Run `uv run endurance-kb build-index` before the first query.
 - **`stale_index`**: Run `uv run endurance-kb build-index` after adding, editing, renaming, or deleting a Knowledge Source, or after changing `TAXONOMY.md`.
-- **`invalid_index`**: Delete or move the local Derived Index and rebuild it explicitly.
-- **`unsupported_language`**: Remove or translate the non-English Knowledge Source before synchronization; the active corpus contract is English-only.
+- **`invalid_index`**: Run `uv run endurance-kb build-index`; synchronization
+  replaces the invalid database transactionally.
+- **`invalid_index_path`**: Choose a nonsymlink `.sqlite`, `.sqlite3`, or `.db`
+  path outside `Knowledge_base`.
+- **`knowledge_base_not_found`**: Run from the repository root, set
+  `ENDURANCE_KB_DIR`, or put global `--kb-dir /absolute/path/to/Knowledge_base`
+  before the command.
+- **`invalid_knowledge_base`**: Select the canonical `Knowledge_base` root that
+  contains `TAXONOMY.md`, not one of its subdirectories.
+- **`empty_corpus`**: Correct the selected Knowledge Base path or add a curated
+  source before synchronizing.
+- **`invalid_source`**: Fix the named source's YAML or ingestion metadata; the
+  previous database is preserved.
+- **`source_not_found`**: For targeted validation, use the exact case-sensitive
+  `.md` path relative to `Knowledge_base/`.
+- **`unsupported_language`**: Remove the non-English Knowledge Source from the
+  curated corpus, or add a separately reviewed English source with established
+  provenance. Do not translate evidence in place as an ingestion repair.
 - **Offline Operation**: Once the locked environment is installed, index construction and retrieval need no network access.

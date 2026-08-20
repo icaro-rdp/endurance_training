@@ -37,7 +37,7 @@ class TaxonomyRegistry:
         "Unilateral": ["unilateral", "single leg", "single-leg"],
         "Sodium_bicarbonate": ["bicarbonate", "sodium bicarbonate", "bicarb"],
         "Beta_alanine": ["beta alanine", "beta-alanine"],
-        "Glucose_fructose": ["glucose", "fructose", "carbohydrate"],
+        "Carbohydrate_ratio": ["glucose", "fructose", "carbohydrate"],
         "Double_threshold": ["double threshold", "norwegian"],
         "Cardiac_hypertrophy": ["cardiac", "stroke volume", "preload", "hypertrophy"],
         "Lactate_shuttle": ["lactate shuttle", "mct1", "mct4"],
@@ -84,7 +84,6 @@ class TaxonomyRegistry:
             "physiology",
             "periodization",
             "book",
-            "general",
         ]
         for cat in default_order:
             if cat not in self._categories:

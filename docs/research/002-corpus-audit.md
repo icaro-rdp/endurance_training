@@ -38,37 +38,52 @@ No current curated source has a frontmatter `language` or `source_type` field. T
 
 ## Remaining normalization findings
 
-The old defect totals are obsolete. A narrow recount against the current corpus found:
+The old defect totals are obsolete. The 2026-08-20 consistency cleanup
+normalized all four book categories to `book` and corrected seven topic values
+whose canonical equivalents were directly supported by the source. A recount
+after those edits found:
 
-- 59 of 263 sources do not contain `key_takeaways`.
-- Four books still declare `category: general`; ingestion normalizes these passages to `category: book`.
-- Three books have no Markdown headings. The production chunker recovers English chapter anchors and uppercase bold section titles where present.
-- Link-health totals have not been remeasured for the expanded corpus. The former broken-link count must not be quoted as current.
+- Nine sources still contain one noncanonical topic value each. The unresolved
+  values are `Metrics` (two sources), `General` (two books),
+  `Heart_rate_variability`, `Underfueling_REDs`, `Nutrition_strategy`,
+  `Fatigue_management`, and `Glucose_fructose`. No exact canonical replacement
+  is supported by both the current taxonomy and each source's meaning, so these
+  values were not guessed or silently removed.
+- 41 sources have a `date` value that is not exactly `YYYY-MM-DD`. This includes
+  imported timestamps and malformed values containing source text.
+- 59 sources use the legacy placeholder `author: Endurance Research`, nine use
+  `source: Knowledge Base`, and 18 use `date: 2025-01-01`. These values require
+  source-by-source provenance research rather than automated replacement.
+- 59 of 263 sources omit `key_takeaways`. That field is optional and its absence
+  is not a defect; takeaways must not be synthesized during indexing.
+- Three books have no Markdown headings. The production chunker recovers English
+  chapter anchors and uppercase bold section titles where present.
+- Link-health totals have not been remeasured for the expanded corpus. The
+  former broken-link count must not be quoted as current.
 
-Normalization must preserve substantive source text. Missing takeaways should be curated deliberately rather than synthesized automatically during indexing.
+Normalization must preserve substantive source text. Ambiguous metadata remains
+explicit debt until it can be resolved from attributable evidence.
 
 ## Canonical ingestion metadata
 
-Each Knowledge Source should provide usable values for:
-
-- `title`
-- `author`
-- `category`
-- `topics`
-- `source`
-- `date`
-- `summary`
-- `key_takeaways`, when curated takeaways are available
-
-The passage layer additionally derives `language`, `source_type`, repository-relative path, and source slug. Invalid YAML or an unclosed frontmatter block is an ingestion error; it is not silently ignored.
+[`Knowledge_base/TAXONOMY.md`](../../Knowledge_base/TAXONOMY.md) is the single
+canonical frontmatter contract. This audit records deviations from it; it does
+not define a second schema. Reviewed legacy sources without `language` remain
+compatible and are interpreted as English. Invalid YAML or an unclosed
+frontmatter block is an ingestion error; it is not silently ignored.
 
 ## Migration order
 
 1. Re-run this inventory from the canonical walker immediately before migration.
-2. Normalize the four book categories and curate the 59 missing takeaway lists separately from indexing.
-3. Improve headings and remove obsolete conversion links only when the change is mechanically reviewable and preserves source meaning.
-4. Run validation, then perform explicit Corpus Synchronization.
-5. Record new counts from the synchronized index rather than copying values from this report.
+2. Resolve the nine remaining topic exceptions only after source review or an
+   intentional taxonomy decision.
+3. Repair dates and provenance placeholders source by source; do not infer or
+   invent publication metadata.
+4. Improve headings and remove obsolete conversion links only when the change is
+   mechanically reviewable and preserves source meaning.
+5. Run validation, then perform explicit Corpus Synchronization.
+6. Record new counts from the synchronized index rather than copying values from
+   this report.
 
 ## Implementation references
 

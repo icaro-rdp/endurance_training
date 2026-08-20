@@ -14,8 +14,11 @@ from typing import Literal
 from .chunker import StructureAwareChunker
 from .errors import (
     CorpusChangedDuringSyncError,
+    EmptyCorpusError,
     IndexNotBuiltError,
     InvalidIndexError,
+    InvalidIndexPathError,
+    InvalidKnowledgeSourceError,
     InvalidSearchError,
     StaleIndexError,
 )
@@ -30,6 +33,8 @@ from .models import (
 from .sync import build_corpus_manifest
 
 _SCHEMA_VERSION = "2"
+_VALID_SOURCE_TYPES = frozenset({"article", "podcast", "book"})
+_VALID_SIZE_STATUSES = frozenset(status.value for status in PassageSizeStatus)
 _PASSAGE_COLUMNS = """
     p.chunk_id AS chunk_id,
     s.slug AS source_slug,
@@ -68,17 +73,39 @@ class PassageIndex:
         chunker: StructureAwareChunker | None = None,
     ) -> None:
         self.kb_dir = kb_dir.resolve()
-        self.db_path = db_path.resolve()
+        configured_db_path = db_path.expanduser()
+        if configured_db_path.is_symlink():
+            raise InvalidIndexPathError(
+                configured_db_path, "symbolic links are not allowed"
+            )
+        self.db_path = configured_db_path.resolve()
+        if self.db_path.suffix.casefold() not in {".sqlite", ".sqlite3", ".db"}:
+            raise InvalidIndexPathError(
+                self.db_path, "use a .sqlite, .sqlite3, or .db file"
+            )
+        if self.db_path == self.kb_dir or self.kb_dir in self.db_path.parents:
+            raise InvalidIndexPathError(
+                self.db_path, "the index must be stored outside Knowledge_base"
+            )
+        if self.db_path.is_dir():
+            raise InvalidIndexPathError(self.db_path, "the path is a directory")
         self.chunker = chunker or StructureAwareChunker(self.kb_dir)
 
     def synchronize(self) -> IndexStatus:
         manifest = build_corpus_manifest(self.kb_dir)
-        self.db_path.parent.mkdir(parents=True, exist_ok=True)
-        descriptor, temporary_name = tempfile.mkstemp(
-            prefix=f".{self.db_path.name}.",
-            suffix=".tmp",
-            dir=self.db_path.parent,
-        )
+        if manifest.document_count == 0:
+            raise EmptyCorpusError
+        try:
+            self.db_path.parent.mkdir(parents=True, exist_ok=True)
+            descriptor, temporary_name = tempfile.mkstemp(
+                prefix=f".{self.db_path.name}.",
+                suffix=".tmp",
+                dir=self.db_path.parent,
+            )
+        except OSError as error:
+            raise InvalidIndexPathError(
+                self.db_path, f"the parent directory is not writable: {error}"
+            ) from error
         os.close(descriptor)
         temporary_path = Path(temporary_name)
 
@@ -87,6 +114,12 @@ class PassageIndex:
             if build_corpus_manifest(self.kb_dir).digest != manifest.digest:
                 raise CorpusChangedDuringSyncError
             os.replace(temporary_path, self.db_path)
+        except sqlite3.DatabaseError as error:
+            raise InvalidIndexError from error
+        except OSError as error:
+            raise InvalidIndexPathError(
+                self.db_path, f"the index could not be replaced: {error}"
+            ) from error
         finally:
             temporary_path.unlink(missing_ok=True)
 
@@ -175,29 +208,35 @@ class PassageIndex:
         sql += " ORDER BY rank, p.chunk_id LIMIT ?"
         parameters.append(limit)
 
-        with self._connect() as connection:
-            rows = connection.execute(sql, parameters).fetchall()
-        return tuple(
-            EvidenceSearchResult(
-                passage=self._passage_from_row(row),
-                lexical_score=round(-float(row["lexical_rank"]), 8),
+        try:
+            with self._connect() as connection:
+                rows = connection.execute(sql, parameters).fetchall()
+            return tuple(
+                EvidenceSearchResult(
+                    passage=self._passage_from_row(row),
+                    lexical_score=round(-float(row["lexical_rank"]), 8),
+                )
+                for row in rows
             )
-            for row in rows
-        )
+        except (sqlite3.DatabaseError, TypeError, ValueError) as error:
+            raise InvalidIndexError from error
 
     def get_passage(self, chunk_id: str) -> EvidencePassage | None:
         self._require_fresh_index()
-        with self._connect() as connection:
-            row = connection.execute(
-                f"""
-                    SELECT {_PASSAGE_COLUMNS}
-                    FROM passages p
-                    JOIN sources s ON s.id = p.source_id
-                    WHERE p.chunk_id = ?
-                """,
-                (chunk_id,),
-            ).fetchone()
-        return self._passage_from_row(row) if row else None
+        try:
+            with self._connect() as connection:
+                row = connection.execute(
+                    f"""
+                        SELECT {_PASSAGE_COLUMNS}
+                        FROM passages p
+                        JOIN sources s ON s.id = p.source_id
+                        WHERE p.chunk_id = ?
+                    """,
+                    (chunk_id,),
+                ).fetchone()
+            return self._passage_from_row(row) if row else None
+        except (sqlite3.DatabaseError, TypeError, ValueError) as error:
+            raise InvalidIndexError from error
 
     def _build_database(self, path: Path, manifest: CorpusManifest) -> int:
         with sqlite3.connect(path) as connection:
@@ -205,11 +244,17 @@ class PassageIndex:
             connection.execute("PRAGMA foreign_keys = ON")
             self._create_schema(connection)
             passage_count = 0
-            documents = [self.kb_dir / rel_path for rel_path in manifest.source_paths]
-            for source_path in documents:
-                passages = self.chunker.chunk_document(source_path)
+            for rel_path, source_digest in manifest.source_digests:
+                source_path = self.kb_dir / rel_path
+                passages = self.chunker.chunk_document(
+                    source_path,
+                    expected_digest=source_digest,
+                )
                 if not passages:
-                    continue
+                    raise InvalidKnowledgeSourceError(
+                        rel_path,
+                        "chunking produced no Evidence Passages",
+                    )
                 source_id = self._insert_source(connection, passages[0])
                 for passage in passages:
                     passage_count += 1
@@ -379,6 +424,10 @@ class PassageIndex:
         if not missing_fts_rows or int(missing_fts_rows[0]):
             raise sqlite3.DatabaseError("passage search rows are incomplete")
 
+        _validate_source_rows(connection)
+        _validate_passage_rows(connection)
+        _validate_fts_rows(connection)
+
         return _IndexSnapshot(
             metadata=metadata,
             passage_count=passage_count,
@@ -410,9 +459,11 @@ class PassageIndex:
             language=str(row["language"]),
             source_type=str(row["source_type"]),
             category=str(row["category"]),
-            topics=tuple(json.loads(str(row["topics"]))),
+            topics=_decode_string_array(row["topics"], "topics"),
             source=str(row["source"]),
-            section_hierarchy=tuple(json.loads(str(row["section_hierarchy"]))),
+            section_hierarchy=_decode_string_array(
+                row["section_hierarchy"], "section hierarchy"
+            ),
             start_line=int(row["start_line"]),
             end_line=int(row["end_line"]),
             content=str(row["content"]),
@@ -428,6 +479,85 @@ def _last_row_id(cursor: sqlite3.Cursor) -> int:
     if row_id is None:
         raise sqlite3.DatabaseError("SQLite did not return an inserted row ID")
     return row_id
+
+
+def _validate_source_rows(connection: sqlite3.Connection) -> None:
+    for language, source_type, topics in connection.execute(
+        "SELECT language, source_type, topics FROM sources"
+    ):
+        if language != "en":
+            raise ValueError("source language must be 'en'")
+        if source_type not in _VALID_SOURCE_TYPES:
+            raise ValueError("source type is invalid")
+        _decode_string_array(topics, "topics")
+
+
+def _validate_passage_rows(connection: sqlite3.Connection) -> None:
+    rows = connection.execute(
+        """
+        SELECT section_hierarchy, start_line, end_line, content,
+               word_count, char_count, size_status
+        FROM passages
+        """
+    )
+    for hierarchy, start, end, content, words, characters, size_status in rows:
+        _decode_string_array(hierarchy, "section hierarchy")
+        start_line = _stored_integer(start, "start line")
+        end_line = _stored_integer(end, "end line")
+        word_count = _stored_integer(words, "word count")
+        char_count = _stored_integer(characters, "character count")
+        if start_line < 1 or end_line < start_line:
+            raise ValueError("passage line range is invalid")
+        if not isinstance(content, str) or not content:
+            raise ValueError("passage content must be non-empty text")
+        if word_count != len(content.split()) or char_count != len(content):
+            raise ValueError("passage measurements do not match its content")
+        if size_status not in _VALID_SIZE_STATUSES:
+            raise ValueError("passage size status is invalid")
+
+
+def _validate_fts_rows(connection: sqlite3.Connection) -> None:
+    rows = connection.execute(
+        """
+        SELECT f.title, f.author, f.category, f.topics, f.section_path, f.content,
+               s.title, s.author, s.category, s.topics,
+               p.section_hierarchy, p.content
+        FROM passages_fts f
+        JOIN passages p ON p.id = f.rowid
+        JOIN sources s ON s.id = p.source_id
+        """
+    )
+    for row in rows:
+        expected = (
+            row[6],
+            row[7],
+            row[8],
+            " ".join(_decode_string_array(row[9], "topics")),
+            " > ".join(_decode_string_array(row[10], "section hierarchy")),
+            row[11],
+        )
+        if tuple(row[:6]) != expected:
+            raise ValueError("passage search payload differs from stored evidence")
+
+
+def _stored_integer(value: object, field_name: str) -> int:
+    if not isinstance(value, int):
+        raise ValueError(f"{field_name} must be stored as an integer")
+    return value
+
+
+def _decode_string_array(value: object, field_name: str) -> tuple[str, ...]:
+    if not isinstance(value, str):
+        raise ValueError(f"{field_name} must be stored as JSON text")
+    try:
+        decoded = json.loads(value)
+    except json.JSONDecodeError as error:
+        raise ValueError(f"{field_name} contains malformed JSON") from error
+    if not isinstance(decoded, list) or not all(
+        isinstance(item, str) for item in decoded
+    ):
+        raise ValueError(f"{field_name} must be a JSON array of strings")
+    return tuple(decoded)
 
 
 def _table_count(

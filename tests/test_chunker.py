@@ -2,12 +2,17 @@
 
 from __future__ import annotations
 
+import hashlib
 import tempfile
 import unittest
 from pathlib import Path
 
 from main.utils.kb_engine.chunker import StructureAwareChunker
-from main.utils.kb_engine.errors import UnsupportedLanguageError
+from main.utils.kb_engine.errors import (
+    CorpusChangedDuringSyncError,
+    InvalidKnowledgeSourceError,
+    UnsupportedLanguageError,
+)
 from main.utils.kb_engine.models import ChunkingPolicy, EvidencePassage
 
 PASSAGE_FIELDS = (
@@ -160,6 +165,70 @@ class TestStructureAwareChunker(unittest.TestCase):
         )
         self.assertNotIn("Mitochondria", prescription.section_hierarchy)
 
+    def test_setext_headings_define_hierarchy_and_exact_source_lines(self) -> None:
+        content = "\n".join(
+            (
+                "Endurance Guide",
+                "===============",
+                "",
+                "Opening evidence.",
+                "",
+                "Threshold Training",
+                "------------------",
+                "",
+                "Specific threshold evidence.",
+            )
+        )
+        path = self._write("Articles/setext.md", content)
+
+        passages = self._chunker(max_words=100).chunk_document(path)
+
+        opening = next(
+            passage for passage in passages if "Opening evidence" in passage.content
+        )
+        threshold = next(
+            passage
+            for passage in passages
+            if "Specific threshold evidence" in passage.content
+        )
+        self.assertEqual(opening.section_hierarchy, ("Endurance Guide",))
+        self.assertEqual((opening.start_line, opening.end_line), (1, 4))
+        self.assertEqual(
+            threshold.section_hierarchy,
+            ("Endurance Guide", "Threshold Training"),
+        )
+        self.assertEqual((threshold.start_line, threshold.end_line), (6, 9))
+
+    def test_setext_like_lines_inside_fences_are_not_headings(self) -> None:
+        content = "\n".join(
+            (
+                "```markdown",
+                "Not A Heading",
+                "=============",
+                "```",
+                "Actual Section",
+                "--------------",
+                "Outside-fence evidence.",
+            )
+        )
+        path = self._write("Articles/setext-fence.md", content)
+
+        passages = self._chunker(max_words=100).chunk_document(path)
+
+        fenced = next(
+            passage for passage in passages if "Not A Heading" in passage.content
+        )
+        outside = next(
+            passage for passage in passages if "Outside-fence" in passage.content
+        )
+        self.assertEqual(fenced.section_hierarchy, ("setext-fence",))
+        self.assertNotIn("Not A Heading", outside.section_hierarchy)
+        self.assertEqual(
+            outside.section_hierarchy,
+            ("setext-fence", "Actual Section"),
+        )
+        self.assertEqual((outside.start_line, outside.end_line), (5, 7))
+
     def test_chunk_id_survives_blank_lines_inserted_before_unchanged_content(
         self,
     ) -> None:
@@ -192,6 +261,36 @@ class TestStructureAwareChunker(unittest.TestCase):
         self.assertEqual(after.start_line, before.start_line + 2)
         self.assertEqual(after.end_line, before.end_line + 2)
         self.assertNotEqual(before.citation, after.citation)
+
+    def test_expected_digest_rejects_changed_source_before_chunking(self) -> None:
+        original = "# Stable Source\n\nOriginal evidence.\n"
+        path = self._write("Articles/digest-bound.md", original)
+        expected_digest = hashlib.sha256(original.encode("utf-8")).hexdigest()
+        path.write_text(
+            "# Stable Source\n\nChanged evidence.\n",
+            encoding="utf-8",
+        )
+
+        with self.assertRaises(CorpusChangedDuringSyncError) as caught:
+            self._chunker(max_words=100).chunk_document(
+                path,
+                expected_digest=expected_digest,
+            )
+
+        self.assertEqual(caught.exception.code, "corpus_changed_during_sync")
+
+    def test_matching_expected_digest_chunks_the_hashed_source(self) -> None:
+        content = "# Digest Bound\n\nHashed evidence content.\n"
+        path = self._write("Articles/digest-match.md", content)
+        expected_digest = hashlib.sha256(content.encode("utf-8")).hexdigest()
+
+        passages = self._chunker(max_words=100).chunk_document(
+            path,
+            expected_digest=expected_digest,
+        )
+
+        self.assertEqual(len(passages), 1)
+        self.assertIn("Hashed evidence content.", passages[0].content)
 
     def test_relative_source_identity_prevents_same_basename_collisions(self) -> None:
         article_path = self._write(
@@ -242,6 +341,50 @@ class TestStructureAwareChunker(unittest.TestCase):
 
         self.assertEqual(caught.exception.code, "unsupported_language")
         self.assertIn("English sources only", str(caught.exception))
+
+    def test_explicit_non_string_language_metadata_is_rejected(self) -> None:
+        declarations = {
+            "language-list.md": "language:\n  - it",
+            "language-null.md": "language: null",
+        }
+
+        for filename, declaration in declarations.items():
+            with self.subTest(declaration=declaration):
+                path = self._write(
+                    f"Articles/{filename}",
+                    f"---\ntitle: Invalid Language\n{declaration}\n---\n\nEvidence.",
+                )
+
+                with self.assertRaises(InvalidKnowledgeSourceError) as caught:
+                    self._chunker(max_words=100).chunk_document(path)
+
+                self.assertEqual(caught.exception.code, "invalid_source")
+                self.assertIn(f"Articles/{filename}", str(caught.exception))
+                self.assertIn("language", str(caught.exception))
+
+    def test_non_mapping_frontmatter_is_reported_as_an_invalid_source(self) -> None:
+        path = self._write(
+            "Articles/frontmatter-list.md",
+            "---\n- title\n- category\n---\n\nEvidence.",
+        )
+
+        with self.assertRaises(InvalidKnowledgeSourceError) as caught:
+            self._chunker(max_words=100).chunk_document(path)
+
+        self.assertEqual(caught.exception.code, "invalid_source")
+        self.assertIn("Articles/frontmatter-list.md", str(caught.exception))
+        self.assertIn("mapping", str(caught.exception))
+
+    def test_invalid_utf8_is_reported_as_an_invalid_source(self) -> None:
+        path = self.kb_dir / "Articles" / "invalid-utf8.md"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(b"# Invalid UTF-8\n\nEvidence: \xff\n")
+
+        with self.assertRaises(InvalidKnowledgeSourceError) as caught:
+            self._chunker(max_words=100).chunk_document(path)
+
+        self.assertEqual(caught.exception.code, "invalid_source")
+        self.assertIn("valid UTF-8", str(caught.exception))
 
     def test_books_category_is_normalized_to_singular_taxonomy_value(self) -> None:
         path = self._write(
@@ -351,6 +494,28 @@ class TestStructureAwareChunker(unittest.TestCase):
 
         table_passage = next(
             passage for passage in passages if "| Metric" in passage.content
+        )
+        self.assertEqual(table_passage.content, table)
+        self.assertEqual((table_passage.start_line, table_passage.end_line), (2, 4))
+        self.assertEqual(table_passage.size_status, "oversized_atomic_block")
+
+    def test_table_without_outer_pipes_remains_one_atomic_block(self) -> None:
+        table = "\n".join(
+            (
+                "Metric | Evidence",
+                "--- | ---",
+                "Threshold | "
+                + " ".join(f"value{index:02d}" for index in range(1, 12)),
+            )
+        )
+        content = f"# Table Evidence\n{table}"
+        path = self._write("Articles/atomic-table-no-outer-pipes.md", content)
+        policy = ChunkingPolicy(target_words=6, min_words=3, max_words=8)
+
+        passages = StructureAwareChunker(self.kb_dir, policy).chunk_document(path)
+
+        table_passage = next(
+            passage for passage in passages if "Metric | Evidence" in passage.content
         )
         self.assertEqual(table_passage.content, table)
         self.assertEqual((table_passage.start_line, table_passage.end_line), (2, 4))

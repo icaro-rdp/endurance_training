@@ -4,14 +4,17 @@ from __future__ import annotations
 
 import hashlib
 import re
-from collections.abc import Iterable
+from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Literal
 
-import yaml
-
-from .errors import UnsupportedLanguageError
+from .errors import (
+    CorpusChangedDuringSyncError,
+    InvalidKnowledgeSourceError,
+    UnsupportedLanguageError,
+)
+from .frontmatter import parse_frontmatter
 from .models import ChunkingPolicy, EvidencePassage, PassageSizeStatus
 
 _MARKDOWN_HEADING = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
@@ -31,8 +34,10 @@ _METADATA_HEADING = re.compile(
     re.IGNORECASE,
 )
 _H1 = re.compile(r"^#\s+(.+?)\s*$")
+_SETEXT_UNDERLINE = re.compile(r"^(=+|-+)$")
 _FENCE_OPEN = re.compile(r"^\s*(`{3,}|~{3,})")
 _FENCE_CLOSE = re.compile(r"^\s*(`{3,}|~{3,})\s*$")
+_TABLE_DELIMITER_CELL = re.compile(r"^:?-{3,}:?$")
 
 _BlockKind = Literal["prose", "table", "quote", "fence"]
 
@@ -93,17 +98,56 @@ class StructureAwareChunker:
         self.kb_dir = kb_dir.resolve()
         self.policy = policy or ChunkingPolicy()
 
-    def chunk_document(self, file_path: Path) -> tuple[EvidencePassage, ...]:
+    def chunk_document(
+        self,
+        file_path: Path,
+        expected_digest: str | None = None,
+    ) -> tuple[EvidencePassage, ...]:
+        lexical_path = file_path.absolute()
+        if lexical_path.is_symlink():
+            try:
+                rel_path = lexical_path.relative_to(self.kb_dir).as_posix()
+            except ValueError:
+                rel_path = lexical_path.name
+            raise InvalidKnowledgeSourceError(
+                rel_path, "symbolic-link sources are not allowed"
+            )
         path = file_path.resolve()
         try:
-            path.relative_to(self.kb_dir)
+            relative = path.relative_to(self.kb_dir)
         except ValueError as error:
             raise ValueError(
                 f"Knowledge Source is outside the Knowledge Base: {path}"
             ) from error
 
-        lines = path.read_text(encoding="utf-8").splitlines()
-        metadata = self._extract_metadata(path, lines)
+        rel_path = relative.as_posix()
+        try:
+            source_bytes = path.read_bytes()
+        except OSError as error:
+            if expected_digest is not None:
+                raise CorpusChangedDuringSyncError from error
+            raise InvalidKnowledgeSourceError(
+                rel_path, f"source could not be read: {error}"
+            ) from error
+        if (
+            expected_digest is not None
+            and hashlib.sha256(source_bytes).hexdigest() != expected_digest
+        ):
+            raise CorpusChangedDuringSyncError
+        try:
+            source_text = source_bytes.decode("utf-8")
+        except UnicodeDecodeError as error:
+            raise InvalidKnowledgeSourceError(
+                rel_path, "source is not valid UTF-8"
+            ) from error
+        parsed = parse_frontmatter(source_text, rel_path)
+        lines = source_text.splitlines()
+        metadata = self._extract_metadata(
+            path,
+            lines,
+            parsed.metadata,
+            parsed.content_start,
+        )
         sections = self._parse_sections(lines, metadata)
         drafts = [
             draft for section in sections for draft in self._chunk_section(section)
@@ -143,8 +187,13 @@ class StructureAwareChunker:
             )
         return tuple(passages)
 
-    def _extract_metadata(self, path: Path, lines: list[str]) -> _SourceMetadata:
-        frontmatter, content_start = self._frontmatter(lines)
+    def _extract_metadata(
+        self,
+        path: Path,
+        lines: list[str],
+        frontmatter: Mapping[str, object],
+        content_start: int,
+    ) -> _SourceMetadata:
         relative = path.relative_to(self.kb_dir)
         rel_path = relative.as_posix()
         source_slug = relative.with_suffix("").as_posix()
@@ -158,11 +207,19 @@ class StructureAwareChunker:
         author = _string_value(frontmatter.get("author"))
         author = author or self._inline_value(body_sample, "Authors?") or "Unknown"
 
-        declared_language = _string_value(frontmatter.get("language"))
-        declared_language = declared_language or self._inline_value(
-            body_sample, "Language"
-        )
+        if "language" in frontmatter:
+            language_value = frontmatter["language"]
+            if not isinstance(language_value, str):
+                raise InvalidKnowledgeSourceError(
+                    rel_path,
+                    "frontmatter `language` must be a string (`en` or `English`)",
+                )
+            declared_language = language_value.strip()
+        else:
+            declared_language = self._inline_value(body_sample, "Language")
         if declared_language and declared_language.casefold() not in {"en", "english"}:
+            raise UnsupportedLanguageError(rel_path, declared_language)
+        if "language" in frontmatter and not declared_language:
             raise UnsupportedLanguageError(rel_path, declared_language)
         language = "en"
 
@@ -199,23 +256,6 @@ class StructureAwareChunker:
         )
 
     @staticmethod
-    def _frontmatter(lines: list[str]) -> tuple[dict[str, object], int]:
-        if not lines or lines[0].strip() != "---":
-            return {}, 0
-        try:
-            end = next(
-                index for index in range(1, len(lines)) if lines[index].strip() == "---"
-            )
-        except StopIteration as error:
-            raise ValueError("Unclosed YAML frontmatter") from error
-        loaded = yaml.safe_load("\n".join(lines[1:end])) or {}
-        if not isinstance(loaded, dict):
-            raise ValueError("YAML frontmatter must be a mapping")
-        if any(not isinstance(key, str) for key in loaded):
-            raise ValueError("YAML frontmatter keys must be strings")
-        return {str(key): value for key, value in loaded.items()}, end + 1
-
-    @staticmethod
     def _source_type(relative: Path) -> str:
         root = relative.parts[0].lower() if relative.parts else ""
         return {
@@ -237,10 +277,20 @@ class StructureAwareChunker:
 
     @staticmethod
     def _first_h1(lines: Iterable[str]) -> str:
-        for line in lines:
+        source_lines = tuple(lines)
+        active_fence: str | None = None
+        for index, line in enumerate(source_lines):
+            was_fenced = active_fence is not None
+            active_fence, transitioned = _advance_fence(active_fence, line)
+            if was_fenced or transitioned:
+                continue
             match = _H1.match(line)
             if match:
                 return match.group(1).strip()
+            if index + 1 < len(source_lines):
+                setext = _parse_setext_heading(line, source_lines[index + 1])
+                if setext and setext[0] == 1:
+                    return setext[1]
         return ""
 
     def _parse_sections(
@@ -252,13 +302,24 @@ class StructureAwareChunker:
         current: list[tuple[int, str]] = []
         active_fence: str | None = None
 
-        for index in range(metadata.content_start, len(lines)):
+        index = metadata.content_start
+        while index < len(lines):
             line_number = index + 1
             line = lines[index]
+            consumed_lines = 1
             active_fence, transitioned = _advance_fence(active_fence, line)
             heading = (
                 None if active_fence or transitioned else self._parse_heading(line)
             )
+            if (
+                heading is None
+                and not active_fence
+                and not transitioned
+                and index + 1 < len(lines)
+            ):
+                heading = _parse_setext_heading(line, lines[index + 1])
+                if heading:
+                    consumed_lines = 2
             if heading:
                 self._append_section(sections, hierarchy, current)
                 current = []
@@ -268,6 +329,9 @@ class StructureAwareChunker:
                 heading_stack.append((level, heading_title))
                 hierarchy = self._hierarchy(metadata.title, heading_stack)
             current.append((line_number, line))
+            if consumed_lines == 2:
+                current.append((line_number + 1, lines[index + 1]))
+            index += consumed_lines
 
         self._append_section(sections, hierarchy, current)
         return tuple(sections)
@@ -377,7 +441,7 @@ class StructureAwareChunker:
             current = []
             current_kind = None
 
-        for item in lines:
+        for index, item in enumerate(lines):
             stripped = item[1].strip()
             was_fenced = active_fence is not None
             active_fence, transitioned = _advance_fence(active_fence, item[1])
@@ -386,7 +450,11 @@ class StructureAwareChunker:
             elif not stripped:
                 flush()
                 continue
-            elif stripped.startswith("|"):
+            elif (
+                stripped.startswith("|")
+                or _starts_pipe_table(lines, index)
+                or (current_kind == "table" and "|" in stripped)
+            ):
                 kind = "table"
             elif stripped.startswith(">"):
                 kind = "quote"
@@ -557,3 +625,29 @@ def _string_value(value: object) -> str:
 
 def _word_count(content: str) -> int:
     return len(content.split())
+
+
+def _starts_pipe_table(
+    lines: tuple[tuple[int, str], ...],
+    index: int,
+) -> bool:
+    header = lines[index][1].strip()
+    if "|" not in header or _MARKDOWN_HEADING.match(header) or index + 1 >= len(lines):
+        return False
+    delimiter = lines[index + 1][1].strip().strip("|")
+    cells = [cell.strip() for cell in delimiter.split("|")]
+    return len(cells) >= 2 and all(
+        _TABLE_DELIMITER_CELL.fullmatch(cell) for cell in cells
+    )
+
+
+def _parse_setext_heading(
+    title_line: str,
+    underline_line: str,
+) -> tuple[int, str] | None:
+    title = title_line.strip()
+    underline = _SETEXT_UNDERLINE.fullmatch(underline_line.strip())
+    if not title or not underline or _MARKDOWN_HEADING.match(title):
+        return None
+    level = 1 if underline.group(1).startswith("=") else 2
+    return level, _clean_heading(title)

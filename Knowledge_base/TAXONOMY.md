@@ -1,6 +1,10 @@
 # Endurance Training Knowledge Base Taxonomy
 
-This file defines the canonical taxonomy, categories, tags, and topic relationships for the Knowledge Base. All documents must reference topics listed in this file.
+This file is the canonical source for Knowledge Base categories, topics, and
+source frontmatter. New Knowledge Sources must use only the exact topic values
+listed here. Reviewed legacy exceptions are recorded in
+[`docs/research/002-corpus-audit.md`](../docs/research/002-corpus-audit.md); they
+must not be copied into new sources.
 
 ---
 
@@ -70,23 +74,63 @@ Macrocycle, mesocycle, and microcycle planning and workload distribution.
 
 ---
 
-## Schema Guidelines for Frontmatter
+## Canonical Frontmatter Contract
 
-Every Markdown document in `Knowledge_base/` should contain YAML frontmatter adhering to this structure:
+Every curated Markdown Knowledge Source must begin with a YAML mapping. The
+current validator reports a blocking workflow error when any of these minimum
+fields is missing or empty:
+
+- `title`
+- `category`
+- `topics`
+- `summary`
+
+Every **new** Knowledge Source must use the fuller provenance contract below.
+All shown fields are required for a new source; `key_takeaways` is the only
+optional source field and belongs in frontmatter only when takeaways have been
+deliberately curated from the evidence.
 
 ```yaml
 ---
 title: "Document Title"
-category: "metrics | hiit | zone2 | strength | nutrition | physiology | periodization | book"
+language: en
+category: metrics
 topics:
-  - "Topic 1"
-  - "Topic 2"
-source: "Origin URL, Podcast Name, or Book Title"
-author: "Author / Speaker"
+  - FTP
+source: "Origin URL, podcast name, or book title"
+author: "Author or speaker"
 date: "YYYY-MM-DD"
-summary: "1-2 sentence executive summary."
-key_takeaways:
-  - "Key point 1"
-  - "Key point 2"
+summary: "One or two faithful English sentences."
 ---
 ```
+
+When directly supported takeaways have been reviewed, add:
+
+```yaml
+key_takeaways:
+  - "A takeaway directly supported by the source"
+```
+
+Rules:
+
+- `language` is exactly `en`; the complete source must be English.
+- `category` is exactly one of `metrics`, `hiit`, `zone2`, `strength`,
+  `nutrition`, `physiology`, `periodization`, or `book`.
+- Every topic uses the exact spelling and case from this file. Do not introduce
+  a near-synonym as a one-off tag.
+- `source`, `author`, and `date` record real provenance. A publication date uses
+  `YYYY-MM-DD`; do not invent a date or provenance placeholder.
+- `key_takeaways` is optional. Omit it when no takeaways have been deliberately
+  curated; indexing does not synthesize it.
+
+The passage layer derives `source_type`, repository-relative path,
+`source_slug`, passage identifiers and boundaries, citation line ranges, and
+size diagnostics. Those values do not belong in source frontmatter.
+
+### Reviewed legacy compatibility
+
+The existing corpus was reviewed as English before this contract was adopted.
+A legacy source with no `language` field is therefore interpreted as `en`.
+Explicit non-English metadata fails synchronization, and this compatibility
+rule does not provide bilingual, translation, or language-detection support.
+New sources still require `language: en`.

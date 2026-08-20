@@ -5,7 +5,7 @@ topics:
   - "Block_periodization"
   - "Microcycles"
   - "Aerobic_base"
-  - "Neuromuscular_power"
+  - "Sprint_performance"
 source: "Empirical Cycling Podcast — Kolie Moore & Erica Zaveta (Ten Minute Tips #39)"
 author: "Kolie Moore"
 date: "2024-07-18"

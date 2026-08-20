@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
 import argparse
-import sys
 from pathlib import Path
 
-# Add project root directory to python path for imports
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(PROJECT_ROOT))
 
-from main.utils.book_converter import BookConverter
+if __package__:
+    from main.utils.book_converter import BookConverter
+else:
+    # Keep direct script execution working without mutating ``sys.path``.
+    from utils.book_converter import BookConverter
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Convert books in Knowledge_base/Books to Markdown format using MarkItDown."
+        description=(
+            "Convert books in Knowledge_base/Books to Markdown format using MarkItDown."
+        )
     )
     parser.add_argument(
         "--books-dir",
@@ -41,7 +44,10 @@ def main():
         "--delete-original",
         action="store_true",
         default=True,
-        help="Delete original book files (.epub, .pdf, etc.) after successful conversion (default: True)",
+        help=(
+            "Delete original book files (.epub, .pdf, etc.) after successful "
+            "conversion (default: True)"
+        ),
     )
     parser.add_argument(
         "--keep-original",
@@ -56,7 +62,8 @@ def main():
     print("      Book Conversion via MarkItDown     ")
     print("==========================================")
     print(f"Books Directory:  {args.books_dir.resolve()}")
-    print(f"Output Directory: {args.output_dir.resolve() if args.output_dir else 'Same as books'}")
+    output_dir = args.output_dir.resolve() if args.output_dir else "Same as books"
+    print(f"Output Directory: {output_dir}")
     print(f"Extensions:       {', '.join(args.extensions)}")
     print(f"Overwrite:        {args.force}")
     print(f"Delete Original:  {args.delete_original}")

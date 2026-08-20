@@ -1,6 +1,6 @@
 ---
 title: Training For The Uphill Athlete
-category: general
+category: book
 topics:
 - General
 source: Knowledge Base

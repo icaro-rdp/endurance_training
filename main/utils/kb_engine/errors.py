@@ -1,5 +1,7 @@
 """Domain errors exposed by the Knowledge Base facade."""
 
+from pathlib import Path
+
 
 class KBEngineError(RuntimeError):
     """Base class for expected Knowledge Base failures."""
@@ -40,6 +42,15 @@ class InvalidIndexError(KBEngineError):
         )
 
 
+class InvalidIndexPathError(KBEngineError):
+    """Raised when a Derived Index path could overwrite non-index data."""
+
+    code = "invalid_index_path"
+
+    def __init__(self, path: Path, detail: str) -> None:
+        super().__init__(f"Derived Index path `{path}` is unsafe: {detail}")
+
+
 class InvalidSearchError(KBEngineError):
     """Raised when a retrieval request violates the public query contract."""
 
@@ -47,6 +58,59 @@ class InvalidSearchError(KBEngineError):
 
     def __init__(self, message: str) -> None:
         super().__init__(message)
+
+
+class KnowledgeBaseNotFoundError(KBEngineError):
+    """Raised when the configured Knowledge Base directory does not exist."""
+
+    code = "knowledge_base_not_found"
+
+    def __init__(self, path: Path) -> None:
+        super().__init__(
+            f"Knowledge Base directory not found: `{path}`. Run from the repository "
+            "root, pass `--kb-dir`, or set `ENDURANCE_KB_DIR`."
+        )
+
+
+class InvalidKnowledgeBaseError(KBEngineError):
+    """Raised when a directory is not a canonical Knowledge Base root."""
+
+    code = "invalid_knowledge_base"
+
+    def __init__(self, path: Path) -> None:
+        super().__init__(
+            f"Knowledge Base directory `{path}` has no TAXONOMY.md; select the "
+            "canonical Knowledge_base root."
+        )
+
+
+class KnowledgeSourceNotFoundError(KBEngineError):
+    """Raised when a requested relative Knowledge Source is not curated."""
+
+    code = "source_not_found"
+
+    def __init__(self, rel_path: str) -> None:
+        super().__init__(
+            f"Knowledge Source not found in the curated corpus: `{rel_path}`."
+        )
+
+
+class InvalidKnowledgeSourceError(KBEngineError):
+    """Raised when a Knowledge Source cannot satisfy the ingestion contract."""
+
+    code = "invalid_source"
+
+    def __init__(self, rel_path: str, detail: str) -> None:
+        super().__init__(f"Knowledge Source `{rel_path}` is invalid: {detail}")
+
+
+class EmptyCorpusError(KBEngineError):
+    """Raised when synchronization is attempted without curated sources."""
+
+    code = "empty_corpus"
+
+    def __init__(self) -> None:
+        super().__init__("The Knowledge Base contains no curated Markdown sources.")
 
 
 class CorpusChangedDuringSyncError(KBEngineError):

@@ -7,7 +7,7 @@ This document records the ubiquitous language, core domain concepts, and active 
 ## Domain Concepts
 
 - **Knowledge Base (KB)**: The curated collection of English Markdown research articles, podcast episode notes, and reference books stored under `Knowledge_base/`.
-- **Frontmatter**: Standardized YAML header metadata (`title`, `category`, `topics`, `summary`, `source`, `date`) embedded at the top of every KB document.
+- **Frontmatter**: YAML source metadata governed by the single canonical contract in `Knowledge_base/TAXONOMY.md`. The current validator requires `title`, `category`, `topics`, and `summary`; new Knowledge Sources additionally require English and provenance fields. `key_takeaways` is optional and included only when deliberately curated. Reviewed legacy sources without `language` are interpreted as English.
 - **Taxonomy**: Canonical list of Categories (`metrics`, `hiit`, `zone2`, `strength`, `nutrition`, `physiology`, `periodization`, `book`) and Topics defined in `Knowledge_base/TAXONOMY.md`.
 - **Sitemap / Index**: Master document catalog located at `Knowledge_base/INDEX.md` and generated from document frontmatter.
 - **Athlete Query**: An English natural-language question about endurance-training concepts, decisions, or planning needs. Callers supply English; the retrieval foundation does not perform language identification.
@@ -30,7 +30,10 @@ This document records the ubiquitous language, core domain concepts, and active 
   - `sync.py`: Deterministic content-based Corpus Fingerprint construction.
   - `models.py` and `errors.py`: Evidence Passage, search-result, index-status, and domain-error contracts.
   - `frontmatter.py`: Frontmatter parsing and standardization.
-  - `validator.py`: Link verification, taxonomy checks, and sitemap integrity.
+  - `validator.py`: YAML and English-metadata checks, link verification,
+    category/topic taxonomy warnings, targeted source diagnostics, and sitemap
+    integrity. Ambiguous taxonomy corrections remain a contributor review
+    responsibility.
 - **MCP Adapter (`main/mcp_server.py`)**: Existing stdio adapter for legacy Knowledge Base tools. Migration to the final evidence-oriented MCP contract is deferred and must not be treated as part of the active retrieval foundation.
 - **CLI Adapter (`main/cli.py`)**: Thin command-line interface for explicit index synchronization, freshness status, English lexical search, validation, and frontmatter maintenance.
 

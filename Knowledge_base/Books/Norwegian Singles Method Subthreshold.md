@@ -1,6 +1,6 @@
 ---
 title: Norwegian Singles Method
-category: general
+category: book
 topics:
 - LT1_VT1
 - LT2_VT2
