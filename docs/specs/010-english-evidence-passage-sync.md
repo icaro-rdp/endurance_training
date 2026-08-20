@@ -1,7 +1,7 @@
 # English Evidence Passage Synchronization
 
 **Status:** Implemented
-**Parent:** GitHub issue #1  
+**Parent:** [Build a private evidence-grounded endurance knowledge system](https://github.com/icaro-rdp/endurance_training/issues/1)
 **Scope:** First production increment
 
 ## Decision
