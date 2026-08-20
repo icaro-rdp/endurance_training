@@ -201,10 +201,11 @@ Rules:
 - Use `category: book` for books.
 - Do not add `source_type`, chunk IDs, passage boundaries, or citation line
   numbers. Ingestion derives them.
-- Record the real source, author, and publication date. If the original does not
-  identify an author or date, use `author: "Unknown"` or `date: null` rather
-  than inventing one. Do not ingest evidence whose provenance cannot be
-  established.
+- Record the real source, author, and publication date. Use `author: "Unknown"`
+  only when the original identifies no author. A new source still needs a real
+  `YYYY-MM-DD` publication date; research or escalate a missing date rather than
+  inventing one or changing the schema. Do not ingest evidence whose provenance
+  cannot be established.
 - Keep only directly supported `key_takeaways`; use `key_takeaways: []` when no
   takeaways have been deliberately curated.
 
