@@ -274,7 +274,7 @@ def scan_existing_downloads(output_dir: Path) -> set[str]:
                 match = re.search(r"open\.spotify\.com/episode/([a-zA-Z0-9]+)", head)
                 if match:
                     existing_identifiers.add(match.group(1))
-        except Exception:
+        except OSError:
             pass
 
     return existing_identifiers
@@ -421,7 +421,7 @@ def main():
             print(
                 "Successfully initialized Spotify Scraper client with session cookie."
             )
-        except Exception as e:
+        except (requests.RequestException, OSError, ValueError, RuntimeError) as e:
             print(f"Warning: Failed to initialize SpotifyClient scraper ({e}).")
 
     # Fetch episodes
@@ -455,13 +455,13 @@ def main():
         target_file = output_path / f"{base_name}.md"
 
         # Check for existing download
-        if not args.force:
-            if ep_id in existing_downloads or (
-                target_file.exists() and target_file.stat().st_size > 100
-            ):
-                print(f"[{i}/{len(episodes)}] (Skipping already downloaded) {ep_name}")
-                skipped_count += 1
-                continue
+        if not args.force and (
+            ep_id in existing_downloads
+            or (target_file.exists() and target_file.stat().st_size > 100)
+        ):
+            print(f"[{i}/{len(episodes)}] (Skipping already downloaded) {ep_name}")
+            skipped_count += 1
+            continue
 
         print(f"\n[{i}/{len(episodes)}] {ep_name} (ID: {ep_id})")
 
@@ -476,7 +476,7 @@ def main():
                     ]
                     print(f"  -> Extracted {len(transcript_lines)} transcript lines!")
                     success_count += 1
-            except Exception as e:
+            except (requests.RequestException, OSError, ValueError, RuntimeError, AttributeError, KeyError) as e:
                 print(f"  -> No transcript found on Spotify ({e})")
                 no_transcript_count += 1
         else:

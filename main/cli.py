@@ -89,10 +89,10 @@ def main():
     parser_search.add_argument("--reindex", action="store_true", help="Force rebuild database index before searching")
 
     # build-index
-    parser_build = subparsers.add_parser("build-index", help="Rebuild search index and sitemap")
+    subparsers.add_parser("build-index", help="Rebuild search index and sitemap")
 
     # validate
-    parser_validate = subparsers.add_parser("validate", help="Run diagnostic health checks")
+    subparsers.add_parser("validate", help="Run diagnostic health checks")
 
     # standardize
     parser_standardize = subparsers.add_parser("standardize", help="Standardize frontmatter")

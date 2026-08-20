@@ -14,7 +14,7 @@ import hashlib
 import os
 import re
 from pathlib import Path
-from typing import Any
+from typing import Any, ClassVar
 
 try:
     import yaml
@@ -93,7 +93,7 @@ class Chunk:
 class StructureAwareChunker:
     """Structure-aware Markdown chunker designed for endurance training KB sources."""
 
-    ITALIAN_STOPWORDS = {
+    ITALIAN_STOPWORDS: ClassVar[set[str]] = {
         "della", "degli", "delle", "dell", "nella", "negli", "nelle", "questo",
         "allenamento", "forza", "periodizzazione", "prestazione", "muscolare",
         "capitolo", "indice", "prefazione", "valutazione", "esercizi"
@@ -136,7 +136,7 @@ class StructureAwareChunker:
                         for k in ["title", "author", "category", "language", "source"]:
                             if parsed.get(k):
                                 metadata[k] = str(parsed[k]).strip()
-                except Exception:
+                except (ValueError, TypeError, AttributeError):
                     pass
                 content_start_line = end_fm_idx + 2
 

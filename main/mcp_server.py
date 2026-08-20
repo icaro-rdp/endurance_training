@@ -145,13 +145,13 @@ async def run_stdio_server():
                         "id": req_id,
                         "result": {"content": res_content}
                     })
-                except Exception as e:
+                except (KeyError, ValueError, RuntimeError, OSError) as e:
                     send_json({
                         "jsonrpc": "2.0",
                         "id": req_id,
                         "error": {"code": -32603, "message": str(e)}
                     })
-        except Exception:
+        except json.JSONDecodeError:
             pass
 
 def main():

@@ -36,6 +36,17 @@
 venv/
 env/
 
+# Python bytecode & caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+
+# SQLite Search Index
+*.sqlite
+.kb_index.sqlite
+
 # Podcast transcripts
 **/raw_transcripts/
 transcripts/
