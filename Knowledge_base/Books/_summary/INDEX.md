@@ -29,15 +29,7 @@ This folder contains high-density chapter summaries and structural indexes for t
   - Keeping lactate strictly between 2.0 and 3.5 mmol/L during intervals to maximize lactate clearance capacity without excessive fatigue.
   - High frequency of quality subthreshold work (e.g. 5x6min, 4x8min at LT2/sub-LT2) paired with high volume Zone 2.
 
-## 4. Periodizzazione dell'Allenamento Sportivo
-- **File**: [`Knowledge_base/Books/Periodizzazione dell'allenamento sportivo.md`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Books/Periodizzazione%20dell'allenamento%20sportivo.md)
-- **Author**: Tudor O. Bompa
-- **Key Focus**: Classical block and sequential periodization, macrocycles, mesocycle planning, peak performance timing.
-- **Core Concepts**:
-  - Preparatory Phase (General & Specific), Competitive Phase, Transition Phase.
-  - Adaptation mechanisms, supercompensation curve, and loading patterns (3:1, 2:1 step loading).
-
-## 5. Injury-Free Running - Your Illustrated Guide
+## 4. Injury-Free Running - Your Illustrated Guide
 - **File**: [`Knowledge_base/Books/Injury-Free Running - Your Illustrated Guide.md`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Books/Injury-Free%20Running%20-%20Your%20Illustrated%20Guide.md)
 - **Key Focus**: Running mechanics, cadence, tissue overload prevention, lower-limb strength and durability.
 - **Core Concepts**:

@@ -4,6 +4,7 @@ Validator and Sitemap Builder sub-module.
 
 import re
 from pathlib import Path
+from typing import Any, TypedDict
 
 import yaml
 
@@ -14,6 +15,14 @@ from .walker import iter_kb_documents
 
 REQUIRED_FM_KEYS = ["title", "category", "topics", "summary"]
 
+
+class ValidationReport(TypedDict):
+    total_docs: int
+    errors: list[str]
+    warnings: list[str]
+    is_healthy: bool
+
+
 class KBValidator:
     def __init__(self, kb_dir: Path, index_file: Path, taxonomy: TaxonomyRegistry):
         self.kb_dir = kb_dir
@@ -22,7 +31,7 @@ class KBValidator:
         self.fm_manager = FrontmatterManager(kb_dir, taxonomy)
 
     def build_sitemap(self) -> str:
-        docs = []
+        docs: list[dict[str, Any]] = []
         for file_path in iter_kb_documents(self.kb_dir):
             fm, _ = self.fm_manager.parse_document(file_path)
             if fm:
@@ -30,7 +39,7 @@ class KBValidator:
                 fm["rel_path"] = str(file_path.relative_to(self.kb_dir))
                 docs.append(fm)
 
-        categories = {}
+        categories: dict[str, list[dict[str, Any]]] = {}
         for doc in docs:
             cat = doc.get("category", "general")
             categories.setdefault(cat, []).append(doc)
@@ -38,7 +47,8 @@ class KBValidator:
         lines = [
             "# Master Knowledge Base Index",
             "",
-            "Welcome to the **Endurance Training Knowledge Base**. This document serves as the primary sitemap and entry point for LLMs and researchers.",
+            "Welcome to the **Endurance Training Knowledge Base**. This document "
+            "is the primary sitemap for LLMs and researchers.",
             "",
             "---",
             "",
@@ -49,11 +59,14 @@ class KBValidator:
             "---",
             "",
             "## Document Catalog by Category",
-            ""
+            "",
         ]
 
         cat_order = self.taxonomy.category_order()
-        sorted_cats = sorted(categories.keys(), key=lambda c: cat_order.index(c) if c in cat_order else 99)
+        sorted_cats = sorted(
+            categories.keys(),
+            key=lambda c: cat_order.index(c) if c in cat_order else 99,
+        )
 
         for cat in sorted_cats:
             cat_docs = categories[cat]
@@ -83,12 +96,16 @@ class KBValidator:
 
         return sitemap_content
 
-    def validate_health(self) -> dict:
-        errors = []
-        warnings = []
+    def validate_health(self) -> ValidationReport:
+        errors: list[str] = []
+        warnings: list[str] = []
         total_docs = 0
 
-        index_text = self.index_file.read_text(encoding="utf-8") if self.index_file.exists() else ""
+        index_text = (
+            self.index_file.read_text(encoding="utf-8")
+            if self.index_file.exists()
+            else ""
+        )
 
         valid_categories = self.taxonomy.categories()
 
@@ -115,26 +132,36 @@ class KBValidator:
 
             for key in REQUIRED_FM_KEYS:
                 if key not in fm or not fm[key]:
-                    errors.append(f"[{rel_path}] Missing required frontmatter key '{key}'.")
+                    errors.append(
+                        f"[{rel_path}] Missing required frontmatter key '{key}'."
+                    )
 
             category = fm.get("category")
             if category and category not in valid_categories:
-                warnings.append(f"[{rel_path}] Category '{category}' not in predefined taxonomy list.")
+                warnings.append(
+                    f"[{rel_path}] Category '{category}' is not in the "
+                    "predefined taxonomy list."
+                )
 
-            if str(rel_path) not in index_text and str(file_path.name) not in index_text:
+            if (
+                str(rel_path) not in index_text
+                and str(file_path.name) not in index_text
+            ):
                 warnings.append(f"[{rel_path}] File not indexed in INDEX.md.")
 
-            link_pattern = re.compile(r'\[.*?\]\((?!http|file)(.*?)\)')
+            link_pattern = re.compile(r"\[.*?\]\((?!http|file)(.*?)\)")
             for match in link_pattern.finditer(parts[2]):
-                link_target = match.group(1).split('#')[0]
+                link_target = match.group(1).split("#")[0]
                 if link_target:
                     resolved_path = (file_path.parent / link_target).resolve()
                     if not resolved_path.exists():
-                        warnings.append(f"[{rel_path}] Broken relative link: '{link_target}'")
+                        warnings.append(
+                            f"[{rel_path}] Broken relative link: '{link_target}'"
+                        )
 
         return {
             "total_docs": total_docs,
             "errors": errors,
             "warnings": warnings,
-            "is_healthy": len(errors) == 0
+            "is_healthy": len(errors) == 0,
         }

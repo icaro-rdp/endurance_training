@@ -49,17 +49,17 @@ class TaxonomyRegistry:
         self._topics_by_category: dict[str, list[str]] = {}
         self._parse_taxonomy_md()
 
-    def _parse_taxonomy_md(self):
+    def _parse_taxonomy_md(self) -> None:
         taxonomy_path = self.kb_dir / "TAXONOMY.md"
         if not taxonomy_path.exists():
             # Fallback if TAXONOMY.md doesn't exist
             return
-            
-        with open(taxonomy_path, "r", encoding="utf-8") as f:
+
+        with open(taxonomy_path, encoding="utf-8") as f:
             content = f.read()
 
         current_category = None
-        
+
         for line in content.splitlines():
             cat_match = re.match(r"^### \d+\.\s+`([^`]+)`", line)
             if cat_match:
@@ -67,21 +67,31 @@ class TaxonomyRegistry:
                 self._categories.append(current_category)
                 self._topics_by_category[current_category] = []
                 continue
-                
+
             topic_match = re.match(r"^\s+-\s+`([^`]+)`", line)
             if topic_match and current_category:
                 topic = topic_match.group(1)
                 self._topics_by_category[current_category].append(topic)
-                
+
         # Additionally add categories from schema guidelines or default ones
         # Based on valid_categories list from validator.py
-        default_order = ["metrics", "hiit", "zone2", "strength", "nutrition", "physiology", "periodization", "book", "general"]
+        default_order = [
+            "metrics",
+            "hiit",
+            "zone2",
+            "strength",
+            "nutrition",
+            "physiology",
+            "periodization",
+            "book",
+            "general",
+        ]
         for cat in default_order:
             if cat not in self._categories:
                 self._categories.append(cat)
                 self._topics_by_category[cat] = []
-                
-        # Reorder to match default_order, preserving any extra parsed categories at the end
+
+        # Preserve parsed categories that are not part of the default order.
         ordered_cats = []
         for cat in default_order:
             if cat in self._categories:
@@ -97,7 +107,7 @@ class TaxonomyRegistry:
     def topics(self, category: str | None = None) -> list[str]:
         if category:
             return self._topics_by_category.get(category, []).copy()
-        
+
         all_topics = []
         for topics in self._topics_by_category.values():
             all_topics.extend(topics)

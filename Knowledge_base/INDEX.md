@@ -1,6 +1,6 @@
 # Master Knowledge Base Index
 
-Welcome to the **Endurance Training Knowledge Base**. This document serves as the primary sitemap and entry point for LLMs and researchers.
+Welcome to the **Endurance Training Knowledge Base**. This document is the primary sitemap for LLMs and researchers.
 
 ---
 
@@ -1084,7 +1084,7 @@ Total documents: 94
 ---
 
 ### Category: `GENERAL`
-Total documents: 5
+Total documents: 4
 
 - **[Injury Free Running   Your Illustrated Guide](Books/Injury-Free Running - Your Illustrated Guide.md)** (`Books/Injury-Free Running - Your Illustrated Guide.md`)
   - **Topics**: General
@@ -1093,10 +1093,6 @@ Total documents: 5
 - **[Norwegian Singles Method](Books/Norwegian Singles Method Subthreshold.md)** (`Books/Norwegian Singles Method Subthreshold.md`)
   - **Topics**: LT1_VT1, LT2_VT2, Double_threshold
   - **Summary**: Copyright Page© James Copeland 2025 All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior written permission of the copyright owner
-
-- **[Periodizzazione Dell'Allenamento Sportivo](Books/Periodizzazione dell'allenamento sportivo.md)** (`Books/Periodizzazione dell'allenamento sportivo.md`)
-  - **Topics**: General
-  - **Summary**: <p>Il Prof. Tudor Bompa è stato pioniere di nuove concezioni in questo campo, provando già molto tempo addietro come non solo il come e quanto duramente un atleta lavorava in allenamento, ma anche il quando e il tipo di lavoro che egli sceglieva, potessero determinare i suoi livelli di preparazione 
 
 - **[Training And Racing With A Power Meter](Books/Training and Racing with a Power Meter.md)** (`Books/Training and Racing with a Power Meter.md`)
   - **Topics**: FTP

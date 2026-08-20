@@ -1,113 +1,147 @@
-# Retrieval Benchmark & Acceptance Threshold Specification
+# English Retrieval Benchmark and Candidate Acceptance Targets
 
-**Document Version:** 1.0.0  
-**Issue Reference:** [Issue #3: Establish the retrieval benchmark and acceptance thresholds](file:///Users/icaroredepaolini/Personale/training/endurance_training/docs/agents/issue-tracker.md)  
-**Author:** Endurance Research Team  
-**Dataset Artifact:** [`docs/prototypes/003-retrieval-benchmark.json`](file:///Users/icaroredepaolini/Personale/training/endurance_training/docs/prototypes/003-retrieval-benchmark.json)  
+**Document version:** 1.1.0
 
----
+**Issue reference:** Issue #3, *Establish the retrieval benchmark and acceptance thresholds*
 
-## 1. Executive Summary
+**Dataset artifact:** [`003-retrieval-benchmark.json`](003-retrieval-benchmark.json)
 
-This specification establishes the official retrieval evaluation benchmark and quantitative acceptance contract for the **Endurance Training Knowledge Base**. To move beyond simple full-text keyword matching (SQLite FTS5 BM25), the retrieval system must prove robust accuracy across multi-lingual terminology (English and Italian), broad periodization planning, fine-grained exercise physiology, high-intensity interval training (HIIT), Zone 2 / aerobic base paradigms, gym strength integration, cross-lingual querying, scientific source conflicts, and negative out-of-domain query rejection.
+**Scope:** English-only, lexical and passage benchmark foundation
 
-The accompanying dataset [`003-retrieval-benchmark.json`](file:///Users/icaroredepaolini/Personale/training/endurance_training/docs/prototypes/003-retrieval-benchmark.json) contains **20 curated Athlete Queries** mapped to gold target passages across primary sources in `Knowledge_base/`.
+**Updated:** 2026-08-20
 
----
+## 1. Purpose and current scope
 
-## 2. Quantitative Acceptance Thresholds
+This specification defines the English-only foundation for evaluating retrieval over the Endurance Training Knowledge Base. It first tests whether the system can create and retrieve the right citation-stable Evidence Passages: correct source identity, exact source lines, useful section context, deterministic passage boundaries, lexical ranking, and rejection of unsupported queries.
 
-The retrieval engine will be evaluated against five core performance metrics. Any proposed architecture (e.g., hybrid vector-BM25 search, cross-encoder reranking, metadata filtering) must meet or exceed the following minimum acceptance thresholds:
+The dataset contains **9 Athlete Queries**:
 
-| Metric | Target Threshold | Baseline BM25 | Rationale & Description |
+- **7 positive queries** with **18 gold passage labels** across **16 unique English sources**.
+- **2 negative queries** with no gold passage.
+- **7 challenge categories**: broad planning, physiology, HIIT, Zone 2, strength, source conflicts, and unsupported-domain rejection.
+
+This is not evidence that a semantic, dense-vector, hybrid, or reranking model meets any quality target. Every baseline and model result must come from a reproducible run against this dataset. Architecture choices and model reputation are not measurements.
+
+The retained query IDs are `Q01`, `Q03`, `Q05`, `Q07`, `Q09`, `Q15`, `Q16`, `Q17`, and `Q18`.
+
+## 2. Candidate acceptance targets
+
+These values are **targets pending measurement**, not reported results. Positive-query ranking metrics are calculated over `Q01`, `Q03`, `Q05`, `Q07`, `Q09`, `Q15`, and `Q16`. Negative-query behavior is reported separately for `Q17` and `Q18`.
+
+| Metric | Candidate target | Current measured baseline | Purpose |
 | :--- | :--- | :--- | :--- |
-| **MRR@5** | $\ge \mathbf{0.85}$ | ~0.55 | **Mean Reciprocal Rank at Top 5**: Measures how quickly the top relevant gold passage is returned. Essential for immediate LLM context window insertion. |
-| **NDCG@5** | $\ge \mathbf{0.80}$ | ~0.48 | **Normalized Discounted Cumulative Gain at Top 5**: Evaluates rank quality using graded relevance weights ($3 = \text{Primary Gold}$, $2 = \text{Secondary}$, $1 = \text{Marginal}$). |
-| **Recall@5** | $\ge \mathbf{0.85}$ | ~0.50 | **Recall at Top 5**: Proportion of all gold relevant passages retrieved within the top 5 positions. Ensures full context capture. |
-| **Latency (p95)** | $\mathbf{< 500\text{ ms}}$ | ~15 ms | **95th Percentile Query Latency**: Enforces production-grade responsiveness for real-time athlete interaction. |
-| **Negative Query FP** | $\mathbf{0\text{ false positives}}$ | ~2 false positives | **Out-of-Domain Precision**: Ensures zero gold passage matches are hallucinated for non-endurance/unsupported queries (e.g., kayaking, swimming keto, tennis elbow). |
+| **MRR@5** | $\ge 0.85$ | Not yet measured | Rewards placing the first relevant Evidence Passage near the top. |
+| **NDCG@5** | $\ge 0.80$ | Not yet measured | Tests graded ranking quality using relevance labels 3, 2, and 1. |
+| **Recall@5** | $\ge 0.85$ | Not yet measured | Tests how many labelled gold passages appear in the first five results. |
+| **Latency p95** | $< 500\text{ ms}$ | Not yet measured | Bounds query latency under a recorded hardware and cache configuration. |
+| **Negative-query false positives** | $0$ | Not yet measured | Requires no result above the configured relevance threshold for unsupported queries. |
 
----
+Targets may be revised after the harness, passage labels, and lexical baseline have been independently checked. Any revision must update both this specification and the JSON version.
 
-## 3. Query Dataset Taxonomy & Gold Mapping
+## 3. Dataset inventory and gold mapping
 
-The 20 benchmark queries are categorized into 8 functional retrieval challenges:
+The source line ranges below correspond to the current default `StructureAwareChunker` policy (`target_words=350`, `min_words=80`, `max_words=600`) and the corpus state inspected on 2026-08-20. Corpus changes must cause benchmark-integrity validation to fail until the gold ranges are reviewed.
 
-### 3.1 Broad Planning (Queries Q01, Q02)
-- **Q01 (EN):** *"How to increase my FTP over a 12-week block?"*
-  - **Gold Evidence:** [`FTP_training.md#L21-L60`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Episodes/Empirical_cycling_podcast/training/threshold/FTP_training.md#L21-L60) (Score 3), [`FTP_decision_tree.md#L24-L53`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Episodes/Empirical_cycling_podcast/training/threshold/FTP_decision_tree.md#L24-L53) (Score 3), [`FTP_TTE_2.md#L1-L40`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Episodes/Empirical_cycling_podcast/training/threshold/FTP_TTE_2.md#L1-L40) (Score 2).
-- **Q02 (IT):** *"Come strutturare la periodizzazione dell'allenamento per aumentare la potenza di soglia?"*
-  - **Gold Evidence:** [`Periodizzazione dell'allenamento sportivo.md#L21-L32`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Books/Periodizzazione%20dell%27allenamento%20sportivo.md#L21-L32) (Score 3), [`FTP_training.md#L21-L60`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Episodes/Empirical_cycling_podcast/training/threshold/FTP_training.md#L21-L60) (Score 3), [`training-high-intensity-shock-microcycle.md#L198-L240`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Articles/knowledgeIsWatts/training/vo2/training-high-intensity-shock-microcycle.md#L198-L240) (Score 2).
+### 3.1 Broad planning — Q01
 
-### 3.2 Specific Physiology (Queries Q03, Q04)
-- **Q03 (EN):** *"What physiological changes occur in cardiac stroke volume and cardiac hypertrophy from endurance training?"*
-  - **Gold Evidence:** [`physiology-cyclists-key-muscle-heart.md#L21-L60`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Articles/knowledgeIsWatts/physiology/physiology-cyclists-key-muscle-heart.md#L21-L60) (Score 3), [`FTP_decision_tree.md#L24-L33`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Episodes/Empirical_cycling_podcast/training/threshold/FTP_decision_tree.md#L24-L33) (Score 2).
-- **Q04 (IT):** *"Qual è il ruolo dei tamponi come il bicarbonato di sodio nel gestire l'accumulo di ioni idrogeno ad alta intensità?"*
-  - **Gold Evidence:** [`nutrition-bicarbonate-boost-for-final-race-efforts.md#L24-L40`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Articles/knowledgeIsWatts/nutrition/nutrition-bicarbonate-boost-for-final-race-efforts.md#L24-L40) (Score 3), [`nutrition-bicarbonate-before-hit-boosts-adaptations.md#L162-L185`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Articles/knowledgeIsWatts/nutrition/nutrition-bicarbonate-before-hit-boosts-adaptations.md#L162-L185) (Score 3).
+**Query:** “How to increase my FTP over a 12-week block?”
 
-### 3.3 HIIT & Interval Design (Queries Q05, Q06)
-- **Q05 (EN):** *"Are 4x8 minute VO2max intervals more effective than 4x4 or 4x16 minute intervals?"*
-  - **Gold Evidence:** [`hiit-4x8-vs-4x4-vs-4x16.md#L71-L100`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Articles/knowledgeIsWatts/hiit/hiit-4x8-vs-4x4-vs-4x16.md#L71-L100) (Score 3), [`hiit-short-vs-long-intervals-trained-cyclists.md#L95-L120`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Articles/knowledgeIsWatts/hiit/hiit-short-vs-long-intervals-trained-cyclists.md#L95-L120) (Score 2).
-- **Q06 (IT):** *"Come programmare gli intervalli brevi ad alta intensità con sovraccarico progressivo?"*
-  - **Gold Evidence:** [`hiit-short-intervals-with-progressive-overload.md#L83-L120`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Articles/knowledgeIsWatts/hiit/hiit-short-intervals-with-progressive-overload.md#L83-L120) (Score 3).
+- [`FTP_training.md#L15-L29`](../../Knowledge_base/Episodes/Empirical_cycling_podcast/training/threshold/FTP_training.md#L15-L29), relevance 3.
+- [`FTP_decision_tree.md#L39-L46`](../../Knowledge_base/Episodes/Empirical_cycling_podcast/training/threshold/FTP_decision_tree.md#L39-L46), relevance 3.
+- [`FTP_TTE_2.md#L17-L43`](../../Knowledge_base/Episodes/Empirical_cycling_podcast/training/threshold/FTP_TTE_2.md#L17-L43), relevance 2.
 
-### 3.4 Zone 2 & Aerobic Base (Queries Q07, Q08)
-- **Q07 (EN):** *"Is Zone 2 training intrinsically superior to Zone 3 and Zone 4 for mitochondrial and aerobic adaptations?"*
-  - **Gold Evidence:** [`zone2-not-intrinsically-better-than-higher-zones.md#L116-L150`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Articles/knowledgeIsWatts/zone2/zone2-not-intrinsically-better-than-higher-zones.md#L116-L150) (Score 3), [`zone2-role-in-endurance-sports.md#L108-L135`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Articles/knowledgeIsWatts/zone2/zone2-role-in-endurance-sports.md#L108-L135) (Score 3), [`Base_training.md#L200-L240`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Episodes/Empirical_cycling_podcast/training/base/Base_training.md#L200-L240) (Score 2).
-- **Q08 (IT):** *"Come stimare l'intensità di FatMax senza un test di laboratorio con metabolimetro?"*
-  - **Gold Evidence:** [`zone2-training-at-fatmax-without-lab.md#L112-L145`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Articles/knowledgeIsWatts/zone2/zone2-training-at-fatmax-without-lab.md#L112-L145) (Score 3).
+### 3.2 Cardiac physiology — Q03
 
-### 3.5 Gym Strength Integration (Queries Q09, Q10)
-- **Q09 (EN):** *"Should endurance cyclists perform unilateral or bilateral gym strength exercises?"*
-  - **Gold Evidence:** [`strength-unilateral-vs-bilateral-for-cycling.md#L141-L175`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Articles/knowledgeIsWatts/strength/strength-unilateral-vs-bilateral-for-cycling.md#L141-L175) (Score 3), [`strength-endurance-cyclists-practical-guidelines.md#L137-L165`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Articles/knowledgeIsWatts/strength/strength-endurance-cyclists-practical-guidelines.md#L137-L165) (Score 3).
-- **Q10 (IT):** *"È consigliabile continuare l'allenamento della forza in palestra durante il periodo agonistico o di gara?"*
-  - **Gold Evidence:** [`strength-during-competition-period.md#L129-L155`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Articles/knowledgeIsWatts/strength/strength-during-competition-period.md#L129-L155) (Score 3).
+**Query:** “What physiological changes occur in cardiac stroke volume and cardiac hypertrophy from endurance training?”
 
-### 3.6 Cross-Lingual Retrieval (Queries Q11, Q12, Q13, Q14)
-- **Q11 (EN $\rightarrow$ IT):** *"What are Tudor Bompa's periodization phases for converting maximal strength into specific athletic endurance?"*
-  - **Gold Evidence:** [`Periodizzazione dell'allenamento sportivo.md#L21-L32`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Books/Periodizzazione%20dell%27allenamento%20sportivo.md#L21-L32) (Score 3).
-- **Q12 (EN $\rightarrow$ IT):** *"How does muscular adaptation progress through anatomical adaptation and hypertrophy according to Italian periodization literature?"*
-  - **Gold Evidence:** [`Periodizzazione dell'allenamento sportivo.md#L21-L32`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Books/Periodizzazione%20dell%27allenamento%20sportivo.md#L21-L32) (Score 3).
-- **Q13 (IT $\rightarrow$ EN):** *"Quali sono i vantaggi dell'allenamento a basso numero di pedalate ad alta coppia torsionale (heavy torque training)?"*
-  - **Gold Evidence:** [`strength-high-intensity-torque-training.md#L125-L160`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Articles/knowledgeIsWatts/strength/strength-high-intensity-torque-training.md#L125-L160) (Score 3).
-- **Q14 (IT $\rightarrow$ EN):** *"Perché la regola della potenza su un'ora per la FTP è fuorviante rispetto al Time to Exhaustion (TTE)?"*
-  - **Gold Evidence:** [`FTP_TTE.md#L224-L260`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Episodes/Empirical_cycling_podcast/training/threshold/FTP_TTE.md#L224-L260) (Score 3).
+- [`physiology-cyclists-key-muscle-heart.md#L16-L74`](../../Knowledge_base/Articles/knowledgeIsWatts/physiology/physiology-cyclists-key-muscle-heart.md#L16-L74), relevance 3.
+- [`FTP_decision_tree.md#L18-L37`](../../Knowledge_base/Episodes/Empirical_cycling_podcast/training/threshold/FTP_decision_tree.md#L18-L37), relevance 2.
 
-### 3.7 Scientific Source Conflicts & Debates (Queries Q15, Q16)
-- **Q15 (EN):** *"Is FTP defined as 95% of 20-minute power or as Maximal Lactate Steady State (MLSS) with variable TTE?"*
-  - **Gold Evidence:** [`FTP_test.md#L38-L70`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Episodes/Empirical_cycling_podcast/testing/FTP_test.md#L38-L70) (Score 3), [`FTP_training.md#L21-L45`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Episodes/Empirical_cycling_podcast/training/threshold/FTP_training.md#L21-L45) (Score 3).
-- **Q16 (EN):** *"Does splitting daily workload into Norwegian double threshold sessions yield superior aerobic adaptations compared to single long sessions when total work is equal?"*
-  - **Gold Evidence:** [`training-aerobic-adaptations-daily-workload-split.md#L244-L270`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Articles/knowledgeIsWatts/training/threshold/training-aerobic-adaptations-daily-workload-split.md#L244-L270) (Score 3), [`training-double-threshold-days-stress-and-recovery.md#L208-L235`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Articles/knowledgeIsWatts/training/threshold/training-double-threshold-days-stress-and-recovery.md#L208-L235) (Score 3).
+### 3.3 HIIT comparison — Q05
 
-### 3.8 Negative / Out-of-Domain (Queries Q17, Q18, Q19, Q20)
-- **Q17 (EN):** *"What is the optimal carb loading protocol for elite sprint kayaking performance?"* (Gold: None)
-- **Q18 (EN):** *"How to implement a ketogenic diet for competitive open water swimming?"* (Gold: None)
-- **Q19 (IT):** *"Quali sono le tecniche di ipertrofia muscolare per il bodybuilding naturale?"* (Gold: None)
-- **Q20 (IT):** *"Come prevenire l'infortunio al gomito del tennista nel tennis amatoriale?"* (Gold: None)
+**Query:** “Are 4x8 minute VO2max intervals more effective than 4x4 or 4x16 minute intervals?”
 
----
+- [`hiit-4x8-vs-4x4-vs-4x16.md#L59-L104`](../../Knowledge_base/Articles/knowledgeIsWatts/hiit/hiit-4x8-vs-4x4-vs-4x16.md#L59-L104), relevance 3.
+- [`hiit-short-vs-long-intervals-trained-cyclists.md#L73-L109`](../../Knowledge_base/Articles/knowledgeIsWatts/hiit/hiit-short-vs-long-intervals-trained-cyclists.md#L73-L109), relevance 2.
 
-## 4. Evaluation Architecture & Benchmark Harness
+### 3.4 Zone 2 and aerobic base — Q07
 
-To execute this benchmark programmatically, a evaluation script will load [`docs/prototypes/003-retrieval-benchmark.json`](file:///Users/icaroredepaolini/Personale/training/endurance_training/docs/prototypes/003-retrieval-benchmark.json) and query `main/cli.py search`.
+**Query:** “Is Zone 2 training intrinsically superior to Zone 3 and Zone 4 for mitochondrial and aerobic adaptations?”
 
-### Mathematical Metric Definitions
+- [`zone2-not-intrinsically-better-than-higher-zones.md#L100-L159`](../../Knowledge_base/Articles/knowledgeIsWatts/zone2/zone2-not-intrinsically-better-than-higher-zones.md#L100-L159), relevance 3.
+- [`zone2-role-in-endurance-sports.md#L94-L130`](../../Knowledge_base/Articles/knowledgeIsWatts/zone2/zone2-role-in-endurance-sports.md#L94-L130), relevance 3.
+- [`Base_training.md#L19-L33`](../../Knowledge_base/Episodes/Empirical_cycling_podcast/training/base/Base_training.md#L19-L33), relevance 2.
 
-1. **Mean Reciprocal Rank (MRR@5)**:
-   $$\text{MRR} = \frac{1}{|Q|} \sum_{i=1}^{|Q|} \frac{1}{\text{rank}_i}$$
-   where $\text{rank}_i$ is the position of the first relevant gold passage returned (set to $\infty$ if not in top 5).
+### 3.5 Strength integration — Q09
 
-2. **Normalized Discounted Cumulative Gain (NDCG@5)**:
-   $$\text{DCG}_k = \sum_{i=1}^{k} \frac{2^{\text{rel}_i} - 1}{\log_2(i + 1)}, \quad \text{NDCG}_k = \frac{\text{DCG}_k}{\text{IDCG}_k}$$
-   where $\text{rel}_i$ is the gold relevance score ($0, 1, 2, 3$).
+**Query:** “Should endurance cyclists perform unilateral or bilateral gym strength exercises?”
 
-3. **Recall@5**:
-   $$\text{Recall@5} = \frac{|\text{Retrieved Gold Passages in Top 5}|}{|\text{Total Gold Passages for Query}|}$$
+- [`strength-unilateral-vs-bilateral-for-cycling.md#L64-L103`](../../Knowledge_base/Articles/knowledgeIsWatts/strength/strength-unilateral-vs-bilateral-for-cycling.md#L64-L103), relevance 3.
+- [`strength-endurance-cyclists-practical-guidelines.md#L17-L57`](../../Knowledge_base/Articles/knowledgeIsWatts/strength/strength-endurance-cyclists-practical-guidelines.md#L17-L57), relevance 3.
 
----
+### 3.6 Source conflicts and competing context — Q15 and Q16
 
-## 5. Decision & Next Steps
+**Q15:** “Is FTP defined as 95% of 20-minute power or as Maximal Lactate Steady State (MLSS) with variable TTE?”
 
-1. Benchmark specification and JSON target dataset locked under [`docs/prototypes/`](file:///Users/icaroredepaolini/Personale/training/endurance_training/docs/prototypes/).
-2. Issue #3 assigned to `icaro-rdp` and marked closed with this specification reference.
-3. Subsequent work (e.g. dense vector embeddings, hybrid fusion, cross-encoder reranking) will use this benchmark to validate retrieval quality improvements against the baseline.
+- [`FTP_test.md#L15-L27`](../../Knowledge_base/Episodes/Empirical_cycling_podcast/metrics/FTP_test.md#L15-L27), relevance 3.
+- [`FTP_training.md#L15-L29`](../../Knowledge_base/Episodes/Empirical_cycling_podcast/training/threshold/FTP_training.md#L15-L29), relevance 3.
+- [`metrics-does-ftp-represent-second-threshold.md#L16-L55`](../../Knowledge_base/Articles/knowledgeIsWatts/metrics/metrics-does-ftp-represent-second-threshold.md#L16-L55), relevance 2.
+
+**Q16:** “Does splitting daily workload into Norwegian double threshold sessions yield superior aerobic adaptations compared to single long sessions when total work is equal?”
+
+- [`training-aerobic-adaptations-daily-workload-split.md#L60-L100`](../../Knowledge_base/Articles/knowledgeIsWatts/training/threshold/training-aerobic-adaptations-daily-workload-split.md#L60-L100), relevance 3.
+- [`training-double-threshold-days-stress-and-recovery.md#L110-L138`](../../Knowledge_base/Articles/knowledgeIsWatts/training/threshold/training-double-threshold-days-stress-and-recovery.md#L110-L138), relevance 3.
+- [`Norwegian Singles Method Subthreshold.md#L200-L213`](<../../Knowledge_base/Books/Norwegian Singles Method Subthreshold.md#L200-L213>), relevance 2.
+
+### 3.7 Unsupported-domain rejection — Q17 and Q18
+
+- **Q17:** “What is the optimal carb loading protocol for elite sprint kayaking performance?” Gold: none.
+- **Q18:** “How to implement a ketogenic diet for competitive open water swimming?” Gold: none.
+
+## 4. Integrity checks before scoring
+
+A benchmark run is invalid unless all of these checks pass:
+
+1. Every query has `language: "en"`, a unique ID, a known category, and a valid relevance score.
+2. Every gold `rel_path` resolves to a curated Markdown Knowledge Source inside `Knowledge_base/`.
+3. Every `start_line` and `end_line` matches a passage produced by the recorded chunking policy.
+4. Every `target_snippet`, after normalizing Markdown emphasis and whitespace, occurs within its declared source range.
+5. Counts derived from the JSON match its `dataset_summary`.
+6. The benchmark run records the repository commit, corpus digest, index digest, chunking policy, retrieval configuration, hardware, Python version, and cache state.
+
+## 5. Scoring protocol
+
+Run the lexical passage retriever first and publish that output as the baseline. Later sparse, dense, hybrid, or reranked configurations must use the same corpus state, passage set, filters, and top-five cutoff.
+
+For each positive query:
+
+1. Retrieve the top five Evidence Passages.
+2. Match results by canonical source identity and gold passage identity or an explicitly documented overlap rule.
+3. Compute MRR@5, NDCG@5, and Recall@5.
+4. Record per-query rankings so aggregate scores remain auditable.
+
+For each negative query, apply the system's configured relevance threshold and count returned passages as false positives. Report negative behavior separately; do not fold queries with no gold passages into positive-query MRR or Recall.
+
+### Metric definitions
+
+1. **MRR@5**
+
+   $$\operatorname{MRR@5} = \frac{1}{|Q|}\sum_{q \in Q}\frac{1}{\operatorname{rank}_q}$$
+
+   The reciprocal rank is zero when no relevant passage appears in the first five results.
+
+2. **NDCG@5**
+
+   $$\operatorname{DCG@5} = \sum_{i=1}^{5}\frac{2^{\operatorname{rel}_i}-1}{\log_2(i+1)}, \qquad \operatorname{NDCG@5} = \frac{\operatorname{DCG@5}}{\operatorname{IDCG@5}}$$
+
+3. **Recall@5**
+
+   $$\operatorname{Recall@5} = \frac{|\text{gold passages retrieved in the first five}|}{|\text{gold passages for the query}|}$$
+
+4. **Latency p95**
+
+   Measure end-to-end retrieval latency over repeated runs and report warm-cache and cold-cache results separately. Do not include one-time index construction in query latency.
+
+## 6. Reporting rule
+
+Every result must identify the exact configuration that produced it and link to raw per-query output. Use language such as “measured MRR@5 was 0.71 on commit …” rather than “the selected model exceeds the target.” No semantic, hybrid, or reranking claim is accepted without a reproducible measurement against this version of the benchmark.

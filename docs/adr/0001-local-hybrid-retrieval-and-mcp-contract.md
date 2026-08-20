@@ -1,7 +1,8 @@
-# 1. Local Hybrid Retrieval Architecture & MCP Evidence Contract
+# 1. Local English Passage Retrieval Foundation & MCP Direction
 
-- **Status**: Accepted
+- **Status**: Accepted, amended for the first implementation increment
 - **Date**: 2026-08-10
+- **Amended**: 2026-08-20
 - **Deciders**: `icaro-rdp` & Antigravity Agent
 - **Consulted Sub-issues**: GitHub Issues #2, #3, #4, #5, #6, #7, #8
 
@@ -9,69 +10,78 @@
 
 ## Context & Problem Statement
 
-The Endurance Training Knowledge Base requires a fast, private, offline-capable, local-first search engine capable of serving cross-lingual English (EN) and Italian (IT) endurance training literature to connected LLM agents via Model Context Protocol (MCP).
+The Endurance Training Knowledge Base needs a private, offline-capable, local-first search foundation that turns curated English Markdown into citation-stable Evidence Passages for CLI and connected-LLM use.
 
-The previous baseline relied solely on SQLite FTS5 lexical BM25 search without dense vector embeddings, citation line ranges, or multi-topic diversification. Large EPUB-converted books (491k words across 23k lines) lacked markdown headings, leading to severe citation drift and single-chunk retrieval dilution.
+The previous index split documents only at Markdown headings, rebuilt itself during queries, and used modification times as a freshness proxy. Flat converted books therefore became extremely large passages, citations drifted after frontmatter, and deletions or renamed sources could escape stale-index detection.
 
-We needed to decide on:
-1. The local hybrid retrieval architecture, vector storage, and cross-lingual score fusion algorithm.
-2. The exact MCP evidence-retrieval contract, tool schemas, and error semantics.
+The first implementation increment must establish trustworthy passage ingestion and synchronization before semantic retrieval or a final MCP surface is attempted.
 
 ---
 
 ## Decision Drivers
 
-- **Zero Network / Privacy Guarantee**: All model weights, vectors, and indexes must run 100% locally on Apple Silicon (M1 Pro 16GB) without external API dependencies.
-- **Cross-Lingual Accuracy**: Italian athlete queries must retrieve relevant English research papers and vice versa with high precision.
-- **Citation Provenance**: Every retrieved passage must carry exact starting and ending line numbers (`file://...#L45-L89`) and section hierarchy breadcrumbs.
-- **Low Operational Complexity**: Single-file transactional database storage without running background vector DB daemons.
-- **Strict Stale-Index Safety**: Queries must fail fast if the underlying Markdown corpus has changed without explicit re-indexing.
+- **English-Only Contract**: Active indexing and retrieval accept English Knowledge Sources and English Athlete Queries only.
+- **Citation Provenance**: Every Evidence Passage carries its Knowledge Source identity, section hierarchy, and exact starting and ending source lines (`#L45-L89`).
+- **Offline Operation**: Index construction and retrieval require no network access or model-weight download.
+- **Low Operational Complexity**: One transactional SQLite file, with no background service or external vector database.
+- **Strict Stale-Index Safety**: Retrieval fails clearly when Knowledge Source paths or contents differ from the explicitly synchronized corpus.
+- **Evidence Before Complexity**: Dense retrieval, reranking, and diversification are adopted only after an executable English benchmark shows value over the lexical baseline.
 
 ---
 
 ## Decision Outcome
 
-We selected the following unified architecture and MCP contract:
+### 1. English Structure-Aware Evidence Passages
 
-### 1. Hybrid Retrieval Pipeline & Reranking Strategy
-- **Lexical Retriever**: SQLite FTS5 BM25 search over passage text and document titles.
-- **Dense Vector Embedding Model**: `intfloat/multilingual-e5-base` (278M parameters, 768 dimensions, MIT license, ~300 MB INT8 / 550 MB FP16 memory footprint, ~14–22 ms query latency).
-- **Score Fusion**: Reciprocal Rank Fusion (RRF with $k=60$) combining top-20 lexical and top-20 dense candidates:
-  $$RRF(d) = \frac{1}{60 + r_{\text{bm25}}(d)} + \frac{1}{60 + r_{\text{dense}}(d)}$$
-- **Cross-Encoder Reranking**: `BAAI/bge-reranker-base` (XLM-RoBERTa cross-encoder, MIT license) reranks RRF top candidates to produce top-5 high-precision Evidence Passages.
-- **Runtime Acceleration**: PyTorch with Metal Performance Shaders (`mps`) on macOS Apple Silicon, falling back to `cpu` on Linux/WSL.
+- `StructureAwareChunker` parses frontmatter, standard Markdown headings, supported English weak-heading markers, paragraphs, tables, blockquotes, and code fences.
+- The default sizing policy targets 350 words, normally keeps passages between 80 and 600 words, and records explicit size status for an undersized section or an indivisible oversized block.
+- Each passage includes a source slug and relative path, title, author, `language: en`, source type, category, topics, section hierarchy, exact line range, content, citation link, and a stable content-derived chunk ID.
+- A Knowledge Source declaring a non-English language fails synchronization with `unsupported_language`.
 
-### 2. Single-File Database Storage (`sqlite-vec`)
-- Unified storage in [`main/.kb_index.sqlite`](file:///Users/icaroredepaolini/Personale/training/endurance_training/main/.kb_index.sqlite) using the native [`sqlite-vec`](https://github.com/asgregory/sqlite-vec) extension.
-- Tables: `sources` (frontmatter metadata), `chunks` (passage content, section path, line ranges), `chunks_fts` (FTS5 BM25 index), `chunks_vec` (768-dim float vector embeddings), `meta` (SHA-256 corpus state hash).
+### 2. SQLite FTS5 Baseline
 
-### 3. Stale-Index Detection & Corpus Synchronization
-- **Corpus SHA-256 Verification**: `build-index` computes a deterministic SHA-256 hash of all Markdown sources in `Knowledge_base/`.
-- **Fail-Fast Error**: `search_evidence` verifies the corpus hash on every query. If source files have been added, modified, or removed, the query fails fast with error `stale_index`, instructing the user to run `python3 main/cli.py build-index`.
+- The active retriever is SQLite FTS5 BM25 over passage content, Knowledge Source titles, and indexed metadata.
+- Search returns structured Evidence Passages plus a lexical score and supports exact category, topic, and source-slug filters.
+- Queries never rebuild the index implicitly. Missing, stale, and invalid indexes produce distinct domain errors with instructions to run `endurance-kb build-index`.
+- This baseline is lexical passage retrieval, not hybrid or semantic retrieval.
 
-### 4. MCP Evidence-Retrieval Contract
-The MCP server ([`main/mcp_server.py`](file:///Users/icaroredepaolini/Personale/training/endurance_training/main/mcp_server.py)) exposes 4 specialized tools using `FastMCP`:
+### 3. Single Local Derived Index
 
-1. `search_evidence`: Main hybrid search tool.
-   - **Inputs**: `query` (str), `retrieval_mode` ("diversified" | "focused", default "diversified"), `category` (optional enum), `topic` (optional str), `source_slug` (optional str), `limit` (int, default 5, max 20).
-   - **Diversified Mode**: Applies Maximal Marginal Relevance (MMR) source and topic penalties to ensure broad coverage across distinct authors and concepts.
-   - **Focused Mode**: Returns pure cross-encoder relevance scores.
-   - **Output**: JSON payload with `query`, `retrieval_mode`, and array of `passages` containing clickable line links (`file://...#L45-L89`), section hierarchy, and `relevance_score`.
-2. `get_passage`: Lookup single passage by `chunk_id`.
-3. `get_document`: Retrieve full document content by `source_slug` with strict `Path.is_relative_to(Knowledge_base)` containment checks.
-4. `get_kb_status`: Inspect corpus index state, SHA-256 freshness, total documents, and total passages.
+- The canonical Derived Index is `main/.kb_index.sqlite`, which is Git-ignored and reproducible.
+- Its schema contains `sources`, `passages`, `passages_fts`, and `meta` tables.
+- Synchronization builds a temporary database, validates the full operation, and atomically replaces the previous index only after success.
+
+### 4. Content-Fingerprint Synchronization
+
+- Corpus Synchronization computes a deterministic SHA-256 fingerprint from sorted Knowledge Source relative paths and their content hashes, plus `TAXONOMY.md`.
+- The fingerprint detects additions, content edits, renames, deletions, and taxonomy changes without relying on filesystem modification times.
+- `status` compares the current and indexed fingerprints. Search and passage lookup fail fast with `stale_index` when they differ.
+
+### 5. MCP Direction
+
+The responsibility boundary remains: the Knowledge Base retrieves citation-quality Evidence Passages, while a connected LLM performs Grounded Synthesis. Modernizing `main/mcp_server.py` to the final evidence-oriented tool contract, official SDK transport, structured domain errors, and strict document-path containment is deferred beyond this increment. The existing legacy adapter must not be described as that final contract.
+
+### 6. Benchmark-Gated Semantic Retrieval
+
+Dense embeddings, vector storage, fusion, reranking, and diversified ranking remain undecided implementation work. Before selecting any model or backend, the repository must provide an executable English benchmark with valid passage-level gold targets, baseline metrics, latency reporting, and negative-query evaluation. A later ADR amendment will record any adopted stack.
 
 ---
 
 ## Positive Consequences
 
-- **High Precision Retrieval**: Exceeds benchmark targets ($\text{MRR@5} \ge 0.85$, $\text{NDCG@5} \ge 0.80$, $\text{Recall@5} \ge 0.85$, $p95 \text{ Latency} < 500\text{ms}$).
-- **Clean Tool Integration**: Single `.kb_index.sqlite` file requires zero external database services or daemons.
-- **Traceable Citations**: Line range links (`#L45-L89`) allow LLMs to cite exact locations without hallucination or drift.
+- Indexing and retrieval work offline without model downloads or external services.
+- Exact line ranges and stable passage identities make evidence inspectable and citeable.
+- Content-based freshness catches corpus changes that modification-time checks miss.
+- Transactional replacement preserves the last complete index when synchronization fails.
+- The lexical baseline provides a reproducible comparison point for later retrieval experiments.
 
 ---
 
 ## Negative Consequences & Mitigation
 
-- **One-Time Model Download**: Requires ~800 MB initial download for HuggingFace model weights (`multilingual-e5-base` and `bge-reranker-base`).
-  - *Mitigation*: Handled during setup via `python3 main/cli.py build-index`. Model weights are cached locally in `~/.cache/huggingface/`.
+- **Lexical Recall Limits**: FTS5 may miss synonyms or conceptually related passages that do not share query terms.
+  - *Mitigation*: Measure this limitation with the executable English benchmark before adding semantic complexity.
+- **English-Only Scope**: Non-English sources and queries are outside the active product contract.
+  - *Mitigation*: Reconsider language scope only through a separate benchmark and decision.
+- **Deferred MCP Hardening**: The legacy MCP adapter does not yet implement the final evidence contract.
+  - *Mitigation*: Treat MCP modernization as a separate increment after the core retrieval API stabilizes.

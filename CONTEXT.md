@@ -1,35 +1,39 @@
 # Endurance Training Domain Context & Architecture Glossary
 
-This document records the ubiquitous language, core domain concepts, and architectural vocabulary for this repository.
+This document records the ubiquitous language, core domain concepts, and active architectural vocabulary for this repository.
 
 ---
 
 ## Domain Concepts
 
-- **Knowledge Base (KB)**: The curated collection of Markdown research articles, podcast episode notes, and reference books stored under `Knowledge_base/`.
+- **Knowledge Base (KB)**: The curated collection of English Markdown research articles, podcast episode notes, and reference books stored under `Knowledge_base/`.
 - **Frontmatter**: Standardized YAML header metadata (`title`, `category`, `topics`, `summary`, `source`, `date`) embedded at the top of every KB document.
 - **Taxonomy**: Canonical list of Categories (`metrics`, `hiit`, `zone2`, `strength`, `nutrition`, `physiology`, `periodization`, `book`) and Topics defined in `Knowledge_base/TAXONOMY.md`.
-- **Sitemap / Index**: Master document catalog located at `Knowledge_base/INDEX.md` generated dynamically from document frontmatters.
-- **Athlete Query**: A natural-language question about endurance-training concepts, decisions, or planning needs.
-- **Semantic Retrieval**: Finding and ranking Evidence Passages by the meaning and training concepts expressed in an Athlete Query, including relevant passages that do not repeat its exact wording or use the same language. English and Italian queries and sources are part of the same retrieval space.
-- **Diversified Retrieval**: Semantic Retrieval that balances relevance with coverage across distinct training concepts and Knowledge Sources for broad Athlete Queries.
-- **Focused Retrieval**: Semantic Retrieval that prioritizes the strongest-matching passages within an optionally constrained source or topic for deep investigation.
-- **Evidence Passage**: A bounded excerpt from a Knowledge Source with its document identity, author, language, source type, section hierarchy, stable location, and enough surrounding context to cite and inspect it accurately. Competing passages remain independently attributable when sources disagree.
+- **Sitemap / Index**: Master document catalog located at `Knowledge_base/INDEX.md` and generated from document frontmatter.
+- **Athlete Query**: An English natural-language question about endurance-training concepts, decisions, or planning needs.
+- **Passage Retrieval**: Finding and ranking Evidence Passages with SQLite FTS5 BM25 lexical search. The active baseline can match English terms present in passage text, titles, and indexed metadata; semantic retrieval is not yet part of the product.
+- **Focused Retrieval**: Passage Retrieval constrained by an optional category, topic, or Knowledge Source slug.
+- **Evidence Passage**: A bounded excerpt from one Knowledge Source with document identity, author, English language metadata, source type, section hierarchy, stable location, and enough surrounding context to cite and inspect it accurately. Competing passages remain independently attributable when sources disagree.
 - **Grounded Synthesis**: An explanation, comparison, or plan produced by a connected LLM from retrieved Evidence Passages, with source claims traceable to citations and inference kept distinguishable from source evidence.
-- **Knowledge Source**: A curated article, podcast note, or book included in the Knowledge Base.
-- **Corpus Synchronization**: The explicit operation that rebuilds all Derived Indexes from the current Knowledge Sources, including additions, edits, renames, and deletions.
-- **Derived Index**: A reproducible local search artifact generated from Knowledge Sources. It is not a Knowledge Source and is invalid once the corpus changes.
+- **Knowledge Source**: A curated English article, podcast note, or book included in the Knowledge Base.
+- **Corpus Synchronization**: The explicit `build-index` operation that transactionally rebuilds the Derived Index from current Knowledge Sources. It covers additions, content edits, renames, and deletions; retrieval never synchronizes implicitly.
+- **Corpus Fingerprint**: A deterministic SHA-256 digest over sorted Knowledge Source relative paths and content hashes, plus `TAXONOMY.md`. It is the freshness identity stored in the Derived Index.
+- **Derived Index**: The reproducible local SQLite search artifact at `main/.kb_index.sqlite`. It is not a Knowledge Source, is Git-ignored, and is invalid once its Corpus Fingerprint differs from the current corpus.
 
 ---
 
 ## Architectural Seams & Modules
 
-- **`KBEngine` (Deep Module)**: Core Python module located at `main/utils/kb_engine/` exposing `KBEngine` facade (`search()`, `build_index()`, `validate()`, `standardize()`). Encapsulates:
-  - `retrieval.py`: Local hybrid retrieval engine executing SQLite FTS5 BM25 + `intfloat/multilingual-e5-base` 768-dim dense vectors with `sqlite-vec`, fused via Reciprocal Rank Fusion (RRF $k=60$) and reranked using `BAAI/bge-reranker-base` cross-encoder.
-  - `chunker.py`: Structure-aware, citation-stable passage chunker (`StructureAwareChunker`) generating bounded excerpts with exact line ranges (`#L45-L89`), section hierarchy breadcrumbs, and deterministic chunk hashes.
-  - `frontmatter.py`: Frontmatter parsing, standardization, YAML schema rules, and `key_takeaways` validation.
+- **`KBEngine` (Deep Module)**: Core Python facade in `main/utils/kb_engine/`, exposing `search()`, `build_index()`, `get_passage()`, `get_kb_status()`, `validate()`, and `standardize()`.
+  - `chunker.py`: `StructureAwareChunker`, which creates English, citation-stable Evidence Passages with bounded word-count policy, section breadcrumbs, exact source line ranges, stable content-derived IDs, and explicit size exceptions for indivisible blocks.
+  - `fts.py`: `PassageIndex`, which owns the transactional SQLite schema (`meta`, `sources`, `passages`, `passages_fts`), performs BM25 lexical retrieval, and fails fast for missing, stale, or invalid indexes.
+  - `sync.py`: Deterministic content-based Corpus Fingerprint construction.
+  - `models.py` and `errors.py`: Evidence Passage, search-result, index-status, and domain-error contracts.
+  - `frontmatter.py`: Frontmatter parsing and standardization.
   - `validator.py`: Link verification, taxonomy checks, and sitemap integrity.
-  - `sync.py`: Corpus SHA-256 state tracking and fail-fast `stale_index` verification.
-- **MCP Adapter (`main/mcp_server.py`)**: `FastMCP` server exposing 4 specialized stdio tools (`search_evidence`, `get_passage`, `get_document`, `get_kb_status`) with path containment isolation and structured `isError: true` domain error handling.
-- **CLI Adapters**: Thin command-line wrappers (`cli.py`, `build_index.py`, `validate_kb.py`) that delegate execution directly to `KBEngine`.
+- **MCP Adapter (`main/mcp_server.py`)**: Existing stdio adapter for legacy Knowledge Base tools. Migration to the final evidence-oriented MCP contract is deferred and must not be treated as part of the active retrieval foundation.
+- **CLI Adapter (`main/cli.py`)**: Thin command-line interface for explicit index synchronization, freshness status, English lexical search, validation, and frontmatter maintenance.
 
+## Deferred Retrieval Work
+
+Dense embeddings, vector search, score fusion, reranking, and result diversification are intentionally deferred. They require an executable English retrieval benchmark that demonstrates a measurable improvement over the FTS5 baseline. The active index build and query paths do not download model weights or require network access.

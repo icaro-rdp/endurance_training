@@ -1,6 +1,8 @@
 # Endurance Training Repository & LLM Knowledge Base
 
-This repository contains endurance training research, articles, podcast episode notes, training plan materials, and an **LLM-Powered Knowledge Base** built according to [Slite's 2026 LLM Knowledge Base Guide](https://slite.com/learn/llm-knowledge-base) and Karpathy's **Markdown Wiki** architecture.
+This repository contains endurance training research, articles, podcast episode notes, training plan materials, and a private local Knowledge Base for connected LLMs. The active retrieval contract is English-only: structure-aware Evidence Passages are indexed with SQLite FTS5 BM25 and guarded by an explicit content fingerprint.
+
+Index construction and search require no network access or model download. Dense embeddings, reranking, and diversified semantic retrieval are deferred until an executable English benchmark demonstrates an improvement over this lexical baseline.
 
 ---
 
@@ -23,39 +25,44 @@ This repository contains endurance training research, articles, podcast episode 
 
 The repository includes a deep facade CLI for searching, indexing, validating, and maintaining the Knowledge Base.
 
-### 1. Full-Text Hybrid Search (`search`)
+### 1. Passage Full-Text Search (`search`)
 
 Query the Knowledge Base using SQLite FTS5 with BM25 ranking and exact line-citation links:
 
 ```bash
 # Basic natural language search (LLM-ready excerpt output)
-python3 main/cli.py search "VO2max cardiac hypertrophy preload"
+uv run endurance-kb search "VO2max cardiac hypertrophy preload"
 
 # Filter by category and topic
-python3 main/cli.py search "carbohydrate ratio" --category nutrition --topic Carbohydrate_ratio
+uv run endurance-kb search "carbohydrate ratio" --category nutrition --topic Carbohydrate_ratio
+
+# Filter to one Knowledge Source slug
+uv run endurance-kb search "threshold progression" --source Episodes/Empirical_cycling_podcast/training/threshold/FTP_training
 
 # Limit results and format as plain text or JSON
-python3 main/cli.py search "FTP test protocol" --top 3 --format plain
-python3 main/cli.py search "over-unders" --format json
+uv run endurance-kb search "FTP test protocol" --top 3 --format plain
+uv run endurance-kb search "over-unders" --format json
 
-# Force index rebuild before search
-python3 main/cli.py search "lactate clearance" --reindex
+# Inspect whether the explicitly synchronized index is fresh
+uv run endurance-kb status
 ```
 
 ### 2. Build Index & Sitemap (`build-index`)
 
-Rebuilds the SQLite FTS5 search index (`.kb_index.sqlite`) and updates the master sitemap in [`Knowledge_base/INDEX.md`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/INDEX.md):
+Explicitly rebuilds the structure-aware SQLite FTS5 passage index (`main/.kb_index.sqlite`), stores a deterministic fingerprint of Knowledge Source paths and contents, and updates the master sitemap in [`Knowledge_base/INDEX.md`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/INDEX.md):
 
 ```bash
-python3 main/cli.py build-index
+uv run endurance-kb build-index
 ```
+
+Retrieval never rebuilds implicitly. A missing, stale, or invalid Derived Index fails with a clear instruction to run `build-index`.
 
 ### 3. Health & Diagnostic Validator (`validate`)
 
 Runs automated health checks across all documents in `Knowledge_base/` to verify YAML frontmatter schema, category compliance against `TAXONOMY.md`, broken markdown links, and sitemap coverage:
 
 ```bash
-python3 main/cli.py validate
+uv run endurance-kb validate
 ```
 
 ### 4. Frontmatter Standardization (`standardize`)
@@ -64,23 +71,23 @@ Scans all `.md` files and ensures canonical YAML frontmatter (`title`, `category
 
 ```bash
 # Preview / standardize missing frontmatter
-python3 main/cli.py standardize
+uv run endurance-kb standardize
 
 # Force re-infer and standardize all files
-python3 main/cli.py standardize --force
+uv run endurance-kb standardize --force
 ```
 
 ---
 
 ## 🔌 Model Context Protocol (MCP) Server & Practical Guide
 
-The repository includes a stdio MCP Server (`main/mcp_server.py`) compliant with the Model Context Protocol (2024-11-05). It allows external AI tools like **Claude Desktop**, **Cursor**, **Antigravity CLI / AGY**, and **ChatGPT** to search and query your Knowledge Base natively.
+The repository includes a legacy stdio MCP adapter (`main/mcp_server.py`) for local clients. It delegates to the English FTS5 baseline and requires an explicitly synchronized index. Migration to the official SDK, the final evidence-oriented tool contract, structured tool errors, and strict document containment are deferred; the current adapter should not be treated as the final MCP acceptance surface.
 
 ### Registered Tools
 
 | Tool Name               | Parameters                                                    | Description                                                                                           |
 | :---------------------- | :------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------- |
-| `search_knowledge_base` | `query`, `category` _(opt)_, `topic` _(opt)_, `top_k` _(opt)_ | Hybrid BM25 full-text search returning ranked excerpts with exact line citations (`file://...#L...`). |
+| `search_knowledge_base` | `query`, `category` _(opt)_, `topic` _(opt)_, `top_k` _(opt)_ | SQLite FTS5 BM25 passage search returning ranked excerpts with exact line citations (`file://...#L...`). |
 | `get_kb_index`          | _None_                                                        | Retrieves the Master Sitemap (`INDEX.md`) and domain taxonomy.                                        |
 | `get_document`          | `rel_path`                                                    | Retrieves the full contents of a specific document in `Knowledge_base/`.                              |
 | `validate_kb`           | _None_                                                        | Runs diagnostic audit on frontmatters, links, and indexing health.                                    |
@@ -210,5 +217,3 @@ python3 main/mcp_server.py --test
 
 - `laTeX/training_plan.tex` — Main LaTeX source for the endurance training plan.
 - `laTeX/training_plan.pdf` — Generated PDF version of the training plan.
-
-

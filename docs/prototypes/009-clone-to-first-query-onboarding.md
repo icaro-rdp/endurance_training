@@ -1,30 +1,36 @@
 # Prototype Specification: Clone-to-First-Query Onboarding & Acceptance Checklist
 
-**Document ID**: `docs/prototypes/009-clone-to-first-query-onboarding.md`  
-**Author**: `icaro-rdp`  
-**Date**: 2026-08-10  
-**Status**: Complete / Prototype Specification  
-**Target Issue**: [Issue #9](https://github.com/icaro-rdp/endurance_training/issues/9)  
+**Document ID**: `docs/prototypes/009-clone-to-first-query-onboarding.md`
+**Author**: `icaro-rdp`
+**Date**: 2026-08-10
+**Amended**: 2026-08-20
+**Status**: Active baseline specification
+**Target Issue**: [Issue #9](https://github.com/icaro-rdp/endurance_training/issues/9)
 
 ---
 
 ## 1. Executive Summary
 
-This prototype specification establishes the end-to-end onboarding experience for the **Endurance Training Knowledge Base**. It ensures a new developer or athlete can clone the repository on macOS (Apple Silicon / Intel), Linux, or Windows (via WSL2), install dependencies reproducibly, download local model weights once, build derived vector indexes, verify the search CLI, and configure an MCP client (Codex, Claude Desktop, Cursor) with zero undocumented local knowledge.
+This specification describes the active clone-to-first-query path for the English-only Endurance Training Knowledge Base. The current product builds a citation-stable SQLite FTS5 passage index, verifies it with a deterministic content fingerprint, and serves English lexical search without network access or model downloads.
+
+Dense retrieval, reranking, and the final evidence-oriented MCP contract are not part of this onboarding flow. They remain deferred until an executable English benchmark supports them.
 
 ---
 
 ## 2. Prerequisites & Platform Support
 
 ### Supported Platforms
-- **macOS**: Apple Silicon (M1/M2/M3) with MPS acceleration (recommended) or Intel x86_64.
-- **Linux**: Ubuntu 22.04 LTS / Debian 12 / Fedora 39+ (CPU or CUDA).
-- **Windows**: Windows 11 with WSL2 (Ubuntu 22.04 LTS recommended). *Native Windows is out of scope for initial release.*
+
+- **macOS**: Apple Silicon or Intel x86_64.
+- **Linux**: A current distribution with Python and SQLite FTS5 support.
+- **Windows**: Windows 11 through WSL2. Native Windows remains out of scope for the first release.
 
 ### Environment Prerequisites
-- Python $\ge$ 3.10 (3.12 recommended)
-- `uv` package manager (`curl -LsSf https://astral.sh/uv/install.sh | sh`)
-- Git $\ge$ 2.30
+
+- Python 3.10 or newer.
+- SQLite with FTS5 enabled (included in supported Python builds).
+- `uv` for installation from the checked-in lockfile.
+- Git 2.30 or newer.
 
 ---
 
@@ -32,57 +38,62 @@ This prototype specification establishes the end-to-end onboarding experience fo
 
 ```mermaid
 flowchart TD
-    A[1. Clone Repo] --> B[2. Install Dependencies via uv]
-    B --> C[3. Build Derived Index & Download Models]
-    C --> D[4. Verify Local CLI Search]
-    D --> E[5. Configure Codex MCP Server]
+    A["1. Clone repository"] --> B["2. Install the locked environment"]
+    B --> C["3. Synchronize local FTS5 index"]
+    C --> D["4. Verify status and English search"]
+    D --> E["5. Optionally configure the legacy MCP adapter"]
 ```
 
 ### Step 1: Clone Repository
+
 ```bash
 git clone https://github.com/icaro-rdp/endurance_training.git
 cd endurance_training
 ```
 
-### Step 2: Install Reproducible Dependencies
-Using `uv` to create a virtual environment and lock exact dependencies:
+### Step 2: Install the Locked Environment
+
+Create the project environment from `pyproject.toml` and `uv.lock`, then verify Python, PyYAML, and SQLite FTS5:
+
 ```bash
-uv venv
-source .venv/bin/activate
-uv pip install -e .
+uv sync --locked
+uv run python --version
+uv run python -c "import sqlite3, yaml; assert sqlite3.sqlite_version_info"
 ```
 
-### Step 3: Corpus Synchronization & Model Weights Download
-Run explicit Corpus Synchronization to download `intfloat/multilingual-e5-base` and `BAAI/bge-reranker-base` local weights and generate the unified SQLite database (`main/.kb_index.sqlite`):
-```bash
-python3 main/cli.py build-index
-```
-> **Output**: Validates frontmatter, parses Markdown structure, generates 768-dim embeddings via PyTorch MPS/CPU, populates `main/.kb_index.sqlite`, and writes SHA-256 corpus hash.
+No embedding, vector-store, or reranker package is installed by the active retrieval baseline. Dependency installation may contact the configured package registry; index construction and retrieval themselves do not use the network.
 
-### Step 4: Verify Search CLI
-Test local hybrid search directly from the terminal in English or Italian:
-```bash
-# English Query (Diversified)
-python3 main/cli.py search "How to structure 4x8min VO2max intervals?"
+### Step 3: Explicit Corpus Synchronization
 
-# Italian Query (Cross-Lingual)
-python3 main/cli.py search "Come programmare il blocco di Allenamento a Soglia?"
+Build the structure-aware passage index and sitemap:
+
+```bash
+uv run endurance-kb build-index
 ```
 
-### Step 5: Configure MCP Client (Codex / Claude Desktop / Cursor)
+The command parses English Markdown into Evidence Passages, creates the local FTS5 database at `main/.kb_index.sqlite`, stores the current content fingerprint, and rebuilds `Knowledge_base/INDEX.md`. It does not contact a model registry or download weights.
 
-#### Codex / Claude Desktop Configuration (`mcpServers`)
-Add the following to `~/.codex/mcp.json` or `claude_desktop_config.json`:
+### Step 4: Verify Status and English Search
+
+```bash
+uv run endurance-kb status
+uv run endurance-kb search "How should 4x8 minute VO2max intervals be structured?"
+uv run endurance-kb search "FTP test protocol" --top 3 --format json
+```
+
+`status` must report `fresh`. Search returns passage-level results with section breadcrumbs and exact source line citations. If a Knowledge Source changes, search fails with `stale_index` until `build-index` is run again.
+
+### Step 5: Optionally Configure the Legacy MCP Adapter
+
+The existing `main.mcp_server` process can expose the current legacy tools to a local MCP client:
+
 ```json
 {
   "mcpServers": {
     "endurance-kb": {
-      "command": "/Users/icaroredepaolini/Personale/training/endurance_training/.venv/bin/python",
-      "args": [
-        "-m",
-        "main.mcp_server"
-      ],
-      "cwd": "/Users/icaroredepaolini/Personale/training/endurance_training",
+      "command": "/absolute/path/to/endurance_training/.venv/bin/python",
+      "args": ["-m", "main.mcp_server"],
+      "cwd": "/absolute/path/to/endurance_training",
       "env": {
         "PYTHONUNBUFFERED": "1"
       }
@@ -91,26 +102,30 @@ Add the following to `~/.codex/mcp.json` or `claude_desktop_config.json`:
 }
 ```
 
+This adapter is not yet the final evidence-oriented MCP contract. Official SDK migration, structured tool errors, strict document containment, and the planned evidence tools remain release work.
+
 ---
 
 ## 4. Verification & Acceptance Checklist
 
-To ensure clean-room installation reproducibility, every release must pass this checklist on a fresh clone:
+| Verification Step | Command / Action | Expected Result |
+| :--- | :--- | :--- |
+| **1. Locked Installation** | `uv sync --locked` | The environment installs from the checked-in project metadata and lockfile. |
+| **2. Test Suite** | `PYTHONDONTWRITEBYTECODE=1 uv run python -m unittest discover -s tests -v` | Chunking, synchronization, schema, retrieval, and facade tests pass. |
+| **3. Offline Synchronization** | Run `uv run endurance-kb build-index` with network access disabled. | `main/.kb_index.sqlite` is created without a model download. |
+| **4. Freshness Status** | `uv run endurance-kb status` | State is `fresh`; current and indexed fingerprints match. |
+| **5. English CLI Search** | `uv run endurance-kb search "Zone 2 fat oxidation"` | Attributable English Evidence Passages are returned. |
+| **6. Stale Error Guard** | Add, edit, rename, or remove a Knowledge Source, then query. | Search exits with `stale_index` and instructs the user to run `build-index`. |
+| **7. No Implicit Rebuild** | Compare the database before and after a search. | Search does not change or replace the Derived Index. |
 
-| Verification Step | Command / Action | Expected Result | Pass/Fail |
-| :--- | :--- | :--- | :---: |
-| **1. Fresh Virtualenv** | `uv venv && source .venv/bin/activate` | Clean virtualenv created without error | $\square$ |
-| **2. Zero Stale Imports** | `python3 main/cli.py validate` | Zero missing dependency errors | $\square$ |
-| **3. Offline Indexing** | `python3 main/cli.py build-index` | `.kb_index.sqlite` created (~15 MB) | $\square$ |
-| **4. CLI Cross-Lingual** | `python3 main/cli.py search "Zona 2 fatmax"` | Returns relevant EN/IT passages | $\square$ |
-| **5. Stale Error Guard** | Touch `Knowledge_base/INDEX.md` and query | Returns structured `stale_index` error | $\square$ |
-| **6. MCP Inspector** | `npx @modelcontextprotocol/inspector` | 4 tools (`search_evidence`, `get_passage`, `get_document`, `get_kb_status`) listed | $\square$ |
-| **7. Path Containment** | Call `get_document` with `../../AGENTS.md` | Returns path containment error | $\square$ |
+Final MCP Inspector, path-containment, cross-platform clean-install, and semantic-retrieval benchmark checks remain deferred acceptance items rather than claims of this increment.
 
 ---
 
 ## 5. Troubleshooting & Maintenance
 
-- **Stale Index Error**: Run `python3 main/cli.py build-index` after editing or adding Markdown files in `Knowledge_base/`.
-- **MPS Memory Pressure on macOS**: Set `PYTORCH_ENABLE_MPS_FALLBACK=1` in environment if MPS runs out of VRAM during large batch indexing.
-- **Offline Execution**: Model weights are stored in `~/.cache/huggingface/`. Once downloaded, network connection is not required.
+- **`missing_index`**: Run `uv run endurance-kb build-index` before the first query.
+- **`stale_index`**: Run `uv run endurance-kb build-index` after adding, editing, renaming, or deleting a Knowledge Source, or after changing `TAXONOMY.md`.
+- **`invalid_index`**: Delete or move the local Derived Index and rebuild it explicitly.
+- **`unsupported_language`**: Remove or translate the non-English Knowledge Source before synchronization; the active corpus contract is English-only.
+- **Offline Operation**: Once the locked environment is installed, index construction and retrieval need no network access.

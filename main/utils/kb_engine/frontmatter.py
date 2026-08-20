@@ -4,6 +4,7 @@ Frontmatter parsing, inferencing, and standardization module.
 
 import re
 from pathlib import Path
+from typing import Any
 
 import yaml
 
@@ -23,11 +24,11 @@ class FrontmatterManager:
                 return cat_map[part]
         return "general"
 
-    def parse_document(self, file_path: Path):
-        with open(file_path, "r", encoding="utf-8", errors="replace") as f:
+    def parse_document(self, file_path: Path) -> tuple[dict[str, Any], str]:
+        with open(file_path, encoding="utf-8", errors="replace") as f:
             content = f.read()
 
-        frontmatter = {}
+        frontmatter: dict[str, Any] = {}
         body = content
 
         if content.startswith("---\n"):
@@ -41,7 +42,7 @@ class FrontmatterManager:
 
         return frontmatter, body
 
-    def infer_metadata(self, content: str, file_path: Path):
+    def infer_metadata(self, content: str, file_path: Path) -> dict[str, Any]:
         category = self.determine_category(file_path)
         lines = content.splitlines()
 
@@ -61,7 +62,12 @@ class FrontmatterManager:
             if "Date:" in line or "**Date:**" in line:
                 date = re.sub(r"[\*_`]", "", line).replace("Date:", "").strip()
             if "Author:" in line or "**Author:**" in line or "By:" in line:
-                author = re.sub(r"[\*_`]", "", line).replace("Author:", "").replace("By:", "").strip()
+                author = (
+                    re.sub(r"[\*_`]", "", line)
+                    .replace("Author:", "")
+                    .replace("By:", "")
+                    .strip()
+                )
 
         # Infer topics
         text = (title + " " + content[:2000]).lower()
@@ -74,16 +80,26 @@ class FrontmatterManager:
         summary_lines = []
         for line in lines:
             line_s = line.strip()
-            if (line_s and not line_s.startswith("#") and not line_s.startswith("*") 
-                and not line_s.startswith("-") and not line_s.startswith("_") 
-                and not line_s.startswith("|") and not line_s.startswith("---") 
-                and not line_s.startswith("<")):
+            if (
+                line_s
+                and not line_s.startswith("#")
+                and not line_s.startswith("*")
+                and not line_s.startswith("-")
+                and not line_s.startswith("_")
+                and not line_s.startswith("|")
+                and not line_s.startswith("---")
+                and not line_s.startswith("<")
+            ):
                 summary_lines.append(line_s)
                 if len(summary_lines) >= 2:
                     break
 
-        summary = " ".join(summary_lines)[:300] if summary_lines else f"Document detailing {title}."
-        summary = re.sub(r'\s+', ' ', summary).replace('"', "'").strip()
+        summary = (
+            " ".join(summary_lines)[:300]
+            if summary_lines
+            else f"Document detailing {title}."
+        )
+        summary = re.sub(r"\s+", " ", summary).replace('"', "'").strip()
 
         return {
             "title": title,
@@ -92,7 +108,7 @@ class FrontmatterManager:
             "source": source or "Knowledge Base",
             "author": author or "Endurance Research",
             "date": date or "2025-01-01",
-            "summary": summary
+            "summary": summary,
         }
 
     def standardize_file(self, file_path: Path, force: bool = False) -> bool:
@@ -100,7 +116,7 @@ class FrontmatterManager:
         if fm and not force:
             return False
 
-        with open(file_path, "r", encoding="utf-8", errors="replace") as f:
+        with open(file_path, encoding="utf-8", errors="replace") as f:
             content = f.read()
 
         new_fm = self.infer_metadata(content, file_path)
