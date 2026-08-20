@@ -7,6 +7,7 @@ import re
 from collections.abc import Iterable
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Literal
 
 import yaml
 
@@ -30,7 +31,10 @@ _METADATA_HEADING = re.compile(
     re.IGNORECASE,
 )
 _H1 = re.compile(r"^#\s+(.+?)\s*$")
-_FENCE = re.compile(r"^\s*(`{3,}|~{3,})")
+_FENCE_OPEN = re.compile(r"^\s*(`{3,}|~{3,})")
+_FENCE_CLOSE = re.compile(r"^\s*(`{3,}|~{3,})\s*$")
+
+_BlockKind = Literal["prose", "table", "quote", "fence"]
 
 
 @dataclass(frozen=True, slots=True)
@@ -251,12 +255,10 @@ class StructureAwareChunker:
         for index in range(metadata.content_start, len(lines)):
             line_number = index + 1
             line = lines[index]
-            fence = _fence_marker(line)
-            if fence and (active_fence is None or active_fence == fence):
-                active_fence = fence if active_fence is None else None
-                heading = None
-            else:
-                heading = None if active_fence else self._parse_heading(line)
+            active_fence, transitioned = _advance_fence(active_fence, line)
+            heading = (
+                None if active_fence or transitioned else self._parse_heading(line)
+            )
             if heading:
                 self._append_section(sections, hierarchy, current)
                 current = []
@@ -361,34 +363,40 @@ class StructureAwareChunker:
     def _blocks(lines: tuple[tuple[int, str], ...]) -> tuple[_LineBlock, ...]:
         blocks: list[_LineBlock] = []
         current: list[tuple[int, str]] = []
+        current_kind: _BlockKind | None = None
         active_fence: str | None = None
 
         def flush() -> None:
-            nonlocal current
+            nonlocal current, current_kind
             trimmed = _trim_blank_lines(current)
             if not trimmed:
                 current = []
+                current_kind = None
                 return
-            nonempty = [line.strip() for _, line in trimmed if line.strip()]
-            atomic = (
-                any(_fence_marker(line) for line in nonempty)
-                or all(line.startswith("|") for line in nonempty)
-                or all(line.startswith(">") for line in nonempty)
-            )
-            blocks.append(_line_block(trimmed, atomic=atomic))
+            blocks.append(_line_block(trimmed, atomic=current_kind != "prose"))
             current = []
+            current_kind = None
 
         for item in lines:
             stripped = item[1].strip()
-            fence = _fence_marker(stripped)
-            if fence and (active_fence is None or active_fence == fence):
-                active_fence = fence if active_fence is None else None
-                current.append(item)
-                continue
-            if not stripped and active_fence is None:
+            was_fenced = active_fence is not None
+            active_fence, transitioned = _advance_fence(active_fence, item[1])
+            if was_fenced or transitioned:
+                kind: _BlockKind = "fence"
+            elif not stripped:
                 flush()
+                continue
+            elif stripped.startswith("|"):
+                kind = "table"
+            elif stripped.startswith(">"):
+                kind = "quote"
             else:
-                current.append(item)
+                kind = "prose"
+
+            if current and current_kind != kind:
+                flush()
+            current_kind = kind
+            current.append(item)
         flush()
         return tuple(blocks)
 
@@ -520,9 +528,18 @@ def _normalized_heading(value: str) -> str:
     return re.sub(r"\W+", "", value).casefold()
 
 
-def _fence_marker(line: str) -> str | None:
-    match = _FENCE.match(line)
-    return match.group(1)[0] if match else None
+def _advance_fence(active: str | None, line: str) -> tuple[str | None, bool]:
+    pattern = _FENCE_OPEN if active is None else _FENCE_CLOSE
+    match = pattern.match(line)
+    if not match:
+        return active, False
+
+    marker = match.group(1)
+    if active is None:
+        return marker, True
+    if marker[0] == active[0] and len(marker) >= len(active):
+        return None, True
+    return active, False
 
 
 def _common_prefix(left: tuple[str, ...], right: tuple[str, ...]) -> tuple[str, ...]:

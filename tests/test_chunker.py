@@ -316,6 +316,63 @@ class TestStructureAwareChunker(unittest.TestCase):
         self.assertEqual(passage.section_hierarchy, ("tilde-code",))
         self.assertEqual(passage.size_status, "oversized_atomic_block")
 
+    def test_longer_fence_is_not_closed_by_shorter_nested_fence(self) -> None:
+        code_words = " ".join(f"value{index:02d}" for index in range(1, 16))
+        content = (
+            f"````markdown\n```\n## Not a document heading\n{code_words}\n```\n````"
+        )
+        path = self._write("Articles/outer-fence.md", content)
+        policy = ChunkingPolicy(target_words=6, min_words=3, max_words=8)
+
+        passages = StructureAwareChunker(self.kb_dir, policy).chunk_document(path)
+
+        self.assertEqual(len(passages), 1)
+        passage = passages[0]
+        self.assertEqual(passage.content, content)
+        self.assertEqual((passage.start_line, passage.end_line), (1, 6))
+        self.assertEqual(passage.section_hierarchy, ("outer-fence",))
+        self.assertEqual(passage.size_status, "oversized_atomic_block")
+
+    def test_table_adjacent_to_heading_remains_a_separate_atomic_block(self) -> None:
+        table = "\n".join(
+            (
+                "| Metric | Evidence |",
+                "| --- | --- |",
+                "| Threshold | "
+                + " ".join(f"value{index:02d}" for index in range(1, 12))
+                + " |",
+            )
+        )
+        content = f"# Table Evidence\n{table}"
+        path = self._write("Articles/atomic-table.md", content)
+        policy = ChunkingPolicy(target_words=6, min_words=3, max_words=8)
+
+        passages = StructureAwareChunker(self.kb_dir, policy).chunk_document(path)
+
+        table_passage = next(
+            passage for passage in passages if "| Metric" in passage.content
+        )
+        self.assertEqual(table_passage.content, table)
+        self.assertEqual((table_passage.start_line, table_passage.end_line), (2, 4))
+        self.assertEqual(table_passage.size_status, "oversized_atomic_block")
+
+    def test_blockquote_adjacent_to_heading_remains_a_separate_atomic_block(
+        self,
+    ) -> None:
+        quote = "> " + " ".join(f"value{index:02d}" for index in range(1, 16))
+        content = f"# Quoted Evidence\n{quote}"
+        path = self._write("Articles/atomic-quote.md", content)
+        policy = ChunkingPolicy(target_words=6, min_words=3, max_words=8)
+
+        passages = StructureAwareChunker(self.kb_dir, policy).chunk_document(path)
+
+        quote_passage = next(
+            passage for passage in passages if passage.content.startswith(">")
+        )
+        self.assertEqual(quote_passage.content, quote)
+        self.assertEqual((quote_passage.start_line, quote_passage.end_line), (2, 2))
+        self.assertEqual(quote_passage.size_status, "oversized_atomic_block")
+
     def test_chunking_is_deterministic_across_instances(self) -> None:
         path = self._write(
             "Episodes/deterministic.md",
