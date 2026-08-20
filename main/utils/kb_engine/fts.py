@@ -2,14 +2,16 @@
 SQLite FTS5 Full-Text Search Engine with BM25 ranking and on-demand auto-indexing.
 """
 
-import os
-import re
 import json
+import re
 import sqlite3
 from pathlib import Path
+
 from main.utils.kb_engine.frontmatter import FrontmatterManager
+
 from .taxonomy import TaxonomyRegistry
 from .walker import iter_kb_documents
+
 
 class FTSSearchEngine:
     def __init__(self, kb_dir: Path, db_path: Path, taxonomy: TaxonomyRegistry):
@@ -106,7 +108,7 @@ class FTSSearchEngine:
         conn.close()
         return chunk_count
 
-    def search(self, query: str, category: str = None, topic: str = None, top_k: int = 5):
+    def search(self, query: str, category: str | None = None, topic: str | None = None, top_k: int = 5):
         if self.is_index_stale():
             self.build_index()
 

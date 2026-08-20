@@ -1,9 +1,10 @@
 import re
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import ClassVar
+
 
 class TaxonomyRegistry:
-    CATEGORY_MAP: Dict[str, str] = {
+    CATEGORY_MAP: ClassVar[dict[str, str]] = {
         "hiit": "hiit",
         "metrics": "metrics",
         "nutrition": "nutrition",
@@ -16,7 +17,7 @@ class TaxonomyRegistry:
         "Books": "book",
     }
 
-    TOPIC_KEYWORDS: Dict[str, List[str]] = {
+    TOPIC_KEYWORDS: ClassVar[dict[str, list[str]]] = {
         "FTP": ["ftp", "functional threshold power"],
         "CP": ["critical power"],
         "W_prime": ["w'", "w prime", "anaerobic work capacity"],
@@ -44,8 +45,8 @@ class TaxonomyRegistry:
 
     def __init__(self, kb_dir: Path):
         self.kb_dir = kb_dir
-        self._categories: List[str] = []
-        self._topics_by_category: Dict[str, List[str]] = {}
+        self._categories: list[str] = []
+        self._topics_by_category: dict[str, list[str]] = {}
         self._parse_taxonomy_md()
 
     def _parse_taxonomy_md(self):
@@ -90,10 +91,10 @@ class TaxonomyRegistry:
                 ordered_cats.append(cat)
         self._categories = ordered_cats
 
-    def categories(self) -> List[str]:
+    def categories(self) -> list[str]:
         return self._categories.copy()
 
-    def topics(self, category: Optional[str] = None) -> List[str]:
+    def topics(self, category: str | None = None) -> list[str]:
         if category:
             return self._topics_by_category.get(category, []).copy()
         
@@ -102,14 +103,14 @@ class TaxonomyRegistry:
             all_topics.extend(topics)
         return all_topics
 
-    def category_order(self) -> List[str]:
+    def category_order(self) -> list[str]:
         return self._categories.copy()
 
     def valid_category(self, cat: str) -> bool:
         return cat in self._categories
 
-    def topic_keywords(self) -> Dict[str, List[str]]:
+    def topic_keywords(self) -> dict[str, list[str]]:
         return self.TOPIC_KEYWORDS.copy()
 
-    def category_map(self) -> Dict[str, str]:
+    def category_map(self) -> dict[str, str]:
         return self.CATEGORY_MAP.copy()

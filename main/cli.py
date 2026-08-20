@@ -3,9 +3,9 @@
 Unified CLI for the Endurance Training Knowledge Base.
 """
 
-import sys
-import json
 import argparse
+import json
+import sys
 from pathlib import Path
 
 # Add project root directory to python path for imports
@@ -13,6 +13,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from main.utils.kb_engine import KBEngine
+
 
 def handle_search(engine: KBEngine, args):
     if getattr(args, 'reindex', False):

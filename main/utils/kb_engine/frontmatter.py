@@ -2,12 +2,13 @@
 Frontmatter parsing, inferencing, and standardization module.
 """
 
-import os
 import re
-import yaml
 from pathlib import Path
 
+import yaml
+
 from .taxonomy import TaxonomyRegistry
+
 
 class FrontmatterManager:
     def __init__(self, kb_dir: Path, taxonomy: TaxonomyRegistry):
@@ -35,7 +36,7 @@ class FrontmatterManager:
                 try:
                     frontmatter = yaml.safe_load(parts[1]) or {}
                     body = parts[2]
-                except Exception:
+                except yaml.YAMLError:
                     pass
 
         return frontmatter, body

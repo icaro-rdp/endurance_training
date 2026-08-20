@@ -2,12 +2,12 @@
 Unified Deep Facade Class: KBEngine
 """
 
-import os
 from pathlib import Path
+
 from main.utils.kb_engine.frontmatter import FrontmatterManager
 from main.utils.kb_engine.fts import FTSSearchEngine
-from main.utils.kb_engine.validator import KBValidator
 from main.utils.kb_engine.taxonomy import TaxonomyRegistry
+from main.utils.kb_engine.validator import KBValidator
 from main.utils.kb_engine.walker import iter_kb_documents
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
@@ -31,7 +31,7 @@ class KBEngine:
         self.fts = FTSSearchEngine(self.kb_dir, self.db_path, self.taxonomy)
         self.validator = KBValidator(self.kb_dir, self.index_file, self.taxonomy)
 
-    def search(self, query: str, category: str = None, topic: str = None, top_k: int = 5):
+    def search(self, query: str, category: str | None = None, topic: str | None = None, top_k: int = 5):
         return self.fts.search(query=query, category=category, topic=topic, top_k=top_k)
 
     def format_llm_context(self, results: list) -> str:

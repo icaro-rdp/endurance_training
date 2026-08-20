@@ -1,8 +1,9 @@
 import os
+from collections.abc import Iterator
 from pathlib import Path
-from typing import Iterator, Set, Optional
 
-def iter_kb_documents(kb_dir: Path, exclude: Optional[Set[str]] = None) -> Iterator[Path]:
+
+def iter_kb_documents(kb_dir: Path, exclude: set[str] | None = None) -> Iterator[Path]:
     """Yield all curated KB document paths, excluding meta-files and raw transcripts."""
     if exclude is None:
         exclude = {"INDEX.md", "TAXONOMY.md"}

@@ -9,14 +9,12 @@ Includes robust duplicate detection to prevent redundant downloads.
 """
 
 import argparse
-import glob
 import os
 import re
 import sys
 import time
 from datetime import timedelta
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Set, Tuple
 
 import requests
 from dotenv import dotenv_values
@@ -24,7 +22,7 @@ from dotenv import dotenv_values
 DEFAULT_SHOW_ID = "5IHj4utnRlTNcCCoxyinkx"  # Empirical Cycling Podcast
 
 
-def load_credentials() -> Dict[str, str]:
+def load_credentials() -> dict[str, str]:
     """Loads and sanitizes environment variables from .env file or environment."""
     env_path = Path(__file__).resolve().parent.parent / ".env"
     env_vars = {}
@@ -71,7 +69,7 @@ class SpotifyAPIClient:
             )
         return response.json()["access_token"]
 
-    def get_show_info(self, show_id: str) -> Dict[str, Any]:
+    def get_show_info(self, show_id: str) -> dict[str, any]:
         """Gets show metadata."""
         headers = {"Authorization": f"Bearer {self.access_token}"}
         url = f"https://api.spotify.com/v1/shows/{show_id}?market=US"
@@ -79,9 +77,7 @@ class SpotifyAPIClient:
         resp.raise_for_status()
         return resp.json()
 
-    def get_all_episodes(
-        self, show_id: str, limit: Optional[int] = None
-    ) -> List[Dict[str, Any]]:
+    def get_all_episodes(self, show_id: str, limit: int | None) -> list[dict[str, any]]:
         """Paginates through all episodes of a show."""
         headers = {"Authorization": f"Bearer {self.access_token}"}
         episodes = []
@@ -124,44 +120,90 @@ def format_ms(ms: int) -> str:
     return f"{minutes:02d}:{seconds:02d}"
 
 
-def infer_taxonomy(title: str, description: str) -> Tuple[str, List[str]]:
+def infer_taxonomy(title: str, description: str) -> tuple[str, list[str]]:
     """Infers category and taxonomy topics from title and notes."""
     text = (title + " " + description).lower()
     category = "periodization"
     topics = []
 
-    if any(k in text for k in ["ftp", "functional threshold", "tte", "testing", "critical power", "cp "]):
+    if any(
+        k in text
+        for k in [
+            "ftp",
+            "functional threshold",
+            "tte",
+            "testing",
+            "critical power",
+            "cp ",
+        ]
+    ):
         category = "metrics"
         if "ftp" in text or "tte" in text:
             topics.append("FTP")
         if "critical power" in text or "cp " in text:
             topics.append("CP")
 
-    elif any(k in text for k in ["vo2", "vo2max", "hiit", "interval", "intervals", "4x8", "tabata"]):
+    elif any(
+        k in text
+        for k in ["vo2", "vo2max", "hiit", "interval", "intervals", "4x8", "tabata"]
+    ):
         category = "hiit"
         if "short" in text or "30/30" in text or "30s" in text:
             topics.append("Short_intervals")
         else:
             topics.append("Long_intervals")
 
-    elif any(k in text for k in ["zone 2", "zone2", "aerobic base", "fatmax", "fat oxidation", "endurance ride"]):
+    elif any(
+        k in text
+        for k in [
+            "zone 2",
+            "zone2",
+            "aerobic base",
+            "fatmax",
+            "fat oxidation",
+            "endurance ride",
+        ]
+    ):
         category = "zone2"
         topics.append("Aerobic_base")
         if "fat" in text:
             topics.append("Fat_oxidation")
 
-    elif any(k in text for k in ["strength", "lifting", "hypertrophy", "squat", "torque", "weights"]):
+    elif any(
+        k in text
+        for k in ["strength", "lifting", "hypertrophy", "squat", "torque", "weights"]
+    ):
         category = "strength"
         topics.append("Heavy_torque")
 
-    elif any(k in text for k in ["nutrition", "carb", "carbohydrate", "bicarbonate", "beta alanine", "fueling"]):
+    elif any(
+        k in text
+        for k in [
+            "nutrition",
+            "carb",
+            "carbohydrate",
+            "bicarbonate",
+            "beta alanine",
+            "fueling",
+        ]
+    ):
         category = "nutrition"
         if "bicarbonate" in text:
             topics.append("Sodium_bicarbonate")
         else:
             topics.append("Carbohydrate_ratio")
 
-    elif any(k in text for k in ["lactate", "mitochondria", "cardiac", "stroke volume", "heart rate", "physiology"]):
+    elif any(
+        k in text
+        for k in [
+            "lactate",
+            "mitochondria",
+            "cardiac",
+            "stroke volume",
+            "heart rate",
+            "physiology",
+        ]
+    ):
         category = "physiology"
         topics.append("Cardiac_hypertrophy")
 
@@ -172,7 +214,7 @@ def infer_taxonomy(title: str, description: str) -> Tuple[str, List[str]]:
 
 
 def format_transcript_paragraphs(
-    lines: List[Dict[str, Any]], paragraph_interval_ms: int = 45000
+    lines: list[dict[str, any]], paragraph_interval_ms: int = 45000
 ) -> str:
     """
     Groups time-synced transcript lines into structured, readable paragraphs
@@ -209,12 +251,12 @@ def format_transcript_paragraphs(
     return "\n\n".join(paragraphs)
 
 
-def scan_existing_downloads(output_dir: Path) -> Set[str]:
+def scan_existing_downloads(output_dir: Path) -> set[str]:
     """
     Scans the target directory and extracts existing Spotify episode IDs and URLs
     to prevent redundant downloads.
     """
-    existing_identifiers: Set[str] = set()
+    existing_identifiers: set[str] = set()
     if not output_dir.exists():
         return existing_identifiers
 
@@ -223,7 +265,7 @@ def scan_existing_downloads(output_dir: Path) -> Set[str]:
             continue
         # Add filename base
         existing_identifiers.add(file_path.stem.lower())
-        
+
         # Read header to find spotify_url or episode ID
         try:
             with open(file_path, "r", encoding="utf-8") as f:
@@ -239,8 +281,8 @@ def scan_existing_downloads(output_dir: Path) -> Set[str]:
 
 
 def generate_markdown(
-    episode_info: Dict[str, Any],
-    transcript_lines: Optional[List[Dict[str, Any]]],
+    episode_info: dict[str, any],
+    transcript_lines: list[dict[str, any]] | None,
     show_name: str = "Empirical Cycling Podcast",
 ) -> str:
     """Generates a complete, structured Markdown document."""
@@ -343,7 +385,9 @@ def main():
     sp_dc = args.sp_dc or credentials.get("SPOTIFY_SP_DC")
 
     if not client_id or not client_secret:
-        print("Error: SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET must be present in .env or environment.")
+        print(
+            "Error: SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET must be present in .env or environment."
+        )
         sys.exit(1)
 
     print("=== Spotify Podcast Transcript Markdown Scraper ===")
@@ -354,14 +398,18 @@ def main():
     api = SpotifyAPIClient(client_id, client_secret)
     show_info = api.get_show_info(args.show_id)
     show_name = show_info.get("name", "Podcast")
-    print(f"Target Show: {show_name} (Total episodes: {show_info.get('total_episodes', 'Unknown')})")
+    print(
+        f"Target Show: {show_name} (Total episodes: {show_info.get('total_episodes', 'Unknown')})"
+    )
 
     output_path = Path(args.output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
 
     # Scan existing downloads for duplicate prevention
     existing_downloads = scan_existing_downloads(output_path)
-    print(f"Existing files detected in output folder: {len(existing_downloads)} files/IDs indexed.")
+    print(
+        f"Existing files detected in output folder: {len(existing_downloads)} files/IDs indexed."
+    )
 
     # Initialize scraper client
     scraper_client = None
@@ -370,7 +418,9 @@ def main():
             from spotify_scraper import SpotifyClient
 
             scraper_client = SpotifyClient(cookies={"sp_dc": sp_dc})
-            print("Successfully initialized Spotify Scraper client with session cookie.")
+            print(
+                "Successfully initialized Spotify Scraper client with session cookie."
+            )
         except Exception as e:
             print(f"Warning: Failed to initialize SpotifyClient scraper ({e}).")
 
@@ -378,7 +428,10 @@ def main():
     episodes = []
     if args.episode_id:
         headers = {"Authorization": f"Bearer {api.access_token}"}
-        r = requests.get(f"https://api.spotify.com/v1/episodes/{args.episode_id}?market=US", headers=headers)
+        r = requests.get(
+            f"https://api.spotify.com/v1/episodes/{args.episode_id}?market=US",
+            headers=headers,
+        )
         r.raise_for_status()
         episodes = [r.json()]
     else:
@@ -394,14 +447,18 @@ def main():
     for i, ep in enumerate(episodes, 1):
         ep_id = ep.get("id")
         ep_name = ep.get("name", "Untitled")
-        clean_filename = "".join(c if c.isalnum() or c in " ._-" else "_" for c in ep_name).strip()
+        clean_filename = "".join(
+            c if c.isalnum() or c in " ._-" else "_" for c in ep_name
+        ).strip()
         clean_filename = clean_filename.replace(" ", "_")[:80]
         base_name = f"{ep.get('release_date', 'unknown')}_{clean_filename}"
         target_file = output_path / f"{base_name}.md"
 
         # Check for existing download
         if not args.force:
-            if ep_id in existing_downloads or (target_file.exists() and target_file.stat().st_size > 100):
+            if ep_id in existing_downloads or (
+                target_file.exists() and target_file.stat().st_size > 100
+            ):
                 print(f"[{i}/{len(episodes)}] (Skipping already downloaded) {ep_name}")
                 skipped_count += 1
                 continue
@@ -435,15 +492,17 @@ def main():
     if scraper_client:
         scraper_client.close()
 
-    print(f"\n==========================================")
-    print(f"Finished processing episodes!")
+    print("\n==========================================")
+    print("Finished processing episodes!")
     print(f"  Total in catalogue: {len(episodes)}")
     print(f"  Skipped (already downloaded): {skipped_count}")
     print(f"  Newly extracted with transcripts: {success_count}")
     if no_transcript_count:
-        print(f"  Episodes with notes only (no Spotify transcript): {no_transcript_count}")
+        print(
+            f"  Episodes with notes only (no Spotify transcript): {no_transcript_count}"
+        )
     print(f"  Output directory: {output_path.resolve()}")
-    print(f"==========================================")
+    print("==========================================")
 
 
 if __name__ == "__main__":

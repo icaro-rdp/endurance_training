@@ -2,11 +2,13 @@
 Validator and Sitemap Builder sub-module.
 """
 
-import os
 import re
-import yaml
 from pathlib import Path
+
+import yaml
+
 from main.utils.kb_engine.frontmatter import FrontmatterManager
+
 from .taxonomy import TaxonomyRegistry
 from .walker import iter_kb_documents
 
@@ -107,7 +109,7 @@ class KBValidator:
 
             try:
                 fm = yaml.safe_load(parts[1]) or {}
-            except Exception as e:
+            except yaml.YAMLError as e:
                 errors.append(f"[{rel_path}] YAML Syntax Error: {e}")
                 continue
 

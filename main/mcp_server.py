@@ -4,9 +4,9 @@ Model Context Protocol (MCP) Server for Endurance Training Knowledge Base.
 Exposes KBEngine capabilities over standard I/O (stdio JSON-RPC).
 """
 
-import sys
-import json
 import asyncio
+import json
+import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -151,7 +151,7 @@ async def run_stdio_server():
                         "id": req_id,
                         "error": {"code": -32603, "message": str(e)}
                     })
-        except Exception as e:
+        except Exception:
             pass
 
 def main():

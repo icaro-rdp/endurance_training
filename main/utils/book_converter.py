@@ -1,13 +1,12 @@
-import os
 from pathlib import Path
-from typing import Optional, List
+
 from markitdown import MarkItDown
 
 
 class BookConverter:
     """Utility class to convert books (EPUB, PDF, etc.) into Markdown format using MarkItDown."""
 
-    def __init__(self, output_dir: Optional[Path] = None):
+    def __init__(self, output_dir: Path | None = None):
         self.md = MarkItDown()
         self.output_dir = output_dir
 
@@ -55,10 +54,10 @@ class BookConverter:
     def convert_directory(
         self,
         input_dir: Path,
-        extensions: Optional[List[str]] = None,
+        extensions: list[str] | None = None,
         force: bool = False,
         delete_original: bool = False
-    ) -> List[Path]:
+    ) -> list[Path]:
         """Converts all matching book files in a directory.
 
         Args:
@@ -96,7 +95,7 @@ class BookConverter:
             try:
                 out_path = self.convert_file(book_file, force=force, delete_original=delete_original)
                 converted_files.append(out_path)
-            except Exception as e:
+            except (subprocess.SubprocessError, OSError, RuntimeError) as e:
                 print(f"[ERROR] Failed to convert {book_file.name}: {e}")
 
         return converted_files

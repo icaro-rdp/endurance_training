@@ -10,11 +10,11 @@ Demonstrates passage chunking across distinct corpus shapes in English and Itali
 - Converted large books with weak/missing Markdown headings
 """
 
+import hashlib
 import os
 import re
-import hashlib
 from pathlib import Path
-from typing import Dict, List, Any, Optional, Tuple
+from typing import Any
 
 try:
     import yaml
@@ -22,7 +22,7 @@ except ImportError:
     yaml = None
 
 
-def parse_simple_yaml(yaml_str: str) -> Dict[str, str]:
+def parse_simple_yaml(yaml_str: str) -> dict[str, str]:
     """Fallback simple YAML frontmatter parser for environments without PyYAML."""
     res = {}
     for line in yaml_str.splitlines():
@@ -49,7 +49,7 @@ class Chunk:
         author: str,
         language: str,
         category: str,
-        section_hierarchy: List[str],
+        section_hierarchy: list[str],
         start_line: int,
         end_line: int,
         content: str,
@@ -67,7 +67,7 @@ class Chunk:
         self.word_count = len(self.content.split())
         self.char_count = len(self.content)
 
-    def to_dict(self) -> Dict[str, Any]:
+    def to_dict(self) -> dict[str, Any]:
         return {
             "chunk_id": self.chunk_id,
             "source_file": self.source_file,
@@ -105,7 +105,7 @@ class StructureAwareChunker:
         self.max_words = max_words
         self.overlap_words = overlap_words
 
-    def extract_metadata(self, lines: List[str], file_path: Path) -> Tuple[Dict[str, Any], int]:
+    def extract_metadata(self, lines: list[str], file_path: Path) -> tuple[dict[str, Any], int]:
         """Extract YAML frontmatter and inline document metadata."""
         metadata = {
             "title": file_path.stem.replace("_", " ").title(),
@@ -134,7 +134,7 @@ class StructureAwareChunker:
                         parsed = parse_simple_yaml(fm_text)
                     if isinstance(parsed, dict):
                         for k in ["title", "author", "category", "language", "source"]:
-                            if k in parsed and parsed[k]:
+                            if parsed.get(k):
                                 metadata[k] = str(parsed[k]).strip()
                 except Exception:
                     pass
@@ -170,7 +170,7 @@ class StructureAwareChunker:
 
         return metadata, content_start_line
 
-    def _parse_heading(self, line: str) -> Optional[Tuple[int, str]]:
+    def _parse_heading(self, line: str) -> tuple[int, str] | None:
         """Identify standard Markdown headings or weak heading markers."""
         stripped = line.strip()
         if not stripped:
@@ -204,24 +204,24 @@ class StructureAwareChunker:
 
         return None
 
-    def chunk_file(self, file_path: str) -> List[Chunk]:
+    def chunk_file(self, file_path: str) -> list[Chunk]:
         """Chunk a markdown file into citation-stable, structure-aware passages."""
         path = Path(file_path)
         if not path.exists():
             raise FileNotFoundError(f"File not found: {file_path}")
 
         with open(path, "r", encoding="utf-8") as f:
-            lines = [line.rstrip("\n") for line in f.readlines()]
+            lines = [line.rstrip("\n") for line in f]
 
         metadata, content_start_line = self.extract_metadata(lines, path)
         doc_slug = path.stem.lower().replace(" ", "_")
 
         # Parsing state
-        heading_stack: List[Tuple[int, str]] = []  # List of (level, title)
-        sections: List[Dict[str, Any]] = []
+        heading_stack: list[tuple[int, str]] = []  # List of (level, title)
+        sections: list[dict[str, Any]] = []
 
-        current_section_lines: List[Tuple[int, str]] = []
-        current_section_hierarchy: List[str] = [metadata["title"]]
+        current_section_lines: list[tuple[int, str]] = []
+        current_section_hierarchy: list[str] = [metadata["title"]]
         current_start_line = content_start_line
 
         in_code_block = False
@@ -264,15 +264,15 @@ class StructureAwareChunker:
                 "lines": current_section_lines,
             })
 
-        chunks: List[Chunk] = []
+        chunks: list[Chunk] = []
 
         for sec in sections:
             sec_lines = sec["lines"]
             if not sec_lines:
                 continue
 
-            blocks: List[Dict[str, Any]] = []
-            curr_block_lines: List[Tuple[int, str]] = []
+            blocks: list[dict[str, Any]] = []
+            curr_block_lines: list[tuple[int, str]] = []
 
             for line_no, line in sec_lines:
                 if not line.strip() and curr_block_lines:
@@ -294,7 +294,7 @@ class StructureAwareChunker:
                     "words": sum(len(l[1].split()) for l in curr_block_lines)
                 })
 
-            accum_blocks: List[Dict[str, Any]] = []
+            accum_blocks: list[dict[str, Any]] = []
             accum_words = 0
 
             for block in blocks:

@@ -11,6 +11,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from main.utils.kb_engine import KBEngine
 
+
 class TestKBEngine(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
