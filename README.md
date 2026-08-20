@@ -1,219 +1,294 @@
-# Endurance Training Repository & LLM Knowledge Base
+# Endurance Training Knowledge Base
 
-This repository contains endurance training research, articles, podcast episode notes, training plan materials, and a private local Knowledge Base for connected LLMs. The active retrieval contract is English-only: structure-aware Evidence Passages are indexed with SQLite FTS5 BM25 and guarded by an explicit content fingerprint.
+This repository contains a curated English endurance-training Knowledge Base and
+a local, citation-oriented search tool. Markdown sources are split into
+structure-aware Evidence Passages and indexed with SQLite FTS5 BM25. Search
+results include the source path, section context, and exact line range.
 
-Index construction and search require no network access or model download. Dense embeddings, reranking, and diversified semantic retrieval are deferred until an executable English benchmark demonstrates an improvement over this lexical baseline.
+The active retrieval foundation is deliberately simple:
 
----
+- English sources and English queries only;
+- explicit, transactional index builds;
+- no network access or model downloads during indexing or search;
+- no embeddings, reranker, or semantic-retrieval claims yet.
 
-## 📚 Knowledge Base Structure
+## Quick start
 
-- [`Knowledge_base/INDEX.md`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/INDEX.md) — Master Sitemaps and Document Catalog.
-- [`Knowledge_base/TAXONOMY.md`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/TAXONOMY.md) — Domain Taxonomy, Categories, Tags, and Frontmatter rules.
-- [`Knowledge_base/Episodes/Empirical_cycling_podcast/`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Episodes/Empirical_cycling_podcast/) — 218 curated reference guides organized into 5 core pillars:
-  - `physiology/` — Bioenergetics, mitochondrial signaling, cardiac remodeling, lactate shuttling.
-  - `nutrition/` — Intra-ride fueling, hydration, carbohydrate ratios, RED-S, ergogenic aids.
-  - `training/` — On-bike zones, intervals, base, threshold, periodization, recovery, racecraft.
-  - `strength/` — Heavy compound lifting, squat mechanics, sets & reps, sprint power.
-  - `metrics/` — FTP testing, Critical Power, W', durability, power vs HR, data analytics.
-- [`Knowledge_base/Articles/`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Articles/) — Curated research articles and coaching papers.
-- [`Knowledge_base/Books/`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Books/) — Major endurance training reference texts and chapter indexes ([`Books/_summary/INDEX.md`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/Books/_summary/INDEX.md)).
+Prerequisites:
 
----
-
-## 🛠 Unified CLI (`main/cli.py`)
-
-The repository includes a deep facade CLI for searching, indexing, validating, and maintaining the Knowledge Base.
-
-### 1. Passage Full-Text Search (`search`)
-
-Query the Knowledge Base using SQLite FTS5 with BM25 ranking and exact line-citation links:
+- Git;
+- Python 3.10 or newer;
+- `uv`;
+- a Python SQLite build with FTS5 and JSON1 support.
 
 ```bash
-# Basic natural language search (LLM-ready excerpt output)
-uv run endurance-kb search "VO2max cardiac hypertrophy preload"
-
-# Filter by category and topic
-uv run endurance-kb search "carbohydrate ratio" --category nutrition --topic Carbohydrate_ratio
-
-# Filter to one Knowledge Source slug
-uv run endurance-kb search "threshold progression" --source Episodes/Empirical_cycling_podcast/training/threshold/FTP_training
-
-# Limit results and format as plain text or JSON
-uv run endurance-kb search "FTP test protocol" --top 3 --format plain
-uv run endurance-kb search "over-unders" --format json
-
-# Inspect whether the explicitly synchronized index is fresh
+git clone https://github.com/icaro-rdp/endurance_training.git
+cd endurance_training
+uv sync --locked
+uv run endurance-kb build-index
 uv run endurance-kb status
+uv run endurance-kb search "VO2max cardiac hypertrophy preload"
 ```
 
-### 2. Build Index & Sitemap (`build-index`)
+`status` should report `"state": "fresh"` and `"is_fresh": true`.
+The first `build-index` creates the ignored local database at
+`main/.kb_index.sqlite` and regenerates `Knowledge_base/INDEX.md`.
 
-Explicitly rebuilds the structure-aware SQLite FTS5 passage index (`main/.kb_index.sqlite`), stores a deterministic fingerprint of Knowledge Source paths and contents, and updates the master sitemap in [`Knowledge_base/INDEX.md`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/INDEX.md):
+Dependency installation may contact the configured package registry. Once the
+locked environment is installed, building and searching the index are offline
+operations.
+
+## Repository map
+
+- [`Knowledge_base/`](Knowledge_base/) — curated Markdown Knowledge Sources.
+  - [`Articles/`](Knowledge_base/Articles/) — articles and research notes.
+  - [`Episodes/`](Knowledge_base/Episodes/) — curated podcast notes.
+  - [`Books/`](Knowledge_base/Books/) — book-derived reference material.
+  - [`TAXONOMY.md`](Knowledge_base/TAXONOMY.md) — canonical categories, topics,
+    and frontmatter guidance.
+  - [`INDEX.md`](Knowledge_base/INDEX.md) — generated master sitemap.
+- [`main/utils/kb_engine/`](main/utils/kb_engine/) — chunking, synchronization,
+  validation, retrieval, and domain models.
+- [`main/cli.py`](main/cli.py) — command-line adapter.
+- [`tests/`](tests/) — unit, integration, and benchmark-integrity tests.
+- [`CONTEXT.md`](CONTEXT.md) — domain vocabulary and architectural boundaries.
+- [`docs/adr/`](docs/adr/) and [`docs/specs/`](docs/specs/) — decisions and
+  implemented specifications.
+- [`laTeX/training_plan.tex`](laTeX/training_plan.tex) — endurance training plan
+  source; `laTeX/training_plan.pdf` is its generated output.
+
+## Common commands
+
+### Search
+
+```bash
+# LLM-ready excerpts with citations
+uv run endurance-kb search "How should 4x8 minute VO2max intervals be structured?"
+
+# Exact category and topic filters
+uv run endurance-kb search "carbohydrate ratio" \
+  --category nutrition --topic Carbohydrate_ratio
+
+# Exact Knowledge Source slug: path relative to Knowledge_base, without .md
+uv run endurance-kb search "threshold progression" \
+  --source Episodes/Empirical_cycling_podcast/training/threshold/FTP_training
+
+# One to twenty results in plain text or JSON
+uv run endurance-kb search "FTP test protocol" --top 3 --format plain
+uv run endurance-kb search "over-unders" --format json
+```
+
+Category, topic, and source filters are exact and case-sensitive. Query text
+must be English. The retrieval layer does not identify or translate languages.
+
+### Synchronize and inspect the index
 
 ```bash
 uv run endurance-kb build-index
+uv run endurance-kb status
 ```
 
-Retrieval never rebuilds implicitly. A missing, stale, or invalid Derived Index fails with a clear instruction to run `build-index`.
+Search never rebuilds the index. Adding, editing, renaming, or deleting a
+Knowledge Source—or changing `Knowledge_base/TAXONOMY.md`—makes the current
+index stale until `build-index` runs successfully.
 
-### 3. Health & Diagnostic Validator (`validate`)
-
-Runs automated health checks across all documents in `Knowledge_base/` to verify YAML frontmatter schema, category compliance against `TAXONOMY.md`, broken markdown links, and sitemap coverage:
+### Validate source health
 
 ```bash
 uv run endurance-kb validate
 ```
 
-### 4. Frontmatter Standardization (`standardize`)
+Validation errors are blocking. Warnings are advisory and can be numerous for
+converted books with unresolved original links; inspect them, but do not assume
+a zero exit code means there were no warnings.
 
-Scans all `.md` files and ensures canonical YAML frontmatter (`title`, `category`, `topics`, `summary`, `source`, `author`, `date`):
+### Standardize frontmatter
+
+`standardize` writes files; it is not a preview command. Without `--force`, it
+adds inferred frontmatter only to documents that have none. With `--force`, it
+replaces existing frontmatter across the corpus. Prefer writing and reviewing
+frontmatter manually for a new source.
 
 ```bash
-# Preview / standardize missing frontmatter
 uv run endurance-kb standardize
-
-# Force re-infer and standardize all files
-uv run endurance-kb standardize --force
+uv run endurance-kb standardize --force  # destructive bulk metadata rewrite
 ```
 
----
+Do not run either command casually, especially `--force`.
 
-## 🔌 Model Context Protocol (MCP) Server & Practical Guide
+## Testing changes
 
-The repository includes a legacy stdio MCP adapter (`main/mcp_server.py`) for local clients. It delegates to the English FTS5 baseline and requires an explicitly synchronized index. Migration to the official SDK, the final evidence-oriented tool contract, structured tool errors, and strict document containment are deferred; the current adapter should not be treated as the final MCP acceptance surface.
-
-### Registered Tools
-
-| Tool Name               | Parameters                                                    | Description                                                                                           |
-| :---------------------- | :------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------- |
-| `search_knowledge_base` | `query`, `category` _(opt)_, `topic` _(opt)_, `top_k` _(opt)_ | SQLite FTS5 BM25 passage search returning ranked excerpts with exact line citations (`file://...#L...`). |
-| `get_kb_index`          | _None_                                                        | Retrieves the Master Sitemap (`INDEX.md`) and domain taxonomy.                                        |
-| `get_document`          | `rel_path`                                                    | Retrieves the full contents of a specific document in `Knowledge_base/`.                              |
-| `validate_kb`           | _None_                                                        | Runs diagnostic audit on frontmatters, links, and indexing health.                                    |
-
----
-
-### Setup Instructions by Client
-
-#### 1. Claude Desktop App
-
-Add the server to your `claude_desktop_config.json`:
-
-- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-
-```json
-{
-  "mcpServers": {
-    "endurance-kb": {
-      "command": "python3",
-      "args": [
-        "/Users/icaroredepaolini/Personale/training/endurance_training/main/mcp_server.py"
-      ]
-    }
-  }
-}
-```
-
-_Restart Claude Desktop after saving._
-
-#### 2. Cursor IDE
-
-1. Open Cursor Settings (`Cmd + ,` or `Ctrl + ,`).
-2. Go to **Features** -> **MCP Servers** -> **Add New MCP Server**.
-3. Add:
-   - **Name**: `endurance-kb`
-   - **Type**: `stdio`
-   - **Command**: `python3 /Users/icaroredepaolini/Personale/training/endurance_training/main/mcp_server.py`
-
-Or add to `.cursor/mcp.json`:
-
-```json
-{
-  "mcpServers": {
-    "endurance-kb": {
-      "command": "python3",
-      "args": [
-        "/Users/icaroredepaolini/Personale/training/endurance_training/main/mcp_server.py"
-      ]
-    }
-  }
-}
-```
-
-#### 3. Antigravity CLI / AGY
-
-Add to `~/.gemini/antigravity-cli/mcp/settings.json`:
-
-```json
-{
-  "mcpServers": {
-    "endurance-kb": {
-      "command": "python3",
-      "args": [
-        "/Users/icaroredepaolini/Personale/training/endurance_training/main/mcp_server.py"
-      ]
-    }
-  }
-}
-```
-
-#### 4. Custom Python Client (JSON-RPC Subprocess)
-
-```python
-import subprocess
-import json
-
-proc = subprocess.Popen(
-    ["python3", "main/mcp_server.py"],
-    stdin=subprocess.PIPE,
-    stdout=subprocess.PIPE,
-    text=True
-)
-
-# Initialize Handshake
-proc.stdin.write(json.dumps({"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {}}) + "\n")
-proc.stdin.flush()
-init_resp = proc.stdout.readline()
-
-# Tool Execution
-query_req = {
-    "jsonrpc": "2.0",
-    "id": 2,
-    "method": "tools/call",
-    "params": {
-        "name": "search_knowledge_base",
-        "arguments": {"query": "Zone 2 fat oxidation", "top_k": 2}
-    }
-}
-proc.stdin.write(json.dumps(query_req) + "\n")
-proc.stdin.flush()
-response = json.loads(proc.stdout.readline())
-
-print(response["result"]["content"][0]["text"])
-proc.terminate()
-```
-
----
-
-### Example Natural Language Prompts
-
-Once connected in Claude or Cursor, ask prompts such as:
-
-- **Interval Selection**: _"Using the endurance-kb tool, search for the best interval duration for VO2max and summarize the evidence on 4x8min vs 4x4min."_
-- **Fueling Strategy**: _"Check the Knowledge Base for the recommended glucose to fructose ratio during long endurance efforts."_
-- **Subthreshold Protocol**: _"Use get_document to retrieve `Books/Norwegian Singles Method Subthreshold.md` and explain how subthreshold sessions are monitored without a lab cart."_
-
-### Testing the MCP Server Locally
+Install the locked development environment with `uv sync --locked`, then run:
 
 ```bash
-python3 main/mcp_server.py --test
+PYTHONDONTWRITEBYTECODE=1 uv run python -m unittest discover -s tests -v
+uv run ruff check main/cli.py main/utils/kb_engine tests
+uv run ruff format --check main/cli.py main/utils/kb_engine tests
+uv run mypy
+git diff --check
 ```
 
+The Ruff paths intentionally cover the active retrieval implementation and its
+tests. Older conversion, scraper, and legacy MCP utilities are outside this
+formatting gate. The configured strict mypy scope is defined in
+`pyproject.toml`.
+
+To verify the local SQLite capabilities directly:
+
+```bash
+uv run python -c "import sqlite3; c=sqlite3.connect(':memory:'); c.execute('CREATE VIRTUAL TABLE smoke USING fts5(content)'); c.execute(\"SELECT value FROM json_each('[1]')\")"
+```
+
+## Adding a new Knowledge Source
+
+Use this workflow for both human contributors and LLM agents.
+
+### 1. Choose a stable source path
+
+Add one English `.md` file under the appropriate source-type root:
+
+- `Knowledge_base/Articles/...`
+- `Knowledge_base/Episodes/...`
+- `Knowledge_base/Books/...`
+
+Follow the naming and folder conventions of neighboring sources. The path
+relative to `Knowledge_base/` is the permanent source identity. The same path
+without `.md` is its case-sensitive `source_slug`.
+
+Do not place a curated source in a hidden directory, `raw_transcripts/`, or
+`_summary/`. Files named `INDEX.md` and `TAXONOMY.md` are administrative and are
+not indexed as Knowledge Sources.
+
+### 2. Add reviewed frontmatter
+
+Read [`Knowledge_base/TAXONOMY.md`](Knowledge_base/TAXONOMY.md), then add
+frontmatter manually:
+
+```yaml
 ---
+title: "Exact source title"
+language: en
+category: metrics
+topics:
+  - FTP
+source: "Original URL, podcast, or book title"
+author: "Author or speaker"
+date: "YYYY-MM-DD"
+summary: "One or two faithful English sentences."
+key_takeaways:
+  - "A takeaway directly supported by the source"
+---
+```
 
-## 🚴 Endurance Training Plan Source
+Rules:
 
-- `laTeX/training_plan.tex` — Main LaTeX source for the endurance training plan.
-- `laTeX/training_plan.pdf` — Generated PDF version of the training plan.
+- `title`, `category`, `topics`, and `summary` are required by validation.
+- The complete source must be English. `language: en` documents that contract;
+  ingestion rejects an explicitly non-English value but does not detect the
+  language of unlabelled prose.
+- Use one canonical category: `metrics`, `hiit`, `zone2`, `strength`,
+  `nutrition`, `physiology`, `periodization`, or `book`.
+- Copy topic spelling and case from `TAXONOMY.md`. Do not invent a near-synonym
+  or change the taxonomy merely to accommodate one ad-hoc tag.
+- Use `category: book` for books.
+- Do not add `source_type`, chunk IDs, passage boundaries, or citation line
+  numbers. Ingestion derives them.
+- Include `source`, `author`, `date`, and `key_takeaways` only when known and
+  supported. Omit an optional value instead of fabricating it.
+
+### 3. Preserve attributable source content
+
+Use standard Markdown headings to expose the document structure. Preserve
+quotes, tables, code fences, and meaningful source wording. Keep relative links
+valid. Do not silently translate, synthesize, or rewrite evidence while merely
+ingesting a source.
+
+### 4. Synchronize and verify
+
+```bash
+# Fix all reported errors. Before synchronization, a sitemap warning for the
+# new file is expected.
+uv run endurance-kb validate
+
+# Rebuild the passage database and generated master sitemap.
+uv run endurance-kb build-index
+uv run endurance-kb status
+uv run endurance-kb validate
+
+# Use the exact relative path without .md and a phrase unique to the new source.
+uv run endurance-kb search "distinct English phrase" \
+  --source Articles/example/threshold-testing --format json
+
+PYTHONDONTWRITEBYTECODE=1 uv run python -m unittest discover -s tests -v
+git diff --check
+git status --short
+```
+
+Before committing:
+
+- confirm `status` is fresh and the source-filtered search returns the expected
+  Evidence Passage;
+- review every validation warning related to the new source;
+- include the new source and regenerated `Knowledge_base/INDEX.md`;
+- never hand-edit or commit `main/.kb_index.sqlite`;
+- update `Books/_summary/INDEX.md` only when the task explicitly includes a
+  hand-curated book summary.
+
+The same rebuild is required after editing, renaming, or deleting an existing
+source. Renames change source identity and should be deliberate.
+
+## Rules for LLM agents
+
+Before changing the repository:
+
+1. Read [`AGENTS.md`](AGENTS.md), [`CONTEXT.md`](CONTEXT.md), the relevant ADR or
+   specification, and `Knowledge_base/TAXONOMY.md`.
+2. Claim tracked work through the GitHub issue workflow described in
+   [`docs/agents/issue-tracker.md`](docs/agents/issue-tracker.md). If GitHub is
+   unavailable or read-only, report that constraint explicitly.
+3. Keep source edits scoped. Do not rewrite unrelated evidence, casually rename
+   sources, or run corpus-wide standardization.
+4. Never edit the generated root `Knowledge_base/INDEX.md` or the local SQLite
+   index by hand.
+5. Run the add-source verification sequence and report the source path,
+   `source_slug`, index status, validation errors, and test result.
+
+## Troubleshooting
+
+| Result | What it means | Action |
+| --- | --- | --- |
+| `missing_index` | No local Derived Index exists. | Run `uv run endurance-kb build-index`. |
+| `stale_index` | A source path/content or taxonomy changed. | Rebuild before searching. |
+| `invalid_index` | The database is corrupt or has an old schema. | Run `build-index`; transactional sync replaces it. |
+| `unsupported_language` | A source explicitly declares a non-English language. | Remove it from the curated corpus or provide a separately reviewed English source. |
+| `corpus_changed_during_sync` | Files changed while synchronization was running. | Stop concurrent edits and rerun `build-index`. |
+| `invalid_search` | The query is empty/non-searchable or `--top` is outside 1–20. | Correct the query or limit. |
+
+`status` returns JSON and may exit successfully even when the state is not
+fresh. Automation should inspect `state` or `is_fresh`, not only the process
+exit code.
+
+## Legacy MCP adapter
+
+The repository still contains `main/mcp_server.py` for local stdio clients. It
+delegates to the same explicit English FTS5 index, but it is not the final
+hardened MCP contract. Test its current tool calls with:
+
+```bash
+uv run python -m main.mcp_server --test
+```
+
+For a client configuration, use the repository's absolute `.venv/bin/python`,
+arguments `-m main.mcp_server`, and the repository root as `cwd`. See the
+[`clone-to-first-query onboarding specification`](docs/prototypes/009-clone-to-first-query-onboarding.md)
+for an example.
+
+## Further reading
+
+- [`CONTEXT.md`](CONTEXT.md) — canonical domain vocabulary.
+- [`English Evidence Passage Synchronization`](docs/specs/010-english-evidence-passage-sync.md)
+  — implemented retrieval contract.
+- [`Local retrieval and MCP ADR`](docs/adr/0001-local-hybrid-retrieval-and-mcp-contract.md)
+  — architecture and deferred work.
+- [`English retrieval foundation`](docs/research/006-english-retrieval-foundation.md)
+  — benchmark and model-selection boundaries.
