@@ -16,7 +16,10 @@ The active retrieval foundation is deliberately simple:
 
 Prerequisites:
 
-- Git;
+- macOS, Linux, or Windows 11 through WSL2; native Windows is not supported by
+  the current onboarding flow;
+- a POSIX-compatible shell for the commands below;
+- Git 2.30 or newer;
 - Python 3.10 or newer;
 - `uv`;
 - a Python SQLite build with FTS5 and JSON1 support.
@@ -99,8 +102,10 @@ uv run endurance-kb validate
 ```
 
 Validation errors are blocking. Warnings are advisory and can be numerous for
-converted books with unresolved original links; inspect them, but do not assume
-a zero exit code means there were no warnings.
+converted books with unresolved original links. The CLI prints every error but
+only the first 15 warnings, so a zero exit code does not mean there were no
+warnings. The add-source workflow below includes a targeted command that prints
+all warnings for the new file.
 
 ### Standardize frontmatter
 
@@ -182,7 +187,10 @@ key_takeaways:
 
 Rules:
 
-- `title`, `category`, `topics`, and `summary` are required by validation.
+- Every field shown in the template is part of the canonical new-source
+  contract. The current validator blocks only on `title`, `category`, `topics`,
+  and `summary`; that narrower automated check does not make the other fields
+  optional.
 - The complete source must be English. `language: en` documents that contract;
   ingestion rejects an explicitly non-English value but does not detect the
   language of unlabelled prose.
@@ -193,8 +201,12 @@ Rules:
 - Use `category: book` for books.
 - Do not add `source_type`, chunk IDs, passage boundaries, or citation line
   numbers. Ingestion derives them.
-- Include `source`, `author`, `date`, and `key_takeaways` only when known and
-  supported. Omit an optional value instead of fabricating it.
+- Record the real source, author, and publication date. If the original does not
+  identify an author or date, use `author: "Unknown"` or `date: null` rather
+  than inventing one. Do not ingest evidence whose provenance cannot be
+  established.
+- Keep only directly supported `key_takeaways`; use `key_takeaways: []` when no
+  takeaways have been deliberately curated.
 
 ### 3. Preserve attributable source content
 
@@ -215,6 +227,11 @@ uv run endurance-kb build-index
 uv run endurance-kb status
 uv run endurance-kb validate
 
+# The validator CLI shows only the first 15 global warnings. This prints every
+# warning belonging to the new source; replace p with its relative .md path.
+uv run python -c \
+  'from main.utils.kb_engine import KBEngine; p="Articles/example/threshold-testing.md"; r=KBEngine().validate(); print(*(w for w in r["warnings"] if f"[{p}]" in w), sep="\n")'
+
 # Use the exact relative path without .md and a phrase unique to the new source.
 uv run endurance-kb search "distinct English phrase" \
   --source Articles/example/threshold-testing --format json
@@ -228,7 +245,8 @@ Before committing:
 
 - confirm `status` is fresh and the source-filtered search returns the expected
   Evidence Passage;
-- review every validation warning related to the new source;
+- review every warning printed by the targeted new-source command; blank output
+  means it found none for that path;
 - include the new source and regenerated `Knowledge_base/INDEX.md`;
 - never hand-edit or commit `main/.kb_index.sqlite`;
 - update `Books/_summary/INDEX.md` only when the task explicitly includes a
@@ -245,7 +263,9 @@ Before changing the repository:
    specification, and `Knowledge_base/TAXONOMY.md`.
 2. Claim tracked work through the GitHub issue workflow described in
    [`docs/agents/issue-tracker.md`](docs/agents/issue-tracker.md). If GitHub is
-   unavailable or read-only, report that constraint explicitly.
+   unavailable or read-only, report the constraint and stop. Proceed without an
+   assignment only when the user explicitly authorizes that exception, and
+   document the authorization.
 3. Keep source edits scoped. Do not rewrite unrelated evidence, casually rename
    sources, or run corpus-wide standardization.
 4. Never edit the generated root `Knowledge_base/INDEX.md` or the local SQLite
