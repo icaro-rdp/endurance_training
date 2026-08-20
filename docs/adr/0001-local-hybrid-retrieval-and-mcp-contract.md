@@ -57,9 +57,9 @@ The first implementation increment must establish trustworthy passage ingestion 
 - The fingerprint detects additions, content edits, renames, deletions, and taxonomy changes without relying on filesystem modification times.
 - `status` compares the current and indexed fingerprints. Search and passage lookup fail fast with `stale_index` when they differ.
 
-### 5. MCP Direction
+### 5. MCP Server Contract
 
-The responsibility boundary remains: the Knowledge Base retrieves citation-quality Evidence Passages, while a connected LLM performs Grounded Synthesis. Modernizing `main/mcp_server.py` to the final evidence-oriented tool contract, official SDK transport, structured domain errors, and strict document-path containment is deferred beyond this increment. The existing legacy adapter must not be described as that final contract.
+The responsibility boundary remains: the Knowledge Base retrieves citation-quality Evidence Passages, while a connected LLM performs Grounded Synthesis. The MCP server (`main/mcp_server.py`, command `endurance-kb-mcp`) implements the official MCP Python SDK with stdio transport, exposes passage retrieval tools (`search_passages`, `get_passage`, `get_document`, `get_kb_status`, `get_taxonomy`, `get_sitemap`), enforces strict path containment against directory traversal, and maps domain errors to actionable diagnostics.
 
 ### 6. Benchmark-Gated Semantic Retrieval
 

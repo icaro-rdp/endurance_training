@@ -34,7 +34,7 @@ This document records the ubiquitous language, core domain concepts, and active 
     category/topic taxonomy warnings, targeted source diagnostics, and sitemap
     integrity. Ambiguous taxonomy corrections remain a contributor review
     responsibility.
-- **MCP Adapter (`main/mcp_server.py`)**: Existing stdio adapter for legacy Knowledge Base tools. Migration to the final evidence-oriented MCP contract is deferred and must not be treated as part of the active retrieval foundation.
+- **MCP Server (`main/mcp_server.py`)**: Official MCP Python SDK stdio server (`endurance-kb-mcp`) exposing `search_passages`, `get_passage`, `get_document` (with strict path containment), `get_kb_status`, `get_taxonomy`, and `get_sitemap` for connected LLM retrieval and Grounded Synthesis.
 - **CLI Adapter (`main/cli.py`)**: Thin command-line interface for explicit index synchronization, freshness status, English lexical search, validation, and frontmatter maintenance.
 
 ## Deferred Retrieval Work

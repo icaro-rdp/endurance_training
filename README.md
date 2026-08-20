@@ -321,20 +321,82 @@ Before changing the repository:
 fresh. Automation should inspect `state` or `is_fresh`, not only the process
 exit code.
 
-## Legacy MCP adapter
+## MCP server for LLMs
 
-The repository still contains `main/mcp_server.py` for local stdio clients. It
-delegates to the same explicit English FTS5 index, but it is not the final
-hardened MCP contract. Test its current tool calls with:
+The repository includes a Model Context Protocol (MCP) server built with the
+official MCP Python SDK (`main/mcp_server.py`), exposing `KBEngine` capabilities
+over standard I/O (stdio) to connected LLMs (Claude Desktop, Cursor, Antigravity,
+LibreChat, etc.).
+
+### Tools
+
+- `search_passages`: Lexical BM25 retrieval over citation-stable Evidence
+  Passages with line-range citations (`#L45-L89`), section breadcrumbs, and
+  optional `category`, `topic`, and `source_slug` filters.
+- `search_knowledge_base`: Backward-compatible alias for `search_passages`.
+- `get_passage`: Fetch complete metadata and content of an Evidence Passage by
+  its stable `chunk_id`.
+- `get_document`: Retrieve full Markdown text of a curated Knowledge Source
+  with strict path containment against directory traversal.
+- `get_kb_status`: Check Derived Index freshness (`fresh`, `stale`, `missing`),
+  document count, passage count, and content digests.
+- `get_taxonomy`: Get canonical categories and allowed topics.
+- `get_sitemap`: Get the master document catalog.
+- `validate_kb`: Run health and frontmatter validation.
+
+### Resources
+
+- `endurance-kb://sitemap`: Master document sitemap.
+- `endurance-kb://taxonomy`: Canonical taxonomy structure.
+- `endurance-kb://status`: Current index freshness status.
+
+### Self-test
+
+Verify tool and resource execution locally:
 
 ```bash
-uv run python -m main.mcp_server --test
+uv run endurance-kb-mcp --test
 ```
 
-For a client configuration, use the repository's absolute `.venv/bin/python`,
-arguments `-m main.mcp_server`, and the repository root as `cwd`. See the
-[`clone-to-first-query onboarding specification`](docs/prototypes/009-clone-to-first-query-onboarding.md)
-for an example.
+### LLM client configuration
+
+Add the server to your client's MCP configuration (e.g. `claude_desktop_config.json`
+or client settings):
+
+```json
+{
+  "mcpServers": {
+    "endurance-kb": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/absolute/path/to/endurance_training",
+        "run",
+        "endurance-kb-mcp"
+      ],
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      }
+    }
+  }
+}
+```
+
+Or using the virtual environment directly:
+
+```json
+{
+  "mcpServers": {
+    "endurance-kb": {
+      "command": "/absolute/path/to/endurance_training/.venv/bin/endurance-kb-mcp",
+      "cwd": "/absolute/path/to/endurance_training",
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      }
+    }
+  }
+}
+```
 
 ## Further reading
 

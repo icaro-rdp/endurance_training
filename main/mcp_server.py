@@ -1,213 +1,324 @@
 #!/usr/bin/env python3
-"""
-Model Context Protocol (MCP) Server for Endurance Training Knowledge Base.
-Exposes KBEngine capabilities over standard I/O (stdio JSON-RPC).
+"""Model Context Protocol (MCP) Server for Endurance Training Knowledge Base.
+
+Exposes KBEngine capabilities over stdio using the official MCP Python SDK.
 """
 
-import asyncio
+from __future__ import annotations
+
 import json
 import sys
+from pathlib import Path
+from typing import Any
 
-if __package__:
-    from main.utils.kb_engine import KBEngine
-else:
-    # Keep direct script execution working without mutating ``sys.path``.
-    from utils.kb_engine import KBEngine
+from mcp.server.mcpserver import MCPServer
+from mcp.types import TextContent
 
-engine = KBEngine()
+try:
+    from main.utils.kb_engine import KBEngine, KBEngineError
+except ModuleNotFoundError:
+    # Keep direct script execution working without mutating sys.path.
+    from utils.kb_engine import (  # type: ignore[no-redef,import-not-found]
+        KBEngine,
+        KBEngineError,
+    )
 
-TOOLS_LIST = [
-    {
-        "name": "search_knowledge_base",
-        "description": (
-            "Perform lexical passage search across endurance training articles, "
-            "podcasts, and books. Returns ranked excerpts with exact file references."
+
+def create_mcp_server(
+    kb_dir: Path | None = None,
+    db_path: Path | None = None,
+) -> tuple[MCPServer, KBEngine]:
+    """Create and configure the Endurance Knowledge Base MCP Server."""
+    engine = KBEngine(kb_dir=kb_dir, db_path=db_path)
+    server = MCPServer(
+        name="endurance-knowledge-base",
+        version="0.2.0",
+        instructions=(
+            "Endurance Training Knowledge Base retriever. "
+            "Use search_passages to retrieve citation-backed Evidence Passages "
+            "for training, physiology, periodization, HIIT, Zone 2, and nutrition. "
+            "Passages contain exact source lines, section hierarchy, and source links."
         ),
-        "inputSchema": {
-            "type": "object",
-            "properties": {
-                "query": {"type": "string", "description": "Search query or question"},
-                "category": {
-                    "type": "string",
-                    "description": (
-                        "Optional category filter: metrics, hiit, zone2, strength, "
-                        "nutrition, physiology, periodization, book"
-                    ),
-                },
-                "topic": {
-                    "type": "string",
-                    "description": (
-                        "Optional topic tag filter e.g. VO2max, FTP, Double_threshold"
-                    ),
-                },
-                "top_k": {
-                    "type": "integer",
-                    "description": "Number of top results to return (default 5)",
-                },
-            },
-            "required": ["query"],
-        },
-    },
-    {
-        "name": "get_kb_index",
-        "description": (
-            "Get the Master Knowledge Base sitemap, catalog, and taxonomy structure."
+    )
+
+    @server.tool(
+        name="search_passages",
+        description=(
+            "Search for citation-stable Evidence Passages across endurance "
+            "training articles, podcasts, and books using lexical BM25 retrieval. "
+            "Returns ranked excerpts with exact line ranges and section hierarchy."
         ),
-        "inputSchema": {"type": "object", "properties": {}},
-    },
-    {
-        "name": "get_document",
-        "description": (
-            "Retrieve full contents of a specific document in the Knowledge Base."
-        ),
-        "inputSchema": {
-            "type": "object",
-            "properties": {
-                "rel_path": {
-                    "type": "string",
-                    "description": (
-                        "Relative path e.g. Articles/knowledgeIsWatts/hiit/"
-                        "hiit-4x8-vs-4x4-vs-4x16.md"
-                    ),
-                }
-            },
-            "required": ["rel_path"],
-        },
-    },
-    {
-        "name": "validate_kb",
-        "description": (
-            "Run diagnostic check on Knowledge Base health, YAML frontmatters, "
-            "and broken links."
-        ),
-        "inputSchema": {"type": "object", "properties": {}},
-    },
-]
+    )
+    def search_passages(
+        query: str,
+        category: str | None = None,
+        topic: str | None = None,
+        source_slug: str | None = None,
+        top_k: int = 5,
+    ) -> str:
+        """Search the Knowledge Base for evidence passages matching the athlete query.
 
-
-def handle_tool_call(name: str, args: dict):
-    if name == "search_knowledge_base":
-        query = args.get("query", "")
-        category = args.get("category")
-        topic = args.get("topic")
-        top_k = int(args.get("top_k", 5))
-
-        results = engine.search(
-            query=query, category=category, topic=topic, top_k=top_k
-        )
-        text = engine.format_llm_context(results)
-        return [{"type": "text", "text": text}]
-
-    elif name == "get_kb_index":
-        if engine.index_file.exists():
-            content = engine.index_file.read_text(encoding="utf-8")
-        else:
-            content = engine.build_sitemap()
-        return [{"type": "text", "text": content}]
-
-    elif name == "get_document":
-        rel_path = args.get("rel_path", "").lstrip("/")
-        doc_path = engine.kb_dir / rel_path
-        if doc_path.exists() and doc_path.is_file():
-            content = doc_path.read_text(encoding="utf-8")
-            return [{"type": "text", "text": content}]
-        else:
-            return [{"type": "text", "text": f"Error: Document {rel_path} not found."}]
-
-    elif name == "validate_kb":
-        res = engine.validate()
-        status = "PASSED" if res["is_healthy"] else "FAILED"
-        text = (
-            f"Status: {status}\n"
-            f"Total Docs: {res['total_docs']}\n"
-            f"Errors: {len(res['errors'])}\n"
-            f"Warnings: {len(res['warnings'])}"
-        )
-        return [{"type": "text", "text": text}]
-
-    else:
-        raise ValueError(f"Unknown tool: {name}")
-
-
-async def run_stdio_server():
-    reader = asyncio.StreamReader()
-    protocol = asyncio.StreamReaderProtocol(reader)
-    await asyncio.get_event_loop().connect_read_pipe(lambda: protocol, sys.stdin)
-    writer = sys.stdout.buffer
-
-    def send_json(data):
-        raw = json.dumps(data).encode("utf-8")
-        writer.write(raw + b"\n")
-        writer.flush()
-
-    while True:
+        Args:
+            query: The search term or athlete question in English.
+            category: Optional category filter (e.g. metrics, hiit, zone2, strength,
+                nutrition, physiology, periodization, book).
+            topic: Optional topic filter (e.g. VO2max, FTP, Double_threshold,
+                Cardiac_hypertrophy).
+            source_slug: Optional source slug filter (e.g.
+                Fick_equation_and_cardiac_remodeling).
+            top_k: Maximum number of passages to return (default 5, max 20).
+        """
         try:
-            line = await reader.readline()
-            if not line:
-                break
-            req = json.loads(line.decode("utf-8"))
-            method = req.get("method")
-            req_id = req.get("id")
+            clamped_k = max(1, min(int(top_k), 20))
+            results = engine.search(
+                query=query,
+                category=category,
+                topic=topic,
+                source_slug=source_slug,
+                top_k=clamped_k,
+            )
+            return engine.format_llm_context(results)
+        except KBEngineError as exc:
+            return f"Error: [{exc.code}] {exc}"
+        except Exception as exc:
+            return f"Unexpected search error: {exc}"
 
-            if method == "initialize":
-                send_json(
-                    {
-                        "jsonrpc": "2.0",
-                        "id": req_id,
-                        "result": {
-                            "protocolVersion": "2024-11-05",
-                            "capabilities": {"tools": {}},
-                            "serverInfo": {
-                                "name": "endurance-knowledge-base",
-                                "version": "1.0.0",
-                            },
-                        },
-                    }
+    @server.tool(
+        name="search_knowledge_base",
+        description=(
+            "Alias for search_passages. Search endurance training evidence passages "
+            "with exact line citations."
+        ),
+    )
+    def search_knowledge_base(
+        query: str,
+        category: str | None = None,
+        topic: str | None = None,
+        top_k: int = 5,
+    ) -> str:
+        """Legacy alias for search_passages."""
+        return search_passages(query=query, category=category, topic=topic, top_k=top_k)
+
+    @server.tool(
+        name="get_passage",
+        description="Retrieve full details of an Evidence Passage by its chunk_id.",
+    )
+    def get_passage(chunk_id: str) -> str:
+        """Retrieve a specific Evidence Passage by chunk ID.
+
+        Args:
+            chunk_id: Unique SHA-256 derived identifier for the passage.
+        """
+        try:
+            passage = engine.get_passage(chunk_id.strip())
+            if passage is None:
+                return (
+                    "Error: [passage_not_found] Passage with chunk_id "
+                    f"'{chunk_id}' not found."
                 )
-            elif method == "notifications/initialized":
-                pass
-            elif method == "tools/list":
-                send_json(
-                    {"jsonrpc": "2.0", "id": req_id, "result": {"tools": TOOLS_LIST}}
+            loc = f"{passage.rel_path}#L{passage.start_line}-L{passage.end_line}"
+            return (
+                f"Passage ID: {passage.chunk_id}\n"
+                f"Source: {loc}\n"
+                f"Citation Link: {passage.citation}\n"
+                f"Title: {passage.title}\n"
+                f"Author: {passage.author}\n"
+                f"Category: {passage.category}\n"
+                f"Topics: {', '.join(passage.topics)}\n"
+                f"Section: {passage.section_path}\n"
+                f"Size Status: {passage.size_status.value} "
+                f"({passage.word_count} words)\n"
+                f"\n--- Content ---\n"
+                f"{passage.content}"
+            )
+        except KBEngineError as exc:
+            return f"Error: [{exc.code}] {exc}"
+        except Exception as exc:
+            return f"Unexpected error retrieving passage: {exc}"
+
+    @server.tool(
+        name="get_document",
+        description=(
+            "Retrieve the full Markdown text of a curated Knowledge Source document. "
+            "Path must be relative to Knowledge_base/."
+        ),
+    )
+    def get_document(rel_path: str) -> str:
+        """Retrieve full contents of a curated document with strict path containment.
+
+        Args:
+            rel_path: Relative path within Knowledge_base/ (e.g.
+                'Articles/knowledgeIsWatts/hiit/hiit-4x8-vs-4x4-vs-4x16.md').
+        """
+        try:
+            clean_rel = rel_path.strip().lstrip("/")
+            doc_path = (engine.kb_dir / clean_rel).resolve()
+            if not doc_path.is_relative_to(engine.kb_dir.resolve()):
+                return (
+                    "Error: [access_denied] Path "
+                    f"'{rel_path}' is outside the Knowledge Base."
                 )
-            elif method == "tools/call":
-                params = req.get("params", {})
-                t_name = params.get("name")
-                t_args = params.get("arguments", {})
-                try:
-                    res_content = handle_tool_call(t_name, t_args)
-                    send_json(
-                        {
-                            "jsonrpc": "2.0",
-                            "id": req_id,
-                            "result": {"content": res_content},
-                        }
-                    )
-                except (KeyError, ValueError, RuntimeError, OSError) as e:
-                    send_json(
-                        {
-                            "jsonrpc": "2.0",
-                            "id": req_id,
-                            "error": {"code": -32603, "message": str(e)},
-                        }
-                    )
-        except json.JSONDecodeError:
-            pass
+            if not doc_path.is_file():
+                return (
+                    "Error: [source_not_found] Document "
+                    f"'{rel_path}' not found in the Knowledge Base."
+                )
+            return doc_path.read_text(encoding="utf-8")
+        except Exception as exc:
+            return f"Error reading document '{rel_path}': {exc}"
+
+    @server.tool(
+        name="get_kb_status",
+        description="Inspect freshness status and metadata of the Derived Index.",
+    )
+    def get_kb_status() -> str:
+        """Inspect the current freshness state of the local passage index."""
+        try:
+            status = engine.get_kb_status()
+            return json.dumps(status.to_dict(), indent=2)
+        except Exception as exc:
+            return f"Error retrieving index status: {exc}"
+
+    @server.tool(
+        name="get_taxonomy",
+        description="Get canonical categories and allowed topics in Knowledge Base.",
+    )
+    def get_taxonomy() -> str:
+        """Get canonical taxonomy categories and topics."""
+        try:
+            tax = engine.taxonomy
+            cats = tax.categories()
+            data: dict[str, Any] = {
+                "categories": cats,
+                "topics_by_category": {cat: tax.topics(cat) for cat in cats},
+            }
+            return json.dumps(data, indent=2)
+        except Exception as exc:
+            return f"Error retrieving taxonomy: {exc}"
+
+    @server.tool(
+        name="get_sitemap",
+        description="Get Master Knowledge Base sitemap, catalog, and document listing.",
+    )
+    def get_sitemap() -> str:
+        """Get the master catalog / sitemap."""
+        try:
+            if engine.index_file.exists():
+                return engine.index_file.read_text(encoding="utf-8")
+            return engine.build_sitemap()
+        except Exception as exc:
+            return f"Error retrieving sitemap: {exc}"
+
+    @server.tool(
+        name="get_kb_index",
+        description="Alias for get_sitemap. Get the master catalog / sitemap.",
+    )
+    def get_kb_index() -> str:
+        """Legacy alias for get_sitemap."""
+        return get_sitemap()
+
+    @server.tool(
+        name="validate_kb",
+        description=(
+            "Run diagnostic validation on Knowledge Base health, frontmatter schemas, "
+            "and link integrity."
+        ),
+    )
+    def validate_kb() -> str:
+        """Run health validation across the Knowledge Base."""
+        try:
+            res = engine.validate()
+            status = "PASSED" if res["is_healthy"] else "FAILED"
+            return (
+                f"Validation Status: {status}\n"
+                f"Total Documents: {res['total_docs']}\n"
+                f"Errors: {len(res['errors'])}\n"
+                f"Warnings: {len(res['warnings'])}"
+            )
+        except Exception as exc:
+            return f"Error running validation: {exc}"
+
+    # Resources
+    @server.resource("endurance-kb://sitemap", name="Knowledge Base Sitemap")
+    def resource_sitemap() -> str:
+        if engine.index_file.exists():
+            return engine.index_file.read_text(encoding="utf-8")
+        return engine.build_sitemap()
+
+    @server.resource("endurance-kb://taxonomy", name="Knowledge Base Taxonomy")
+    def resource_taxonomy() -> str:
+        taxonomy_file = engine.kb_dir / "TAXONOMY.md"
+        if taxonomy_file.exists():
+            return taxonomy_file.read_text(encoding="utf-8")
+        return get_taxonomy()
+
+    @server.resource("endurance-kb://status", name="Index Freshness Status")
+    def resource_status() -> str:
+        return get_kb_status()
+
+    return server, engine
 
 
-def main():
+def _extract_text_result(res: Any) -> str:
+    """Helper to extract text output from an MCP tool call result."""
+    if hasattr(res, "content") and isinstance(res.content, list):
+        for block in res.content:
+            if isinstance(block, TextContent):
+                return block.text
+            if hasattr(block, "text") and isinstance(block.text, str):
+                return block.text
+    if hasattr(res, "structured_content") and isinstance(res.structured_content, dict):
+        result_val = res.structured_content.get("result")
+        if isinstance(result_val, str):
+            return result_val
+    return str(res)
+
+
+def main() -> None:
+    """Run MCP server in stdio mode, or execute diagnostic self-test with --test."""
     if "--test" in sys.argv:
-        print("Testing MCP Tool Calls via KBEngine...")
-        res = handle_tool_call(
-            "search_knowledge_base", {"query": "Zone 2 fat oxidation", "top_k": 2}
-        )
-        print("search_knowledge_base:", res[0]["text"][:250], "...\n")
-        res_idx = handle_tool_call("get_kb_index", {})
-        print("get_kb_index:", res_idx[0]["text"][:150], "...\n")
-        print("MCP Server tools verified successfully!")
+        print("Testing MCP Server tools and resources...")
+        server, _ = create_mcp_server()
+        import asyncio
+
+        async def run_test() -> None:
+            tools = await server.list_tools()
+            print(f"Registered tools ({len(tools)}): {[t.name for t in tools]}")
+            resources = await server.list_resources()
+            resource_names = [r.name for r in resources]
+            print(f"Registered resources ({len(resources)}): {resource_names}")
+
+            # Test search_passages
+            res = await server.call_tool(
+                "search_passages", {"query": "Zone 2 fat oxidation", "top_k": 2}
+            )
+            print("\n--- Tool: search_passages ---")
+            print(_extract_text_result(res)[:300], "...\n")
+
+            # Test get_kb_status
+            res_status = await server.call_tool("get_kb_status", {})
+            print("--- Tool: get_kb_status ---")
+            print(_extract_text_result(res_status), "\n")
+
+            # Test get_taxonomy
+            res_tax = await server.call_tool("get_taxonomy", {})
+            print("--- Tool: get_taxonomy ---")
+            print(_extract_text_result(res_tax)[:200], "...\n")
+
+            # Test get_document containment
+            res_doc = await server.call_tool(
+                "get_document", {"rel_path": "../../../etc/passwd"}
+            )
+            print("--- Tool: get_document (traversal defense) ---")
+            print(_extract_text_result(res_doc), "\n")
+
+            print("MCP Server verified successfully!")
+
+        asyncio.run(run_test())
         sys.exit(0)
 
-    asyncio.run(run_stdio_server())
+    server, _ = create_mcp_server()
+    server.run(transport="stdio")
 
 
 if __name__ == "__main__":
