@@ -76,6 +76,7 @@ These intervals promote eccentric cardiac hypertrophy and maximize stroke volume
         expected_tools = {
             "search_passages",
             "search_knowledge_base",
+            "search_multi_passages",
             "get_passage",
             "get_document",
             "get_kb_status",
@@ -105,6 +106,15 @@ These intervals promote eccentric cardiac hypertrophy and maximize stroke volume
         self.assertIn("HIIT Intervals for VO2max", text)
         self.assertIn("Source Link:", text)
         self.assertIn("#L", text)
+
+    async def test_search_multi_passages_tool(self) -> None:
+        res = await self.server.call_tool(
+            "search_multi_passages",
+            {"queries": ["eccentric cardiac hypertrophy", "4x8 VO2max intervals"], "top_k": 5},
+        )
+        text = _extract_text_result(res)
+        self.assertIn("Knowledge Base Context", text)
+        self.assertIn("HIIT Intervals for VO2max", text)
 
     async def test_search_knowledge_base_legacy_alias(self) -> None:
         res = await self.server.call_tool(

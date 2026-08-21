@@ -30,6 +30,7 @@ from .models import (
     IndexStatus,
     PassageSizeStatus,
 )
+from .query_preprocessor import preprocess_query
 from .sync import build_corpus_manifest
 
 _SCHEMA_VERSION = "2"
@@ -186,10 +187,10 @@ class PassageIndex:
         if not tokens:
             raise InvalidSearchError("query must contain at least one searchable term")
         self._require_fresh_index()
-        fts_query = " OR ".join(f'"{token}"' for token in tokens)
+        fts_query = preprocess_query(query)
 
         sql = f"""
-            SELECT {_PASSAGE_COLUMNS}, bm25(passages_fts) AS lexical_rank
+            SELECT {_PASSAGE_COLUMNS}, bm25(passages_fts, 5.0, 1.0, 2.0, 4.0, 2.0, 1.0) AS lexical_rank
             FROM passages_fts
             JOIN passages p ON p.id = passages_fts.rowid
             JOIN sources s ON s.id = p.source_id

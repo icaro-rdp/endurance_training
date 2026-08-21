@@ -68,6 +68,34 @@ class KBEngine:
             limit=top_k,
         )
 
+    def multi_search(
+        self,
+        queries: Sequence[str],
+        category: str | None = None,
+        topic: str | None = None,
+        source_slug: str | None = None,
+        top_k: int = 5,
+    ) -> tuple[EvidenceSearchResult, ...]:
+        from .hybrid import reciprocal_rank_fusion
+
+        ranking_lists = []
+        for q in queries:
+            clean_q = q.strip()
+            if clean_q:
+                res = self.search(
+                    clean_q,
+                    category=category,
+                    topic=topic,
+                    source_slug=source_slug,
+                    top_k=min(max(top_k * 2, 10), 20),
+                )
+                if res:
+                    ranking_lists.append(res)
+
+        if not ranking_lists:
+            return ()
+        return reciprocal_rank_fusion(ranking_lists, k=60, limit=top_k)
+
     def format_llm_context(self, results: Sequence[EvidenceSearchResult]) -> str:
         if not results:
             return "No relevant Knowledge Base entries found."

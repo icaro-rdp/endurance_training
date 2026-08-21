@@ -100,6 +100,44 @@ def create_mcp_server(
         return search_passages(query=query, category=category, topic=topic, top_k=top_k)
 
     @server.tool(
+        name="search_multi_passages",
+        description=(
+            "Execute multiple distinct sub-queries simultaneously and merge results using "
+            "Reciprocal Rank Fusion (RRF). Ideal for compound or multi-faceted athlete questions."
+        ),
+    )
+    def search_multi_passages(
+        queries: list[str],
+        category: str | None = None,
+        topic: str | None = None,
+        source_slug: str | None = None,
+        top_k: int = 5,
+    ) -> str:
+        """Search the Knowledge Base using multiple sub-queries with rank fusion.
+
+        Args:
+            queries: List of search queries/sub-questions in English.
+            category: Optional category filter.
+            topic: Optional topic filter.
+            source_slug: Optional source slug filter.
+            top_k: Maximum number of combined passages to return (default 5, max 20).
+        """
+        try:
+            clamped_k = max(1, min(int(top_k), 20))
+            results = engine.multi_search(
+                queries=queries,
+                category=category,
+                topic=topic,
+                source_slug=source_slug,
+                top_k=clamped_k,
+            )
+            return engine.format_llm_context(results)
+        except KBEngineError as exc:
+            return f"Error: [{exc.code}] {exc}"
+        except Exception as exc:
+            return f"Unexpected search error: {exc}"
+
+    @server.tool(
         name="get_passage",
         description="Retrieve full details of an Evidence Passage by its chunk_id.",
     )

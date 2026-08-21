@@ -14,13 +14,24 @@ from main.utils.kb_engine.errors import KBEngineError
 
 
 def handle_search(engine: KBEngine, args: argparse.Namespace) -> None:
-    results = engine.search(
-        args.query,
-        category=args.category,
-        topic=args.topic,
-        source_slug=args.source,
-        top_k=args.top,
-    )
+    if ";;" in args.query or "||" in args.query:
+        delimiter = ";;" if ";;" in args.query else "||"
+        sub_queries = [q.strip() for q in args.query.split(delimiter) if q.strip()]
+        results = engine.multi_search(
+            sub_queries,
+            category=args.category,
+            topic=args.topic,
+            source_slug=args.source,
+            top_k=args.top,
+        )
+    else:
+        results = engine.search(
+            args.query,
+            category=args.category,
+            topic=args.topic,
+            source_slug=args.source,
+            top_k=args.top,
+        )
 
     if args.format == "json":
         print(json.dumps([result.to_dict() for result in results], indent=2))
