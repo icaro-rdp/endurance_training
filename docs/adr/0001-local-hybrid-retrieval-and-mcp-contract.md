@@ -1,8 +1,8 @@
 # 1. Local English Passage Retrieval Foundation & MCP Direction
 
-- **Status**: Accepted, amended for the first implementation increment
+- **Status**: Accepted for the lexical foundation; superseded in part by ADR 0002 for local hybrid retrieval
 - **Date**: 2026-08-10
-- **Amended**: 2026-08-20
+- **Amended**: 2026-08-20, 2026-08-23
 - **Deciders**: `icaro-rdp` & Antigravity Agent
 - **Consulted Sub-issues**: GitHub Issues #2, #3, #4, #5, #6, #7, #8
 
@@ -63,7 +63,7 @@ The responsibility boundary remains: the Knowledge Base retrieves citation-quali
 
 ### 6. Benchmark-Gated Semantic Retrieval
 
-Dense embeddings, vector storage, fusion, reranking, and diversified ranking remain undecided implementation work. Before selecting any model or backend, the repository must provide an executable English benchmark with valid passage-level gold targets, baseline metrics, latency reporting, and negative-query evaluation. A later ADR amendment will record any adopted stack.
+The lexical foundation remains the active implementation. ADR 0002 selects local embeddings, `sqlite-vec`, and rank fusion as the next architecture. Before hybrid retrieval becomes the default ranking path, the repository must provide an executable English benchmark with valid passage-level gold targets, baseline metrics, latency reporting, negative-query evaluation, and a measurable improvement over the lexical baseline.
 
 ---
 

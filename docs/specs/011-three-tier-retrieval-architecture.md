@@ -1,11 +1,16 @@
 # Hybrid Passage Retrieval & Query Intelligence Architecture
 
 **Document:** `docs/specs/011-hybrid-retrieval-architecture.md`  
-**Status:** Implemented / Active  
-**Context:** [Local English Passage Retrieval Foundation & MCP Direction](../adr/0001-local-hybrid-retrieval-and-mcp-contract.md)  
+**Status:** Superseded design draft; not implemented<br>
+**Context:** [Local Hybrid Retrieval in One SQLite Derived Index](../adr/0002-local-hybrid-retrieval-in-one-sqlite-index.md)<br>
 **Parent Issue:** [Build a private evidence-grounded endurance knowledge system](https://github.com/icaro-rdp/endurance_training/issues/1)
 
 ---
+
+> **Status note (2026-08-23):** This document describes an earlier aspirational
+> hybrid design. The current implementation remains lexical FTS5, and the
+> approved replacement direction is defined by ADR 0002. Do not treat the
+> implementation claims below as current behavior.
 
 ## 1. Architecture Overview & Mental Model
 
