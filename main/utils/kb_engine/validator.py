@@ -52,7 +52,6 @@ class KBValidator:
             "",
             "## Quick Links",
             "- 📖 [Taxonomy & Definitions](TAXONOMY.md)",
-            "- 📚 [Books Summaries](Books/_summary/INDEX.md)",
             "",
             "---",
             "",

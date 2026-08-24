@@ -14,7 +14,6 @@ class TaxonomyRegistry:
         "zone2": "zone2",
         "testing": "metrics",
         "planning": "periodization",
-        "Books": "book",
     }
 
     TOPIC_KEYWORDS: ClassVar[dict[str, list[str]]] = {
@@ -26,6 +25,22 @@ class TaxonomyRegistry:
         "LT1_VT1": ["lt1", "vt1", "first threshold", "aerobic threshold"],
         "LT2_VT2": ["lt2", "vt2", "second threshold", "lactate threshold", "mss"],
         "Durability": ["durability", "fatigue resistance"],
+        "Power_vs_HR": [
+            "power vs hr",
+            "power vs heart rate",
+            "decoupling",
+            "drift",
+            "aerobic decoupling",
+            "power-hr",
+            "flat vs uphill",
+        ],
+        "Heart_rate_variability": [
+            "hrv",
+            "heart rate variability",
+            "rmssd",
+            "sdnn",
+            "autonomic",
+        ],
         "Short_intervals": ["30s", "short interval", "short-interval", "intermittent"],
         "Long_intervals": ["4x8", "4x4", "4x16", "long interval"],
         "Decreasing_intervals": ["decreasing", "front-loaded"],
@@ -38,6 +53,22 @@ class TaxonomyRegistry:
         "Sodium_bicarbonate": ["bicarbonate", "sodium bicarbonate", "bicarb"],
         "Beta_alanine": ["beta alanine", "beta-alanine"],
         "Carbohydrate_ratio": ["glucose", "fructose", "carbohydrate"],
+        "Underfueling_REDs": [
+            "underfueling",
+            "red-s",
+            "reds",
+            "low energy availability",
+            "lea",
+            "relative energy deficiency",
+        ],
+        "Ergogenic_aids": [
+            "ergogenic",
+            "creatine",
+            "caffeine",
+            "nitrate",
+            "bicarbonate",
+            "supplement",
+        ],
         "Double_threshold": ["double threshold", "norwegian"],
         "Cardiac_hypertrophy": ["cardiac", "stroke volume", "preload", "hypertrophy"],
         "Lactate_shuttle": ["lactate shuttle", "mct1", "mct4"],
@@ -83,7 +114,6 @@ class TaxonomyRegistry:
             "nutrition",
             "physiology",
             "periodization",
-            "book",
         ]
         for cat in default_order:
             if cat not in self._categories:

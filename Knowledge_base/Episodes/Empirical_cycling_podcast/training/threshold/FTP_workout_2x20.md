@@ -4,7 +4,7 @@ category: periodization
 topics:
 - FTP
 - Periodization
-- Glucose_fructose
+- Carbohydrate_ratio
 source: Empirical Cycling Podcast — Kelly Moore & James McKay
 author: Endurance Research
 date: '2025-01-01'

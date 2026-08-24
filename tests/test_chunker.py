@@ -297,21 +297,21 @@ class TestStructureAwareChunker(unittest.TestCase):
             "Articles/shared.md",
             "# Shared\n\nArticle-specific evidence.",
         )
-        book_path = self._write(
-            "Books/shared.md",
-            "# Shared\n\nBook-specific evidence.",
+        episode_path = self._write(
+            "Episodes/shared.md",
+            "# Shared\n\nEpisode-specific evidence.",
         )
         chunker = self._chunker(max_words=100)
 
         article = chunker.chunk_document(article_path)[0]
-        book = chunker.chunk_document(book_path)[0]
+        episode = chunker.chunk_document(episode_path)[0]
 
         self.assertEqual(article.rel_path, "Articles/shared.md")
-        self.assertEqual(book.rel_path, "Books/shared.md")
+        self.assertEqual(episode.rel_path, "Episodes/shared.md")
         self.assertFalse(Path(article.rel_path).is_absolute())
-        self.assertFalse(Path(book.rel_path).is_absolute())
-        self.assertNotEqual(article.source_slug, book.source_slug)
-        self.assertNotEqual(article.chunk_id, book.chunk_id)
+        self.assertFalse(Path(episode.rel_path).is_absolute())
+        self.assertNotEqual(article.source_slug, episode.source_slug)
+        self.assertNotEqual(article.chunk_id, episode.chunk_id)
 
     def test_language_defaults_to_english_without_metadata(self) -> None:
         path = self._write(
@@ -385,26 +385,6 @@ class TestStructureAwareChunker(unittest.TestCase):
 
         self.assertEqual(caught.exception.code, "invalid_source")
         self.assertIn("valid UTF-8", str(caught.exception))
-
-    def test_books_category_is_normalized_to_singular_taxonomy_value(self) -> None:
-        path = self._write(
-            "Books/manual.md",
-            "\n".join(
-                (
-                    "---",
-                    "title: Training Manual",
-                    "category: Books",
-                    "---",
-                    "",
-                    "Book evidence belongs to the canonical category.",
-                )
-            ),
-        )
-
-        passages = self._chunker(max_words=100).chunk_document(path)
-
-        self.assertGreater(len(passages), 0)
-        self.assertTrue(all(passage.category == "book" for passage in passages))
 
     def test_oversized_single_line_is_split_without_exceeding_max_words(self) -> None:
         words = [f"token{index:02d}" for index in range(1, 28)]

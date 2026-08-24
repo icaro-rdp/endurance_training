@@ -5,7 +5,7 @@ topics:
   - "Aerobic_base"
   - "Long_intervals"
   - "Mitochondrial_density"
-  - "Fatigue_management"
+  - "Durability"
   - "Carbohydrate_ratio"
 source: "Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Watts Doc #50)"
 author: "Kolie Moore"

@@ -2,7 +2,7 @@
 title: Can They Be Used Interchangeably?
 category: metrics
 topics:
-- Metrics
+- Power_vs_HR
 source: 'knowledgeiswatt.substack.com/p/62-flat-vs-uphill-power-output Date: February
   27,'
 author: Endurance Research

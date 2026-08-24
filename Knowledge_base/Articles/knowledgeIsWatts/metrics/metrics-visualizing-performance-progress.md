@@ -2,7 +2,8 @@
 title: Am I Doing Better? a Simple Way to Visualize Cycling Performance
 category: metrics
 topics:
-- Metrics
+- FTP
+- Durability
 source: 'knowledgeiswatt.substack.com/p/85-am-i-doing-better-a-simple-way Date: June
   19, 2025'
 author: Endurance Research

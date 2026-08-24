@@ -22,6 +22,7 @@ Core physiological metrics, testing methodologies, and intensity domains.
   - `LT2_VT2` (Second Lactate / Ventilatory Threshold / MSS)
   - `Durability` (Fatigue Resistance over duration/kJ)
   - `Power_vs_HR` (Intensity domain correlation & decoupling)
+  - `Heart_rate_variability` (HRV / autonomic recovery tracking)
 
 ### 2. `hiit`
 High-Intensity Interval Training protocols, mechanics, and session design.
@@ -55,6 +56,8 @@ Ergogenic aids, fueling strategies, and nutritional periodization.
   - `Beta_alanine` (Intracellular buffering agent / carnosine)
   - `Carbohydrate_ratio` (Glucose to fructose 1:0.8 / 2:1 intake)
   - `Antioxidants` (Blunting vs aiding training adaptations)
+  - `Underfueling_REDs` (Relative Energy Deficiency in Sport / Low Energy Availability)
+  - `Ergogenic_aids` (Supplements & performance enhancers)
 
 ### 6. `physiology`
 Underlying biological mechanisms and environmental factors.
@@ -62,6 +65,7 @@ Underlying biological mechanisms and environmental factors.
   - `Cardiac_hypertrophy` (Eccentric left ventricular remodeling & stroke volume)
   - `Lactate_shuttle` (Monocarboxylate transporters MCT1/MCT4)
   - `Temperature_effects` (Heat stress, thermoregulation & sex differences)
+  - `Underfueling_REDs` (Endocrine, metabolic & physiological consequences of LEA)
 
 ### 7. `periodization`
 Macrocycle, mesocycle, and microcycle planning and workload distribution.
@@ -71,6 +75,7 @@ Macrocycle, mesocycle, and microcycle planning and workload distribution.
   - `Microcycles` (7-day, 10-day, shock microcycle designs)
   - `TTA_TTE` (Time-to-Exhaustion at FTP/CP)
   - `Volume_quantification` (TSS, Work in zones, Kilojoules)
+  - `Heart_rate_variability` (HRV-guided training & recovery tracking)
 
 ---
 
@@ -97,7 +102,7 @@ language: en
 category: metrics
 topics:
   - FTP
-source: "Origin URL, podcast name, or book title"
+source: "Origin URL or podcast name"
 author: "Author or speaker"
 date: "YYYY-MM-DD"
 summary: "One or two faithful English sentences."
@@ -115,7 +120,7 @@ Rules:
 
 - `language` is exactly `en`; the complete source must be English.
 - `category` is exactly one of `metrics`, `hiit`, `zone2`, `strength`,
-  `nutrition`, `physiology`, `periodization`, or `book`.
+  `nutrition`, `physiology`, or `periodization`.
 - Every topic uses the exact spelling and case from this file. Do not introduce
   a near-synonym as a one-off tag.
 - `source`, `author`, and `date` record real provenance. A publication date uses

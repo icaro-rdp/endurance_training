@@ -2,7 +2,7 @@
 title: "Creatine's Actual Effects on Cycling Performance: Meta-Analytic Evidence, W/kg Trade-Offs, and Cognitive Realities — Complete Guide"
 category: "nutrition"
 topics:
-  - "Nutrition_strategy"
+  - "Ergogenic_aids"
   - "Sprint_performance"
   - "Aerobic_base"
   - "Heavy_torque"
