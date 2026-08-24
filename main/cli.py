@@ -158,7 +158,11 @@ def main(argv: Sequence[str] | None = None) -> int:
         "--source", type=str, default=None, help="Filter by source slug"
     )
     parser_search.add_argument(
-        "--top", "-n", type=int, default=5, help="Number of results (1 to 20)"
+        "--top",
+        "-n",
+        type=int,
+        default=20,
+        help="Maximum number of retained passages to display (1 to 20; default: 20)",
     )
     parser_search.add_argument(
         "--format",

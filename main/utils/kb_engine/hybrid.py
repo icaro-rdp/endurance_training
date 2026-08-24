@@ -9,12 +9,42 @@ import math
 import re
 from collections import Counter, defaultdict
 from collections.abc import Sequence
+from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
 from .models import EvidencePassage, EvidenceSearchResult
 
 if TYPE_CHECKING:
     from .fts import PassageIndex
+
+
+@dataclass(frozen=True, slots=True)
+class EvidenceSelectionPolicy:
+    """Bounded, server-side policy for retaining useful Evidence Passages.
+
+    The values are deliberately centralised so the benchmark can calibrate them
+    later. MCP clients never receive or tune ranking scores.
+    """
+
+    candidate_limit: int = 20
+    maximum_passages: int = 20
+    minimum_hybrid_score: float = 0.020
+    hybrid_score_ratio: float = 0.75
+    minimum_dense_similarity: float = 0.65
+    dense_similarity_drop: float = 0.05
+
+    def __post_init__(self) -> None:
+        if not 1 <= self.maximum_passages <= self.candidate_limit:
+            raise ValueError("maximum_passages must be within the candidate limit")
+        if not 0.0 < self.hybrid_score_ratio <= 1.0:
+            raise ValueError("hybrid_score_ratio must be in (0, 1]")
+        if not 0.0 <= self.minimum_dense_similarity <= 1.0:
+            raise ValueError("minimum_dense_similarity must be in [0, 1]")
+        if self.dense_similarity_drop < 0.0:
+            raise ValueError("dense_similarity_drop must be non-negative")
+
+
+DEFAULT_EVIDENCE_SELECTION_POLICY = EvidenceSelectionPolicy()
 
 
 def reciprocal_rank_fusion(
@@ -39,7 +69,7 @@ def reciprocal_rank_fusion(
     lexical_scores: dict[str, float] = {}
     passage_map: dict[str, EvidencePassage] = {}
 
-    for w, ranked_list in zip(weights, ranking_lists):
+    for w, ranked_list in zip(weights, ranking_lists, strict=True):
         for rank, result in enumerate(ranked_list, start=1):
             passage = result.passage
             chunk_id = passage.chunk_id
@@ -65,13 +95,58 @@ def reciprocal_rank_fusion(
         EvidenceSearchResult(
             passage=passage_map[cid],
             lexical_score=round(lexical_scores.get(cid, 0.0), 8),
-            dense_score=(
-                round(dense_scores[cid], 8) if cid in dense_scores else None
-            ),
+            dense_score=(round(dense_scores[cid], 8) if cid in dense_scores else None),
             hybrid_score=round(rrf_scores[cid], 8),
         )
         for cid in sorted_chunk_ids[:limit]
     )
+
+
+def select_relevant_passages(
+    candidates: Sequence[EvidenceSearchResult],
+    policy: EvidenceSelectionPolicy = DEFAULT_EVIDENCE_SELECTION_POLICY,
+) -> tuple[EvidenceSearchResult, ...]:
+    """Keep the useful head of a fused candidate list without filling a quota.
+
+    A retained passage needs support from both retrievers (RRF score) or must be
+    close to the strongest local dense match. This preserves strong semantic
+    matches while removing the weak tail.
+    """
+    if not candidates:
+        return ()
+
+    bounded = tuple(candidates[: policy.candidate_limit])
+    top_hybrid_score = max(
+        (result.hybrid_score or 0.0 for result in bounded), default=0.0
+    )
+    top_dense_score = max(
+        (result.dense_score for result in bounded if result.dense_score is not None),
+        default=None,
+    )
+    hybrid_floor = max(
+        policy.minimum_hybrid_score,
+        top_hybrid_score * policy.hybrid_score_ratio,
+    )
+    dense_floor = (
+        max(
+            policy.minimum_dense_similarity,
+            top_dense_score - policy.dense_similarity_drop,
+        )
+        if top_dense_score is not None
+        else None
+    )
+
+    retained = [
+        result
+        for result in bounded
+        if (result.hybrid_score or 0.0) >= hybrid_floor
+        or (
+            dense_floor is not None
+            and result.dense_score is not None
+            and result.dense_score >= dense_floor
+        )
+    ]
+    return tuple(retained[: policy.maximum_passages])
 
 
 def search_hybrid(
@@ -80,58 +155,46 @@ def search_hybrid(
     category: str | None = None,
     topic: str | None = None,
     source_slug: str | None = None,
-    limit: int = 5,
-    candidate_k: int = 20,
+    limit: int = DEFAULT_EVIDENCE_SELECTION_POLICY.maximum_passages,
+    policy: EvidenceSelectionPolicy = DEFAULT_EVIDENCE_SELECTION_POLICY,
     rrf_k: int = 60,
     dense_weight: float = 1.0,
     sparse_weight: float = 1.0,
-    min_rrf_score: float = 0.012,
-    min_dense_similarity: float = 0.65,
+    retain_evidence: bool = True,
 ) -> tuple[EvidenceSearchResult, ...]:
     """Perform local hybrid retrieval fusing BM25 lexical and neural dense vectors.
 
-    Applies calibrated internal score thresholds to reject unsupported-domain queries.
+    Explores a bounded candidate pool, then normally applies the server-side
+    evidence selection policy before returning retained passages.
     """
     sparse_results = index.search_bm25(
         query=query,
         category=category,
         topic=topic,
         source_slug=source_slug,
-        limit=candidate_k,
+        limit=policy.candidate_limit,
     )
     dense_results = index.search_dense(
         query=query,
         category=category,
         topic=topic,
         source_slug=source_slug,
-        limit=candidate_k,
+        limit=policy.candidate_limit,
     )
 
     if not sparse_results and not dense_results:
         return ()
 
-    # Threshold gating for unsupported-domain negative queries:
-    # If no BM25 matches exist and top dense similarity is below threshold, reject as insufficient evidence
-    if not sparse_results and dense_results:
-        top_dense = dense_results[0]
-        if (
-            top_dense.dense_score is not None
-            and top_dense.dense_score < min_dense_similarity
-        ):
-            return ()
-
     fused = reciprocal_rank_fusion(
         [sparse_results, dense_results],
         k=rrf_k,
-        limit=limit,
+        limit=policy.candidate_limit,
         weights=[sparse_weight, dense_weight],
     )
-
-    # If best fused score is below threshold, reject
-    if fused and (fused[0].hybrid_score or 0.0) < min_rrf_score:
-        return ()
-
-    return fused
+    if not retain_evidence:
+        return fused
+    retained = select_relevant_passages(fused, policy=policy)
+    return retained[: min(limit, policy.maximum_passages)]
 
 
 class SemanticVectorizer:

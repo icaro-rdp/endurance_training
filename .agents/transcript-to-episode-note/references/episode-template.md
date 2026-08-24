@@ -3,10 +3,20 @@
 Use this as the default shape for a transcript converted into a project markdown note.
 
 ```md
-# <Episode Title> — Complete Guide
-
-_Source: <Podcast name> — <Hosts or speakers>_
-
+---
+title: "<Episode Title> — Q&A Guide"
+category: "<canonical_category>"
+topics:
+  - "<Topic1>"
+  - "<Topic2>"
+source: "<Podcast Name> — <Hosts/Guests>"
+author: "<Author/Host>"
+date: "<YYYY-MM-DD>"
+summary: "<1-2 sentence overview of key questions addressed in the episode.>"
+key_takeaways:
+  - "<Key takeaway 1>"
+  - "<Key takeaway 2>"
+  - "<Key takeaway 3>"
 ---
 
 ## What Is <Topic>?
@@ -47,3 +57,4 @@ _Source: <Podcast name> — <Hosts or speakers>_
 ```
 
 Adapt the section names to the transcript, but keep the overall guide-like structure.
+

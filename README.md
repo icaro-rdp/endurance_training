@@ -338,9 +338,11 @@ LibreChat, etc.).
 
 ### Tools
 
-- `search_passages`: Lexical BM25 retrieval over citation-stable Evidence
-  Passages with line-range citations (`#L45-L89`), section breadcrumbs, and
-  optional `category`, `topic`, and `source_slug` filters.
+- `search_passages`: Local hybrid retrieval over citation-stable Evidence
+  Passages. It explores a bounded candidate pool and returns only passages
+  retained by the server-side relevance policy (at most 20), with line-range
+  citations (`#L45-L89`), section breadcrumbs, and optional `category`,
+  `topic`, and `source_slug` filters.
 - `search_knowledge_base`: Backward-compatible alias for `search_passages`.
 - `get_passage`: Fetch complete metadata and content of an Evidence Passage by
   its stable `chunk_id`.

@@ -24,6 +24,16 @@ except ModuleNotFoundError:
     )
 
 
+MAX_MCP_PASSAGES = 20
+
+
+def _resolve_max_passages(max_passages: int | None) -> int:
+    """Use server-side selection by default, with an explicit caller ceiling."""
+    if max_passages is None:
+        return MAX_MCP_PASSAGES
+    return max(1, min(int(max_passages), MAX_MCP_PASSAGES))
+
+
 def create_mcp_server(
     kb_dir: Path | None = None,
     db_path: Path | None = None,
@@ -45,8 +55,9 @@ def create_mcp_server(
         name="search_passages",
         description=(
             "Search for citation-stable Evidence Passages across endurance "
-            "training articles and podcasts using lexical BM25 retrieval. "
-            "Returns ranked excerpts with exact line ranges and section hierarchy."
+            "training articles and podcasts using local hybrid retrieval. "
+            "Explores a bounded candidate pool and returns only passages that "
+            "meet the server-side relevance policy, or insufficient_evidence."
         ),
     )
     def search_passages(
@@ -54,7 +65,7 @@ def create_mcp_server(
         category: str | None = None,
         topic: str | None = None,
         source_slug: str | None = None,
-        top_k: int = 5,
+        max_passages: int | None = None,
     ) -> str:
         """Search the Knowledge Base for evidence passages matching the athlete query.
 
@@ -66,16 +77,16 @@ def create_mcp_server(
                 Cardiac_hypertrophy).
             source_slug: Optional source slug filter (e.g.
                 Fick_equation_and_cardiac_remodeling).
-            top_k: Maximum number of passages to return (default 5, max 20).
+            max_passages: Optional explicit ceiling from 1 to 20. Omit to
+                return every passage retained by the server-side policy.
         """
         try:
-            clamped_k = max(1, min(int(top_k), 20))
             results = engine.search(
                 query=query,
                 category=category,
                 topic=topic,
                 source_slug=source_slug,
-                top_k=clamped_k,
+                top_k=_resolve_max_passages(max_passages),
             )
             return engine.format_llm_context(results)
         except KBEngineError as exc:
@@ -94,16 +105,21 @@ def create_mcp_server(
         query: str,
         category: str | None = None,
         topic: str | None = None,
-        top_k: int = 5,
+        max_passages: int | None = None,
     ) -> str:
         """Legacy alias for search_passages."""
-        return search_passages(query=query, category=category, topic=topic, top_k=top_k)
+        return search_passages(
+            query=query,
+            category=category,
+            topic=topic,
+            max_passages=max_passages,
+        )
 
     @server.tool(
         name="search_multi_passages",
         description=(
-            "Execute multiple distinct sub-queries simultaneously and merge results using "
-            "Reciprocal Rank Fusion (RRF). Ideal for compound or multi-faceted athlete questions."
+            "Execute distinct sub-queries and merge results with Reciprocal Rank "
+            "Fusion (RRF); use for compound or multi-faceted athlete questions."
         ),
     )
     def search_multi_passages(
@@ -111,7 +127,7 @@ def create_mcp_server(
         category: str | None = None,
         topic: str | None = None,
         source_slug: str | None = None,
-        top_k: int = 5,
+        max_passages: int | None = None,
     ) -> str:
         """Search the Knowledge Base using multiple sub-queries with rank fusion.
 
@@ -120,16 +136,16 @@ def create_mcp_server(
             category: Optional category filter.
             topic: Optional topic filter.
             source_slug: Optional source slug filter.
-            top_k: Maximum number of combined passages to return (default 5, max 20).
+            max_passages: Optional explicit ceiling from 1 to 20. Omit to
+                return every passage retained by the server-side policy.
         """
         try:
-            clamped_k = max(1, min(int(top_k), 20))
             results = engine.multi_search(
                 queries=queries,
                 category=category,
                 topic=topic,
                 source_slug=source_slug,
-                top_k=clamped_k,
+                top_k=_resolve_max_passages(max_passages),
             )
             return engine.format_llm_context(results)
         except KBEngineError as exc:
@@ -328,7 +344,7 @@ def main() -> None:
 
             # Test search_passages
             res = await server.call_tool(
-                "search_passages", {"query": "Zone 2 fat oxidation", "top_k": 2}
+                "search_passages", {"query": "Zone 2 fat oxidation"}
             )
             print("\n--- Tool: search_passages ---")
             print(_extract_text_result(res)[:300], "...\n")

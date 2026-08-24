@@ -86,6 +86,14 @@ These intervals promote eccentric cardiac hypertrophy and maximize stroke volume
             "validate_kb",
         }
         self.assertTrue(expected_tools.issubset(tool_names))
+        for name in (
+            "search_passages",
+            "search_knowledge_base",
+            "search_multi_passages",
+        ):
+            tool = next(candidate for candidate in tools if candidate.name == name)
+            self.assertNotIn("top_k", tool.input_schema["properties"])
+            self.assertIn("max_passages", tool.input_schema["properties"])
 
         resources = await self.server.list_resources()
         resource_uris = {str(r.uri) for r in resources}
@@ -99,7 +107,7 @@ These intervals promote eccentric cardiac hypertrophy and maximize stroke volume
     async def test_search_passages_tool(self) -> None:
         res = await self.server.call_tool(
             "search_passages",
-            {"query": "eccentric cardiac hypertrophy", "top_k": 5},
+            {"query": "eccentric cardiac hypertrophy"},
         )
         text = _extract_text_result(res)
         self.assertIn("Knowledge Base Context", text)
@@ -107,10 +115,19 @@ These intervals promote eccentric cardiac hypertrophy and maximize stroke volume
         self.assertIn("Source Link:", text)
         self.assertIn("#L", text)
 
+        res_capped = await self.server.call_tool(
+            "search_passages",
+            {"query": "eccentric cardiac hypertrophy", "max_passages": 1},
+        )
+        self.assertIn(
+            "Knowledge Base Context (1 relevant entries)",
+            _extract_text_result(res_capped),
+        )
+
     async def test_search_multi_passages_tool(self) -> None:
         res = await self.server.call_tool(
             "search_multi_passages",
-            {"queries": ["eccentric cardiac hypertrophy", "4x8 VO2max intervals"], "top_k": 5},
+            {"queries": ["eccentric cardiac hypertrophy", "4x8 VO2max intervals"]},
         )
         text = _extract_text_result(res)
         self.assertIn("Knowledge Base Context", text)
@@ -119,7 +136,7 @@ These intervals promote eccentric cardiac hypertrophy and maximize stroke volume
     async def test_search_knowledge_base_legacy_alias(self) -> None:
         res = await self.server.call_tool(
             "search_knowledge_base",
-            {"query": "intervals", "top_k": 2},
+            {"query": "intervals"},
         )
         text = _extract_text_result(res)
         self.assertIn("Knowledge Base Context", text)
@@ -140,7 +157,24 @@ These intervals promote eccentric cardiac hypertrophy and maximize stroke volume
             {"query": "intervals", "category": "physiology"},
         )
         text_empty = _extract_text_result(res_empty)
-        self.assertIn("No relevant Knowledge Base entries found.", text_empty)
+        self.assertIn("insufficient_evidence", text_empty)
+
+    async def test_search_passages_returns_insufficient_evidence_for_chemistry(
+        self,
+    ) -> None:
+        res = await self.server.call_tool(
+            "search_passages",
+            {
+                "query": (
+                    "What electron configuration does sulfur have, and how does it "
+                    "form covalent bonds?"
+                )
+            },
+        )
+
+        text = _extract_text_result(res)
+        self.assertIn("insufficient_evidence", text)
+        self.assertNotIn("HIIT Intervals for VO2max", text)
 
     async def test_get_passage_tool(self) -> None:
         # Search to find a valid chunk_id
@@ -227,9 +261,7 @@ Content
             encoding="utf-8",
         )
 
-        res = await self.server.call_tool(
-            "search_passages", {"query": "hypertrophy"}
-        )
+        res = await self.server.call_tool("search_passages", {"query": "hypertrophy"})
         text = _extract_text_result(res)
         self.assertIn("[stale_index]", text)
 

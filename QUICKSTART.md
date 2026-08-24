@@ -205,9 +205,9 @@ The LLM will automatically invoke `search_passages` or `get_passage` and referen
 
 | Tool Name | Purpose | Key Arguments |
 |---|---|---|
-| `search_passages` | Lexical BM25 search over citation-stable Evidence Passages | `query`, `category`, `topic`, `source_slug`, `top_k` |
-| `search_multi_passages` | Multi-query search merged with Reciprocal Rank Fusion (RRF) | `queries`, `category`, `topic`, `source_slug`, `top_k` |
-| `search_knowledge_base` | Legacy alias for `search_passages` | `query`, `category`, `topic`, `top_k` |
+| `search_passages` | Hybrid retrieval with server-side relevance selection (up to 20 passages) | `query`, `category`, `topic`, `source_slug`, `max_passages` *(optional)* |
+| `search_multi_passages` | Multi-query hybrid retrieval merged with RRF and server-side selection | `queries`, `category`, `topic`, `source_slug`, `max_passages` *(optional)* |
+| `search_knowledge_base` | Legacy alias for `search_passages` | `query`, `category`, `topic`, `max_passages` *(optional)* |
 | `get_passage` | Fetch passage metadata and full text by `chunk_id` | `chunk_id` |
 | `get_document` | Read full Markdown source with path containment | `rel_path` (e.g. `Articles/...`) |
 | `get_kb_status` | Check index freshness (`fresh`/`stale`/`missing`) | *(none)* |

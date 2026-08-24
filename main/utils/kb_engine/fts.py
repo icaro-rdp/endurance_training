@@ -213,8 +213,9 @@ class PassageIndex:
         category: str | None = None,
         topic: str | None = None,
         source_slug: str | None = None,
-        limit: int = 5,
+        limit: int = 20,
         mode: Literal["hybrid", "bm25", "dense"] = "hybrid",
+        retain_evidence: bool = True,
     ) -> tuple[EvidenceSearchResult, ...]:
         """Search the Knowledge Base using hybrid, BM25, or dense retrieval."""
         if not 1 <= limit <= 50:
@@ -249,6 +250,7 @@ class PassageIndex:
                 topic=topic,
                 source_slug=source_slug,
                 limit=limit,
+                retain_evidence=retain_evidence,
             )
         else:
             raise InvalidSearchError(f"unknown search mode: {mode}")

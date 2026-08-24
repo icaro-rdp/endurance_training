@@ -13,6 +13,11 @@ from .errors import (
 )
 from .frontmatter import FrontmatterManager
 from .fts import PassageIndex
+from .hybrid import (
+    DEFAULT_EVIDENCE_SELECTION_POLICY,
+    reciprocal_rank_fusion,
+    select_relevant_passages,
+)
 from .models import (
     EvidencePassage,
     EvidenceSearchResult,
@@ -59,7 +64,7 @@ class KBEngine:
         category: str | None = None,
         topic: str | None = None,
         source_slug: str | None = None,
-        top_k: int = 5,
+        top_k: int = DEFAULT_EVIDENCE_SELECTION_POLICY.maximum_passages,
     ) -> tuple[EvidenceSearchResult, ...]:
         return self.index.search(
             query=query,
@@ -75,31 +80,53 @@ class KBEngine:
         category: str | None = None,
         topic: str | None = None,
         source_slug: str | None = None,
-        top_k: int = 5,
+        top_k: int = DEFAULT_EVIDENCE_SELECTION_POLICY.maximum_passages,
     ) -> tuple[EvidenceSearchResult, ...]:
-        from .hybrid import reciprocal_rank_fusion
-
         ranking_lists = []
         for q in queries:
             clean_q = q.strip()
             if clean_q:
-                res = self.search(
+                res = self._search_hybrid_candidates(
                     clean_q,
                     category=category,
                     topic=topic,
                     source_slug=source_slug,
-                    top_k=min(max(top_k * 2, 10), 20),
                 )
                 if res:
                     ranking_lists.append(res)
 
         if not ranking_lists:
             return ()
-        return reciprocal_rank_fusion(ranking_lists, k=60, limit=top_k)
+        fused = reciprocal_rank_fusion(
+            ranking_lists,
+            k=60,
+            limit=DEFAULT_EVIDENCE_SELECTION_POLICY.candidate_limit,
+        )
+        retained = select_relevant_passages(fused)
+        return retained[
+            : min(top_k, DEFAULT_EVIDENCE_SELECTION_POLICY.maximum_passages)
+        ]
+
+    def _search_hybrid_candidates(
+        self,
+        query: str,
+        category: str | None = None,
+        topic: str | None = None,
+        source_slug: str | None = None,
+    ) -> tuple[EvidenceSearchResult, ...]:
+        """Retrieve the bounded hybrid pool before final multi-query selection."""
+        return self.index.search(
+            query=query,
+            category=category,
+            topic=topic,
+            source_slug=source_slug,
+            limit=DEFAULT_EVIDENCE_SELECTION_POLICY.candidate_limit,
+            retain_evidence=False,
+        )
 
     def format_llm_context(self, results: Sequence[EvidenceSearchResult]) -> str:
         if not results:
-            return "No relevant Knowledge Base entries found."
+            return "insufficient_evidence: No relevant Knowledge Base entries found."
 
         output = [f"=== Knowledge Base Context ({len(results)} relevant entries) ===\n"]
         for index, result in enumerate(results, 1):
