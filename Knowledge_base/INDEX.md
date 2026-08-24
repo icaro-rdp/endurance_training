@@ -6,7 +6,6 @@ Welcome to the **Endurance Training Knowledge Base**. This document is the prima
 
 ## Quick Links
 - 📖 [Taxonomy & Definitions](TAXONOMY.md)
-- 📚 [Books Summaries](Books/_summary/INDEX.md)
 
 ---
 
@@ -28,7 +27,7 @@ Total documents: 51
   - **Summary**: A deep dive into the landmark sports science replication project (Murphy et al.), examining why only 28% of top-journal exercise studies fully replicated, deconstructing statistical traps like Winner's Curse and p-hacking, and establishing how coaches should critically interpret scientific literature.
 
 - **[Am I Doing Better? a Simple Way to Visualize Cycling Performance](Articles/knowledgeIsWatts/metrics/metrics-visualizing-performance-progress.md)** (`Articles/knowledgeIsWatts/metrics/metrics-visualizing-performance-progress.md`)
-  - **Topics**: Metrics
+  - **Topics**: FTP, Durability
   - **Summary**: In other sports like running and swimming the competition distance is fixed (for example 5k, 10k, marathon), so it is very simple to quantify and compare performance just using the finishing time of
 
 - **[Behind The American 40km ITT Record — Complete Guide](Episodes/Empirical_cycling_podcast/metrics/Perspectives__21__Behind_The_New_American_40km_ITT_Record__with_Cory_Lockwood.md)** (`Episodes/Empirical_cycling_podcast/metrics/Perspectives__21__Behind_The_New_American_40km_ITT_Record__with_Cory_Lockwood.md`)
@@ -40,7 +39,7 @@ Total documents: 51
   - **Summary**: VO2max (maximum oxygen consumption) is the maximum amount of oxygen that the body can use per minute to produce energy (watts). So, it a metric representing the horsepower of the athlete’s aerobic
 
 - **[Can They Be Used Interchangeably?](Articles/knowledgeIsWatts/metrics/metrics-flat-vs-uphill-power-output.md)** (`Articles/knowledgeIsWatts/metrics/metrics-flat-vs-uphill-power-output.md`)
-  - **Topics**: Metrics
+  - **Topics**: Power_vs_HR
   - **Summary**: It is common feeling easier to produce watts when riding uphill compared to flat terrain. Some coaches even recommend slightly higher power values for a given training zone when riding
 
 - **[Confronting Uncertainty in Training and Data: Bayesian Updating, Model Limits, and the Adaptive Coaching Loop — Complete Guide](Episodes/Empirical_cycling_podcast/metrics/Watts_Doc__63__Confronting_Uncertainty_In_Training_And_Data.md)** (`Episodes/Empirical_cycling_podcast/metrics/Watts_Doc__63__Confronting_Uncertainty_In_Training_And_Data.md`)
@@ -476,7 +475,7 @@ Total documents: 23
   - **Summary**: A critical physiological evaluation of Continuous Glucose Monitors (CGMs) in cycling following Kristen Faulkner's Strade Bianche disqualification, examining interstitial vs. blood glucose kinetics, RED-S/LEA pathophysiology, and the risks of 'glucorexia'.
 
 - **[Creatine's Actual Effects on Cycling Performance: Meta-Analytic Evidence, W/kg Trade-Offs, and Cognitive Realities — Complete Guide](Episodes/Empirical_cycling_podcast/nutrition/Watts_Doc__58__Creatine_s_Actual_Effects_On_Cycling_Performance.md)** (`Episodes/Empirical_cycling_podcast/nutrition/Watts_Doc__58__Creatine_s_Actual_Effects_On_Cycling_Performance.md`)
-  - **Topics**: Nutrition_strategy, Sprint_performance, Aerobic_base, Heavy_torque
+  - **Topics**: Ergogenic_aids, Sprint_performance, Aerobic_base, Heavy_torque
   - **Summary**: A comprehensive meta-analytic evaluation of creatine monohydrate supplementation in cycling, quantifying its zero effect on aerobic metabolism, small gains in absolute sprint power, osmotic water weight trade-offs (W/kg), and niche applications.
 
 - **[Fat Oxidation, Glycogen Sparing, & FatMax Fallacies — Complete Guide](Episodes/Empirical_cycling_podcast/nutrition/Fat_oxidation_vs_glycogen_sparing.md)** (`Episodes/Empirical_cycling_podcast/nutrition/Fat_oxidation_vs_glycogen_sparing.md`)
@@ -601,7 +600,7 @@ Total documents: 39
   - **Summary**: An in-depth examination of the negative regulation of Hypoxia-Inducible Factor (HIF-1) in well-trained endurance athletes, detailing how upregulation of PHD2, FIH, and Sirtuin 6 blunts anaerobic signaling to protect oxidative adaptation.
 
 - **[Hypoxia and Muscular Adaptation — Complete Guide](Episodes/Empirical_cycling_podcast/physiology/Watts_Doc__50__Hypoxia_And_Muscular_Adaptation.md)** (`Episodes/Empirical_cycling_podcast/physiology/Watts_Doc__50__Hypoxia_And_Muscular_Adaptation.md`)
-  - **Topics**: Aerobic_base, Long_intervals, Mitochondrial_density, Fatigue_management, Carbohydrate_ratio
+  - **Topics**: Aerobic_base, Long_intervals, Mitochondrial_density, Durability, Carbohydrate_ratio
   - **Summary**: A rigorous examination of Hypoxia-Inducible Factor 1 (HIF-1), the molecular oxygen sensor governing muscular angiogenesis, glycolytic upregulation, and the attenuation of transcriptional signaling during high-intensity training.
 
 - **[Integrating Physiology into Coaching & Training Philosophy — Complete Guide](Episodes/Empirical_cycling_podcast/physiology/Ten_Minute_Tips__11__Integrating_Physiology_Into_Coaching.md)** (`Episodes/Empirical_cycling_podcast/physiology/Ten_Minute_Tips__11__Integrating_Physiology_Into_Coaching.md`)
@@ -782,7 +781,7 @@ Total documents: 94
   - **Summary**: Functional Threshold Power (FTP) sets the upper limit for sustainable aerobic power production. It integrates central cardiovascular capacity ($\text{VO}_2\text{max}$) and peripheral muscular adaptations (oxidative capacity, capillary density, mitochondrial density, and lactate clearance). The strat
 
 - **[FTP Workout — The 2×20 Complete Guide](Episodes/Empirical_cycling_podcast/training/threshold/FTP_workout_2x20.md)** (`Episodes/Empirical_cycling_podcast/training/threshold/FTP_workout_2x20.md`)
-  - **Topics**: FTP, Periodization, Glucose_fructose
+  - **Topics**: FTP, Periodization, Carbohydrate_ratio
   - **Summary**: The 2×20 is the canonical FTP workout. It entered cycling culture both as a training session and as a reflection of the classic 20-minute FTP test from _Training and Racing with a Power Meter_. It's often the first structured workout a cyclist learns when they start training with power. > Likely ori
 
 - **[FTP and TTE: Why the One-Hour Rule Misleads — Complete Guide](Episodes/Empirical_cycling_podcast/training/threshold/FTP_TTE.md)** (`Episodes/Empirical_cycling_podcast/training/threshold/FTP_TTE.md`)
@@ -1080,26 +1079,5 @@ Total documents: 94
 - **[Why Training Or Racing Experience Shouldn't Determine Training Volume — Complete Guide](Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__65__Why_Training_Or_Racing_Experience_Shouldn_t_Determine_Train.md)** (`Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__65__Why_Training_Or_Racing_Experience_Shouldn_t_Determine_Train.md`)
   - **Topics**: Volume_quantification, Aerobic_base, Durability
   - **Summary**: An analysis of the relationship between training volume, race categories, genetics, and performance adaptations. Explains log-linear dose-response curves, survivorship bias, physiological drivers of durability, and why prescriptive category-based training caps are fundamentally flawed.
-
----
-
-### Category: `BOOK`
-Total documents: 4
-
-- **[Injury Free Running   Your Illustrated Guide](<Books/Injury-Free Running - Your Illustrated Guide.md>)** (`Books/Injury-Free Running - Your Illustrated Guide.md`)
-  - **Topics**: General
-  - **Summary**: ![cover](images/cover.jpg) Injury-Free
-
-- **[Norwegian Singles Method](<Books/Norwegian Singles Method Subthreshold.md>)** (`Books/Norwegian Singles Method Subthreshold.md`)
-  - **Topics**: LT1_VT1, LT2_VT2, Double_threshold
-  - **Summary**: Copyright Page© James Copeland 2025 All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior written permission of the copyright owner
-
-- **[Training And Racing With A Power Meter](<Books/Training and Racing with a Power Meter.md>)** (`Books/Training and Racing with a Power Meter.md`)
-  - **Topics**: FTP
-  - **Summary**: <p style="font-weight: 600"><em>Training and Racing with a Power Meter </em>brings the advanced power-based training techniques of elite cyclists and triathletes to everyone.</p> <p>A power meter can unlock more speed and endurance than any other training tool—but only if you understand the data. Th
-
-- **[Training For The Uphill Athlete](<Books/Training for the Uphill Athlete.md>)** (`Books/Training for the Uphill Athlete.md`)
-  - **Topics**: General
-  - **Summary**: ![image](../images/00001.jpeg) ![image](../images/00002.jpeg)
 
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Instagram and Reddit AMA: Intensity Distributions, Over-Unders, VO2max Ceilings, and MLSS vs FTP — Complete Guide"
+title: "Instagram and Reddit AMA: Intensity Distributions, Over-Unders, VO2max Ceilings, and MLSS vs FTP — Q&A Guide"
 category: "metrics"
 topics:
   - "FTP"
@@ -11,38 +11,29 @@ topics:
 source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson"
 author: "Kolie Moore"
 date: "2021-07-14"
-summary: "Comprehensive analytical guide deconstructing 80/20 intensity distributions, over-under mechanics with torque manipulation, breaking through high fractional utilization ceilings (>80% VO2max), debunking topical lactate creams, and resolving FTP vs MLSS discrepancies."
+summary: "Analytical Q&A guide addressing listener questions from Instagram and Reddit on diagnosing high fractional utilization ceilings (>80% VO2max), low-cadence over-under mechanics, reconciling FTP vs MLSS discrepancies, systemic buffering vs topical lactate creams, and altitude acclimation pacing."
 key_takeaways:
-  - "Training intensity distribution should be driven by target physiological adaptations and recovery dynamics rather than dogma; effective endurance plans retrospectively show a pyramidal distribution."
-  - "When FTP reaches 80–82% of VO2max and TTE is extended (~60 min), FTP is mechanically capped; the athlete must execute a dedicated VO2max block to raise the aerobic ceiling."
+  - "When FTP reaches 80–82% of VO2max and TTE is extended (~50–70 min), FTP is mechanically capped; the athlete must execute a dedicated VO2max block to raise the aerobic ceiling."
   - "Over-unders train oxidative clearance of lactate; executing 'overs' at low cadence (high torque) forces high-threshold motor unit recruitment, while normal-cadence 'unders' recover via oxidative fibers."
   - "MLSS and true FTP represent the same metabolic steady-state boundary; a 30W divergence indicates that a short ramp or 20-minute test was inflated by anaerobic work capacity (W')."
   - "Topical 'lactate buffering' creams cannot penetrate the dermal barrier with meaningful molecular concentrations; systemic buffering requires oral sodium bicarbonate protocols."
+  - "Training intensity distribution should be driven by target physiological adaptations and recovery dynamics rather than rigid adherence to 80/20 percentages."
 ---
 
-# Instagram and Reddit AMA: Intensity Distributions, Over-Unders, VO2max Ceilings, and MLSS vs FTP — Complete Guide
+# Instagram and Reddit AMA: Intensity Distributions, Over-Unders, VO2max Ceilings, and MLSS vs FTP — Q&A Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson_
 
 ---
 
-## What Is the Instagram and Reddit AMA?
+## Q: How Do You Diagnose and Break Through an FTP Plateau Capped by a High VO2max Ceiling?
 
-This guide synthesizes the deep-dive technical questions from Reddit’s `r/velo` community and Instagram. It covers essential physiological distinctions:
-1. **Prescriptive Models vs. System-Driven Training:** Why rigid 80/20 or polarized schemas are secondary to physiological stimulus and recovery.
-2. **The Mechanics of Over-Unders:** How cadence and power fluctuations drive motor unit recruitment and lactate shuttle clearance.
-3. **The Fractional Utilization Ceiling:** How to diagnose when an athlete can no longer raise FTP without first raising VO2max.
-4. **Testing Discrepancies (FTP vs. MLSS):** Resolving the gap between short field tests and true Maximal Lactate Steady State.
-5. **Ergogenic Delivery Realities:** The physiology of systemic buffering vs. pseudoscience in topical transdermal creams.
+**Context & Listener Inquiry:**
+An athlete has progressed their threshold training for months, reaching a long Time-to-Exhaustion (TTE of ~60 minutes), but their FTP wattage has completely stalled despite continuing to add threshold workouts. They ask how to diagnose and break this plateau.
 
----
-
-## Key Physiological Mechanisms / How to Think About It
-
-### 1. The Fractional Utilization Ceiling ($\text{FTP} / \text{VO}_2\text{max}$)
-Functional Threshold Power operates within a ceiling dictated by maximal aerobic capacity ($\text{VO}_2\text{max}$):
-- **Ceiling Compression ($80\text{--}85\%$ Fractional Utilization):** Untrained individuals have an FTP around $50\text{--}60\%$ of $\text{VO}_2\text{max}$. Highly trained endurance athletes push FTP to $80\text{--}85\%$ of $\text{VO}_2\text{max}$.
-- **The Stalled FTP Phenomenon:** Once an athlete's FTP reaches $\sim 82\%$ of $\text{VO}_2\text{max}$ and Time-to-Exhaustion (TTE) is extended to $50\text{--}70\text{ minutes}$, continuing to hammer threshold intervals yields diminishing returns. There is no physiological "room" left beneath the ceiling. 
-- **The Intervention:** The athlete must pivot to a dedicated $\text{VO}_2\text{max}$ block (maximizing cardiac stroke volume and a-vO2 extraction) to push the ceiling upward before FTP can grow again.
+**Mechanisms & Core Explanation:**
+- **The Fractional Utilization Ceiling ($\text{FTP} / \text{VO}_2\text{max}$):** In well-trained cyclists, FTP operates at a high percentage of maximal oxygen uptake ($80\text{--}85\%$ of $\text{VO}_2\text{max}$).
+- **The Stalled Threshold Phenomenon:** Once an athlete's FTP reaches $\sim 80\text{--}82\%$ of $\text{VO}_2\text{max}$ and TTE is extended to $50\text{--}70\text{ minutes}$, continuing to hammer threshold work yields diminishing returns. There is no physiological space remaining beneath the ceiling.
+- **Lifting the Ceiling:** The athlete must pivot to a dedicated **VO2max block** (targeting maximal cardiac stroke volume, left ventricular filling, and peripheral oxygen extraction) to push the aerobic ceiling upward before FTP can grow further.
 
 ```
        [ HIGH FRACTIONAL UTILIZATION CEILING ]
@@ -56,70 +47,101 @@ Functional Threshold Power operates within a ceiling dictated by maximal aerobic
   ==> Solution: PUSH VO2max ceiling to 450 W before pulling FTP to 370 W.
 ```
 
-### 2. Physiological Mechanics of Over-Under Intervals
-Over-unders ($1\text{--}2\text{ min}$ over FTP / $2\text{--}5\text{ min}$ under FTP) are unique metabolic conditioning tools:
-- **During the "Over" ($105\text{--}115\%$ FTP):** Glycolytic flux accelerates, generating excess pyruvate and $\text{H}^+$ ions. Lactate is formed and exported via Monocarboxylate Transporters (MCT4) into interstitial fluid and blood.
-- **During the "Under" ($85\text{--}92\%$ FTP):** Power drops below threshold, restoring intracellular $\text{pH}$ slightly and creating a concentration gradient where adjacent oxidative muscle fibers (and the heart) uptake lactate via MCT1 transporters, converting it back to pyruvate for mitochondrial combustion (the Lactate Shuttle).
-- **The Low-Cadence Torque Hack:** Executing "overs" at $50\text{--}65\text{ rpm}$ drastically increases pedal torque ($\text{Torque} = \frac{\text{Power}}{\text{Angular Velocity}}$), forcing the central nervous system to recruit higher-threshold Type IIa/IIx motor units according to Henneman's Size Principle, directly exposing those fast fibers to oxidative stress.
-
-### 3. MLSS vs. Field FTP Discrepancies
-- **Metabolic Identity:** Maximal Lactate Steady State (MLSS)—the highest workload where blood lactate increases by $<1.0\text{ mmol/L}$ over the final 20 minutes of a 30-minute constant load—is biologically the exact definition of FTP.
-- **The Cause of Discrepancies:** When an athlete tests at 330 W on a 20-minute test ($330 \times 0.95 = 313.5\text{ W}$) but their lab MLSS is 280 W (a $>30\text{ W}$ gap), the field test is contaminated by a massive anaerobic work capacity ($W'$). The athlete rode the 20-minute test partly on anaerobic energy reserve, masking their true sustainable aerobic threshold.
-
-### 4. Transdermal Diffusion Mechanics vs. Systemic Buffering
-- **The Blood-Skin Barrier:** The stratum corneum is a lipophilic barrier. Large, hydrophilic, charged ions (such as bicarbonate $\text{HCO}_3^-$, magnesium $\text{Mg}^{2+}$, or polar salts) cannot passively diffuse across intact human skin in quantities that could alter systemic interstitial buffering capacity.
-- **True Systemic Buffering:** Oral ingestion of sodium bicarbonate ($\text{NaHCO}_3$) at $0.2\text{--}0.3\text{ g/kg}$ enters the gastrointestinal tract, is absorbed into the bloodstream, and increases blood bicarbonate concentration and extracellular $\text{pH}$, pulling more $\text{H}^+$ out of working muscles during suprathreshold acidosis.
+**Coaching Rules & Practical Application:**
+- Check FTP as a percentage of 5-minute peak power or laboratory VO2max.
+- If $\text{FTP} \ge 80\text{--}82\%$ of $\text{VO}_2\text{max}$ and $\text{TTE} \ge 50\text{ min}$, stop threshold progression immediately.
+- Prescribe a **3- to 4-week VO2max block**: 2 sessions per week of $4\text{--}5 \times 3\text{--}5\text{ min}$ all-out intervals at high cadence ($105\text{--}115+\text{ RPM}$) with equal rest.
+- Follow the block with a recovery week before rebuilding threshold duration at higher power.
 
 ---
 
-## Practical Application & Prescriptions
+## Q: How Do Cadence and Torque Manipulation Optimize the Physiology of Over-Under Intervals?
 
-### 1. Diagnosing and Breaking the VO2max Ceiling
-1. Assess current FTP as a percentage of 5-minute peak power or laboratory VO2max.
-2. If $\text{FTP} \ge 80\text{--}82\%$ of $\text{VO}_2\text{max}$ and FTP TTE $\ge 50\text{ min}$:
-   - Stop threshold progression.
-   - Prescribe a **3–4 week VO2max focus block**: 2 sessions/week of $4\text{--}5 \times 3\text{--}5\text{ min}$ all-out intervals with equal rest, paced to maximize time near $100\% \text{ VO}_2\text{max}$ (hard start, fast breathing).
-   - Return to FTP extension blocks after the block and recovery week.
+**Context & Listener Inquiry:**
+A listener asked about the physiological rationale of over-unders and how manipulating cadence between the "over" and "under" segments affects motor unit recruitment and lactate clearance.
 
-### 2. High-Torque Over-Under Workout Protocol
-- **Total Duration:** 90–120 minutes.
-- **Structure:** $3 \times 15\text{--}20\text{ min}$ Over-Under sets with 8 min recovery between sets.
-- **Set Design (Repeating 3-minute cycles):**
-  - **Over (1 min):** $110\text{--}115\%$ FTP @ $55\text{--}65\text{ rpm}$ (High torque, standing or seated heavy grind).
-  - **Under (2 min):** $88\text{--}92\%$ FTP @ $90\text{--}95\text{ rpm}$ (Smooth spin, active aerobic recovery).
+**Mechanisms & Core Explanation:**
+- **Lactate Dynamics in Over-Unders:** During the "over" ($105\text{--}115\%$ FTP), fast-twitch fibers produce excess pyruvate and lactate, exporting lactate and $H^+$ ions via monocarboxylate transporter 4 (MCT4). During the "under" ($85\text{--}92\%$ FTP), oxidative slow-twitch fibers and adjacent myocardium uptake lactate via MCT1, combusting it aerobically as fuel (the Lactate Shuttle).
+- **The Low-Cadence Torque Mechanism:** Performing the "over" at low cadence ($50\text{--}65\text{ rpm}$) substantially increases pedal torque ($\text{Torque} = \frac{\text{Power}}{\text{Cadence}}$). By Henneman's Size Principle, this forces the nervous system to recruit higher-threshold Type IIa/IIx motor units, exposing those glycolytic fibers directly to oxidative stress and lactate clearance signaling.
 
-### 3. Pacing Rule: The "Conservative Start" Principle
-- **Warmup Equilibration:** The cardiovascular and capillary beds take 5–10 minutes to reach full vasodilation and perfusion during a hard effort.
-- **Execution:** Always start the first 5 minutes of any long threshold or tempo interval 5–10 W *below* the target. Once oxygen kinetics and capillary perfusion stabilize, ramp up to target power. Starting 10 W too high burns significant muscle glycogen in the first 3 minutes, causing premature fatigue.
-
-### 4. Altitude Transition Strategy (5,000–8,000 ft)
-- **Days 1–10:** Reduce intensity strictly to Zone 1/2. Expect elevated resting heart rate and higher respiratory water loss (increase fluid and electrolyte intake).
-- **Avoid Heavy Work in the "Reactive Window" (Days 4–8):** Sub-acute altitude exposure often causes temporary autonomic fatigue and elevated resting stress. Wait until Day 10–14 before scheduling suprathreshold or VO2max workouts.
+**Coaching Rules & Practical Application:**
+- **High-Torque Over-Under Prescription:**
+  - Structure: $3 \times 15\text{--}20\text{ min}$ sets with 8 minutes of recovery between sets.
+  - Repeating 3-minute cycle within each set:
+    - **Over (1 min):** $110\text{--}115\%$ FTP @ $55\text{--}65\text{ rpm}$ (Heavy torque grind).
+    - **Under (2 min):** $88\text{--}92\%$ FTP @ $90\text{--}95\text{ rpm}$ (Smooth oxidative recovery spin).
 
 ---
 
-## Common Pitfalls & Limitations
+## Q: Why Does a 20-Minute Field Test Often Overestimate True Maximal Lactate Steady State (MLSS)?
 
-1. **Fasting During Hard FTP Workouts:**
-   - Attempting to do threshold or over-under sessions while fasted under the mistaken belief that it "maximizes fat burning at FTP." It only depletes glycogen prematurely, reduces interval duration, and ruins the high-power aerobic stimulus.
-2. **Prescribing Rigid 80/20 Percentages:**
-   - Forcing an arbitrary session ratio instead of addressing the athlete’s physiological limiters. Volume and intensity distribution should follow the physiological objective of the phase.
-3. **Relying on Topical Muscle Creams:**
-   - Believing transdermal rubs prevent acidosis. They provide local sensory warmth (counter-irritants like capsaicin/menthol) but do not alter muscle or blood pH.
-4. **Using Inflated 20-Min Test Numbers:**
-   - Setting training zones off a $20\text{-min} \times 0.95$ estimate that is 30 W above MLSS. This causes threshold workouts to turn into unsustainable anaerobic capacity sessions.
+**Context & Listener Inquiry:**
+A rider tested their FTP at 315 W using the standard $20\text{-minute power} \times 0.95$ protocol, but in a laboratory test their MLSS was measured at only 280 W. They asked why this 35 W gap exists and which number to use.
+
+**Mechanisms & Core Explanation:**
+- **Metabolic Equivalence:** Biologically, true Functional Threshold Power (FTP) and Maximal Lactate Steady State (MLSS) represent the exact same metabolic boundary: the highest power output where blood lactate appearance equals maximal rate of oxidative clearance.
+- **Anaerobic Contamination of Short Tests:** A 20-minute test relies significantly on Anaerobic Work Capacity ($W'$ / glycolytic energy reserves). In athletes with large anaerobic capacity (sprinters, track riders, punchy climbers), the 5% subtraction fails to remove enough anaerobic contribution, inflating estimated FTP by 20–40 Watts above true steady-state capacity.
+
+**Coaching Rules & Practical Application:**
+- Base training zones on **true metabolic steady-state tests** (e.g., Kolie Moore baseline / progressive tests of 35–60+ minutes) rather than $20\text{-min} \times 0.95$ or short ramp tests.
+- If an athlete cannot sustain their target threshold wattage for at least 40 minutes continuous, their threshold is overestimated and training zones must be revised downward.
+
+---
+
+## Q: Can Topical Transdermal Creams Buffer Muscle Acidosis and Replace Oral Sodium Bicarbonate?
+
+**Context & Listener Inquiry:**
+Listeners asked about marketed topical "lactate buffering" transdermal creams and whether rubbing bicarbonate or mineral blends on leg muscles prevents muscle burning during hard efforts.
+
+**Mechanisms & Core Explanation:**
+- **The Transdermal Diffusion Barrier:** Human skin (the stratum corneum) is a highly effective lipophilic barrier designed to prevent external water-soluble and charged ions from entering the bloodstream. Polar, hydrophilic molecules like bicarbonate ions ($\text{HCO}_3^-$) cannot passively diffuse across intact skin in concentrations capable of altering intramuscular or systemic pH.
+- **Systemic vs. Local Sensory Effects:** Topical rubs produce local sensations of heat or tingling via counter-irritants (capsaicin, menthol), altering subjective sensory perception without changing metabolic acidosis.
+- **Real Extracellular Buffering:** True systemic buffering requires oral ingestion of sodium bicarbonate ($\text{NaHCO}_3$ at $0.2\text{--}0.3\text{ g/kg}$), which increases blood bicarbonate concentration and raises blood pH, pulling more $H^+$ ions out of working muscles.
+
+**Coaching Rules & Practical Application:**
+- Disregard topical lactate creams as physiologically ineffective for muscle buffering.
+- For high-intensity events (1–10 min track/crit/hill climbs), utilize evidence-backed oral sodium bicarbonate protocols ($0.2\text{--}0.3\text{ g/kg}$ ingested with carbohydrates 60–90 min pre-race, testing GI tolerance in training).
+
+---
+
+## Q: Why Should Interval Sets Begin Conservatively Rather Than Aggressively Over-Paced?
+
+**Context & Listener Inquiry:**
+Riders frequently attack the first 2–5 minutes of a threshold or sweet spot interval set aggressively, then experience rapid power collapse and high RPE in later repetitions, asking how to pace interval sets.
+
+**Mechanisms & Core Explanation:**
+- **Oxygen Uptake Kinetics & Capillary Perfusion:** The cardiovascular system, muscular vasodilation, and oxidative enzyme phosphorylation take 2 to 4 minutes to achieve steady-state flux at the onset of an interval.
+- **Glycogen Burning Hazard:** Over-pacing the opening minutes creates an immediate oxygen deficit, forcing heavy reliance on anaerobic glycolysis and rapid depletion of finite muscle glycogen, generating high intracellular $H^+$ and inorganic phosphate $[P_i]$ that impairs contractility for the rest of the workout.
+
+**Coaching Rules & Practical Application:**
+- Apply the **"Conservative Start" rule**: ride the first 3–5 minutes of every threshold or tempo interval 5–10 Watts *below* target power.
+- Allow oxygen kinetics and muscle perfusion to stabilize before settling into target wattage; finish the final 5 minutes strong.
+
+---
+
+## Q: How Should Athletes Acclimate to Moderate-to-High Altitude (5,000–8,000 ft) Without Burnout?
+
+**Context & Listener Inquiry:**
+Athletes traveling from sea level to moderate altitude (e.g., Colorado, Utah) ask how to structure training during the initial two weeks to prevent severe fatigue and illness.
+
+**Mechanisms & Core Explanation:**
+- **Hypoxic Stress & Respiratory Fluid Loss:** Reduced ambient oxygen pressure lowers arterial oxygen saturation ($S_aO_2$), elevating resting heart rate, ventilation rate, and dry-air respiratory water loss.
+- **The "Sub-Acute Reactive Window":** During Days 4 to 8 at altitude, systemic autonomic fatigue is highest as erythropoietin (EPO) ramps up and fluid balance shifts. Forcing high-intensity intervals during this window causes severe autonomic suppression and prolonged recovery deficits.
+
+**Coaching Rules & Practical Application:**
+- **Days 1–10:** Restrict all riding strictly to easy Zone 1/2 endurance. Lower power targets by $5\text{--}10\%$ to maintain normal cardiovascular RPE.
+- Increase daily fluid and electrolyte intake to counter elevated respiratory dehydration.
+- Delay hard threshold and VO2max interval workouts until **Day 10–14+**, when initial autonomic stabilization and plasma adjustments have occurred.
 
 ---
 
 ## Summary Checklist / Decision Table
 
-| Physiological Question | Athlete Dilemma | Empirical Cycling Guideline | Actionable Prescription |
-| :--- | :--- | :--- | :--- |
-| **FTP Stalled at 80% VO2max** | Threshold training no longer boosts FTP | Aerobic ceiling is compressed | Execute 3-week VO2max block ($4\text{--}5\text{ min}$ max efforts) |
-| **Over-Under Optimization** | Standard cadence feels monotonous | Low-cadence overs recruit fast-twitch fibers | $1\text{ min} @ 110\%$ ($60\text{ rpm}$) / $2\text{ min} @ 90\%$ ($95\text{ rpm}$) |
-| **Pacing Interval Sets** | Blowing up on 3rd interval | Fast start depletes glycogen before perfusion catches up | Start first 5 min 5–10 W below target; ramp progressively |
-| **FTP vs MLSS Gap** | 20-min test is 30W higher than steady-state power | Test inflated by $W'$ anaerobic capacity | Set zones using true MLSS / long baseline testing |
-| **Acclimation to Altitude** | Arriving at 5,500 ft and hammering intervals | Hypoxic stress + dehydration triggers deep fatigue | 10–14 days of low-intensity riding before hard intervals |
-
-> [!TIP]
-> Never let an arbitrary test formula override metabolic reality. If you cannot sustain a power number for 40–60 minutes in a continuous steady-state effort, that power number is not your threshold.
+| Question / Scenario | Key Physiological Principle | Practical Coaching Rule |
+| :--- | :--- | :--- |
+| **FTP Stalled at 80% VO2max** | Aerobic ceiling is compressed; fractional utilization cannot rise indefinitely. | Conclude threshold block; execute a 3–4 week high-cadence VO2max block ($4\text{--}5\text{ min}$ reps). |
+| **Over-Under Cadence Manipulation** | Low-cadence overs recruit fast-twitch motor units; normal-cadence unders clear lactate oxidatively. | Perform overs at $110\text{--}115\%$ FTP ($55\text{--}65\text{ rpm}$) and unders at $88\text{--}92\%$ FTP ($90\text{--}95\text{ rpm}$). |
+| **FTP vs MLSS Discrepancy** | 20-minute tests are inflated by anaerobic work capacity ($W'$). | Verify threshold using long baseline tests (35–60+ min) at true metabolic steady state. |
+| **Topical Lactate Creams** | Stratum corneum blocks charged ions; buffering requires systemic blood alkalosis. | Rely on oral sodium bicarbonate protocols ($0.2\text{--}0.3\text{ g/kg}$); avoid transdermal gimmicks. |
+| **Interval Set Pacing** | Vasodilation and oxygen kinetics require 2–4 min to stabilize at target intensity. | Start first 3–5 min 5–10W below target; ramp to target power as perfusion stabilizes. |
+| **Altitude Acclimation** | Hypoxia and dehydration elevate autonomic strain during Days 4–8. | Ride easy Zone 1/2 for initial 10–14 days; avoid high-intensity intervals until acclimatized. |

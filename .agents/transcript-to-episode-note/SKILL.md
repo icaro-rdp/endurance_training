@@ -48,7 +48,8 @@ Turn a raw transcript into a clean markdown note that reads like a reference gui
   - common mistakes or limitations
 - If there is no obvious training concept, still format it as a readable guide with the strongest available structure.
 
-## Reference Template
+## Reference Templates
 
-Use [references/episode-template.md](references/episode-template.md) when you want a starting point for formatting, note that it's just a template and not a strict requirement. The goal is to produce a readable, structured note that captures the essence of the transcript.
+- **Single-Topic Deep Dives:** Use [references/episode-template.md](references/episode-template.md) for standard deep dives focused on one physiological topic, workout archetype, or training methodology.
+- **AMAs & Listener Questions:** Use [references/qna-template.md](references/qna-template.md) for Ask-Me-Anything (AMA) episodes, mailbags, and multi-question coaching discussions. Format each question under an isolated `## Q: <Specific Question>` heading with structured **Context & Listener Inquiry**, **Mechanisms & Core Explanation**, and **Coaching Rules & Practical Application** subheadings to ensure search-optimized chunk boundaries.
 
