@@ -86,6 +86,8 @@ summary: A CLI fixture.
         self.assertEqual((build_code, status_code), (0, 0))
         self.assertEqual((build_error, status_error), ("", ""))
         self.assertIn("1 English sources", build_output)
+        self.assertIn("rebuilt 1 sources / embedded", build_output)
+        self.assertIn("Build timing:", build_output)
         self.assertIn('"document_count": 1', status_output)
         self.assertIn('"state": "fresh"', status_output)
 

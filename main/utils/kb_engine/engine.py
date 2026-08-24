@@ -16,6 +16,7 @@ from .fts import PassageIndex
 from .models import (
     EvidencePassage,
     EvidenceSearchResult,
+    IndexBuildMetrics,
     IndexStatus,
 )
 from .taxonomy import TaxonomyRegistry
@@ -117,6 +118,10 @@ class KBEngine:
 
     def build_index(self) -> IndexStatus:
         return self.index.synchronize()
+
+    @property
+    def last_index_build_metrics(self) -> IndexBuildMetrics | None:
+        return self.index.last_build_metrics
 
     def get_passage(self, chunk_id: str) -> EvidencePassage | None:
         return self.index.get_passage(chunk_id)

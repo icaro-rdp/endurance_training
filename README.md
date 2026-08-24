@@ -2,15 +2,22 @@
 
 This repository contains a curated English endurance-training Knowledge Base and
 a local, citation-oriented search tool. Markdown sources are split into
-structure-aware Evidence Passages and indexed with SQLite FTS5 BM25. Search
-results include the source path, section context, and exact line range.
+structure-aware Evidence Passages and indexed with SQLite FTS5 BM25 plus local
+`sqlite-vec` embeddings. Search results include the source path, section context,
+and exact line range.
 
-The active retrieval foundation is deliberately simple:
+The implemented retrieval path is local hybrid search:
 
 - English sources and English queries only;
 - explicit, transactional index builds;
-- no network access or model downloads during indexing or search;
-- no embeddings, reranker, or semantic-retrieval claims yet.
+- offline indexing and search after dependencies and model weights are cached;
+- local BGE-small embeddings stored beside FTS5 in one Derived Index;
+- no hosted embedding provider or external vector database.
+
+Default hybrid ranking remains provisional: the 32-query benchmark labels exist,
+but the required lexical-versus-hybrid quality and latency results have not yet
+been recorded. FTS5 remains the approved baseline until ADR 0002's benchmark gate
+is satisfied; see `CONTEXT.md` for the open architecture conflict.
 
 ## Quick start
 
@@ -40,9 +47,11 @@ uv run endurance-kb search "VO2max cardiac hypertrophy preload"
 The first `build-index` creates the ignored local database at
 `main/.kb_index.sqlite` and regenerates `Knowledge_base/INDEX.md`.
 
-Dependency installation may contact the configured package registry. Once the
-locked environment is installed, building and searching the index are offline
-operations.
+Dependency installation may contact the configured package registry. The first
+hybrid `build-index` may also download the configured FastEmbed model if it is not
+already cached. Once dependencies and model weights are present, building and
+searching the index are offline operations. This first-build behavior is a known
+gap against the explicit-setup contract recorded in ADR 0002.
 
 The supported default workflow is a repository clone: the corpus is not bundled
 inside the Python wheel. An installed CLI can operate on an external clone by

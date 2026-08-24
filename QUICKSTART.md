@@ -31,6 +31,9 @@ uv sync --locked
 
 Build the local SQLite FTS5 & vector index and verify its freshness status:
 
+> **First build:** FastEmbed may download the configured local embedding model if
+> it is not already cached. Subsequent builds and searches operate offline.
+
 ```bash
 # Build the index from markdown sources
 uv run endurance-kb build-index
@@ -40,6 +43,15 @@ uv run endurance-kb status
 ```
 
 You should see `"state": "fresh"` and `"is_fresh": true` in the output.
+
+The first build chunks and embeds the full corpus. Later builds compare persisted
+per-source content digests and reuse unchanged passages and vectors, while still
+publishing one fully validated index through atomic replacement. The build output
+reports reused/rebuilt counts and stage timings, making performance comparisons
+repeatable without relying on filesystem modification times.
+
+The current hybrid ranking path remains provisional pending the benchmark results
+required by ADR 0002; FTS5 remains the approved architectural baseline.
 
 ---
 

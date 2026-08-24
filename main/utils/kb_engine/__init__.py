@@ -18,7 +18,12 @@ from .errors import (
     StaleIndexError,
     UnsupportedLanguageError,
 )
-from .models import EvidencePassage, EvidenceSearchResult, IndexStatus
+from .models import (
+    EvidencePassage,
+    EvidenceSearchResult,
+    IndexBuildMetrics,
+    IndexStatus,
+)
 from .taxonomy import TaxonomyRegistry
 
 __all__ = [
@@ -27,6 +32,7 @@ __all__ = [
     "EvidencePassage",
     "EvidenceSearchResult",
     "IndexNotBuiltError",
+    "IndexBuildMetrics",
     "IndexStatus",
     "InvalidIndexError",
     "InvalidIndexPathError",

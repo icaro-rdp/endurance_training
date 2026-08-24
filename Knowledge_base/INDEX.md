@@ -14,9 +14,9 @@ Welcome to the **Endurance Training Knowledge Base**. This document is the prima
 ### Category: `METRICS`
 Total documents: 51
 
-- **[100k AMA: Zone 3 Rides, Anaerobic Capacity vs FTP, Heavy Lifting, and Indoor Equivalence — Complete Guide](Episodes/Empirical_cycling_podcast/training/100k_AMA.md)** (`Episodes/Empirical_cycling_podcast/training/100k_AMA.md`)
+- **[100k AMA: Zone 3 Rides, Anaerobic Capacity vs FTP, Heavy Lifting, and Indoor Equivalence — Q&A Guide](Episodes/Empirical_cycling_podcast/training/100k_AMA.md)** (`Episodes/Empirical_cycling_podcast/training/100k_AMA.md`)
   - **Topics**: FTP, W_prime, Aerobic_base, Heavy_torque, Sprint_performance
-  - **Summary**: In-depth reference guide answering core listener questions on steady Zone 3 tempo utility, why FTP dictates anaerobic repeatability, heavy strength training mechanics for cyclists, sprint development, and indoor vs outdoor training conversion.
+  - **Summary**: In-depth Q&A reference resolving listener questions on why FTP dictates anaerobic surge repeatability, the targeted utility vs fatigue risks of Zone 3 tempo riding, heavy strength training mechanics for endurance cyclists, sprint neuromuscular development, and indoor vs outdoor training conversion.
 
 - **[A Guide to Time Trialing: Aerodynamics, Pacing Physics, Positioning, & Race Execution — Complete Guide](Episodes/Empirical_cycling_podcast/metrics/Perspectives__10__A_Guide_To_Time_Trialing__with_Cory_Lockwood.md)** (`Episodes/Empirical_cycling_podcast/metrics/Perspectives__10__A_Guide_To_Time_Trialing__with_Cory_Lockwood.md`)
   - **Topics**: FTP, Durability, Power_vs_HR, TTA_TTE
@@ -106,9 +106,9 @@ Total documents: 51
   - **Topics**: FTP, CP, W_prime, LT2_VT2
   - **Summary**: From the well-established hyperbolic relationship between power output and the duration for which that power can be sustained, two fundamental parameters can be derived: Critical
 
-- **[Instagram and Reddit AMA: Intensity Distributions, Over-Unders, VO2max Ceilings, and MLSS vs FTP — Complete Guide](Episodes/Empirical_cycling_podcast/metrics/Instagram_and_Reddit_AMA_.md)** (`Episodes/Empirical_cycling_podcast/metrics/Instagram_and_Reddit_AMA_.md`)
+- **[Instagram and Reddit AMA: Intensity Distributions, Over-Unders, VO2max Ceilings, and MLSS vs FTP — Q&A Guide](Episodes/Empirical_cycling_podcast/metrics/Instagram_and_Reddit_AMA_.md)** (`Episodes/Empirical_cycling_podcast/metrics/Instagram_and_Reddit_AMA_.md`)
   - **Topics**: FTP, VO2max, LT2_VT2, Aerobic_base, Sodium_bicarbonate, Heavy_torque
-  - **Summary**: Comprehensive analytical guide deconstructing 80/20 intensity distributions, over-under mechanics with torque manipulation, breaking through high fractional utilization ceilings (>80% VO2max), debunking topical lactate creams, and resolving FTP vs MLSS discrepancies.
+  - **Summary**: Analytical Q&A guide addressing listener questions from Instagram and Reddit on diagnosing high fractional utilization ceilings (>80% VO2max), low-cadence over-under mechanics, reconciling FTP vs MLSS discrepancies, systemic buffering vs topical lactate creams, and altitude acclimation pacing.
 
 - **[Measuring Durability: the Guide](Articles/knowledgeIsWatts/metrics/metrics-measuring-durability-guide.md)** (`Articles/knowledgeIsWatts/metrics/metrics-measuring-durability-guide.md`)
   - **Topics**: FTP, VO2max, Durability
@@ -146,9 +146,9 @@ Total documents: 51
   - **Topics**: FTP, TTA_TTE, LT2_VT2
   - **Summary**: Kolie Moore and Kyle Houston explore practical, low-anxiety alternatives to exhaustive FTP testing, detailing submaximal and RPE-based methods to accurately diagnose threshold without derailing training blocks or inflating ego-driven power targets.
 
-- **[Ten Minute Tips #28: FTP and VO2max Thoughts & Practical Frameworks — Complete Guide](Episodes/Empirical_cycling_podcast/metrics/Ten_Minute_Tips__28__FTP_and_VO2max_Thoughts_and_Listener_Questions.md)** (`Episodes/Empirical_cycling_podcast/metrics/Ten_Minute_Tips__28__FTP_and_VO2max_Thoughts_and_Listener_Questions.md`)
+- **[Ten Minute Tips #28: FTP and VO2max Thoughts & Practical Frameworks — Q&A Guide](Episodes/Empirical_cycling_podcast/metrics/Ten_Minute_Tips__28__FTP_and_VO2max_Thoughts_and_Listener_Questions.md)** (`Episodes/Empirical_cycling_podcast/metrics/Ten_Minute_Tips__28__FTP_and_VO2max_Thoughts_and_Listener_Questions.md`)
   - **Topics**: FTP, VO2max, TTA_TTE, Block_periodization, Long_intervals
-  - **Summary**: Provides expanded coaching frameworks on the physiological interaction between VO2max and FTP, detailing prerequisites for VO2max blocks, recovery timelines, high-cadence hemodynamics, and periodization strategies for long-term progression.
+  - **Summary**: Expert Q&A guide detailing the physiological hierarchy between VO2max and FTP, prerequisites for initiating VO2max shock blocks, recovery and adaptation realization timelines, hemodynamics of high cadence, and mixed microcycle alternatives.
 
 - **[Ten Minute Tips #32: Where Training Zones Fall Short — Complete Guide](Episodes/Empirical_cycling_podcast/metrics/Ten_Minute_Tips__32__Where_Training_Zones_Fall_Short.md)** (`Episodes/Empirical_cycling_podcast/metrics/Ten_Minute_Tips__32__Where_Training_Zones_Fall_Short.md`)
   - **Topics**: Power_vs_HR, FTP, Lab_vs_field, TTA_TTE, Volume_quantification
@@ -243,9 +243,9 @@ Total documents: 19
   - **Topics**: VO2max, LT2_VT2, Short_intervals, Long_intervals, Aerobic_base
   - **Summary**: SCIENTIFIC BACKGROUND: Short high intensity intermittent intervals are a HIT format in which the work duration is 15sec-1
 
-- **[Listener Questions on VO2max Training and Rønnestad 30/15s — Complete Guide](Episodes/Empirical_cycling_podcast/training/Watts_Doc__24__Listener_Questions_on_VO2max_Training_and_Rønnestad_30_15s.md)** (`Episodes/Empirical_cycling_podcast/training/Watts_Doc__24__Listener_Questions_on_VO2max_Training_and_Rønnestad_30_15s.md`)
+- **[Listener Questions on VO2max Training and Rønnestad 30/15s — Q&A Guide](Episodes/Empirical_cycling_podcast/training/Watts_Doc__24__Listener_Questions_on_VO2max_Training_and_Rønnestad_30_15s.md)** (`Episodes/Empirical_cycling_podcast/training/Watts_Doc__24__Listener_Questions_on_VO2max_Training_and_Rønnestad_30_15s.md`)
   - **Topics**: VO2max, Short_intervals, Cardiac_hypertrophy, Block_periodization
-  - **Summary**: A deep-dive Q&A resolving practical nuances of VO2max training—including cadence manipulation, position specificity, interval pacing, block periodization, and a rigorous methodological critique of Rønnestad 30/15 vs. 4x5 min interval research.
+  - **Summary**: Comprehensive Q&A guide resolving listener questions on VO2max interval execution, cadence manipulation, cardiac preload mechanics, seated vs standing biomechanics, position specificity on TT bikes, and a critical methodological breakdown of Rønnestad 30/15 research.
 
 - **[Optimizing HIT Aerobic Workouts: the Decreasing Length Intervals](Articles/knowledgeIsWatts/hiit/hiit-optimizing-decreasing-length-intervals.md)** (`Articles/knowledgeIsWatts/hiit/hiit-optimizing-decreasing-length-intervals.md`)
   - **Topics**: FTP, CP, VO2max, LT2_VT2, Short_intervals
@@ -543,9 +543,9 @@ Total documents: 23
 ### Category: `PHYSIOLOGY`
 Total documents: 39
 
-- **[1M Milestone AMA: Physiology, Energy Balance, Indoor Equivalence & Strength Mechanics — Complete Guide](Episodes/Empirical_cycling_podcast/physiology/1M__AMA.md)** (`Episodes/Empirical_cycling_podcast/physiology/1M__AMA.md`)
-  - **Topics**: Aerobic_base, FTP, VO2max, TTA_TTE, Power_vs_HR, Heavy_torque
-  - **Summary**: An exhaustive reference guide celebrating 1,000,000 listens, tackling deep training questions on energy balance in endurance vs hypertrophy, the physiological floor of Zone 2 power, indoor vs outdoor duration equivalence, partial range-of-motion lifts, heat training for indoor performance, post-VO2max recovery timelines before FTP testing, and soreness vs recovery.
+- **[1M Milestone AMA: Physiology, Energy Balance, Indoor Equivalence & Strength Mechanics — Q&A Guide](Episodes/Empirical_cycling_podcast/physiology/1M__AMA.md)** (`Episodes/Empirical_cycling_podcast/physiology/1M__AMA.md`)
+  - **Topics**: Aerobic_base, FTP, VO2max, TTA_TTE, Heavy_torque, Temperature_effects, Underfueling_REDs
+  - **Summary**: Comprehensive Q&A guide addressing listener questions on energy balance in endurance adaptation, the physiological floor of Zone 2 power, post-VO2max recovery timelines before FTP testing, quarter squat partial ROM biomechanics, and indoor vs outdoor training duration conversions.
 
 - **[ATP Hydrolysis, Cellular Disequilibrium, & Bioenergetics — Complete Guide](Episodes/Empirical_cycling_podcast/physiology/Ten_Minute_Tips__6__ATP_and_Disequilibrium.md)** (`Episodes/Empirical_cycling_podcast/physiology/Ten_Minute_Tips__6__ATP_and_Disequilibrium.md`)
   - **Topics**: Mitochondrial_density, Lactate_shuttle, Durability
@@ -704,17 +704,17 @@ Total documents: 39
 ### Category: `PERIODIZATION`
 Total documents: 94
 
-- **[2020 Best of Instagram AMA: Training Fundamentals, Fat Oxidation, Strength Retention, and Recovery Dynamics — Complete Guide](Episodes/Empirical_cycling_podcast/training/2020_Best_of_Instagram_AMA_Questions.md)** (`Episodes/Empirical_cycling_podcast/training/2020_Best_of_Instagram_AMA_Questions.md`)
+- **[2020 Best of Instagram AMA: Training Fundamentals, Fat Oxidation, Strength Retention, and Recovery Dynamics — Q&A Guide](Episodes/Empirical_cycling_podcast/training/2020_Best_of_Instagram_AMA_Questions.md)** (`Episodes/Empirical_cycling_podcast/training/2020_Best_of_Instagram_AMA_Questions.md`)
   - **Topics**: Aerobic_base, TTA_TTE, FTP, Fat_oxidation, Durability, Heavy_torque
-  - **Summary**: Comprehensive synthesis of listener Q&A covering the hierarchy of recovery, Sweet Spot interval dosing based on TTE, muscle mass trade-offs, fat oxidation origin and dietary adaptations, in-season strength maintenance, HRV limitations, and curing post-recovery-week flatness.
+  - **Summary**: Essential Q&A guide resolving listener questions on the recovery hierarchy vs marginal recovery gimmicks, sizing Sweet Spot intervals relative to individual TTE, endurance training fat oxidation vs dietary ketosis, in-season heavy strength maintenance, and curing post-recovery-week flatness.
 
-- **[2021 Best of Instagram AMA: Intensity Calibration, Periodization Models & Physiology — Complete Guide](Episodes/Empirical_cycling_podcast/training/2021_Best_of_Instagram_AMA_Questions.md)** (`Episodes/Empirical_cycling_podcast/training/2021_Best_of_Instagram_AMA_Questions.md`)
+- **[2021 Best of Instagram AMA: Intensity Calibration, Periodization Models & Physiology — Q&A Guide](Episodes/Empirical_cycling_podcast/training/2021_Best_of_Instagram_AMA_Questions.md)** (`Episodes/Empirical_cycling_podcast/training/2021_Best_of_Instagram_AMA_Questions.md`)
   - **Topics**: Aerobic_base, FTP, VO2max, TTA_TTE, Power_vs_HR, Heavy_torque
-  - **Summary**: Comprehensive reference guide answering the top 32 listener AMA questions of 2021 across training intensity domains, RPE calibration, asymmetric over-unders, cardiac drift mechanisms, block vs. mixed periodization, protein intake for endurance adaptations, and weight loss vs. strength retention.
+  - **Summary**: Comprehensive Q&A guide compiling the top listener questions of 2021 on RPE anchoring for FTP and strength training, asymmetric over-unders, heart rate decoupling during Zone 2, high cadence venous return at VO2max, focused vs mixed periodization blocks, and protein turnover in endurance athletes.
 
-- **[400k AMA: Metabolic Signaling, Periodization Models, Pacing Dynamics & Nutrition — Complete Guide](Episodes/Empirical_cycling_podcast/training/400k__AMA.md)** (`Episodes/Empirical_cycling_podcast/training/400k__AMA.md`)
+- **[400k AMA: Metabolic Signaling, Periodization Models, Pacing Dynamics & Nutrition — Q&A Guide](Episodes/Empirical_cycling_podcast/training/400k__AMA.md)** (`Episodes/Empirical_cycling_podcast/training/400k__AMA.md`)
   - **Topics**: Block_periodization, Aerobic_base, Carbohydrate_ratio, Durability, Heavy_torque
-  - **Summary**: An in-depth reference on metabolic signaling mechanisms, pacing and lipolysis dynamics, continuous interval integrity, periodization models, strength training sequencing, and endurance nutrition.
+  - **Summary**: Comprehensive Q&A guide resolving listener questions on negative-split endurance pacing and lipolysis kinetics, fresh vs durability interval placement, the continuous interval rule vs split sessions, protein requirements for endurance biogenesis, double-day gym sequencing, and post-rest week openers.
 
 - **[500k Special: Coaching Evolution, Training Plan Flaws & Periodization First Principles — Complete Guide](Episodes/Empirical_cycling_podcast/training/500k__Roasting_Kolie_s_Early_Training_Plans.md)** (`Episodes/Empirical_cycling_podcast/training/500k__Roasting_Kolie_s_Early_Training_Plans.md`)
   - **Topics**: Progressive_overload, Aerobic_base, TTA_TTE, Heavy_torque, Volume_quantification
@@ -796,9 +796,9 @@ Total documents: 94
   - **Topics**: Microcycles, Aerobic_base, Durability, Volume_quantification
   - **Summary**: Kolie Moore and Gediminas dissect the mid-season 'summer slump'—exploring why chronic fatigue and allostatic load peak after 6 months of training, and presenting maintenance frameworks, fun blocks, and reset strategies.
 
-- **[Listener Questions on FTP Training & Periodization — Complete Guide](Episodes/Empirical_cycling_podcast/training/The_Watts_Doc__16__Listener_Questions_on_FTP_Training.md)** (`Episodes/Empirical_cycling_podcast/training/The_Watts_Doc__16__Listener_Questions_on_FTP_Training.md`)
+- **[Listener Questions on FTP Training & Periodization — Q&A Guide](Episodes/Empirical_cycling_podcast/training/The_Watts_Doc__16__Listener_Questions_on_FTP_Training.md)** (`Episodes/Empirical_cycling_podcast/training/The_Watts_Doc__16__Listener_Questions_on_FTP_Training.md`)
   - **Topics**: FTP, TTA_TTE, Long_intervals
-  - **Summary**: A comprehensive analytical Q&A reference guide addressing foundational listener questions on FTP training, covering interval progression models, target wattage calibration, TTE dynamics, indoor vs. outdoor discrepancies, cadence selection, and knowing when to transition to VO2max ceiling work.
+  - **Summary**: Analytical Q&A guide resolving 11 fundamental listener inquiries on FTP interval progression, target wattage calibration (95% vs 105%), TTE contraction dynamics, cadence selection, weekly frequency, and recognizing when an FTP block is complete.
 
 - **[Making The Most Of Winter Training — Complete Guide](Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__67__Making_The_Most_Of_Winter_Training.md)** (`Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__67__Making_The_Most_Of_Winter_Training.md`)
   - **Topics**: Microcycles, Block_periodization, Volume_quantification, Periodization
@@ -996,9 +996,9 @@ Total documents: 94
   - **Topics**: Aerobic_base, Microcycles, Durability
   - **Summary**: A psychological and physiological guide to navigating post-event deflation, resetting season goals, replacing brittle outcome targets with process-driven metrics, and lowering activation energy to sustain multi-year consistency.
 
-- **[Ten Minute Tips #57: Coach Roundtable on Mid-Season Breaks, Stress Management, and Training Load — Complete Guide](Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__57__Our_Coaches_Answer_Your_Training_Questions.md)** (`Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__57__Our_Coaches_Answer_Your_Training_Questions.md`)
+- **[Ten Minute Tips #57: Coach Roundtable on Mid-Season Breaks, Stress Management, and Training Load — Q&A Guide](Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__57__Our_Coaches_Answer_Your_Training_Questions.md)** (`Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__57__Our_Coaches_Answer_Your_Training_Questions.md`)
   - **Topics**: Microcycles, Volume_quantification, Block_periodization
-  - **Summary**: Empirical Cycling coaches discuss mid-season breaks as proactive fatigue insurance, managing burnout through process goals, youth athlete susceptibility to overtraining, balancing volume vs. intensity under life stress, and effective athlete-coach habits.
+  - **Summary**: Coach roundtable Q&A guide analyzing mid-season deloading as proactive fatigue insurance, cumulative allostatic load management under life stress, youth and U23 overtraining risks, and pre- and post-workout habits for long-term consistency.
 
 - **[Ten Minute Tips #58: Why Rest Can Be So Scary — Complete Guide](Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__58__Why_Rest_Can_Be_So_Scary.md)** (`Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__58__Why_Rest_Can_Be_So_Scary.md`)
   - **Topics**: Microcycles, Volume_quantification, Block_periodization

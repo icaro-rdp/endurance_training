@@ -54,6 +54,27 @@ def handle_build_index(engine: KBEngine, _args: argparse.Namespace) -> None:
         f"Index synchronized: {status.document_count} English sources, "
         f"{status.passage_count} Evidence Passages."
     )
+    metrics = engine.last_index_build_metrics
+    if metrics is not None:
+        print(
+            "Build work: "
+            f"reused {metrics.reused_source_count} sources / "
+            f"{metrics.reused_passage_count} passages; "
+            f"rebuilt {metrics.rebuilt_source_count} sources / "
+            f"embedded {metrics.embedded_passage_count} passages."
+        )
+        print(
+            "Build timing: "
+            f"{metrics.total_seconds:.2f}s total "
+            f"(manifest {metrics.manifest_seconds:.2f}s, "
+            f"chunking {metrics.chunking_seconds:.2f}s, "
+            f"model setup {metrics.model_initialization_seconds:.2f}s, "
+            f"embedding {metrics.embedding_seconds:.2f}s, "
+            f"vector insert {metrics.vector_insertion_seconds:.2f}s, "
+            f"SQLite/FTS {metrics.sqlite_fts_seconds:.2f}s, "
+            f"validation {metrics.validation_seconds:.2f}s, "
+            f"replacement {metrics.replacement_seconds:.2f}s)."
+        )
 
     print("\nRebuilding Sitemap...")
     engine.build_sitemap()

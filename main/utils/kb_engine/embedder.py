@@ -41,9 +41,14 @@ class PassageEmbedder:
     def embed_query_to_bytes(cls, query: str) -> bytes:
         """Embed a single query string and return raw float384 bytes."""
         model = cls.get_model()
-        vec = next(model.embed([query]))
+        vec = next(iter(model.embed([query])))
         return struct.pack(f"{_EMBEDDING_DIM}f", *vec)
 
     @classmethod
     def embedding_dim(cls) -> int:
         return _EMBEDDING_DIM
+
+    @classmethod
+    def model_name(cls) -> str:
+        """Return the model identity persisted with reusable embeddings."""
+        return _MODEL_NAME

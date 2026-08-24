@@ -1,4 +1,4 @@
-"""Transactional SQLite FTS5 & sqlite-vec index over citation-stable Evidence Passages."""
+"""Transactional SQLite FTS5 and vector index over Evidence Passages."""
 
 from __future__ import annotations
 
@@ -7,11 +7,12 @@ import os
 import re
 import sqlite3
 import tempfile
-from dataclasses import dataclass
+import time
+from dataclasses import dataclass, replace
 from pathlib import Path
 from typing import Literal
 
-import sqlite_vec
+import sqlite_vec  # type: ignore[import-untyped]
 
 from .chunker import StructureAwareChunker
 from .embedder import PassageEmbedder
@@ -29,6 +30,7 @@ from .models import (
     CorpusManifest,
     EvidencePassage,
     EvidenceSearchResult,
+    IndexBuildMetrics,
     IndexState,
     IndexStatus,
     PassageSizeStatus,
@@ -36,7 +38,7 @@ from .models import (
 from .query_preprocessor import preprocess_query
 from .sync import build_corpus_manifest
 
-_SCHEMA_VERSION = "3"
+_SCHEMA_VERSION = "4"
 _VALID_SOURCE_TYPES = frozenset({"article", "podcast"})
 _VALID_SIZE_STATUSES = frozenset(status.value for status in PassageSizeStatus)
 _PASSAGE_COLUMNS = """
@@ -67,6 +69,18 @@ class _IndexSnapshot:
     passage_count: int
 
 
+@dataclass(frozen=True, slots=True)
+class _DatabaseBuildResult:
+    passage_count: int
+    metrics: IndexBuildMetrics
+
+
+@dataclass(frozen=True, slots=True)
+class _SourceReuseResult:
+    passage_count: int
+    vector_insertion_seconds: float
+
+
 class PassageIndex:
     """Own the local Derived Index and enforce explicit synchronization."""
 
@@ -94,9 +108,14 @@ class PassageIndex:
         if self.db_path.is_dir():
             raise InvalidIndexPathError(self.db_path, "the path is a directory")
         self.chunker = chunker or StructureAwareChunker(self.kb_dir)
+        self.last_build_metrics: IndexBuildMetrics | None = None
 
     def synchronize(self) -> IndexStatus:
+        synchronization_started = time.perf_counter()
+        self.last_build_metrics = None
+        manifest_started = time.perf_counter()
         manifest = build_corpus_manifest(self.kb_dir)
+        manifest_seconds = time.perf_counter() - manifest_started
         if manifest.document_count == 0:
             raise EmptyCorpusError
         try:
@@ -114,10 +133,15 @@ class PassageIndex:
         temporary_path = Path(temporary_name)
 
         try:
-            passage_count = self._build_database(temporary_path, manifest)
-            if build_corpus_manifest(self.kb_dir).digest != manifest.digest:
+            build_result = self._build_database(temporary_path, manifest)
+            verification_started = time.perf_counter()
+            verification_manifest = build_corpus_manifest(self.kb_dir)
+            manifest_seconds += time.perf_counter() - verification_started
+            if verification_manifest.digest != manifest.digest:
                 raise CorpusChangedDuringSyncError
+            replacement_started = time.perf_counter()
             os.replace(temporary_path, self.db_path)
+            replacement_seconds = time.perf_counter() - replacement_started
         except sqlite3.DatabaseError as error:
             raise InvalidIndexError from error
         except OSError as error:
@@ -127,10 +151,16 @@ class PassageIndex:
         finally:
             temporary_path.unlink(missing_ok=True)
 
+        self.last_build_metrics = replace(
+            build_result.metrics,
+            total_seconds=time.perf_counter() - synchronization_started,
+            manifest_seconds=manifest_seconds,
+            replacement_seconds=replacement_seconds,
+        )
         return IndexStatus(
             state=IndexState.FRESH,
             document_count=manifest.document_count,
-            passage_count=passage_count,
+            passage_count=build_result.passage_count,
             current_digest=manifest.digest,
             indexed_digest=manifest.digest,
         )
@@ -161,6 +191,7 @@ class PassageIndex:
         indexed_digest = snapshot.metadata.get("corpus_digest")
         if (
             snapshot.metadata.get("schema_version") != _SCHEMA_VERSION
+            or snapshot.metadata.get("embedding_model") != PassageEmbedder.model_name()
             or not indexed_digest
         ):
             state = IndexState.INVALID
@@ -240,7 +271,9 @@ class PassageIndex:
         fts_query = preprocess_query(query)
 
         sql = f"""
-            SELECT {_PASSAGE_COLUMNS}, bm25(passages_fts, 5.0, 1.0, 2.0, 4.0, 2.0, 1.0) AS lexical_rank
+            SELECT {_PASSAGE_COLUMNS},
+                   bm25(passages_fts, 5.0, 1.0, 2.0, 4.0, 2.0, 1.0)
+                       AS lexical_rank
             FROM passages_fts
             JOIN passages p ON p.id = passages_fts.rowid
             JOIN sources s ON s.id = p.source_id
@@ -341,57 +374,225 @@ class PassageIndex:
         except (sqlite3.DatabaseError, TypeError, ValueError) as error:
             raise InvalidIndexError from error
 
-    def _build_database(self, path: Path, manifest: CorpusManifest) -> int:
-        with sqlite3.connect(path) as connection:
+    def _build_database(
+        self, path: Path, manifest: CorpusManifest
+    ) -> _DatabaseBuildResult:
+        previous_connection = self._open_reusable_index()
+        sqlite_fts_started = time.perf_counter()
+        chunking_seconds = 0.0
+        model_initialization_seconds = 0.0
+        embedding_seconds = 0.0
+        vector_insertion_seconds = 0.0
+        validation_seconds = 0.0
+        reused_source_count = 0
+        rebuilt_source_count = 0
+        reused_passage_count = 0
+        passage_count = 0
+        passage_entries: list[tuple[int, str]] = []
+
+        try:
+            with sqlite3.connect(path) as connection:
+                self._load_sqlite_vec(connection)
+                connection.row_factory = sqlite3.Row
+                connection.execute("PRAGMA foreign_keys = ON")
+                self._create_schema(connection)
+
+                for rel_path, source_digest in manifest.source_digests:
+                    reuse_result = self._reuse_source(
+                        connection,
+                        previous_connection,
+                        rel_path,
+                        source_digest,
+                    )
+                    if reuse_result is not None:
+                        reused_source_count += 1
+                        reused_passage_count += reuse_result.passage_count
+                        passage_count += reuse_result.passage_count
+                        vector_insertion_seconds += (
+                            reuse_result.vector_insertion_seconds
+                        )
+                        continue
+
+                    rebuilt_source_count += 1
+                    source_path = self.kb_dir / rel_path
+                    chunking_started = time.perf_counter()
+                    passages = self.chunker.chunk_document(
+                        source_path,
+                        expected_digest=source_digest,
+                    )
+                    chunking_seconds += time.perf_counter() - chunking_started
+                    if not passages:
+                        raise InvalidKnowledgeSourceError(
+                            rel_path,
+                            "chunking produced no Evidence Passages",
+                        )
+                    source_id = self._insert_source(
+                        connection, passages[0], source_digest
+                    )
+                    for passage in passages:
+                        passage_count += 1
+                        passage_id = self._insert_passage(
+                            connection, source_id, passage
+                        )
+                        passage_text = (
+                            f"{passage.title}\n"
+                            f"{passage.section_path}\n"
+                            f"{passage.content}"
+                        )
+                        passage_entries.append((passage_id, passage_text))
+
+                if passage_entries:
+                    passage_ids, texts = zip(*passage_entries, strict=True)
+                    model_initialization_started = time.perf_counter()
+                    PassageEmbedder.get_model()
+                    model_initialization_seconds = (
+                        time.perf_counter() - model_initialization_started
+                    )
+                    embedding_started = time.perf_counter()
+                    embedding_bytes = PassageEmbedder.embed_texts_to_bytes(
+                        list(texts), batch_size=128
+                    )
+                    embedding_seconds = time.perf_counter() - embedding_started
+                    vector_insertion_started = time.perf_counter()
+                    connection.executemany(
+                        "INSERT INTO vec_passages (passage_id, embedding) "
+                        "VALUES (?, ?)",
+                        list(zip(passage_ids, embedding_bytes, strict=True)),
+                    )
+                    vector_insertion_seconds += (
+                        time.perf_counter() - vector_insertion_started
+                    )
+
+                metadata = {
+                    "schema_version": _SCHEMA_VERSION,
+                    "embedding_model": PassageEmbedder.model_name(),
+                    "corpus_digest": manifest.digest,
+                    "document_count": str(manifest.document_count),
+                    "passage_count": str(passage_count),
+                }
+                connection.executemany(
+                    "INSERT INTO meta (key, value) VALUES (?, ?)", metadata.items()
+                )
+                connection.commit()
+                validation_started = time.perf_counter()
+                snapshot = self._inspect_database(connection)
+                validation_seconds = time.perf_counter() - validation_started
+        finally:
+            if previous_connection is not None:
+                previous_connection.close()
+
+        sqlite_fts_total = time.perf_counter() - sqlite_fts_started
+        sqlite_fts_seconds = max(
+            0.0,
+            sqlite_fts_total
+            - chunking_seconds
+            - model_initialization_seconds
+            - embedding_seconds
+            - vector_insertion_seconds
+            - validation_seconds,
+        )
+        return _DatabaseBuildResult(
+            passage_count=snapshot.passage_count,
+            metrics=IndexBuildMetrics(
+                total_seconds=0.0,
+                manifest_seconds=0.0,
+                sqlite_fts_seconds=sqlite_fts_seconds,
+                chunking_seconds=chunking_seconds,
+                model_initialization_seconds=model_initialization_seconds,
+                embedding_seconds=embedding_seconds,
+                vector_insertion_seconds=vector_insertion_seconds,
+                validation_seconds=validation_seconds,
+                replacement_seconds=0.0,
+                reused_source_count=reused_source_count,
+                rebuilt_source_count=rebuilt_source_count,
+                reused_passage_count=reused_passage_count,
+                embedded_passage_count=len(passage_entries),
+            ),
+        )
+
+    def _open_reusable_index(self) -> sqlite3.Connection | None:
+        if not self.db_path.is_file():
+            return None
+        connection: sqlite3.Connection | None = None
+        try:
+            connection = sqlite3.connect(
+                f"{self.db_path.as_uri()}?mode=ro",
+                uri=True,
+            )
             self._load_sqlite_vec(connection)
             connection.row_factory = sqlite3.Row
-            connection.execute("PRAGMA foreign_keys = ON")
-            self._create_schema(connection)
-            passage_count = 0
-            passage_entries: list[tuple[int, str]] = []
-            for rel_path, source_digest in manifest.source_digests:
-                source_path = self.kb_dir / rel_path
-                passages = self.chunker.chunk_document(
-                    source_path,
-                    expected_digest=source_digest,
-                )
-                if not passages:
-                    raise InvalidKnowledgeSourceError(
-                        rel_path,
-                        "chunking produced no Evidence Passages",
-                    )
-                source_id = self._insert_source(connection, passages[0])
-                for passage in passages:
-                    passage_count += 1
-                    p_id = self._insert_passage(connection, source_id, passage)
-                    passage_text = (
-                        f"{passage.title}\n{passage.section_path}\n{passage.content}"
-                    )
-                    passage_entries.append((p_id, passage_text))
-
-            # Batch compute dense embeddings and insert into vec_passages
-            if passage_entries:
-                passage_ids, texts = zip(*passage_entries)
-                embedding_bytes = PassageEmbedder.embed_texts_to_bytes(
-                    list(texts), batch_size=128
-                )
-                connection.executemany(
-                    "INSERT INTO vec_passages (passage_id, embedding) VALUES (?, ?)",
-                    list(zip(passage_ids, embedding_bytes)),
-                )
-
-            metadata = {
-                "schema_version": _SCHEMA_VERSION,
-                "corpus_digest": manifest.digest,
-                "document_count": str(manifest.document_count),
-                "passage_count": str(passage_count),
-            }
-            connection.executemany(
-                "INSERT INTO meta (key, value) VALUES (?, ?)", metadata.items()
-            )
-            connection.commit()
+            connection.execute("PRAGMA query_only = ON")
             snapshot = self._inspect_database(connection)
-        return snapshot.passage_count
+            if (
+                snapshot.metadata.get("schema_version") != _SCHEMA_VERSION
+                or snapshot.metadata.get("embedding_model")
+                != PassageEmbedder.model_name()
+            ):
+                connection.close()
+                return None
+            return connection
+        except (OSError, sqlite3.DatabaseError, TypeError, ValueError):
+            if connection is not None:
+                connection.close()
+            return None
+
+    def _reuse_source(
+        self,
+        connection: sqlite3.Connection,
+        previous_connection: sqlite3.Connection | None,
+        rel_path: str,
+        source_digest: str,
+    ) -> _SourceReuseResult | None:
+        if previous_connection is None:
+            return None
+        rows = previous_connection.execute(
+            f"""
+                SELECT {_PASSAGE_COLUMNS}, v.embedding AS embedding
+                FROM passages p
+                JOIN sources s ON s.id = p.source_id
+                JOIN vec_passages v ON v.passage_id = p.id
+                WHERE s.rel_path = ? AND s.content_digest = ?
+                ORDER BY p.id
+            """,
+            (rel_path, source_digest),
+        ).fetchall()
+        if not rows:
+            return None
+
+        first_passage = self._rebase_reused_citation(
+            self._passage_from_row(rows[0]), rel_path
+        )
+        source_id = self._insert_source(connection, first_passage, source_digest)
+        vector_insertion_seconds = 0.0
+        for row in rows:
+            passage = self._rebase_reused_citation(
+                self._passage_from_row(row), rel_path
+            )
+            passage_id = self._insert_passage(
+                connection,
+                source_id,
+                passage,
+            )
+            embedding = row["embedding"]
+            if not isinstance(embedding, bytes):
+                raise sqlite3.DatabaseError("stored embedding is not binary")
+            vector_insertion_started = time.perf_counter()
+            connection.execute(
+                "INSERT INTO vec_passages (passage_id, embedding) VALUES (?, ?)",
+                (passage_id, embedding),
+            )
+            vector_insertion_seconds += time.perf_counter() - vector_insertion_started
+        return _SourceReuseResult(
+            passage_count=len(rows),
+            vector_insertion_seconds=vector_insertion_seconds,
+        )
+
+    def _rebase_reused_citation(
+        self, passage: EvidencePassage, rel_path: str
+    ) -> EvidencePassage:
+        source_uri = (self.kb_dir / rel_path).as_uri()
+        citation = f"{source_uri}#L{passage.start_line}-L{passage.end_line}"
+        return replace(passage, citation=citation)
 
     @staticmethod
     def _load_sqlite_vec(connection: sqlite3.Connection) -> None:
@@ -418,7 +619,9 @@ class PassageIndex:
                 source_type TEXT NOT NULL,
                 category TEXT NOT NULL,
                 topics TEXT NOT NULL,
-                source TEXT NOT NULL
+                source TEXT NOT NULL,
+                content_digest TEXT NOT NULL
+                    CHECK (length(content_digest) = 64)
             );
 
             CREATE TABLE passages (
@@ -454,13 +657,17 @@ class PassageIndex:
         )
 
     @staticmethod
-    def _insert_source(connection: sqlite3.Connection, passage: EvidencePassage) -> int:
+    def _insert_source(
+        connection: sqlite3.Connection,
+        passage: EvidencePassage,
+        content_digest: str,
+    ) -> int:
         cursor = connection.execute(
             """
                 INSERT INTO sources (
                     slug, rel_path, title, author, language,
-                    source_type, category, topics, source
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    source_type, category, topics, source, content_digest
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             (
                 passage.source_slug,
@@ -472,6 +679,7 @@ class PassageIndex:
                 passage.category,
                 json.dumps(passage.topics, ensure_ascii=False),
                 passage.source,
+                content_digest,
             ),
         )
         return _last_row_id(cursor)
@@ -621,14 +829,18 @@ def _last_row_id(cursor: sqlite3.Cursor) -> int:
 
 
 def _validate_source_rows(connection: sqlite3.Connection) -> None:
-    for language, source_type, topics in connection.execute(
-        "SELECT language, source_type, topics FROM sources"
+    for language, source_type, topics, content_digest in connection.execute(
+        "SELECT language, source_type, topics, content_digest FROM sources"
     ):
         if language != "en":
             raise ValueError("source language must be 'en'")
         if source_type not in _VALID_SOURCE_TYPES:
             raise ValueError("source type is invalid")
         _decode_string_array(topics, "topics")
+        if not isinstance(content_digest, str) or not re.fullmatch(
+            r"[0-9a-f]{64}", content_digest
+        ):
+            raise ValueError("source content digest is invalid")
 
 
 def _validate_passage_rows(connection: sqlite3.Connection) -> None:

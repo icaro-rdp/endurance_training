@@ -125,6 +125,25 @@ class CorpusManifest:
 
 
 @dataclass(frozen=True, slots=True)
+class IndexBuildMetrics:
+    """Observable work performed by the most recent Corpus Synchronization."""
+
+    total_seconds: float
+    manifest_seconds: float
+    sqlite_fts_seconds: float
+    chunking_seconds: float
+    model_initialization_seconds: float
+    embedding_seconds: float
+    vector_insertion_seconds: float
+    validation_seconds: float
+    replacement_seconds: float
+    reused_source_count: int
+    rebuilt_source_count: int
+    reused_passage_count: int
+    embedded_passage_count: int
+
+
+@dataclass(frozen=True, slots=True)
 class IndexStatus:
     """Inspectable state of the local passage index."""
 

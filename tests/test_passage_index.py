@@ -10,6 +10,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
+from main.utils.kb_engine.embedder import PassageEmbedder
 from main.utils.kb_engine.errors import (
     CorpusChangedDuringSyncError,
     IndexNotBuiltError,
@@ -226,6 +227,143 @@ source: Local test journal
         self.assertEqual(second_sync.current_digest, first)
         self.assertEqual(second_sync.indexed_digest, first)
 
+    def test_unchanged_sources_reuse_passages_and_embeddings(self) -> None:
+        first = self.index.synchronize()
+
+        with (
+            patch.object(self.index.chunker, "chunk_document") as chunk_document,
+            patch.object(PassageEmbedder, "embed_texts_to_bytes") as embed_texts,
+        ):
+            second = self.index.synchronize()
+
+        chunk_document.assert_not_called()
+        embed_texts.assert_not_called()
+        self.assertEqual(second.passage_count, first.passage_count)
+        metrics = self.index.last_build_metrics
+        self.assertIsNotNone(metrics)
+        assert metrics is not None
+        self.assertEqual(metrics.reused_source_count, 3)
+        self.assertEqual(metrics.rebuilt_source_count, 0)
+        self.assertEqual(metrics.reused_passage_count, first.passage_count)
+        self.assertEqual(metrics.embedded_passage_count, 0)
+
+    def test_only_edited_source_is_rechunked_and_reembedded(self) -> None:
+        self.index.synchronize()
+        self.alpha_path.write_text(
+            self.alpha_path.read_text(encoding="utf-8") + "\nEdited evidence.\n",
+            encoding="utf-8",
+        )
+        chunk_document = self.index.chunker.chunk_document
+        embed_texts = PassageEmbedder.embed_texts_to_bytes
+
+        with (
+            patch.object(
+                self.index.chunker,
+                "chunk_document",
+                wraps=chunk_document,
+            ) as chunk_spy,
+            patch.object(
+                PassageEmbedder,
+                "embed_texts_to_bytes",
+                wraps=embed_texts,
+            ) as embed_spy,
+        ):
+            self.index.synchronize()
+
+        self.assertEqual(chunk_spy.call_count, 1)
+        chunked_path = chunk_spy.call_args.args[0]
+        self.assertEqual(chunked_path.resolve(), self.alpha_path.resolve())
+        embed_spy.assert_called_once()
+        metrics = self.index.last_build_metrics
+        self.assertIsNotNone(metrics)
+        assert metrics is not None
+        self.assertEqual(metrics.reused_source_count, 2)
+        self.assertEqual(metrics.rebuilt_source_count, 1)
+        self.assertGreater(metrics.embedded_passage_count, 0)
+
+    def test_added_deleted_and_renamed_sources_are_reconciled(self) -> None:
+        self.index.synchronize()
+        self.beta_path.unlink()
+        renamed_alpha = self.alpha_path.with_name("alpha-renamed.md")
+        self.alpha_path.rename(renamed_alpha)
+        added_path = self._write_source(
+            "Articles/new-source.md",
+            title="New Source",
+            category="physiology",
+            topics=("VO2max",),
+            marker="newsignature",
+        )
+        chunk_document = self.index.chunker.chunk_document
+
+        with patch.object(
+            self.index.chunker,
+            "chunk_document",
+            wraps=chunk_document,
+        ) as chunk_spy:
+            status = self.index.synchronize()
+
+        self.assertEqual(status.document_count, 3)
+        chunked_paths = {call.args[0].resolve() for call in chunk_spy.call_args_list}
+        self.assertEqual(chunked_paths, {renamed_alpha.resolve(), added_path.resolve()})
+        metrics = self.index.last_build_metrics
+        self.assertIsNotNone(metrics)
+        assert metrics is not None
+        self.assertEqual(metrics.reused_source_count, 1)
+        self.assertEqual(metrics.rebuilt_source_count, 2)
+        self.assertEqual(self.index.search("capillarysignature"), ())
+        self.assertTrue(self.index.search("newsignature"))
+
+    def test_taxonomy_only_change_reuses_unchanged_sources(self) -> None:
+        self.index.synchronize()
+        self.taxonomy_path.write_text(
+            self.taxonomy_path.read_text(encoding="utf-8")
+            + "\n### 3. `metrics`\n  - `FTP`\n",
+            encoding="utf-8",
+        )
+
+        with (
+            patch.object(self.index.chunker, "chunk_document") as chunk_document,
+            patch.object(PassageEmbedder, "embed_texts_to_bytes") as embed_texts,
+        ):
+            status = self.index.synchronize()
+
+        chunk_document.assert_not_called()
+        embed_texts.assert_not_called()
+        self.assertEqual(status.state.value, "fresh")
+        metrics = self.index.last_build_metrics
+        self.assertIsNotNone(metrics)
+        assert metrics is not None
+        self.assertEqual(metrics.reused_source_count, 3)
+        self.assertEqual(metrics.rebuilt_source_count, 0)
+
+    def test_incompatible_index_metadata_forces_a_full_rebuild(self) -> None:
+        for key, value in (
+            ("schema_version", "legacy"),
+            ("embedding_model", "replacement-model"),
+        ):
+            with self.subTest(key=key):
+                self.index.synchronize()
+                with sqlite3.connect(self.db_path) as connection:
+                    connection.execute(
+                        "UPDATE meta SET value = ? WHERE key = ?",
+                        (value, key),
+                    )
+                chunk_document = self.index.chunker.chunk_document
+
+                with patch.object(
+                    self.index.chunker,
+                    "chunk_document",
+                    wraps=chunk_document,
+                ) as chunk_spy:
+                    self.index.synchronize()
+
+                self.assertEqual(chunk_spy.call_count, 3)
+                metrics = self.index.last_build_metrics
+                self.assertIsNotNone(metrics)
+                assert metrics is not None
+                self.assertEqual(metrics.reused_source_count, 0)
+                self.assertEqual(metrics.rebuilt_source_count, 3)
+
     def test_synchronize_supplies_each_source_digest_to_the_chunker(self) -> None:
         chunk_document = self.index.chunker.chunk_document
         received_digests: dict[str, str] = {}
@@ -313,6 +451,10 @@ source: Local test journal
     def test_source_without_passages_fails_without_replacing_the_index(self) -> None:
         self.index.synchronize()
         original_database = self.db_path.read_bytes()
+        self.beta_path.write_text(
+            self.beta_path.read_text(encoding="utf-8") + "\nChanged evidence.\n",
+            encoding="utf-8",
+        )
         chunk_document = self.index.chunker.chunk_document
 
         def empty_beta(source_path: Path, *, expected_digest: str):
@@ -351,6 +493,10 @@ source: Local test journal
     def test_corpus_change_during_sync_preserves_existing_database(self) -> None:
         self.index.synchronize()
         original_database = self.db_path.read_bytes()
+        self.beta_path.write_text(
+            self.beta_path.read_text(encoding="utf-8") + "\nChanged evidence.\n",
+            encoding="utf-8",
+        )
         chunk_document = self.index.chunker.chunk_document
         original_alpha = self.alpha_path.read_text(encoding="utf-8")
 
@@ -420,6 +566,7 @@ source: Local test journal
         corruptions = (
             ("language", "UPDATE sources SET language = 'it'"),
             ("source type", "UPDATE sources SET source_type = 'essay'"),
+            ("content digest", "UPDATE sources SET content_digest = 'bad'"),
             ("size status", "UPDATE passages SET size_status = 'unbounded'"),
         )
         for field_name, statement in corruptions:
