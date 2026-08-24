@@ -1,36 +1,39 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "name": "English Endurance Training Retrieval Benchmark",
-  "issue_id": 3,
+  "issue_id": 13,
   "created_at": "2026-08-10",
-  "updated_at": "2026-08-20",
+  "updated_at": "2026-08-24",
   "scope": "english_only",
   "benchmark_stage": "lexical_passage_foundation",
   "description": "English-only benchmark for validating passage boundaries, provenance, lexical retrieval, ranking, and negative-query rejection. It provides a foundation for later model evaluation but does not claim semantic or model-backed performance.",
   "measurement_policy": "Report retrieval or model performance only from reproducible runs of this dataset and the named system configuration; architecture choices alone are not evidence of benchmark quality.",
   "dataset_summary": {
-    "query_count": 9,
-    "positive_query_count": 7,
-    "negative_query_count": 2,
-    "gold_passage_count": 18,
-    "unique_gold_source_count": 16,
+    "query_count": 32,
+    "positive_query_count": 28,
+    "negative_query_count": 4,
+    "gold_passage_count": 58,
+    "unique_gold_source_count": 35,
     "languages": [
       "en"
     ],
     "category_counts": {
       "broad_planning": 1,
-      "physiology": 1,
-      "hiit": 1,
-      "zone2": 1,
-      "strength": 1,
-      "source_conflict": 2,
-      "negative": 2
+      "periodization": 4,
+      "physiology": 3,
+      "hiit": 3,
+      "zone2": 3,
+      "strength": 4,
+      "nutrition": 4,
+      "source_conflict": 4,
+      "negative": 4,
+      "metrics": 2
     }
   },
   "acceptance_threshold_status": "targets_pending_measurement",
   "acceptance_thresholds": {
     "mrr_at_5": 0.85,
-    "ndcg_at_5": 0.80,
+    "ndcg_at_5": 0.8,
     "recall_at_5": 0.85,
     "latency_p95_ms": 500,
     "negative_query_max_false_positives": 0
@@ -46,7 +49,7 @@
       "gold_passages": [
         {
           "rel_path": "Episodes/Empirical_cycling_podcast/training/threshold/FTP_training.md",
-          "title": "FTP (Threshold) Training — Complete Guide",
+          "title": "FTP (Threshold) Training \u2014 Complete Guide",
           "relevance_score": 3,
           "start_line": 15,
           "end_line": 29,
@@ -54,19 +57,37 @@
         },
         {
           "rel_path": "Episodes/Empirical_cycling_podcast/training/threshold/FTP_decision_tree.md",
-          "title": "FTP Training Decision Tree — Complete Guide",
+          "title": "FTP Training Decision Tree \u2014 Complete Guide",
           "relevance_score": 3,
           "start_line": 39,
           "end_line": 46,
-          "target_snippet": "Prioritize adding time in zone before adding power"
+          "target_snippet": "- **High Responsiveness**: Early in the season (or after a period of detraining)"
         },
         {
           "rel_path": "Episodes/Empirical_cycling_podcast/training/threshold/FTP_TTE_2.md",
-          "title": "FTP vs. TTE: Raising Power vs. Extending Duration — Complete Guide",
+          "title": "FTP vs. TTE: Raising Power vs. Extending Duration \u2014 Complete Guide",
           "relevance_score": 2,
           "start_line": 17,
           "end_line": 43,
           "target_snippet": "Functional Threshold Power (FTP) and Time to Exhaustion (TTE) represent two distinct but deeply linked dimensions"
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "query": "Why testing FTP too soon after a VO2max block causes false failure?",
+      "language": "en",
+      "category": "periodization",
+      "description": "Query explaining why attempting an FTP test within 3–5 days post-VO2max block leads to false failure due to autonomic fatigue, and the required 7–14 day recovery timeline.",
+      "expected_behavior": "Rank recovery guidelines and post-VO2max physiological timelines that explain autonomic fatigue and the 7–14 day window before threshold testing.",
+      "gold_passages": [
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/physiology/1M__AMA.md",
+          "title": "1M Milestone AMA: Physiology, Energy Balance, Indoor Equivalence & Strength Mechanics — Q&A Guide",
+          "relevance_score": 3,
+          "start_line": 63,
+          "end_line": 94,
+          "target_snippet": "Testing FTP within 3–5 days after completing a VO2max block almost always results in early failure"
         }
       ]
     },
@@ -88,11 +109,37 @@
         },
         {
           "rel_path": "Episodes/Empirical_cycling_podcast/training/threshold/FTP_decision_tree.md",
-          "title": "FTP Training Decision Tree — Complete Guide",
+          "title": "FTP Training Decision Tree \u2014 Complete Guide",
           "relevance_score": 2,
           "start_line": 18,
           "end_line": 37,
           "target_snippet": "central cardiovascular capacity"
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "query": "How does the lactate shuttle transport lactate between fast-twitch and slow-twitch muscle fibers via MCT1 and MCT4?",
+      "language": "en",
+      "category": "physiology",
+      "description": "Mechanistic query on the intracellular and extracellular lactate shuttle, monocarboxylate transporters (MCT1 and MCT4), and lactate as an aerobic substrate for slow-twitch fibers and the heart.",
+      "expected_behavior": "Rank lactate shuttle and transport mechanisms (MCT1 and MCT4) ahead of general interval guides.",
+      "gold_passages": [
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/physiology/Lactate_metabolism_and_shuttle.md",
+          "title": "Lactate Metabolism, Myths, & The Lactate Shuttle \u2014 Complete Guide",
+          "relevance_score": 3,
+          "start_line": 48,
+          "end_line": 57,
+          "target_snippet": "Lactate is not a waste product. Because it retains its 3-carbon structure, it ho"
+        },
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/physiology/Lactate_metabolism_and_shuttle.md",
+          "title": "Lactate Metabolism, Myths, & The Lactate Shuttle \u2014 Complete Guide",
+          "relevance_score": 3,
+          "start_line": 59,
+          "end_line": 68,
+          "target_snippet": "Once shuttled out of the producing muscle, lactate acts as a premium, highly eff"
         }
       ]
     },
@@ -118,7 +165,33 @@
           "relevance_score": 2,
           "start_line": 73,
           "end_line": 109,
-          "target_snippet": "3x13min alternating 30s on and 15s off seems to provide superior physiological and performance adaptations"
+          "target_snippet": "Globally, after the 10 training weeks. the SI group improved more all the physio"
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "query": "How do decreasing length intervals (HIDIT) optimize time spent above 90% VO2max compared to traditional long intervals?",
+      "language": "en",
+      "category": "hiit",
+      "description": "Direct protocol query evaluating high-intensity decreasing interval training (HIDIT) to exploit rapid W' reconstitution and maximize fractional VO2max time.",
+      "expected_behavior": "Rank decreasing length interval evidence and W' reconstitution kinetics ahead of standard intermittent protocols.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/hiit/hiit-optimizing-decreasing-length-intervals.md",
+          "title": "Optimizing HIT Aerobic Workouts: the Decreasing Length Intervals",
+          "relevance_score": 3,
+          "start_line": 161,
+          "end_line": 204,
+          "target_snippet": "The Decreasing Length HIT format permits to maintain a high fraction of VO2max for a longer time"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/hiit/hiit-optimizing-decreasing-length-intervals.md",
+          "title": "Optimizing HIT Aerobic Workouts: the Decreasing Length Intervals",
+          "relevance_score": 3,
+          "start_line": 94,
+          "end_line": 159,
+          "target_snippet": "A study published by Vaccari and Colleagues (Department of Medicine, University"
         }
       ]
     },
@@ -144,15 +217,41 @@
           "relevance_score": 3,
           "start_line": 94,
           "end_line": 130,
-          "target_snippet": "When matching total work (read energy expenditure), zone 2 (low intensity, below the first threshold) induces less aerobic adaptations gains"
+          "target_snippet": "an increase in free radicals an increase in muscle calcium (Ca++) an altered ene"
         },
         {
           "rel_path": "Episodes/Empirical_cycling_podcast/training/base/Base_training.md",
-          "title": "Aerobic Base & Zone 2 Training — Complete Guide",
+          "title": "Aerobic Base & Zone 2 Training \u2014 Complete Guide",
           "relevance_score": 2,
           "start_line": 19,
           "end_line": 33,
           "target_snippet": "\"Base\" does not mean Zone 2 miles"
+        }
+      ]
+    },
+    {
+      "id": "Q08",
+      "query": "How to estimate FatMax power and heart rate without a laboratory metabolic cart?",
+      "language": "en",
+      "category": "zone2",
+      "description": "Practical testing query determining FatMax intensity relative to VT1 and maximum heart rate using field estimations.",
+      "expected_behavior": "Rank field approximations of FatMax and VT1 boundaries before lab-based metabolic cart protocols.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/zone2/zone2-training-at-fatmax-without-lab.md",
+          "title": "Training at Fatmax Without Any Lab Test",
+          "relevance_score": 3,
+          "start_line": 60,
+          "end_line": 106,
+          "target_snippet": "Data from a hot off the press study published by Meixner and Colleauges (Univers"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/zone2/zone2-training-at-fatmax-without-lab.md",
+          "title": "Training at Fatmax Without Any Lab Test",
+          "relevance_score": 2,
+          "start_line": 20,
+          "end_line": 58,
+          "target_snippet": "Fatmax = ~60-70% FTP/second threshold or 65-75% Heart Rate max"
         }
       ]
     },
@@ -178,7 +277,137 @@
           "relevance_score": 3,
           "start_line": 17,
           "end_line": 57,
-          "target_snippet": "unilateral exercises enhance cycling performance more when compared to bilateral ones"
+          "target_snippet": "**Source:** knowledgeiswatt.substack.com/p/42-strength-training-for-endurance **"
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "query": "What happens to cycling power and muscle mass when strength training is stopped during the competition season?",
+      "language": "en",
+      "category": "strength",
+      "description": "Periodization query on in-season strength maintenance versus complete cessation of gym resistance training in trained cyclists.",
+      "expected_behavior": "Rank in-season strength cessation and maintenance evidence over general off-season lifting protocols.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/strength/strength-during-competition-period.md",
+          "title": "Strength Training During Competition Period: Yes or No?",
+          "relevance_score": 3,
+          "start_line": 103,
+          "end_line": 150,
+          "target_snippet": "R\u00f8nnestad BR, Hansen EA, Raastad T. In-season strength maintenance training incr"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/strength/strength-during-competition-period.md",
+          "title": "Strength Training During Competition Period: Yes or No?",
+          "relevance_score": 3,
+          "start_line": 17,
+          "end_line": 60,
+          "target_snippet": "**Source:** knowledgeiswatt.substack.com/p/64-strength-training-during-competiti"
+        }
+      ]
+    },
+    {
+      "id": "Q11",
+      "query": "Does high-intensity low-cadence torque training improve aerobic parameters more than free cadence cycling?",
+      "language": "en",
+      "category": "strength",
+      "description": "Evidence query examining low-cadence (50-70 rpm) high-torque sprint and VO2max intervals on aerobic capacity and threshold power.",
+      "expected_behavior": "Rank high-intensity low-cadence torque research ahead of general cadence guidelines.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/strength/strength-high-intensity-torque-training.md",
+          "title": "High Intensity Torque Training Can Increase Cycling Performance",
+          "relevance_score": 3,
+          "start_line": 54,
+          "end_line": 97,
+          "target_snippet": "1. Sprints session: 2hrs with 8-12 x 30sec all-out sprints"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/strength/strength-high-intensity-torque-training.md",
+          "title": "High Intensity Torque Training Can Increase Cycling Performance",
+          "relevance_score": 2,
+          "start_line": 18,
+          "end_line": 52,
+          "target_snippet": "**Source:** knowledgeiswatt.substack.com/p/58-high-intensity-torque-training **D"
+        }
+      ]
+    },
+    {
+      "id": "Q12",
+      "query": "Is on-the-bike sprint training more effective than heavy gym squats for increasing peak 5-second sprint power?",
+      "language": "en",
+      "category": "strength",
+      "description": "Specificity comparison between explosive on-bike sprint intervals and heavy resistance gym lifting for short sprint power.",
+      "expected_behavior": "Rank sprint specificity and on-bike vs gym comparative trials before general strength recommendations.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/training/strength/training-improving-sprint-performance.md",
+          "title": "What is Better to Improve Your Sprint?",
+          "relevance_score": 3,
+          "start_line": 56,
+          "end_line": 90,
+          "target_snippet": "On the other hand, adaptations in power output at 4 mmol/L of blood lactate conc"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/training/strength/training-improving-sprint-performance.md",
+          "title": "What is Better to Improve Your Sprint?",
+          "relevance_score": 2,
+          "start_line": 15,
+          "end_line": 54,
+          "target_snippet": "**Source:** knowledgeiswatt.substack.com/p/74-sprints-on-the-bike-vs-gym-trainin"
+        }
+      ]
+    },
+    {
+      "id": "Q13",
+      "query": "What is the recommended dosing and timing protocol for sodium bicarbonate supplementation before a race?",
+      "language": "en",
+      "category": "nutrition",
+      "description": "Direct protocol query for acute sodium bicarbonate ingestion (0.2\u20130.3 g/kg at 120 minutes prior) and GI side-effect mitigation.",
+      "expected_behavior": "Rank exact sodium bicarbonate dosage, timing, and GI mitigation guidelines ahead of general supplement overviews.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/nutrition/nutrition-sodium-bicarbonate-science-and-practical-use.md",
+          "title": "Unpacking the Science and Practical Use by Jeff Rothschild PhD",
+          "relevance_score": 3,
+          "start_line": 79,
+          "end_line": 113,
+          "target_snippet": "The standard dose is 0.2\u20130.3 g/kg body weight, consumed 1.5\u20132.5 h before the event"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/nutrition/nutrition-sodium-bicarbonate-science-and-practical-use.md",
+          "title": "Unpacking the Science and Practical Use by Jeff Rothschild PhD",
+          "relevance_score": 3,
+          "start_line": 115,
+          "end_line": 153,
+          "target_snippet": "Individualized strategies, where timing is adjusted to match peak blood bicarbon"
+        }
+      ]
+    },
+    {
+      "id": "Q14",
+      "query": "How does beta-alanine supplementation buffer muscle acidity and what is the optimal loading protocol for cyclists?",
+      "language": "en",
+      "category": "nutrition",
+      "description": "Direct mechanistic and dosing query on beta-alanine, muscle carnosine intracellular buffering, and chronic loading (3.2\u20136.4 g/day).",
+      "expected_behavior": "Rank beta-alanine carnosine synthesis, intracellular buffering mechanisms, and multi-week loading protocols.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/nutrition/nutrition-beta-alanine-for-cycling.md",
+          "title": "Beta-alanine for Cycling by Jeff Rothschild PhD",
+          "relevance_score": 3,
+          "start_line": 58,
+          "end_line": 103,
+          "target_snippet": "Thus, its effectiveness may depend on the specific demands of the race. While it"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/nutrition/nutrition-beta-alanine-for-cycling.md",
+          "title": "Beta-alanine for Cycling by Jeff Rothschild PhD",
+          "relevance_score": 2,
+          "start_line": 19,
+          "end_line": 56,
+          "target_snippet": "**Source:** knowledgeiswatt.substack.com/p/beta-alanine-for-cycling-by-jeff **Da"
         }
       ]
     },
@@ -192,15 +421,15 @@
       "gold_passages": [
         {
           "rel_path": "Episodes/Empirical_cycling_podcast/metrics/FTP_test.md",
-          "title": "FTP Testing — Complete Guide",
+          "title": "FTP Testing \u2014 Complete Guide",
           "relevance_score": 3,
           "start_line": 15,
           "end_line": 27,
-          "target_snippet": "It is not 95% of 20-minute power and it is not a fixed duration"
+          "target_snippet": "_Source: Empirical Cycling Podcast \u2014 Kolie Moore_"
         },
         {
           "rel_path": "Episodes/Empirical_cycling_podcast/training/threshold/FTP_training.md",
-          "title": "FTP (Threshold) Training — Complete Guide",
+          "title": "FTP (Threshold) Training \u2014 Complete Guide",
           "relevance_score": 3,
           "start_line": 15,
           "end_line": 29,
@@ -212,7 +441,7 @@
           "relevance_score": 2,
           "start_line": 16,
           "end_line": 55,
-          "target_snippet": "Critical Power (CP) is the gold standard for identifying the second exercise threshold"
+          "target_snippet": "In the last KIW Research Notes, we saw that, in 2026, Critical Power (CP) is the"
         }
       ]
     },
@@ -222,7 +451,7 @@
       "language": "en",
       "category": "source_conflict",
       "description": "Query evaluating double-threshold versus single-session training when total daily work is matched.",
-      "expected_behavior": "Rank the matched-work comparison and stress-recovery evidence while preserving the singles-method perspective as secondary context.",
+      "expected_behavior": "Rank matched-work double-threshold vs single-session evidence and stress-recovery comparisons.",
       "gold_passages": [
         {
           "rel_path": "Articles/knowledgeIsWatts/training/threshold/training-aerobic-adaptations-daily-workload-split.md",
@@ -230,7 +459,7 @@
           "relevance_score": 3,
           "start_line": 60,
           "end_line": 100,
-          "target_snippet": "multiple daily HIT training sessions induce similar aerobic adaptations when compared to performing only one"
+          "target_snippet": "The maximal oxygen consumption (VO2max) resulted unchanged in the Control Group,"
         },
         {
           "rel_path": "Articles/knowledgeIsWatts/training/threshold/training-double-threshold-days-stress-and-recovery.md",
@@ -239,14 +468,6 @@
           "start_line": 110,
           "end_line": 138,
           "target_snippet": "aerobic adaptations are similar (VO2max, muscle mitochondrial density)"
-        },
-        {
-          "rel_path": "Books/Norwegian Singles Method Subthreshold.md",
-          "title": "Norwegian Singles Method",
-          "relevance_score": 2,
-          "start_line": 200,
-          "end_line": 213,
-          "target_snippet": "By removing the second daily session, eliminating the need for lactate meters, tuning down the overall intensity"
         }
       ]
     },
@@ -265,6 +486,336 @@
       "language": "en",
       "category": "negative",
       "description": "Unsupported-domain query about ketogenic diets for competitive swimming. The benchmark defines no relevant evidence in the Knowledge Base.",
+      "expected_behavior": "Return no passages above the configured relevance threshold.",
+      "gold_passages": []
+    },
+    {
+      "id": "Q19",
+      "query": "What glucose to fructose ratio should cyclists consume when carbohydrate intake exceeds 90 grams per hour?",
+      "language": "en",
+      "category": "nutrition",
+      "description": "Direct fueling protocol query evaluating gut transporter saturation (SGLT1 vs GLUT5) and 1:0.8 vs 2:1 carbohydrate ratios above 90 g/h.",
+      "expected_behavior": "Rank glucose-to-fructose ratio guidelines and intestinal transporter saturation data ahead of generic fueling tips.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/nutrition/nutrition-glucose-fructose-ratio.md",
+          "title": "Glucose-fructose Ratio: Check What You Buy!",
+          "relevance_score": 3,
+          "start_line": 60,
+          "end_line": 91,
+          "target_snippet": "So, what is the science-based practical tip about the carbs to ingest during pro"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/nutrition/nutrition-glucose-fructose-ratio.md",
+          "title": "Glucose-fructose Ratio: Check What You Buy!",
+          "relevance_score": 2,
+          "start_line": 14,
+          "end_line": 58,
+          "target_snippet": "**Source:** knowledgeiswatt.substack.com/p/56-glucose-fructose-ratio-check-what"
+        }
+      ]
+    },
+    {
+      "id": "Q20",
+      "query": "Do high-dose antioxidant supplements like vitamin C and E blunt mitochondrial adaptations from endurance training?",
+      "language": "en",
+      "category": "nutrition",
+      "description": "Nuance query on reactive oxygen species (ROS) signaling, PGC-1alpha/AMPK activation, and when antioxidant supplementation helps vs impairs adaptation.",
+      "expected_behavior": "Rank evidence on exercise-induced ROS signaling and antioxidant attenuation of mitochondrial biogenesis.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/nutrition/nutrition-antioxidants-when-they-help-and-when-they-dont.md",
+          "title": "Antioxidants for Endurance Performance: When They Help and When They Get in the Way",
+          "relevance_score": 3,
+          "start_line": 99,
+          "end_line": 174,
+          "target_snippet": "3. Where Supplementation Can Go Wrong"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/nutrition/nutrition-antioxidants-when-they-help-and-when-they-dont.md",
+          "title": "Antioxidants for Endurance Performance: When They Help and When They Get in the Way",
+          "relevance_score": 2,
+          "start_line": 99,
+          "end_line": 174,
+          "target_snippet": "If you blunt the stress signal when you want to get fitter, you may adapt less"
+        }
+      ]
+    },
+    {
+      "id": "Q21",
+      "query": "What does the curvature constant W' represent in the Critical Power model and how is it depleted above CP?",
+      "language": "en",
+      "category": "metrics",
+      "description": "Lexical and physiological query defining Critical Power (CP) as the asymptote and Anaerobic Work Capacity (W') as finite joules above CP.",
+      "expected_behavior": "Rank hyperbolic power-duration modeling, CP asymptote, and W' anaerobic work capacity definitions.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/metrics/metrics-estimating-cp-and-w-prime-best-individual-fit.md",
+          "title": "How to Accurately Estimate CP and W': the 'best Individual Fit' Method",
+          "relevance_score": 3,
+          "start_line": 17,
+          "end_line": 56,
+          "target_snippet": "From the well-established hyperbolic relationship between power output and the d"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/metrics/metrics-critical-power-gold-standard-mss.md",
+          "title": "Critical Power: the Gold Standard for the Maximum Metabolic Steady State",
+          "relevance_score": 3,
+          "start_line": 290,
+          "end_line": 318,
+          "target_snippet": "A hyperbolic relationship between speed (or power output) and the duration for w"
+        }
+      ]
+    },
+    {
+      "id": "Q22",
+      "query": "How is durability or fatigue resistance measured in cycling after substantial energy expenditure?",
+      "language": "en",
+      "category": "metrics",
+      "description": "Methodology query explaining standardized durability testing protocols (% performance drop from rested state to post-fatiguing protocol at relative intensity).",
+      "expected_behavior": "Rank standardized durability testing protocols, relative-intensity fatiguing designs, and kilojoule benchmarks.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/metrics/metrics-measuring-durability-guide.md",
+          "title": "Measuring Durability: the Guide",
+          "relevance_score": 3,
+          "start_line": 18,
+          "end_line": 61,
+          "target_snippet": "Durability is the ability to decrease as less as possible performance during prolonged exercise"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/metrics/metrics-measuring-durability-guide.md",
+          "title": "Measuring Durability: the Guide",
+          "relevance_score": 3,
+          "start_line": 18,
+          "end_line": 61,
+          "target_snippet": "**Source:** knowledgeiswatt.substack.com/p/30-testing-durability-the-guide **Dat"
+        }
+      ]
+    },
+    {
+      "id": "Q23",
+      "query": "How does a 6-day high-intensity interval shock microcycle followed by active recovery affect endurance performance?",
+      "language": "en",
+      "category": "periodization",
+      "description": "Protocol query examining condensed block periodization (5 HIT sessions in 6 days) during race taper to boost VO2max and threshold power.",
+      "expected_behavior": "Rank shock microcycle and condensed block periodization trials ahead of linear periodization models.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/training/vo2/training-high-intensity-shock-microcycle.md",
+          "title": "A High Intensity Shock Mycrocycle Boosts Performance!",
+          "relevance_score": 3,
+          "start_line": 80,
+          "end_line": 116,
+          "target_snippet": "The last two days before testing, both groups perform a similar schedule consist"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/training/vo2/training-high-intensity-shock-microcycle.md",
+          "title": "A High Intensity Shock Mycrocycle Boosts Performance!",
+          "relevance_score": 2,
+          "start_line": 19,
+          "end_line": 42,
+          "target_snippet": "**Source:** knowledgeiswatt.substack.com/p/81-optimal-tapering-a-high-intensity"
+        }
+      ]
+    },
+    {
+      "id": "Q24",
+      "query": "How does ambient temperature affect maximal power output in male versus female professional road cyclists?",
+      "language": "en",
+      "category": "physiology",
+      "description": "Environmental physiology query on power degradation outside optimal temperature ranges (10\u201330\u00b0C) and sex-based thermal tolerance differences.",
+      "expected_behavior": "Rank temperature effect studies and sex-specific thermal endurance data ahead of generic hydration guides.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/physiology/physiology-temperature-effect-on-performance-sex-differences.md",
+          "title": "How Environmental Temperature Influence Road Cycling Performance? Men vs Women Differences?",
+          "relevance_score": 3,
+          "start_line": 69,
+          "end_line": 105,
+          "target_snippet": "The optimal range for cycling performance seems to be between about 10-30\u00b0C"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/physiology/physiology-temperature-effect-on-performance-sex-differences.md",
+          "title": "How Environmental Temperature Influence Road Cycling Performance? Men vs Women Differences?",
+          "relevance_score": 3,
+          "start_line": 17,
+          "end_line": 67,
+          "target_snippet": "**Source:** knowledgeiswatt.substack.com/p/16-how-environmental-temperature **Da"
+        }
+      ]
+    },
+    {
+      "id": "Q25",
+      "query": "Why does pedaling at higher cadence during VO2max intervals increase cardiac stroke volume and preload?",
+      "language": "en",
+      "category": "hiit",
+      "description": "Biomechanics and central hemodynamics query on how 100+ RPM pedaling activates the venous muscle pump to maximize diastolic filling and cardiac remodeling.",
+      "expected_behavior": "Rank cadence hemodynamics, muscle pump venous return, and cardiac stroke volume data ahead of general cadence advice.",
+      "gold_passages": [
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/training/vo2/VO2_training.md",
+          "title": "VO2max Training \u2014 Complete Guide",
+          "relevance_score": 3,
+          "start_line": 57,
+          "end_line": 75,
+          "target_snippet": "At the same power output, pedaling faster significantly increases cardiac output and stroke volume"
+        },
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/physiology/Fick_equation_and_cardiac_remodeling.md",
+          "title": "The Fick Equation & Cardiac Remodeling for VO2max \u2014 Complete Guide",
+          "relevance_score": 2,
+          "start_line": 58,
+          "end_line": 67,
+          "target_snippet": "As the heart fills with more blood during diastole (preload), the cardiac muscle fibers are stretched"
+        }
+      ]
+    },
+    {
+      "id": "Q26",
+      "query": "How to raise time to exhaustion (TTE) at Functional Threshold Power without increasing target wattage?",
+      "language": "en",
+      "category": "periodization",
+      "description": "Semantic paraphrase query focusing on progressive overload of interval duration and total time-in-zone at threshold.",
+      "expected_behavior": "Rank time-to-exhaustion progression guides and interval extension strategies ahead of power bumping advice.",
+      "gold_passages": [
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/training/threshold/FTP_TTE_2.md",
+          "title": "FTP vs. TTE: Raising Power vs. Extending Duration \u2014 Complete Guide",
+          "relevance_score": 3,
+          "start_line": 60,
+          "end_line": 101,
+          "target_snippet": "Extending threshold duration relies on **progressive overload in interval length"
+        },
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/training/threshold/FTP_training.md",
+          "title": "FTP (Threshold) Training \u2014 Complete Guide",
+          "relevance_score": 3,
+          "start_line": 48,
+          "end_line": 65,
+          "target_snippet": "TTE extends meaningfully with threshold training and training age. When FTP stops increasing, TTE is the next lever"
+        }
+      ]
+    },
+    {
+      "id": "Q27",
+      "query": "How does low intensity base endurance cycling stimulate cellular mitochondrial biogenesis?",
+      "language": "en",
+      "category": "zone2",
+      "description": "Semantic paraphrase query exploring calcium flux, AMPK signaling, and mitochondrial enzyme expansion from prolonged low-intensity muscle contractions.",
+      "expected_behavior": "Rank cellular signaling, calcium flux, and mitochondrial enzyme biogenesis mechanisms in low-intensity riding.",
+      "gold_passages": [
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/physiology/1M__AMA.md",
+          "title": "1M Milestone AMA: Physiology, Energy Balance, Indoor Equivalence & Strength Mechanics — Q&A Guide",
+          "relevance_score": 3,
+          "start_line": 46,
+          "end_line": 61,
+          "target_snippet": "- **Contraction Time vs. Mechanical Load:** Sub-threshold aerobic biogenesis is"
+        },
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/training/base/Base_training.md",
+          "title": "Aerobic Base & Zone 2 Training \u2014 Complete Guide",
+          "relevance_score": 2,
+          "start_line": 19,
+          "end_line": 33,
+          "target_snippet": "_Source: Empirical Cycling Podcast \u2014 Kelly Moore & James McKay_"
+        }
+      ]
+    },
+    {
+      "id": "Q28",
+      "query": "Are fast-twitch muscle fibers purely anaerobic or can they develop high oxidative capacity through endurance training?",
+      "language": "en",
+      "category": "source_conflict",
+      "description": "Query evaluating the misconception that Type II fast-twitch fibers lack mitochondrial capacity versus evidence demonstrating substantial oxidative adaptations.",
+      "expected_behavior": "Rank single-fiber biopsy and muscle plasticity evidence demonstrating high mitochondrial enzyme activity in Type IIa fibers.",
+      "gold_passages": [
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/physiology/Watts_Doc__37__Your_Fast_Twitch_Fibers_Probably_As_Aerobic_As_Your_Slow_Twitch.md",
+          "title": "Your Fast-Twitch Fibers Are Probably As Aerobic As Your Slow-Twitch: Motor Unit Recruitment, Cross-Country Skiers, & Metabolic Plasticity \u2014 Complete Guide",
+          "relevance_score": 3,
+          "start_line": 52,
+          "end_line": 73,
+          "target_snippet": "The historical belief that fast-twitch fibers lack aerobic capacity stems largel"
+        },
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/physiology/Watts_Doc__37__Your_Fast_Twitch_Fibers_Probably_As_Aerobic_As_Your_Slow_Twitch.md",
+          "title": "Your Fast-Twitch Fibers Are Probably As Aerobic As Your Slow-Twitch: Motor Unit Recruitment, Cross-Country Skiers, & Metabolic Plasticity \u2014 Complete Guide",
+          "relevance_score": 2,
+          "start_line": 21,
+          "end_line": 50,
+          "target_snippet": "In introductory exercise science, muscle fibers are often presented as a rigid, black-and-white dichotomy"
+        }
+      ]
+    },
+    {
+      "id": "Q29",
+      "query": "Do over-under intervals possess a unique physiological mechanism for lactate clearance compared to standard threshold intervals?",
+      "language": "en",
+      "category": "source_conflict",
+      "description": "Nuanced query examining whether alternating above and below threshold provides a distinct clearance stimulus or is simply variable threshold work.",
+      "expected_behavior": "Rank over-under physiology guides that evaluate lactate shuttling claims against steady-state threshold equivalence.",
+      "gold_passages": [
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/training/threshold/Over_unders.md",
+          "title": "Over/Unders \u2014 Complete Guide",
+          "relevance_score": 3,
+          "start_line": 32,
+          "end_line": 44,
+          "target_snippet": "The commonly cited advantages \u2014 superior lactate shuttling, better lactate tolerance, higher MCT transporter expression \u2014 are theoretical"
+        },
+        {
+          "rel_path": "Episodes/Empirical_cycling_podcast/training/threshold/Over_unders.md",
+          "title": "Over/Unders \u2014 Complete Guide",
+          "relevance_score": 2,
+          "start_line": 18,
+          "end_line": 30,
+          "target_snippet": "_Source: Empirical Cycling Podcast \u2014 Kelly Moore & James McKay (Episodes 43\u201344)_"
+        }
+      ]
+    },
+    {
+      "id": "Q30",
+      "query": "How to combine heavy resistance strength training with high-intensity cycling interval microcycles without compromising recovery?",
+      "language": "en",
+      "category": "periodization",
+      "description": "Compound multi-topic planning query addressing the interference effect, sequencing heavy lifts after intervals, and weekly frequency management.",
+      "expected_behavior": "Rank resistance training periodization, microcycle planning, and cycling-specific gym guidelines.",
+      "gold_passages": [
+        {
+          "rel_path": "Articles/knowledgeIsWatts/strength/strength-endurance-cyclists-practical-guidelines.md",
+          "title": "Strength Training for Endurance Cyclists: Practical Guidelines",
+          "relevance_score": 3,
+          "start_line": 59,
+          "end_line": 100,
+          "target_snippet": "Preparatory period: where there are no races (or no goal races) , 2 session per week for 10-12 weeks"
+        },
+        {
+          "rel_path": "Articles/knowledgeIsWatts/strength/strength-during-competition-period.md",
+          "title": "Strength Training During Competition Period: Yes or No?",
+          "relevance_score": 2,
+          "start_line": 103,
+          "end_line": 150,
+          "target_snippet": "R\u00f8nnestad BR, Hansen EA, Raastad T. In-season strength maintenance training incr"
+        }
+      ]
+    },
+    {
+      "id": "Q31",
+      "query": "What are the biomechanical efficiency advantages of barefoot forefoot running in marathon training?",
+      "language": "en",
+      "category": "negative",
+      "description": "Unsupported-domain query about barefoot marathon running biomechanics. The benchmark defines no relevant evidence in the cycling Knowledge Base.",
+      "expected_behavior": "Return no passages above the configured relevance threshold.",
+      "gold_passages": []
+    },
+    {
+      "id": "Q32",
+      "query": "What is the optimal peaking microcycle for powerlifting bench press 1RM attempts?",
+      "language": "en",
+      "category": "negative",
+      "description": "Unsupported-domain query about powerlifting bench press periodization. The benchmark defines no relevant evidence in the cycling Knowledge Base.",
       "expected_behavior": "Return no passages above the configured relevance threshold.",
       "gold_passages": []
     }
