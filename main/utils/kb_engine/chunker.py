@@ -224,12 +224,6 @@ class StructureAwareChunker:
         language = "en"
 
         category = _string_value(frontmatter.get("category")) or "general"
-        if source_type == "book" and category.casefold() in {
-            "general",
-            "book",
-            "books",
-        }:
-            category = "book"
 
         raw_topics = frontmatter.get("topics")
         if isinstance(raw_topics, list):
@@ -261,7 +255,6 @@ class StructureAwareChunker:
         return {
             "articles": "article",
             "episodes": "podcast",
-            "books": "book",
         }.get(root, "article")
 
     @staticmethod

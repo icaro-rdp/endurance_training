@@ -14,6 +14,9 @@ The active retrieval foundation is deliberately simple:
 
 ## Quick start
 
+> [!TIP]
+> Looking for a complete step-by-step guide to configure the MCP server in **Claude Desktop**, **Cursor**, **Claude Code**, or **Codex**? See the [Quickstart Guide](QUICKSTART.md).
+
 Prerequisites:
 
 - macOS, Linux, or Windows 11 through WSL2; native Windows is not supported by
@@ -56,10 +59,10 @@ always wins, followed by the environment variable and then
 
 ## Repository map
 
+- [`QUICKSTART.md`](QUICKSTART.md) — step-by-step onboarding guide and MCP client configuration.
 - [`Knowledge_base/`](Knowledge_base/) — curated Markdown Knowledge Sources.
   - [`Articles/`](Knowledge_base/Articles/) — articles and research notes.
   - [`Episodes/`](Knowledge_base/Episodes/) — curated podcast notes.
-  - [`Books/`](Knowledge_base/Books/) — book-derived reference material.
   - [`TAXONOMY.md`](Knowledge_base/TAXONOMY.md) — canonical categories, topics,
     and frontmatter guidance.
   - [`INDEX.md`](Knowledge_base/INDEX.md) — generated master sitemap.
@@ -165,7 +168,6 @@ Add one English `.md` file under the appropriate source-type root:
 
 - `Knowledge_base/Articles/...`
 - `Knowledge_base/Episodes/...`
-- `Knowledge_base/Books/...`
 
 Follow the naming and folder conventions of neighboring sources. The path
 relative to `Knowledge_base/` is the permanent source identity. The same path
@@ -216,10 +218,9 @@ Rules:
   interpreted as English, but new sources may not rely on that compatibility
   rule.
 - Use one canonical category: `metrics`, `hiit`, `zone2`, `strength`,
-  `nutrition`, `physiology`, `periodization`, or `book`.
+  `nutrition`, `physiology`, or `periodization`.
 - Copy topic spelling and case from `TAXONOMY.md`. Do not invent a near-synonym
   or change the taxonomy merely to accommodate one ad-hoc tag.
-- Use `category: book` for books.
 - Do not add `source_type`, chunk IDs, passage boundaries, or citation line
   numbers. Ingestion derives them.
 - Record the real source, author, and publication date. Use `author: "Unknown"`
@@ -275,9 +276,7 @@ Before committing:
 - review every warning printed by the targeted new-source command;
   `Warnings Found: 0` means it found none for that path;
 - include the new source and regenerated `Knowledge_base/INDEX.md`;
-- never hand-edit or commit `main/.kb_index.sqlite`;
-- update `Books/_summary/INDEX.md` only when the task explicitly includes a
-  hand-curated book summary.
+- never hand-edit or commit `main/.kb_index.sqlite`.
 
 The same rebuild is required after editing, renaming, or deleting an existing
 source. Renames change source identity and should be deliberate.
@@ -360,8 +359,9 @@ uv run endurance-kb-mcp --test
 
 ### LLM client configuration
 
-Add the server to your client's MCP configuration (e.g. `claude_desktop_config.json`
-or client settings):
+For comprehensive step-by-step setup guides across **Claude Desktop**, **Cursor IDE**, **Claude Code**, **OpenAI Codex**, and other MCP-compatible clients, see the [Quickstart Guide](QUICKSTART.md#6-connect-to-llm-clients--coding-assistants).
+
+Example configuration for `claude_desktop_config.json`:
 
 ```json
 {

@@ -9,31 +9,49 @@ import math
 import re
 from collections import Counter, defaultdict
 from collections.abc import Sequence
+from typing import TYPE_CHECKING
 
 from .models import EvidencePassage, EvidenceSearchResult
+
+if TYPE_CHECKING:
+    from .fts import PassageIndex
 
 
 def reciprocal_rank_fusion(
     ranking_lists: Sequence[Sequence[EvidenceSearchResult]],
     k: int = 60,
     limit: int = 5,
+    weights: Sequence[float] | None = None,
 ) -> tuple[EvidenceSearchResult, ...]:
     """Fuse multiple ranked result lists using Reciprocal Rank Fusion (RRF).
 
     Formula:
-        RRF_Score(d) = sum_{m in rankings} (1 / (k + rank_m(d)))
+        RRF_Score(d) = sum_{m in rankings} (w_m / (k + rank_m(d)))
     """
     if not ranking_lists:
         return ()
 
+    if weights is None:
+        weights = [1.0] * len(ranking_lists)
+
     rrf_scores: dict[str, float] = defaultdict(float)
+    dense_scores: dict[str, float] = {}
+    lexical_scores: dict[str, float] = {}
     passage_map: dict[str, EvidencePassage] = {}
 
-    for ranked_list in ranking_lists:
+    for w, ranked_list in zip(weights, ranking_lists):
         for rank, result in enumerate(ranked_list, start=1):
             passage = result.passage
             chunk_id = passage.chunk_id
-            rrf_scores[chunk_id] += 1.0 / (k + rank)
+            rrf_scores[chunk_id] += w / (k + rank)
+            if result.dense_score is not None:
+                dense_scores[chunk_id] = max(
+                    dense_scores.get(chunk_id, 0.0), result.dense_score
+                )
+            if result.lexical_score != 0.0:
+                lexical_scores[chunk_id] = max(
+                    lexical_scores.get(chunk_id, 0.0), result.lexical_score
+                )
             if chunk_id not in passage_map:
                 passage_map[chunk_id] = passage
 
@@ -46,10 +64,74 @@ def reciprocal_rank_fusion(
     return tuple(
         EvidenceSearchResult(
             passage=passage_map[cid],
-            lexical_score=round(rrf_scores[cid], 8),
+            lexical_score=round(lexical_scores.get(cid, 0.0), 8),
+            dense_score=(
+                round(dense_scores[cid], 8) if cid in dense_scores else None
+            ),
+            hybrid_score=round(rrf_scores[cid], 8),
         )
         for cid in sorted_chunk_ids[:limit]
     )
+
+
+def search_hybrid(
+    index: PassageIndex,
+    query: str,
+    category: str | None = None,
+    topic: str | None = None,
+    source_slug: str | None = None,
+    limit: int = 5,
+    candidate_k: int = 20,
+    rrf_k: int = 60,
+    dense_weight: float = 1.0,
+    sparse_weight: float = 1.0,
+    min_rrf_score: float = 0.012,
+    min_dense_similarity: float = 0.65,
+) -> tuple[EvidenceSearchResult, ...]:
+    """Perform local hybrid retrieval fusing BM25 lexical and neural dense vectors.
+
+    Applies calibrated internal score thresholds to reject unsupported-domain queries.
+    """
+    sparse_results = index.search_bm25(
+        query=query,
+        category=category,
+        topic=topic,
+        source_slug=source_slug,
+        limit=candidate_k,
+    )
+    dense_results = index.search_dense(
+        query=query,
+        category=category,
+        topic=topic,
+        source_slug=source_slug,
+        limit=candidate_k,
+    )
+
+    if not sparse_results and not dense_results:
+        return ()
+
+    # Threshold gating for unsupported-domain negative queries:
+    # If no BM25 matches exist and top dense similarity is below threshold, reject as insufficient evidence
+    if not sparse_results and dense_results:
+        top_dense = dense_results[0]
+        if (
+            top_dense.dense_score is not None
+            and top_dense.dense_score < min_dense_similarity
+        ):
+            return ()
+
+    fused = reciprocal_rank_fusion(
+        [sparse_results, dense_results],
+        k=rrf_k,
+        limit=limit,
+        weights=[sparse_weight, dense_weight],
+    )
+
+    # If best fused score is below threshold, reject
+    if fused and (fused[0].hybrid_score or 0.0) < min_rrf_score:
+        return ()
+
+    return fused
 
 
 class SemanticVectorizer:

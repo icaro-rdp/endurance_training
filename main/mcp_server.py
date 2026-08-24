@@ -45,7 +45,7 @@ def create_mcp_server(
         name="search_passages",
         description=(
             "Search for citation-stable Evidence Passages across endurance "
-            "training articles, podcasts, and books using lexical BM25 retrieval. "
+            "training articles and podcasts using lexical BM25 retrieval. "
             "Returns ranked excerpts with exact line ranges and section hierarchy."
         ),
     )
@@ -61,7 +61,7 @@ def create_mcp_server(
         Args:
             query: The search term or athlete question in English.
             category: Optional category filter (e.g. metrics, hiit, zone2, strength,
-                nutrition, physiology, periodization, book).
+                nutrition, physiology, periodization).
             topic: Optional topic filter (e.g. VO2max, FTP, Double_threshold,
                 Cardiac_hypertrophy).
             source_slug: Optional source slug filter (e.g.

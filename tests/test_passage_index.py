@@ -515,7 +515,7 @@ source: Local test journal
 
     def test_summary_directory_is_not_part_of_the_curated_corpus(self) -> None:
         self._write_source(
-            "Books/_summary/notes.md",
+            "Articles/_summary/notes.md",
             title="Administrative Summary",
             category="physiology",
             topics=("VO2max",),

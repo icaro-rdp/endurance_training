@@ -1,4 +1,4 @@
-"""Transactional SQLite FTS5 index over citation-stable Evidence Passages."""
+"""Transactional SQLite FTS5 & sqlite-vec index over citation-stable Evidence Passages."""
 
 from __future__ import annotations
 
@@ -11,7 +11,10 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Literal
 
+import sqlite_vec
+
 from .chunker import StructureAwareChunker
+from .embedder import PassageEmbedder
 from .errors import (
     CorpusChangedDuringSyncError,
     EmptyCorpusError,
@@ -33,8 +36,8 @@ from .models import (
 from .query_preprocessor import preprocess_query
 from .sync import build_corpus_manifest
 
-_SCHEMA_VERSION = "2"
-_VALID_SOURCE_TYPES = frozenset({"article", "podcast", "book"})
+_SCHEMA_VERSION = "3"
+_VALID_SOURCE_TYPES = frozenset({"article", "podcast"})
 _VALID_SIZE_STATUSES = frozenset(status.value for status in PassageSizeStatus)
 _PASSAGE_COLUMNS = """
     p.chunk_id AS chunk_id,
@@ -180,9 +183,56 @@ class PassageIndex:
         topic: str | None = None,
         source_slug: str | None = None,
         limit: int = 5,
+        mode: Literal["hybrid", "bm25", "dense"] = "hybrid",
     ) -> tuple[EvidenceSearchResult, ...]:
-        if not 1 <= limit <= 20:
-            raise InvalidSearchError("limit must be between 1 and 20")
+        """Search the Knowledge Base using hybrid, BM25, or dense retrieval."""
+        if not 1 <= limit <= 50:
+            raise InvalidSearchError("limit must be between 1 and 50")
+        tokens = [token for token in re.findall(r"\w+", query) if len(token) > 1]
+        if not tokens:
+            raise InvalidSearchError("query must contain at least one searchable term")
+
+        if mode == "bm25":
+            return self.search_bm25(
+                query=query,
+                category=category,
+                topic=topic,
+                source_slug=source_slug,
+                limit=limit,
+            )
+        elif mode == "dense":
+            return self.search_dense(
+                query=query,
+                category=category,
+                topic=topic,
+                source_slug=source_slug,
+                limit=limit,
+            )
+        elif mode == "hybrid":
+            from .hybrid import search_hybrid
+
+            return search_hybrid(
+                index=self,
+                query=query,
+                category=category,
+                topic=topic,
+                source_slug=source_slug,
+                limit=limit,
+            )
+        else:
+            raise InvalidSearchError(f"unknown search mode: {mode}")
+
+    def search_bm25(
+        self,
+        query: str,
+        category: str | None = None,
+        topic: str | None = None,
+        source_slug: str | None = None,
+        limit: int = 5,
+    ) -> tuple[EvidenceSearchResult, ...]:
+        """Search passages using sparse lexical SQLite FTS5 BM25 retrieval."""
+        if not 1 <= limit <= 50:
+            raise InvalidSearchError("limit must be between 1 and 50")
         tokens = [token for token in re.findall(r"\w+", query) if len(token) > 1]
         if not tokens:
             raise InvalidSearchError("query must contain at least one searchable term")
@@ -222,6 +272,58 @@ class PassageIndex:
         except (sqlite3.DatabaseError, TypeError, ValueError) as error:
             raise InvalidIndexError from error
 
+    def search_dense(
+        self,
+        query: str,
+        category: str | None = None,
+        topic: str | None = None,
+        source_slug: str | None = None,
+        limit: int = 20,
+    ) -> tuple[EvidenceSearchResult, ...]:
+        """Search passages using neural dense vector embeddings (bge-small-en-v1.5)."""
+        if not 1 <= limit <= 50:
+            raise InvalidSearchError("limit must be between 1 and 50")
+        tokens = [token for token in re.findall(r"\w+", query) if len(token) > 1]
+        if not tokens:
+            raise InvalidSearchError("query must contain at least one searchable term")
+        self._require_fresh_index()
+        query_bytes = PassageEmbedder.embed_query_to_bytes(query)
+
+        vec_k = max(limit * 3, 50)
+        sql = f"""
+            SELECT {_PASSAGE_COLUMNS}, v.distance AS cosine_distance
+            FROM vec_passages v
+            JOIN passages p ON p.id = v.passage_id
+            JOIN sources s ON s.id = p.source_id
+            WHERE v.embedding MATCH ? AND k = ?
+        """
+        parameters: list[object] = [query_bytes, vec_k]
+        if category:
+            sql += " AND s.category = ?"
+            parameters.append(category)
+        if topic:
+            sql += " AND EXISTS (SELECT 1 FROM json_each(s.topics) WHERE value = ?)"
+            parameters.append(topic)
+        if source_slug:
+            sql += " AND s.slug = ?"
+            parameters.append(source_slug)
+        sql += " ORDER BY v.distance ASC, p.chunk_id LIMIT ?"
+        parameters.append(limit)
+
+        try:
+            with self._connect() as connection:
+                rows = connection.execute(sql, parameters).fetchall()
+            return tuple(
+                EvidenceSearchResult(
+                    passage=self._passage_from_row(row),
+                    lexical_score=0.0,
+                    dense_score=round(1.0 - float(row["cosine_distance"]), 8),
+                )
+                for row in rows
+            )
+        except (sqlite3.DatabaseError, TypeError, ValueError) as error:
+            raise InvalidIndexError from error
+
     def get_passage(self, chunk_id: str) -> EvidencePassage | None:
         self._require_fresh_index()
         try:
@@ -241,10 +343,12 @@ class PassageIndex:
 
     def _build_database(self, path: Path, manifest: CorpusManifest) -> int:
         with sqlite3.connect(path) as connection:
+            self._load_sqlite_vec(connection)
             connection.row_factory = sqlite3.Row
             connection.execute("PRAGMA foreign_keys = ON")
             self._create_schema(connection)
             passage_count = 0
+            passage_entries: list[tuple[int, str]] = []
             for rel_path, source_digest in manifest.source_digests:
                 source_path = self.kb_dir / rel_path
                 passages = self.chunker.chunk_document(
@@ -259,7 +363,22 @@ class PassageIndex:
                 source_id = self._insert_source(connection, passages[0])
                 for passage in passages:
                     passage_count += 1
-                    self._insert_passage(connection, source_id, passage)
+                    p_id = self._insert_passage(connection, source_id, passage)
+                    passage_text = (
+                        f"{passage.title}\n{passage.section_path}\n{passage.content}"
+                    )
+                    passage_entries.append((p_id, passage_text))
+
+            # Batch compute dense embeddings and insert into vec_passages
+            if passage_entries:
+                passage_ids, texts = zip(*passage_entries)
+                embedding_bytes = PassageEmbedder.embed_texts_to_bytes(
+                    list(texts), batch_size=128
+                )
+                connection.executemany(
+                    "INSERT INTO vec_passages (passage_id, embedding) VALUES (?, ?)",
+                    list(zip(passage_ids, embedding_bytes)),
+                )
 
             metadata = {
                 "schema_version": _SCHEMA_VERSION,
@@ -275,7 +394,13 @@ class PassageIndex:
         return snapshot.passage_count
 
     @staticmethod
-    def _create_schema(connection: sqlite3.Connection) -> None:
+    def _load_sqlite_vec(connection: sqlite3.Connection) -> None:
+        connection.enable_load_extension(True)
+        sqlite_vec.load(connection)
+        connection.enable_load_extension(False)
+
+    @classmethod
+    def _create_schema(cls, connection: sqlite3.Connection) -> None:
         connection.executescript(
             """
             CREATE TABLE meta (
@@ -319,6 +444,11 @@ class PassageIndex:
                 content
             );
 
+            CREATE VIRTUAL TABLE vec_passages USING vec0(
+                passage_id INTEGER PRIMARY KEY,
+                embedding float[384] distance_metric=cosine
+            );
+
             CREATE INDEX passages_source_id ON passages(source_id);
             """
         )
@@ -351,7 +481,7 @@ class PassageIndex:
         connection: sqlite3.Connection,
         source_id: int,
         passage: EvidencePassage,
-    ) -> None:
+    ) -> int:
         cursor = connection.execute(
             """
                 INSERT INTO passages (
@@ -372,6 +502,7 @@ class PassageIndex:
                 passage.size_status.value,
             ),
         )
+        row_id = _last_row_id(cursor)
         connection.execute(
             """
                 INSERT INTO passages_fts (
@@ -379,7 +510,7 @@ class PassageIndex:
                 ) VALUES (?, ?, ?, ?, ?, ?, ?)
             """,
             (
-                _last_row_id(cursor),
+                row_id,
                 passage.title,
                 passage.author,
                 passage.category,
@@ -388,9 +519,10 @@ class PassageIndex:
                 passage.content,
             ),
         )
+        return row_id
 
-    @staticmethod
-    def _inspect_database(connection: sqlite3.Connection) -> _IndexSnapshot:
+    @classmethod
+    def _inspect_database(cls, connection: sqlite3.Connection) -> _IndexSnapshot:
         integrity = connection.execute("PRAGMA integrity_check").fetchone()
         if not integrity or integrity[0] != "ok":
             raise sqlite3.DatabaseError("SQLite integrity check failed")
@@ -404,6 +536,7 @@ class PassageIndex:
         source_count = _table_count(connection, "sources")
         passage_count = _table_count(connection, "passages")
         fts_count = _table_count(connection, "passages_fts")
+        vec_count = _table_count(connection, "vec_passages")
 
         try:
             expected_sources = int(metadata["document_count"])
@@ -412,7 +545,11 @@ class PassageIndex:
             raise sqlite3.DatabaseError("index metadata is incomplete") from error
         if source_count != expected_sources:
             raise sqlite3.DatabaseError("source count does not match index metadata")
-        if passage_count != expected_passages or fts_count != passage_count:
+        if (
+            passage_count != expected_passages
+            or fts_count != passage_count
+            or vec_count != passage_count
+        ):
             raise sqlite3.DatabaseError("passage tables have inconsistent counts")
         missing_fts_rows = connection.execute(
             """
@@ -445,6 +582,7 @@ class PassageIndex:
 
     def _connect(self) -> sqlite3.Connection:
         connection = sqlite3.connect(self.db_path)
+        self._load_sqlite_vec(connection)
         connection.row_factory = sqlite3.Row
         connection.execute("PRAGMA foreign_keys = ON")
         return connection
@@ -500,19 +638,23 @@ def _validate_passage_rows(connection: sqlite3.Connection) -> None:
                word_count, char_count, size_status
         FROM passages
         """
-    )
-    for hierarchy, start, end, content, words, characters, size_status in rows:
-        _decode_string_array(hierarchy, "section hierarchy")
-        start_line = _stored_integer(start, "start line")
-        end_line = _stored_integer(end, "end line")
-        word_count = _stored_integer(words, "word count")
-        char_count = _stored_integer(characters, "character count")
+    ).fetchall()
+    for row in rows:
+        _decode_string_array(row["section_hierarchy"], "section hierarchy")
+        start_line = int(row["start_line"])
+        end_line = int(row["end_line"])
+        content = str(row["content"])
+        word_count = int(row["word_count"])
+        char_count = int(row["char_count"])
+        size_status = str(row["size_status"])
         if start_line < 1 or end_line < start_line:
             raise ValueError("passage line range is invalid")
-        if not isinstance(content, str) or not content:
-            raise ValueError("passage content must be non-empty text")
-        if word_count != len(content.split()) or char_count != len(content):
-            raise ValueError("passage measurements do not match its content")
+        if not content.strip():
+            raise ValueError("passage content cannot be empty")
+        if word_count != len(re.findall(r"\S+", content)):
+            raise ValueError("passage word count does not match content")
+        if char_count != len(content):
+            raise ValueError("passage character count does not match content")
         if size_status not in _VALID_SIZE_STATUSES:
             raise ValueError("passage size status is invalid")
 
@@ -520,40 +662,33 @@ def _validate_passage_rows(connection: sqlite3.Connection) -> None:
 def _validate_fts_rows(connection: sqlite3.Connection) -> None:
     rows = connection.execute(
         """
-        SELECT f.title, f.author, f.category, f.topics, f.section_path, f.content,
-               s.title, s.author, s.category, s.topics,
-               p.section_hierarchy, p.content
-        FROM passages_fts f
-        JOIN passages p ON p.id = f.rowid
+        SELECT s.title AS p_title, s.category AS p_category,
+               s.topics AS p_topics, p.content AS p_content,
+               f.title AS f_title, f.category AS f_category,
+               f.topics AS f_topics, f.content AS f_content
+        FROM passages p
         JOIN sources s ON s.id = p.source_id
+        JOIN passages_fts f ON f.rowid = p.id
         """
-    )
+    ).fetchall()
     for row in rows:
-        expected = (
-            row[6],
-            row[7],
-            row[8],
-            " ".join(_decode_string_array(row[9], "topics")),
-            " > ".join(_decode_string_array(row[10], "section hierarchy")),
-            row[11],
-        )
-        if tuple(row[:6]) != expected:
-            raise ValueError("passage search payload differs from stored evidence")
+        topics = " ".join(_decode_string_array(row["p_topics"], "topics"))
+        if (
+            str(row["p_title"]) != str(row["f_title"])
+            or str(row["p_category"]) != str(row["f_category"])
+            or topics != str(row["f_topics"])
+            or str(row["p_content"]) != str(row["f_content"])
+        ):
+            raise ValueError("FTS rows do not match source passage content")
 
 
-def _stored_integer(value: object, field_name: str) -> int:
-    if not isinstance(value, int):
-        raise ValueError(f"{field_name} must be stored as an integer")
-    return value
-
-
-def _decode_string_array(value: object, field_name: str) -> tuple[str, ...]:
-    if not isinstance(value, str):
-        raise ValueError(f"{field_name} must be stored as JSON text")
+def _decode_string_array(raw_value: object, field_name: str) -> tuple[str, ...]:
+    if not isinstance(raw_value, str):
+        raise TypeError(f"{field_name} must be stored as JSON text")
     try:
-        decoded = json.loads(value)
+        decoded = json.loads(raw_value)
     except json.JSONDecodeError as error:
-        raise ValueError(f"{field_name} contains malformed JSON") from error
+        raise ValueError(f"{field_name} is not valid JSON") from error
     if not isinstance(decoded, list) or not all(
         isinstance(item, str) for item in decoded
     ):
@@ -561,11 +696,8 @@ def _decode_string_array(value: object, field_name: str) -> tuple[str, ...]:
     return tuple(decoded)
 
 
-def _table_count(
-    connection: sqlite3.Connection,
-    table: Literal["sources", "passages", "passages_fts"],
-) -> int:
-    row = connection.execute(f"SELECT COUNT(*) FROM {table}").fetchone()
-    if row is None:
-        raise sqlite3.DatabaseError(f"could not count index table: {table}")
+def _table_count(connection: sqlite3.Connection, table_name: str) -> int:
+    row = connection.execute(f"SELECT COUNT(*) FROM {table_name}").fetchone()
+    if not row:
+        raise sqlite3.DatabaseError(f"could not count rows in {table_name}")
     return int(row[0])

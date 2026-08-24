@@ -91,14 +91,20 @@ class EvidencePassage:
 
 @dataclass(frozen=True, slots=True)
 class EvidenceSearchResult:
-    """An Evidence Passage plus its lexical retrieval score."""
+    """An Evidence Passage plus its retrieval score(s)."""
 
     passage: EvidencePassage
     lexical_score: float
+    dense_score: float | None = None
+    hybrid_score: float | None = None
 
     def to_dict(self) -> dict[str, object]:
         result = self.passage.to_dict()
         result["lexical_score"] = self.lexical_score
+        if self.dense_score is not None:
+            result["dense_score"] = self.dense_score
+        if self.hybrid_score is not None:
+            result["hybrid_score"] = self.hybrid_score
         return result
 
 
