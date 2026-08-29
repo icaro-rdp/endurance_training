@@ -221,7 +221,7 @@ Total documents: 51
 ---
 
 ### Category: `HIIT`
-Total documents: 19
+Total documents: 20
 
 - **[200k AMA: The Best and Worst Workouts — Complete Guide](Episodes/Empirical_cycling_podcast/training/200k__The_Best_And_Worst_Workouts.md)** (`Episodes/Empirical_cycling_podcast/training/200k__The_Best_And_Worst_Workouts.md`)
   - **Topics**: Progressive_overload, FTP, VO2max, Short_intervals, Durability, Heavy_torque
@@ -290,6 +290,10 @@ Total documents: 19
 - **[Training Repeated Sprint Ability & Motor Unit Oxidative Capacity — Complete Guide](Episodes/Empirical_cycling_podcast/training/Watts_Doc__27__Training_Repeated_Sprint_Ability.md)** (`Episodes/Empirical_cycling_podcast/training/Watts_Doc__27__Training_Repeated_Sprint_Ability.md`)
   - **Topics**: Sprint_performance, Short_intervals, Aerobic_base, Progressive_overload
   - **Summary**: A comprehensive guide on physiological mechanisms governing Repeated Sprint Ability (RSA) and stochastic endurance, explaining how high-threshold motor units adapt aerobically, the limitations of Normalized Power, and practical interval architectures for road, cyclocross, and MTB.
+
+- **[VO2max Interval Training: Bike vs. Run Cross-Training Adaptations](Articles/personal/hiit/vo2max-interval-cross-training-bike-vs-run.md)** (`Articles/personal/hiit/vo2max-interval-cross-training-bike-vs-run.md`)
+  - **Topics**: VO2max, Long_intervals, Cardiac_hypertrophy, Cross_training
+  - **Summary**: Comprehensive evidence synthesis on cardiorespiratory and metabolic adaptations to VO2max interval cross-training between cycling and running (flat vs. uphill), distinguishing central cardiovascular from peripheral muscular adaptations.
 
 - **[Watts Doc #19: The VO2max Slow Component Explained — Complete Guide](Episodes/Empirical_cycling_podcast/training/Watts_Doc__19__The_VO2max_Slow_Component_Explained.md)** (`Episodes/Empirical_cycling_podcast/training/Watts_Doc__19__The_VO2max_Slow_Component_Explained.md`)
   - **Topics**: Fast_start_intervals, Long_intervals, Power_vs_HR

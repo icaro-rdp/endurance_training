@@ -72,6 +72,7 @@ Macrocycle, mesocycle, and microcycle planning and workload distribution.
 - **Topics**:
   - `Block_periodization` (Focusing specific physiological stimuli into blocks)
   - `Double_threshold` (Norwegian subthreshold model / two sessions per day)
+  - `Cross_training` (Modality transfer, cross-discipline substitution & multi-sport aerobic adaptations)
   - `Microcycles` (7-day, 10-day, shock microcycle designs)
   - `TTA_TTE` (Time-to-Exhaustion at FTP/CP)
   - `Volume_quantification` (TSS, Work in zones, Kilojoules)

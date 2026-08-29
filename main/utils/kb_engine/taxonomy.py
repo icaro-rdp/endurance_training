@@ -70,6 +70,17 @@ class TaxonomyRegistry:
             "supplement",
         ],
         "Double_threshold": ["double threshold", "norwegian"],
+        "Cross_training": [
+            "cross training",
+            "cross-training",
+            "cross_training",
+            "crosstraining",
+            "cross train",
+            "modality transfer",
+            "mode specificity",
+            "run-cycle",
+            "bike vs run",
+        ],
         "Cardiac_hypertrophy": ["cardiac", "stroke volume", "preload", "hypertrophy"],
         "Lactate_shuttle": ["lactate shuttle", "mct1", "mct4"],
     }
