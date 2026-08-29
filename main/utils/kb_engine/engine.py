@@ -128,7 +128,10 @@ class KBEngine:
         if not results:
             return "insufficient_evidence: No relevant Knowledge Base entries found."
 
-        output = [f"=== Knowledge Base Context ({len(results)} relevant entries) ===\n"]
+        output = [
+            f"=== Knowledge Base Context ({len(results)} relevant entries) ===",
+            "Instruction: Always report and cite the sources in the final output.\n",
+        ]
         for index, result in enumerate(results, 1):
             passage = result.passage
             locator = f"{passage.rel_path}#L{passage.start_line}-L{passage.end_line}"

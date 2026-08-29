@@ -193,6 +193,76 @@ summary: A CLI fixture.
         self.assertNotIn("Traceback", stderr)
         self.assertEqual(parent_file.read_text(encoding="utf-8"), "preserve me")
 
+    def test_search_format_llm_includes_source_reporting_instruction(self) -> None:
+        self._write_source("Passage content describing VO2max intervals.")
+        database = self.root / "passages.sqlite"
+        self._run(
+            "--kb-dir",
+            str(self.kb_dir),
+            "--db-path",
+            str(database),
+            "build-index",
+        )
+
+        exit_code, stdout, stderr = self._run(
+            "--kb-dir",
+            str(self.kb_dir),
+            "--db-path",
+            str(database),
+            "search",
+            "VO2max intervals",
+            "--format",
+            "llm",
+        )
+
+        self.assertEqual(exit_code, 0)
+        self.assertEqual(stderr, "")
+        self.assertIn("=== Knowledge Base Context (1 relevant entries) ===", stdout)
+        self.assertIn(
+            "Instruction: Always report and cite the sources in the final output.",
+            stdout,
+        )
+        self.assertIn("CLI Source", stdout)
+        self.assertIn("Source Link:", stdout)
+
+    def test_search_format_json_and_plain(self) -> None:
+        self._write_source("Passage content describing VO2max intervals.")
+        database = self.root / "passages.sqlite"
+        self._run(
+            "--kb-dir",
+            str(self.kb_dir),
+            "--db-path",
+            str(database),
+            "build-index",
+        )
+
+        json_code, json_out, _ = self._run(
+            "--kb-dir",
+            str(self.kb_dir),
+            "--db-path",
+            str(database),
+            "search",
+            "VO2max",
+            "--format",
+            "json",
+        )
+        self.assertEqual(json_code, 0)
+        self.assertIn('"title": "CLI Source"', json_out)
+
+        plain_code, plain_out, _ = self._run(
+            "--kb-dir",
+            str(self.kb_dir),
+            "--db-path",
+            str(database),
+            "search",
+            "VO2max",
+            "--format",
+            "plain",
+        )
+        self.assertEqual(plain_code, 0)
+        self.assertIn("[physiology] CLI Source", plain_out)
+
 
 if __name__ == "__main__":
     unittest.main()
+

@@ -117,6 +117,10 @@ VO2max improves through cardiac output and repeatable endurance training.
         )
 
         self.assertIn("Knowledge Base Context", formatted)
+        self.assertIn(
+            "Instruction: Always report and cite the sources in the final output.",
+            formatted,
+        )
         self.assertIn("Source Link:", formatted)
         self.assertIn("#L", formatted)
 
