@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #41: How To Try New Training Methods — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Block_periodization"
   - "Progressive_overload"

@@ -1,6 +1,6 @@
 ---
 title: The 'pre-loaded' Short Intermittent Intervals
-category: hiit
+category: training
 topics:
 - FTP
 - CP

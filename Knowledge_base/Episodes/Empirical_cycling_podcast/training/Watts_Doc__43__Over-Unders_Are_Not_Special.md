@@ -1,6 +1,6 @@
 ---
 title: "Over-Unders Are Not Special (Lactate Kinetics & Shuttling) — Complete Guide"
-category: "hiit"
+category: training
 topics:
   - "Lactate_shuttle"
   - "FTP"

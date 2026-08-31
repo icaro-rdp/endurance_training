@@ -1,6 +1,6 @@
 ---
 title: "Track Training Considerations — Complete Guide"
-category: "strength"
+category: training
 topics:
   - "Sprint_performance"
   - "Heavy_torque"

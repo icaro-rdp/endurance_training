@@ -1,6 +1,6 @@
 ---
 title: "Heavy Strength Training & The Interference Effect — Complete Guide"
-category: "strength"
+category: training
 topics:
   - "Heavy_torque"
   - "Periodization"

@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #34: Intermediate and Advanced Strength Training Mistakes (and Solutions) — Complete Guide"
-category: "strength"
+category: training
 topics:
   - "Sprint_performance"
   - "Heavy_torque"

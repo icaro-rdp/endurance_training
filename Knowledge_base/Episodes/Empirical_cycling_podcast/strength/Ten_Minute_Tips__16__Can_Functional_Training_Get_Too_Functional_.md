@@ -1,6 +1,6 @@
 ---
 title: "Functional Training vs. Heavy Strength — Complete Guide"
-category: "strength"
+category: training
 topics:
   - "Unilateral"
   - "Heavy_torque"

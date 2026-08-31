@@ -1,6 +1,6 @@
 ---
 title: "How Not to Break Up With Your Bike This Season (Managing the Summer Slump) — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Aerobic_base"

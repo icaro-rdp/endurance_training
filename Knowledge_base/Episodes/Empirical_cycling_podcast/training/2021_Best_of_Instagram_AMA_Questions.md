@@ -1,6 +1,6 @@
 ---
 title: "2021 Best of Instagram AMA: Intensity Calibration, Periodization Models & Physiology — Q&A Guide"
-category: "periodization"
+category: planning
 topics:
   - "Aerobic_base"
   - "FTP"

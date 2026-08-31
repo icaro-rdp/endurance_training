@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #27: Programming Over-Under Workouts — Complete Guide"
-category: "hiit"
+category: training
 topics:
   - "FTP"
   - "Long_intervals"

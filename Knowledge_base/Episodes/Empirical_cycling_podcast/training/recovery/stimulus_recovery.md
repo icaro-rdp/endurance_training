@@ -1,6 +1,6 @@
 ---
 title: 'Stimulus vs. Recovery: Diagnosing Performance Plateaus'
-category: periodization
+category: planning
 topics:
 - Periodization
 source: Knowledge Base

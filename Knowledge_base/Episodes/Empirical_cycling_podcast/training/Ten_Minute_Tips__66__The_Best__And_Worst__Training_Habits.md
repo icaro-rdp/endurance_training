@@ -1,6 +1,6 @@
 ---
 title: "The Best (And Worst) Training Habits — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Carbohydrate_ratio"

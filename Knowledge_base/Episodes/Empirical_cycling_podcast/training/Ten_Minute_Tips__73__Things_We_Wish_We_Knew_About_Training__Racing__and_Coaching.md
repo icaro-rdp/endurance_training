@@ -1,6 +1,6 @@
 ---
 title: "Things We Wish We Knew About Training, Racing, and Coaching — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Carbohydrate_ratio"
   - "Microcycles"

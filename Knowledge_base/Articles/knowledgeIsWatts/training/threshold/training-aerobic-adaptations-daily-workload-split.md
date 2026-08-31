@@ -1,6 +1,6 @@
 ---
 title: Similar Aerobic Adaptations When Total Daily Workload is the Same
-category: periodization
+category: planning
 topics:
 - VO2max
 - Double_threshold

@@ -1,6 +1,6 @@
 ---
 title: "Why Training Or Racing Experience Shouldn't Determine Training Volume — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Volume_quantification"
   - "Aerobic_base"

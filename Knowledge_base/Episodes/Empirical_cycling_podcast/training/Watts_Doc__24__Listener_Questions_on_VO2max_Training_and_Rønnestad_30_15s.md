@@ -1,6 +1,6 @@
 ---
 title: "Listener Questions on VO2max Training and Rønnestad 30/15s — Q&A Guide"
-category: "hiit"
+category: training
 topics:
   - "VO2max"
   - "Short_intervals"

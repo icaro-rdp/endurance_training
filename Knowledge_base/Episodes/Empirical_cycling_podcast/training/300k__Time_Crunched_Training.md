@@ -1,6 +1,6 @@
 ---
 title: "Time-Crunched Training: Volume vs. Intensity, Progressive Overload & Fatigue Management — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Progressive_overload"
   - "Aerobic_base"

@@ -1,6 +1,6 @@
 ---
 title: "Strength Exercise Selection & The Bilateral Deficit — Complete Guide"
-category: "strength"
+category: training
 topics:
   - "Unilateral"
   - "Heavy_torque"

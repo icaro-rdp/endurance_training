@@ -1,6 +1,6 @@
 ---
 title: "Strength Training Strategies to Avoid Weight Gain: Neuromuscular Adaptation vs. Hypertrophy Dynamics — Complete Guide"
-category: "strength"
+category: training
 topics:
   - "Periodization"
   - "Sprint_performance"

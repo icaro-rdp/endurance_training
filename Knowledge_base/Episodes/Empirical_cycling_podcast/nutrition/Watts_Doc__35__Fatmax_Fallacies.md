@@ -1,6 +1,6 @@
 ---
 title: "FatMax Fallacies: Substrate Oxidation vs. Aerobic Signaling & Thermodynamics — Complete Guide"
-category: "zone2"
+category: training
 topics:
   - "FatMax"
   - "Fat_oxidation"

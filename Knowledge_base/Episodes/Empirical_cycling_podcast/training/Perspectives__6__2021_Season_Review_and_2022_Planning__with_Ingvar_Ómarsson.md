@@ -1,6 +1,6 @@
 ---
 title: "Season Review & Macrocycle Periodization: Annual Planning, Durability Profiling, & Pro MTB Case Study — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Block_periodization"
   - "Microcycles"

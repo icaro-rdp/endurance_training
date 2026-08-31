@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #30: Strength Training Mistakes Every Cyclist Makes — Complete Guide"
-category: "strength"
+category: training
 topics:
   - "Sprint_performance"
   - "Periodization"

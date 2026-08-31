@@ -1,7 +1,7 @@
 ---
 title: "VO2max Interval Training: Bike vs. Run Cross-Training Adaptations"
 language: en
-category: hiit
+category: training
 topics:
   - VO2max
   - Long_intervals

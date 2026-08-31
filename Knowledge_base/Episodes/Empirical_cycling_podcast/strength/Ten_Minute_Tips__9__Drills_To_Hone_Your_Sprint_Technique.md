@@ -1,6 +1,6 @@
 ---
 title: "Sprint Technique Drills & Neuromuscular Coordination — Complete Guide"
-category: "strength"
+category: training
 topics:
   - "Sprint_performance"
   - "Heavy_torque"

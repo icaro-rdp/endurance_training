@@ -1,6 +1,6 @@
 ---
 title: "Cyclocross Pre-Season Training, Specificity, & Intensity Management — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Heavy_torque"

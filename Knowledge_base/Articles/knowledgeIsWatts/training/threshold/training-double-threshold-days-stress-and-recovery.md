@@ -1,6 +1,6 @@
 ---
 title: Effects on Physiological Stress and Recovery
-category: periodization
+category: planning
 topics:
 - VO2max
 - Periodization

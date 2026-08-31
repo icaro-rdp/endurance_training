@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #56: Resetting Goals And Motivation — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Aerobic_base"
   - "Microcycles"

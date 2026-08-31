@@ -1,6 +1,6 @@
 ---
 title: "Quantifying Diminishing Returns: Longitudinal Growth Modeling, Asymptotes, and Season Planning — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Volume_quantification"
   - "Block_periodization"

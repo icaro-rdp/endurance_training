@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #18: Overcoming Historical Inertia, FTP, and Metabolic Regulation — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "CP"

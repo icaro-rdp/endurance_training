@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #51: RPE, Workout Feedback, Adaptation, and Health Outcomes — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "Power_vs_HR"
   - "VO2max"

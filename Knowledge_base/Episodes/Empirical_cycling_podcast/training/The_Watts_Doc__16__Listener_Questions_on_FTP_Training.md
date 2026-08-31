@@ -1,6 +1,6 @@
 ---
 title: "Listener Questions on FTP Training & Periodization — Q&A Guide"
-category: "periodization"
+category: planning
 topics:
   - "FTP"
   - "TTA_TTE"

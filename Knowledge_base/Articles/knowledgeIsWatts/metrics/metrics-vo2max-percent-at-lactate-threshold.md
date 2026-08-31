@@ -1,6 +1,6 @@
 ---
 title: The % of VO2max at Lactate Threshold Doesn't Discriminate the Performance Level
-category: metrics
+category: physiology
 topics:
 - FTP
 - VO2max

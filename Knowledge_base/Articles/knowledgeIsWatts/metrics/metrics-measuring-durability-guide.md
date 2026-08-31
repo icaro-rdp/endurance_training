@@ -1,6 +1,6 @@
 ---
 title: 'Measuring Durability: the Guide'
-category: metrics
+category: physiology
 topics:
 - FTP
 - VO2max

@@ -1,6 +1,6 @@
 ---
 title: "Why Fat Oxidation Is Anaerobic: Beta-Oxidation Biochemistry & Reducing Equivalents — Complete Guide"
-category: "zone2"
+category: training
 topics:
   - "Fat_oxidation"
   - "Aerobic_base"

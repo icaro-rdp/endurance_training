@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #32: Where Training Zones Fall Short — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "Power_vs_HR"
   - "FTP"

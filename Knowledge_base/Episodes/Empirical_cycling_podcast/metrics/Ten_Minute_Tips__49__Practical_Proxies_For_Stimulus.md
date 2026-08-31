@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #49: Practical Proxies For Stimulus — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "Power_vs_HR"
   - "FTP"

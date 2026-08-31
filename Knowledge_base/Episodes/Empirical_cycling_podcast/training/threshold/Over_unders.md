@@ -1,6 +1,6 @@
 ---
 title: Over/Unders — Complete Guide
-category: periodization
+category: planning
 topics:
 - FTP
 - VO2max

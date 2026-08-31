@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #38: Training Intensity Distributions, NIRS, and Iliac Arteries — Complete Guide"
-category: "hiit"
+category: training
 topics:
   - "Long_intervals"
   - "VO2max"

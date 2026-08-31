@@ -1,6 +1,6 @@
 ---
 title: High Intensity Training (hit) Infographics Collection
-category: hiit
+category: training
 topics:
 - VO2max
 - Short_intervals

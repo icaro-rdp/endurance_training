@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #48: Avoiding Over-Optimization — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Volume_quantification"
   - "Microcycles"

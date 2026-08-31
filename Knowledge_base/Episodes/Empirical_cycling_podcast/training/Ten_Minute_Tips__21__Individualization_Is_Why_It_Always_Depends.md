@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #21: Individualization Is Why It Always Depends — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Block_periodization"

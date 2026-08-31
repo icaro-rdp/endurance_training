@@ -1,6 +1,6 @@
 ---
 title: "FTP Testing Revisited: Power Curves, Critical Power, & Perceptual Ruts — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "CP"

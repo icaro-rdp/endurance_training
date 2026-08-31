@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #4: High-Functioning Lunatics, Athletic Psychology, & Rigid Rule-Following — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Durability"

@@ -1,6 +1,6 @@
 ---
 title: Short vs Long Intervals in Trained Cyclists
-category: hiit
+category: training
 topics:
 - FTP
 - CP

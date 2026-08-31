@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #31: How To Take A Rest Day (And How To Avoid Screwing It Up) — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Volume_quantification"

@@ -1,7 +1,7 @@
 ---
 title: Unilateral or Bilateral Gym Strength Training Exercises? Which is Better to
   Improve Cycling Performance?
-category: strength
+category: training
 topics:
 - VO2max
 - Durability

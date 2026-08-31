@@ -1,6 +1,6 @@
 ---
 title: "The Case For Riding Easier — Complete Guide"
-category: "zone2"
+category: training
 topics:
   - "Aerobic_base"
   - "Lab_vs_field"

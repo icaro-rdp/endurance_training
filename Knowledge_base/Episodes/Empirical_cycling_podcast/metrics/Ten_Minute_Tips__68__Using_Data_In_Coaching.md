@@ -1,6 +1,6 @@
 ---
 title: "Using Data In Coaching — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "Power_vs_HR"
   - "Durability"

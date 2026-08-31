@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #36: How To Leave Your Coach (or Yourself) Workout Feedback — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Power_vs_HR"

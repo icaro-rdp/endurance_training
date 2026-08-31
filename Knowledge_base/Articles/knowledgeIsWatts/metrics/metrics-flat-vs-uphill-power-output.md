@@ -1,6 +1,6 @@
 ---
 title: Can They Be Used Interchangeably?
-category: metrics
+category: physiology
 topics:
 - Power_vs_HR
 source: 'knowledgeiswatt.substack.com/p/62-flat-vs-uphill-power-output Date: February

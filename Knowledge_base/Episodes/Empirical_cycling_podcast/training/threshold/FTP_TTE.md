@@ -1,6 +1,6 @@
 ---
 title: 'FTP and TTE: Why the One-Hour Rule Misleads — Complete Guide'
-category: periodization
+category: planning
 topics:
 - FTP
 - VO2max

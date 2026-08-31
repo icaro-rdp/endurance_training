@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #39: Individualizing Training For Crits, CX, And MTB — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Block_periodization"
   - "Microcycles"

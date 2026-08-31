@@ -1,6 +1,6 @@
 ---
 title: "100k AMA: Zone 3 Rides, Anaerobic Capacity vs FTP, Heavy Lifting, and Indoor Equivalence — Q&A Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "W_prime"

@@ -1,6 +1,6 @@
 ---
 title: "The Roles Of Stimulus And Recovery In Plateaus — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Block_periodization"

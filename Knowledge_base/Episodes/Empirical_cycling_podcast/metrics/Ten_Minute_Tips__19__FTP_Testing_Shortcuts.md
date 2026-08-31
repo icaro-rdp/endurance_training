@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #19: FTP Testing Shortcuts — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "TTA_TTE"

@@ -1,7 +1,7 @@
 ---
 title: Zone 2 Training is not Intrinsically Better Than Zone 3, 4 and 5 to Promote
   Aerobic Adaptations!
-category: zone2
+category: training
 topics:
 - FTP
 - CP

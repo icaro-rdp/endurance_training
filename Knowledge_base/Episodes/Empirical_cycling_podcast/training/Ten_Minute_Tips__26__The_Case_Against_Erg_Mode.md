@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #26: The Case Against Erg Mode — Complete Guide"
-category: "hiit"
+category: training
 topics:
   - "Long_intervals"
   - "Short_intervals"

@@ -1,6 +1,6 @@
 ---
 title: An Effective Solution for Time Crunched Cyclists?
-category: periodization
+category: planning
 topics:
 - VO2max
 - Periodization

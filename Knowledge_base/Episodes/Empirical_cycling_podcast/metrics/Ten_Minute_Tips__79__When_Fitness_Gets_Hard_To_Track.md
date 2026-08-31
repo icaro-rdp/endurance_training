@@ -1,6 +1,6 @@
 ---
 title: "When Fitness Gets Hard to Track — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "TTA_TTE"

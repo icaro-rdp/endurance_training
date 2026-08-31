@@ -1,6 +1,6 @@
 ---
 title: "Strength, Endurance, & Henneman's Size Principle — Complete Guide"
-category: "strength"
+category: training
 topics:
   - "Heavy_torque"
   - "Periodization"

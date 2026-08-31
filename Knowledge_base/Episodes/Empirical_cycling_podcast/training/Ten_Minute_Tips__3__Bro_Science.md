@@ -1,6 +1,6 @@
 ---
 title: "Recognizing 'Bro Science', Scientific Literacy, & Training Dogma — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Aerobic_base"
   - "Progressive_overload"

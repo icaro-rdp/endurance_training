@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #31: Race Specific Intensity and Tapering — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Short_intervals"

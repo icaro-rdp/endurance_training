@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #42: The Training Implications Of Strength As A Skill — Complete Guide"
-category: "strength"
+category: training
 topics:
   - "Sprint_performance"
   - "Unilateral"

@@ -1,6 +1,6 @@
 ---
 title: 4x8' Better Than 4x4' or 4x16'
-category: hiit
+category: training
 topics:
 - FTP
 - CP

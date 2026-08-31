@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #37: Pacing And Programming Endurance Rides — Complete Guide"
-category: "zone2"
+category: training
 topics:
   - "Aerobic_base"
   - "Lab_vs_field"

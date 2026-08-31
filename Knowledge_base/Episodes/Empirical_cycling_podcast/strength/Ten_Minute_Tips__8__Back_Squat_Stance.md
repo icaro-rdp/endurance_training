@@ -1,6 +1,6 @@
 ---
 title: "Back Squat Biomechanics: Bar Placement, Stance Width, & Individual Anatomy — Complete Guide"
-category: "strength"
+category: training
 topics:
   - "Heavy_torque"
   - "Periodization"

@@ -1,6 +1,6 @@
 ---
 title: "What Limits Fat Oxidation: Bottlenecks, Transport Enzymes, & Flux Regulation — Complete Guide"
-category: "zone2"
+category: training
 topics:
   - "Fat_oxidation"
   - "Aerobic_base"

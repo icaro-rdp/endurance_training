@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #54: The Truth About Junk Miles — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Aerobic_base"
   - "Volume_quantification"

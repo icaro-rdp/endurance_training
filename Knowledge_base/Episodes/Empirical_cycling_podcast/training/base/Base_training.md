@@ -1,6 +1,6 @@
 ---
 title: Aerobic Base & Zone 2 Training — Complete Guide
-category: periodization
+category: planning
 topics:
 - FTP
 - VO2max

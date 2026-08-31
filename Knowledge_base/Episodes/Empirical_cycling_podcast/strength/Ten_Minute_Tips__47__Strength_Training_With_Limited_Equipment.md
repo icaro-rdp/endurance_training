@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #47: Strength Training With Limited Equipment — Complete Guide"
-category: "strength"
+category: training
 topics:
   - "Heavy_torque"
   - "Unilateral"

@@ -1,6 +1,6 @@
 ---
 title: "Durability's Limitations: Definitions, Measurement via kJ/kg, Statistical Realities, and Fatigue Resistance — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "Durability"
   - "Power_vs_HR"

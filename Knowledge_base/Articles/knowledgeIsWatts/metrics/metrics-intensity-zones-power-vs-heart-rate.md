@@ -1,6 +1,6 @@
 ---
 title: Time Spent in Intensity Zones Differs If Using Power vs Heart Rate
-category: metrics
+category: physiology
 topics:
 - Decreasing_intervals
 - Periodization

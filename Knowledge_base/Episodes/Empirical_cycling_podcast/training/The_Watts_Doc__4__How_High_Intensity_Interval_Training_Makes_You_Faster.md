@@ -1,6 +1,6 @@
 ---
 title: "Physiological Mechanisms of HIIT & The Tabata Paradox — Complete Guide"
-category: "hiit"
+category: training
 topics:
   - "Short_intervals"
   - "VO2max"

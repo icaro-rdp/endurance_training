@@ -1,6 +1,6 @@
 ---
 title: "Training Repeated Sprint Ability & Motor Unit Oxidative Capacity — Complete Guide"
-category: "hiit"
+category: training
 topics:
   - "Sprint_performance"
   - "Short_intervals"

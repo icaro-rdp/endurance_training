@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #58: Why Rest Can Be So Scary — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Volume_quantification"

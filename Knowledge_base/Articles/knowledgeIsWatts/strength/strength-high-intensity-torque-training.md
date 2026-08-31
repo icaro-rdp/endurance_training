@@ -1,6 +1,6 @@
 ---
 title: High Intensity Torque Training Can Increase Cycling Performance
-category: strength
+category: training
 topics:
 - VO2max
 - LT1_VT1

@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #34: Quantifying Training Volume — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Volume_quantification"
   - "LT1_VT1"

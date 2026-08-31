@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #25: What's So Special About 'Zone 2'? — Complete Guide"
-category: "zone2"
+category: training
 topics:
   - "Aerobic_base"
   - "Fat_oxidation"

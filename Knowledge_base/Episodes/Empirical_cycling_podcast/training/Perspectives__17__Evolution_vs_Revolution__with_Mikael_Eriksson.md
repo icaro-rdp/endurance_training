@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #17: Evolution vs Revolution in Endurance Training — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Aerobic_base"
   - "Long_intervals"

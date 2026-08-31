@@ -1,6 +1,6 @@
 ---
 title: "2020 Best of Instagram AMA: Training Fundamentals, Fat Oxidation, Strength Retention, and Recovery Dynamics — Q&A Guide"
-category: "periodization"
+category: planning
 topics:
   - "Aerobic_base"
   - "TTA_TTE"

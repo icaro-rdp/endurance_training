@@ -1,6 +1,6 @@
 ---
 title: "Watts Doc #18: Why Everything You Know About VO2max Power Is Probably Wrong — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "VO2max"
   - "W_prime"

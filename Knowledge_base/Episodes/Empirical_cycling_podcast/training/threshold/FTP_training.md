@@ -1,6 +1,6 @@
 ---
 title: FTP (Threshold) Training — Complete Guide
-category: periodization
+category: planning
 topics:
 - FTP
 source: Empirical Cycling Podcast — Kolie Moore, Fabiano & Erica

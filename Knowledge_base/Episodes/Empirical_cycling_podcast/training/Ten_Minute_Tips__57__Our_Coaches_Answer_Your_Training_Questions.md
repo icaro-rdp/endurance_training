@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #57: Coach Roundtable on Mid-Season Breaks, Stress Management, and Training Load — Q&A Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Volume_quantification"

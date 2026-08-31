@@ -1,6 +1,6 @@
 ---
 title: "Training Takes and Season Retrospective — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Aerobic_base"
   - "Volume_quantification"

@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #28: FTP and VO2max Thoughts & Practical Frameworks — Q&A Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "VO2max"

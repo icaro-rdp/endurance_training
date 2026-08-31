@@ -1,6 +1,6 @@
 ---
 title: "FTP Training Mistakes and Solutions — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "TTA_TTE"

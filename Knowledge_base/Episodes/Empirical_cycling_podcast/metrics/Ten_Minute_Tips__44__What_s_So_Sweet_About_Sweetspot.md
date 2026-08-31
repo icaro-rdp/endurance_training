@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #44: What's So Sweet About Sweetspot — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "TTA_TTE"

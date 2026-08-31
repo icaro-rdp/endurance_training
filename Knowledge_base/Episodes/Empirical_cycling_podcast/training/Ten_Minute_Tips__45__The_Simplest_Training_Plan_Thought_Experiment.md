@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #45: The Simplest Training Plan Thought Experiment — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Progressive_overload"

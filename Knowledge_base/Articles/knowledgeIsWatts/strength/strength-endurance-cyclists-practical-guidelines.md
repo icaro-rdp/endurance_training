@@ -1,6 +1,6 @@
 ---
 title: 'Strength Training for Endurance Cyclists: Practical Guidelines'
-category: strength
+category: training
 topics:
 - Durability
 - Unilateral

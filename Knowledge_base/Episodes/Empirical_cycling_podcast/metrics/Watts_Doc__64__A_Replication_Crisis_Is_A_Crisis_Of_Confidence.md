@@ -1,6 +1,6 @@
 ---
 title: "A Replication Crisis Is a Crisis of Confidence: Statistical Fallacies, Winner's Curse, and Interpreting Exercise Science — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "Durability"

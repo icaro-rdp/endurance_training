@@ -1,6 +1,6 @@
 ---
 title: "The Upsides and Downsides of Training Plans — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Aerobic_base"

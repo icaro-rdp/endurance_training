@@ -1,6 +1,6 @@
 ---
 title: 'Optimizing HIT Aerobic Workouts: the Decreasing Length Intervals'
-category: hiit
+category: training
 topics:
 - FTP
 - CP

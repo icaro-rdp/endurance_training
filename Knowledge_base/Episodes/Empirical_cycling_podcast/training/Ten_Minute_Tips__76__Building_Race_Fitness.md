@@ -1,6 +1,6 @@
 ---
 title: "Building Race Fitness — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Aerobic_base"

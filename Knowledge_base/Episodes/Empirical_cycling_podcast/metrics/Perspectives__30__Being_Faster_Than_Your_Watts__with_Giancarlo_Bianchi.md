@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #30: Being Faster Than Your Watts — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "Durability"

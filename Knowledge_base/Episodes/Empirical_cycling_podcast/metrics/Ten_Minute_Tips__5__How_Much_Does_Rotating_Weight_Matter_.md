@@ -1,6 +1,6 @@
 ---
 title: "Rotating Weight vs. Aerodynamics & Total Inertia in Cycling — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "Power_vs_HR"
   - "Sprint_performance"

@@ -1,6 +1,6 @@
 ---
 title: "How Power Meters Make Lactate Testing Nearly Obsolete: MLSS, Ramp Flaws, & The Functional Threshold — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "LT1_VT1"

@@ -1,6 +1,6 @@
 ---
 title: "Fats vs. Carbs Part II: Carnitine Acetyl Buffering, CPT-1 Regulation, & VLamax Fallacies — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "Fat_oxidation"

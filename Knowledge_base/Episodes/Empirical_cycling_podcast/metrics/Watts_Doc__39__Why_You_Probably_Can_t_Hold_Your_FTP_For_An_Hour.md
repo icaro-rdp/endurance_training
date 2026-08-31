@@ -1,6 +1,6 @@
 ---
 title: "Why You Probably Can't Hold Your FTP For An Hour (TTE & Threshold Dynamics) — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "TTA_TTE"

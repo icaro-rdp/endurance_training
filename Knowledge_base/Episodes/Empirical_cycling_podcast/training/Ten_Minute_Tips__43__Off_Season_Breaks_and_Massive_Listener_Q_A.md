@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #43: Off Season Breaks and Massive Listener Q&A — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Periodization"
   - "Volume_quantification"

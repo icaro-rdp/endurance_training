@@ -1,6 +1,6 @@
 ---
 title: "Why It's Hard to Rest, Athlete Psychology, & Behavioral Reactivity — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Volume_quantification"

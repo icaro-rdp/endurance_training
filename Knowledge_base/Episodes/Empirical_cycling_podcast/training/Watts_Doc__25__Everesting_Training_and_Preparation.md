@@ -1,6 +1,6 @@
 ---
 title: "Everesting Training, Physiology, and Preparation — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Durability"
   - "Carbohydrate_ratio"

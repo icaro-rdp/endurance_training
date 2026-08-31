@@ -1,6 +1,6 @@
 ---
 title: "Fitness Beyond FTP — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "W_prime"

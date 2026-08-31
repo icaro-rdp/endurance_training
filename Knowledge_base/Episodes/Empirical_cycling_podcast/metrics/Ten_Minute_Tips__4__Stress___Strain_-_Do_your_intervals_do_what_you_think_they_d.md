@@ -1,6 +1,6 @@
 ---
 title: "Stress vs. Strain: Matching Interval Prescription to Internal Physiology — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "Power_vs_HR"
   - "VO2max"

@@ -1,6 +1,6 @@
 ---
 title: "FTP vs. Critical Power: Models vs. Physiology — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "CP"

@@ -1,6 +1,6 @@
 ---
 title: Sweet Spot Training — Complete Guide
-category: periodization
+category: planning
 topics:
 - FTP
 source: Empirical Cycling Podcast — Kelly Moore & James McKay

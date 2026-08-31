@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #16: Experiment vs Experience — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "CP"
   - "LT1_VT1"

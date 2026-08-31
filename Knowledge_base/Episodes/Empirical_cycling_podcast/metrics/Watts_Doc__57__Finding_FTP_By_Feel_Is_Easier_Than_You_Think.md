@@ -1,6 +1,6 @@
 ---
 title: "Finding FTP by Feel: RPE Accuracy, MLSS Agreement, and The Perceptual Anchor Framework — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "CP"

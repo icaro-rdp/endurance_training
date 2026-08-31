@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #29: Managing Fitness And Rest During Race Season — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Aerobic_base"

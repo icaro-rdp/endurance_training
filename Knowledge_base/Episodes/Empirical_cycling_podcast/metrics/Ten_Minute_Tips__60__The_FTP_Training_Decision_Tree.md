@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #60: The FTP Training Decision Tree — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "VO2max"

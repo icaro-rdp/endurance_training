@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #32: Coaching Mistakes, And What Makes A Good Coach — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Progressive_overload"

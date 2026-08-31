@@ -1,6 +1,6 @@
 ---
 title: "Coaching the Process, Individualization vs. The Average Fallacy, & Racecraft Physics — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Volume_quantification"

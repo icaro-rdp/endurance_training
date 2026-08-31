@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #55: When To Take A Rest Week, Trusting Subjective Metrics — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Block_periodization"
   - "Aerobic_base"

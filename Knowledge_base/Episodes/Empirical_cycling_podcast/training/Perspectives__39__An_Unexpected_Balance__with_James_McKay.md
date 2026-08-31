@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #39: An Unexpected Balance — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Aerobic_base"
   - "LT1_VT1"

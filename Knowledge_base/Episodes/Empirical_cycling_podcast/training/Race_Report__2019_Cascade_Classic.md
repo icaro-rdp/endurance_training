@@ -1,6 +1,6 @@
 ---
 title: "Race Report: 2019 Cascade Classic & Multi-Day Stage Race Execution — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Durability"
   - "Aerobic_base"

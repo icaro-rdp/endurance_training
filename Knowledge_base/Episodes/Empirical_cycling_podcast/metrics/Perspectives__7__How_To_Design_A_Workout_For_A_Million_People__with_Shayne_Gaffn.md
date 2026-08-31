@@ -1,6 +1,6 @@
 ---
 title: "Designing Workouts for Mass Populations: Ramp Test Inflation, Sweetspot Buffering, & Time-Crunched Architecture — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "FTP"
   - "Aerobic_base"

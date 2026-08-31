@@ -1,6 +1,6 @@
 ---
 title: "Breathing Mechanics, Intra-Abdominal Pressure, & Bracing for Heavy Lifting — Complete Guide"
-category: "strength"
+category: training
 topics:
   - "Heavy_torque"
   - "Periodization"

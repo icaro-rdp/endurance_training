@@ -1,6 +1,6 @@
 ---
 title: How to Apply Short High Intensity Intermittent Intervals with Progressive Overload
-category: hiit
+category: training
 topics:
 - VO2max
 - LT2_VT2

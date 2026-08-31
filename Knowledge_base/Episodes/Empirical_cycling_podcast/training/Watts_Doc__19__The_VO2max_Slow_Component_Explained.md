@@ -1,6 +1,6 @@
 ---
 title: "Watts Doc #19: The VO2max Slow Component Explained — Complete Guide"
-category: "hiit"
+category: training
 topics:
   - "Fast_start_intervals"
   - "Long_intervals"

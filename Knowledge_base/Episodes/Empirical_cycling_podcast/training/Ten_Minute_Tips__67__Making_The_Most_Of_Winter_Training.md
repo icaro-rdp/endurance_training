@@ -1,6 +1,6 @@
 ---
 title: "Making The Most Of Winter Training — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Block_periodization"

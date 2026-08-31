@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #52: Intermediate Training Mistakes (And Solutions) — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Aerobic_base"
   - "Progressive_overload"

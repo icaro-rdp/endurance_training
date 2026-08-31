@@ -1,6 +1,6 @@
 ---
 title: "Deconstructing Aerobic Base: The Plate vs. Pyramid Model — Complete Guide"
-category: "zone2"
+category: training
 topics:
   - "Aerobic_base"
   - "Mitochondrial_density"

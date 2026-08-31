@@ -1,6 +1,6 @@
 ---
 title: "The Relationship Between Size and Power (Allometry & Scaling) — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "VO2max"

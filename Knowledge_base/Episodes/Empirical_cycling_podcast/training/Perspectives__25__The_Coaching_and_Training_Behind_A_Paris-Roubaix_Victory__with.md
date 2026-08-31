@@ -1,6 +1,6 @@
 ---
 title: "The Coaching and Training Behind a Paris-Roubaix Victory — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Durability"
   - "Block_periodization"

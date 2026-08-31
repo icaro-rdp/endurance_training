@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #15: A Discussion on Strength Training — Complete Guide"
-category: "strength"
+category: training
 topics:
   - "Periodization"
   - "Unilateral"

@@ -1,6 +1,6 @@
 ---
 title: "Measuring Training Responsiveness: The Lillehammer Study, Intra-Class Correlation, and the Adaptation Differential Diagnosis — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Volume_quantification"
   - "Block_periodization"

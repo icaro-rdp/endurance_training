@@ -1,6 +1,6 @@
 ---
 title: "The Best Workout Is Not Working Out: Recovery Dynamics, Rest Week Architecture, & Autonomic Markers — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Durability"

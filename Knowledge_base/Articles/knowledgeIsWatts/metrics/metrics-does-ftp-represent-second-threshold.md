@@ -1,6 +1,6 @@
 ---
 title: Does FTP Truly Represent the Second Exercise Threshold?
-category: metrics
+category: physiology
 topics:
 - FTP
 - CP

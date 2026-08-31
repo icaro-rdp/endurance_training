@@ -1,6 +1,6 @@
 ---
 title: "FTP vs. VO2max: Fractional Utilization & Scientific Testing Flaws — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "VO2max"

@@ -1,6 +1,6 @@
 ---
 title: "400k AMA: Metabolic Signaling, Periodization Models, Pacing Dynamics & Nutrition — Q&A Guide"
-category: "periodization"
+category: planning
 topics:
   - "Block_periodization"
   - "Aerobic_base"

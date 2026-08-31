@@ -1,6 +1,6 @@
 ---
 title: "The Cost of Change (Equity, Economics, and Endurance Capacity) — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Volume_quantification"
   - "Aerobic_base"

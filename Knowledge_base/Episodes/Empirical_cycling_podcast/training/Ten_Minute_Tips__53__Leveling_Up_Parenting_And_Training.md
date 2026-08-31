@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #53: Leveling Up Parenting And Training — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Aerobic_base"
   - "Microcycles"

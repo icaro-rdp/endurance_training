@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with Strength Training for Cyclists — Complete Guide"
-category: "strength"
+category: training
 topics:
   - "Periodization"
   - "Heavy_torque"

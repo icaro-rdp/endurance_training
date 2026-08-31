@@ -1,6 +1,6 @@
 ---
 title: Training at Fatmax Without Any Lab Test
-category: zone2
+category: training
 topics:
 - FTP
 - VO2max

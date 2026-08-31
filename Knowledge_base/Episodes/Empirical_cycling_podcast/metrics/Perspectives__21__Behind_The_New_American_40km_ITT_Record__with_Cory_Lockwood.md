@@ -1,6 +1,6 @@
 ---
 title: "Behind The American 40km ITT Record — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "TTA_TTE"

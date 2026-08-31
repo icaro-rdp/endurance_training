@@ -1,6 +1,6 @@
 ---
 title: "Common Reasons for Fitness Plateaus and Their Fixes — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "TTA_TTE"
   - "FTP"

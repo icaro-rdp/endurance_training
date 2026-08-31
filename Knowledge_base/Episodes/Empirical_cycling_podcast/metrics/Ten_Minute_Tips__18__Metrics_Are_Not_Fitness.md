@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #18: Metrics Are Not Fitness — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "CP"

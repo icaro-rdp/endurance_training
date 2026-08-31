@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #22: Training Myths, Part 2 — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "FTP"
   - "Sprint_performance"

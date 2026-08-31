@@ -1,7 +1,7 @@
 ---
 title: 'Quantifying Training Volume & Load: Hours vs. Kilojoules vs. TSS — Complete
   Guide'
-category: periodization
+category: planning
 topics:
 - LT1_VT1
 - LT2_VT2

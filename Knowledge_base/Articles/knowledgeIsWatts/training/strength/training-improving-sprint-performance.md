@@ -1,6 +1,6 @@
 ---
 title: What is Better to Improve Your Sprint?
-category: periodization
+category: planning
 topics:
 - VO2max
 - Durability

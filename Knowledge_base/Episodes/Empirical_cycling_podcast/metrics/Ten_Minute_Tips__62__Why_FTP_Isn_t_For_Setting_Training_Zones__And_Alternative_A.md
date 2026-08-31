@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #62: Why FTP Isn't For Setting Training Zones (And Alternative Approaches) — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "LT1_VT1"

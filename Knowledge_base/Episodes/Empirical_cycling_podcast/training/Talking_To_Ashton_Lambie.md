@@ -1,6 +1,6 @@
 ---
 title: "Talking to Ashton Lambie — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Aerobic_base"
   - "VO2max"

@@ -1,6 +1,6 @@
 ---
 title: "Sets and Reps Programming for Strength Training — Complete Guide"
-category: "strength"
+category: training
 topics:
   - "Periodization"
   - "Heavy_torque"

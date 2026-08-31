@@ -1,6 +1,6 @@
 ---
 title: 'How to Accurately Estimate CP and W'': the ''best Individual Fit'' Method'
-category: metrics
+category: physiology
 topics:
 - FTP
 - CP

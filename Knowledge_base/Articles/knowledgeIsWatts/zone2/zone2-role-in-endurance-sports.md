@@ -1,6 +1,6 @@
 ---
 title: The Role of Zone 2 Training in Endurance Sports
-category: zone2
+category: training
 topics:
 - VO2max
 - LT1_VT1

@@ -1,6 +1,6 @@
 ---
 title: "Student Union #2: Collegiate Season Planning, Promoter Logistics, & Crisis Periodization — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Aerobic_base"
   - "Microcycles"

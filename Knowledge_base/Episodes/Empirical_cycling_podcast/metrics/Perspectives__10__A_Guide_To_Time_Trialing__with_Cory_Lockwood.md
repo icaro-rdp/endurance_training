@@ -1,6 +1,6 @@
 ---
 title: "A Guide to Time Trialing: Aerodynamics, Pacing Physics, Positioning, & Race Execution — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "Durability"

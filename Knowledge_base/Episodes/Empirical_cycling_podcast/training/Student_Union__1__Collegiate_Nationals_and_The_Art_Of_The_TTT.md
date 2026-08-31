@@ -1,6 +1,6 @@
 ---
 title: "Student Union #1: Collegiate Nationals & The Art of the Team Time Trial — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Temperature_effects"
   - "W_prime"

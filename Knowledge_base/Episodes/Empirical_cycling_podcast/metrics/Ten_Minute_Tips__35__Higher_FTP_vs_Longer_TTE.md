@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #35: Higher FTP vs Longer TTE — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "TTA_TTE"

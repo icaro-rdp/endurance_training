@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #37: Practical Performance Psychology — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Durability"
   - "Microcycles"

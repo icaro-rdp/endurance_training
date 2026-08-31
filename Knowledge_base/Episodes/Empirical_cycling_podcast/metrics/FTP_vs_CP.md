@@ -1,6 +1,6 @@
 ---
 title: Ftp Vs Cp
-category: metrics
+category: physiology
 topics:
 - FTP
 - CP

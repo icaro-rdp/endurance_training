@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #29: Training Myths, Part 3: Volume — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Aerobic_base"
   - "Durability"

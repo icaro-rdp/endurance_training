@@ -1,6 +1,6 @@
 ---
 title: "Watts Doc #23: Training Your VO2max, and Why Not Rønnestad 30/15 Intervals — Complete Guide"
-category: "hiit"
+category: training
 topics:
   - "VO2max"
   - "Short_intervals"

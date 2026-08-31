@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #38: Balancing Training And Rest During Race Season — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Block_periodization"

@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #17: Sweetspot vs Polarized Is Kayfabe — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Aerobic_base"
   - "Progressive_overload"

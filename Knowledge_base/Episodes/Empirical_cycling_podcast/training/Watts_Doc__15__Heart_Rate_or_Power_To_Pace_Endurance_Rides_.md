@@ -1,6 +1,6 @@
 ---
 title: "Heart Rate vs. Power vs. RPE for Pacing Endurance Rides — Complete Guide"
-category: "zone2"
+category: training
 topics:
   - "Aerobic_base"
   - "Power_vs_HR"

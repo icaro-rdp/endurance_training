@@ -1,6 +1,6 @@
 ---
 title: Strength Training Infographics Collection
-category: strength
+category: training
 topics:
 - Durability
 - Unilateral

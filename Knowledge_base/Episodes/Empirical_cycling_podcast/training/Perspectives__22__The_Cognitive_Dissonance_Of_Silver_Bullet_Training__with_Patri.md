@@ -1,6 +1,6 @@
 ---
 title: "The Cognitive Dissonance of Silver Bullet Training — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Volume_quantification"

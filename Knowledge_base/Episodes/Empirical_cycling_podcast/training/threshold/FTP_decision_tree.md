@@ -1,6 +1,6 @@
 ---
 title: FTP Training Decision Tree — Complete Guide
-category: periodization
+category: planning
 topics:
 - FTP
 - Mitochondrial_density

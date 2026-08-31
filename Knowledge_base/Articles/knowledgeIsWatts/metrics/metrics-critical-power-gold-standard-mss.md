@@ -1,6 +1,6 @@
 ---
 title: 'Critical Power: the Gold Standard for the Maximum Metabolic Steady State'
-category: metrics
+category: physiology
 topics:
 - CP
 - VO2max

@@ -1,6 +1,6 @@
 ---
 title: "The 'Right' VO2max Training and 30/15s Epilogue: De-Dogmatizing High-Cadence, Hard-Start, and Intermittent Protocols — Complete Guide"
-category: "hiit"
+category: training
 topics:
   - "Long_intervals"
   - "Short_intervals"

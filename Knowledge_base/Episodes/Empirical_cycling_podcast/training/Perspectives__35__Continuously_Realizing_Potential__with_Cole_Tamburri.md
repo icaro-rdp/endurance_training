@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #35: Continuously Realizing Potential — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Progressive_overload"
   - "Microcycles"

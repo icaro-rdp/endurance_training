@@ -1,6 +1,6 @@
 ---
 title: "500k Special: Coaching Evolution, Training Plan Flaws & Periodization First Principles — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Progressive_overload"
   - "Aerobic_base"

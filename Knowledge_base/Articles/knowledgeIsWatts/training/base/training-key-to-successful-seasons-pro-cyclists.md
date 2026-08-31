@@ -1,6 +1,6 @@
 ---
 title: The Key to Successful Seasons in Pro Cyclists
-category: periodization
+category: planning
 topics:
 - FTP
 - Aerobic_base

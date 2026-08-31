@@ -1,6 +1,6 @@
 ---
 title: A High Intensity Shock Mycrocycle Boosts Performance!
-category: periodization
+category: planning
 topics:
 - FTP
 - CP

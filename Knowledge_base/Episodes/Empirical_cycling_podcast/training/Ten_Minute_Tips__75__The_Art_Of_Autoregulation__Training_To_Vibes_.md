@@ -1,6 +1,6 @@
 ---
 title: "The Art of Autoregulation (Training to Vibes) — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Aerobic_base"

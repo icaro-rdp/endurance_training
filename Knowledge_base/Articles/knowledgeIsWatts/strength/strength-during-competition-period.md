@@ -1,6 +1,6 @@
 ---
 title: 'Strength Training During Competition Period: Yes or No?'
-category: strength
+category: training
 topics:
 - Durability
 - Short_intervals

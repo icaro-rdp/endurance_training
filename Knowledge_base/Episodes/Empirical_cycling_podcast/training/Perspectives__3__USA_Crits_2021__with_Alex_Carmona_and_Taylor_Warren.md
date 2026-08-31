@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #3: USA Crits Season Review, In-Season Fatigue, & Criterium Physics — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "W_prime"
   - "Durability"

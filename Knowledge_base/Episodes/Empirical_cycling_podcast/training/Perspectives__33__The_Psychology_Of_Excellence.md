@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #33: The Psychology Of Excellence — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Durability"

@@ -1,6 +1,6 @@
 ---
 title: Rest Week — How Long Recovery Should Be
-category: periodization
+category: planning
 topics:
 - VO2max
 - Periodization

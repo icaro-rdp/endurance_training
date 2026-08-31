@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #64: Diagnosing And Training Weaknesses In The Off-Season — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Block_periodization"
   - "Volume_quantification"

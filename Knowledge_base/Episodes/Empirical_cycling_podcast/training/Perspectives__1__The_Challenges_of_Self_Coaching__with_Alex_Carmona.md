@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #1: The Challenges of Self-Coaching, Athlete Self-Knowledge, & Pandemic Periodization — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "TTA_TTE"

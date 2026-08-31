@@ -1,6 +1,6 @@
 ---
 title: "Effective FTP Training: Progressive Overload & Extending TTE — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "FTP"
   - "TTA_TTE"

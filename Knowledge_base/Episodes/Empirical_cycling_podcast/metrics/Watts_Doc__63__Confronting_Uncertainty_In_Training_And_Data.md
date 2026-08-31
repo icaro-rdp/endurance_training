@@ -1,6 +1,6 @@
 ---
 title: "Confronting Uncertainty in Training and Data: Bayesian Updating, Model Limits, and the Adaptive Coaching Loop — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "Power_vs_HR"

@@ -1,6 +1,6 @@
 ---
 title: "Avoiding Panic Training (Starts Now) — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Block_periodization"

@@ -1,6 +1,6 @@
 ---
 title: 'FTP vs. TTE: Raising Power vs. Extending Duration — Complete Guide'
-category: periodization
+category: planning
 topics:
 - FTP
 - VO2max

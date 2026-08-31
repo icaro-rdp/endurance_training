@@ -1,6 +1,6 @@
 ---
 title: Yes, but Choose the Right Lab!
-category: metrics
+category: physiology
 topics:
 - FTP
 - VO2max

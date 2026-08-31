@@ -1,6 +1,6 @@
 ---
 title: "Setting Up Your n=1 Training Experiment: Inter-Individual Variability, Measurement Noise, and Responder Myths — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Volume_quantification"
   - "Block_periodization"

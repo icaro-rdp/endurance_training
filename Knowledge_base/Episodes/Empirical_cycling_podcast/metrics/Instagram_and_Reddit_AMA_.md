@@ -1,6 +1,6 @@
 ---
 title: "Instagram and Reddit AMA: Intensity Distributions, Over-Unders, VO2max Ceilings, and MLSS vs FTP — Q&A Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "VO2max"

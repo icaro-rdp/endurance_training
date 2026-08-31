@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #23: How Much FTP Training Is Too Much? — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "FTP"
   - "TTA_TTE"

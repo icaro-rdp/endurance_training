@@ -1,6 +1,6 @@
 ---
 title: "200k AMA: The Best and Worst Workouts — Complete Guide"
-category: "hiit"
+category: training
 topics:
   - "Progressive_overload"
   - "FTP"

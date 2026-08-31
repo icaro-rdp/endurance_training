@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #24: You Are Not Your CTL — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Volume_quantification"
   - "Durability"

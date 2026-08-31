@@ -1,6 +1,6 @@
 ---
 title: FTP Testing — Complete Guide
-category: metrics
+category: physiology
 topics:
 - FTP
 source: Empirical Cycling Podcast — Kolie Moore

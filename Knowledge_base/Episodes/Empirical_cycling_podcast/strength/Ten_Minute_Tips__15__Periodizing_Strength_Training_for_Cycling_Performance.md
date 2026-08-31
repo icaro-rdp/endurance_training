@@ -1,6 +1,6 @@
 ---
 title: "Periodizing Strength Training for Cycling Performance — Complete Guide"
-category: "strength"
+category: training
 topics:
   - "Periodization"
   - "Unilateral"

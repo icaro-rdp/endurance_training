@@ -1,6 +1,6 @@
 ---
 title: "The 2x20 Myth & Threshold Progression — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "TTA_TTE"

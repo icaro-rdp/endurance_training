@@ -1,6 +1,6 @@
 ---
 title: Calculating VO2max Without Lab Test
-category: metrics
+category: physiology
 topics:
 - FTP
 - VO2max

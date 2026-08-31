@@ -1,6 +1,6 @@
 ---
 title: FTP Workout — The 2×20 Complete Guide
-category: periodization
+category: planning
 topics:
 - FTP
 - Periodization

@@ -1,6 +1,6 @@
 ---
 title: Am I Doing Better? a Simple Way to Visualize Cycling Performance
-category: metrics
+category: physiology
 topics:
 - FTP
 - Durability

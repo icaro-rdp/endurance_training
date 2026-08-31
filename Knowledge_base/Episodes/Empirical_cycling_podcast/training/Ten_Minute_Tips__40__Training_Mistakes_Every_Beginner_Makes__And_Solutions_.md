@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #40: Training Mistakes Every Beginner Makes (And Solutions) — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Block_periodization"

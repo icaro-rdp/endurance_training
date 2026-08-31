@@ -1,6 +1,6 @@
 ---
 title: "Ten Minute Tips #61: Coach Q&A on Limiters, Low-Volume Deloads, Break Resumption, & Training Camps — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Microcycles"
   - "Volume_quantification"

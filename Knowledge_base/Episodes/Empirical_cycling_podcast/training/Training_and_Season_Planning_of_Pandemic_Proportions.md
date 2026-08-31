@@ -1,6 +1,6 @@
 ---
 title: "Training and Season Planning During Major Disruptions — Complete Guide"
-category: "periodization"
+category: planning
 topics:
   - "Aerobic_base"
   - "Microcycles"

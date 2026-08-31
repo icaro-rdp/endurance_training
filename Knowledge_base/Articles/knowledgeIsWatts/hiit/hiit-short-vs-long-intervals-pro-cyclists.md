@@ -1,6 +1,6 @@
 ---
 title: Short Vs. Long Intervals in Pro Cyclists
-category: hiit
+category: training
 topics:
 - VO2max
 - Short_intervals

@@ -1,6 +1,6 @@
 ---
 title: A 7-day Medium Intensity Block Microcycle Boosts Aerobic Adaptations and Performance!
-category: periodization
+category: planning
 topics:
 - LT1_VT1
 - LT2_VT2

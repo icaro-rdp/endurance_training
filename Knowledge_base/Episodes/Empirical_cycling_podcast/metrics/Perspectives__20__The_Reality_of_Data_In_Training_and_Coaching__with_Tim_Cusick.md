@@ -1,6 +1,6 @@
 ---
 title: "Perspectives #20: The Reality of Data In Training and Coaching — Complete Guide"
-category: "metrics"
+category: physiology
 topics:
   - "FTP"
   - "Volume_quantification"
