@@ -12,7 +12,7 @@ Welcome to the **Endurance Training Knowledge Base**. This document is the prima
 ## Document Catalog by Category
 
 ### Category: `TRAINING`
-Total documents: 174
+Total documents: 171
 
 - **[10: How To Read A Scientific Paper](Articles/Empirical_Cycling_Community_Notes/training/2020-12-17_10_How_To_Read_A_Scientific_Paper.md)** (`Articles/Empirical_Cycling_Community_Notes/training/2020-12-17_10_How_To_Read_A_Scientific_Paper.md`)
   - **Topics**: Lab_vs_field, Power_vs_HR, Sprint_performance, CP
@@ -202,10 +202,6 @@ Total documents: 174
   - **Topics**: Aerobic_base, LT1_VT1, VO2max, FTP
   - **Summary**: The podcast begins by addressing a fundamental question for many endurance athletes: Is strength training beneficial? While the intuitive answer might be 'yes, getting stronger is good,' the scientific literature is often conflicting and confusing. The host points out several recurring issues with studies on this topic:
 
-- **[A 9 week polarised training plan](Articles/Cycling_Science_Made_Simple/training/2026-08-30_A_9_week_polarised_training_plan.md)** (`Articles/Cycling_Science_Made_Simple/training/2026-08-30_A_9_week_polarised_training_plan.md`)
-  - **Topics**: Aerobic_base, LT1_VT1, Microcycles, VO2max
-  - **Summary**: Base training is done, and race season is drawing inevitably closer. You already know which wheel you will need to cling onto to get the results you want. But, you could use some extra watts per kilo to make it happen.
-
 - **[Acting on Cadence Data](Articles/Spare_Cycles/training/2015-12-30_Acting_on_Cadence_Data.md)** (`Articles/Spare_Cycles/training/2015-12-30_Acting_on_Cadence_Data.md`)
   - **Topics**: Heavy_torque, Underfueling_REDs, TTA_TTE, LT1_VT1
   - **Summary**: Just a ~~quick~~ addendum to my last post on Inertia and Cadence, I wanted to go over a process I’ve used for assessing my race cadence and using that to inform training. I took most of this info from Allan & Coggan’s Training and Racing with a Power Meter , chapter 6: Interpreting the Data.
@@ -245,10 +241,6 @@ Total documents: 174
 - **[Building a Strong Foundation: Base Training for Endurance Athletes](Articles/Coaching_Professor_Paul_Laursen/training/2024-11-28_Building_a_Strong_Foundation_Base_Training_for_Endurance_Athletes.md)** (`Articles/Coaching_Professor_Paul_Laursen/training/2024-11-28_Building_a_Strong_Foundation_Base_Training_for_Endurance_Athletes.md`)
   - **Topics**: Aerobic_base, VO2max, Progressive_overload, Double_threshold
   - **Summary**: This episode of The Athletes Compass dives into the essentials of base training for endurance athletes. Hosts Paul Warloski, Marjaana Rakai, and Dr. Paul Laursen unpack the science behind aerobic base training, focusing on low-intensity zone 1 and 2 workouts that support fat-burning and build resilience. They explore why this foundational phase is
-
-- **[COVID-19 and training | Should you stop riding?](Articles/Cycling_Science_Made_Simple/training/2026-08-30_COVID-19_and_training_Should_you_stop_riding.md)** (`Articles/Cycling_Science_Made_Simple/training/2026-08-30_COVID-19_and_training_Should_you_stop_riding.md`)
-  - **Topics**: Aerobic_base, LT1_VT1, TTA_TTE, Microcycles
-  - **Summary**: Due to the Corona virus, or COVID-19 pandemic, an increasing number of cyclists have spare time to kill at home and away from work.
 
 - **[California International Marathon Training Update](Articles/Physiologically_Speaking_Brady_Holmer/training/2025-11-18_California_International_Marathon_Training_Update.md)** (`Articles/Physiologically_Speaking_Brady_Holmer/training/2025-11-18_California_International_Marathon_Training_Update.md`)
   - **Topics**: Cross_training, Sprint_performance, Volume_quantification, CP
@@ -369,10 +361,6 @@ Total documents: 174
 - **[How To Pace A Climb: 3 Key Steps](<Articles/High_North_Performance/training/5 Mar_How_To_Pace_A_Climb_3_Key_Steps.md>)** (`Articles/High_North_Performance/training/5 Mar_How_To_Pace_A_Climb_3_Key_Steps.md`)
   - **Topics**: Aerobic_base, Heavy_torque, TTA_TTE, LT1_VT1
   - **Summary**: Pacing is a fundamental skill that many cyclists (even experienced ones) could benefit from improving, and one domain where correct pacing is extremely important is hilly terrain. To help you improve the pacing of your climbing efforts, here are 3 basic steps to follow:
-
-- **[How To Put a Rear Wheel on a Bike](Articles/Coaches_Corner_Blog/training/How_To_Put_a_Rear_Wheel_on_a_Bike.md)** (`Articles/Coaches_Corner_Blog/training/How_To_Put_a_Rear_Wheel_on_a_Bike.md`)
-  - **Topics**: Aerobic_base, Underfueling_REDs, TTA_TTE, LT1_VT1
-  - **Summary**: Cyclists aren’t going anywhere without wheels — it’s an obvious statement. But ultimately, that means you’re going to have to deal with wheels on a regular basis as a cyclist. Whether you’re changing a flat or fixing a problem with how the wheel is mounted, you’ll need to remove and re-mount your bike’s wheels from time to time.
 
 - **[How To Train In Zone 2: Steady Endurance Training Explained](<Articles/High_North_Performance/training/11 Aug_How_To_Train_In_Zone_2_Steady_Endurance_Training_Explained.md>)** (`Articles/High_North_Performance/training/11 Aug_How_To_Train_In_Zone_2_Steady_Endurance_Training_Explained.md`)
   - **Topics**: Aerobic_base, LT1_VT1, Microcycles, LT2_VT2
@@ -713,7 +701,7 @@ Total documents: 174
 ---
 
 ### Category: `PHYSIOLOGY`
-Total documents: 331
+Total documents: 320
 
 - **[(Video) New AHA Scientific Statement Endorses Resistance Training for Heart Health](Articles/Physiologically_Speaking_Brady_Holmer/physiology/2023-12-11_Video_New_AHA_Scientific_Statement_Endorses_Resistance_Training_for_Heart_Health.md)** (`Articles/Physiologically_Speaking_Brady_Holmer/physiology/2023-12-11_Video_New_AHA_Scientific_Statement_Endorses_Resistance_Training_for_Heart_Health.md`)
   - **Topics**: Cardiac_hypertrophy, Cross_training, Durability, Power_vs_HR
@@ -1027,10 +1015,6 @@ Total documents: 331
   - **Topics**: FTP, VO2max, Durability
   - **Summary**: VO2max (maximum oxygen consumption) is the maximum amount of oxygen that the body can use per minute to produce energy (watts). So, it a metric representing the horsepower of the athlete’s aerobic
 
-- **[Calpe Cycling Holiday – What’s The Fuzz About?](Articles/Cycling_Science_Made_Simple/physiology/2026-08-30_Calpe_Cycling_Holiday_What_s_The_Fuzz_About.md)** (`Articles/Cycling_Science_Made_Simple/physiology/2026-08-30_Calpe_Cycling_Holiday_What_s_The_Fuzz_About.md`)
-  - **Topics**: LT1_VT1, Microcycles, FatMax, TTA_TTE
-  - **Summary**: The greatest kick I get from cycling is when I get to explore new parts of the world on my bike.
-
 - **[Can They Be Used Interchangeably?](Articles/knowledgeIsWatts/metrics/metrics-flat-vs-uphill-power-output.md)** (`Articles/knowledgeIsWatts/metrics/metrics-flat-vs-uphill-power-output.md`)
   - **Topics**: Power_vs_HR
   - **Summary**: It is common feeling easier to produce watts when riding uphill compared to flat terrain. Some coaches even recommend slightly higher power values for a given training zone when riding
@@ -1106,10 +1090,6 @@ Total documents: 331
 - **[Deriving Power from VO2 and VO2 from Power](Articles/Spare_Cycles/physiology/2019-07-24_Deriving_Power_from_VO2_and_VO2_from_Power.md)** (`Articles/Spare_Cycles/physiology/2019-07-24_Deriving_Power_from_VO2_and_VO2_from_Power.md`)
   - **Topics**: VO2max, LT1_VT1, Carbohydrate_ratio, Antioxidants
   - **Summary**: The charts we looked at last week have some ‘hidden’ interesting features that I want to go into more detail on. This will get into mathematical derivations of metabolic equations, estimating Gross Efficiency, fuel utilization between fatty acids & glucose, and aerobic & anaerobic contribution to power output.
-
-- **[Do Noseless Bike Saddles Work?](Articles/Coaches_Corner_Blog/physiology/Do_Noseless_Bike_Saddles_Work_.md)** (`Articles/Coaches_Corner_Blog/physiology/Do_Noseless_Bike_Saddles_Work_.md`)
-  - **Topics**: FatMax, Aerobic_base, Underfueling_REDs, TTA_TTE
-  - **Summary**: As a cyclist, you spend an awful lot of time with your butt planted on a bike saddle. Serious cyclists ride for hours at a time, several times a week, and that means saddle discomfort is a significant issue.
 
 - **[Does FTP Truly Represent the Second Exercise Threshold?](Articles/knowledgeIsWatts/metrics/metrics-does-ftp-represent-second-threshold.md)** (`Articles/knowledgeIsWatts/metrics/metrics-does-ftp-represent-second-threshold.md`)
   - **Topics**: FTP, CP, LT2_VT2
@@ -1243,10 +1223,6 @@ Total documents: 331
   - **Topics**: FTP, LT1_VT1, LT2_VT2, Lab_vs_field
   - **Summary**: A definitive analysis of why direct mechanical power measurement renders laboratory lactate testing largely redundant for cycling training, exploring the history of lactate proxies, the fallacy of fixed 2.0/4.0 mmol thresholds, ramp test kinetics, and the true definition of Functional Threshold Power.
 
-- **[How Professional Cyclists Train for the Giro d’Italia & Tour de France](Articles/Cycling_Science_Made_Simple/physiology/2026-08-30_How_Professional_Cyclists_Train_for_the_Giro_d_Italia_Tour_de_France.md)** (`Articles/Cycling_Science_Made_Simple/physiology/2026-08-30_How_Professional_Cyclists_Train_for_the_Giro_d_Italia_Tour_de_France.md`)
-  - **Topics**: LT1_VT1, Aerobic_base, VO2max, LT2_VT2
-  - **Summary**: It’s not everyday you get a detailed look at how the best professional cyclists train.
-
 - **[How To Build Anaerobic Power & Stamina For Cycling](<Articles/High_North_Performance/physiology/16 Apr_How_To_Build_Anaerobic_Power_Stamina_For_Cycling.md>)** (`Articles/High_North_Performance/physiology/16 Apr_How_To_Build_Anaerobic_Power_Stamina_For_Cycling.md`)
   - **Topics**: Durability, Ergogenic_aids, Carbohydrate_ratio, FTP
   - **Summary**: There are three systems that are used to produce energy during exercise: the aerobic energy system, the anaerobic glycolytic system, and the creatine phosphate (CP) system.
@@ -1258,10 +1234,6 @@ Total documents: 331
 - **[How To Increase VO2max As A Cyclist](<Articles/High_North_Performance/physiology/4 Apr_How_To_Increase_VO2max_As_A_Cyclist.md>)** (`Articles/High_North_Performance/physiology/4 Apr_How_To_Increase_VO2max_As_A_Cyclist.md`)
   - **Topics**: VO2max, Cardiac_hypertrophy, Aerobic_base, Mitochondrial_density
   - **Summary**: Maximal oxygen uptake (VO2max) is the highest rate at which oxygen can be taken up, delivered to and utilised by the muscles during intensive exercise.
-
-- **[How To Make Your Peloton Bike Seat More Comfortable](Articles/Coaches_Corner_Blog/physiology/How_To_Make_Your_Peloton_Bike_Seat_More_Comfortable.md)** (`Articles/Coaches_Corner_Blog/physiology/How_To_Make_Your_Peloton_Bike_Seat_More_Comfortable.md`)
-  - **Topics**: FatMax, LT1_VT1, Temperature_effects, Underfueling_REDs
-  - **Summary**: Since their launch in 2014, Peloton bikes have grown rapidly in popularity. As COVID-imposed quarantines pushed more people toward home- and screen-based workouts, these stationary bikes have become a fitness mainstay in many homes.
 
 - **[How To Overcome “Coach’s Block”: 8 Tips For Getting Down To Planning](<Articles/High_North_Performance/physiology/3 Apr_How_To_Overcome_Coach_s_Block_8_Tips_For_Getting_Down_To_Planning.md>)** (`Articles/High_North_Performance/physiology/3 Apr_How_To_Overcome_Coach_s_Block_8_Tips_For_Getting_Down_To_Planning.md`)
   - **Topics**: LT1_VT1, Volume_quantification, TTA_TTE, Periodization
@@ -1350,14 +1322,6 @@ Total documents: 331
 - **[Lactate Testing For Cyclists Explained](<Articles/High_North_Performance/physiology/22 Jun_Lactate_Testing_For_Cyclists_Explained.md>)** (`Articles/High_North_Performance/physiology/22 Jun_Lactate_Testing_For_Cyclists_Explained.md`)
   - **Topics**: FTP, Carbohydrate_ratio, LT1_VT1, Underfueling_REDs
   - **Summary**: Using lactate as a performance measure offers a number of benefits over just power and heart rate data alone (e.g. FTP testing or power profiling).
-
-- **[Leg Cramps While Cycling](Articles/Coaches_Corner_Blog/physiology/2023-06-01_Leg_Cramps_While_Cycling.md)** (`Articles/Coaches_Corner_Blog/physiology/2023-06-01_Leg_Cramps_While_Cycling.md`)
-  - **Topics**: Temperature_effects, Underfueling_REDs, LT1_VT1, TTA_TTE
-  - **Summary**: It comes on unexpectedly, and it comes on fast. You’re enjoying a weekend ride when, out of nowhere, a searing pain shoots through your leg. You can hardly pedal enough to pull off the side of the road, and you’re doing everything you can not to scream.
-
-- **[Leg Cramps While Cycling: Causes, Prevention, and the Fastest Way to Stop Them](Articles/Coaches_Corner_Blog/physiology/Leg_Cramps_While_Cycling__Causes__Prevention__and_the_Fastes.md)** (`Articles/Coaches_Corner_Blog/physiology/Leg_Cramps_While_Cycling__Causes__Prevention__and_the_Fastes.md`)
-  - **Topics**: Temperature_effects, Underfueling_REDs, LT1_VT1, TTA_TTE
-  - **Summary**: It comes on unexpectedly, and it comes on fast. You’re enjoying a weekend ride when, out of nowhere, a searing pain shoots through your leg. You can hardly pedal enough to pull off the side of the road, and you’re doing everything you can not to scream.
 
 - **[Live with Brady | 2.23.26](Articles/Physiologically_Speaking_Brady_Holmer/physiology/2026-02-23_Live_with_Brady_2_23_26.md)** (`Articles/Physiologically_Speaking_Brady_Holmer/physiology/2026-02-23_Live_with_Brady_2_23_26.md`)
   - **Topics**: LT1_VT1, Underfueling_REDs, Beta_alanine, Periodization
@@ -1731,21 +1695,9 @@ Total documents: 331
   - **Topics**: Power_vs_HR, Sprint_performance, FTP
   - **Summary**: A physics-based mathematical evaluation of rotating weight (wheel rim inertia) versus translational inertia and aerodynamic drag during cycling accelerations, demonstrating why wheel weight savings yield negligible real-world power advantages compared to aerodynamics.
 
-- **[Saddle Sores Cycling Guide](Articles/Coaches_Corner_Blog/physiology/2023-06-01_Saddle_Sores_Cycling_Guide.md)** (`Articles/Coaches_Corner_Blog/physiology/2023-06-01_Saddle_Sores_Cycling_Guide.md`)
-  - **Topics**: Temperature_effects, Underfueling_REDs, LT1_VT1, Aerobic_base
-  - **Summary**: Saddle sores from cycling are skin injuries caused by repeated friction, pressure, heat, and moisture where the body contacts the saddle. They often start as small hot spots but can develop into inflamed follicles or deeper lesions if irritation continues. Proper bike fit, hygiene, and saddle design can help prevent them.
-
-- **[Saddle Sores From Cycling: Causes, Treatment, and How to Prevent Them for Good](Articles/Coaches_Corner_Blog/physiology/Saddle_Sores_From_Cycling__Causes__Treatment__and_How_to_Pre.md)** (`Articles/Coaches_Corner_Blog/physiology/Saddle_Sores_From_Cycling__Causes__Treatment__and_How_to_Pre.md`)
-  - **Topics**: Temperature_effects, Underfueling_REDs, LT1_VT1, Aerobic_base
-  - **Summary**: Saddle sores from cycling are skin injuries caused by repeated friction, pressure, heat, and moisture where the body contacts the saddle. They often start as small hot spots but can develop into inflamed follicles or deeper lesions if irritation continues. Proper bike fit, hygiene, and saddle design can help prevent them.
-
 - **[Scandinavian Snapshot: How Team Danmark & Olympiatoppen Are (and Aren’t) Readying for AI](Articles/Coaching_Professor_Paul_Laursen/physiology/2025-05-24_Scandinavian_Snapshot_How_Team_Danmark_Olympiatoppen_Are_and_Aren_t_Readying_for.md)** (`Articles/Coaching_Professor_Paul_Laursen/physiology/2025-05-24_Scandinavian_Snapshot_How_Team_Danmark_Olympiatoppen_Are_and_Aren_t_Readying_for.md`)
   - **Topics**: VO2max, Underfueling_REDs, Antioxidants, TTA_TTE
   - **Summary**: We walked past one vacant sport science lab after another—VO2 equipment untouched, force plates gathering dust. These spaces once pulsed with activity, representing the pinnacle of high-performance sport science. But now, they feel more like museums of a fading era.
-
-- **[Sit Bone Pain From Cycling: Why It Happens and How to Fix It for Good](Articles/Coaches_Corner_Blog/physiology/Sit_Bone_Pain_From_Cycling__Why_It_Happens_and_How_to_Fix_It.md)** (`Articles/Coaches_Corner_Blog/physiology/Sit_Bone_Pain_From_Cycling__Why_It_Happens_and_How_to_Fix_It.md`)
-  - **Topics**: Temperature_effects, Underfueling_REDs, Antioxidants, Aerobic_base
-  - **Summary**: Your sit bones are built to support you, but they’ll only tolerate so much. Plant them in a car for a long road trip, and you’ll be squirming for relief by the end.
 
 - **[Stress vs. Strain: Matching Interval Prescription to Internal Physiology — Complete Guide](Episodes/Empirical_cycling_podcast/metrics/Ten_Minute_Tips__4__Stress___Strain_-_Do_your_intervals_do_what_you_think_they_d.md)** (`Episodes/Empirical_cycling_podcast/metrics/Ten_Minute_Tips__4__Stress___Strain_-_Do_your_intervals_do_what_you_think_they_d.md`)
   - **Topics**: Power_vs_HR, VO2max, TTA_TTE, Progressive_overload
@@ -1826,10 +1778,6 @@ Total documents: 331
 - **[The 2x20 Myth & Threshold Progression — Complete Guide](Episodes/Empirical_cycling_podcast/metrics/The_Watts_Doc__3__Is_There_Anything_Special_About_2x20_.md)** (`Episodes/Empirical_cycling_podcast/metrics/The_Watts_Doc__3__Is_There_Anything_Special_About_2x20_.md`)
   - **Topics**: FTP, TTA_TTE, Progressive_overload
   - **Summary**: An in-depth analysis of the physiological validity of the canonical 2x20-minute threshold workout, exploring oxygen uptake kinetics, minimum effective interval durations, continuous vs. intermittent structuring, and progressive overload via Time-to-Exhaustion (TTE) extension.
-
-- **[The Benefits and Risks of the Cyclist Resting Heart Rate](Articles/Coaches_Corner_Blog/physiology/The_Benefits_and_Risks_of_the_Cyclist_Resting_Heart_Rate.md)** (`Articles/Coaches_Corner_Blog/physiology/The_Benefits_and_Risks_of_the_Cyclist_Resting_Heart_Rate.md`)
-  - **Topics**: Cardiac_hypertrophy, LT1_VT1, Underfueling_REDs, TTA_TTE
-  - **Summary**: Cycling comes with many benefits, both physical and mental. Near the top among them is the way it boosts your heart health.
 
 - **[The Case for Keto for Type 1 Diabetes with Andrew Koutnik, Ph.D.](Articles/Physiologically_Speaking_Brady_Holmer/physiology/2024-07-24_The_Case_for_Keto_for_Type_1_Diabetes_with_Andrew_Koutnik_Ph_D.md)** (`Articles/Physiologically_Speaking_Brady_Holmer/physiology/2024-07-24_The_Case_for_Keto_for_Type_1_Diabetes_with_Andrew_Koutnik_Ph_D.md`)
   - **Topics**: Fat_oxidation, Underfueling_REDs, Lab_vs_field, Beta_alanine
@@ -1987,10 +1935,6 @@ Total documents: 331
   - **Topics**: Fat_oxidation, Lactate_shuttle, FTP
   - **Summary**: An in-depth biochemical and physiological investigation into what defines aerobic metabolism, detailing the Krebs cycle, mitochondrial electron transport chain proton pumping, ATP synthase mechanics, and why fats, carbohydrates, and lactate are all oxidized aerobically through identical terminal pathways.
 
-- **[What To Do When You Break a Bike Spoke](Articles/Coaches_Corner_Blog/physiology/What_To_Do_When_You_Break_a_Bike_Spoke.md)** (`Articles/Coaches_Corner_Blog/physiology/What_To_Do_When_You_Break_a_Bike_Spoke.md`)
-  - **Topics**: LT1_VT1, FatMax, Aerobic_base, TTA_TTE
-  - **Summary**: When you’re pedaling your bike, you might be thinking about many different things. You may be taking in the scenery, watching for road hazards, or noticing that your saddle is getting uncomfortable.
-
 - **[What Your Nervous System Knows That You Don’t (Yet)](Articles/Coaching_Professor_Paul_Laursen/physiology/2025-04-24_What_Your_Nervous_System_Knows_That_You_Don_t_Yet.md)** (`Articles/Coaching_Professor_Paul_Laursen/physiology/2025-04-24_What_Your_Nervous_System_Knows_That_You_Don_t_Yet.md`)
   - **Topics**: Heart_rate_variability, Microcycles, Volume_quantification, TTA_TTE
   - **Summary**: Ever felt like you’re doing everything right, nailing your sessions, hitting the metrics - yet something still feels off?
@@ -2042,7 +1986,7 @@ Total documents: 331
 ---
 
 ### Category: `NUTRITION`
-Total documents: 144
+Total documents: 139
 
 - **[(Podcast) Ketone Supplements for Endurance Performance: Looking beyond the Physical Realm](Articles/Physiologically_Speaking_Brady_Holmer/nutrition/2023-11-29_Podcast_Ketone_Supplements_for_Endurance_Performance_Looking_beyond_the_Physical.md)** (`Articles/Physiologically_Speaking_Brady_Holmer/nutrition/2023-11-29_Podcast_Ketone_Supplements_for_Endurance_Performance_Looking_beyond_the_Physical.md`)
   - **Topics**: Ergogenic_aids, Fat_oxidation, Sprint_performance, Cross_training
@@ -2216,10 +2160,6 @@ Total documents: 144
   - **Topics**: FTP, CP, LT2_VT2, Mitochondrial_density, Sodium_bicarbonate
   - **Summary**: 24, 2024 When exercising at high intensity (above second threshold/FTP) a lot of hydrogen ions (H+) are
 
-- **[Bike trip inspiration: Cycling routes Mallorca](Articles/Cycling_Science_Made_Simple/nutrition/2026-08-30_Bike_trip_inspiration_Cycling_routes_Mallorca.md)** (`Articles/Cycling_Science_Made_Simple/nutrition/2026-08-30_Bike_trip_inspiration_Cycling_routes_Mallorca.md`)
-  - **Topics**: Underfueling_REDs, TTA_TTE, LT1_VT1, LT2_VT2
-  - **Summary**: If you’re looking for a destination to provide jaw-dropping scenery, perfect tarmac, great food and a pleasant vacation with your partner, you can bank on booing a trip to Mallorca.
-
 - **[Breaking Nutrition Myths: Low Carb vs. High Carb for Endurance](Articles/Coaching_Professor_Paul_Laursen/nutrition/2025-02-13_Breaking_Nutrition_Myths_Low_Carb_vs_High_Carb_for_Endurance.md)** (`Articles/Coaching_Professor_Paul_Laursen/nutrition/2025-02-13_Breaking_Nutrition_Myths_Low_Carb_vs_High_Carb_for_Endurance.md`)
   - **Topics**: Carbohydrate_ratio, Fat_oxidation, Aerobic_base, Lab_vs_field
   - **Summary**: Are you sabotaging your endurance performance by consuming too many carbs? In this episode, we break down a groundbreaking study on endurance fueling that challenges conventional wisdom. Does fat adaptation work for long races? How little carbohydrate is actually needed to perform at your best? Hosts Paul Warloski, Marjaana Rakai, and Dr. Paul Laur
@@ -2311,10 +2251,6 @@ Total documents: 144
 - **[How to Decide What Supplement Company to Buy From](Articles/Science_of_Endurance_Matt_Carpenter/nutrition/2025-08-04_How_to_Decide_What_Supplement_Company_to_Buy_From.md)** (`Articles/Science_of_Endurance_Matt_Carpenter/nutrition/2025-08-04_How_to_Decide_What_Supplement_Company_to_Buy_From.md`)
   - **Topics**: Ergogenic_aids, Underfueling_REDs, Beta_alanine, Volume_quantification
   - **Summary**: There seems to be new supplement companies spawning every minute, sometimes selling something no-ones ever seen before, but usually selling something that’s already available.
-
-- **[How to Prevent Your Bike Chain From Coming Off](Articles/Coaches_Corner_Blog/nutrition/How_to_Prevent_Your_Bike_Chain_From_Coming_Off.md)** (`Articles/Coaches_Corner_Blog/nutrition/How_to_Prevent_Your_Bike_Chain_From_Coming_Off.md`)
-  - **Topics**: Underfueling_REDs, TTA_TTE, LT1_VT1, Durability
-  - **Summary**: Nobody likes the feeling that they’re just spinning their wheels. And no one knows that feeling quite as well as a cyclist.
 
 - **[If you were lighter, you’d be faster](Articles/Coaching_Professor_Paul_Laursen/nutrition/2026-07-30_If_you_were_lighter_you_d_be_faster.md)** (`Articles/Coaching_Professor_Paul_Laursen/nutrition/2026-07-30_If_you_were_lighter_you_d_be_faster.md`)
   - **Topics**: Antioxidants, VO2max, Aerobic_base, LT1_VT1
@@ -2476,10 +2412,6 @@ Total documents: 144
   - **Topics**: Carbohydrate_ratio, Fat_oxidation, Ergogenic_aids, TTA_TTE
   - **Summary**: > Details about the sponsors of this newsletter and deals on products I love, including Ketone-IQ, Create creatine, Equip Foods, and ProBio Nutrition can be found at the end of the post.
 
-- **[Power profile and characteristics of successful U17 cyclists](Articles/Cycling_Science_Made_Simple/nutrition/2026-08-30_Power_profile_and_characteristics_of_successful_U17_cyclists.md)** (`Articles/Cycling_Science_Made_Simple/nutrition/2026-08-30_Power_profile_and_characteristics_of_successful_U17_cyclists.md`)
-  - **Topics**: Underfueling_REDs, LT1_VT1, TTA_TTE, Aerobic_base
-  - **Summary**: How much power is required to produce a top result for U17 riders? And what is it that separates successful riders from their less competitive peers?
-
 - **[Pragmatic Physiology, Fructose Metabolism, Substrate Adaptation, & Ergogenic Aids — Complete Guide](Episodes/Empirical_cycling_podcast/nutrition/Perspectives__9__Pragmatic_Physiology_and_Nutrition__with_Tim_Podlogar.md)** (`Episodes/Empirical_cycling_podcast/nutrition/Perspectives__9__Pragmatic_Physiology_and_Nutrition__with_Tim_Podlogar.md`)
   - **Topics**: Carbohydrate_ratio, Fat_oxidation, Sodium_bicarbonate, Beta_alanine, LT1_VT1, LT2_VT2
   - **Summary**: An in-depth dialogue between Kolie Moore and Dr. Tim Podlogar on fructose biochemistry and liver glycogen kinetics, substrate utilization vs. aerobic adaptation, the physiological determinants of LT1 and LT2, delayed carbohydrate feeding protocols, and ergogenic supplementation (bicarbonate, beta-alanine, creatine).
@@ -2531,10 +2463,6 @@ Total documents: 144
 - **[The Benefits (and Science) of Walking with Weight](Articles/Physiologically_Speaking_Brady_Holmer/nutrition/2026-05-05_The_Benefits_and_Science_of_Walking_with_Weight.md)** (`Articles/Physiologically_Speaking_Brady_Holmer/nutrition/2026-05-05_The_Benefits_and_Science_of_Walking_with_Weight.md`)
   - **Topics**: Ergogenic_aids, Underfueling_REDs, Fat_oxidation, Microcycles
   - **Summary**: I bought a weighted vest after my running injury last year, and I was immediately hooked (here’s the plate carrier I got… no affiliation).
-
-- **[The Endurance Rider’s Guide to the Best Bike Saddles for Long Rides](Articles/Coaches_Corner_Blog/nutrition/The_Endurance_Rider_s_Guide_to_the_Best_Bike_Saddles_for_Lon.md)** (`Articles/Coaches_Corner_Blog/nutrition/The_Endurance_Rider_s_Guide_to_the_Best_Bike_Saddles_for_Lon.md`)
-  - **Topics**: Antioxidants, FatMax, LT1_VT1, Temperature_effects
-  - **Summary**: Every endurance rider remembers their first “milepost” moment. Maybe it was the jump from 25 to 50 miles, or from a weekend spin to a full century ride. Those breakthroughs test your legs, lungs, and determination. But they also put your saddle under the microscope. Long-distance rides quickly reveal whether your seat can support you mile after mil
 
 - **[The Long Run: Nurturing Health, Fitness, and Strength for Lifelong Success](Articles/Coaching_Professor_Paul_Laursen/nutrition/2024-03-30_The_Long_Run_Nurturing_Health_Fitness_and_Strength_for_Lifelong_Success.md)** (`Articles/Coaching_Professor_Paul_Laursen/nutrition/2024-03-30_The_Long_Run_Nurturing_Health_Fitness_and_Strength_for_Lifelong_Success.md`)
   - **Topics**: Carbohydrate_ratio, Underfueling_REDs, Sprint_performance, Durability
@@ -2592,10 +2520,6 @@ Total documents: 144
   - **Topics**: Carbohydrate_ratio, Volume_quantification, LT1_VT1, TTA_TTE
   - **Summary**: One of the things I love most about coaching, science, and life itself is curiosity. It’s the driver that gets us out the door to train, to test, to question old assumptions, and to look for a better way. This spirit of curiosity is exactly what has led me to our latest initiative with Athletica: the FIELD Study — Fueling Influence on Endurance Loa
 
-- **[What Is a Tire Boot, and How Do I Use One?](Articles/Coaches_Corner_Blog/nutrition/What_Is_a_Tire_Boot__and_How_Do_I_Use_One_.md)** (`Articles/Coaches_Corner_Blog/nutrition/What_Is_a_Tire_Boot__and_How_Do_I_Use_One_.md`)
-  - **Topics**: Underfueling_REDs, Aerobic_base, TTA_TTE, LT1_VT1
-  - **Summary**: When you’re out cycling, there are plenty of potential problems that could bring your ride to a halt. Ninety percent of the time, though, a flat tire will be the culprit.
-
 - **[What Supplements do you Need for Endurance Exercise?](Articles/Science_of_Endurance_Matt_Carpenter/nutrition/2026-02-10_What_Supplements_do_you_Need_for_Endurance_Exercise.md)** (`Articles/Science_of_Endurance_Matt_Carpenter/nutrition/2026-02-10_What_Supplements_do_you_Need_for_Endurance_Exercise.md`)
   - **Topics**: Ergogenic_aids, Underfueling_REDs, TTA_TTE, Cross_training
   - **Summary**: Today’s podcast is on what supplements you need for endurance episode. I hope you enjoy!
@@ -2623,7 +2547,7 @@ Total documents: 144
 ---
 
 ### Category: `PLANNING`
-Total documents: 197
+Total documents: 195
 
 - **[10: A Guide To Time Trialing, with Cory Lockwood](Articles/Empirical_Cycling_Community_Notes/planning/2022-3-28_10_A_Guide_To_Time_Trialing_with_Cory_Lockwood.md)** (`Articles/Empirical_Cycling_Community_Notes/planning/2022-3-28_10_A_Guide_To_Time_Trialing_with_Cory_Lockwood.md`)
   - **Topics**: TTA_TTE, Aerobic_base, LT1_VT1, Underfueling_REDs
@@ -2777,6 +2701,10 @@ Total documents: 197
   - **Topics**: LT1_VT1, LT2_VT2, Periodization
   - **Summary**: An important note before reading this KIW Research Note: Low intensity training: below the first threshold;
 
+- **[A 9 week polarised training plan](Articles/Cycling_Science_Made_Simple/planning/2026-08-30_A_9_week_polarised_training_plan.md)** (`Articles/Cycling_Science_Made_Simple/planning/2026-08-30_A_9_week_polarised_training_plan.md`)
+  - **Topics**: Block_periodization, Periodization, Aerobic_base, Long_intervals, VO2max, LT2_VT2
+  - **Summary**: Base training is done, and race season is drawing inevitably closer. You already know which wheel you will need to cling onto to get the results you want. But, you could use some extra watts per kilo to make it happen.
+
 - **[A Conversation on Science Integrity, Image Forensics, and Publishing Fraud with Dr. Elisabeth Bik](Articles/Physiologically_Speaking_Brady_Holmer/planning/2024-03-18_A_Conversation_on_Science_Integrity_Image_Forensics_and_Publishing_Fraud_with_Dr.md)** (`Articles/Physiologically_Speaking_Brady_Holmer/planning/2024-03-18_A_Conversation_on_Science_Integrity_Image_Forensics_and_Publishing_Fraud_with_Dr.md`)
   - **Topics**: TTA_TTE, Lab_vs_field, Sodium_bicarbonate, Ergogenic_aids
   - **Summary**: Dr. Elisabeth Bik is a microbiome scientist. She received her PhD from Utrecht University in the Netherlands. Her scientific work has included time at the Dutch National Institute for Health and the Stanford University School of Medicine.
@@ -2840,10 +2768,6 @@ Total documents: 197
 - **[Consistency Over Everything: What Really Drives Performance](Articles/Coaching_Professor_Paul_Laursen/planning/2025-07-04_Consistency_Over_Everything_What_Really_Drives_Performance.md)** (`Articles/Coaching_Professor_Paul_Laursen/planning/2025-07-04_Consistency_Over_Everything_What_Really_Drives_Performance.md`)
   - **Topics**: Microcycles, Aerobic_base, Durability, Underfueling_REDs
   - **Summary**: In this Q&A-packed episode, the Athletes Compass team—Paul Laursen, Marjaana Rakai, and Paul Warloski—explore the critical balance between nutrition, recovery, and performance for endurance athletes. They answer listener questions covering the best times to lose weight, managing taper and recovery between back-to-back events, and the ongoing debate
-
-- **[Cycling routes in France: Bikepacking Nice to Geneva via Route des Grandes Alpes](Articles/Cycling_Science_Made_Simple/planning/2026-08-30_Cycling_routes_in_France_Bikepacking_Nice_to_Geneva_via_Route_des_Grandes_Alpes.md)** (`Articles/Cycling_Science_Made_Simple/planning/2026-08-30_Cycling_routes_in_France_Bikepacking_Nice_to_Geneva_via_Route_des_Grandes_Alpes.md`)
-  - **Topics**: Microcycles, TTA_TTE, Volume_quantification, Antioxidants
-  - **Summary**: If you ever watched Tour de France, you’ve probably said to yourself “one day, I’m going to ride those mountains.”
 
 - **[Cyclocross Pre-Season Training, Specificity, & Intensity Management — Complete Guide](Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__1__Training_For_Cyclocross_Season.md)** (`Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__1__Training_For_Cyclocross_Season.md`)
   - **Topics**: Microcycles, Heavy_torque, Short_intervals, TTA_TTE
@@ -3353,10 +3277,6 @@ Total documents: 197
   - **Topics**: Microcycles, Block_periodization, Volume_quantification, Durability
   - **Summary**: A practical, physiological framework for diagnosing performance plateaus. Analyzes the dynamic equilibrium between training stimulus and recovery bandwidth across low-volume and highly trained athletes, identifying overlapping physiological limiters, and avoiding the trap of over-indexing on consistency.
 
-- **[The Speed Wobble: Surviving the Terrifying Cyclist Experience](Articles/Coaches_Corner_Blog/planning/The_Speed_Wobble__Surviving_the_Terrifying_Cyclist_Experienc.md)** (`Articles/Coaches_Corner_Blog/planning/The_Speed_Wobble__Surviving_the_Terrifying_Cyclist_Experienc.md`)
-  - **Topics**: Volume_quantification, LT1_VT1, TTA_TTE, Aerobic_base
-  - **Summary**: When you’re speeding down the pavement at 25 miles an hour on two wheels, the last sensation you want to feel is that you’re losing control. If your bike gets caught in a speed wobble, though, that’s exactly what it will feel like.
-
 - **[The Transformative Power of Endurance Sports with Erik Olsson](Articles/Coaching_Professor_Paul_Laursen/planning/2024-08-08_The_Transformative_Power_of_Endurance_Sports_with_Erik_Olsson.md)** (`Articles/Coaching_Professor_Paul_Laursen/planning/2024-08-08_The_Transformative_Power_of_Endurance_Sports_with_Erik_Olsson.md`)
   - **Topics**: TTA_TTE, Cross_training, Underfueling_REDs, Sprint_performance
   - **Summary**: In this episode of the Athletes Compass podcast, hosts Paul Warloski, Marjaana Rakai, and Paul Laursen welcome Erik Olsson, also known as the Primal Swede. Erik shares his unique journey from a sedentary lifestyle to becoming an ultra-endurance athlete. He discusses his passion for discovering personal limits, the mental challenges associated with
@@ -3400,10 +3320,6 @@ Total documents: 197
 - **[What is Better to Improve Your Sprint?](Articles/knowledgeIsWatts/training/strength/training-improving-sprint-performance.md)** (`Articles/knowledgeIsWatts/training/strength/training-improving-sprint-performance.md`)
   - **Topics**: VO2max, Durability
   - **Summary**: 22, 2025 In a previous post we saw that heavy gym strength training improve W/Kg performance for effort
-
-- **[What to Do About Fixing a Flat Bike Tire on a Bike Ride](Articles/Coaches_Corner_Blog/planning/What_to_Do_About_Fixing_a_Flat_Bike_Tire_on_a_Bike_Ride.md)** (`Articles/Coaches_Corner_Blog/planning/What_to_Do_About_Fixing_a_Flat_Bike_Tire_on_a_Bike_Ride.md`)
-  - **Topics**: TTA_TTE, Underfueling_REDs, LT1_VT1, Durability
-  - **Summary**: It’s a nightmare scenario for any cyclist: You’re halfway into a 50-mile ride when you suddenly begin to feel your wheel rumbling against the pavement. You pull off to the side to examine your tire, and your fears are confirmed. It’s a flat.
 
 - **[Why It's Hard to Rest, Athlete Psychology, & Behavioral Reactivity — Complete Guide](Episodes/Empirical_cycling_podcast/training/Perspectives__8__Why_It_s_Hard_To_Rest__with_Patrick_Smith.md)** (`Episodes/Empirical_cycling_podcast/training/Perspectives__8__Why_It_s_Hard_To_Rest__with_Patrick_Smith.md`)
   - **Topics**: Microcycles, Volume_quantification, Durability

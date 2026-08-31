@@ -1,12 +1,14 @@
 ---
 title: "A 9 week polarised training plan"
 language: en
-category: training
+category: planning
 topics:
+  - Block_periodization
+  - Periodization
   - Aerobic_base
-  - LT1_VT1
-  - Microcycles
+  - Long_intervals
   - VO2max
+  - LT2_VT2
 source: "https://www.wattkg.com"
 author: "Cycling Science Made Simple (Wattkg)"
 date: "2026-08-30"
@@ -37,10 +39,10 @@ This study compared the effect of four different training models on well-trained
 
 Athletes were divided in four groups. Each group undertook a 9 week training program that placed a particular focus on either:
 
-  * High volumes of low-intensity training
-  * Threshold training
-  * High-intensity training
-  * Polarised training
+- High volumes of low-intensity training
+- Threshold training
+- High-intensity training
+- Polarised training
 
 The **high volume group (HVT)** , **threshold group (THR**) and **polarised group (POL)** all had their program organized in three blocks of 3 weeks. Each block was structured as 2 weeks with higher volumes & focus on the emphasized training method, followed by 1 recovery week.
 
@@ -52,14 +54,14 @@ The high-intensity group (HIIT) performed two blocks of 16 days, each of which c
 
 Before and after the 9 week training period, all riders were tested for a variety of performance parameters, including:
 
-  * VO2 max
-  * Power at 2 mmol/L lactate
-  * Power at 4 mmol/L lactate
-  * Peak power
+- VO2 max
+- Power at 2 mmol/L lactate
+- Power at 4 mmol/L lactate
+- Peak power
 
 The figure below illustrate the results.
 
-polarized training development [https://www.wattkg.com/wp-content/uploads/2018/03/Polarized-training-development.png](https://www.wattkg.com/wp-content/uploads/2018/03/Polarized-training-development.png) 
+polarized training development [https://www.wattkg.com/wp-content/uploads/2018/03/Polarized-training-development.png](https://www.wattkg.com/wp-content/uploads/2018/03/Polarized-training-development.png)
 
 The polarized group achieved greater performance development across all tests but power at 2 mmol/L lactate.
 
@@ -84,14 +86,14 @@ Even more interesting is the fact that these riders used the traditional 4×4 mi
 The argument for polarised training gets even stronger when we consider additional papers in the training literature (4).
 
 > …experimental studies lasting 6 weeks to 5 months demonstrate superior responses to polarized training intensity distribution, especially when compared with training intensity distribution that emphasizes threshold of high volume low-intensity training.
-> 
+>
 > – Stöggl & Sperlich, Frontiers in Physiology
 
 The authors highlight that it may be too soon to crown the “optimal” distribution of training intensity. But if you were to put your money on one model, polarised training appears a strong alternative.
 
 ### Get the 9 week polarised plan framework in my free newsletter
 
-(PDF DOWNLOAD IN NEWSLETTER) [https://www.wattkg.com/wp-content/uploads/2022/11/Polarised-plan-02-213x300.png](https://www.wattkg.com/wp-content/uploads/2022/11/Polarised-plan-02-213x300.png)  (PDF DOWNLOAD IN NEWSLETTER)
+(PDF DOWNLOAD IN NEWSLETTER) [https://www.wattkg.com/wp-content/uploads/2022/11/Polarised-plan-02-213x300.png](https://www.wattkg.com/wp-content/uploads/2022/11/Polarised-plan-02-213x300.png) (PDF DOWNLOAD IN NEWSLETTER)
 
 _When you subscribe to my newsletter you will receive the sprint-in-LIT and other**workout instructions** , **science reviews** and discussions of**best training practices**. There is also occasional information about my paid services. I will take care not to clutter your inbox._
 
@@ -125,7 +127,8 @@ If you are an amateur cyclist below elite-level in your age group, you will have
 
 References:
 
-  1. Stöggl T and Sperlich B. Polarized training has greater impact on key endurance variables that threshold, high intensity, or high volume training. Frontiers in Physiology, 2014;5:33
-  2. Rønnestad BR et al. Short intervals induce superior training adaptations compared with long intervals in cyclists – An effort-matched approach. Scandinavian Journal of Medicine & Science in Sports, 2015;25:143-151
-  3. Seiler S et al. Adaptations to aerobic interval training: interactive effects of exercise intensity and total work duration. Scandinavian Journal of Medicine & Science in Sports, 2013;23:74-83
-  4. Stöggl T and Sperlich B. The training intensity distribution among well-trained and elite endurance athletes. Frontiers in Physiology, 2015;6:295
+1. Stöggl T and Sperlich B. Polarized training has greater impact on key endurance variables that threshold, high intensity, or high volume training. Frontiers in Physiology, 2014;5:33
+2. Rønnestad BR et al. Short intervals induce superior training adaptations compared with long intervals in cyclists – An effort-matched approach. Scandinavian Journal of Medicine & Science in Sports, 2015;25:143-151
+3. Seiler S et al. Adaptations to aerobic interval training: interactive effects of exercise intensity and total work duration. Scandinavian Journal of Medicine & Science in Sports, 2013;23:74-83
+4. Stöggl T and Sperlich B. The training intensity distribution among well-trained and elite endurance athletes. Frontiers in Physiology, 2015;6:295
+
