@@ -1,4 +1,4 @@
-"""Frontmatter inference safety tests."""
+"""Frontmatter parsing tests."""
 
 from __future__ import annotations
 
@@ -23,46 +23,54 @@ class TestFrontmatterManager(unittest.TestCase):
         )
         self.manager = FrontmatterManager(self.kb_dir, TaxonomyRegistry(self.kb_dir))
 
-    def test_carbohydrate_inference_uses_the_canonical_topic(self) -> None:
+    def test_parse_valid_frontmatter(self) -> None:
         source = self.kb_dir / "Articles" / "nutrition" / "fueling.md"
         source.parent.mkdir(parents=True)
-        content = "\n".join(
-            (
-                "# Fueling",
-                "Source: Test journal",
-                "Author: Test Researcher",
-                "Date: 2026-08-20",
-                "",
-                "Glucose and fructose carbohydrate intake.",
-            )
-        )
+        content = """---
+title: Fueling Strategies
+language: en
+category: nutrition
+topics:
+  - Carbohydrate_ratio
+source: Test journal
+author: Test Researcher
+date: 2026-08-20
+summary: Glucose and fructose carbohydrate intake.
+---
 
-        metadata = self.manager.infer_metadata(content, source)
+# Fueling Strategies
 
-        self.assertIn("Carbohydrate_ratio", metadata["topics"])
-        self.assertNotIn("Glucose_fructose", metadata["topics"])
-        self.assertEqual(metadata["language"], "en")
-        self.assertNotEqual(metadata["source"], "Knowledge Base")
-        self.assertNotEqual(metadata["author"], "Endurance Research")
-        self.assertIn("Glucose and fructose", metadata["summary"])
-
+Evidence body content.
+"""
         source.write_text(content, encoding="utf-8")
-        self.assertTrue(self.manager.standardize_file(source))
-        written_metadata, _body = self.manager.parse_document(source)
-        self.assertEqual(written_metadata["source"], "Test journal")
-        self.assertEqual(written_metadata["author"], "Test Researcher")
-        self.assertEqual(str(written_metadata["date"]), "2026-08-20")
+        metadata, body = self.manager.parse_document(source)
 
-    def test_standardize_refuses_to_invent_a_noncanonical_topic(self) -> None:
-        source = self.kb_dir / "Articles" / "misc" / "unknown.md"
-        source.parent.mkdir(parents=True)
-        original = "# Unclassified note\n\nEvidence without a known taxonomy keyword.\n"
-        source.write_text(original, encoding="utf-8")
+        self.assertEqual(metadata["title"], "Fueling Strategies")
+        self.assertEqual(metadata["category"], "nutrition")
+        self.assertEqual(metadata["topics"], ["Carbohydrate_ratio"])
+        self.assertEqual(metadata["language"], "en")
+        self.assertEqual(metadata["source"], "Test journal")
+        self.assertEqual(metadata["author"], "Test Researcher")
+        self.assertEqual(str(metadata["date"]), "2026-08-20")
+        self.assertIn("Glucose and fructose", metadata["summary"])
+        self.assertIn("# Fueling Strategies", body)
 
+    def test_parse_unclosed_frontmatter_raises_error(self) -> None:
+        content = """---
+title: Unclosed
+category: nutrition
+"""
         with self.assertRaises(InvalidKnowledgeSourceError):
-            self.manager.standardize_file(source)
+            parse_frontmatter(content, "Articles/unclosed.md")
 
-        self.assertEqual(source.read_text(encoding="utf-8"), original)
+    def test_parse_invalid_yaml_raises_error(self) -> None:
+        content = """---
+title: [unbalanced brackets
+category: nutrition
+---
+"""
+        with self.assertRaises(InvalidKnowledgeSourceError):
+            parse_frontmatter(content, "Articles/invalid.md")
 
     def test_indented_yaml_rule_does_not_close_frontmatter(self) -> None:
         content = """---
@@ -89,3 +97,4 @@ summary: |
 
 if __name__ == "__main__":
     unittest.main()
+

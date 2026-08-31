@@ -28,18 +28,18 @@ This document records the ubiquitous language, core domain concepts, and active 
 
 ## Architectural Seams & Modules
 
-- **`KBEngine` (Deep Module)**: Core Python facade in `main/utils/kb_engine/`, exposing `search()`, `build_index()`, `get_passage()`, `get_kb_status()`, `validate()`, and `standardize()`.
+- **`KBEngine` (Deep Module)**: Core Python facade in `main/utils/kb_engine/`, exposing `search()`, `build_index()`, `get_passage()`, `get_kb_status()`, and `validate()`.
   - `chunker.py`: `StructureAwareChunker`, which creates English, citation-stable Evidence Passages with bounded word-count policy, section breadcrumbs, exact source line ranges, stable content-derived IDs, and explicit size exceptions for indivisible blocks.
   - `fts.py`: `PassageIndex`, which owns the transactional SQLite schema (`meta`, `sources`, `passages`, `passages_fts`, `vec_passages`), performs lexical and dense retrieval, reuses unchanged source passages and vectors during Corpus Synchronization, and fails fast for missing, stale, or invalid indexes.
   - `sync.py`: Deterministic content-based Corpus Fingerprint construction.
   - `models.py` and `errors.py`: Evidence Passage, search-result, index-status, and domain-error contracts.
-  - `frontmatter.py`: Frontmatter parsing and standardization.
+  - `frontmatter.py`: Frontmatter parsing and source management.
   - `validator.py`: YAML and English-metadata checks, link verification,
     category/topic taxonomy warnings, targeted source diagnostics, and sitemap
     integrity. Ambiguous taxonomy corrections remain a contributor review
     responsibility.
 - **MCP Server (`main/mcp_server.py`)**: Official MCP Python SDK stdio adapter (`endurance-kb-mcp`) exposing the shared Python retrieval capabilities to external LLM clients through `search_passages`, `get_passage`, `get_document` (with strict path containment), `get_kb_status`, `get_taxonomy`, and `get_sitemap`. It remains usable independently of the application's optional OpenRouter-backed AI Search.
-- **CLI Adapter (`main/cli.py`)**: Thin command-line interface for explicit index synchronization, freshness status, English hybrid search, validation, and frontmatter maintenance.
+- **CLI Adapter (`main/cli.py`)**: Thin command-line interface for explicit index synchronization, freshness status, English hybrid search, and validation.
 
 ## Open Retrieval Decision
 

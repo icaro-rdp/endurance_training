@@ -133,20 +133,6 @@ only the first 15 warnings, so a zero exit code does not mean there were no
 warnings. The add-source workflow below includes a targeted command that prints
 all warnings for the new file.
 
-### Standardize frontmatter
-
-`standardize` writes files; it is not a preview command. It adds frontmatter
-only to documents that have none and never replaces existing metadata. Prefer
-writing and reviewing frontmatter manually for a new source. The command fails
-instead of inventing a category, topic, source, author, or date when those
-values cannot be inferred safely.
-
-```bash
-uv run endurance-kb standardize
-```
-
-Review every resulting source edit before synchronization.
-
 ## Testing changes
 
 Install the locked development environment with `uv sync --locked`, then run:

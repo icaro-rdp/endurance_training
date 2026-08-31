@@ -119,11 +119,6 @@ def handle_validate(engine: KBEngine, args: argparse.Namespace) -> int:
     return 0 if res["is_healthy"] else 1
 
 
-def handle_standardize(engine: KBEngine, _args: argparse.Namespace) -> None:
-    count = engine.standardize()
-    print(f"Standardization complete! Updated frontmatter on {count} document(s).")
-
-
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="Endurance Training Knowledge Base CLI"
@@ -188,12 +183,6 @@ def main(argv: Sequence[str] | None = None) -> int:
         help="Validate one exact path relative to Knowledge_base",
     )
 
-    # standardize
-    subparsers.add_parser(
-        "standardize",
-        help="Add safely inferred frontmatter only where it is absent",
-    )
-
     args = parser.parse_args(argv)
 
     try:
@@ -206,8 +195,6 @@ def main(argv: Sequence[str] | None = None) -> int:
             handle_status(engine, args)
         elif args.command == "validate":
             return handle_validate(engine, args)
-        elif args.command == "standardize":
-            handle_standardize(engine, args)
     except KBEngineError as error:
         print(f"{error.code}: {error}", file=sys.stderr)
         return 2

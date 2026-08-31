@@ -122,97 +122,7 @@ def format_ms(ms: int) -> str:
     return f"{minutes:02d}:{seconds:02d}"
 
 
-def infer_taxonomy(title: str, description: str) -> tuple[str, list[str]]:
-    """Infers category and taxonomy topics from title and notes."""
-    text = (title + " " + description).lower()
-    category = "periodization"
-    topics = []
 
-    if any(
-        k in text
-        for k in [
-            "ftp",
-            "functional threshold",
-            "tte",
-            "testing",
-            "critical power",
-            "cp ",
-        ]
-    ):
-        category = "metrics"
-        if "ftp" in text or "tte" in text:
-            topics.append("FTP")
-        if "critical power" in text or "cp " in text:
-            topics.append("CP")
-
-    elif any(
-        k in text
-        for k in ["vo2", "vo2max", "hiit", "interval", "intervals", "4x8", "tabata"]
-    ):
-        category = "hiit"
-        if "short" in text or "30/30" in text or "30s" in text:
-            topics.append("Short_intervals")
-        else:
-            topics.append("Long_intervals")
-
-    elif any(
-        k in text
-        for k in [
-            "zone 2",
-            "zone2",
-            "aerobic base",
-            "fatmax",
-            "fat oxidation",
-            "endurance ride",
-        ]
-    ):
-        category = "zone2"
-        topics.append("Aerobic_base")
-        if "fat" in text:
-            topics.append("Fat_oxidation")
-
-    elif any(
-        k in text
-        for k in ["strength", "lifting", "hypertrophy", "squat", "torque", "weights"]
-    ):
-        category = "strength"
-        topics.append("Heavy_torque")
-
-    elif any(
-        k in text
-        for k in [
-            "nutrition",
-            "carb",
-            "carbohydrate",
-            "bicarbonate",
-            "beta alanine",
-            "fueling",
-        ]
-    ):
-        category = "nutrition"
-        if "bicarbonate" in text:
-            topics.append("Sodium_bicarbonate")
-        else:
-            topics.append("Carbohydrate_ratio")
-
-    elif any(
-        k in text
-        for k in [
-            "lactate",
-            "mitochondria",
-            "cardiac",
-            "stroke volume",
-            "heart rate",
-            "physiology",
-        ]
-    ):
-        category = "physiology"
-        topics.append("Cardiac_hypertrophy")
-
-    if not topics:
-        topics.append("Aerobic_base")
-
-    return category, topics
 
 
 def format_transcript_paragraphs(
@@ -298,9 +208,6 @@ def generate_markdown(
     clean_desc = re.sub(r"\s+", " ", desc).replace('"', "'")
     summary = clean_desc[:200] + ("..." if len(clean_desc) > 200 else "")
 
-    category, topics = infer_taxonomy(title, desc)
-    topics_yaml = "\n".join([f'  - "{t}"' for t in topics])
-
     transcript_content = (
         format_transcript_paragraphs(transcript_lines)
         if transcript_lines
@@ -309,9 +216,8 @@ def generate_markdown(
 
     md = f"""---
 title: "{title.replace('"', "'")}"
-category: "{category}"
-topics:
-{topics_yaml}
+category: NaN
+topics: NaN
 source: "{show_name}"
 author: "Kolie Moore"
 date: "{release_date}"

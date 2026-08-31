@@ -26,7 +26,6 @@ from .models import (
 )
 from .taxonomy import TaxonomyRegistry
 from .validator import KBValidator, ValidationReport
-from .walker import iter_kb_documents
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 DEFAULT_KB_DIR = PROJECT_ROOT / "Knowledge_base"
@@ -164,13 +163,6 @@ class KBEngine:
 
     def validate(self, source_rel_path: str | None = None) -> ValidationReport:
         return self.validator.validate_health(source_rel_path=source_rel_path)
-
-    def standardize(self) -> int:
-        count = 0
-        for file_path in iter_kb_documents(self.kb_dir):
-            if self.frontmatter.standardize_file(file_path):
-                count += 1
-        return count
 
 
 def _resolve_kb_dir(configured: Path | None) -> Path:
