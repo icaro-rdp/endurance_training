@@ -718,7 +718,12 @@ source: Local test journal
         self.assertEqual(
             {result.passage.source_slug for result in by_topic}, {"Articles/alpha"}
         )
-        self.assertTrue(all("VO2max_and_aerobic_kinetics" in result.passage.topics for result in by_topic))
+        self.assertTrue(
+            all(
+                "VO2max_and_aerobic_kinetics" in result.passage.topics
+                for result in by_topic
+            )
+        )
 
         # Legacy alias topic query resolves to the same source
         by_alias = self.index.search("cadencemarker", topic="VO2max", limit=20)

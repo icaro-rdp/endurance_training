@@ -122,9 +122,6 @@ def format_ms(ms: int) -> str:
     return f"{minutes:02d}:{seconds:02d}"
 
 
-
-
-
 def format_transcript_paragraphs(
     lines: list[dict[str, Any]], paragraph_interval_ms: int = 45000
 ) -> str:

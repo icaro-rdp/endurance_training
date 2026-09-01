@@ -136,3 +136,39 @@ class UnsupportedLanguageError(KBEngineError):
             f"language `{language}`; "
             "this Knowledge Base accepts English sources only."
         )
+
+
+class ModelInferenceError(KBEngineError):
+    """Raised when local AI model inference or output parsing fails."""
+
+    code = "model_inference_error"
+
+    def __init__(self, detail: str) -> None:
+        super().__init__(detail)
+
+
+class MissingDependencyError(KBEngineError):
+    """Raised when an optional dependency required for inference is not installed."""
+
+    code = "missing_dependency"
+
+    def __init__(self, package: str, detail: str) -> None:
+        super().__init__(f"Missing required dependency '{package}': {detail}")
+
+
+class ModelConnectionError(KBEngineError):
+    """Raised when communication with a local model backend daemon fails."""
+
+    code = "model_connection_error"
+
+    def __init__(self, host: str, detail: str) -> None:
+        super().__init__(f"Failed to connect to model service at {host}: {detail}")
+
+
+class InvalidTaxonomyError(KBEngineError):
+    """Raised when a category or topic violates canonical taxonomy rules."""
+
+    code = "invalid_taxonomy"
+
+    def __init__(self, detail: str) -> None:
+        super().__init__(detail)

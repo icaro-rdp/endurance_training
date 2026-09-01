@@ -3,10 +3,10 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from enum import Enum
+from enum import StrEnum
 
 
-class PassageSizeStatus(str, Enum):
+class PassageSizeStatus(StrEnum):
     """Whether a passage satisfies the configured chunk-size policy."""
 
     WITHIN_POLICY = "within_policy"
@@ -14,7 +14,7 @@ class PassageSizeStatus(str, Enum):
     OVERSIZED_ATOMIC_BLOCK = "oversized_atomic_block"
 
 
-class IndexState(str, Enum):
+class IndexState(StrEnum):
     """Freshness state of the local Derived Index."""
 
     MISSING = "missing"

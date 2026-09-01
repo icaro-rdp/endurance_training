@@ -6,12 +6,19 @@ import os
 from collections.abc import Sequence
 from pathlib import Path
 
+from .classifier import (
+    DEFAULT_LOCAL_MODEL,
+    DocumentTaggingResult,
+    LocalLLMClassifier,
+    MLXAdapter,
+    ModelAdapter,
+)
 from .errors import (
     InvalidKnowledgeBaseError,
     InvalidKnowledgeSourceError,
     KnowledgeBaseNotFoundError,
 )
-from .frontmatter import FrontmatterManager
+from .frontmatter import FrontmatterManager, KnowledgeSource
 from .fts import PassageIndex
 from .hybrid import (
     DEFAULT_EVIDENCE_SELECTION_POLICY,
@@ -26,6 +33,7 @@ from .models import (
 )
 from .taxonomy import TaxonomyRegistry
 from .validator import KBValidator, ValidationReport
+from .walker import iter_kb_documents
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 DEFAULT_KB_DIR = PROJECT_ROOT / "Knowledge_base"
@@ -163,6 +171,123 @@ class KBEngine:
 
     def validate(self, source_rel_path: str | None = None) -> ValidationReport:
         return self.validator.validate_health(source_rel_path=source_rel_path)
+
+    def get_knowledge_source(self, file_path: Path | str) -> KnowledgeSource:
+        """Load a single KnowledgeSource with domain invariant enforcement."""
+        return KnowledgeSource.from_path(
+            file_path=Path(file_path),
+            kb_dir=self.kb_dir,
+            taxonomy=self.taxonomy,
+        )
+
+    def classify_content(
+        self,
+        content: str,
+        title: str | None = None,
+        adapter: ModelAdapter | None = None,
+    ) -> DocumentTaggingResult:
+        """Classify markdown content string directly."""
+        classifier = LocalLLMClassifier(
+            adapter=adapter or MLXAdapter(),
+            taxonomy=self.taxonomy,
+            kb_dir=self.kb_dir,
+        )
+        return classifier.classify_content(content, title=title)
+
+    def classify_document(
+        self,
+        file_path: Path | str,
+        adapter: ModelAdapter | None = None,
+    ) -> DocumentTaggingResult:
+        """Classify a Knowledge Source document without modifying it."""
+        classifier = LocalLLMClassifier(
+            adapter=adapter or MLXAdapter(),
+            taxonomy=self.taxonomy,
+            kb_dir=self.kb_dir,
+        )
+        return classifier.classify_document(file_path, kb_dir=self.kb_dir)
+
+    def apply_tags(
+        self,
+        file_path: Path | str,
+        dry_run: bool = False,
+        adapter: ModelAdapter | None = None,
+    ) -> DocumentTaggingResult:
+        """Classify a document and apply changes to frontmatter unless dry_run."""
+        classifier = LocalLLMClassifier(
+            adapter=adapter or MLXAdapter(),
+            taxonomy=self.taxonomy,
+            kb_dir=self.kb_dir,
+        )
+        return classifier.apply_tags_to_file(
+            file_path, dry_run=dry_run, kb_dir=self.kb_dir
+        )
+
+    def apply_tags_all(
+        self,
+        directory: Path | str | None = None,
+        dry_run: bool = False,
+        adapter: ModelAdapter | None = None,
+    ) -> list[tuple[KnowledgeSource, DocumentTaggingResult]]:
+        """Batch classify and optionally apply tags to curated documents."""
+        results: list[tuple[KnowledgeSource, DocumentTaggingResult]] = []
+        classifier = LocalLLMClassifier(
+            adapter=adapter or MLXAdapter(),
+            taxonomy=self.taxonomy,
+            kb_dir=self.kb_dir,
+        )
+
+        target_dir = Path(directory) if directory else self.kb_dir
+        for doc_path in iter_kb_documents(self.kb_dir):
+            if directory:
+                try:
+                    doc_path.resolve().relative_to(target_dir.resolve())
+                except ValueError:
+                    continue
+            source = self.get_knowledge_source(doc_path)
+            res = classifier.classify_source(source)
+            if not dry_run:
+                source.update_metadata(
+                    category=res.category,
+                    topics=res.topics,
+                    summary=res.summary,
+                )
+                source.save(dry_run=False)
+            results.append((source, res))
+        return results
+
+    # Compatibility aliases
+    def tag_document(
+        self,
+        file_path: Path,
+        apply: bool = False,
+        adapter: ModelAdapter | None = None,
+        model_name: str | None = None,
+    ) -> DocumentTaggingResult:
+        """Compatibility alias for apply_tags."""
+        effective_adapter = adapter or MLXAdapter(
+            model_name=model_name or DEFAULT_LOCAL_MODEL
+        )
+        return self.apply_tags(
+            file_path=file_path,
+            dry_run=not apply,
+            adapter=effective_adapter,
+        )
+
+    def tag_all(
+        self,
+        apply: bool = False,
+        adapter: ModelAdapter | None = None,
+        model_name: str | None = None,
+    ) -> list[tuple[KnowledgeSource, DocumentTaggingResult]]:
+        """Compatibility alias for apply_tags_all."""
+        effective_adapter = adapter or MLXAdapter(
+            model_name=model_name or DEFAULT_LOCAL_MODEL
+        )
+        return self.apply_tags_all(
+            dry_run=not apply,
+            adapter=effective_adapter,
+        )
 
 
 def _resolve_kb_dir(configured: Path | None) -> Path:

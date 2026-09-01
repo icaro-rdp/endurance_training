@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 def iter_kb_documents(kb_dir: Path, exclude: set[str] | None = None) -> Iterator[Path]:
-    """Yield all curated KB document paths, excluding meta-files, raw transcripts, and WIP."""
+    """Yield curated KB document paths, excluding meta-files and WIP."""
     if exclude is None:
         exclude = {"INDEX.md", "TAXONOMY.md"}
     for root, dirs, files in os.walk(kb_dir):

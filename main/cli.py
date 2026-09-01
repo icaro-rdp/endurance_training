@@ -117,6 +117,146 @@ def handle_validate(engine: KBEngine, args: argparse.Namespace) -> int:
     return 0 if res["is_healthy"] else 1
 
 
+def handle_tag(engine: KBEngine, args: argparse.Namespace) -> int:
+    from main.utils.kb_engine.classifier import (
+        DEFAULT_LOCAL_MODEL,
+        MLXAdapter,
+        ModelAdapter,
+        OllamaAdapter,
+    )
+
+    adapter: ModelAdapter
+    if args.backend == "ollama":
+        adapter = OllamaAdapter(
+            model_name=args.model or "qwen2.5:7b",
+            host=args.ollama_host,
+        )
+    else:
+        adapter = MLXAdapter(
+            model_name=args.model or DEFAULT_LOCAL_MODEL,
+        )
+
+    is_dry_run = not args.apply
+
+    if args.all:
+        target_dir: Path | None = None
+        if args.path:
+            raw_path = Path(args.path)
+            candidate = (
+                raw_path if raw_path.is_absolute() else (engine.kb_dir / raw_path)
+            )
+            if not candidate.exists():
+                print(f"Error: Path not found: {args.path}", file=sys.stderr)
+                return 1
+            if candidate.is_file():
+                print(
+                    f"Error: '{args.path}' is a file; omit --all or pass a directory",
+                    file=sys.stderr,
+                )
+                return 1
+            target_dir = candidate.resolve()
+
+        action_msg = "Dry-run preview" if is_dry_run else "Applying tags"
+        scope_msg = str(target_dir) if target_dir else "entire Knowledge Base"
+        print(f"[{action_msg}] Classifying curated documents in {scope_msg}...\n")
+
+        tagged_list = engine.apply_tags_all(
+            directory=target_dir, dry_run=is_dry_run, adapter=adapter
+        )
+        print(f"Processed {len(tagged_list)} documents.")
+        for source, res in tagged_list:
+            status_symbol = "🔍 Dry-run" if is_dry_run else "💾 Applied"
+            print(f"\n{status_symbol}: {source.rel_path}")
+            print(f"  Category: {res.category}")
+            print(f"  Topics:   {', '.join(res.topics)}")
+            print(f"  Summary:  {res.summary}")
+    else:
+        if not args.path:
+            print("Error: Specify a document path or use --all", file=sys.stderr)
+            return 1
+
+        raw_path = Path(args.path)
+        if raw_path.is_file():
+            target_path = raw_path.resolve()
+        else:
+            target_path = (engine.kb_dir / raw_path).resolve()
+
+        if target_path.is_dir():
+            print(
+                f"Error: '{args.path}' is a directory; use --all to classify "
+                "documents under it",
+                file=sys.stderr,
+            )
+            return 1
+
+        if not target_path.is_file():
+            print(f"Error: File not found: {args.path}", file=sys.stderr)
+            return 1
+
+        source = engine.get_knowledge_source(target_path)
+        print(f"Classifying: {source.rel_path}...\n")
+        res = engine.apply_tags(target_path, dry_run=is_dry_run, adapter=adapter)
+
+        status_symbol = (
+            "🔍 Dry-run (use --apply to write)"
+            if is_dry_run
+            else "💾 Applied to frontmatter"
+        )
+        print(f"[{status_symbol}]")
+        print(f"  Title:    {source.title}")
+        print(f"  Category: {res.category}")
+        print(f"  Topics:   {', '.join(res.topics)}")
+        print(f"  Summary:  {res.summary}")
+        if res.topic_evidence:
+            print("  Evidence:")
+            for t, ev in res.topic_evidence.items():
+                print(f"    - {t}: {ev}")
+    return 0
+
+
+def _add_tag_arguments(p: argparse.ArgumentParser) -> None:
+    p.add_argument(
+        "path",
+        nargs="?",
+        default=None,
+        help="Path to Markdown article or directory (relative to KB or filesystem)",
+    )
+    p.add_argument(
+        "--all",
+        action="store_true",
+        help="Classify all Markdown sources in Knowledge Base or directory",
+    )
+    mode_group = p.add_mutually_exclusive_group()
+    mode_group.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Preview classification without modifying files (default)",
+    )
+    mode_group.add_argument(
+        "--apply",
+        action="store_true",
+        help="Write classified metadata directly into YAML frontmatter",
+    )
+    p.add_argument(
+        "--model",
+        type=str,
+        default=None,
+        help="Model identifier (e.g. mlx-community/Qwen2.5-7B-Instruct-4bit)",
+    )
+    p.add_argument(
+        "--backend",
+        choices=["mlx", "ollama"],
+        default="mlx",
+        help="Local inference backend (default: mlx)",
+    )
+    p.add_argument(
+        "--ollama-host",
+        type=str,
+        default="http://localhost:11434",
+        help="Ollama host URL (default: http://localhost:11434)",
+    )
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="Endurance Training Knowledge Base CLI"
@@ -181,6 +321,19 @@ def main(argv: Sequence[str] | None = None) -> int:
         help="Validate one exact path relative to Knowledge_base",
     )
 
+    # tag & auto-tag
+    parser_tag = subparsers.add_parser(
+        "tag",
+        help="Classify canonical topics and bottom-up category using local LLM",
+    )
+    _add_tag_arguments(parser_tag)
+
+    parser_autotag = subparsers.add_parser(
+        "auto-tag",
+        help="Classify canonical topics and bottom-up category using local LLM",
+    )
+    _add_tag_arguments(parser_autotag)
+
     args = parser.parse_args(argv)
 
     try:
@@ -193,6 +346,8 @@ def main(argv: Sequence[str] | None = None) -> int:
             handle_status(engine, args)
         elif args.command == "validate":
             return handle_validate(engine, args)
+        elif args.command in ("tag", "auto-tag"):
+            return handle_tag(engine, args)
     except KBEngineError as error:
         print(f"{error.code}: {error}", file=sys.stderr)
         return 2

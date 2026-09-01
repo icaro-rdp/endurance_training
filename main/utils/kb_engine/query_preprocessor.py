@@ -45,7 +45,7 @@ def preprocess_query(raw_query: str) -> str:
     expanded = expand_synonyms(terms)
     clauses: list[str] = []
     for term in expanded:
-        clean = term.replace('"', '').strip()
+        clean = term.replace('"', "").strip()
         if clean:
             clauses.append(f'"{clean}"')
 

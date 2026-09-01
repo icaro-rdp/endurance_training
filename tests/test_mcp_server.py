@@ -240,7 +240,9 @@ These intervals promote eccentric cardiac hypertrophy and maximize stroke volume
         self.assertIn("categories", tax_data)
         self.assertIn("training", tax_data["categories"])
         self.assertIn("physiology", tax_data["categories"])
-        self.assertIn("VO2max_and_aerobic_hiit", tax_data["topics_by_category"]["training"])
+        self.assertIn(
+            "VO2max_and_aerobic_hiit", tax_data["topics_by_category"]["training"]
+        )
 
     async def test_get_sitemap_and_validate_kb(self) -> None:
         res_sitemap = await self.server.call_tool("get_sitemap", {})

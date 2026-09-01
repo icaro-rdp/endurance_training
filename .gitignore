@@ -54,3 +54,5 @@ __pycache__/
 **/raw_transcripts/
 transcripts/
 :memory:.ses
+
+.vscode/

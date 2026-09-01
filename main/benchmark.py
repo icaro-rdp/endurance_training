@@ -46,7 +46,9 @@ def compute_dcg(relevances: list[int], k: int = 5) -> float:
     return dcg
 
 
-def compute_ndcg(retrieved_relevances: list[int], ideal_relevances: list[int], k: int = 5) -> float:
+def compute_ndcg(
+    retrieved_relevances: list[int], ideal_relevances: list[int], k: int = 5
+) -> float:
     dcg = compute_dcg(retrieved_relevances, k=k)
     idcg = compute_dcg(sorted(ideal_relevances, reverse=True), k=k)
     if idcg <= 0.0:
@@ -80,14 +82,16 @@ def evaluate_benchmark(
 
         if not gold_passages:
             # Negative query
-            negative_results.append({
-                "id": qid,
-                "query": q_text,
-                "category": category,
-                "retrieved_count": len(results),
-                "top_score": results[0].lexical_score if results else 0.0,
-                "latency_ms": elapsed_ms,
-            })
+            negative_results.append(
+                {
+                    "id": qid,
+                    "query": q_text,
+                    "category": category,
+                    "retrieved_count": len(results),
+                    "top_score": results[0].lexical_score if results else 0.0,
+                    "latency_ms": elapsed_ms,
+                }
+            )
             continue
 
         # Positive query evaluation
@@ -111,14 +115,13 @@ def evaluate_benchmark(
             passage = res.passage
             matched_rel = 0
             for g_path, g_start, g_end, g_score, g_title in gold_targets:
-                if passage.rel_path == g_path and passage.start_line == g_start and passage.end_line == g_end:
-                    matched_rel = g_score
-                    if g_title not in matched_titles:
-                        matched_titles.append(g_title)
-                    break
-                # Relaxed match: same source and substantial line overlap
-                elif (
-                    passage.rel_path == g_path
+                if (
+                    (
+                        passage.rel_path == g_path
+                        and passage.start_line == g_start
+                        and passage.end_line == g_end
+                    )
+                    or passage.rel_path == g_path
                     and not (passage.end_line < g_start or passage.start_line > g_end)
                 ):
                     matched_rel = g_score
@@ -154,7 +157,9 @@ def evaluate_benchmark(
     num_pos = len(positive_results)
     mean_mrr = sum(r.mrr_at_5 for r in positive_results) / num_pos if num_pos else 0.0
     mean_ndcg = sum(r.ndcg_at_5 for r in positive_results) / num_pos if num_pos else 0.0
-    mean_recall = sum(r.recall_at_5 for r in positive_results) / num_pos if num_pos else 0.0
+    mean_recall = (
+        sum(r.recall_at_5 for r in positive_results) / num_pos if num_pos else 0.0
+    )
     latencies = sorted(r.latency_ms for r in positive_results)
     p95_idx = int(math.ceil(0.95 * len(latencies))) - 1 if latencies else 0
     p95_latency = latencies[p95_idx] if latencies else 0.0
@@ -222,7 +227,7 @@ def main() -> int:
             f"NDCG: {pq['ndcg_at_5']:.2f} | Recall: {pq['recall_at_5']:.2f} | "
             f"Matches: {len(pq['matched_golds'])}"
         )
-        print(f"       Query: \"{pq['query']}\"")
+        print(f'       Query: "{pq["query"]}"')
         if pq["matched_golds"]:
             print(f"       Hits: {', '.join(pq['matched_golds'][:2])}")
         print()

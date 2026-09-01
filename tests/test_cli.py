@@ -265,4 +265,3 @@ summary: A CLI fixture.
 
 if __name__ == "__main__":
     unittest.main()
-
