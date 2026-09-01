@@ -579,6 +579,36 @@ class LocalLLMClassifier:
                 existing_summary=existing_summary,
             )
             raw_result = self.adapter.generate(prompt, schema=schema_dict)
+
+            if isinstance(raw_result, dict):
+                if "topics" in raw_result and isinstance(raw_result["topics"], list):
+                    canonical_topics: list[str] = []
+                    for t in raw_result["topics"]:
+                        t_str = str(t).strip()
+                        if t_str in self.taxonomy.CANONICAL_TOPICS:
+                            if t_str not in canonical_topics:
+                                canonical_topics.append(t_str)
+                        else:
+                            norm = self.taxonomy.normalize_topic(t_str)
+                            if (
+                                norm
+                                and norm in self.taxonomy.CANONICAL_TOPICS
+                                and norm not in canonical_topics
+                            ):
+                                canonical_topics.append(norm)
+                    raw_result["topics"] = (
+                        canonical_topics[:8]
+                        if canonical_topics
+                        else raw_result["topics"]
+                    )
+
+                if "category" in raw_result:
+                    cat_str = str(raw_result["category"]).strip()
+                    if cat_str not in self.taxonomy.CANONICAL_CATEGORIES:
+                        norm_cat = self.taxonomy.normalize_category(cat_str)
+                        if norm_cat and norm_cat in self.taxonomy.CANONICAL_CATEGORIES:
+                            raw_result["category"] = norm_cat
+
             parsed = DocumentTaggingResult.model_validate(raw_result)
             window_results.append(parsed)
 
@@ -602,9 +632,7 @@ class LocalLLMClassifier:
     ) -> DocumentTaggingResult:
         """Read and classify a markdown document from disk."""
         target_kb = kb_dir or self.kb_dir
-        source = KnowledgeSource.from_path(
-            Path(file_path), target_kb, self.taxonomy
-        )
+        source = KnowledgeSource.from_path(Path(file_path), target_kb, self.taxonomy)
         return self.classify_content(
             content=source.body,
             title=source.title,
@@ -619,9 +647,7 @@ class LocalLLMClassifier:
     ) -> DocumentTaggingResult:
         """Classify a document and update frontmatter metadata on disk."""
         target_kb = kb_dir or self.kb_dir
-        source = KnowledgeSource.from_path(
-            Path(file_path), target_kb, self.taxonomy
-        )
+        source = KnowledgeSource.from_path(Path(file_path), target_kb, self.taxonomy)
         result = self.classify_content(
             content=source.body,
             title=source.title,
