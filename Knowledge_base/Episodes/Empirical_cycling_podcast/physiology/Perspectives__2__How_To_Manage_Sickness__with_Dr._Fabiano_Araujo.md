@@ -1,20 +1,20 @@
 ---
-title: "Perspectives #2: How to Manage Sickness, Exercise Immunology, & Return-to-Play — Complete Guide"
-category: "physiology"
+title: 'Perspectives #2: How to Manage Sickness, Exercise Immunology, & Return-to-Play — Complete Guide'
+category: physiology
 topics:
-  - "Cardiac_hypertrophy"
-  - "Carbohydrate_ratio"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore & Dr. Fabiano Araujo (Perspectives #2)"
-author: "Kolie Moore"
-date: "2021-05-10"
-summary: "A comprehensive medical and physiological guide to managing illness in endurance athletes, covering the clinical 'neck check', J-curve vs S-curve exercise immunology, metabolic cost of infection, nutritional rules during sickness, return-to-play protocols, and cardiac remodeling mechanisms."
+- Cardiovascular_and_hemodynamics
+- Carbohydrate_fueling_and_gut_training
+- Durability_and_fatigue_mechanisms
+source: 'Empirical Cycling Podcast — Kolie Moore & Dr. Fabiano Araujo (Perspectives #2)'
+author: Kolie Moore
+date: '2021-05-10'
+summary: A comprehensive medical and physiological guide to managing illness in endurance athletes, covering the clinical 'neck check', J-curve vs S-curve exercise immunology, metabolic cost of infection, nutritional rules during sickness, return-to-play protocols, and cardiac remodeling mechanisms.
 key_takeaways:
-  - "The Clinical 'Neck Check' Rule: Symptoms strictly localized above the neck (rhinorrhea, mild nasal congestion) permit light, short recovery spins; symptoms below the neck (fever, systemic myalgia, chest cough, resting tachycardia) mandate absolute rest to prevent viral myocarditis and prolonged illness."
-  - "The Metabolic and Catabolic Cost of Fever: Fever dramatically elevates protein catabolism as the body breaks down skeletal muscle to provide amino acids and glucose for leukocyte proliferation; exercising while febrile accelerates muscle wasting and reduces endurance capacity by up to 25%."
-  - "Contraindication of Caloric Restriction During Illness: Attempting weight-loss diets or caloric deficits while sick or recovering from injuries (e.g., bone fractures, soft tissue trauma) severely impairs immune function and delays tissue remodeling."
-  - "Stepwise Return-to-Play Protocol: Resuming training after systemic illness must follow a gradual, stepwise progression—beginning with a 30-minute easy spin, advancing duration incrementally only in the absence of symptom recurrence or autonomic decoupling."
-  - "Immune Blunting from Post-Exercise Alcohol: Alcohol suppresses immune defense mechanisms for several hours; consuming alcohol while fighting an infection or during post-race immunosuppression significantly increases relapse severity."
+- 'The Clinical ''Neck Check'' Rule: Symptoms strictly localized above the neck (rhinorrhea, mild nasal congestion) permit light, short recovery spins; symptoms below the neck (fever, systemic myalgia, chest cough, resting tachycardia) mandate absolute rest to prevent viral myocarditis and prolonged illness.'
+- 'The Metabolic and Catabolic Cost of Fever: Fever dramatically elevates protein catabolism as the body breaks down skeletal muscle to provide amino acids and glucose for leukocyte proliferation; exercising while febrile accelerates muscle wasting and reduces endurance capacity by up to 25%.'
+- 'Contraindication of Caloric Restriction During Illness: Attempting weight-loss diets or caloric deficits while sick or recovering from injuries (e.g., bone fractures, soft tissue trauma) severely impairs immune function and delays tissue remodeling.'
+- 'Stepwise Return-to-Play Protocol: Resuming training after systemic illness must follow a gradual, stepwise progression—beginning with a 30-minute easy spin, advancing duration incrementally only in the absence of symptom recurrence or autonomic decoupling.'
+- 'Immune Blunting from Post-Exercise Alcohol: Alcohol suppresses immune defense mechanisms for several hours; consuming alcohol while fighting an infection or during post-race immunosuppression significantly increases relapse severity.'
 ---
 
 # Perspectives #2: How to Manage Sickness, Exercise Immunology, & Return-to-Play — Complete Guide

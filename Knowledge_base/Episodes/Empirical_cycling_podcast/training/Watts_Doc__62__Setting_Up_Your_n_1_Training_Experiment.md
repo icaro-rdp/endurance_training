@@ -1,20 +1,20 @@
 ---
-title: "Setting Up Your n=1 Training Experiment: Inter-Individual Variability, Measurement Noise, and Responder Myths — Complete Guide"
+title: 'Setting Up Your n=1 Training Experiment: Inter-Individual Variability, Measurement Noise, and Responder Myths — Complete Guide'
 category: planning
 topics:
-  - "Volume_quantification"
-  - "Block_periodization"
-  - "FTP"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #62)"
-author: "Kolie Moore"
-date: "2026-02-25"
-summary: "A rigorous methodological framework for executing valid n=1 self-training experiments, breaking down inter- vs. intra-individual variability, technical and biological noise, dose standardization flaws, and debunking the 'unique non-responder' myth."
+- Workload_quantification_and_modeling
+- Periodization_models_and_macrocycles
+- FTP_and_functional_metrics
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #62)'
+author: Kolie Moore
+date: '2026-02-25'
+summary: A rigorous methodological framework for executing valid n=1 self-training experiments, breaking down inter- vs. intra-individual variability, technical and biological noise, dose standardization flaws, and debunking the 'unique non-responder' myth.
 key_takeaways:
-  - "Apparent 'unique responders' in training studies often reflect unstandardized exercise dosing (e.g., fixed % VO2peak ignoring anaerobic capacity) and technical/biological measurement noise rather than divergent cellular genetics."
-  - "Observed performance changes represent the sum of Measurement Error, Acute Biological Error (sleep, nutrition, stress), and True Biological Adaptation; isolating true adaptation requires repeated testing over time."
-  - "All differences in training outcomes are largely 'dose in disguise'—humans share universal adaptive signaling pathways (AMPK, PGC-1α, mTOR), but differ in dose requirements, recovery bandwidth, and response magnitude."
-  - "Valid n=1 experimentation relies on 'testing is training and training is testing'—tracking progression across regular interval execution rather than relying on high-stress, single-day isolated lab tests."
-  - "Athletes on the flat, late-stage limb of a multi-year growth curve are experiencing natural diminishing returns, not sudden physiological 'non-responsiveness.'"
+- Apparent 'unique responders' in training studies often reflect unstandardized exercise dosing (e.g., fixed % VO2peak ignoring anaerobic capacity) and technical/biological measurement noise rather than divergent cellular genetics.
+- Observed performance changes represent the sum of Measurement Error, Acute Biological Error (sleep, nutrition, stress), and True Biological Adaptation; isolating true adaptation requires repeated testing over time.
+- All differences in training outcomes are largely 'dose in disguise'—humans share universal adaptive signaling pathways (AMPK, PGC-1α, mTOR), but differ in dose requirements, recovery bandwidth, and response magnitude.
+- Valid n=1 experimentation relies on 'testing is training and training is testing'—tracking progression across regular interval execution rather than relying on high-stress, single-day isolated lab tests.
+- Athletes on the flat, late-stage limb of a multi-year growth curve are experiencing natural diminishing returns, not sudden physiological 'non-responsiveness.'
 ---
 
 # Setting Up Your n=1 Training Experiment: Inter-Individual Variability, Measurement Noise, and Responder Myths — Complete Guide

@@ -1,21 +1,21 @@
 ---
-title: "Ten Minute Tips #39: Individualizing Training For Crits, CX, And MTB — Complete Guide"
+title: 'Ten Minute Tips #39: Individualizing Training For Crits, CX, And MTB — Complete Guide'
 category: planning
 topics:
-  - "Block_periodization"
-  - "Microcycles"
-  - "Aerobic_base"
-  - "Sprint_performance"
-source: "Empirical Cycling Podcast — Kolie Moore & Erica Zaveta (Ten Minute Tips #39)"
-author: "Kolie Moore"
-date: "2024-07-18"
-summary: "An advanced coaching framework for individualizing training across high-intensity disciplines (criteriums, cyclocross, XC MTB), structuring dual-season periodization, separating skills drills from fitness fatigue, and managing in-season strength."
+- Periodization_models_and_macrocycles
+- Microcycle_and_schedule_design
+- Zone2_and_endurance_base
+- Sprint_and_anaerobic_intervals
+source: 'Empirical Cycling Podcast — Kolie Moore & Erica Zaveta (Ten Minute Tips #39)'
+author: Kolie Moore
+date: '2024-07-18'
+summary: An advanced coaching framework for individualizing training across high-intensity disciplines (criteriums, cyclocross, XC MTB), structuring dual-season periodization, separating skills drills from fitness fatigue, and managing in-season strength.
 key_takeaways:
-  - "High-intensity off-road and crit performance is highly individual: pure aerobic diesels thrive on steady sweet spot/FTP volume and require minimal anaerobic interval work, whereas fast-twitch athletes require sharp micro-intervals (e.g., 15s/15s) and sprint maintenance."
-  - "The Dual-Season Periodization Trap: Racing road/crits from March–August and jumping directly into cyclocross (September–January) leads to chronic neuroendocrine exhaustion; a mandatory 1–2 week mid-season de-load in July/August is non-negotiable."
-  - "Separate 'Hot Laps' from 'Skills Practice': Midweek race-pace hot laps generate massive high-torque neuromuscular fatigue; true technical drills (mounts, barriers, off-cambers) should be executed at Zone 1/2 recovery pace."
-  - "Structure race calendars into discrete 3-week blocks rather than racing every other weekend; alternating racing and resting every 7–14 days prevents both meaningful physiological adaptation and deep recovery."
-  - "In-season gym strength decay is primarily neural dis-coordination, not muscle loss; monitor sprint power and lean mass rather than chasing gym 1RM numbers during competition periods."
+- 'High-intensity off-road and crit performance is highly individual: pure aerobic diesels thrive on steady sweet spot/FTP volume and require minimal anaerobic interval work, whereas fast-twitch athletes require sharp micro-intervals (e.g., 15s/15s) and sprint maintenance.'
+- 'The Dual-Season Periodization Trap: Racing road/crits from March–August and jumping directly into cyclocross (September–January) leads to chronic neuroendocrine exhaustion; a mandatory 1–2 week mid-season de-load in July/August is non-negotiable.'
+- 'Separate ''Hot Laps'' from ''Skills Practice'': Midweek race-pace hot laps generate massive high-torque neuromuscular fatigue; true technical drills (mounts, barriers, off-cambers) should be executed at Zone 1/2 recovery pace.'
+- Structure race calendars into discrete 3-week blocks rather than racing every other weekend; alternating racing and resting every 7–14 days prevents both meaningful physiological adaptation and deep recovery.
+- In-season gym strength decay is primarily neural dis-coordination, not muscle loss; monitor sprint power and lean mass rather than chasing gym 1RM numbers during competition periods.
 ---
 
 # Ten Minute Tips #39: Individualizing Training For Crits, CX, And MTB — Complete Guide

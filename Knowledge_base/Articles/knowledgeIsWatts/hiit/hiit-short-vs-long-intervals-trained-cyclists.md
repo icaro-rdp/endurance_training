@@ -2,19 +2,15 @@
 title: Short vs Long Intervals in Trained Cyclists
 category: training
 topics:
-- FTP
-- CP
-- VO2max
-- LT2_VT2
-- Short_intervals
-source: 'knowledgeiswatt.substack.com/p/32-high-intensity-training-short Date: September
-  27,'
+- FTP_and_functional_metrics
+- Critical_power_and_w_prime
+- VO2max_and_aerobic_kinetics
+- Thresholds_and_metabolic_domains
+- VO2max_and_aerobic_hiit
+source: 'knowledgeiswatt.substack.com/p/32-high-intensity-training-short Date: September 27,'
 author: Endurance Research
-date: 'Source: knowledgeiswatt.substack.com/p/32-high-intensity-training-short  September
-  27,'
-summary: High intensity Training (HIT) is a widely used strategy to stimulate positive
-  physiological adaptations for endurance performance. It represents performing intervals
-  at an intensity above the
+date: 'Source: knowledgeiswatt.substack.com/p/32-high-intensity-training-short  September 27,'
+summary: High intensity Training (HIT) is a widely used strategy to stimulate positive physiological adaptations for endurance performance. It represents performing intervals at an intensity above the
 ---
 
 # Short vs Long Intervals in Trained Cyclists

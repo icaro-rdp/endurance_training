@@ -46,7 +46,7 @@ def create_mcp_server(
         instructions=(
             "Endurance Training Knowledge Base retriever. "
             "Use search_passages to retrieve citation-backed Evidence Passages "
-            "for training, physiology, periodization, HIIT, Zone 2, and nutrition. "
+            "for training, physiology, nutrition, and planning. "
             "Passages contain exact source lines, section hierarchy, and source links."
         ),
     )
@@ -71,10 +71,10 @@ def create_mcp_server(
 
         Args:
             query: The search term or athlete question in English.
-            category: Optional category filter (e.g. metrics, hiit, zone2, strength,
-                nutrition, physiology, periodization).
-            topic: Optional topic filter (e.g. VO2max, FTP, Double_threshold,
-                Cardiac_hypertrophy).
+            category: Optional category filter (e.g. training, physiology,
+                nutrition, planning).
+            topic: Optional topic filter (e.g. VO2max_and_aerobic_hiit,
+                FTP_and_functional_metrics, Carbohydrate_fueling_and_gut_training).
             source_slug: Optional source slug filter (e.g.
                 Fick_equation_and_cardiac_remodeling).
             max_passages: Optional explicit ceiling from 1 to 20. Omit to

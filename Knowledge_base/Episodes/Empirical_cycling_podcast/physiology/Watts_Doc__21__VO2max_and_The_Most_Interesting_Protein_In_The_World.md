@@ -1,19 +1,19 @@
 ---
-title: "Watts Doc #21: VO2max and The Most Interesting Protein In The World — Complete Guide"
-category: "physiology"
+title: 'Watts Doc #21: VO2max and The Most Interesting Protein In The World — Complete Guide'
+category: physiology
 topics:
-  - "VO2max"
-  - "Cardiac_hypertrophy"
-  - "Temperature_effects"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Harrison"
-author: "Kolie Moore"
-date: "2020-07-03"
-summary: "An exploration of hemoglobin's allosteric cooperativity, the Bohr effect, pulmonary diffusion, and the relationship between plasma volume expansion, total hemoglobin mass, and the Frank-Starling mechanism."
+- VO2max_and_aerobic_kinetics
+- Cardiovascular_and_hemodynamics
+- Environmental_and_thermal_stress
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Harrison
+author: Kolie Moore
+date: '2020-07-03'
+summary: An exploration of hemoglobin's allosteric cooperativity, the Bohr effect, pulmonary diffusion, and the relationship between plasma volume expansion, total hemoglobin mass, and the Frank-Starling mechanism.
 key_takeaways:
-  - "Hemoglobin's quaternary T-to-R state transition and sigmoidal binding curve enable rapid 98%+ saturation in lungs and efficient offloading in acidic, warm muscle tissue (Bohr effect)."
-  - "Hematocrit (concentration) does not predict VO2max (r ≈ 0.1); total hemoglobin mass and absolute blood volume are the true determinants (r ≈ 0.75)."
-  - "In the classic Coyle detraining study, re-infusing pure plasma restored 50% of lost VO2max by restoring stroke volume via the Frank-Starling mechanism, even as hematocrit dropped to 39.6%."
-  - "Exercise-induced pseudoanemia (low hematocrit from rapid plasma volume expansion) is a beneficial endurance adaptation that lowers vascular resistance and enhances cardiac filling."
+- Hemoglobin's quaternary T-to-R state transition and sigmoidal binding curve enable rapid 98%+ saturation in lungs and efficient offloading in acidic, warm muscle tissue (Bohr effect).
+- Hematocrit (concentration) does not predict VO2max (r ≈ 0.1); total hemoglobin mass and absolute blood volume are the true determinants (r ≈ 0.75).
+- In the classic Coyle detraining study, re-infusing pure plasma restored 50% of lost VO2max by restoring stroke volume via the Frank-Starling mechanism, even as hematocrit dropped to 39.6%.
+- Exercise-induced pseudoanemia (low hematocrit from rapid plasma volume expansion) is a beneficial endurance adaptation that lowers vascular resistance and enhances cardiac filling.
 ---
 
 # Watts Doc #21: VO2max and The Most Interesting Protein In The World — Complete Guide

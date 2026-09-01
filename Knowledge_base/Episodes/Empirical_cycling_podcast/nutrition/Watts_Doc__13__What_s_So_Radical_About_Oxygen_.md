@@ -1,20 +1,20 @@
 ---
-title: "Oxygen, Reactive Oxygen Species (ROS), & Antioxidants in Adaptation — Complete Guide"
-category: "nutrition"
+title: Oxygen, Reactive Oxygen Species (ROS), & Antioxidants in Adaptation — Complete Guide
+category: nutrition
 topics:
-  - "Antioxidants"
-  - "Mitochondrial_density"
-  - "Aerobic_base"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #13)"
-author: "Kolie Moore"
-date: "2019-10-27"
-summary: "An in-depth biochemical breakdown of oxygen reduction in the mitochondrial electron transport chain, free radical (ROS) generation, endogenous antioxidant defense systems (SOD, catalase, glutathione), and how high-dose exogenous antioxidant supplementation blunts endurance training adaptations by disrupting PGC-1α signaling."
+- Micronutrients_and_biomarkers
+- Mitochondrial_and_cellular_adaptation
+- Zone2_and_endurance_base
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #13)'
+author: Kolie Moore
+date: '2019-10-27'
+summary: An in-depth biochemical breakdown of oxygen reduction in the mitochondrial electron transport chain, free radical (ROS) generation, endogenous antioxidant defense systems (SOD, catalase, glutathione), and how high-dose exogenous antioxidant supplementation blunts endurance training adaptations by disrupting PGC-1α signaling.
 key_takeaways:
-  - "Oxygen reduction to water at Complex IV of the electron transport chain naturally leaks 1–2% (at rest) to up to 10% (during strenuous exercise) of electrons, generating reactive oxygen species (ROS)."
-  - "Transient exercise-induced ROS generation is an essential hormetic signaling mechanism that upregulates PGC-1α, driving mitochondrial biogenesis and capillary growth."
-  - "The body possesses robust endogenous antioxidant systems (superoxide dismutase, catalase, glutathione, cytochrome c) that expand in capacity with training."
-  - "Mega-dosing exogenous antioxidants (e.g., ≥1000 mg Vitamin C, ≥400 IU Vitamin E) quenches necessary ROS signaling and directly blunts endurance adaptations."
-  - "Nutritional strategy should emphasize antioxidant-rich whole foods (fruits and vegetables) while strictly avoiding high-dose supplemental antioxidants during aerobic build blocks."
+- Oxygen reduction to water at Complex IV of the electron transport chain naturally leaks 1–2% (at rest) to up to 10% (during strenuous exercise) of electrons, generating reactive oxygen species (ROS).
+- Transient exercise-induced ROS generation is an essential hormetic signaling mechanism that upregulates PGC-1α, driving mitochondrial biogenesis and capillary growth.
+- The body possesses robust endogenous antioxidant systems (superoxide dismutase, catalase, glutathione, cytochrome c) that expand in capacity with training.
+- Mega-dosing exogenous antioxidants (e.g., ≥1000 mg Vitamin C, ≥400 IU Vitamin E) quenches necessary ROS signaling and directly blunts endurance adaptations.
+- Nutritional strategy should emphasize antioxidant-rich whole foods (fruits and vegetables) while strictly avoiding high-dose supplemental antioxidants during aerobic build blocks.
 ---
 
 # Oxygen, Reactive Oxygen Species (ROS), & Antioxidants in Adaptation — Complete Guide

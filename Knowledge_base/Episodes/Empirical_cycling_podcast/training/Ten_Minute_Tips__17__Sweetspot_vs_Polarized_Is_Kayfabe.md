@@ -1,22 +1,21 @@
 ---
-title: "Ten Minute Tips #17: Sweetspot vs Polarized Is Kayfabe — Complete Guide"
+title: 'Ten Minute Tips #17: Sweetspot vs Polarized Is Kayfabe — Complete Guide'
 category: planning
 topics:
-  - "Aerobic_base"
-  - "Progressive_overload"
-  - "TTA_TTE"
-  - "FTP"
-  - "VO2max"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Houston"
-author: "Kolie Moore"
-date: "2022-01-20"
-summary: "Kolie Moore and Kyle Houston deconstruct the manufactured dichotomy between Sweet Spot and Polarized training ('kayfabe'), demonstrating why training intensity distribution should be an outcome of individual athlete limiters and specific physiological adaptations rather than a dogmatic, upfront prescription."
+- Zone2_and_endurance_base
+- Periodization_models_and_macrocycles
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Houston
+author: Kolie Moore
+date: '2022-01-20'
+summary: Kolie Moore and Kyle Houston deconstruct the manufactured dichotomy between Sweet Spot and Polarized training ('kayfabe'), demonstrating why training intensity distribution should be an outcome of individual athlete limiters and specific physiological adaptations rather than a dogmatic, upfront prescription.
 key_takeaways:
-  - "The 'Sweet Spot vs. Polarized' debate is training 'kayfabe'—a staged commercial rivalry designed to market canned training plans and software categories rather than reflect sound exercise physiology."
-  - "Training design must be adaptation-driven rather than modality-driven: identify athlete limiters (VO2max, FTP, TTE, fatigue resistance) first, then select workout modalities as specific tools."
-  - "Sweet Spot is physiologically continuous with threshold (MLSS/LT2); its primary mechanism of progressive overload is extending time-in-zone (TTE), not continually ramping power targets."
-  - "VO2max intervals overload via maximal intensity and stroke volume, whereas Sweet Spot/Threshold overloads via duration of sustained aerobic ATP flux."
-  - "Time-crunched athletes require higher density/intensity to achieve adaptation, but rigid adherence to 5–6 days of Sweet Spot per week leads to chronic autonomic burnout."
+- The 'Sweet Spot vs. Polarized' debate is training 'kayfabe'—a staged commercial rivalry designed to market canned training plans and software categories rather than reflect sound exercise physiology.
+- 'Training design must be adaptation-driven rather than modality-driven: identify athlete limiters (VO2max, FTP, TTE, fatigue resistance) first, then select workout modalities as specific tools.'
+- Sweet Spot is physiologically continuous with threshold (MLSS/LT2); its primary mechanism of progressive overload is extending time-in-zone (TTE), not continually ramping power targets.
+- VO2max intervals overload via maximal intensity and stroke volume, whereas Sweet Spot/Threshold overloads via duration of sustained aerobic ATP flux.
+- Time-crunched athletes require higher density/intensity to achieve adaptation, but rigid adherence to 5–6 days of Sweet Spot per week leads to chronic autonomic burnout.
 ---
 
 # Ten Minute Tips #17: Sweetspot vs Polarized Is Kayfabe — Complete Guide

@@ -1,18 +1,18 @@
 ---
-title: "How to Read and Critique a Scientific Paper — Complete Guide"
-category: "physiology"
+title: How to Read and Critique a Scientific Paper — Complete Guide
+category: physiology
 topics:
-  - "Lab_vs_field"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kyle Hanson & Kolie Moore (Ten Minute Tips #10)"
-author: "Kyle Hanson & Kolie Moore"
-date: "2020-12-17"
-summary: "A practical framework for deconstructing, analyzing, and critically evaluating exercise physiology literature, identifying data massaging, and translating scientific findings into training application."
+- Physiological_testing_and_diagnostics
+- Durability_and_fatigue_mechanisms
+source: 'Empirical Cycling Podcast — Kyle Hanson & Kolie Moore (Ten Minute Tips #10)'
+author: Kyle Hanson & Kolie Moore
+date: '2020-12-17'
+summary: A practical framework for deconstructing, analyzing, and critically evaluating exercise physiology literature, identifying data massaging, and translating scientific findings into training application.
 key_takeaways:
-  - "Scientific papers are non-linear technical arguments: read iteratively across background, methods, raw data, and conclusions rather than passively from start to finish."
-  - "Audit the methods first: verify whether the chosen testing protocols and metrics (e.g., ramp test vs. steady-state TTE) actually measure the physiological qualities the authors claim."
-  - "Scrutinize figures and raw plots independently: evaluate axis scales, variance, and trendlines before accepting the authors' discussion narrative."
-  - "Beware of small-sample traps (n=6–8) and cohort mismatches (untrained vs. well-trained athletes) before applying conclusions to endurance training."
+- 'Scientific papers are non-linear technical arguments: read iteratively across background, methods, raw data, and conclusions rather than passively from start to finish.'
+- 'Audit the methods first: verify whether the chosen testing protocols and metrics (e.g., ramp test vs. steady-state TTE) actually measure the physiological qualities the authors claim.'
+- 'Scrutinize figures and raw plots independently: evaluate axis scales, variance, and trendlines before accepting the authors'' discussion narrative.'
+- Beware of small-sample traps (n=6–8) and cohort mismatches (untrained vs. well-trained athletes) before applying conclusions to endurance training.
 ---
 
 # How to Read and Critique a Scientific Paper — Complete Guide

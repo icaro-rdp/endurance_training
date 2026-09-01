@@ -1,21 +1,21 @@
 ---
-title: "Building Race Fitness — Complete Guide"
+title: Building Race Fitness — Complete Guide
 category: planning
 topics:
-  - "Microcycles"
-  - "Aerobic_base"
-  - "Durability"
-  - "Progressive_overload"
-source: "Empirical Cycling Podcast — Ten Minute Tips #76"
-author: "Kolie Moore"
-date: "2026-04-16"
-summary: "Kolie Moore and Gediminas break down the transition from general aerobic building to race-specific preparation, contrasting continuous 'subplot' periodization with rigid block models, and detailing in-season maintenance strategies."
+- Microcycle_and_schedule_design
+- Zone2_and_endurance_base
+- Durability_and_fatigue_mechanisms
+- Periodization_models_and_macrocycles
+source: 'Empirical Cycling Podcast — Ten Minute Tips #76'
+author: Kolie Moore
+date: '2026-04-16'
+summary: Kolie Moore and Gediminas break down the transition from general aerobic building to race-specific preparation, contrasting continuous 'subplot' periodization with rigid block models, and detailing in-season maintenance strategies.
 key_takeaways:
-  - "Race fitness is not a standalone last-minute phase; specific race demands (sprint power, off-road handling, repeated surges) should be threaded as low-frequency 'subplots' throughout the general build."
-  - "The 'Proximity Paradox': As an A-priority race approaches, the potential to do physiological harm via panic training dramatically outweighs any marginal fitness gain from last-minute intervals."
-  - "If every race on the calendar is designated an A-priority, none will be successful; athletes must structure B/C events as tactical laboratories and high-intensity training stimuli."
-  - "In-season midweek training must shift from progressive overload to maintenance doses ('engine warmers') to accommodate the heavy neuromuscular and energetic cost of weekend racing."
-  - "Athletes with high training age maintain stable aerobic baselines and require minimal general build, whereas novice racers must prioritize early pack craft and tactical pattern recognition over perfect physiological tapering."
+- Race fitness is not a standalone last-minute phase; specific race demands (sprint power, off-road handling, repeated surges) should be threaded as low-frequency 'subplots' throughout the general build.
+- 'The ''Proximity Paradox'': As an A-priority race approaches, the potential to do physiological harm via panic training dramatically outweighs any marginal fitness gain from last-minute intervals.'
+- If every race on the calendar is designated an A-priority, none will be successful; athletes must structure B/C events as tactical laboratories and high-intensity training stimuli.
+- In-season midweek training must shift from progressive overload to maintenance doses ('engine warmers') to accommodate the heavy neuromuscular and energetic cost of weekend racing.
+- Athletes with high training age maintain stable aerobic baselines and require minimal general build, whereas novice racers must prioritize early pack craft and tactical pattern recognition over perfect physiological tapering.
 ---
 
 # Building Race Fitness — Complete Guide

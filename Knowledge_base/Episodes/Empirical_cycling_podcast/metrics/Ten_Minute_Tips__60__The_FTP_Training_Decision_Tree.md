@@ -1,20 +1,19 @@
 ---
-title: "Ten Minute Tips #60: The FTP Training Decision Tree — Complete Guide"
+title: 'Ten Minute Tips #60: The FTP Training Decision Tree — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "VO2max"
-  - "TTA_TTE"
-source: "Empirical Cycling Podcast — Kolie Moore with Rory Porteous"
-author: "Kolie Moore"
-date: "2025-07-14"
-summary: "A systematic coaching decision tree for FTP training, evaluating when to progress interval duration vs. power, how training age dictates adaptive potential, when to pivot to VO2max training, and managing opportunity cost."
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+source: Empirical Cycling Podcast — Kolie Moore with Rory Porteous
+author: Kolie Moore
+date: '2025-07-14'
+summary: A systematic coaching decision tree for FTP training, evaluating when to progress interval duration vs. power, how training age dictates adaptive potential, when to pivot to VO2max training, and managing opportunity cost.
 key_takeaways:
-  - "FTP represents the integration of central cardiac capacity (VO2max) and peripheral muscular oxidative efficiency."
-  - "Early season progression: Novice athletes should prioritize extending time in zone (TTE) before adding watts, whereas experienced athletes can auto-regulate power."
-  - "When FTP plateaus and TTE reaches 60–90 minutes, continuing threshold work only adds localized muscular endurance; athletes must pivot to VO2max work to lift the aerobic ceiling."
-  - "In-season threshold work is strictly for maintenance (RPE 6–7/10, un-progressed sessions every 1–3 weeks) to avoid compromising race recovery."
-  - "Opportunity cost dictates that hyper-focusing on FTP can detract from race-winning limiters such as repeatability, sprint power, positioning, and durability."
+- FTP represents the integration of central cardiac capacity (VO2max) and peripheral muscular oxidative efficiency.
+- 'Early season progression: Novice athletes should prioritize extending time in zone (TTE) before adding watts, whereas experienced athletes can auto-regulate power.'
+- When FTP plateaus and TTE reaches 60–90 minutes, continuing threshold work only adds localized muscular endurance; athletes must pivot to VO2max work to lift the aerobic ceiling.
+- In-season threshold work is strictly for maintenance (RPE 6–7/10, un-progressed sessions every 1–3 weeks) to avoid compromising race recovery.
+- Opportunity cost dictates that hyper-focusing on FTP can detract from race-winning limiters such as repeatability, sprint power, positioning, and durability.
 ---
 
 # Ten Minute Tips #60: The FTP Training Decision Tree — Complete Guide

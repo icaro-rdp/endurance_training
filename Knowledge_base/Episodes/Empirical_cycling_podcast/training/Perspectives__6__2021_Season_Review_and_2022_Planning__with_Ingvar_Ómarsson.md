@@ -1,21 +1,21 @@
 ---
-title: "Season Review & Macrocycle Periodization: Annual Planning, Durability Profiling, & Pro MTB Case Study — Complete Guide"
+title: 'Season Review & Macrocycle Periodization: Annual Planning, Durability Profiling, & Pro MTB Case Study — Complete Guide'
 category: planning
 topics:
-  - "Block_periodization"
-  - "Microcycles"
-  - "Volume_quantification"
-  - "Durability"
-  - "TTA_TTE"
-source: "Empirical Cycling Podcast — Kolie Moore & Ingvar Ómarsson (Perspectives #6)"
-author: "Kolie Moore"
-date: "2021-12-09"
-summary: "A masterclass in annual season review and macrocycle planning using a real-world elite case study with professional mountain biker Ingvar Ómarsson, focusing on physiological auditing, fatigue tracking across travel, durability profiling, and periodization modeling."
+- Periodization_models_and_macrocycles
+- Microcycle_and_schedule_design
+- Workload_quantification_and_modeling
+- Durability_and_fatigue_mechanisms
+- FTP_and_functional_metrics
+source: 'Empirical Cycling Podcast — Kolie Moore & Ingvar Ómarsson (Perspectives #6)'
+author: Kolie Moore
+date: '2021-12-09'
+summary: A masterclass in annual season review and macrocycle planning using a real-world elite case study with professional mountain biker Ingvar Ómarsson, focusing on physiological auditing, fatigue tracking across travel, durability profiling, and periodization modeling.
 key_takeaways:
-  - "Annual Post-Season Audit Framework: A robust season review requires analyzing both macro-quantitative data (total hours, kJ expenditure, power-duration curves under fatigue) and micro-qualitative feedback (travel stress, race execution errors, psychological burnout)."
-  - "Durability Over Fresh Power: For multi-hour cross-country marathon (XCM) and stage racing, peak 5-minute or 20-minute power in fresh conditions is less predictive of success than power output reproducible after 2,000–3,000 kJ of prior work."
-  - "Microcycle Flexibility in Congested Calendars: Rigid multi-week periodization models collapse during intense racing blocks; microcycles must be dynamically adjusted around travel logistics, active recovery, and low-stress aerobic maintenance."
-  - "Progression from Durability Base to Race-Specific Sharpness: Macrocycle design should prioritize extensive aerobic volume and threshold Time-to-Exhaustion (TTE) before introducing intensive, highly glycolytic ${V}{O}_2{max}$ and anaerobic capacity blocks."
+- 'Annual Post-Season Audit Framework: A robust season review requires analyzing both macro-quantitative data (total hours, kJ expenditure, power-duration curves under fatigue) and micro-qualitative feedback (travel stress, race execution errors, psychological burnout).'
+- 'Durability Over Fresh Power: For multi-hour cross-country marathon (XCM) and stage racing, peak 5-minute or 20-minute power in fresh conditions is less predictive of success than power output reproducible after 2,000–3,000 kJ of prior work.'
+- 'Microcycle Flexibility in Congested Calendars: Rigid multi-week periodization models collapse during intense racing blocks; microcycles must be dynamically adjusted around travel logistics, active recovery, and low-stress aerobic maintenance.'
+- 'Progression from Durability Base to Race-Specific Sharpness: Macrocycle design should prioritize extensive aerobic volume and threshold Time-to-Exhaustion (TTE) before introducing intensive, highly glycolytic ${V}{O}_2{max}$ and anaerobic capacity blocks.'
 ---
 
 # Season Review & Macrocycle Periodization: Annual Planning, Durability Profiling, & Pro MTB Case Study — Complete Guide

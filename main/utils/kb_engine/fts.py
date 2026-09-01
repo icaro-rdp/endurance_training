@@ -37,6 +37,7 @@ from .models import (
 )
 from .query_preprocessor import preprocess_query
 from .sync import build_corpus_manifest
+from .taxonomy import TaxonomyRegistry
 
 _SCHEMA_VERSION = "4"
 _VALID_SOURCE_TYPES = frozenset({"article", "podcast"})
@@ -218,6 +219,8 @@ class PassageIndex:
         retain_evidence: bool = True,
     ) -> tuple[EvidenceSearchResult, ...]:
         """Search the Knowledge Base using hybrid, BM25, or dense retrieval."""
+        category = TaxonomyRegistry.normalize_category(category)
+        topic = TaxonomyRegistry.normalize_topic(topic)
         if not 1 <= limit <= 50:
             raise InvalidSearchError("limit must be between 1 and 50")
         tokens = [token for token in re.findall(r"\w+", query) if len(token) > 1]
@@ -264,6 +267,8 @@ class PassageIndex:
         limit: int = 5,
     ) -> tuple[EvidenceSearchResult, ...]:
         """Search passages using sparse lexical SQLite FTS5 BM25 retrieval."""
+        category = TaxonomyRegistry.normalize_category(category)
+        topic = TaxonomyRegistry.normalize_topic(topic)
         if not 1 <= limit <= 50:
             raise InvalidSearchError("limit must be between 1 and 50")
         tokens = [token for token in re.findall(r"\w+", query) if len(token) > 1]
@@ -316,6 +321,8 @@ class PassageIndex:
         limit: int = 20,
     ) -> tuple[EvidenceSearchResult, ...]:
         """Search passages using neural dense vector embeddings (bge-small-en-v1.5)."""
+        category = TaxonomyRegistry.normalize_category(category)
+        topic = TaxonomyRegistry.normalize_topic(topic)
         if not 1 <= limit <= 50:
             raise InvalidSearchError("limit must be between 1 and 50")
         tokens = [token for token in re.findall(r"\w+", query) if len(token) > 1]

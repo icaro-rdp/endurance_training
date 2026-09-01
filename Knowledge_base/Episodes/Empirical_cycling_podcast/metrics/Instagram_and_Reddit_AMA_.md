@@ -1,23 +1,23 @@
 ---
-title: "Instagram and Reddit AMA: Intensity Distributions, Over-Unders, VO2max Ceilings, and MLSS vs FTP — Q&A Guide"
+title: 'Instagram and Reddit AMA: Intensity Distributions, Over-Unders, VO2max Ceilings, and MLSS vs FTP — Q&A Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "VO2max"
-  - "LT2_VT2"
-  - "Aerobic_base"
-  - "Sodium_bicarbonate"
-  - "Heavy_torque"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson"
-author: "Kolie Moore"
-date: "2021-07-14"
-summary: "Analytical Q&A guide addressing listener questions from Instagram and Reddit on diagnosing high fractional utilization ceilings (>80% VO2max), low-cadence over-under mechanics, reconciling FTP vs MLSS discrepancies, systemic buffering vs topical lactate creams, and altitude acclimation pacing."
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+- Thresholds_and_metabolic_domains
+- Zone2_and_endurance_base
+- Ergogenic_supplements_and_buffers
+- Torque_and_cadence_drills
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson
+author: Kolie Moore
+date: '2021-07-14'
+summary: Analytical Q&A guide addressing listener questions from Instagram and Reddit on diagnosing high fractional utilization ceilings (>80% VO2max), low-cadence over-under mechanics, reconciling FTP vs MLSS discrepancies, systemic buffering vs topical lactate creams, and altitude acclimation pacing.
 key_takeaways:
-  - "When FTP reaches 80–82% of VO2max and TTE is extended (~50–70 min), FTP is mechanically capped; the athlete must execute a dedicated VO2max block to raise the aerobic ceiling."
-  - "Over-unders train oxidative clearance of lactate; executing 'overs' at low cadence (high torque) forces high-threshold motor unit recruitment, while normal-cadence 'unders' recover via oxidative fibers."
-  - "MLSS and true FTP represent the same metabolic steady-state boundary; a 30W divergence indicates that a short ramp or 20-minute test was inflated by anaerobic work capacity (W')."
-  - "Topical 'lactate buffering' creams cannot penetrate the dermal barrier with meaningful molecular concentrations; systemic buffering requires oral sodium bicarbonate protocols."
-  - "Training intensity distribution should be driven by target physiological adaptations and recovery dynamics rather than rigid adherence to 80/20 percentages."
+- When FTP reaches 80–82% of VO2max and TTE is extended (~50–70 min), FTP is mechanically capped; the athlete must execute a dedicated VO2max block to raise the aerobic ceiling.
+- Over-unders train oxidative clearance of lactate; executing 'overs' at low cadence (high torque) forces high-threshold motor unit recruitment, while normal-cadence 'unders' recover via oxidative fibers.
+- MLSS and true FTP represent the same metabolic steady-state boundary; a 30W divergence indicates that a short ramp or 20-minute test was inflated by anaerobic work capacity (W').
+- Topical 'lactate buffering' creams cannot penetrate the dermal barrier with meaningful molecular concentrations; systemic buffering requires oral sodium bicarbonate protocols.
+- Training intensity distribution should be driven by target physiological adaptations and recovery dynamics rather than rigid adherence to 80/20 percentages.
 ---
 
 # Instagram and Reddit AMA: Intensity Distributions, Over-Unders, VO2max Ceilings, and MLSS vs FTP — Q&A Guide

@@ -1,20 +1,20 @@
 ---
-title: "Ten Minute Tips #61: Coach Q&A on Limiters, Low-Volume Deloads, Break Resumption, & Training Camps — Complete Guide"
+title: 'Ten Minute Tips #61: Coach Q&A on Limiters, Low-Volume Deloads, Break Resumption, & Training Camps — Complete Guide'
 category: planning
 topics:
-  - "Microcycles"
-  - "Volume_quantification"
-  - "Progressive_overload"
-source: "Empirical Cycling Podcast — Kolie Moore with Megan, Gediminas, Alex, Erica"
-author: "Kolie Moore"
-date: "2025-08-10"
-summary: "Empirical Cycling coaches provide actionable solutions for limiter gap analysis, low-volume rest week design, post-break return-to-training protocols, structuring high-volume camp weeks, and the physiological flaws of sporadic intervals."
+- Microcycle_and_schedule_design
+- Workload_quantification_and_modeling
+- Periodization_models_and_macrocycles
+source: Empirical Cycling Podcast — Kolie Moore with Megan, Gediminas, Alex, Erica
+author: Kolie Moore
+date: '2025-08-10'
+summary: Empirical Cycling coaches provide actionable solutions for limiter gap analysis, low-volume rest week design, post-break return-to-training protocols, structuring high-volume camp weeks, and the physiological flaws of sporadic intervals.
 key_takeaways:
-  - "Limiter gap analysis must look beyond the power curve: pack drafting, cornering momentum, cadence dynamics, and tactical efficiency often limit race performance more than raw watts."
-  - "Time-crunched athletes (<8 hrs/week) should not slash volume during deloads; instead, maintain easy Zone 2 volume, eliminate high-intensity intervals, and focus on psychological restoration."
-  - "Resuming training after a break requires a compressed re-entry progression (endurance → short openers → progressive threshold); do not force pre-break power targets on day one."
-  - "Unusually big training weeks (camps) should target 150–200% of baseline volume strictly at Zone 2 endurance, avoiding simultaneous high-intensity interval overload."
-  - "Sporadic intervals scattered randomly across a ride fail to replicate structured continuous blocks because they do not sustain the cellular oxidative stress necessary for threshold adaptation."
+- 'Limiter gap analysis must look beyond the power curve: pack drafting, cornering momentum, cadence dynamics, and tactical efficiency often limit race performance more than raw watts.'
+- Time-crunched athletes (<8 hrs/week) should not slash volume during deloads; instead, maintain easy Zone 2 volume, eliminate high-intensity intervals, and focus on psychological restoration.
+- Resuming training after a break requires a compressed re-entry progression (endurance → short openers → progressive threshold); do not force pre-break power targets on day one.
+- Unusually big training weeks (camps) should target 150–200% of baseline volume strictly at Zone 2 endurance, avoiding simultaneous high-intensity interval overload.
+- Sporadic intervals scattered randomly across a ride fail to replicate structured continuous blocks because they do not sustain the cellular oxidative stress necessary for threshold adaptation.
 ---
 
 # Ten Minute Tips #61: Coach Q&A on Limiters, Low-Volume Deloads, Break Resumption, & Training Camps — Complete Guide

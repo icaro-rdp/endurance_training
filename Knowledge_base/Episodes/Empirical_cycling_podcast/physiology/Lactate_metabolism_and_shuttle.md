@@ -1,18 +1,17 @@
 ---
-title: "Lactate Metabolism, Myths, & The Lactate Shuttle — Complete Guide"
-category: "physiology"
+title: Lactate Metabolism, Myths, & The Lactate Shuttle — Complete Guide
+category: physiology
 topics:
-  - "Lactate_shuttle"
-  - "LT1_VT1"
-  - "LT2_VT2"
-source: "Empirical Cycling Podcast — Kolie Moore (Watts Doc #6 & #17)"
-author: "Kolie Moore"
-date: "2020-04-07"
-summary: "Demystifies lactate production, dispelling the lactic acid myth, explaining NAD+ regeneration in glycolysis, and detailing the intra- and extra-cellular lactate shuttle via MCT1/MCT4 transporters."
+- Lactate_kinetics_and_metabolism
+- Thresholds_and_metabolic_domains
+source: 'Empirical Cycling Podcast — Kolie Moore (Watts Doc #6 & #17)'
+author: Kolie Moore
+date: '2020-04-07'
+summary: Demystifies lactate production, dispelling the lactic acid myth, explaining NAD+ regeneration in glycolysis, and detailing the intra- and extra-cellular lactate shuttle via MCT1/MCT4 transporters.
 key_takeaways:
-  - "Lactate is not a waste product or the cause of fatigue; it is a primary metabolic fuel and NAD+ regenerator."
-  - "Lactate dehydrogenase (LDH) converts pyruvate to lactate to sustain fast glycolytic flux."
-  - "MCT1 and MCT4 transporters enable the lactate shuttle, moving lactate to oxidative type I fibers and the heart."
+- Lactate is not a waste product or the cause of fatigue; it is a primary metabolic fuel and NAD+ regenerator.
+- Lactate dehydrogenase (LDH) converts pyruvate to lactate to sustain fast glycolytic flux.
+- MCT1 and MCT4 transporters enable the lactate shuttle, moving lactate to oxidative type I fibers and the heart.
 ---
 
 # Lactate Metabolism, Myths, & The Lactate Shuttle — Complete Guide

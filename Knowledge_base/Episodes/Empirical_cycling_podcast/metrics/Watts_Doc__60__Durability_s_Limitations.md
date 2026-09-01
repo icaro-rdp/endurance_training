@@ -1,20 +1,20 @@
 ---
-title: "Durability's Limitations: Definitions, Measurement via kJ/kg, Statistical Realities, and Fatigue Resistance — Complete Guide"
+title: 'Durability''s Limitations: Definitions, Measurement via kJ/kg, Statistical Realities, and Fatigue Resistance — Complete Guide'
 category: physiology
 topics:
-  - "Durability"
-  - "Power_vs_HR"
-  - "FTP"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #60)"
-author: "Kolie Moore"
-date: "2025-12-18"
-summary: "A critical breakdown of durability and fatigue resistance in cycling, evaluating historical definitions, allometric kJ/kg testing protocols, statistical correlations in scientific literature, and practical field prescriptions."
+- Durability_and_fatigue_mechanisms
+- Autonomic_and_cardiac_monitoring
+- FTP_and_functional_metrics
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #60)'
+author: Kolie Moore
+date: '2025-12-18'
+summary: A critical breakdown of durability and fatigue resistance in cycling, evaluating historical definitions, allometric kJ/kg testing protocols, statistical correlations in scientific literature, and practical field prescriptions.
 key_takeaways:
-  - "Durability is the time of onset and magnitude of deterioration in physiological power-duration parameters over prolonged exercise duration and work expenditure."
-  - "Evaluating fatigued power profiles using allometric work bins (10 to 50+ kJ/kg) provides an objective field measurement of fatigue resistance, but requires accurate fresh baseline efforts."
-  - "Durability is 'necessary but not sufficient': WorldTour pros and top performers lose less power when fatigued, but also possess significantly higher fresh baseline power outputs."
-  - "Published training correlations between low-intensity volume (<VT1) and durability are moderate at best (r ≈ 0.40, R² ≈ 0.16), though extensive base volume and fatigue management remain coaching fundamentals."
-  - "Distributing threshold and supra-threshold intervals throughout long endurance rides (e.g., 1x15 min per hour across 4 hours) trains race-specific durability without sacrificing interval execution."
+- Durability is the time of onset and magnitude of deterioration in physiological power-duration parameters over prolonged exercise duration and work expenditure.
+- Evaluating fatigued power profiles using allometric work bins (10 to 50+ kJ/kg) provides an objective field measurement of fatigue resistance, but requires accurate fresh baseline efforts.
+- 'Durability is ''necessary but not sufficient'': WorldTour pros and top performers lose less power when fatigued, but also possess significantly higher fresh baseline power outputs.'
+- Published training correlations between low-intensity volume (<VT1) and durability are moderate at best (r ≈ 0.40, R² ≈ 0.16), though extensive base volume and fatigue management remain coaching fundamentals.
+- Distributing threshold and supra-threshold intervals throughout long endurance rides (e.g., 1x15 min per hour across 4 hours) trains race-specific durability without sacrificing interval execution.
 ---
 
 # Durability's Limitations: Definitions, Measurement via kJ/kg, Statistical Realities, and Fatigue Resistance — Complete Guide

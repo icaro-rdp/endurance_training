@@ -1,23 +1,22 @@
 ---
-title: "2021 Best of Instagram AMA: Intensity Calibration, Periodization Models & Physiology — Q&A Guide"
+title: '2021 Best of Instagram AMA: Intensity Calibration, Periodization Models & Physiology — Q&A Guide'
 category: planning
 topics:
-  - "Aerobic_base"
-  - "FTP"
-  - "VO2max"
-  - "TTA_TTE"
-  - "Power_vs_HR"
-  - "Heavy_torque"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson"
-author: "Kolie Moore"
-date: "2022-02-08"
-summary: "Comprehensive Q&A guide compiling the top listener questions of 2021 on RPE anchoring for FTP and strength training, asymmetric over-unders, heart rate decoupling during Zone 2, high cadence venous return at VO2max, focused vs mixed periodization blocks, and protein turnover in endurance athletes."
+- Zone2_and_endurance_base
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+- Autonomic_and_cardiac_monitoring
+- Torque_and_cadence_drills
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson
+author: Kolie Moore
+date: '2022-02-08'
+summary: Comprehensive Q&A guide compiling the top listener questions of 2021 on RPE anchoring for FTP and strength training, asymmetric over-unders, heart rate decoupling during Zone 2, high cadence venous return at VO2max, focused vs mixed periodization blocks, and protein turnover in endurance athletes.
 key_takeaways:
-  - "RPE calibration relies on distinct physiological anchors: FTP represents a sustainable ~7/10 effort requiring steady concentration without escalating mental desperation, while base endurance represents the highest pace that remains conversationally effortless (below LT1)."
-  - "Over-unders must be programmed asymmetrically (e.g., 30s over / 4.5 min under) with unders placed at Tempo/Sweet Spot to enable true metabolic clearance and PCr resynthesis rather than symmetrical 5m/5m suffering."
-  - "Heart rate decoupling (cardiac drift) during Zone 2 rides is a normal physiological phenomenon driven by thermoregulation, catecholamines, and stroke volume dynamics; it does not preclude progression to threshold training if RPE remains stable."
-  - "At true VO2max, high pedaling cadence (105–115+ RPM) enhances venous return and diastolic filling, maximizing stroke volume and oxygen delivery."
-  - "Endurance athletes require 1.5–2.0 g/kg/day of protein to support continuous mitochondrial enzyme synthesis, capillary angiogenesis, and lean mass preservation."
+- 'RPE calibration relies on distinct physiological anchors: FTP represents a sustainable ~7/10 effort requiring steady concentration without escalating mental desperation, while base endurance represents the highest pace that remains conversationally effortless (below LT1).'
+- Over-unders must be programmed asymmetrically (e.g., 30s over / 4.5 min under) with unders placed at Tempo/Sweet Spot to enable true metabolic clearance and PCr resynthesis rather than symmetrical 5m/5m suffering.
+- Heart rate decoupling (cardiac drift) during Zone 2 rides is a normal physiological phenomenon driven by thermoregulation, catecholamines, and stroke volume dynamics; it does not preclude progression to threshold training if RPE remains stable.
+- At true VO2max, high pedaling cadence (105–115+ RPM) enhances venous return and diastolic filling, maximizing stroke volume and oxygen delivery.
+- Endurance athletes require 1.5–2.0 g/kg/day of protein to support continuous mitochondrial enzyme synthesis, capillary angiogenesis, and lean mass preservation.
 ---
 
 # 2021 Best of Instagram AMA: Intensity Calibration, Periodization Models & Physiology — Q&A Guide

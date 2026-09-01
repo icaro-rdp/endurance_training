@@ -1,20 +1,20 @@
 ---
-title: "Heart Rate vs. Power vs. RPE for Pacing Endurance Rides — Complete Guide"
+title: Heart Rate vs. Power vs. RPE for Pacing Endurance Rides — Complete Guide
 category: training
 topics:
-  - "Aerobic_base"
-  - "Power_vs_HR"
-  - "Lab_vs_field"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #15)"
-author: "Kolie Moore"
-date: "2019-12-23"
-summary: "An in-depth physiological analysis of endurance ride pacing strategies (Heart Rate vs. Power vs. RPE), explaining the neuromuscular and metabolic mechanisms behind cardiovascular drift (Henneman size principle, efficiency loss, glycogen depletion) and how to apply intuitive auto-regulated pacing."
+- Zone2_and_endurance_base
+- Autonomic_and_cardiac_monitoring
+- Physiological_testing_and_diagnostics
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #15)'
+author: Kolie Moore
+date: '2019-12-23'
+summary: An in-depth physiological analysis of endurance ride pacing strategies (Heart Rate vs. Power vs. RPE), explaining the neuromuscular and metabolic mechanisms behind cardiovascular drift (Henneman size principle, efficiency loss, glycogen depletion) and how to apply intuitive auto-regulated pacing.
 key_takeaways:
-  - "Aerobic decoupling (cardiovascular drift) is primarily driven by glycogen depletion in initially recruited slow-twitch motor units, forcing the Henneman size principle recruitment of larger, less efficient fast-twitch fibers."
-  - "Pacing strictly by Heart Rate forces mechanical power to decay over time, preserving cardiovascular load but potentially failing to aerobically stimulate higher-threshold motor units."
-  - "Pacing strictly by Power maintains mechanical stimulus and progressively adapts higher-threshold motor units, but can cause excessive autonomic stress when confounded by heat or dehydration."
-  - "Pacing by Rating of Perceived Exertion (RPE 4–5/10: 'purposeful work you can sustain all day') provides the optimal framework for daily auto-regulation and psychological longevity."
-  - "Joe Friel's <5% decoupling rule is an oversimplified benchmark; decoupling reflects duration-specific muscular fatigue rather than an absolute gatekeeper for high-intensity training."
+- Aerobic decoupling (cardiovascular drift) is primarily driven by glycogen depletion in initially recruited slow-twitch motor units, forcing the Henneman size principle recruitment of larger, less efficient fast-twitch fibers.
+- Pacing strictly by Heart Rate forces mechanical power to decay over time, preserving cardiovascular load but potentially failing to aerobically stimulate higher-threshold motor units.
+- Pacing strictly by Power maintains mechanical stimulus and progressively adapts higher-threshold motor units, but can cause excessive autonomic stress when confounded by heat or dehydration.
+- 'Pacing by Rating of Perceived Exertion (RPE 4–5/10: ''purposeful work you can sustain all day'') provides the optimal framework for daily auto-regulation and psychological longevity.'
+- Joe Friel's <5% decoupling rule is an oversimplified benchmark; decoupling reflects duration-specific muscular fatigue rather than an absolute gatekeeper for high-intensity training.
 ---
 
 # Heart Rate vs. Power vs. RPE for Pacing Endurance Rides — Complete Guide

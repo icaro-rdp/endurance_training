@@ -1,20 +1,19 @@
 ---
-title: "Ten Minute Tips #19: FTP Testing Shortcuts — Complete Guide"
+title: 'Ten Minute Tips #19: FTP Testing Shortcuts — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "TTA_TTE"
-  - "LT2_VT2"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Houston"
-author: "Kolie Moore"
-date: "2022-04-20"
-summary: "Kolie Moore and Kyle Houston explore practical, low-anxiety alternatives to exhaustive FTP testing, detailing submaximal and RPE-based methods to accurately diagnose threshold without derailing training blocks or inflating ego-driven power targets."
+- FTP_and_functional_metrics
+- Thresholds_and_metabolic_domains
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Houston
+author: Kolie Moore
+date: '2022-04-20'
+summary: Kolie Moore and Kyle Houston explore practical, low-anxiety alternatives to exhaustive FTP testing, detailing submaximal and RPE-based methods to accurately diagnose threshold without derailing training blocks or inflating ego-driven power targets.
 key_takeaways:
-  - "Testing anxiety and ego investment frequently distort formal FTP tests; relying on submaximal, RPE-based sessions avoids testing burnout while providing accurate training targets."
-  - "Method 1 (Blind Intervals): Riding a 2x20min or 3x15min session with power and HR hidden yields average power matching true FTP ~93% of the time in experienced athletes."
-  - "Method 2 (Step-Up Exploration): Stepping up power in 5–10 minute increments identifies threshold at the exact breakpoint where breathing shifts from controlled/labored to ragged/hyperventilating."
-  - "Crossing threshold triggers a rapid breakpoint in motor unit recruitment and ventilation due to the non-linear shift from oxidative phosphorylation (34 ATP) to substrate-level glycolysis (2 ATP)."
-  - "Never chase 'outlier good days' or adjust FTP targets for variations under 10 Watts; training with consistent, conservative baselines yields superior progressive overload."
+- Testing anxiety and ego investment frequently distort formal FTP tests; relying on submaximal, RPE-based sessions avoids testing burnout while providing accurate training targets.
+- 'Method 1 (Blind Intervals): Riding a 2x20min or 3x15min session with power and HR hidden yields average power matching true FTP ~93% of the time in experienced athletes.'
+- 'Method 2 (Step-Up Exploration): Stepping up power in 5–10 minute increments identifies threshold at the exact breakpoint where breathing shifts from controlled/labored to ragged/hyperventilating.'
+- Crossing threshold triggers a rapid breakpoint in motor unit recruitment and ventilation due to the non-linear shift from oxidative phosphorylation (34 ATP) to substrate-level glycolysis (2 ATP).
+- Never chase 'outlier good days' or adjust FTP targets for variations under 10 Watts; training with consistent, conservative baselines yields superior progressive overload.
 ---
 
 # Ten Minute Tips #19: FTP Testing Shortcuts — Complete Guide

@@ -2,17 +2,15 @@
 title: 'Optimizing HIT Aerobic Workouts: the Decreasing Length Intervals'
 category: training
 topics:
-- FTP
-- CP
-- VO2max
-- LT2_VT2
-- Short_intervals
-source: 'knowledgeiswatt.substack.com/p/134-optimizing-hit-aerobic-workouts Date:
-  February'
+- FTP_and_functional_metrics
+- Critical_power_and_w_prime
+- VO2max_and_aerobic_kinetics
+- Thresholds_and_metabolic_domains
+- VO2max_and_aerobic_hiit
+source: 'knowledgeiswatt.substack.com/p/134-optimizing-hit-aerobic-workouts Date: February'
 author: Endurance Research
 date: 'Source: knowledgeiswatt.substack.com/p/134-optimizing-hit-aerobic-workouts  February'
-summary: 20, 2026 The search for optimized HIT sessions is based on understanding
-  exercise physiology principles and
+summary: 20, 2026 The search for optimized HIT sessions is based on understanding exercise physiology principles and
 ---
 
 # Optimizing HIT Aerobic Workouts: the Decreasing Length Intervals

@@ -1,21 +1,21 @@
 ---
-title: "Perspectives #1: The Challenges of Self-Coaching, Athlete Self-Knowledge, & Pandemic Periodization — Complete Guide"
+title: 'Perspectives #1: The Challenges of Self-Coaching, Athlete Self-Knowledge, & Pandemic Periodization — Complete Guide'
 category: planning
 topics:
-  - "Microcycles"
-  - "TTA_TTE"
-  - "Durability"
-  - "Aerobic_base"
-  - "Progressive_overload"
-source: "Empirical Cycling Podcast — Kolie Moore & Alex Carmona (Perspectives #1)"
-author: "Kolie Moore"
-date: "2021-02-14"
-summary: "An in-depth analysis of the physiological and psychological challenges of self-coaching, cognitive biases in workout prescription, the value of phenotypic self-knowledge ('know thyself'), training periodization without competition, and establishing objective self-feedback loops."
+- Microcycle_and_schedule_design
+- FTP_and_functional_metrics
+- Durability_and_fatigue_mechanisms
+- Zone2_and_endurance_base
+- Periodization_models_and_macrocycles
+source: 'Empirical Cycling Podcast — Kolie Moore & Alex Carmona (Perspectives #1)'
+author: Kolie Moore
+date: '2021-02-14'
+summary: An in-depth analysis of the physiological and psychological challenges of self-coaching, cognitive biases in workout prescription, the value of phenotypic self-knowledge ('know thyself'), training periodization without competition, and establishing objective self-feedback loops.
 key_takeaways:
-  - "The Cognitive Blind Spot in Self-Coaching: Athletes coaching themselves struggle with emotional detachment, frequently misinterpreting acute fatigue as laziness and stacking excessive high-intensity workouts instead of necessary restorative microcycles."
-  - "'Know Thyself' as a Physiological Anchor: Effective training requires an accurate assessment of individual metabolic phenotype (fast-twitch glycolytic vs. slow-twitch oxidative) and recovery kinetics rather than rigid adherence to generalized percentage-based training templates."
-  - "Progressive Overload via TTE Extension: Self-coached athletes frequently make the mistake of raising target wattage too soon; the superior adaptation protocol is extending Time-to-Exhaustion (TTE) at a stable FTP before attempting power increases."
-  - "Systematic Qualitative Journaling: Overcoming subjective bias requires detailed qualitative logging (RPE, muscular sensation, autonomic cues, cognitive willingness to train) analyzed alongside objective power and heart rate metrics."
+- 'The Cognitive Blind Spot in Self-Coaching: Athletes coaching themselves struggle with emotional detachment, frequently misinterpreting acute fatigue as laziness and stacking excessive high-intensity workouts instead of necessary restorative microcycles.'
+- '''Know Thyself'' as a Physiological Anchor: Effective training requires an accurate assessment of individual metabolic phenotype (fast-twitch glycolytic vs. slow-twitch oxidative) and recovery kinetics rather than rigid adherence to generalized percentage-based training templates.'
+- 'Progressive Overload via TTE Extension: Self-coached athletes frequently make the mistake of raising target wattage too soon; the superior adaptation protocol is extending Time-to-Exhaustion (TTE) at a stable FTP before attempting power increases.'
+- 'Systematic Qualitative Journaling: Overcoming subjective bias requires detailed qualitative logging (RPE, muscular sensation, autonomic cues, cognitive willingness to train) analyzed alongside objective power and heart rate metrics.'
 ---
 
 # Perspectives #1: The Challenges of Self-Coaching, Athlete Self-Knowledge, & Pandemic Periodization — Complete Guide

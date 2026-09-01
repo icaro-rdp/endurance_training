@@ -2,10 +2,9 @@
 title: 'Glucose-fructose Ratio: Check What You Buy!'
 category: nutrition
 topics:
-- VO2max
-- Carbohydrate_ratio
-source: 'knowledgeiswatt.substack.com/p/56-glucose-fructose-ratio-check-what Date:
-  January'
+- VO2max_and_aerobic_kinetics
+- Carbohydrate_fueling_and_gut_training
+source: 'knowledgeiswatt.substack.com/p/56-glucose-fructose-ratio-check-what Date: January'
 author: Endurance Research
 date: 'Source: knowledgeiswatt.substack.com/p/56-glucose-fructose-ratio-check-what  January'
 summary: '17, 2025 In the previous KisW research notes, we saw that:'

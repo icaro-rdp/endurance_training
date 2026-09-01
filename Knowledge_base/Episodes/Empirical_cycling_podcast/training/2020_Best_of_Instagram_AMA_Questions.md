@@ -1,23 +1,22 @@
 ---
-title: "2020 Best of Instagram AMA: Training Fundamentals, Fat Oxidation, Strength Retention, and Recovery Dynamics — Q&A Guide"
+title: '2020 Best of Instagram AMA: Training Fundamentals, Fat Oxidation, Strength Retention, and Recovery Dynamics — Q&A Guide'
 category: planning
 topics:
-  - "Aerobic_base"
-  - "TTA_TTE"
-  - "FTP"
-  - "Fat_oxidation"
-  - "Durability"
-  - "Heavy_torque"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson"
-author: "Kolie Moore"
-date: "2020-12-23"
-summary: "Essential Q&A guide resolving listener questions on the recovery hierarchy vs marginal recovery gimmicks, sizing Sweet Spot intervals relative to individual TTE, endurance training fat oxidation vs dietary ketosis, in-season heavy strength maintenance, and curing post-recovery-week flatness."
+- Zone2_and_endurance_base
+- FTP_and_functional_metrics
+- Substrate_utilization_and_fat_oxidation
+- Durability_and_fatigue_mechanisms
+- Torque_and_cadence_drills
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson
+author: Kolie Moore
+date: '2020-12-23'
+summary: Essential Q&A guide resolving listener questions on the recovery hierarchy vs marginal recovery gimmicks, sizing Sweet Spot intervals relative to individual TTE, endurance training fat oxidation vs dietary ketosis, in-season heavy strength maintenance, and curing post-recovery-week flatness.
 key_takeaways:
-  - "True recovery is 99% sleep, total caloric/carbohydrate intake, and stress management; recovery gadgets (boots, ice baths, cupping) are marginal or psychological crutches."
-  - "Sweet Spot session duration must scale relative to the athlete's current sub-threshold Time-to-Exhaustion (TTE); broken interval sets allow accumulating total work far beyond continuous TTE without metabolic failure."
-  - "Dietary fat adaptation (keto/LCHF) impairs high-intensity glycolytic enzyme activity (pyruvate dehydrogenase downregulation), whereas endurance training enhances fat oxidation while preserving full anaerobic glycolytic power."
-  - "In-season strength is maintained with minimal fatigue via 1 low-volume session weekly (3–5 reps at 70–80% 1RM, RPE 7–8) paired with adequate dietary protein (1.5 g/kg/day)."
-  - "Post-recovery-week lethargy stems from autonomic/hormonal downshift; it is resolved with short neuromuscular openers or 30–60 minutes of Zone 3 tempo priming rather than complete passive rest."
+- True recovery is 99% sleep, total caloric/carbohydrate intake, and stress management; recovery gadgets (boots, ice baths, cupping) are marginal or psychological crutches.
+- Sweet Spot session duration must scale relative to the athlete's current sub-threshold Time-to-Exhaustion (TTE); broken interval sets allow accumulating total work far beyond continuous TTE without metabolic failure.
+- Dietary fat adaptation (keto/LCHF) impairs high-intensity glycolytic enzyme activity (pyruvate dehydrogenase downregulation), whereas endurance training enhances fat oxidation while preserving full anaerobic glycolytic power.
+- In-season strength is maintained with minimal fatigue via 1 low-volume session weekly (3–5 reps at 70–80% 1RM, RPE 7–8) paired with adequate dietary protein (1.5 g/kg/day).
+- Post-recovery-week lethargy stems from autonomic/hormonal downshift; it is resolved with short neuromuscular openers or 30–60 minutes of Zone 3 tempo priming rather than complete passive rest.
 ---
 
 # 2020 Best of Instagram AMA: Training Fundamentals, Fat Oxidation, Strength Retention, and Recovery Dynamics — Q&A Guide

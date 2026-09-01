@@ -1,21 +1,21 @@
 ---
-title: "The Relationship Between Size and Power (Allometry & Scaling) — Complete Guide"
+title: The Relationship Between Size and Power (Allometry & Scaling) — Complete Guide
 category: physiology
 topics:
-  - "FTP"
-  - "VO2max"
-  - "Sprint_performance"
-  - "Power_vs_HR"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #42)"
-author: "Kolie Moore"
-date: "2023-01-17"
-summary: "A comprehensive analysis of allometric scaling laws in endurance and strength sports, explaining why gaining muscle does not raise aerobic power, how absolute power versus W/kg and W/CdA govern cycling physics, and the physiological basis of the Grand Tour winner phenotype."
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+- Sprint_and_anaerobic_intervals
+- Autonomic_and_cardiac_monitoring
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #42)'
+author: Kolie Moore
+date: '2023-01-17'
+summary: A comprehensive analysis of allometric scaling laws in endurance and strength sports, explaining why gaining muscle does not raise aerobic power, how absolute power versus W/kg and W/CdA govern cycling physics, and the physiological basis of the Grand Tour winner phenotype.
 key_takeaways:
-  - "VO2max is centrally limited by cardiac stroke volume and vascular delivery, not peripheral muscle mass; adding muscular hypertrophy without aerobic training dilutes oxygen delivery and fails to increase FTP."
-  - "Allometric scaling reveals that absolute VO2max scales with body mass to the ~0.87–0.94 power, while relative VO2max (mL/kg/min) scales inversely (M^-0.13), giving smaller athletes a natural W/kg advantage and larger athletes a raw wattage advantage."
-  - "Muscular force generation scales with cross-sectional area (M^0.67 or 2/3 power), explaining why smaller athletes have higher relative strength-to-weight ratios, while larger athletes produce superior absolute peak sprint power."
-  - "On flat terrain, power-to-aerodynamic drag (W/CdA) dominates because frontal surface area scales with M^0.67 while absolute aerobic power scales with M^0.87–0.90, heavily favoring larger, taller riders."
-  - "The prototypical Grand Tour GC rider (~180 cm, 65–70 kg) represents the biological sweet spot balancing high absolute aerobic engine size (5.5–6.0+ L/min) with world-class climbing W/kg (>6.0 W/kg)."
+- VO2max is centrally limited by cardiac stroke volume and vascular delivery, not peripheral muscle mass; adding muscular hypertrophy without aerobic training dilutes oxygen delivery and fails to increase FTP.
+- Allometric scaling reveals that absolute VO2max scales with body mass to the ~0.87–0.94 power, while relative VO2max (mL/kg/min) scales inversely (M^-0.13), giving smaller athletes a natural W/kg advantage and larger athletes a raw wattage advantage.
+- Muscular force generation scales with cross-sectional area (M^0.67 or 2/3 power), explaining why smaller athletes have higher relative strength-to-weight ratios, while larger athletes produce superior absolute peak sprint power.
+- On flat terrain, power-to-aerodynamic drag (W/CdA) dominates because frontal surface area scales with M^0.67 while absolute aerobic power scales with M^0.87–0.90, heavily favoring larger, taller riders.
+- The prototypical Grand Tour GC rider (~180 cm, 65–70 kg) represents the biological sweet spot balancing high absolute aerobic engine size (5.5–6.0+ L/min) with world-class climbing W/kg (>6.0 W/kg).
 ---
 
 # The Relationship Between Size and Power (Allometry & Scaling) — Complete Guide

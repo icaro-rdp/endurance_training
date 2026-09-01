@@ -2,14 +2,12 @@
 title: What is Better to Improve Your Sprint?
 category: planning
 topics:
-- VO2max
-- Durability
-source: 'knowledgeiswatt.substack.com/p/74-sprints-on-the-bike-vs-gym-training Date:
-  April'
+- VO2max_and_aerobic_kinetics
+- Durability_and_fatigue_mechanisms
+source: 'knowledgeiswatt.substack.com/p/74-sprints-on-the-bike-vs-gym-training Date: April'
 author: Endurance Research
 date: 'Source: knowledgeiswatt.substack.com/p/74-sprints-on-the-bike-vs-gym-training  April'
-summary: 22, 2025 In a previous post we saw that heavy gym strength training improve
-  W/Kg performance for effort
+summary: 22, 2025 In a previous post we saw that heavy gym strength training improve W/Kg performance for effort
 ---
 
 # What is Better to Improve Your Sprint?

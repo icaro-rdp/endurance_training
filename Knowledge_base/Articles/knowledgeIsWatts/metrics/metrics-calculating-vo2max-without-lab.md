@@ -2,17 +2,13 @@
 title: Calculating VO2max Without Lab Test
 category: physiology
 topics:
-- FTP
-- VO2max
-- Durability
-source: 'knowledgeiswatt.substack.com/p/70-calculating-vo2max-without-lab Date: April
-  4, 2025'
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+- Durability_and_fatigue_mechanisms
+source: 'knowledgeiswatt.substack.com/p/70-calculating-vo2max-without-lab Date: April 4, 2025'
 author: Endurance Research
-date: 'Source: knowledgeiswatt.substack.com/p/70-calculating-vo2max-without-lab  April
-  4, 2025'
-summary: VO2max (maximum oxygen consumption) is the maximum amount of oxygen that
-  the body can use per minute to produce energy (watts). So, it a metric representing
-  the horsepower of the athlete’s aerobic
+date: 'Source: knowledgeiswatt.substack.com/p/70-calculating-vo2max-without-lab  April 4, 2025'
+summary: VO2max (maximum oxygen consumption) is the maximum amount of oxygen that the body can use per minute to produce energy (watts). So, it a metric representing the horsepower of the athlete’s aerobic
 ---
 
 # Calculating VO2max Without Lab Test

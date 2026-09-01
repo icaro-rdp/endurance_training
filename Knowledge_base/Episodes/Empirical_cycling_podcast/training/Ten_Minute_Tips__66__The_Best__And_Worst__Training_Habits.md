@@ -1,19 +1,19 @@
 ---
-title: "The Best (And Worst) Training Habits — Complete Guide"
+title: The Best (And Worst) Training Habits — Complete Guide
 category: planning
 topics:
-  - "Microcycles"
-  - "Carbohydrate_ratio"
-  - "Volume_quantification"
-source: "Empirical Cycling Podcast — Kolie Moore, Erica Zaveta, Gediminas Bagdonas (Ten Minute Tips #66)"
-author: "Kolie Moore"
-date: "2025-10-29"
-summary: "An analysis of critical habits across routine, auto-regulation, nutrition, sleep, and psychological framing in endurance cycling. Examines how constructive habits can turn detrimental when taken to rigid extremes."
+- Microcycle_and_schedule_design
+- Carbohydrate_fueling_and_gut_training
+- Workload_quantification_and_modeling
+source: 'Empirical Cycling Podcast — Kolie Moore, Erica Zaveta, Gediminas Bagdonas (Ten Minute Tips #66)'
+author: Kolie Moore
+date: '2025-10-29'
+summary: An analysis of critical habits across routine, auto-regulation, nutrition, sleep, and psychological framing in endurance cycling. Examines how constructive habits can turn detrimental when taken to rigid extremes.
 key_takeaways:
-  - "Consistency is the primary driver of aerobic adaptation, but rigid dogmatic consistency (e.g., chasing green boxes in TrainingPeaks at the expense of recovery) leads to chronic stagnation."
-  - "Daily nutrition dictates recovery bandwidth; over-focusing on on-the-bike fueling while under-fueling off the bike—or crowding out carbohydrates with excessive fibrous vegetables—impairs glycogen resynthesis."
-  - "Auto-regulation is essential: training plans must be adaptable to biological signals rather than treated as unchangeable prescriptions."
-  - "Long-term athletic progression is logarithmic; expecting breakthrough performance from minor micro-adjustments creates unnecessary testing anxiety and burnout."
+- Consistency is the primary driver of aerobic adaptation, but rigid dogmatic consistency (e.g., chasing green boxes in TrainingPeaks at the expense of recovery) leads to chronic stagnation.
+- Daily nutrition dictates recovery bandwidth; over-focusing on on-the-bike fueling while under-fueling off the bike—or crowding out carbohydrates with excessive fibrous vegetables—impairs glycogen resynthesis.
+- 'Auto-regulation is essential: training plans must be adaptable to biological signals rather than treated as unchangeable prescriptions.'
+- Long-term athletic progression is logarithmic; expecting breakthrough performance from minor micro-adjustments creates unnecessary testing anxiety and burnout.
 ---
 
 # The Best (And Worst) Training Habits — Complete Guide

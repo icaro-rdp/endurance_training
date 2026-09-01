@@ -1,22 +1,21 @@
 ---
-title: "FTP Training Mistakes and Solutions — Complete Guide"
+title: FTP Training Mistakes and Solutions — Complete Guide
 category: physiology
 topics:
-  - "FTP"
-  - "TTA_TTE"
-  - "VO2max"
-  - "Durability"
-  - "Progressive_overload"
-source: "Empirical Cycling Podcast — Ten Minute Tips #74"
-author: "Kolie Moore"
-date: "2026-03-14"
-summary: "Kolie Moore, Erica Zaveta, and Dr. Fabiano analyze the most prevalent mistakes in FTP testing, interval execution, periodization, and physiological ceiling limits, providing actionable frameworks for sustainable threshold progression."
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+- Durability_and_fatigue_mechanisms
+- Periodization_models_and_macrocycles
+source: 'Empirical Cycling Podcast — Ten Minute Tips #74'
+author: Kolie Moore
+date: '2026-03-14'
+summary: Kolie Moore, Erica Zaveta, and Dr. Fabiano analyze the most prevalent mistakes in FTP testing, interval execution, periodization, and physiological ceiling limits, providing actionable frameworks for sustainable threshold progression.
 key_takeaways:
-  - "Short testing protocols (2x8min, ramp tests, fixed 4mmol lactate thresholds) frequently overestimate FTP by relying heavily on anaerobic capacity ($W'$)."
-  - "The minimum effective duration for pure threshold intervals is 12–15 minutes; shorter reps risk turning into uncontrolled supra-threshold/VO2 efforts."
-  - "Never pace the first interval maximally; start 5–10W conservative, calibrate RPE, and progress intensity or extend duration on the final repetition."
-  - "When FTP plateaus after an extensive block, athletes have hit their fractional utilization ceiling; the next step is raising VO2max ('the roof') or extending Time-to-Exhaustion (TTE)."
-  - "Acute day-to-day power drops of 15–25W indicate accumulated fatigue, thermoregulatory strain, or underfueling—true baseline metabolic FTP remains stable."
+- Short testing protocols (2x8min, ramp tests, fixed 4mmol lactate thresholds) frequently overestimate FTP by relying heavily on anaerobic capacity ($W'$).
+- The minimum effective duration for pure threshold intervals is 12–15 minutes; shorter reps risk turning into uncontrolled supra-threshold/VO2 efforts.
+- Never pace the first interval maximally; start 5–10W conservative, calibrate RPE, and progress intensity or extend duration on the final repetition.
+- When FTP plateaus after an extensive block, athletes have hit their fractional utilization ceiling; the next step is raising VO2max ('the roof') or extending Time-to-Exhaustion (TTE).
+- Acute day-to-day power drops of 15–25W indicate accumulated fatigue, thermoregulatory strain, or underfueling—true baseline metabolic FTP remains stable.
 ---
 
 # FTP Training Mistakes and Solutions — Complete Guide

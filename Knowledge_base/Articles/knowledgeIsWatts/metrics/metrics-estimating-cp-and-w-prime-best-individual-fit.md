@@ -2,16 +2,13 @@
 title: 'How to Accurately Estimate CP and W'': the ''best Individual Fit'' Method'
 category: physiology
 topics:
-- FTP
-- CP
-- W_prime
-- LT2_VT2
+- FTP_and_functional_metrics
+- Critical_power_and_w_prime
+- Thresholds_and_metabolic_domains
 source: Knowledge Base
 author: Endurance Research
 date: '2025-01-01'
-summary: 'From the well-established hyperbolic relationship between power output and
-  the duration for which that power can be sustained, two fundamental parameters can
-  be derived: Critical'
+summary: 'From the well-established hyperbolic relationship between power output and the duration for which that power can be sustained, two fundamental parameters can be derived: Critical'
 ---
 
 # How to Accurately Estimate CP and W': the 'best Individual Fit' Method

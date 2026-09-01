@@ -1,23 +1,23 @@
 ---
-title: "Ten Minute Tips #48: Avoiding Over-Optimization — Complete Guide"
+title: 'Ten Minute Tips #48: Avoiding Over-Optimization — Complete Guide'
 category: planning
 topics:
-  - "Volume_quantification"
-  - "Microcycles"
-  - "Aerobic_base"
-  - "Durability"
-  - "Lab_vs_field"
-source: "Empirical Cycling Podcast — Kolie Moore & Empirical Cycling Coaches (Ten Minute Tips #48)"
-author: "Kolie Moore"
-date: "2025-01-19"
-summary: "An extensive coaching roundtable examining the dangers of over-optimization in endurance training, contrasting high-impact foundational habits (sustainable volume, strict easy Zone 2 discipline, allostatic stress management, and process goals) against fragile 1% marginal optimizations."
+- Workload_quantification_and_modeling
+- Microcycle_and_schedule_design
+- Zone2_and_endurance_base
+- Durability_and_fatigue_mechanisms
+- Physiological_testing_and_diagnostics
+source: 'Empirical Cycling Podcast — Kolie Moore & Empirical Cycling Coaches (Ten Minute Tips #48)'
+author: Kolie Moore
+date: '2025-01-19'
+summary: An extensive coaching roundtable examining the dangers of over-optimization in endurance training, contrasting high-impact foundational habits (sustainable volume, strict easy Zone 2 discipline, allostatic stress management, and process goals) against fragile 1% marginal optimizations.
 key_takeaways:
-  - "The 99% vs. 1% paradigm: Sustainable progress is driven by consistent weekly volume, sufficient carbohydrate fueling, and restorative sleep—not by obsessing over marginal supplements, exact wattage decimals, or trending social media interval fads."
-  - "Allostatic load & systemic stress: The central nervous system integrates training strain, occupational stress, and life disruption into a single physiological load; forcing interval workouts during periods of severe life stress (8–10/10) halts adaptation and induces overtraining."
-  - "Peaks and valleys in Zone 2 discipline: To preserve freshness for high-quality threshold/VO2max bouts, endurance rides must remain in the low-intensity 'valley' ($50{--}65%{ FTP}$, $IF < 0.65$); riding base volume at tempo ($IF ~ 0.75{--}0.80$) creates chronic autonomic fatigue."
-  - "Process goals outperform outcome metrics: Focusing on actionable tactical skills (pack positioning, cornering efficiency, in-race fueling) yields better competitive results than fixating on arbitrary FTP jumps."
-  - "Power profile vs. racecraft reality: High fresh watts-per-kilogram on a Coggan power chart is meaningless without tactical positioning, draft conservation, and late-race fatigue resistance."
-  - "Virtuous cycle of 85–90% consistency: Long-term multi-year development thrives on repeatable 85–90% consistency rather than unsustainable cycles of 100% perfection followed by illness, burnout, or injury."
+- 'The 99% vs. 1% paradigm: Sustainable progress is driven by consistent weekly volume, sufficient carbohydrate fueling, and restorative sleep—not by obsessing over marginal supplements, exact wattage decimals, or trending social media interval fads.'
+- 'Allostatic load & systemic stress: The central nervous system integrates training strain, occupational stress, and life disruption into a single physiological load; forcing interval workouts during periods of severe life stress (8–10/10) halts adaptation and induces overtraining.'
+- 'Peaks and valleys in Zone 2 discipline: To preserve freshness for high-quality threshold/VO2max bouts, endurance rides must remain in the low-intensity ''valley'' ($50{--}65%{ FTP}$, $IF < 0.65$); riding base volume at tempo ($IF ~ 0.75{--}0.80$) creates chronic autonomic fatigue.'
+- 'Process goals outperform outcome metrics: Focusing on actionable tactical skills (pack positioning, cornering efficiency, in-race fueling) yields better competitive results than fixating on arbitrary FTP jumps.'
+- 'Power profile vs. racecraft reality: High fresh watts-per-kilogram on a Coggan power chart is meaningless without tactical positioning, draft conservation, and late-race fatigue resistance.'
+- 'Virtuous cycle of 85–90% consistency: Long-term multi-year development thrives on repeatable 85–90% consistency rather than unsustainable cycles of 100% perfection followed by illness, burnout, or injury.'
 ---
 
 # Ten Minute Tips #48: Avoiding Over-Optimization — Complete Guide

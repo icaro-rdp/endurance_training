@@ -1,22 +1,22 @@
 ---
-title: "Ten Minute Tips #42: The Training Implications Of Strength As A Skill — Complete Guide"
+title: 'Ten Minute Tips #42: The Training Implications Of Strength As A Skill — Complete Guide'
 category: training
 topics:
-  - "Sprint_performance"
-  - "Unilateral"
-  - "Periodization"
-  - "Heavy_torque"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Helson (Ten Minute Tips #42)"
-author: "Kolie Moore"
-date: "2024-10-16"
-summary: "Explores the neurological reality that strength is a motor skill, clarifying the distinction between barbell-specific coordination and on-bike force production, establishing the minimum effective dose for in-season strength maintenance, and analyzing unilateral stability constraints."
+- Sprint_and_anaerobic_intervals
+- Strength_and_resistance_training
+- Periodization_models_and_macrocycles
+- Torque_and_cadence_drills
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Helson (Ten Minute Tips #42)'
+author: Kolie Moore
+date: '2024-10-16'
+summary: Explores the neurological reality that strength is a motor skill, clarifying the distinction between barbell-specific coordination and on-bike force production, establishing the minimum effective dose for in-season strength maintenance, and analyzing unilateral stability constraints.
 key_takeaways:
-  - "Strength is a motor coordination skill: early strength gains reflect neural motor unit recruitment, firing rate synchronization, and movement efficiency rather than immediate hypertrophy."
-  - "Squat 1RM does not equal on-bike strength: a reduction in barbell squat numbers during the season indicates decay in the squat-specific motor pattern, not a loss in maximal muscular contractile force on the pedals."
-  - "Unilateral and supported movements maximize transfer: single-leg presses and split squats closely match the stability profile of cycling while reducing axial spinal loading."
-  - "Minimum Effective Dose (MED) for maintenance: 3 to 6 total sets of 1 to 5 reps at 7–8/10 RPE performed once weekly maintains maximal neuromuscular recruitment with minimal metabolic fatigue."
-  - "Maximize strength without mass: to avoid unwanted hypertrophy, keep total set volume low, avoid training to failure, and minimize eccentric muscular damage."
-  - "Autonomic vs. muscular fatigue: heavy low-rep lifting creates high central nervous system (CNS) lethargy despite low muscle soreness; allow 24–48 hours before high-intensity interval sessions."
+- 'Strength is a motor coordination skill: early strength gains reflect neural motor unit recruitment, firing rate synchronization, and movement efficiency rather than immediate hypertrophy.'
+- 'Squat 1RM does not equal on-bike strength: a reduction in barbell squat numbers during the season indicates decay in the squat-specific motor pattern, not a loss in maximal muscular contractile force on the pedals.'
+- 'Unilateral and supported movements maximize transfer: single-leg presses and split squats closely match the stability profile of cycling while reducing axial spinal loading.'
+- 'Minimum Effective Dose (MED) for maintenance: 3 to 6 total sets of 1 to 5 reps at 7–8/10 RPE performed once weekly maintains maximal neuromuscular recruitment with minimal metabolic fatigue.'
+- 'Maximize strength without mass: to avoid unwanted hypertrophy, keep total set volume low, avoid training to failure, and minimize eccentric muscular damage.'
+- 'Autonomic vs. muscular fatigue: heavy low-rep lifting creates high central nervous system (CNS) lethargy despite low muscle soreness; allow 24–48 hours before high-intensity interval sessions.'
 ---
 
 # Ten Minute Tips #42: The Training Implications Of Strength As A Skill — Complete Guide

@@ -1,20 +1,20 @@
 ---
-title: "Why Keto Is Not The Diet You're Looking For: Economy Penalties, Glycolytic Blunting, & The Burke Studies — Complete Guide"
-category: "nutrition"
+title: 'Why Keto Is Not The Diet You''re Looking For: Economy Penalties, Glycolytic Blunting, & The Burke Studies — Complete Guide'
+category: nutrition
 topics:
-  - "Carbohydrate_ratio"
-  - "Fat_oxidation"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #34)"
-author: "Kolie Moore"
-date: "2021-11-15"
-summary: "A rigorous examination of the biochemistry of ketogenic diets in endurance sport, analyzing the landmark Louise Burke Supernova studies, the oxygen economy penalty of fat oxidation, down-regulation of carbohydrate enzymes, and why LCHF diets fail to improve competitive cycling performance."
+- Carbohydrate_fueling_and_gut_training
+- Substrate_utilization_and_fat_oxidation
+- Durability_and_fatigue_mechanisms
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #34)'
+author: Kolie Moore
+date: '2021-11-15'
+summary: A rigorous examination of the biochemistry of ketogenic diets in endurance sport, analyzing the landmark Louise Burke Supernova studies, the oxygen economy penalty of fat oxidation, down-regulation of carbohydrate enzymes, and why LCHF diets fail to improve competitive cycling performance.
 key_takeaways:
-  - "Ketogenic (LCHF) diets dramatically increase maximal fat oxidation rates (up to 1.5–1.9 g/min) but fail to translate into improved race performance or prolonged time-to-exhaustion."
-  - "Fat oxidation carries a significant oxygen economy penalty: producing ATP from fat yields 4.86 kcal/L O2 compared to 5.05 kcal/L O2 from carbohydrates, forcing athletes to work at a higher percentage of VO2max for the same power or speed."
-  - "In the landmark Burke studies on Olympic race walkers, 3 weeks of intensified training produced significant 2–3 minute gains in high-carb and periodized-carb groups, while completely negating performance improvements in the keto group."
-  - "Carbohydrate reintroduction following keto adaptation restores baseline performance but yields zero additive super-compensation compared to maintaining chronic carbohydrate availability."
-  - "Competitive cycling is decided by supra-threshold surges, steep climbs, and final sprints; chronic LCHF downregulates Pyruvate Dehydrogenase (PDH), crippling top-end power output by 40–70 W."
+- Ketogenic (LCHF) diets dramatically increase maximal fat oxidation rates (up to 1.5–1.9 g/min) but fail to translate into improved race performance or prolonged time-to-exhaustion.
+- 'Fat oxidation carries a significant oxygen economy penalty: producing ATP from fat yields 4.86 kcal/L O2 compared to 5.05 kcal/L O2 from carbohydrates, forcing athletes to work at a higher percentage of VO2max for the same power or speed.'
+- In the landmark Burke studies on Olympic race walkers, 3 weeks of intensified training produced significant 2–3 minute gains in high-carb and periodized-carb groups, while completely negating performance improvements in the keto group.
+- Carbohydrate reintroduction following keto adaptation restores baseline performance but yields zero additive super-compensation compared to maintaining chronic carbohydrate availability.
+- Competitive cycling is decided by supra-threshold surges, steep climbs, and final sprints; chronic LCHF downregulates Pyruvate Dehydrogenase (PDH), crippling top-end power output by 40–70 W.
 ---
 
 # Why Keto Is Not The Diet You're Looking For: Economy Penalties, Glycolytic Blunting, & The Burke Studies — Complete Guide

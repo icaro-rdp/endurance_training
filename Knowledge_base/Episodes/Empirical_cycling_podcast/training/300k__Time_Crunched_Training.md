@@ -1,22 +1,21 @@
 ---
-title: "Time-Crunched Training: Volume vs. Intensity, Progressive Overload & Fatigue Management — Complete Guide"
+title: 'Time-Crunched Training: Volume vs. Intensity, Progressive Overload & Fatigue Management — Complete Guide'
 category: planning
 topics:
-  - "Progressive_overload"
-  - "Aerobic_base"
-  - "TTA_TTE"
-  - "Volume_quantification"
-  - "FTP"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson"
-author: "Kolie Moore"
-date: "2022-05-18"
-summary: "A rigorous analysis of time-crunched endurance training (4–8 hours/week), exploring the biological limits of substituting volume with intensity, progressive overload frameworks, TSS pitfalls, and autonomic recovery management."
+- Periodization_models_and_macrocycles
+- Zone2_and_endurance_base
+- FTP_and_functional_metrics
+- Workload_quantification_and_modeling
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson
+author: Kolie Moore
+date: '2022-05-18'
+summary: A rigorous analysis of time-crunched endurance training (4–8 hours/week), exploring the biological limits of substituting volume with intensity, progressive overload frameworks, TSS pitfalls, and autonomic recovery management.
 key_takeaways:
-  - "Intensity cannot indefinitely replace volume; while novice athletes experience initial aerobic gains from high-intensity intervals, adaptation rapidly plateaus without sufficient aerobic base volume."
-  - "Attempting to compensate for limited weekly hours by chasing high TSS or elevated Intensity Factors (IF) leads directly to chronic autonomic fatigue and overtraining."
-  - "Progressive overload on low volume requires extending continuous Time-in-Zone (TiZ) during single workouts rather than scattering short intervals across multiple days."
-  - "Autoregulated threshold sessions should target an RPE of 7–8/10; reaching a 9–10/10 indicates excessive neuromuscular strain that impairs subsequent training quality."
-  - "Recovery is driven 98%+ by adequate nutrition and restorative sleep; sacrificing sleep for early morning training sessions creates negative physiological spirals."
+- Intensity cannot indefinitely replace volume; while novice athletes experience initial aerobic gains from high-intensity intervals, adaptation rapidly plateaus without sufficient aerobic base volume.
+- Attempting to compensate for limited weekly hours by chasing high TSS or elevated Intensity Factors (IF) leads directly to chronic autonomic fatigue and overtraining.
+- Progressive overload on low volume requires extending continuous Time-in-Zone (TiZ) during single workouts rather than scattering short intervals across multiple days.
+- Autoregulated threshold sessions should target an RPE of 7–8/10; reaching a 9–10/10 indicates excessive neuromuscular strain that impairs subsequent training quality.
+- Recovery is driven 98%+ by adequate nutrition and restorative sleep; sacrificing sleep for early morning training sessions creates negative physiological spirals.
 ---
 
 # Time-Crunched Training: Volume vs. Intensity, Progressive Overload & Fatigue Management — Complete Guide

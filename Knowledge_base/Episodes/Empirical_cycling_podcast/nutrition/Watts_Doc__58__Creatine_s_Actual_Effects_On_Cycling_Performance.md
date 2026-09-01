@@ -1,21 +1,21 @@
 ---
-title: "Creatine's Actual Effects on Cycling Performance: Meta-Analytic Evidence, W/kg Trade-Offs, and Cognitive Realities — Complete Guide"
-category: "nutrition"
+title: 'Creatine''s Actual Effects on Cycling Performance: Meta-Analytic Evidence, W/kg Trade-Offs, and Cognitive Realities — Complete Guide'
+category: nutrition
 topics:
-  - "Ergogenic_aids"
-  - "Sprint_performance"
-  - "Aerobic_base"
-  - "Heavy_torque"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #58)"
-author: "Kolie Moore"
-date: "2025-10-15"
-summary: "A comprehensive meta-analytic evaluation of creatine monohydrate supplementation in cycling, quantifying its zero effect on aerobic metabolism, small gains in absolute sprint power, osmotic water weight trade-offs (W/kg), and niche applications."
+- Ergogenic_supplements_and_buffers
+- Sprint_and_anaerobic_intervals
+- Zone2_and_endurance_base
+- Torque_and_cadence_drills
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #58)'
+author: Kolie Moore
+date: '2025-10-15'
+summary: A comprehensive meta-analytic evaluation of creatine monohydrate supplementation in cycling, quantifying its zero effect on aerobic metabolism, small gains in absolute sprint power, osmotic water weight trade-offs (W/kg), and niche applications.
 key_takeaways:
-  - "Creatine monohydrate has zero statistically significant effect on aerobic endurance performance in trained athletes (meta-analytic effect size -0.07, 95% CI [-0.27, +0.13])."
-  - "For repeated sprints, creatine provides a modest ~27–30 W increase in mean absolute power (~1000 W efforts), but this benefit is frequently negated or inverted on a W/kg basis by the mandatory +1.0 to +2.5 kg osmotic water mass increase."
-  - "In simulated road race trials (2h submaximal riding + intermittent surges + final sprint to exhaustion), creatine supplementation provided zero performance advantage over placebo while increasing body mass by 2 kg."
-  - "Cognitive and sleep deprivation studies indicate minor reaction time improvements (1–2 seconds faster per question) under acute sleep debt, but creatine does not eliminate underlying fatigue or replace sleep."
-  - "Prescription framework: Creatine is advantageous for track sprinters, BMX/gravity racers, and athletes in dedicated off-season hypertrophy/strength blocks, but counterproductive for road climbers and gravel racers."
+- Creatine monohydrate has zero statistically significant effect on aerobic endurance performance in trained athletes (meta-analytic effect size -0.07, 95% CI [-0.27, +0.13]).
+- For repeated sprints, creatine provides a modest ~27–30 W increase in mean absolute power (~1000 W efforts), but this benefit is frequently negated or inverted on a W/kg basis by the mandatory +1.0 to +2.5 kg osmotic water mass increase.
+- In simulated road race trials (2h submaximal riding + intermittent surges + final sprint to exhaustion), creatine supplementation provided zero performance advantage over placebo while increasing body mass by 2 kg.
+- Cognitive and sleep deprivation studies indicate minor reaction time improvements (1–2 seconds faster per question) under acute sleep debt, but creatine does not eliminate underlying fatigue or replace sleep.
+- 'Prescription framework: Creatine is advantageous for track sprinters, BMX/gravity racers, and athletes in dedicated off-season hypertrophy/strength blocks, but counterproductive for road climbers and gravel racers.'
 ---
 
 # Creatine's Actual Effects on Cycling Performance: Meta-Analytic Evidence, W/kg Trade-Offs, and Cognitive Realities — Complete Guide

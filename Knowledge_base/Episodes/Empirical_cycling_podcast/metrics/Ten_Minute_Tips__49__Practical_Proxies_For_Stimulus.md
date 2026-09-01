@@ -1,22 +1,22 @@
 ---
-title: "Ten Minute Tips #49: Practical Proxies For Stimulus — Complete Guide"
+title: 'Ten Minute Tips #49: Practical Proxies For Stimulus — Complete Guide'
 category: physiology
 topics:
-  - "Power_vs_HR"
-  - "FTP"
-  - "VO2max"
-  - "Progressive_overload"
-source: "Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #49)"
-author: "Kolie Moore"
-date: "2025-02-03"
-summary: "A comprehensive guide to real-time internal physiological proxies for training stimuli across endurance, threshold, VO2max, anaerobic capacity, sprinting, and strength, clarifying why stimulus differs from adaptation and why power/HR alone can mislead."
+- Autonomic_and_cardiac_monitoring
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+- Periodization_models_and_macrocycles
+source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #49)'
+author: Kolie Moore
+date: '2025-02-03'
+summary: A comprehensive guide to real-time internal physiological proxies for training stimuli across endurance, threshold, VO2max, anaerobic capacity, sprinting, and strength, clarifying why stimulus differs from adaptation and why power/HR alone can mislead.
 key_takeaways:
-  - "Stimulus is not adaptation: eliciting a physiological training stressor only triggers positive remodeling when coupled with adequate recovery, sleep, and carbohydrate fueling."
-  - "Endurance stimulus is driven primarily by total training volume across all intensities (accumulated contraction time, calcium signaling, AMPK/sirtuin activation), not by staying in a fragile metabolic fat-burning zone."
-  - "Threshold (FTP) stimulus is identified by deep muscular fatigue, sustained high concentration demand, and labored but steady breathing; ragged gasping indicates exceeding threshold."
-  - "VO2max stimulus aims for maximal cardiac stroke volume, indicated by maximal pulmonary ventilation (breathing as hard as possible); heart rate may be lower at high cadences due to enhanced venous return."
-  - "Anaerobic capacity requires true concentric contractile failure while fresh; attempting high-intensity anaerobic work while under-fueled or chronically fatigued produces poor neuromuscular recruitment rather than effective stimulus."
-  - "Isolated metrics (TSS, heart rate, acute RPE, soreness) fail as standalone proxies; reliable monitoring requires triangulating Power, HR, and RPE across multi-week windows."
+- 'Stimulus is not adaptation: eliciting a physiological training stressor only triggers positive remodeling when coupled with adequate recovery, sleep, and carbohydrate fueling.'
+- Endurance stimulus is driven primarily by total training volume across all intensities (accumulated contraction time, calcium signaling, AMPK/sirtuin activation), not by staying in a fragile metabolic fat-burning zone.
+- Threshold (FTP) stimulus is identified by deep muscular fatigue, sustained high concentration demand, and labored but steady breathing; ragged gasping indicates exceeding threshold.
+- VO2max stimulus aims for maximal cardiac stroke volume, indicated by maximal pulmonary ventilation (breathing as hard as possible); heart rate may be lower at high cadences due to enhanced venous return.
+- Anaerobic capacity requires true concentric contractile failure while fresh; attempting high-intensity anaerobic work while under-fueled or chronically fatigued produces poor neuromuscular recruitment rather than effective stimulus.
+- Isolated metrics (TSS, heart rate, acute RPE, soreness) fail as standalone proxies; reliable monitoring requires triangulating Power, HR, and RPE across multi-week windows.
 ---
 
 # Ten Minute Tips #49: Practical Proxies For Stimulus — Complete Guide

@@ -1,19 +1,18 @@
 ---
-title: "Perspectives #30: Being Faster Than Your Watts — Complete Guide"
+title: 'Perspectives #30: Being Faster Than Your Watts — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "Durability"
-  - "TTA_TTE"
-source: "Empirical Cycling Podcast — Kolie Moore with Giancarlo Bianchi"
-author: "Kolie Moore"
-date: "2023-11-07"
-summary: "A masterclass on racecraft, aerodynamics, and tactical psychology, illustrating how aerodynamic optimization, competitor reconnaissance, energy conservation, and tactical timing allow riders to consistently outperform higher-wattage rivals."
+- FTP_and_functional_metrics
+- Durability_and_fatigue_mechanisms
+source: Empirical Cycling Podcast — Kolie Moore with Giancarlo Bianchi
+author: Kolie Moore
+date: '2023-11-07'
+summary: A masterclass on racecraft, aerodynamics, and tactical psychology, illustrating how aerodynamic optimization, competitor reconnaissance, energy conservation, and tactical timing allow riders to consistently outperform higher-wattage rivals.
 key_takeaways:
-  - "FTP is merely the price of admission to the peloton ('gets you a seat at the table'); tactical positioning, aerodynamic efficiency, and decision-making determine race outcomes."
-  - "Aerodynamic drag (CdA) dominates power demand above 13–15 mph; optimizing head position, horizontal forearms, and deep-section wheels yields vastly larger time and energy savings than chasing marginal weight reduction."
-  - "Tactical race reconnaissance involves identifying wind transitions, pinch points, competitor tells (breathing rates, grip tension, head bobbing), and capitalizing on collective hesitation."
-  - "Monitoring Normalized Power (NP) in real time can serve as a diagnostic trigger for race-winning moves as collective fatigue accumulates near threshold."
+- FTP is merely the price of admission to the peloton ('gets you a seat at the table'); tactical positioning, aerodynamic efficiency, and decision-making determine race outcomes.
+- Aerodynamic drag (CdA) dominates power demand above 13–15 mph; optimizing head position, horizontal forearms, and deep-section wheels yields vastly larger time and energy savings than chasing marginal weight reduction.
+- Tactical race reconnaissance involves identifying wind transitions, pinch points, competitor tells (breathing rates, grip tension, head bobbing), and capitalizing on collective hesitation.
+- Monitoring Normalized Power (NP) in real time can serve as a diagnostic trigger for race-winning moves as collective fatigue accumulates near threshold.
 ---
 
 # Perspectives #30: Being Faster Than Your Watts — Complete Guide

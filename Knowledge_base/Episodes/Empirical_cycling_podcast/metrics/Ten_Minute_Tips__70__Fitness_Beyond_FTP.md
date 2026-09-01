@@ -1,19 +1,19 @@
 ---
-title: "Fitness Beyond FTP — Complete Guide"
+title: Fitness Beyond FTP — Complete Guide
 category: physiology
 topics:
-  - "FTP"
-  - "W_prime"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore, Alex Lawson, Erica Zaveta (Ten Minute Tips #70)"
-author: "Kolie Moore"
-date: "2026-01-07"
-summary: "A comprehensive guide to non-FTP physiological adaptations, event-specific work capacity, and skill dimensions that determine race success across road, criterium, off-road, and ultra-endurance cycling."
+- FTP_and_functional_metrics
+- Critical_power_and_w_prime
+- Durability_and_fatigue_mechanisms
+source: 'Empirical Cycling Podcast — Kolie Moore, Alex Lawson, Erica Zaveta (Ten Minute Tips #70)'
+author: Kolie Moore
+date: '2026-01-07'
+summary: A comprehensive guide to non-FTP physiological adaptations, event-specific work capacity, and skill dimensions that determine race success across road, criterium, off-road, and ultra-endurance cycling.
 key_takeaways:
-  - "When raw FTP gains encounter logarithmic diminishing returns, competitive performance is elevated by targeting specific physiological dimensions: FRC/W' repeatability, late-race durability, neuromuscular power, and racecraft."
-  - "Road and criterium outcomes are strongly governed by anaerobic work capacity repeatability (micro-intervals like 30/30s and 40/20s) and high-speed flat-ground sprinting rather than static 20-minute power."
-  - "Off-road disciplines (CX/XC MTB) demand explosive starts, high-torque pedaling out of corners, and technical bike handling executed while under severe cardiovascular strain ('in the red')."
-  - "Ultra-endurance success hinges on Time-to-Exhaustion (TTE) extension, multi-hour tempo durability, consecutive-day volume stacking, and gastrointestinal fueling logistics."
+- 'When raw FTP gains encounter logarithmic diminishing returns, competitive performance is elevated by targeting specific physiological dimensions: FRC/W'' repeatability, late-race durability, neuromuscular power, and racecraft.'
+- Road and criterium outcomes are strongly governed by anaerobic work capacity repeatability (micro-intervals like 30/30s and 40/20s) and high-speed flat-ground sprinting rather than static 20-minute power.
+- Off-road disciplines (CX/XC MTB) demand explosive starts, high-torque pedaling out of corners, and technical bike handling executed while under severe cardiovascular strain ('in the red').
+- Ultra-endurance success hinges on Time-to-Exhaustion (TTE) extension, multi-hour tempo durability, consecutive-day volume stacking, and gastrointestinal fueling logistics.
 ---
 
 # Fitness Beyond FTP — Complete Guide

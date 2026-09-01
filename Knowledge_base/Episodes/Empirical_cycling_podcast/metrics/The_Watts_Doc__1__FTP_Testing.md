@@ -1,19 +1,18 @@
 ---
-title: "FTP Testing Protocols, Pitfalls, & Pacing — Complete Guide"
+title: FTP Testing Protocols, Pitfalls, & Pacing — Complete Guide
 category: physiology
 topics:
-  - "FTP"
-  - "TTA_TTE"
-  - "W_prime"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #1)"
-author: "Kolie Moore"
-date: "2019-03-24"
-summary: "A comprehensive critical evaluation of FTP testing protocols (20-minute, 2x8-minute, ramp tests, and continuous long tests), detailing the confounding role of anaerobic work capacity (W'), Time-to-Exhaustion (TTE) dynamics, and precise field testing execution."
+- FTP_and_functional_metrics
+- Critical_power_and_w_prime
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #1)'
+author: Kolie Moore
+date: '2019-03-24'
+summary: A comprehensive critical evaluation of FTP testing protocols (20-minute, 2x8-minute, ramp tests, and continuous long tests), detailing the confounding role of anaerobic work capacity (W'), Time-to-Exhaustion (TTE) dynamics, and precise field testing execution.
 key_takeaways:
-  - "FTP is the quasi-steady-state power sustainable without rapid fatigue, not an arbitrary 60-minute maximum effort."
-  - "Short tests (8-minute, ramp tests, and 20-minute tests without a blowout) systematically overestimate FTP by capturing anaerobic work capacity (W')."
-  - "Time to Exhaustion (TTE) at FTP varies significantly among athletes (typically 35 to 80+ minutes) and increases with aerobic training."
-  - "Longer, progressive, open-ended tests (35–70+ minutes) provide an accurate measurement of true FTP and TTE while generating actionable power-duration inflection data."
+- FTP is the quasi-steady-state power sustainable without rapid fatigue, not an arbitrary 60-minute maximum effort.
+- Short tests (8-minute, ramp tests, and 20-minute tests without a blowout) systematically overestimate FTP by capturing anaerobic work capacity (W').
+- Time to Exhaustion (TTE) at FTP varies significantly among athletes (typically 35 to 80+ minutes) and increases with aerobic training.
+- Longer, progressive, open-ended tests (35–70+ minutes) provide an accurate measurement of true FTP and TTE while generating actionable power-duration inflection data.
 ---
 
 # FTP Testing Protocols, Pitfalls, & Pacing — Complete Guide

@@ -1,21 +1,21 @@
 ---
-title: "The Best Workout Is Not Working Out: Recovery Dynamics, Rest Week Architecture, & Autonomic Markers — Complete Guide"
+title: 'The Best Workout Is Not Working Out: Recovery Dynamics, Rest Week Architecture, & Autonomic Markers — Complete Guide'
 category: planning
 topics:
-  - "Microcycles"
-  - "Durability"
-  - "Aerobic_base"
-  - "Volume_quantification"
-source: "Empirical Cycling Podcast — Kolie Moore & Adam Pulford (Perspectives #11)"
-author: "Kolie Moore"
-date: "2022-04-05"
-summary: "An in-depth coaching dialogue between Kolie Moore and CTS coach Adam Pulford on the physiological necessity of rest, rest week structure, diagnostic fatigue markers (RPE, submaximal HR elevation, sprint pop suppression), the myth of sprints on recovery days, and post-rest sluggishness dynamics."
+- Microcycle_and_schedule_design
+- Durability_and_fatigue_mechanisms
+- Zone2_and_endurance_base
+- Workload_quantification_and_modeling
+source: 'Empirical Cycling Podcast — Kolie Moore & Adam Pulford (Perspectives #11)'
+author: Kolie Moore
+date: '2022-04-05'
+summary: An in-depth coaching dialogue between Kolie Moore and CTS coach Adam Pulford on the physiological necessity of rest, rest week structure, diagnostic fatigue markers (RPE, submaximal HR elevation, sprint pop suppression), the myth of sprints on recovery days, and post-rest sluggishness dynamics.
 key_takeaways:
-  - "General Adaptation Syndrome & Recovery: Training provides only the catabolic stimulus; cellular adaptation (mitochondrial biogenesis, myofibrillar protein synthesis, glycogen supercompensation) occurs strictly during restorative recovery."
-  - "Sprints on Recovery Days Destroy the Day's Purpose: High-intensity anaerobic efforts on recovery days induce neuromuscular strain, disrupt central nervous system recovery, and impair glycogen replenishment for negligible adaptive gain."
-  - "4-Day Rest Micro-Blocks vs. 7-Day Down Weeks: A 4-day recovery microcycle (e.g., Mon off, Tue active recovery, Wed endurance, Thu endurance/off, Fri openers) restores autonomic balance without causing detraining or loss of plasma volume."
-  - "Diagnostic Fatigue Markers: Elevated submaximal heart rate post-rest reflects heightened myocardial excitability and transient plasma volume shifts, whereas blunted HR during hard training signals autonomic fatigue (downregulated beta-adrenergic receptors)."
-  - "The 'Post-Rest Sluggishness' Phenomenon: High-volume diesel athletes often experience sluggish legs on day 1 post-rest; programming short priming efforts (e.g., 10–15 min tempo/threshold blowouts or openers) restores neuromuscular responsiveness."
+- 'General Adaptation Syndrome & Recovery: Training provides only the catabolic stimulus; cellular adaptation (mitochondrial biogenesis, myofibrillar protein synthesis, glycogen supercompensation) occurs strictly during restorative recovery.'
+- 'Sprints on Recovery Days Destroy the Day''s Purpose: High-intensity anaerobic efforts on recovery days induce neuromuscular strain, disrupt central nervous system recovery, and impair glycogen replenishment for negligible adaptive gain.'
+- '4-Day Rest Micro-Blocks vs. 7-Day Down Weeks: A 4-day recovery microcycle (e.g., Mon off, Tue active recovery, Wed endurance, Thu endurance/off, Fri openers) restores autonomic balance without causing detraining or loss of plasma volume.'
+- 'Diagnostic Fatigue Markers: Elevated submaximal heart rate post-rest reflects heightened myocardial excitability and transient plasma volume shifts, whereas blunted HR during hard training signals autonomic fatigue (downregulated beta-adrenergic receptors).'
+- 'The ''Post-Rest Sluggishness'' Phenomenon: High-volume diesel athletes often experience sluggish legs on day 1 post-rest; programming short priming efforts (e.g., 10–15 min tempo/threshold blowouts or openers) restores neuromuscular responsiveness.'
 ---
 
 # The Best Workout Is Not Working Out: Recovery Dynamics, Rest Week Architecture, & Autonomic Markers — Complete Guide

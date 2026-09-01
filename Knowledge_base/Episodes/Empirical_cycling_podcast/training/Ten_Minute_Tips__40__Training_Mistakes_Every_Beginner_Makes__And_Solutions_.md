@@ -1,21 +1,21 @@
 ---
-title: "Ten Minute Tips #40: Training Mistakes Every Beginner Makes (And Solutions) — Complete Guide"
+title: 'Ten Minute Tips #40: Training Mistakes Every Beginner Makes (And Solutions) — Complete Guide'
 category: planning
 topics:
-  - "Microcycles"
-  - "Block_periodization"
-  - "Aerobic_base"
-  - "Lab_vs_field"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hilson (Ten Minute Tips #40)"
-author: "Kolie Moore"
-date: "2024-07-30"
-summary: "An analytical breakdown of the ten most prevalent physiological, structural, and psychological mistakes novice cyclists make, paired with actionable solutions for long-term athletic development."
+- Microcycle_and_schedule_design
+- Periodization_models_and_macrocycles
+- Zone2_and_endurance_base
+- Physiological_testing_and_diagnostics
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hilson (Ten Minute Tips #40)'
+author: Kolie Moore
+date: '2024-07-30'
+summary: An analytical breakdown of the ten most prevalent physiological, structural, and psychological mistakes novice cyclists make, paired with actionable solutions for long-term athletic development.
 key_takeaways:
-  - "'Noob gains' are non-specific: untrained individuals experience rapid neural and mitochondrial adaptations from almost any stimulus, creating the illusion that unstructured high-intensity training is universally sustainable."
-  - "Volume and intensity do not scale linearly with performance: doubling training hours or packing five high-intensity sessions into a week leads directly to neuroendocrine overtraining and chronic autonomic burnout."
-  - "Avoid 'Training FOMO': Cycling is the ultimate N=1 experiment; hopping between trendy methodologies (pure Zone 2, polarized 80/20, sweet spot dogma) prevents the progressive overload required for genuine adaptation."
-  - "Do not 'Turtle and Tech': Isolating oneself indoors for a year to build a target FTP before racing results in an athlete who possesses raw power but lacks the peloton draft efficiency, cornering economy, and surge tolerance to finish a race."
-  - "Subjective RPE and field performance supersede laboratory data: fixed-blood-lactate step tests and mathematical zone boundaries frequently deviate by 30–60W from an athlete's true sustainable threshold."
+- '''Noob gains'' are non-specific: untrained individuals experience rapid neural and mitochondrial adaptations from almost any stimulus, creating the illusion that unstructured high-intensity training is universally sustainable.'
+- 'Volume and intensity do not scale linearly with performance: doubling training hours or packing five high-intensity sessions into a week leads directly to neuroendocrine overtraining and chronic autonomic burnout.'
+- 'Avoid ''Training FOMO'': Cycling is the ultimate N=1 experiment; hopping between trendy methodologies (pure Zone 2, polarized 80/20, sweet spot dogma) prevents the progressive overload required for genuine adaptation.'
+- 'Do not ''Turtle and Tech'': Isolating oneself indoors for a year to build a target FTP before racing results in an athlete who possesses raw power but lacks the peloton draft efficiency, cornering economy, and surge tolerance to finish a race.'
+- 'Subjective RPE and field performance supersede laboratory data: fixed-blood-lactate step tests and mathematical zone boundaries frequently deviate by 30–60W from an athlete''s true sustainable threshold.'
 ---
 
 # Ten Minute Tips #40: Training Mistakes Every Beginner Makes (And Solutions) — Complete Guide

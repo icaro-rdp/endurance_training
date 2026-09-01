@@ -1,19 +1,19 @@
 ---
-title: "A Muscle Glycogen Paradox: Post-Exercise Fueling Timing vs. High-Intensity Interval Performance — Complete Guide"
-category: "nutrition"
+title: 'A Muscle Glycogen Paradox: Post-Exercise Fueling Timing vs. High-Intensity Interval Performance — Complete Guide'
+category: nutrition
 topics:
-  - "Carbohydrate_ratio"
-  - "Long_intervals"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #59)"
-author: "Kolie Moore"
-date: "2025-12-03"
-summary: "An in-depth analysis of the physiological disconnect between complete 24-hour muscle glycogen replenishment and impaired next-day high-intensity interval capacity caused by delayed post-exercise carbohydrate feeding."
+- Carbohydrate_fueling_and_gut_training
+- VO2max_and_aerobic_hiit
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #59)'
+author: Kolie Moore
+date: '2025-12-03'
+summary: An in-depth analysis of the physiological disconnect between complete 24-hour muscle glycogen replenishment and impaired next-day high-intensity interval capacity caused by delayed post-exercise carbohydrate feeding.
 key_takeaways:
-  - "Total 24-hour muscle glycogen can fully resynthesize to baseline even when post-exercise carbohydrate feeding is delayed by several hours, provided total daily carbohydrate and caloric intake are matched."
-  - "Despite identical muscle glycogen levels, delaying post-exercise carbohydrate ingestion induces a ~30% drop in next-day high-intensity interval performance (AMRAP 2-min repeats at ~94% Wpeak)."
-  - "Whole-muscle homogenate biopsies may mask localized cellular glycogen depletion across specific sub-cellular compartments (sub-sarcolemmal vs. inter-myofibrillar) or specific motor unit pools."
-  - "Within-day energy deficits and transient energetic stress significantly impair recovery and subsequent performance independently of bulk muscle glycogen restoration."
-  - "Immediate post-session carbohydrate fueling is non-negotiable for multi-session training days, track tournament rounds, stage races, and back-to-back hard weekend training blocks."
+- Total 24-hour muscle glycogen can fully resynthesize to baseline even when post-exercise carbohydrate feeding is delayed by several hours, provided total daily carbohydrate and caloric intake are matched.
+- Despite identical muscle glycogen levels, delaying post-exercise carbohydrate ingestion induces a ~30% drop in next-day high-intensity interval performance (AMRAP 2-min repeats at ~94% Wpeak).
+- Whole-muscle homogenate biopsies may mask localized cellular glycogen depletion across specific sub-cellular compartments (sub-sarcolemmal vs. inter-myofibrillar) or specific motor unit pools.
+- Within-day energy deficits and transient energetic stress significantly impair recovery and subsequent performance independently of bulk muscle glycogen restoration.
+- Immediate post-session carbohydrate fueling is non-negotiable for multi-session training days, track tournament rounds, stage races, and back-to-back hard weekend training blocks.
 ---
 
 # A Muscle Glycogen Paradox: Post-Exercise Fueling Timing vs. High-Intensity Interval Performance — Complete Guide

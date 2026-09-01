@@ -1,21 +1,20 @@
 ---
-title: "Behind The American 40km ITT Record — Complete Guide"
+title: Behind The American 40km ITT Record — Complete Guide
 category: physiology
 topics:
-  - "FTP"
-  - "TTA_TTE"
-  - "W_prime"
-  - "Power_vs_HR"
-source: "Empirical Cycling Podcast — Kolie Moore & Cory Lockwood (Perspectives #21)"
-author: "Kolie Moore"
-date: "2022-12-21"
-summary: "A masterclass in elite time trial execution, aerodynamic optimization, altitude pacing dynamics, and sustainable power positioning based on Cory Lockwood's sub-45-minute U.S. National 40km ITT record."
+- FTP_and_functional_metrics
+- Critical_power_and_w_prime
+- Autonomic_and_cardiac_monitoring
+source: 'Empirical Cycling Podcast — Kolie Moore & Cory Lockwood (Perspectives #21)'
+author: Kolie Moore
+date: '2022-12-21'
+summary: A masterclass in elite time trial execution, aerodynamic optimization, altitude pacing dynamics, and sustainable power positioning based on Cory Lockwood's sub-45-minute U.S. National 40km ITT record.
 key_takeaways:
-  - "Aerodynamic efficiency must never compromise physiological power output or time-to-exhaustion (TTE); extreme contortion that collapses hip angles or restricts diaphragmatic breathing reduces net speed."
-  - "Altitude pacing requires accounting for reduced air density (lower aerodynamic drag) versus decreased aerobic power due to lower partial pressure of oxygen (PiO2); pacing must be micro-managed across course terrain features."
-  - "Cornering and turnaround mechanics dictate anaerobic work capacity (W') preservation: late heavy braking followed by high-torque sprint re-accelerations compounds metabolic fatigue across laps."
-  - "Strategic cadence modulation—using large chainrings (e.g., 60T) to lower cadence on high-speed false flats—reduces ventilatory and cardiovascular strain compared to excessive pedaling frequencies."
-  - "Front-end cockpit rigidity is essential: bar and pad flex under load alters rider aerodynamics dynamically and impairs upper-body stabilization, costing critical watts."
+- Aerodynamic efficiency must never compromise physiological power output or time-to-exhaustion (TTE); extreme contortion that collapses hip angles or restricts diaphragmatic breathing reduces net speed.
+- Altitude pacing requires accounting for reduced air density (lower aerodynamic drag) versus decreased aerobic power due to lower partial pressure of oxygen (PiO2); pacing must be micro-managed across course terrain features.
+- 'Cornering and turnaround mechanics dictate anaerobic work capacity (W'') preservation: late heavy braking followed by high-torque sprint re-accelerations compounds metabolic fatigue across laps.'
+- Strategic cadence modulation—using large chainrings (e.g., 60T) to lower cadence on high-speed false flats—reduces ventilatory and cardiovascular strain compared to excessive pedaling frequencies.
+- 'Front-end cockpit rigidity is essential: bar and pad flex under load alters rider aerodynamics dynamically and impairs upper-body stabilization, costing critical watts.'
 ---
 
 # Behind The American 40km ITT Record — Complete Guide

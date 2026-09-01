@@ -2,13 +2,11 @@
 title: 'Stimulus vs. Recovery: Diagnosing Performance Plateaus'
 category: planning
 topics:
-- Periodization
+- Periodization_models_and_macrocycles
 source: Knowledge Base
 author: Endurance Research
 date: '2025-01-01'
-summary: Worked scenarios applying the stimulus/recovery diagnosis above. Use these
-  as templates, not prescriptions — the numbers are illustrative. For coaching, consultation,
-  or training inquiries, contact **empiricalcycling@gmail.com**.
+summary: Worked scenarios applying the stimulus/recovery diagnosis above. Use these as templates, not prescriptions — the numbers are illustrative. For coaching, consultation, or training inquiries, contact **empiricalcycling@gmail.com**.
 ---
 
 # Stimulus vs. Recovery: Diagnosing Performance Plateaus

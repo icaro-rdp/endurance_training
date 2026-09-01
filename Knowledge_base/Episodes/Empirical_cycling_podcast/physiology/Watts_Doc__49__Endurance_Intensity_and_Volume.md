@@ -1,22 +1,22 @@
 ---
-title: "Endurance Intensity and Volume — Complete Guide"
-category: "physiology"
+title: Endurance Intensity and Volume — Complete Guide
+category: physiology
 topics:
-  - "Aerobic_base"
-  - "Mitochondrial_density"
-  - "Long_intervals"
-  - "Durability"
-  - "Progressive_overload"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #49)"
-author: "Kolie Moore"
-date: "2024-03-24"
-summary: "A comprehensive meta-analytical breakdown of how training volume versus intensity drives skeletal muscle mitochondrial biogenesis, citrate synthase activity, and mass-specific respiratory function."
+- Zone2_and_endurance_base
+- Mitochondrial_and_cellular_adaptation
+- VO2max_and_aerobic_hiit
+- Durability_and_fatigue_mechanisms
+- Periodization_models_and_macrocycles
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #49)'
+author: Kolie Moore
+date: '2024-03-24'
+summary: A comprehensive meta-analytical breakdown of how training volume versus intensity drives skeletal muscle mitochondrial biogenesis, citrate synthase activity, and mass-specific respiratory function.
 key_takeaways:
-  - "Total training volume correlates strongly with mitochondrial content (citrate synthase activity, r = 0.71), showing no apparent upper plateau in healthy individuals."
-  - "Within aerobic endurance training (45% to 90% Wmax), relative exercise intensity has virtually zero correlation with citrate synthase upregulation (r = -0.01, averaging ~1.3-fold change across all intensities)."
-  - "Sprint Interval Training (SIT) produces rapid early gains with minimal time investment, but hits an early ceiling because high fatigue prevents the accumulation of large total volumes."
-  - "SIT elicits outsized gains in mass-specific mitochondrial respiration in permeabilized fibers, likely driven by subsarcolemmal mitochondrial adaptations and excitation-contraction coupling energetics in high-threshold motor units."
-  - "The coaching hierarchy: Schedule and protect high-quality progressive interval workouts first, enforce mandatory recovery days, and backfill all remaining available time with low-intensity Zone 2 riding below LT1."
+- Total training volume correlates strongly with mitochondrial content (citrate synthase activity, r = 0.71), showing no apparent upper plateau in healthy individuals.
+- Within aerobic endurance training (45% to 90% Wmax), relative exercise intensity has virtually zero correlation with citrate synthase upregulation (r = -0.01, averaging ~1.3-fold change across all intensities).
+- Sprint Interval Training (SIT) produces rapid early gains with minimal time investment, but hits an early ceiling because high fatigue prevents the accumulation of large total volumes.
+- SIT elicits outsized gains in mass-specific mitochondrial respiration in permeabilized fibers, likely driven by subsarcolemmal mitochondrial adaptations and excitation-contraction coupling energetics in high-threshold motor units.
+- 'The coaching hierarchy: Schedule and protect high-quality progressive interval workouts first, enforce mandatory recovery days, and backfill all remaining available time with low-intensity Zone 2 riding below LT1.'
 ---
 
 # Endurance Intensity and Volume — Complete Guide

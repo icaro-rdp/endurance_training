@@ -2,16 +2,13 @@
 title: FTP Workout — The 2×20 Complete Guide
 category: planning
 topics:
-- FTP
-- Periodization
-- Carbohydrate_ratio
+- FTP_and_functional_metrics
+- Periodization_models_and_macrocycles
+- Carbohydrate_fueling_and_gut_training
 source: Empirical Cycling Podcast — Kelly Moore & James McKay
 author: Endurance Research
 date: '2025-01-01'
-summary: The 2×20 is the canonical FTP workout. It entered cycling culture both as
-  a training session and as a reflection of the classic 20-minute FTP test from _Training
-  and Racing with a Power Meter_. It's often the first structured workout a cyclist
-  learns when they start training with power. > Likely ori
+summary: The 2×20 is the canonical FTP workout. It entered cycling culture both as a training session and as a reflection of the classic 20-minute FTP test from _Training and Racing with a Power Meter_. It's often the first structured workout a cyclist learns when they start training with power. > Likely ori
 ---
 
 # FTP Workout — The 2×20 Complete Guide

@@ -1,20 +1,19 @@
 ---
-title: "Perspectives #35: Continuously Realizing Potential — Complete Guide"
+title: 'Perspectives #35: Continuously Realizing Potential — Complete Guide'
 category: planning
 topics:
-  - "Progressive_overload"
-  - "Microcycles"
-  - "Durability"
-  - "Periodization"
-source: "Empirical Cycling Podcast — Kolie Moore with Cole Tamburri"
-author: "Kolie Moore"
-date: "2024-09-23"
-summary: "A comprehensive case study on multi-year endurance athlete progression, analyzing the physiological realities of energy availability (RED-S), body composition vs. absolute power, athlete agency in microcycle execution, and year-round strength training."
+- Periodization_models_and_macrocycles
+- Microcycle_and_schedule_design
+- Durability_and_fatigue_mechanisms
+source: Empirical Cycling Podcast — Kolie Moore with Cole Tamburri
+author: Kolie Moore
+date: '2024-09-23'
+summary: A comprehensive case study on multi-year endurance athlete progression, analyzing the physiological realities of energy availability (RED-S), body composition vs. absolute power, athlete agency in microcycle execution, and year-round strength training.
 key_takeaways:
-  - "Chronic under-fueling and extreme leanness destroy endocrine function and absolute power; gaining 20 lbs of functional mass enabled a 100W+ FTP increase and faster climbing times."
-  - "Training plans must be treated as written in sand, not stone—athletes accumulate fatigue during workouts and only adapt during recovery; agency to modify or abort compromised sessions is essential."
-  - "Year-round strength training (heavy multi-joint lifts in off-season, low-RPE maintenance in-season) preserves motor unit recruitment and peak power without impairing endurance intervals."
-  - "Commercial recovery scores (e.g., Whoop/Garmin) can generate false positives; high HRV / 'green' recovery often masks severe glycogen depletion and low metabolic rate."
+- Chronic under-fueling and extreme leanness destroy endocrine function and absolute power; gaining 20 lbs of functional mass enabled a 100W+ FTP increase and faster climbing times.
+- Training plans must be treated as written in sand, not stone—athletes accumulate fatigue during workouts and only adapt during recovery; agency to modify or abort compromised sessions is essential.
+- Year-round strength training (heavy multi-joint lifts in off-season, low-RPE maintenance in-season) preserves motor unit recruitment and peak power without impairing endurance intervals.
+- Commercial recovery scores (e.g., Whoop/Garmin) can generate false positives; high HRV / 'green' recovery often masks severe glycogen depletion and low metabolic rate.
 ---
 
 # Perspectives #35: Continuously Realizing Potential — Complete Guide

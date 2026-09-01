@@ -1,20 +1,20 @@
 ---
-title: "Confronting Uncertainty in Training and Data: Bayesian Updating, Model Limits, and the Adaptive Coaching Loop — Complete Guide"
+title: 'Confronting Uncertainty in Training and Data: Bayesian Updating, Model Limits, and the Adaptive Coaching Loop — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "Power_vs_HR"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore & Gediminas (Watts Doc #63)"
-author: "Kolie Moore"
-date: "2026-04-29"
-summary: "A philosophical and practical guide to managing uncertainty in endurance training, applying Bayesian probability frameworks to fitness testing, distinguishing data reliability from accuracy, and executing adaptive feedback loops."
+- FTP_and_functional_metrics
+- Autonomic_and_cardiac_monitoring
+- Durability_and_fatigue_mechanisms
+source: 'Empirical Cycling Podcast — Kolie Moore & Gediminas (Watts Doc #63)'
+author: Kolie Moore
+date: '2026-04-29'
+summary: A philosophical and practical guide to managing uncertainty in endurance training, applying Bayesian probability frameworks to fitness testing, distinguishing data reliability from accuracy, and executing adaptive feedback loops.
 key_takeaways:
-  - "Athletic training is probabilistic, not algorithmic; deterministic training templates fail because individual responses are constrained by dynamic biological, environmental, and recovery factors."
-  - "A single isolated test provides only moderate statistical confidence (a Bayesian posterior of ~68–75%); true confidence is built through iterative post-test interval verification."
-  - "High test reliability (repeatability) does not equal high accuracy; a test contaminated by anaerobic capacity or protocol flaws can reliably produce an inaccurate threshold estimate."
-  - "Embedding performance monitoring directly within regular training sessions ('testing is training and training is testing') reduces uncertainty without imposing high-stakes testing anxiety."
-  - "The observation step in the scientific method (FAFO) is non-negotiable; coaches must avoid both dogmatic under-correction (ignoring athlete feedback) and erratic overcorrection (trend hopping)."
+- Athletic training is probabilistic, not algorithmic; deterministic training templates fail because individual responses are constrained by dynamic biological, environmental, and recovery factors.
+- A single isolated test provides only moderate statistical confidence (a Bayesian posterior of ~68–75%); true confidence is built through iterative post-test interval verification.
+- High test reliability (repeatability) does not equal high accuracy; a test contaminated by anaerobic capacity or protocol flaws can reliably produce an inaccurate threshold estimate.
+- Embedding performance monitoring directly within regular training sessions ('testing is training and training is testing') reduces uncertainty without imposing high-stakes testing anxiety.
+- The observation step in the scientific method (FAFO) is non-negotiable; coaches must avoid both dogmatic under-correction (ignoring athlete feedback) and erratic overcorrection (trend hopping).
 ---
 
 # Confronting Uncertainty in Training and Data: Bayesian Updating, Model Limits, and the Adaptive Coaching Loop — Complete Guide

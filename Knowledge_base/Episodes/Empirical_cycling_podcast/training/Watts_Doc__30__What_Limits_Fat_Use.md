@@ -1,21 +1,20 @@
 ---
-title: "What Limits Fat Oxidation: Bottlenecks, Transport Enzymes, & Flux Regulation — Complete Guide"
+title: 'What Limits Fat Oxidation: Bottlenecks, Transport Enzymes, & Flux Regulation — Complete Guide'
 category: training
 topics:
-  - "Fat_oxidation"
-  - "Aerobic_base"
-  - "Mitochondrial_density"
-  - "FatMax"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #30)"
-author: "Kolie Moore"
-date: "2021-01-26"
-summary: "A comprehensive analysis of the physiological bottlenecks governing whole-body fat oxidation, examining adipose lipolysis vs. intramuscular triglycerides (IMTGs), plasma albumin delivery, sarcolemmal translocases (FAT/CD36), carnitine shuttling (CPT-1/CPT-2), malonyl-CoA inhibition, and intensity-driven substrate selection."
+- Substrate_utilization_and_fat_oxidation
+- Zone2_and_endurance_base
+- Mitochondrial_and_cellular_adaptation
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #30)'
+author: Kolie Moore
+date: '2021-01-26'
+summary: A comprehensive analysis of the physiological bottlenecks governing whole-body fat oxidation, examining adipose lipolysis vs. intramuscular triglycerides (IMTGs), plasma albumin delivery, sarcolemmal translocases (FAT/CD36), carnitine shuttling (CPT-1/CPT-2), malonyl-CoA inhibition, and intensity-driven substrate selection.
 key_takeaways:
-  - "Fat oxidation capacity is constrained not by fuel availability, but by a sequential chain of transport and enzymatic bottlenecks: adipose lipolysis, albumin plasma flux, sarcolemmal transport (FAT/CD36), and mitochondrial entry (CPT-1)."
-  - "Carnitine Palmitoyltransferase-1 (CPT-1) on the outer mitochondrial membrane is the primary rate-limiting enzyme governing long-chain fatty acid entry into the matrix for $\beta$-oxidation."
-  - "Rising exercise intensity accelerates glycolytic flux; accumulating acetyl-CoA and malonyl-CoA directly allosterically inhibit CPT-1, abruptly suppressing fat oxidation at and above threshold."
-  - "Intramuscular triglycerides (IMTGs) situated adjacent to mitochondria in slow-twitch fibers supply up to 50% of oxidized lipids during moderate-to-heavy exercise, bypassing adipose mobilization delays."
-  - "Aerobic base volume (Zone 2) systematically expands fat oxidation capacity by upregulating mitochondrial surface area, CPT-1 density, and capillarization, elevating FatMax without requiring ketogenic carbohydrate deprivation."
+- 'Fat oxidation capacity is constrained not by fuel availability, but by a sequential chain of transport and enzymatic bottlenecks: adipose lipolysis, albumin plasma flux, sarcolemmal transport (FAT/CD36), and mitochondrial entry (CPT-1).'
+- "Carnitine Palmitoyltransferase-1 (CPT-1) on the outer mitochondrial membrane is the primary rate-limiting enzyme governing long-chain fatty acid entry into the matrix for $\beta$-oxidation."
+- Rising exercise intensity accelerates glycolytic flux; accumulating acetyl-CoA and malonyl-CoA directly allosterically inhibit CPT-1, abruptly suppressing fat oxidation at and above threshold.
+- Intramuscular triglycerides (IMTGs) situated adjacent to mitochondria in slow-twitch fibers supply up to 50% of oxidized lipids during moderate-to-heavy exercise, bypassing adipose mobilization delays.
+- Aerobic base volume (Zone 2) systematically expands fat oxidation capacity by upregulating mitochondrial surface area, CPT-1 density, and capillarization, elevating FatMax without requiring ketogenic carbohydrate deprivation.
 ---
 
 # What Limits Fat Oxidation: Bottlenecks, Transport Enzymes, & Flux Regulation — Complete Guide

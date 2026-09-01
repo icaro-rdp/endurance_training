@@ -1,20 +1,20 @@
 ---
-title: "Perspectives #41: Macros, Determining Energy Needs, and Nutrient Timing — Complete Guide"
-category: "nutrition"
+title: 'Perspectives #41: Macros, Determining Energy Needs, and Nutrient Timing — Complete Guide'
+category: nutrition
 topics:
-  - "Carbohydrate_ratio"
-  - "Fat_oxidation"
-  - "Volume_quantification"
-source: "Empirical Cycling Podcast — Kolie Moore with Tim Podlogar"
-author: "Kolie Moore"
-date: "2026-03-18"
-summary: "A masterclass in elite endurance nutrition from WorldTour performance nutritionist Dr. Tim Podlogar, detailing gross efficiency calculation errors, the 120g/hr intra-ride budget trade-off, recovery carb timing, macro targets (protein at 2.0–2.5 g/kg), and low-fiber glycogen loading."
+- Carbohydrate_fueling_and_gut_training
+- Substrate_utilization_and_fat_oxidation
+- Workload_quantification_and_modeling
+source: Empirical Cycling Podcast — Kolie Moore with Tim Podlogar
+author: Kolie Moore
+date: '2026-03-18'
+summary: A masterclass in elite endurance nutrition from WorldTour performance nutritionist Dr. Tim Podlogar, detailing gross efficiency calculation errors, the 120g/hr intra-ride budget trade-off, recovery carb timing, macro targets (protein at 2.0–2.5 g/kg), and low-fiber glycogen loading.
 key_takeaways:
-  - "Calculating energy expenditure from power meter mechanical work ($kJ$) contains massive margins of error ($+/- 900{ kcal}$ on a $4000{ kJ}$ ride) due to gross efficiency variances ($20%{ vs }25%$) and intensity-dependent metabolic drift."
-  - "The '120g/hr intra-ride carbohydrate' trend is a double-edged sword: in multi-day stage racing, excessive intra-ride intake displaces evening recovery calories, directly impairing next-day muscle glycogen supercompensation."
-  - "Immediate post-ride carbohydrate ingestion ($1.2{ g/kg/hr}$ for the first 3–4 hours) is essential; delaying intake prolongs catabolic gluconeogenesis and degrades next-day high-intensity performance by $>30%$, even if 24-hour glycogen levels appear replenished."
-  - "Endurance athletes require **$2.0{–}2.5{ g/kg/day}$ of protein** (approaching $3.0{ g/kg}$ during high-volume blocks) to account for incomplete amino acid profiles from massive grain/pasta consumption."
-  - "Effective pre-race glycogen loading ($10{–}12{ g/kg/day}$) requires strictly minimizing fiber, gluten, and sodium (utilizing white rice, potatoes, sucrose drinks, and confectionery/Haribo) to prevent severe gastrointestinal bloating and sluggish fluid retention."
+- Calculating energy expenditure from power meter mechanical work ($kJ$) contains massive margins of error ($+/- 900{ kcal}$ on a $4000{ kJ}$ ride) due to gross efficiency variances ($20%{ vs }25%$) and intensity-dependent metabolic drift.
+- 'The ''120g/hr intra-ride carbohydrate'' trend is a double-edged sword: in multi-day stage racing, excessive intra-ride intake displaces evening recovery calories, directly impairing next-day muscle glycogen supercompensation.'
+- Immediate post-ride carbohydrate ingestion ($1.2{ g/kg/hr}$ for the first 3–4 hours) is essential; delaying intake prolongs catabolic gluconeogenesis and degrades next-day high-intensity performance by $>30%$, even if 24-hour glycogen levels appear replenished.
+- Endurance athletes require **$2.0{–}2.5{ g/kg/day}$ of protein** (approaching $3.0{ g/kg}$ during high-volume blocks) to account for incomplete amino acid profiles from massive grain/pasta consumption.
+- Effective pre-race glycogen loading ($10{–}12{ g/kg/day}$) requires strictly minimizing fiber, gluten, and sodium (utilizing white rice, potatoes, sucrose drinks, and confectionery/Haribo) to prevent severe gastrointestinal bloating and sluggish fluid retention.
 ---
 
 # Perspectives #41: Macros, Determining Energy Needs, and Nutrient Timing — Complete Guide

@@ -1,20 +1,20 @@
 ---
-title: "Perspectives #34: Quantifying Training Volume — Complete Guide"
+title: 'Perspectives #34: Quantifying Training Volume — Complete Guide'
 category: planning
 topics:
-  - "Volume_quantification"
-  - "LT1_VT1"
-  - "Aerobic_base"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore with Marinus Petersen"
-author: "Kolie Moore"
-date: "2024-06-10"
-summary: "A rigorous analytical comparison of methodologies for quantifying endurance training load—Total Hours, Kilojoules (Work Done), and Training Stress Score (TSS)—evaluating sub-LT1 metabolic turnover, motor unit recruitment, and fatigue dynamics."
+- Workload_quantification_and_modeling
+- Thresholds_and_metabolic_domains
+- Zone2_and_endurance_base
+- Durability_and_fatigue_mechanisms
+source: Empirical Cycling Podcast — Kolie Moore with Marinus Petersen
+author: Kolie Moore
+date: '2024-06-10'
+summary: A rigorous analytical comparison of methodologies for quantifying endurance training load—Total Hours, Kilojoules (Work Done), and Training Stress Score (TSS)—evaluating sub-LT1 metabolic turnover, motor unit recruitment, and fatigue dynamics.
 key_takeaways:
-  - "For sub-LT1 endurance training, total work done in Kilojoules directly reflects cellular energy turnover (ATP/AMPK/CaMK flux), but tracking Duration (Hours) provides a safer practical guardrail against ego-driven over-pacing."
-  - "TSS creates a false equivalence across intensity domains by relying on an algorithmic 4th-power weighting (Normalized Power) and assuming a static 60-minute threshold capacity."
-  - "First Lactate/Ventilatory Threshold (LT1) is not a fixed wattage; it degrades by 10%+ over 2.5–3 hours of continuous exercise due to muscle glycogen depletion and neuromuscular fatigue."
-  - "Pacing endurance rides at 60–80% of LT1 (or capping HR 5–10 bpm below LT1) maximizes peripheral mitochondrial signaling while minimizing autonomic and glycogen debt, leaving full capacity for high-intensity days."
+- For sub-LT1 endurance training, total work done in Kilojoules directly reflects cellular energy turnover (ATP/AMPK/CaMK flux), but tracking Duration (Hours) provides a safer practical guardrail against ego-driven over-pacing.
+- TSS creates a false equivalence across intensity domains by relying on an algorithmic 4th-power weighting (Normalized Power) and assuming a static 60-minute threshold capacity.
+- First Lactate/Ventilatory Threshold (LT1) is not a fixed wattage; it degrades by 10%+ over 2.5–3 hours of continuous exercise due to muscle glycogen depletion and neuromuscular fatigue.
+- Pacing endurance rides at 60–80% of LT1 (or capping HR 5–10 bpm below LT1) maximizes peripheral mitochondrial signaling while minimizing autonomic and glycogen debt, leaving full capacity for high-intensity days.
 ---
 
 # Perspectives #34: Quantifying Training Volume — Complete Guide

@@ -2,17 +2,13 @@
 title: Effects on Physiological Stress and Recovery
 category: planning
 topics:
-- VO2max
-- Periodization
-- Double_threshold
-source: 'knowledgeiswatt.substack.com/p/106-double-threshold-days-effects Date: October
-  8,'
+- VO2max_and_aerobic_kinetics
+- Periodization_models_and_macrocycles
+- Microcycle_and_schedule_design
+source: 'knowledgeiswatt.substack.com/p/106-double-threshold-days-effects Date: October 8,'
 author: Endurance Research
-date: 'Source: knowledgeiswatt.substack.com/p/106-double-threshold-days-effects  October
-  8,'
-summary: In the last years, the Norwegian Double-Threshold Days have become very popular.
-  This method consists of doing two daily sessions at medium/high intensity (the majority
-  of Norwegians do them at
+date: 'Source: knowledgeiswatt.substack.com/p/106-double-threshold-days-effects  October 8,'
+summary: In the last years, the Norwegian Double-Threshold Days have become very popular. This method consists of doing two daily sessions at medium/high intensity (the majority of Norwegians do them at
 ---
 
 # Effects on Physiological Stress and Recovery

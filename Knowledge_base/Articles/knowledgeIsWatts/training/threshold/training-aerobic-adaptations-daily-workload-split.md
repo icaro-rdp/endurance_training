@@ -2,14 +2,12 @@
 title: Similar Aerobic Adaptations When Total Daily Workload is the Same
 category: planning
 topics:
-- VO2max
-- Double_threshold
-source: 'knowledgeiswatt.substack.com/p/105-single-vs-multiple-daily-training Date:
-  October'
+- VO2max_and_aerobic_kinetics
+- Microcycle_and_schedule_design
+source: 'knowledgeiswatt.substack.com/p/105-single-vs-multiple-daily-training Date: October'
 author: Endurance Research
 date: 'Source: knowledgeiswatt.substack.com/p/105-single-vs-multiple-daily-training  October'
-summary: 4, 2025 In the last years, the Norwegian Double-Threshold Days have become
-  very popular. This method
+summary: 4, 2025 In the last years, the Norwegian Double-Threshold Days have become very popular. This method
 ---
 
 # Similar Aerobic Adaptations When Total Daily Workload is the Same

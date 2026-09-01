@@ -2,14 +2,11 @@
 title: FTP (Threshold) Training — Complete Guide
 category: planning
 topics:
-- FTP
+- FTP_and_functional_metrics
 source: Empirical Cycling Podcast — Kolie Moore, Fabiano & Erica
 author: Endurance Research
 date: '2025-01-01'
-summary: FTP (Functional Threshold Power) is the highest power you can sustain in
-  a quasi-steady state for a prolonged effort — physiologically approximated by maximal
-  lactate steady state. It is **not** defined by any fixed test formula; it is what
-  it is when you ride at it. > If your FTP feels wrong, check
+summary: FTP (Functional Threshold Power) is the highest power you can sustain in a quasi-steady state for a prolonged effort — physiologically approximated by maximal lactate steady state. It is **not** defined by any fixed test formula; it is what it is when you ride at it. > If your FTP feels wrong, check
 ---
 
 # FTP (Threshold) Training — Complete Guide

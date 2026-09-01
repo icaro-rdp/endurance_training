@@ -1,21 +1,21 @@
 ---
-title: "Ten Minute Tips #55: When To Take A Rest Week, Trusting Subjective Metrics — Complete Guide"
+title: 'Ten Minute Tips #55: When To Take A Rest Week, Trusting Subjective Metrics — Complete Guide'
 category: planning
 topics:
-  - "Block_periodization"
-  - "Aerobic_base"
-  - "Heart_rate_variability"
-  - "FTP"
-source: "Empirical Cycling Podcast — Kolie Moore & Coach Fabiano (Ten Minute Tips #55)"
-author: "Kolie Moore"
-date: "2025-05-05"
-summary: "A comprehensive framework for periodizing rest weeks, comparing planned versus reactive recovery, evaluating subjective versus objective metrics (HRV, sprint power, TTE degradation), and navigating athlete self-deception."
+- Periodization_models_and_macrocycles
+- Zone2_and_endurance_base
+- Autonomic_and_cardiac_monitoring
+- FTP_and_functional_metrics
+source: 'Empirical Cycling Podcast — Kolie Moore & Coach Fabiano (Ten Minute Tips #55)'
+author: Kolie Moore
+date: '2025-05-05'
+summary: A comprehensive framework for periodizing rest weeks, comparing planned versus reactive recovery, evaluating subjective versus objective metrics (HRV, sprint power, TTE degradation), and navigating athlete self-deception.
 key_takeaways:
-  - "Supercompensation Architecture: Physical adaptation, structural remodeling, and mitochondrial protein synthesis occur during recovery; training merely provides the catabolic stimulus."
-  - "Intensity Dictates Block Length: High-intensity blocks (VO2max, threshold extension) require pre-emptive rest weeks every 2–3 weeks, whereas low-intensity base/tempo blocks can safely extend to 3–5 weeks."
-  - "Sprint Power as Neural Gauge: Neuromuscular 3–5s peak sprint power and supra-threshold responsiveness are the most sensitive objective field indicators of recovery status."
-  - "Active vs. Sedentary Recovery: True bed-rest/couch-lock causes heavy legs and neuromuscular lethargy; rest weeks must feature short, very easy Zone 1 spins (IF < 0.50, 30–60 min) to sustain capillary blood flow."
-  - "The Post-Rest 'Puffy' Sensation: Feeling heavy or sluggish at the end of a rest week is typical glycogen supercompensation and intracellular water binding (2.7g water per 1g glycogen), not loss of fitness."
+- 'Supercompensation Architecture: Physical adaptation, structural remodeling, and mitochondrial protein synthesis occur during recovery; training merely provides the catabolic stimulus.'
+- 'Intensity Dictates Block Length: High-intensity blocks (VO2max, threshold extension) require pre-emptive rest weeks every 2–3 weeks, whereas low-intensity base/tempo blocks can safely extend to 3–5 weeks.'
+- 'Sprint Power as Neural Gauge: Neuromuscular 3–5s peak sprint power and supra-threshold responsiveness are the most sensitive objective field indicators of recovery status.'
+- 'Active vs. Sedentary Recovery: True bed-rest/couch-lock causes heavy legs and neuromuscular lethargy; rest weeks must feature short, very easy Zone 1 spins (IF < 0.50, 30–60 min) to sustain capillary blood flow.'
+- 'The Post-Rest ''Puffy'' Sensation: Feeling heavy or sluggish at the end of a rest week is typical glycogen supercompensation and intracellular water binding (2.7g water per 1g glycogen), not loss of fitness.'
 ---
 
 # Ten Minute Tips #55: When To Take A Rest Week, Trusting Subjective Metrics — Complete Guide

@@ -1,20 +1,19 @@
 ---
-title: "Why You Probably Can't Hold Your FTP For An Hour (TTE & Threshold Dynamics) — Complete Guide"
+title: Why You Probably Can't Hold Your FTP For An Hour (TTE & Threshold Dynamics) — Complete Guide
 category: physiology
 topics:
-  - "FTP"
-  - "TTA_TTE"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #39)"
-author: "Kolie Moore"
-date: "2022-08-15"
-summary: "A rigorous examination of why FTP is not inherently a 60-minute power, analyzing Time-to-Exhaustion (TTE) physiology, the seminal Billat threshold progression study, intracellular substrate kinetics, and extensive training progressions to extend sustainable power."
+- FTP_and_functional_metrics
+- Durability_and_fatigue_mechanisms
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #39)'
+author: Kolie Moore
+date: '2022-08-15'
+summary: A rigorous examination of why FTP is not inherently a 60-minute power, analyzing Time-to-Exhaustion (TTE) physiology, the seminal Billat threshold progression study, intracellular substrate kinetics, and extensive training progressions to extend sustainable power.
 key_takeaways:
-  - "FTP is a metabolic quasi-steady-state boundary (MLSS), not a fixed 60-minute duration; typical baseline TTE ranges from 35 to 45 minutes in athletes without extensive threshold training."
-  - "Extensive threshold training (adding Time-in-Zone from 30 to 60+ minutes) trains TTE rapidly (extending baseline from ~45 min to 60–80+ min) without requiring an increase in target wattage."
-  - "Blood lactate concentration at the 10th minute of a steady-state threshold effort inversely predicts TTE (r² = 0.69); lower initial lactate accumulation reflects superior peripheral lactate oxidation and glycogen sparing."
-  - "Threshold is not 100% carbohydrate oxidation; well-trained endurance athletes combust 20–30% lipids at MLSS, with longer TTE correlating with greater lipid flux and carnitine availability."
-  - "Progression rule: Extend duration at current FTP out to 55–70+ minutes before undertaking dedicated VO2max blocks to 'raise the ceiling'."
+- FTP is a metabolic quasi-steady-state boundary (MLSS), not a fixed 60-minute duration; typical baseline TTE ranges from 35 to 45 minutes in athletes without extensive threshold training.
+- Extensive threshold training (adding Time-in-Zone from 30 to 60+ minutes) trains TTE rapidly (extending baseline from ~45 min to 60–80+ min) without requiring an increase in target wattage.
+- Blood lactate concentration at the 10th minute of a steady-state threshold effort inversely predicts TTE (r² = 0.69); lower initial lactate accumulation reflects superior peripheral lactate oxidation and glycogen sparing.
+- Threshold is not 100% carbohydrate oxidation; well-trained endurance athletes combust 20–30% lipids at MLSS, with longer TTE correlating with greater lipid flux and carnitine availability.
+- 'Progression rule: Extend duration at current FTP out to 55–70+ minutes before undertaking dedicated VO2max blocks to ''raise the ceiling''.'
 ---
 
 # Why You Probably Can't Hold Your FTP For An Hour (TTE & Threshold Dynamics) — Complete Guide

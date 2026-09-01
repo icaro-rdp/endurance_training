@@ -1,22 +1,21 @@
 ---
-title: "Common Reasons for Fitness Plateaus and Their Fixes — Complete Guide"
+title: Common Reasons for Fitness Plateaus and Their Fixes — Complete Guide
 category: planning
 topics:
-  - "TTA_TTE"
-  - "FTP"
-  - "Progressive_overload"
-  - "Aerobic_base"
-  - "Volume_quantification"
-source: "Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Perspectives #27)"
-author: "Kolie Moore"
-date: "2023-08-15"
-summary: "An in-depth coaching manual diagnosing the primary causes of endurance performance plateaus—from chronic intensity traps to metric fixation—and outlining practical structural solutions to restart adaptation."
+- FTP_and_functional_metrics
+- Periodization_models_and_macrocycles
+- Zone2_and_endurance_base
+- Workload_quantification_and_modeling
+source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Perspectives #27)'
+author: Kolie Moore
+date: '2023-08-15'
+summary: An in-depth coaching manual diagnosing the primary causes of endurance performance plateaus—from chronic intensity traps to metric fixation—and outlining practical structural solutions to restart adaptation.
 key_takeaways:
-  - "The Chronic Intensity Trap: Riding endurance days too hard (Zone 3 tempo creep) and stacking >2 interval sessions per week creates persistent autonomic fatigue that suppresses threshold and VO2max progression."
-  - "Fresh FTP is not the sole marker of fitness: Highly trained athletes must extend Time-to-Exhaustion (TTE) from 35–40 minutes out to 60–90+ minutes before attempting to force raw wattage increases."
-  - "Fixed power targets in Erg mode ruin interval efficacy: VO2max sessions must be performed with maximal sustainable intent and high cadence (>100 RPM) rather than clamped to an arbitrary percentage of FTP (e.g., 120%)."
-  - "Progression requires time-in-zone overload: Stagnating on classic static workouts (e.g., repeating 2x20 min endlessly) fails to provide an adaptive stimulus; athletes must systematically advance total duration at threshold."
-  - "Plans must be built on minimum guaranteed time availability: Over-scheduling weekly hours leads to missed sessions, guilt, and inconsistent training cycles."
+- 'The Chronic Intensity Trap: Riding endurance days too hard (Zone 3 tempo creep) and stacking >2 interval sessions per week creates persistent autonomic fatigue that suppresses threshold and VO2max progression.'
+- 'Fresh FTP is not the sole marker of fitness: Highly trained athletes must extend Time-to-Exhaustion (TTE) from 35–40 minutes out to 60–90+ minutes before attempting to force raw wattage increases.'
+- 'Fixed power targets in Erg mode ruin interval efficacy: VO2max sessions must be performed with maximal sustainable intent and high cadence (>100 RPM) rather than clamped to an arbitrary percentage of FTP (e.g., 120%).'
+- 'Progression requires time-in-zone overload: Stagnating on classic static workouts (e.g., repeating 2x20 min endlessly) fails to provide an adaptive stimulus; athletes must systematically advance total duration at threshold.'
+- 'Plans must be built on minimum guaranteed time availability: Over-scheduling weekly hours leads to missed sessions, guilt, and inconsistent training cycles.'
 ---
 
 # Common Reasons for Fitness Plateaus and Their Fixes — Complete Guide

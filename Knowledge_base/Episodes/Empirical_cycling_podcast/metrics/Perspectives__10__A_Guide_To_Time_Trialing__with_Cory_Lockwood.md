@@ -1,21 +1,20 @@
 ---
-title: "A Guide to Time Trialing: Aerodynamics, Pacing Physics, Positioning, & Race Execution — Complete Guide"
+title: 'A Guide to Time Trialing: Aerodynamics, Pacing Physics, Positioning, & Race Execution — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "Durability"
-  - "Power_vs_HR"
-  - "TTA_TTE"
-source: "Empirical Cycling Podcast — Kolie Moore & Cory Lockwood (Perspectives #10)"
-author: "Kolie Moore"
-date: "2022-03-28"
-summary: "A comprehensive operational and biomechanical guide to time trialing by national champion Cory Lockwood and Kolie Moore, covering aerodynamic hierarchy, pelvic rotation and muscular recruitment, pacing physics across terrain and wind, cognitive segmentation for sustained focus, and race-day logistics."
+- FTP_and_functional_metrics
+- Durability_and_fatigue_mechanisms
+- Autonomic_and_cardiac_monitoring
+source: 'Empirical Cycling Podcast — Kolie Moore & Cory Lockwood (Perspectives #10)'
+author: Kolie Moore
+date: '2022-03-28'
+summary: A comprehensive operational and biomechanical guide to time trialing by national champion Cory Lockwood and Kolie Moore, covering aerodynamic hierarchy, pelvic rotation and muscular recruitment, pacing physics across terrain and wind, cognitive segmentation for sustained focus, and race-day logistics.
 key_takeaways:
-  - "Aerodynamic Hierarchy and Fit: Rider position accounts for ~70–80% of total aerodynamic drag, followed by speedsuit, aero helmet, and deep/disc wheels; aerodynamic positioning must be balanced against pelvic stability to avoid quad overloading."
-  - "Pacing Physics & Non-Linear Kinetic Drag: Aerodynamic drag varies with the cube of velocity ($P proportional to v^3$); pacing must strategically over-power into headwind and uphill segments where speed is low, while tucking on downhills and tailwinds."
-  - "Cadence Modulation as Kinetic Control: High cadence and rapid power bursts accelerate the bike through turns and crests, followed by settling into optimal cadence (85–95 RPM) to maintain momentum and mechanical efficiency."
-  - "Cognitive Sectoring: The human brain cannot maintain 100% laser focus for 45 continuous minutes; breaking courses into high-focus sectors interspersed with 5-second micro-resets (relaxing hands/jaw, deep breathing) prevents mental collapse."
-  - "Backward Race-Day Logistics: Constructing a strict backward timeline from start time (minimum 2 hours buffer) eliminates cortisol spikes and avoidable equipment failures."
+- 'Aerodynamic Hierarchy and Fit: Rider position accounts for ~70–80% of total aerodynamic drag, followed by speedsuit, aero helmet, and deep/disc wheels; aerodynamic positioning must be balanced against pelvic stability to avoid quad overloading.'
+- 'Pacing Physics & Non-Linear Kinetic Drag: Aerodynamic drag varies with the cube of velocity ($P proportional to v^3$); pacing must strategically over-power into headwind and uphill segments where speed is low, while tucking on downhills and tailwinds.'
+- 'Cadence Modulation as Kinetic Control: High cadence and rapid power bursts accelerate the bike through turns and crests, followed by settling into optimal cadence (85–95 RPM) to maintain momentum and mechanical efficiency.'
+- 'Cognitive Sectoring: The human brain cannot maintain 100% laser focus for 45 continuous minutes; breaking courses into high-focus sectors interspersed with 5-second micro-resets (relaxing hands/jaw, deep breathing) prevents mental collapse.'
+- 'Backward Race-Day Logistics: Constructing a strict backward timeline from start time (minimum 2 hours buffer) eliminates cortisol spikes and avoidable equipment failures.'
 ---
 
 # A Guide to Time Trialing: Aerodynamics, Pacing Physics, Positioning, & Race Execution — Complete Guide

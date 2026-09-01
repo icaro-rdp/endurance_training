@@ -2,15 +2,11 @@
 title: Can They Be Used Interchangeably?
 category: physiology
 topics:
-- Power_vs_HR
-source: 'knowledgeiswatt.substack.com/p/62-flat-vs-uphill-power-output Date: February
-  27,'
+- Autonomic_and_cardiac_monitoring
+source: 'knowledgeiswatt.substack.com/p/62-flat-vs-uphill-power-output Date: February 27,'
 author: Endurance Research
-date: 'Source: knowledgeiswatt.substack.com/p/62-flat-vs-uphill-power-output  February
-  27,'
-summary: It is common feeling easier to produce watts when riding uphill compared
-  to flat terrain. Some coaches even recommend slightly higher power values for a
-  given training zone when riding
+date: 'Source: knowledgeiswatt.substack.com/p/62-flat-vs-uphill-power-output  February 27,'
+summary: It is common feeling easier to produce watts when riding uphill compared to flat terrain. Some coaches even recommend slightly higher power values for a given training zone when riding
 ---
 
 # Can They Be Used Interchangeably?

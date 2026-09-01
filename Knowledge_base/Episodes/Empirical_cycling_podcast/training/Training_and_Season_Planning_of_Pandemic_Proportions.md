@@ -1,18 +1,18 @@
 ---
-title: "Training and Season Planning During Major Disruptions — Complete Guide"
+title: Training and Season Planning During Major Disruptions — Complete Guide
 category: planning
 topics:
-  - "Aerobic_base"
-  - "Microcycles"
-  - "Temperature_effects"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson"
-author: "Kolie Moore"
-date: "2020-03-24"
-summary: "Strategic framework for managing training during unscheduled season interruptions, handling compounded life and autonomic stress, structuring multi-year aerobic base development, and optimizing indoor training thermoregulation."
+- Zone2_and_endurance_base
+- Microcycle_and_schedule_design
+- Environmental_and_thermal_stress
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson
+author: Kolie Moore
+date: '2020-03-24'
+summary: Strategic framework for managing training during unscheduled season interruptions, handling compounded life and autonomic stress, structuring multi-year aerobic base development, and optimizing indoor training thermoregulation.
 key_takeaways:
-  - "Autonomic and psychological stress summate with training stress; during systemic life disruptions, deloading or reducing high-intensity strain protects immune function and long-term adaptation."
-  - "When competition dates vanish, reset early season peaks and capitalize on extended timelines to build multi-year aerobic base volume or execute isolated high-intensity blocks with guaranteed recovery."
-  - "Indoor cycling requires aggressive active thermoregulation (high-velocity fans, ice water, air conditioning) because thermal strain dramatically impairs stroke volume, heart rate efficiency, and power output."
+- Autonomic and psychological stress summate with training stress; during systemic life disruptions, deloading or reducing high-intensity strain protects immune function and long-term adaptation.
+- When competition dates vanish, reset early season peaks and capitalize on extended timelines to build multi-year aerobic base volume or execute isolated high-intensity blocks with guaranteed recovery.
+- Indoor cycling requires aggressive active thermoregulation (high-velocity fans, ice water, air conditioning) because thermal strain dramatically impairs stroke volume, heart rate efficiency, and power output.
 ---
 
 # Training and Season Planning During Major Disruptions — Complete Guide

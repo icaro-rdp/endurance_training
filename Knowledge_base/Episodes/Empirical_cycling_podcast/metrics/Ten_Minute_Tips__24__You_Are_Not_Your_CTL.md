@@ -1,21 +1,21 @@
 ---
-title: "Ten Minute Tips #24: You Are Not Your CTL — Complete Guide"
+title: 'Ten Minute Tips #24: You Are Not Your CTL — Complete Guide'
 category: planning
 topics:
-  - "Volume_quantification"
-  - "Durability"
-  - "Aerobic_base"
-  - "Power_vs_HR"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Houston"
-author: "Kolie Moore"
-date: "2022-10-15"
-summary: "Kolie Moore and Kyle Houston deconstruct the Performance Management Chart (PMC), exposing the physiological limitations of TSS, CTL, and TSB, and explaining why athletes must not confuse an abstract rolling load metric with actual biological fitness."
+- Workload_quantification_and_modeling
+- Durability_and_fatigue_mechanisms
+- Zone2_and_endurance_base
+- Autonomic_and_cardiac_monitoring
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Houston
+author: Kolie Moore
+date: '2022-10-15'
+summary: Kolie Moore and Kyle Houston deconstruct the Performance Management Chart (PMC), exposing the physiological limitations of TSS, CTL, and TSB, and explaining why athletes must not confuse an abstract rolling load metric with actual biological fitness.
 key_takeaways:
-  - "Chronic Training Load (CTL) is an exponentially weighted moving average of daily Training Stress Score (TSS), NOT an objective measure of physiological fitness."
-  - "TSS creates a false bioenergetic equivalence: 100 TSS from an all-out VO2max session imposes vastly different autonomic, glycolytic, and endocrine recovery demands than 100 TSS from a steady sub-LT1 endurance ride."
-  - "The 'CTL Party Trick': Because typical endurance rides average an Intensity Factor (IF) of ~0.70–0.75, an athlete's CTL naturally stabilizes at approximately 65–75% of their weekly training hours."
-  - "Athletes can become significantly fitter and faster at the exact same CTL: rising FTP increases absolute mechanical work (kJ) per hour, while multi-year adaptations enhance durability, TTE, and fatigue resistance."
-  - "The PMC is completely blind to external allostatic stress (poor sleep, career pressure, sickness, nutrition); perceived exertion and leg sensations must always override dashboard readiness scores."
+- Chronic Training Load (CTL) is an exponentially weighted moving average of daily Training Stress Score (TSS), NOT an objective measure of physiological fitness.
+- 'TSS creates a false bioenergetic equivalence: 100 TSS from an all-out VO2max session imposes vastly different autonomic, glycolytic, and endocrine recovery demands than 100 TSS from a steady sub-LT1 endurance ride.'
+- 'The ''CTL Party Trick'': Because typical endurance rides average an Intensity Factor (IF) of ~0.70–0.75, an athlete''s CTL naturally stabilizes at approximately 65–75% of their weekly training hours.'
+- 'Athletes can become significantly fitter and faster at the exact same CTL: rising FTP increases absolute mechanical work (kJ) per hour, while multi-year adaptations enhance durability, TTE, and fatigue resistance.'
+- The PMC is completely blind to external allostatic stress (poor sleep, career pressure, sickness, nutrition); perceived exertion and leg sensations must always override dashboard readiness scores.
 ---
 
 # Ten Minute Tips #24: You Are Not Your CTL — Complete Guide

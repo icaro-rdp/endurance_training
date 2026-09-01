@@ -1,21 +1,21 @@
 ---
-title: "Perspectives #39: An Unexpected Balance — Complete Guide"
+title: 'Perspectives #39: An Unexpected Balance — Complete Guide'
 category: planning
 topics:
-  - "Aerobic_base"
-  - "LT1_VT1"
-  - "Durability"
-  - "Microcycles"
-source: "Empirical Cycling Podcast — Kolie Moore with James McKay"
-author: "Kolie Moore"
-date: "2025-05-15"
-summary: "A comprehensive 4-year longitudinal case study of elite road racing physiology: extreme LT1 development, low-intensity volume mechanics, energy availability via Speakman's Dual Intervention Point model, heat acclimation for neuromuscular cramping, and managing allostatic load."
+- Zone2_and_endurance_base
+- Thresholds_and_metabolic_domains
+- Durability_and_fatigue_mechanisms
+- Microcycle_and_schedule_design
+source: Empirical Cycling Podcast — Kolie Moore with James McKay
+author: Kolie Moore
+date: '2025-05-15'
+summary: 'A comprehensive 4-year longitudinal case study of elite road racing physiology: extreme LT1 development, low-intensity volume mechanics, energy availability via Speakman''s Dual Intervention Point model, heat acclimation for neuromuscular cramping, and managing allostatic load.'
 key_takeaways:
-  - "Developing an exceptionally high First Lactate Threshold (LT1 reaching 330–350 W at a ~400+ W FTP) provides the ultimate tactical durability: riders recover oxidatively at 300–330 W between repeated anaerobic surges (500–700 W) while sparing glycogen."
-  - "High-volume base training (20–30+ hrs/wk) is sustainable only when paced at true low intensity (50% FTP, far below LT1); attempts to 'press the pace' on endurance days lead to autonomic exhaustion and compromised interval quality."
-  - "Under Speakman's Dual Intervention Point model, dropping below an individual's Lower Intervention Point (LIP, ~4–6 kg fat mass) destroys neuromuscular rate of force development (Pmax dropping from 1600 W to 1100 W) and suppresses immune/recovery function."
-  - "Exercise-associated muscle cramping in the heat is mitigated through structured heat acclimation and neuromuscular pre-conditioning ('cramp induction sessions' that trigger the repeated-bout effect), but requires strict recovery buffers due to severe peripheral muscle damage."
-  - "Alleviating psychological allostatic load and eliminating rigid obsession over micro-metrics can unlock previously suppressed physiological capacity, allowing peak fitness to manifest on race day."
+- 'Developing an exceptionally high First Lactate Threshold (LT1 reaching 330–350 W at a ~400+ W FTP) provides the ultimate tactical durability: riders recover oxidatively at 300–330 W between repeated anaerobic surges (500–700 W) while sparing glycogen.'
+- High-volume base training (20–30+ hrs/wk) is sustainable only when paced at true low intensity (50% FTP, far below LT1); attempts to 'press the pace' on endurance days lead to autonomic exhaustion and compromised interval quality.
+- Under Speakman's Dual Intervention Point model, dropping below an individual's Lower Intervention Point (LIP, ~4–6 kg fat mass) destroys neuromuscular rate of force development (Pmax dropping from 1600 W to 1100 W) and suppresses immune/recovery function.
+- Exercise-associated muscle cramping in the heat is mitigated through structured heat acclimation and neuromuscular pre-conditioning ('cramp induction sessions' that trigger the repeated-bout effect), but requires strict recovery buffers due to severe peripheral muscle damage.
+- Alleviating psychological allostatic load and eliminating rigid obsession over micro-metrics can unlock previously suppressed physiological capacity, allowing peak fitness to manifest on race day.
 ---
 
 # Perspectives #39: An Unexpected Balance — Complete Guide

@@ -1,21 +1,21 @@
 ---
-title: "Bro-Science, Silver Bullets & Critical Thinking in Exercise Physiology — Complete Guide"
-category: "physiology"
+title: Bro-Science, Silver Bullets & Critical Thinking in Exercise Physiology — Complete Guide
+category: physiology
 topics:
-  - "Aerobic_base"
-  - "FTP"
-  - "Durability"
-  - "Power_vs_HR"
-source: "Empirical Cycling Podcast — Kolie Moore & Feedzone News (Sam / FCX)"
-author: "Kolie Moore"
-date: "2023-04-01"
-summary: "A satirical yet deeply analytical critique of cycling culture's obsession with commercial 'silver bullets', pseudo-scientific marketing claims, canned AI ramp-test plans, and post-ride coffee shop bro-science, contrasted against rigorous empirical exercise physiology."
+- Zone2_and_endurance_base
+- FTP_and_functional_metrics
+- Durability_and_fatigue_mechanisms
+- Autonomic_and_cardiac_monitoring
+source: Empirical Cycling Podcast — Kolie Moore & Feedzone News (Sam / FCX)
+author: Kolie Moore
+date: '2023-04-01'
+summary: A satirical yet deeply analytical critique of cycling culture's obsession with commercial 'silver bullets', pseudo-scientific marketing claims, canned AI ramp-test plans, and post-ride coffee shop bro-science, contrasted against rigorous empirical exercise physiology.
 key_takeaways:
-  - "Cycling culture constantly falls prey to commercial 'silver bullets'—from proprietary supplements and aero gimmicks to canned AI training plans promising unrealistic +150W FTP gains in two weeks."
-  - "Scientific literacy in endurance coaching requires identifying flawed methodology: lack of caloric control in supplement trials, conflating correlation with causation, and relying on surrogate endpoints rather than measurable metabolic performance."
-  - "Superficial gear optimization (e.g., slamming stems, paint colors, expensive kits) cannot overcome physiological deficits in cardiac output, capillarization, or mitochondrial density."
-  - "True endurance progression is driven by unglamorous, reproducible fundamentals: high sustainable sub-threshold volume, progressive threshold overload, maximal VO2max stimuli, proper carbohydrate fueling, and restorative sleep."
-  - "Beware of group ride bro-science and confirmation bias; performance is validated through reproducible field power-duration data and metabolic steady state, not Strava workout titles or commercial marketing."
+- Cycling culture constantly falls prey to commercial 'silver bullets'—from proprietary supplements and aero gimmicks to canned AI training plans promising unrealistic +150W FTP gains in two weeks.
+- 'Scientific literacy in endurance coaching requires identifying flawed methodology: lack of caloric control in supplement trials, conflating correlation with causation, and relying on surrogate endpoints rather than measurable metabolic performance.'
+- Superficial gear optimization (e.g., slamming stems, paint colors, expensive kits) cannot overcome physiological deficits in cardiac output, capillarization, or mitochondrial density.
+- 'True endurance progression is driven by unglamorous, reproducible fundamentals: high sustainable sub-threshold volume, progressive threshold overload, maximal VO2max stimuli, proper carbohydrate fueling, and restorative sleep.'
+- Beware of group ride bro-science and confirmation bias; performance is validated through reproducible field power-duration data and metabolic steady state, not Strava workout titles or commercial marketing.
 ---
 
 # Bro-Science, Silver Bullets & Critical Thinking in Exercise Physiology — Complete Guide

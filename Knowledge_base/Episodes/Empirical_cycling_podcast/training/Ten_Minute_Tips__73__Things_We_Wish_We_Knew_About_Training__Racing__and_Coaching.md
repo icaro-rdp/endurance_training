@@ -1,21 +1,21 @@
 ---
-title: "Things We Wish We Knew About Training, Racing, and Coaching — Complete Guide"
+title: Things We Wish We Knew About Training, Racing, and Coaching — Complete Guide
 category: planning
 topics:
-  - "Carbohydrate_ratio"
-  - "Microcycles"
-  - "Aerobic_base"
-  - "Durability"
-source: "Empirical Cycling Podcast — Ten Minute Tips #73"
-author: "Kolie Moore"
-date: "2026-02-19"
-summary: "Kolie Moore, Erica Zaveta, and Will Turner reflect on hard-learned lessons across cycling training, racing dynamics, and coaching philosophy—focusing on on-bike fueling, autoregulation, process goals, and the value of rest."
+- Carbohydrate_fueling_and_gut_training
+- Microcycle_and_schedule_design
+- Zone2_and_endurance_base
+- Durability_and_fatigue_mechanisms
+source: 'Empirical Cycling Podcast — Ten Minute Tips #73'
+author: Kolie Moore
+date: '2026-02-19'
+summary: Kolie Moore, Erica Zaveta, and Will Turner reflect on hard-learned lessons across cycling training, racing dynamics, and coaching philosophy—focusing on on-bike fueling, autoregulation, process goals, and the value of rest.
 key_takeaways:
-  - "Aggressive on-bike carbohydrate fueling (60–100+ g/hr) preserves daily energy availability, prevents post-ride binge eating/lethargy, and accelerates recovery between sessions."
-  - "Training plans are written in sand: strict compliance without autoregulation leads to overtraining; athletes must learn to adjust, postpone, or cut workouts based on physiological feedback."
-  - "ERG mode disconnects athletes from self-pacing and perceived exertion; athletes should execute intervals under open-loop pacing to develop interoception and reveal true fatigue."
-  - "Racing development requires multi-year patience and prioritizing tactical process goals (e.g., executing lead-outs, contesting primes, initiating breakaways) over immediate outcome placings."
-  - "The minimum effective dose of high intensity coupled with substantial low-intensity volume delivers superior long-term adaptation compared to relentless interval stacking."
+- Aggressive on-bike carbohydrate fueling (60–100+ g/hr) preserves daily energy availability, prevents post-ride binge eating/lethargy, and accelerates recovery between sessions.
+- 'Training plans are written in sand: strict compliance without autoregulation leads to overtraining; athletes must learn to adjust, postpone, or cut workouts based on physiological feedback.'
+- ERG mode disconnects athletes from self-pacing and perceived exertion; athletes should execute intervals under open-loop pacing to develop interoception and reveal true fatigue.
+- Racing development requires multi-year patience and prioritizing tactical process goals (e.g., executing lead-outs, contesting primes, initiating breakaways) over immediate outcome placings.
+- The minimum effective dose of high intensity coupled with substantial low-intensity volume delivers superior long-term adaptation compared to relentless interval stacking.
 ---
 
 # Things We Wish We Knew About Training, Racing, and Coaching — Complete Guide

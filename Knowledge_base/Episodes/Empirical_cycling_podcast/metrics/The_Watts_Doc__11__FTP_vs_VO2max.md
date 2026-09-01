@@ -1,19 +1,19 @@
 ---
-title: "FTP vs. VO2max: Fractional Utilization & Scientific Testing Flaws — Complete Guide"
+title: 'FTP vs. VO2max: Fractional Utilization & Scientific Testing Flaws — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "VO2max"
-  - "LT2_VT2"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #11)"
-author: "Kolie Moore"
-date: "2019-08-27"
-summary: "An analysis of the physiological relationship between FTP and VO2max based on Coyle & Coggan's landmark 1988 study, demonstrating why fractional utilization (%VO2max at FTP) dictates endurance capacity, glycogen depletion, and the critical flaw in prescribing exercise intensity via percentage of VO2max."
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+- Thresholds_and_metabolic_domains
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #11)'
+author: Kolie Moore
+date: '2019-08-27'
+summary: An analysis of the physiological relationship between FTP and VO2max based on Coyle & Coggan's landmark 1988 study, demonstrating why fractional utilization (%VO2max at FTP) dictates endurance capacity, glycogen depletion, and the critical flaw in prescribing exercise intensity via percentage of VO2max.
 key_takeaways:
-  - "Fractional utilization of VO2max at threshold varies widely among trained cyclists (59% to 86%+), proving VO2max is an upper aerobic ceiling, not a direct predictor of endurance."
-  - "At identical %VO2max work rates, athletes whose FTP is a high percentage of VO2max burn less glycogen, rely more on fat, and accumulate negligible blood lactate compared to low-fractional athletes."
-  - "Prescribing exercise intensity or scientific test protocols by percentage of VO2max (e.g., 75% or 80% VO2max) is fatally flawed because it ignores whether an athlete is above or below their individual MLSS/FTP."
-  - "Training to raise fractional utilization ('pushing FTP from below') expands the sustainable aerobic domain, preserving glycogen during surges and stochastic race efforts."
+- Fractional utilization of VO2max at threshold varies widely among trained cyclists (59% to 86%+), proving VO2max is an upper aerobic ceiling, not a direct predictor of endurance.
+- At identical %VO2max work rates, athletes whose FTP is a high percentage of VO2max burn less glycogen, rely more on fat, and accumulate negligible blood lactate compared to low-fractional athletes.
+- Prescribing exercise intensity or scientific test protocols by percentage of VO2max (e.g., 75% or 80% VO2max) is fatally flawed because it ignores whether an athlete is above or below their individual MLSS/FTP.
+- Training to raise fractional utilization ('pushing FTP from below') expands the sustainable aerobic domain, preserving glycogen during surges and stochastic race efforts.
 ---
 
 # FTP vs. VO2max: Fractional Utilization & Scientific Testing Flaws — Complete Guide

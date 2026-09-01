@@ -2,16 +2,15 @@
 title: Bicarbonate Before HIT Training Boosts Training Adaptations
 category: nutrition
 topics:
-- FTP
-- CP
-- LT2_VT2
-- Mitochondrial_density
-- Sodium_bicarbonate
+- FTP_and_functional_metrics
+- Critical_power_and_w_prime
+- Thresholds_and_metabolic_domains
+- Mitochondrial_and_cellular_adaptation
+- Ergogenic_supplements_and_buffers
 source: 'knowledgeiswatt.substack.com/p/31-bicarbonate-before-hit-training Date: September'
 author: Endurance Research
 date: 'Source: knowledgeiswatt.substack.com/p/31-bicarbonate-before-hit-training  September'
-summary: 24, 2024 When exercising at high intensity (above second threshold/FTP) a
-  lot of hydrogen ions (H+) are
+summary: 24, 2024 When exercising at high intensity (above second threshold/FTP) a lot of hydrogen ions (H+) are
 ---
 
 # Bicarbonate Before HIT Training Boosts Training Adaptations

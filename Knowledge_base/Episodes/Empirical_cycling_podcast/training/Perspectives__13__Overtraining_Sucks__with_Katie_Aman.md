@@ -1,20 +1,20 @@
 ---
-title: "Perspectives #13: Overtraining Sucks — Complete Guide"
+title: 'Perspectives #13: Overtraining Sucks — Complete Guide'
 category: planning
 topics:
-  - "Volume_quantification"
-  - "Microcycles"
-  - "Carbohydrate_ratio"
-source: "Empirical Cycling Podcast — Kolie Moore & Katie Aman"
-author: "Kolie Moore"
-date: "2022-05-11"
-summary: "Comprehensive guide to overtraining syndrome (OTS), non-functional overreaching (NFOR), relative energy deficiency in sport (RED-S), physiological mechanisms of systemic fatigue, and evidence-based recovery strategies."
+- Workload_quantification_and_modeling
+- Microcycle_and_schedule_design
+- Carbohydrate_fueling_and_gut_training
+source: Empirical Cycling Podcast — Kolie Moore & Katie Aman
+author: Kolie Moore
+date: '2022-05-11'
+summary: Comprehensive guide to overtraining syndrome (OTS), non-functional overreaching (NFOR), relative energy deficiency in sport (RED-S), physiological mechanisms of systemic fatigue, and evidence-based recovery strategies.
 key_takeaways:
-  - "Overtraining is frequently compounded by Low Energy Availability (LEA) and inadequate macronutrient intake (particularly protein and on-the-bike carbohydrates), not training volume alone."
-  - "Functional Overreaching (FOR) resolves within days to weeks of tapering; Non-Functional Overreaching (NFOR) takes weeks to months; true Overtraining Syndrome (OTS) involves systemic neuroendocrine failure requiring months to years of recovery."
-  - "There is no single blood marker or device metric for OTS; coaches and athletes must monitor performance consistency, deep neuromuscular recruitment soreness, resting heart rate/HRV trends, and menstrual/endocrine function."
-  - "Riding endurance too hard (the 'middle-intensity trap' at 70-75% FTP) chronically elevates glycogen drain and cortisol, impairing recovery between high-intensity sessions."
-  - "Athletes must commit fully to rest: easy days must be truly easy (<50-60% FTP), and workouts should be bailed or downgraded to 'meh' recovery spins when target power/TIZ fails."
+- Overtraining is frequently compounded by Low Energy Availability (LEA) and inadequate macronutrient intake (particularly protein and on-the-bike carbohydrates), not training volume alone.
+- Functional Overreaching (FOR) resolves within days to weeks of tapering; Non-Functional Overreaching (NFOR) takes weeks to months; true Overtraining Syndrome (OTS) involves systemic neuroendocrine failure requiring months to years of recovery.
+- There is no single blood marker or device metric for OTS; coaches and athletes must monitor performance consistency, deep neuromuscular recruitment soreness, resting heart rate/HRV trends, and menstrual/endocrine function.
+- Riding endurance too hard (the 'middle-intensity trap' at 70-75% FTP) chronically elevates glycogen drain and cortisol, impairing recovery between high-intensity sessions.
+- 'Athletes must commit fully to rest: easy days must be truly easy (<50-60% FTP), and workouts should be bailed or downgraded to ''meh'' recovery spins when target power/TIZ fails.'
 ---
 
 # Perspectives #13: Overtraining Sucks — Complete Guide

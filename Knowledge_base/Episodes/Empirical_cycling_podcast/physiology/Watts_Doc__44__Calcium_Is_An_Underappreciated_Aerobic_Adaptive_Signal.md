@@ -1,20 +1,20 @@
 ---
-title: "Calcium as an Underappreciated Aerobic Adaptive Signal — Complete Guide"
-category: "physiology"
+title: Calcium as an Underappreciated Aerobic Adaptive Signal — Complete Guide
+category: physiology
 topics:
-  - "Mitochondrial_density"
-  - "Aerobic_base"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #44)"
-author: "Kolie Moore"
-date: "2023-06-12"
-summary: "An exploration of intracellular calcium (Ca2+) flux as a primary, contraction-dependent driver of mitochondrial biogenesis via the CaMK-p38 MAPK-PGC-1α cascade, explaining the molecular mechanisms behind why low-intensity volume drives long-term aerobic adaptations."
+- Mitochondrial_and_cellular_adaptation
+- Zone2_and_endurance_base
+- Durability_and_fatigue_mechanisms
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #44)'
+author: Kolie Moore
+date: '2023-06-12'
+summary: An exploration of intracellular calcium (Ca2+) flux as a primary, contraction-dependent driver of mitochondrial biogenesis via the CaMK-p38 MAPK-PGC-1α cascade, explaining the molecular mechanisms behind why low-intensity volume drives long-term aerobic adaptations.
 key_takeaways:
-  - "Intracellular calcium (Ca2+) release from the sarcoplasmic reticulum is a primary, non-redundant adaptive signal that stimulates mitochondrial biogenesis independently of ATP depletion or mechanical strain."
-  - "Experimental models (Ojuka et al.) prove that elevating intracellular Ca2+ in non-contracting muscle cells triggers a 2- to 3-fold increase in PGC-1α, NRF-1/2, TFAM, and citrate synthase, while CaMK inhibition completely abolishes the adaptation."
-  - "PGC-1α exists constitutively in the cytoplasm; acute exercise drives its immediate translocation into the nucleus, while de novo PGC-1α protein transcription requires sustained cumulative signaling (e.g., 4–6+ hours of training)."
-  - "Calcium signaling exerts epigenetic control by phosphorylating class IIa Histone Deacetylases (HDACs), triggering their export from the nucleus and unwinding chromatin for oxidative gene transcription."
-  - "There are no 'biohacks' (such as extreme high cadence, dietary calcium megadosing, or isometric holds) that replace volume; total hours on the bike provide the cumulative calcium exposure needed for mitochondrial density."
+- Intracellular calcium (Ca2+) release from the sarcoplasmic reticulum is a primary, non-redundant adaptive signal that stimulates mitochondrial biogenesis independently of ATP depletion or mechanical strain.
+- Experimental models (Ojuka et al.) prove that elevating intracellular Ca2+ in non-contracting muscle cells triggers a 2- to 3-fold increase in PGC-1α, NRF-1/2, TFAM, and citrate synthase, while CaMK inhibition completely abolishes the adaptation.
+- PGC-1α exists constitutively in the cytoplasm; acute exercise drives its immediate translocation into the nucleus, while de novo PGC-1α protein transcription requires sustained cumulative signaling (e.g., 4–6+ hours of training).
+- Calcium signaling exerts epigenetic control by phosphorylating class IIa Histone Deacetylases (HDACs), triggering their export from the nucleus and unwinding chromatin for oxidative gene transcription.
+- There are no 'biohacks' (such as extreme high cadence, dietary calcium megadosing, or isometric holds) that replace volume; total hours on the bike provide the cumulative calcium exposure needed for mitochondrial density.
 ---
 
 # Calcium as an Underappreciated Aerobic Adaptive Signal — Complete Guide

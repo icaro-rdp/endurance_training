@@ -1,22 +1,21 @@
 ---
-title: "Ten Minute Tips #35: Higher FTP vs Longer TTE — Complete Guide"
+title: 'Ten Minute Tips #35: Higher FTP vs Longer TTE — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "TTA_TTE"
-  - "Durability"
-  - "Volume_quantification"
-source: "Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #35)"
-author: "Kolie Moore"
-date: "2024-02-20"
-summary: "Comprehensive guide examining the two-dimensional nature of Functional Threshold Power (FTP) and Time-to-Exhaustion (TTE), contrasting the physiological adaptation timelines, fatigue costs, and racing impacts of raising threshold power versus extending threshold duration."
+- FTP_and_functional_metrics
+- Durability_and_fatigue_mechanisms
+- Workload_quantification_and_modeling
+source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #35)'
+author: Kolie Moore
+date: '2024-02-20'
+summary: Comprehensive guide examining the two-dimensional nature of Functional Threshold Power (FTP) and Time-to-Exhaustion (TTE), contrasting the physiological adaptation timelines, fatigue costs, and racing impacts of raising threshold power versus extending threshold duration.
 key_takeaways:
-  - "FTP is fundamentally two-dimensional: it consists of a power ceiling (watts) and an endurance duration (Time-to-Exhaustion, typically 30 to 80+ minutes)."
-  - "Extending TTE rapidly doubles work capacity at threshold with low systemic fatigue, whereas raising FTP in well-trained athletes yields modest annual gains (5–15W) at high neurological and autonomic fatigue costs."
-  - "The 'rising tide lifts all boats' phenomenon applies primarily to novice athletes; experienced cyclists must deliberately alternate between lifting the aerobic ceiling (VO2max blocks) and pulling out the duration floor (TTE progression)."
-  - "Fatigue resistance (durability after 30–50 kJ/kg of work) is the true differentiator in road and gravel racing, and is developed far more effectively by extending TTE and accumulating base volume than by chasing isolated 20-minute power spikes."
-  - "Pre-fatiguing muscles prior to threshold workouts impairs motor unit recruitment and reduces time-in-zone, actively sabotaging the threshold training stimulus."
-  - "Retesting TTE with dedicated exhaustion tests is unnecessary; the ability to successfully progress interval durations (e.g., from 4x10 min to 3x20 min) is direct proof of adaptation."
+- 'FTP is fundamentally two-dimensional: it consists of a power ceiling (watts) and an endurance duration (Time-to-Exhaustion, typically 30 to 80+ minutes).'
+- Extending TTE rapidly doubles work capacity at threshold with low systemic fatigue, whereas raising FTP in well-trained athletes yields modest annual gains (5–15W) at high neurological and autonomic fatigue costs.
+- The 'rising tide lifts all boats' phenomenon applies primarily to novice athletes; experienced cyclists must deliberately alternate between lifting the aerobic ceiling (VO2max blocks) and pulling out the duration floor (TTE progression).
+- Fatigue resistance (durability after 30–50 kJ/kg of work) is the true differentiator in road and gravel racing, and is developed far more effectively by extending TTE and accumulating base volume than by chasing isolated 20-minute power spikes.
+- Pre-fatiguing muscles prior to threshold workouts impairs motor unit recruitment and reduces time-in-zone, actively sabotaging the threshold training stimulus.
+- Retesting TTE with dedicated exhaustion tests is unnecessary; the ability to successfully progress interval durations (e.g., from 4x10 min to 3x20 min) is direct proof of adaptation.
 ---
 
 # Ten Minute Tips #35: Higher FTP vs Longer TTE — Complete Guide

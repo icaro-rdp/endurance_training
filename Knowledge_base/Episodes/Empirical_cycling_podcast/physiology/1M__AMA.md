@@ -1,24 +1,23 @@
 ---
-title: "1M Milestone AMA: Physiology, Energy Balance, Indoor Equivalence & Strength Mechanics — Q&A Guide"
-category: "physiology"
+title: '1M Milestone AMA: Physiology, Energy Balance, Indoor Equivalence & Strength Mechanics — Q&A Guide'
+category: physiology
 topics:
-  - "Aerobic_base"
-  - "FTP"
-  - "VO2max"
-  - "TTA_TTE"
-  - "Heavy_torque"
-  - "Temperature_effects"
-  - "Underfueling_REDs"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson"
-author: "Kolie Moore"
-date: "2025-11-27"
-summary: "Comprehensive Q&A guide addressing listener questions on energy balance in endurance adaptation, the physiological floor of Zone 2 power, post-VO2max recovery timelines before FTP testing, quarter squat partial ROM biomechanics, and indoor vs outdoor training duration conversions."
+- Zone2_and_endurance_base
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+- Torque_and_cadence_drills
+- Environmental_and_thermal_stress
+- Energy_availability_and_reds
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson
+author: Kolie Moore
+date: '2025-11-27'
+summary: Comprehensive Q&A guide addressing listener questions on energy balance in endurance adaptation, the physiological floor of Zone 2 power, post-VO2max recovery timelines before FTP testing, quarter squat partial ROM biomechanics, and indoor vs outdoor training duration conversions.
 key_takeaways:
-  - "Endurance adaptations (mitochondrial biogenesis, capillarization) require energy neutrality with adequate carbohydrate availability rather than a caloric surplus."
-  - "The physiological floor for Zone 2 aerobic stimulus is as low as 40–50% FTP, driven by contraction frequency and calcium/AMPK signaling without autonomic fatigue."
-  - "Testing FTP within 3–5 days of a VO2max block leads to false failure; athletes require a 7–14 day recovery and low-intensity transition window."
-  - "Supramaximal partial ROM (quarter) squats fail to transfer to cycling due to the absence of a stretch-shortening cycle, adding joint risk without athletic benefit."
-  - "Indoor training features a continuous duty cycle; a 2.0-hour indoor session equates to approximately 2.5 hours outdoors in metabolic work."
+- Endurance adaptations (mitochondrial biogenesis, capillarization) require energy neutrality with adequate carbohydrate availability rather than a caloric surplus.
+- The physiological floor for Zone 2 aerobic stimulus is as low as 40–50% FTP, driven by contraction frequency and calcium/AMPK signaling without autonomic fatigue.
+- Testing FTP within 3–5 days of a VO2max block leads to false failure; athletes require a 7–14 day recovery and low-intensity transition window.
+- Supramaximal partial ROM (quarter) squats fail to transfer to cycling due to the absence of a stretch-shortening cycle, adding joint risk without athletic benefit.
+- Indoor training features a continuous duty cycle; a 2.0-hour indoor session equates to approximately 2.5 hours outdoors in metabolic work.
 ---
 
 # 1M Milestone AMA: Physiology, Energy Balance, Indoor Equivalence & Strength Mechanics — Q&A Guide

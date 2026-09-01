@@ -1,20 +1,20 @@
 ---
-title: "Talking to Ashton Lambie — Complete Guide"
+title: Talking to Ashton Lambie — Complete Guide
 category: planning
 topics:
-  - "Aerobic_base"
-  - "VO2max"
-  - "Sprint_performance"
-  - "Sodium_bicarbonate"
-source: "Empirical Cycling Podcast — Kolie Moore, Kyle Harrison & Ashton Lambie"
-author: "Kolie Moore"
-date: "2019-04-27"
-summary: "An in-depth analysis of individual and team pursuit physiology, the vital role of high-volume gravel base training for track athletes, strength training integration, and marginal aerodynamic/nutritional gains."
+- Zone2_and_endurance_base
+- VO2max_and_aerobic_kinetics
+- Sprint_and_anaerobic_intervals
+- Ergogenic_supplements_and_buffers
+source: Empirical Cycling Podcast — Kolie Moore, Kyle Harrison & Ashton Lambie
+author: Kolie Moore
+date: '2019-04-27'
+summary: An in-depth analysis of individual and team pursuit physiology, the vital role of high-volume gravel base training for track athletes, strength training integration, and marginal aerodynamic/nutritional gains.
 key_takeaways:
-  - "High-volume, low-intensity aerobic base (e.g., gravel/bikepacking) provides the durability required to sustain high-intensity track blocks throughout a long World Cup season."
-  - "Individual Pursuit (4km, ~4 minutes) requires a massive aerobic engine coupled with high anaerobic capacity; team pursuit strategy relies on Moneyball-style rider lineup distribution."
-  - "Heavy resistance training (especially deadlifts) improves starting torque, pelvis stability, and sustained aero position power output."
-  - "Marginal gains across aerodynamics (velodrome testing, individual helmet matching) and ergogenic buffering (sodium bicarbonate) compound into decisive track seconds."
+- High-volume, low-intensity aerobic base (e.g., gravel/bikepacking) provides the durability required to sustain high-intensity track blocks throughout a long World Cup season.
+- Individual Pursuit (4km, ~4 minutes) requires a massive aerobic engine coupled with high anaerobic capacity; team pursuit strategy relies on Moneyball-style rider lineup distribution.
+- Heavy resistance training (especially deadlifts) improves starting torque, pelvis stability, and sustained aero position power output.
+- Marginal gains across aerodynamics (velodrome testing, individual helmet matching) and ergogenic buffering (sodium bicarbonate) compound into decisive track seconds.
 ---
 
 # Talking to Ashton Lambie — Complete Guide

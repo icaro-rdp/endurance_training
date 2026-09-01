@@ -1,20 +1,20 @@
 ---
-title: "Perspectives #15: A Discussion on Strength Training — Complete Guide"
+title: 'Perspectives #15: A Discussion on Strength Training — Complete Guide'
 category: training
 topics:
-  - "Periodization"
-  - "Unilateral"
-  - "Sprint_performance"
-source: "Empirical Cycling Podcast — Kolie Moore, RJ Boergers, & Angelo Gingerelli"
-author: "Kolie Moore"
-date: "2022-06-23"
-summary: "Rigorous breakdown of resistance training for endurance athletes, addressing the myth of strength-induced FTP gains, anti-rotation core stabilization, concurrent training interference, and seasonal periodization."
+- Periodization_models_and_macrocycles
+- Strength_and_resistance_training
+- Sprint_and_anaerobic_intervals
+source: Empirical Cycling Podcast — Kolie Moore, RJ Boergers, & Angelo Gingerelli
+author: Kolie Moore
+date: '2022-06-23'
+summary: Rigorous breakdown of resistance training for endurance athletes, addressing the myth of strength-induced FTP gains, anti-rotation core stabilization, concurrent training interference, and seasonal periodization.
 key_takeaways:
-  - "Heavy resistance training does not directly increase FTP or aerobic capacity in cyclists; improvements stem from neural drive, motor unit recruitment, and eliminating kinetic leaks."
-  - "Running economy benefits more directly from resistance training due to stretch-shortening cycle (SSC) demands, whereas cycling benefits primarily through pelvic/trunk postural stability and injury prevention."
-  - "Core training for cyclists must prioritize anti-rotation and cross-body kinetic chain ($X$-chain) stabilization (e.g., Renegade rows, plank shoulder taps, Paloff presses) over sagittal-plane crunches."
-  - "The Hickson concurrent training effect demonstrates that heavy lifting and high endurance volume compete at the molecular level (mTOR vs. AMPK); endurance workouts must be prioritized first."
-  - "In-season lifting should be strictly maintained with reduced volume (1–2 sets of 3–5 reps, 2–3 RIR, 30–40 min sessions) to prevent DOMS from impairing key interval workouts."
+- Heavy resistance training does not directly increase FTP or aerobic capacity in cyclists; improvements stem from neural drive, motor unit recruitment, and eliminating kinetic leaks.
+- Running economy benefits more directly from resistance training due to stretch-shortening cycle (SSC) demands, whereas cycling benefits primarily through pelvic/trunk postural stability and injury prevention.
+- Core training for cyclists must prioritize anti-rotation and cross-body kinetic chain ($X$-chain) stabilization (e.g., Renegade rows, plank shoulder taps, Paloff presses) over sagittal-plane crunches.
+- The Hickson concurrent training effect demonstrates that heavy lifting and high endurance volume compete at the molecular level (mTOR vs. AMPK); endurance workouts must be prioritized first.
+- In-season lifting should be strictly maintained with reduced volume (1–2 sets of 3–5 reps, 2–3 RIR, 30–40 min sessions) to prevent DOMS from impairing key interval workouts.
 ---
 
 # Perspectives #15: A Discussion on Strength Training — Complete Guide

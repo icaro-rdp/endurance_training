@@ -1,20 +1,20 @@
 ---
-title: "Why Fat Oxidation Is Anaerobic: Beta-Oxidation Biochemistry & Reducing Equivalents — Complete Guide"
+title: 'Why Fat Oxidation Is Anaerobic: Beta-Oxidation Biochemistry & Reducing Equivalents — Complete Guide'
 category: training
 topics:
-  - "Fat_oxidation"
-  - "Aerobic_base"
-  - "Mitochondrial_density"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #29)"
-author: "Kolie Moore"
-date: "2021-01-13"
-summary: "A rigorous biochemical deconstruction of fatty acid breakdown (beta-oxidation), explaining why the catalytic removal of carbons and electrons is strictly anaerobic (requiring zero molecular O2), how reducing equivalents (NADH/FADH2) function as universal energy currency, and how lipid catabolism converges with carbohydrate oxidation at acetyl-CoA."
+- Substrate_utilization_and_fat_oxidation
+- Zone2_and_endurance_base
+- Mitochondrial_and_cellular_adaptation
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #29)'
+author: Kolie Moore
+date: '2021-01-13'
+summary: A rigorous biochemical deconstruction of fatty acid breakdown (beta-oxidation), explaining why the catalytic removal of carbons and electrons is strictly anaerobic (requiring zero molecular O2), how reducing equivalents (NADH/FADH2) function as universal energy currency, and how lipid catabolism converges with carbohydrate oxidation at acetyl-CoA.
 key_takeaways:
-  - "Beta-oxidation is fundamentally anaerobic: zero molecular oxygen ($O_2$) is consumed during the 4-step cyclical cleavage of 2-carbon units in the mitochondrial matrix."
-  - "Inspired molecular oxygen ($O_2$) does not convert directly into carbon dioxide ($CO_2$); it acts strictly as the terminal electron acceptor at Complex IV of the Electron Transport Chain, yielding metabolic water ($H_2O$)."
-  - "The primary output of $\beta$-oxidation is reducing equivalents ($NADH$ and $FADH_2$), which transfer electrons to the electron transport chain to generate the proton gradient driving ATP synthase."
-  - "Carbohydrate (glucose/glycogen) and lipid catabolism converge into identical 2-carbon acetyl-CoA intermediates prior to entering the Krebs cycle; once cleaved, the cell makes no chemical distinction between substrate sources."
-  - "Fat oxidation rates are limited not by the chemical rate of $\beta$-oxidation, but by upstream mobilization, plasma albumin transport, sarcolemmal uptake, and mitochondrial membrane shuttling."
+- 'Beta-oxidation is fundamentally anaerobic: zero molecular oxygen ($O_2$) is consumed during the 4-step cyclical cleavage of 2-carbon units in the mitochondrial matrix.'
+- Inspired molecular oxygen ($O_2$) does not convert directly into carbon dioxide ($CO_2$); it acts strictly as the terminal electron acceptor at Complex IV of the Electron Transport Chain, yielding metabolic water ($H_2O$).
+- "The primary output of $\beta$-oxidation is reducing equivalents ($NADH$ and $FADH_2$), which transfer electrons to the electron transport chain to generate the proton gradient driving ATP synthase."
+- Carbohydrate (glucose/glycogen) and lipid catabolism converge into identical 2-carbon acetyl-CoA intermediates prior to entering the Krebs cycle; once cleaved, the cell makes no chemical distinction between substrate sources.
+- "Fat oxidation rates are limited not by the chemical rate of $\beta$-oxidation, but by upstream mobilization, plasma albumin transport, sarcolemmal uptake, and mitochondrial membrane shuttling."
 ---
 
 # Why Fat Oxidation Is Anaerobic: Beta-Oxidation Biochemistry & Reducing Equivalents — Complete Guide

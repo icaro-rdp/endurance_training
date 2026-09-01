@@ -1,20 +1,20 @@
 ---
-title: "Glycogen's Effects on AMPK: Molecular Glycogen Sensing vs. The 'Train Low' Fallacy — Complete Guide"
-category: "nutrition"
+title: 'Glycogen''s Effects on AMPK: Molecular Glycogen Sensing vs. The ''Train Low'' Fallacy — Complete Guide'
+category: nutrition
 topics:
-  - "Carbohydrate_ratio"
-  - "Mitochondrial_density"
-  - "Fat_oxidation"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #54)"
-author: "Kolie Moore"
-date: "2025-07-07"
-summary: "A rigorous examination of the molecular mechanism by which glycogen directly binds and inhibits AMPK via its beta-subunit carbohydrate-binding module, alongside an analytical critique of why 'train-low' and fasted training fail to improve endurance performance."
+- Carbohydrate_fueling_and_gut_training
+- Mitochondrial_and_cellular_adaptation
+- Substrate_utilization_and_fat_oxidation
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #54)'
+author: Kolie Moore
+date: '2025-07-07'
+summary: A rigorous examination of the molecular mechanism by which glycogen directly binds and inhibits AMPK via its beta-subunit carbohydrate-binding module, alongside an analytical critique of why 'train-low' and fasted training fail to improve endurance performance.
 key_takeaways:
-  - "AMPK possesses a highly conserved Glycogen-Binding Domain (GBD) on its beta subunit that directly docks onto alpha(1->6) branch points of glycogen polymers."
-  - "Glycogen physically sequesters AMPK; depleting glycogen stores releases AMPK into the cytoplasm, relieving allosteric inhibition and transiently increasing baseline kinase activity."
-  - "While low glycogen combined with elevated AMP significantly amplifies acute AMPK signaling in vitro, this molecular surge does not translate into superior mitochondrial adaptation or real-world performance in vivo."
-  - "Chronically training with low glycogen stores impairs training intensity, depresses motor unit recruitment, elevates catabolic cortisol signaling, and compromises next-day performance."
-  - "Coaching and training decisions must be guided by measurable performance outcomes and sustainable workload capacity, rather than chasing isolated molecular proxies."
+- AMPK possesses a highly conserved Glycogen-Binding Domain (GBD) on its beta subunit that directly docks onto alpha(1->6) branch points of glycogen polymers.
+- Glycogen physically sequesters AMPK; depleting glycogen stores releases AMPK into the cytoplasm, relieving allosteric inhibition and transiently increasing baseline kinase activity.
+- While low glycogen combined with elevated AMP significantly amplifies acute AMPK signaling in vitro, this molecular surge does not translate into superior mitochondrial adaptation or real-world performance in vivo.
+- Chronically training with low glycogen stores impairs training intensity, depresses motor unit recruitment, elevates catabolic cortisol signaling, and compromises next-day performance.
+- Coaching and training decisions must be guided by measurable performance outcomes and sustainable workload capacity, rather than chasing isolated molecular proxies.
 ---
 
 # Glycogen's Effects on AMPK: Molecular Glycogen Sensing vs. The 'Train Low' Fallacy — Complete Guide

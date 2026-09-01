@@ -1,21 +1,20 @@
 ---
-title: "Ten Minute Tips #18: Metrics Are Not Fitness — Complete Guide"
+title: 'Ten Minute Tips #18: Metrics Are Not Fitness — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "CP"
-  - "W_prime"
-  - "LT2_VT2"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Houston"
-author: "Kolie Moore"
-date: "2022-01-29"
-summary: "Kolie Moore and Kyle Houston break down the critical difference between modeled metrics and biological fitness, explaining mathematical artifacts in FTP, Critical Power, W', and VLamax, while exposing common logical fallacies in performance tracking."
+- FTP_and_functional_metrics
+- Critical_power_and_w_prime
+- Thresholds_and_metabolic_domains
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Houston
+author: Kolie Moore
+date: '2022-01-29'
+summary: Kolie Moore and Kyle Houston break down the critical difference between modeled metrics and biological fitness, explaining mathematical artifacts in FTP, Critical Power, W', and VLamax, while exposing common logical fallacies in performance tracking.
 key_takeaways:
-  - "Metrics are descriptive mathematical representations of data, not physical fitness itself; 'training to the metric' often creates artificial score increases without true physiological adaptation."
-  - "Mathematical artifacts in CP/$W'$ and FTP/FRC models mean that when FTP increases, calculated $W'$ or FRC automatically decreases even when absolute anaerobic power (5s–90s) is completely unchanged."
-  - "The Fallacy of Division treats population averages as individual truths (e.g., assuming MLSS is 4.0 mmol/L or FTP is exactly 75% of ramp peak power for everyone)."
-  - "The Fallacy of Composition incorrectly assumes that training methods successful for a single elite athlete will work universally across all athletes."
-  - "Diagnose training limiters through performance outcomes: running out of energy before the finale indicates an aerobic limiter, while lacking kick in the final 200m indicates an anaerobic/sprint limiter."
+- Metrics are descriptive mathematical representations of data, not physical fitness itself; 'training to the metric' often creates artificial score increases without true physiological adaptation.
+- Mathematical artifacts in CP/$W'$ and FTP/FRC models mean that when FTP increases, calculated $W'$ or FRC automatically decreases even when absolute anaerobic power (5s–90s) is completely unchanged.
+- The Fallacy of Division treats population averages as individual truths (e.g., assuming MLSS is 4.0 mmol/L or FTP is exactly 75% of ramp peak power for everyone).
+- The Fallacy of Composition incorrectly assumes that training methods successful for a single elite athlete will work universally across all athletes.
+- 'Diagnose training limiters through performance outcomes: running out of energy before the finale indicates an aerobic limiter, while lacking kick in the final 200m indicates an anaerobic/sprint limiter.'
 ---
 
 # Ten Minute Tips #18: Metrics Are Not Fitness — Complete Guide

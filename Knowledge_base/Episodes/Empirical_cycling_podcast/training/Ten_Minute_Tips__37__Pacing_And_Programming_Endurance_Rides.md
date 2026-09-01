@@ -1,21 +1,21 @@
 ---
-title: "Ten Minute Tips #37: Pacing And Programming Endurance Rides — Complete Guide"
+title: 'Ten Minute Tips #37: Pacing And Programming Endurance Rides — Complete Guide'
 category: training
 topics:
-  - "Aerobic_base"
-  - "Lab_vs_field"
-  - "Mitochondrial_density"
-  - "Fat_oxidation"
-source: "Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #37)"
-author: "Kolie Moore"
-date: "2024-04-12"
-summary: "A physiological and practical guide to endurance ride pacing and programming across volume tiers, establishing LT1 boundaries by RPE and managing fatigue versus energetic burdens."
+- Zone2_and_endurance_base
+- Physiological_testing_and_diagnostics
+- Mitochondrial_and_cellular_adaptation
+- Substrate_utilization_and_fat_oxidation
+source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #37)'
+author: Kolie Moore
+date: '2024-04-12'
+summary: A physiological and practical guide to endurance ride pacing and programming across volume tiers, establishing LT1 boundaries by RPE and managing fatigue versus energetic burdens.
 key_takeaways:
-  - "Substrate oxidation (fat burning) is not a cellular signal for adaptation; mitochondrial biogenesis cascades (PGC-1α, PGC-1β, PRC) are driven by accumulated contractile work, not carbohydrate restriction."
-  - "Endurance rides must be paced strictly below the first metabolic threshold (LT1 / VT1) using RPE (2–3/10) and the conversational Talk Test, typically landing between 60–80% of LT1 power (often 45–65% FTP)."
-  - "Distinguish between Fatigue Burden (acute neuromuscular strain from riding over LT1) and Energy Burden (multi-thousand kilojoule deficits requiring multi-day glycogen replenishment)."
-  - "Do not prescriptively force rigid polarized ratios (e.g., 80/20); program the exact number of high-quality interval sessions an athlete can absorb (1–3/week), filling remaining availability with low-fatigue base volume."
-  - "Occasional high-volume training camps (e.g., doubling weekly hours for 1–2 weeks) yield multi-month endurance dividends, provided training intensity is depressed and followed by adequate recovery."
+- Substrate oxidation (fat burning) is not a cellular signal for adaptation; mitochondrial biogenesis cascades (PGC-1α, PGC-1β, PRC) are driven by accumulated contractile work, not carbohydrate restriction.
+- Endurance rides must be paced strictly below the first metabolic threshold (LT1 / VT1) using RPE (2–3/10) and the conversational Talk Test, typically landing between 60–80% of LT1 power (often 45–65% FTP).
+- Distinguish between Fatigue Burden (acute neuromuscular strain from riding over LT1) and Energy Burden (multi-thousand kilojoule deficits requiring multi-day glycogen replenishment).
+- Do not prescriptively force rigid polarized ratios (e.g., 80/20); program the exact number of high-quality interval sessions an athlete can absorb (1–3/week), filling remaining availability with low-fatigue base volume.
+- Occasional high-volume training camps (e.g., doubling weekly hours for 1–2 weeks) yield multi-month endurance dividends, provided training intensity is depressed and followed by adequate recovery.
 ---
 
 # Ten Minute Tips #37: Pacing And Programming Endurance Rides — Complete Guide

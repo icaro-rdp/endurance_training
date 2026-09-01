@@ -2,16 +2,12 @@
 title: Am I Doing Better? a Simple Way to Visualize Cycling Performance
 category: physiology
 topics:
-- FTP
-- Durability
-source: 'knowledgeiswatt.substack.com/p/85-am-i-doing-better-a-simple-way Date: June
-  19, 2025'
+- FTP_and_functional_metrics
+- Durability_and_fatigue_mechanisms
+source: 'knowledgeiswatt.substack.com/p/85-am-i-doing-better-a-simple-way Date: June 19, 2025'
 author: Endurance Research
-date: 'Source: knowledgeiswatt.substack.com/p/85-am-i-doing-better-a-simple-way  June
-  19, 2025'
-summary: In other sports like running and swimming the competition distance is fixed
-  (for example 5k, 10k, marathon), so it is very simple to quantify and compare performance
-  just using the finishing time of
+date: 'Source: knowledgeiswatt.substack.com/p/85-am-i-doing-better-a-simple-way  June 19, 2025'
+summary: In other sports like running and swimming the competition distance is fixed (for example 5k, 10k, marathon), so it is very simple to quantify and compare performance just using the finishing time of
 ---
 
 # Am I Doing Better? a Simple Way to Visualize Cycling Performance

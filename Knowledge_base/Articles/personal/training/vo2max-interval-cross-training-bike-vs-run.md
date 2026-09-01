@@ -1,22 +1,22 @@
 ---
-title: "VO2max Interval Training: Bike vs. Run Cross-Training Adaptations"
+title: 'VO2max Interval Training: Bike vs. Run Cross-Training Adaptations'
 language: en
 category: training
 topics:
-  - VO2max
-  - Long_intervals
-  - Cardiac_hypertrophy
-  - Cross_training
-source: "Systematic Review and Meta-Analysis Synthesis"
-author: "Menges et al., Millet et al., Gibala et al."
-date: "2026-05-25"
-summary: "Comprehensive evidence synthesis on cardiorespiratory and metabolic adaptations to VO2max interval cross-training between cycling and running (flat vs. uphill), distinguishing central cardiovascular from peripheral muscular adaptations."
+- VO2max_and_aerobic_kinetics
+- VO2max_and_aerobic_hiit
+- Cardiovascular_and_hemodynamics
+- Cross_training_and_multisport
+source: Systematic Review and Meta-Analysis Synthesis
+author: Menges et al., Millet et al., Gibala et al.
+date: '2026-05-25'
+summary: Comprehensive evidence synthesis on cardiorespiratory and metabolic adaptations to VO2max interval cross-training between cycling and running (flat vs. uphill), distinguishing central cardiovascular from peripheral muscular adaptations.
 key_takeaways:
-  - "Central adaptations (stroke volume, maximal cardiac output) transfer across endurance modalities, whereas peripheral adaptations (capillarization, mitochondrial enzyme kinetics, MCT expression) remain strictly mode-specific."
-  - "Cross-training transfer is asymmetric: run training transfers to cycling performance and ergometer VO2max better than cycling transfers to running performance."
-  - "Uphill running intervals at 8% incline increase time >=90% VO2max by ~42% compared to 1% grade (Held et al. 2023). Slopes of 6–9% reduce ground-reaction impact forces by 22–39% (Gottschall & Kram 2005), providing a concentric-dominant mechanical bridge between flat running and cycling."
-  - "Cycle cross-training during post-season recuperative phases (e.g. replacing 50% run volume on alternate days) adequately maintains aerobic performance comparable to run-only training (White et al. 2003)."
-  - "High-intensity interval training (HIIT) and sprint interval training (SIT) stimulate rapid mitochondrial biogenesis and citrate synthase activity even with low total training volumes."
+- Central adaptations (stroke volume, maximal cardiac output) transfer across endurance modalities, whereas peripheral adaptations (capillarization, mitochondrial enzyme kinetics, MCT expression) remain strictly mode-specific.
+- 'Cross-training transfer is asymmetric: run training transfers to cycling performance and ergometer VO2max better than cycling transfers to running performance.'
+- Uphill running intervals at 8% incline increase time >=90% VO2max by ~42% compared to 1% grade (Held et al. 2023). Slopes of 6–9% reduce ground-reaction impact forces by 22–39% (Gottschall & Kram 2005), providing a concentric-dominant mechanical bridge between flat running and cycling.
+- Cycle cross-training during post-season recuperative phases (e.g. replacing 50% run volume on alternate days) adequately maintains aerobic performance comparable to run-only training (White et al. 2003).
+- High-intensity interval training (HIIT) and sprint interval training (SIT) stimulate rapid mitochondrial biogenesis and citrate synthase activity even with low total training volumes.
 ---
 
 # VO2max Interval Training: Bike vs. Run Cross-Training Adaptations

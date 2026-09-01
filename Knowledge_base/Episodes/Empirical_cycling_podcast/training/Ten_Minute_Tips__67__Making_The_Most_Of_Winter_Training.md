@@ -1,20 +1,19 @@
 ---
-title: "Making The Most Of Winter Training — Complete Guide"
+title: Making The Most Of Winter Training — Complete Guide
 category: planning
 topics:
-  - "Microcycles"
-  - "Block_periodization"
-  - "Volume_quantification"
-  - "Periodization"
-source: "Empirical Cycling Podcast — Kolie Moore & James Mackay (Ten Minute Tips #67)"
-author: "Kolie Moore"
-date: "2025-11-19"
-summary: "Comprehensive framework for structuring off-season and winter training. Details fatigue shedding, individualized interval timing, strength training dosing, reverse periodization for indoor/ultra athletes, and body composition management."
+- Microcycle_and_schedule_design
+- Periodization_models_and_macrocycles
+- Workload_quantification_and_modeling
+source: 'Empirical Cycling Podcast — Kolie Moore & James Mackay (Ten Minute Tips #67)'
+author: Kolie Moore
+date: '2025-11-19'
+summary: Comprehensive framework for structuring off-season and winter training. Details fatigue shedding, individualized interval timing, strength training dosing, reverse periodization for indoor/ultra athletes, and body composition management.
 key_takeaways:
-  - "The primary objective of the early off-season is shedding chronic neuroendocrine and metabolic fatigue from the race season before imposing new progressive overload."
-  - "Winter training is not dogmatically restricted to 'all Zone 2'; interval inclusion depends on target peak timing, athlete detraining characteristics, and weather/time constraints."
-  - "Strength training requires a minimal effective dose (2–4 working sets per muscle group, 1–2x/week) to capture neural strength and sprint gains without inducing debilitating muscle damage."
-  - "Reverse periodization (high intensity/low volume in winter $\to$ high volume/low intensity in spring) is an effective emergent strategy for indoor-constrained athletes and ultra-endurance competitors."
+- The primary objective of the early off-season is shedding chronic neuroendocrine and metabolic fatigue from the race season before imposing new progressive overload.
+- Winter training is not dogmatically restricted to 'all Zone 2'; interval inclusion depends on target peak timing, athlete detraining characteristics, and weather/time constraints.
+- Strength training requires a minimal effective dose (2–4 working sets per muscle group, 1–2x/week) to capture neural strength and sprint gains without inducing debilitating muscle damage.
+- "Reverse periodization (high intensity/low volume in winter $\to$ high volume/low intensity in spring) is an effective emergent strategy for indoor-constrained athletes and ultra-endurance competitors."
 ---
 
 # Making The Most Of Winter Training — Complete Guide

@@ -1,20 +1,20 @@
 ---
-title: "Quantifying Diminishing Returns: Longitudinal Growth Modeling, Asymptotes, and Season Planning — Complete Guide"
+title: 'Quantifying Diminishing Returns: Longitudinal Growth Modeling, Asymptotes, and Season Planning — Complete Guide'
 category: planning
 topics:
-  - "Volume_quantification"
-  - "Block_periodization"
-  - "Aerobic_base"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #61)"
-author: "Kolie Moore"
-date: "2026-02-05"
-summary: "An analytical deep dive into training diminishing returns using large-scale longitudinal growth modeling (n=14,690 over 6.8 years), multi-year cycling FTP tracking, and mathematical frameworks for managing athlete expectations and season planning."
+- Workload_quantification_and_modeling
+- Periodization_models_and_macrocycles
+- Zone2_and_endurance_base
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #61)'
+author: Kolie Moore
+date: '2026-02-05'
+summary: An analytical deep dive into training diminishing returns using large-scale longitudinal growth modeling (n=14,690 over 6.8 years), multi-year cycling FTP tracking, and mathematical frameworks for managing athlete expectations and season planning.
 key_takeaways:
-  - "Long-term athletic adaptation follows a logarithmic growth curve rather than a linear trajectory; log-transforming time renders the adaptation rate linear for quantitative modeling."
-  - "The 'change point' (the inflection point where rapid adaptation transitions to slow diminishing returns) occurs around weeks 26–31 on average, with significant right-skewed individual variation."
-  - "Short-term training studies (4–8 weeks) evaluate athletes on the steep initial limb of the growth curve, frequently mistaking a faster rate of early ascent for a higher long-term ceiling (asymptote)."
-  - "In multi-year cycling development, annual FTP gains naturally compress (e.g., +45W Year 1 → +25W Year 2 → +15W Year 4 → +10W Year 5); late-stage 10W gains represent outstanding progress."
-  - "True genetic limits are a diagnosis of exclusion; most amateur plateaus stem from unaddressed physiological bottlenecks (e.g., VO2max ceiling) or recovery constraints rather than fixed biological ceilings."
+- Long-term athletic adaptation follows a logarithmic growth curve rather than a linear trajectory; log-transforming time renders the adaptation rate linear for quantitative modeling.
+- The 'change point' (the inflection point where rapid adaptation transitions to slow diminishing returns) occurs around weeks 26–31 on average, with significant right-skewed individual variation.
+- Short-term training studies (4–8 weeks) evaluate athletes on the steep initial limb of the growth curve, frequently mistaking a faster rate of early ascent for a higher long-term ceiling (asymptote).
+- In multi-year cycling development, annual FTP gains naturally compress (e.g., +45W Year 1 → +25W Year 2 → +15W Year 4 → +10W Year 5); late-stage 10W gains represent outstanding progress.
+- True genetic limits are a diagnosis of exclusion; most amateur plateaus stem from unaddressed physiological bottlenecks (e.g., VO2max ceiling) or recovery constraints rather than fixed biological ceilings.
 ---
 
 # Quantifying Diminishing Returns: Longitudinal Growth Modeling, Asymptotes, and Season Planning — Complete Guide

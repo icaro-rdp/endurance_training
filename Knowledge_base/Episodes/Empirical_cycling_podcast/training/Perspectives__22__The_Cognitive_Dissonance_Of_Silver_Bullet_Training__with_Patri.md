@@ -1,20 +1,20 @@
 ---
-title: "The Cognitive Dissonance of Silver Bullet Training — Complete Guide"
+title: The Cognitive Dissonance of Silver Bullet Training — Complete Guide
 category: planning
 topics:
-  - "Microcycles"
-  - "Volume_quantification"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore & Dr. Patrick Smith (Perspectives #22)"
-author: "Kolie Moore"
-date: "2023-01-29"
-summary: "An exploration of Karl Friston's Free Energy Principle, active inference, and cognitive dissonance in athletic progression, exposing why quick-fix training trends fail and how coaches calibrate feedback sensitivity for long-term adaptation."
+- Microcycle_and_schedule_design
+- Workload_quantification_and_modeling
+- Durability_and_fatigue_mechanisms
+source: 'Empirical Cycling Podcast — Kolie Moore & Dr. Patrick Smith (Perspectives #22)'
+author: Kolie Moore
+date: '2023-01-29'
+summary: An exploration of Karl Friston's Free Energy Principle, active inference, and cognitive dissonance in athletic progression, exposing why quick-fix training trends fail and how coaches calibrate feedback sensitivity for long-term adaptation.
 key_takeaways:
-  - "Karl Friston's Free Energy Principle explains that the brain is an active inference engine seeking to minimize the mathematical gap (prediction error/free energy) between expectations and sensory reality."
-  - "Endurance athletes resolve cognitive dissonance through two paths: updating internal expectations to align with real physiological feedback, or taking action (often counterproductive overtraining or seeking 'silver bullets') to force reality to fit flawed beliefs."
-  - "Endurance adaptation exhibits long time-horizon feedback loops; the 'Frog in the Boiling Pot' effect causes athletes experiencing steady, compounding 2–5% annual improvements to feel completely stagnant."
-  - "Feedback sensitivity requires a 'Goldilocks zone': hyper-responsiveness causes reactive over-adjustments and panic, while hypo-responsiveness leads to ignoring early signs of overreaching, illness, or under-recovery."
-  - "The true 'silver bullet' of endurance performance is long-term, unglamorous training consistency, progressive overload, adequate fueling, and tolerating the cognitive discomfort of slow, non-linear progress."
+- Karl Friston's Free Energy Principle explains that the brain is an active inference engine seeking to minimize the mathematical gap (prediction error/free energy) between expectations and sensory reality.
+- 'Endurance athletes resolve cognitive dissonance through two paths: updating internal expectations to align with real physiological feedback, or taking action (often counterproductive overtraining or seeking ''silver bullets'') to force reality to fit flawed beliefs.'
+- Endurance adaptation exhibits long time-horizon feedback loops; the 'Frog in the Boiling Pot' effect causes athletes experiencing steady, compounding 2–5% annual improvements to feel completely stagnant.
+- 'Feedback sensitivity requires a ''Goldilocks zone'': hyper-responsiveness causes reactive over-adjustments and panic, while hypo-responsiveness leads to ignoring early signs of overreaching, illness, or under-recovery.'
+- The true 'silver bullet' of endurance performance is long-term, unglamorous training consistency, progressive overload, adequate fueling, and tolerating the cognitive discomfort of slow, non-linear progress.
 ---
 
 # The Cognitive Dissonance of Silver Bullet Training — Complete Guide

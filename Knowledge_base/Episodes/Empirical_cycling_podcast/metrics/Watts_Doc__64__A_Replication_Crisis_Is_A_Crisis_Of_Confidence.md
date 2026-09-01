@@ -1,19 +1,19 @@
 ---
-title: "A Replication Crisis Is a Crisis of Confidence: Statistical Fallacies, Winner's Curse, and Interpreting Exercise Science — Complete Guide"
+title: 'A Replication Crisis Is a Crisis of Confidence: Statistical Fallacies, Winner''s Curse, and Interpreting Exercise Science — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #64)"
-author: "Kolie Moore"
-date: "2026-05-20"
-summary: "A deep dive into the landmark sports science replication project (Murphy et al.), examining why only 28% of top-journal exercise studies fully replicated, deconstructing statistical traps like Winner's Curse and p-hacking, and establishing how coaches should critically interpret scientific literature."
+- FTP_and_functional_metrics
+- Durability_and_fatigue_mechanisms
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #64)'
+author: Kolie Moore
+date: '2026-05-20'
+summary: A deep dive into the landmark sports science replication project (Murphy et al.), examining why only 28% of top-journal exercise studies fully replicated, deconstructing statistical traps like Winner's Curse and p-hacking, and establishing how coaches should critically interpret scientific literature.
 key_takeaways:
-  - "In a large-scale replication of top-quartile sports science studies (Murphy et al.), only 28% of original findings met all replication criteria, with replicated effect sizes averaging 25–50% of original published magnitudes."
-  - "Underpowered studies (N=10–15) suffer from 'Winner's Curse': an intervention can only achieve statistical significance if random sampling error inflates the effect size far beyond the true population mean."
-  - "Meta-analyses do not automatically fix small-sample bias; aggregating 10 studies of N=10 subjects each simply pools 10 studies afflicted by publication bias and inflated effect sizes."
-  - "The 'Replication Crisis' is primarily a 'Crisis of Confidence' among practitioners who view published studies as infallible dogma ('the science says') rather than provisional hypotheses within a fallibilist methodology."
-  - "Coaches should maintain low prior confidence for novel, single-study performance claims and rely instead on large, convergent bodies of physiological evidence."
+- In a large-scale replication of top-quartile sports science studies (Murphy et al.), only 28% of original findings met all replication criteria, with replicated effect sizes averaging 25–50% of original published magnitudes.
+- 'Underpowered studies (N=10–15) suffer from ''Winner''s Curse'': an intervention can only achieve statistical significance if random sampling error inflates the effect size far beyond the true population mean.'
+- Meta-analyses do not automatically fix small-sample bias; aggregating 10 studies of N=10 subjects each simply pools 10 studies afflicted by publication bias and inflated effect sizes.
+- The 'Replication Crisis' is primarily a 'Crisis of Confidence' among practitioners who view published studies as infallible dogma ('the science says') rather than provisional hypotheses within a fallibilist methodology.
+- Coaches should maintain low prior confidence for novel, single-study performance claims and rely instead on large, convergent bodies of physiological evidence.
 ---
 
 # A Replication Crisis Is a Crisis of Confidence: Statistical Fallacies, Winner's Curse, and Interpreting Exercise Science — Complete Guide

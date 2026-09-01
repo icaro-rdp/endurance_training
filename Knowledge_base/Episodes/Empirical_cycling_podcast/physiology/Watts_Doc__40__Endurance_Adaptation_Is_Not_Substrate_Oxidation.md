@@ -1,20 +1,20 @@
 ---
-title: "Endurance Adaptation Is Not Substrate Oxidation — Complete Guide"
-category: "physiology"
+title: Endurance Adaptation Is Not Substrate Oxidation — Complete Guide
+category: physiology
 topics:
-  - "Fat_oxidation"
-  - "Mitochondrial_density"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #40)"
-author: "Kolie Moore"
-date: "2022-10-26"
-summary: "A definitive biological critique of substrate-centric training models (e.g., training to 'burn fat' or manipulate VLaMax), proving that aerobic adaptive signaling is driven by cellular energy state and mitochondrial flux rather than the specific macronutrient oxidized."
+- Substrate_utilization_and_fat_oxidation
+- Mitochondrial_and_cellular_adaptation
+- Durability_and_fatigue_mechanisms
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #40)'
+author: Kolie Moore
+date: '2022-10-26'
+summary: A definitive biological critique of substrate-centric training models (e.g., training to 'burn fat' or manipulate VLaMax), proving that aerobic adaptive signaling is driven by cellular energy state and mitochondrial flux rather than the specific macronutrient oxidized.
 key_takeaways:
-  - "Macronutrient oxidation during exercise does not determine aerobic adaptive signaling; restricting carbs to force fat oxidation yields identical AMPK, p53, and PGC-1α activation compared to fully fueled training."
-  - "Intra-workout carbohydrate ingestion improves high-intensity fatigue resistance in a dose-dependent manner (e.g., 90 g/hr vs. 0 g/hr) without blunting muscular glycogen depletion or oxidative adaptations."
-  - "Biochemical decoupling points (acetyl-CoA and reducing equivalents NADH/FADH2) erase the molecular origin of substrates; the electron transport chain responds solely to redox state and membrane potential demand."
-  - "The primary evolutionary role of expanding mitochondrial mass is to share the cellular workload across millions of units, keeping cytosolic ADP, AMP, and Pi low, thereby naturally suppressing unnecessary glycolytic flux."
-  - "VLaMax-based training models fail because they assume fixed glycolytic activation per watt, ignoring how mitochondrial density and long-duration metabolic kinetics decouple glycolytic rate from threshold power."
+- Macronutrient oxidation during exercise does not determine aerobic adaptive signaling; restricting carbs to force fat oxidation yields identical AMPK, p53, and PGC-1α activation compared to fully fueled training.
+- Intra-workout carbohydrate ingestion improves high-intensity fatigue resistance in a dose-dependent manner (e.g., 90 g/hr vs. 0 g/hr) without blunting muscular glycogen depletion or oxidative adaptations.
+- Biochemical decoupling points (acetyl-CoA and reducing equivalents NADH/FADH2) erase the molecular origin of substrates; the electron transport chain responds solely to redox state and membrane potential demand.
+- The primary evolutionary role of expanding mitochondrial mass is to share the cellular workload across millions of units, keeping cytosolic ADP, AMP, and Pi low, thereby naturally suppressing unnecessary glycolytic flux.
+- VLaMax-based training models fail because they assume fixed glycolytic activation per watt, ignoring how mitochondrial density and long-duration metabolic kinetics decouple glycolytic rate from threshold power.
 ---
 
 # Endurance Adaptation Is Not Substrate Oxidation — Complete Guide

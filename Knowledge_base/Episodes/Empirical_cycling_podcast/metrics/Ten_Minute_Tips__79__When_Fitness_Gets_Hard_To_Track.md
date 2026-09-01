@@ -1,22 +1,21 @@
 ---
-title: "When Fitness Gets Hard to Track — Complete Guide"
+title: When Fitness Gets Hard to Track — Complete Guide
 category: physiology
 topics:
-  - "FTP"
-  - "TTA_TTE"
-  - "Durability"
-  - "W_prime"
-  - "Progressive_overload"
-source: "Empirical Cycling Podcast — Ten Minute Tips #79"
-author: "Kolie Moore"
-date: "2026-08-11"
-summary: "Kolie Moore, Megan, and Alex explore the diagnostic challenges of tracking fitness during race season, dissecting fatigue masking, CTL fallacies, the 'museum glass' concept for fresh legs, and testing alternatives."
+- FTP_and_functional_metrics
+- Durability_and_fatigue_mechanisms
+- Critical_power_and_w_prime
+- Periodization_models_and_macrocycles
+source: 'Empirical Cycling Podcast — Ten Minute Tips #79'
+author: Kolie Moore
+date: '2026-08-11'
+summary: Kolie Moore, Megan, and Alex explore the diagnostic challenges of tracking fitness during race season, dissecting fatigue masking, CTL fallacies, the 'museum glass' concept for fresh legs, and testing alternatives.
 key_takeaways:
-  - "Keep fresh race legs 'under museum glass': Burning matches or seeking power PRs during pre-race dress rehearsals and group rides empties the finite physiological reserve needed for race day."
-  - "Fatigue frequently masks fitness ('brain fog for the legs'); after heavy VO2max or threshold blocks, true aerobic supercompensation may require 1–3 weeks of easy riding to reveal itself."
-  - "The CTL 'Fitness' Fallacy: Chronic Training Load naturally drops during race season due to lower overall volume and tapers; dropping CTL does not equal lost fitness."
-  - "Formal 4-week testing protocols are unnecessary and disruptive in-season; progressive interval overload (e.g., extending TTE from $3 \times 10\text{m}$ to $2 \times 30\text{m}$) provides continuous diagnostic proof of adaptation."
-  - "Hidden allostatic stressors (academic exams, work deadlines, sleep deficits) suppress the expression of fitness; removing the stressor often yields immediate multi-watt PRs within days."
+- 'Keep fresh race legs ''under museum glass'': Burning matches or seeking power PRs during pre-race dress rehearsals and group rides empties the finite physiological reserve needed for race day.'
+- Fatigue frequently masks fitness ('brain fog for the legs'); after heavy VO2max or threshold blocks, true aerobic supercompensation may require 1–3 weeks of easy riding to reveal itself.
+- 'The CTL ''Fitness'' Fallacy: Chronic Training Load naturally drops during race season due to lower overall volume and tapers; dropping CTL does not equal lost fitness.'
+- "Formal 4-week testing protocols are unnecessary and disruptive in-season; progressive interval overload (e.g., extending TTE from $3 \times 10\text{m}$ to $2 \times 30\text{m}$) provides continuous diagnostic proof of adaptation."
+- Hidden allostatic stressors (academic exams, work deadlines, sleep deficits) suppress the expression of fitness; removing the stressor often yields immediate multi-watt PRs within days.
 ---
 
 # When Fitness Gets Hard to Track — Complete Guide

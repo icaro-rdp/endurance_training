@@ -1,18 +1,18 @@
 ---
-title: "Functional Training vs. Heavy Strength — Complete Guide"
+title: Functional Training vs. Heavy Strength — Complete Guide
 category: training
 topics:
-  - "Unilateral"
-  - "Heavy_torque"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Ten Minute Tips #16)"
-author: "Kolie Moore & Kyle Hanson"
-date: "2022-01-05"
-summary: "A critical examination of the functional training continuum for cyclists, contrasting viral instability gimmicks with true mechanical tension, exploring RPE decoupling, and defining the proper role of functional exercises."
+- Strength_and_resistance_training
+- Torque_and_cadence_drills
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Ten Minute Tips #16)'
+author: Kolie Moore & Kyle Hanson
+date: '2022-01-05'
+summary: A critical examination of the functional training continuum for cyclists, contrasting viral instability gimmicks with true mechanical tension, exploring RPE decoupling, and defining the proper role of functional exercises.
 key_takeaways:
-  - "The Stability-Force Trade-Off: unstable surface training diverts neural drive into stabilizer co-contraction, drastically reducing mechanical tension and strength adaptations on prime movers."
-  - "Beware of RPE Decoupling: just because an unstable balance drill feels exhausting (high RPE) does not mean it stimulates maximal force production or sprint wattage."
-  - "Functional exercises (single-leg RDLs, loaded carries, 7-way hips) are excellent for warm-up priming, postural health, and in-season maintenance, but cannot replace heavy compound lifting."
-  - "Sport specificity differs: mountain bikers and cyclocross racers benefit more from multi-planar stability work than pure road cyclists due to off-road terrain dynamics."
+- 'The Stability-Force Trade-Off: unstable surface training diverts neural drive into stabilizer co-contraction, drastically reducing mechanical tension and strength adaptations on prime movers.'
+- 'Beware of RPE Decoupling: just because an unstable balance drill feels exhausting (high RPE) does not mean it stimulates maximal force production or sprint wattage.'
+- Functional exercises (single-leg RDLs, loaded carries, 7-way hips) are excellent for warm-up priming, postural health, and in-season maintenance, but cannot replace heavy compound lifting.
+- 'Sport specificity differs: mountain bikers and cyclocross racers benefit more from multi-planar stability work than pure road cyclists due to off-road terrain dynamics.'
 ---
 
 # Functional Training vs. Heavy Strength — Complete Guide

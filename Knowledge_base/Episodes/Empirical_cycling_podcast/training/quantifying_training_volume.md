@@ -1,17 +1,13 @@
 ---
-title: 'Quantifying Training Volume & Load: Hours vs. Kilojoules vs. TSS — Complete
-  Guide'
+title: 'Quantifying Training Volume & Load: Hours vs. Kilojoules vs. TSS — Complete Guide'
 category: planning
 topics:
-- LT1_VT1
-- LT2_VT2
-- Mitochondrial_density
+- Thresholds_and_metabolic_domains
+- Mitochondrial_and_cellular_adaptation
 source: Empirical Cycling Podcast — Kolie Moore & Marinus Petersen
 author: Endurance Research
 date: '2025-01-01'
-summary: 'Training volume is universally acknowledged as a primary driver of endurance
-  performance, yet coaches and athletes frequently debate the best metric to quantify
-  it. The debate centers on three primary tools for measuring training load:'
+summary: 'Training volume is universally acknowledged as a primary driver of endurance performance, yet coaches and athletes frequently debate the best metric to quantify it. The debate centers on three primary tools for measuring training load:'
 ---
 
 # Quantifying Training Volume & Load: Hours vs. Kilojoules vs. TSS — Complete Guide

@@ -1,20 +1,20 @@
 ---
-title: "The Cost of Change (Equity, Economics, and Endurance Capacity) — Complete Guide"
+title: The Cost of Change (Equity, Economics, and Endurance Capacity) — Complete Guide
 category: planning
 topics:
-  - "Volume_quantification"
-  - "Aerobic_base"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore & Kathryn Bertine (Perspectives #26)"
-author: "Kolie Moore"
-date: "2023-07-28"
-summary: "An analytical examination of the physiological capacity, structural economics, and strategic activism behind the rebirth of the Tour de France Femmes and the Homestretch Foundation with Kathryn Bertine."
+- Workload_quantification_and_modeling
+- Zone2_and_endurance_base
+- Durability_and_fatigue_mechanisms
+source: 'Empirical Cycling Podcast — Kolie Moore & Kathryn Bertine (Perspectives #26)'
+author: Kolie Moore
+date: '2023-07-28'
+summary: An analytical examination of the physiological capacity, structural economics, and strategic activism behind the rebirth of the Tour de France Femmes and the Homestretch Foundation with Kathryn Bertine.
 key_takeaways:
-  - "Physiological endurance capacity is not inherently sex-limited; historical restrictions on women's race durations and distances are cultural artifacts rather than biological limits."
-  - "Strategic activism differs fundamentally from slacktivism: lasting change requires face-to-face negotiation, viable business models, coalition building, and incremental stepping-stone execution."
-  - "The financial ecosystem of endurance sport historically created extreme wage gaps ($0 base salaries), forcing athletes into chronic under-recovery, dual-career fatigue, and premature retirement."
-  - "The Homestretch Foundation provides a restorative socio-economic and training environment, mitigating chronic financial stress to allow physiological supercompensation and athletic progression."
-  - "Endurance coaching principles (aerobic volume, threshold extension, progressive overload) apply universally across sexes, provided fueling and recovery match the training load."
+- Physiological endurance capacity is not inherently sex-limited; historical restrictions on women's race durations and distances are cultural artifacts rather than biological limits.
+- 'Strategic activism differs fundamentally from slacktivism: lasting change requires face-to-face negotiation, viable business models, coalition building, and incremental stepping-stone execution.'
+- The financial ecosystem of endurance sport historically created extreme wage gaps ($0 base salaries), forcing athletes into chronic under-recovery, dual-career fatigue, and premature retirement.
+- The Homestretch Foundation provides a restorative socio-economic and training environment, mitigating chronic financial stress to allow physiological supercompensation and athletic progression.
+- Endurance coaching principles (aerobic volume, threshold extension, progressive overload) apply universally across sexes, provided fueling and recovery match the training load.
 ---
 
 # The Cost of Change (Equity, Economics, and Endurance Capacity) — Complete Guide

@@ -1,19 +1,19 @@
 ---
-title: "Watts Doc #18: Why Everything You Know About VO2max Power Is Probably Wrong — Complete Guide"
+title: 'Watts Doc #18: Why Everything You Know About VO2max Power Is Probably Wrong — Complete Guide'
 category: physiology
 topics:
-  - "VO2max"
-  - "W_prime"
-  - "Power_vs_HR"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Harrison"
-author: "Kolie Moore"
-date: "2020-04-26"
-summary: "Deconstructs the concept of 'VO2max Power' (Maximal Aerobic Power / MAP), demonstrating why ramp tests conflate anaerobic capacity with aerobic flux, and establishing rigorous field testing and tracking methods."
+- VO2max_and_aerobic_kinetics
+- Critical_power_and_w_prime
+- Autonomic_and_cardiac_monitoring
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Harrison
+author: Kolie Moore
+date: '2020-04-26'
+summary: Deconstructs the concept of 'VO2max Power' (Maximal Aerobic Power / MAP), demonstrating why ramp tests conflate anaerobic capacity with aerobic flux, and establishing rigorous field testing and tracking methods.
 key_takeaways:
-  - "VO2max is a physiological rate of oxygen flux (L/min or mL/kg/min), not a fixed wattage or single power number."
-  - "Ramp and step test final wattages (Wmax) vary by over 25% (e.g., 84W) purely based on step duration, despite identical measured VO2max."
-  - "Power above FTP is non-linear and supported by mixed energetic pathways; athletes with high anaerobic work capacity (W') dramatically distort MAP tests."
-  - "Rigid power targets (e.g., 105–120% FTP or %MAP) fail for VO2max intervals; maximum effective breathing and sustained oxygen uptake should guide execution."
+- VO2max is a physiological rate of oxygen flux (L/min or mL/kg/min), not a fixed wattage or single power number.
+- Ramp and step test final wattages (Wmax) vary by over 25% (e.g., 84W) purely based on step duration, despite identical measured VO2max.
+- Power above FTP is non-linear and supported by mixed energetic pathways; athletes with high anaerobic work capacity (W') dramatically distort MAP tests.
+- Rigid power targets (e.g., 105–120% FTP or %MAP) fail for VO2max intervals; maximum effective breathing and sustained oxygen uptake should guide execution.
 ---
 
 # Watts Doc #18: Why Everything You Know About VO2max Power Is Probably Wrong — Complete Guide

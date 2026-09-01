@@ -1,20 +1,19 @@
 ---
-title: "The 2x20 Myth & Threshold Progression — Complete Guide"
+title: The 2x20 Myth & Threshold Progression — Complete Guide
 category: physiology
 topics:
-  - "FTP"
-  - "TTA_TTE"
-  - "Progressive_overload"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #3)"
-author: "Kolie Moore"
-date: "2019-04-06"
-summary: "An in-depth analysis of the physiological validity of the canonical 2x20-minute threshold workout, exploring oxygen uptake kinetics, minimum effective interval durations, continuous vs. intermittent structuring, and progressive overload via Time-to-Exhaustion (TTE) extension."
+- FTP_and_functional_metrics
+- Periodization_models_and_macrocycles
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #3)'
+author: Kolie Moore
+date: '2019-04-06'
+summary: An in-depth analysis of the physiological validity of the canonical 2x20-minute threshold workout, exploring oxygen uptake kinetics, minimum effective interval durations, continuous vs. intermittent structuring, and progressive overload via Time-to-Exhaustion (TTE) extension.
 key_takeaways:
-  - "The canonical 2x20-minute workout is an effective baseline, but there is nothing physiologically unique or magical about exactly 20 minutes."
-  - "Oxygen kinetics cause a 2–3 minute metabolic lag at the onset of each interval, making 10 minutes the absolute minimum effective single-interval duration for threshold work."
-  - "Threshold progressive overload is best achieved by extending duration (time-in-zone / TTE) rather than forcing power upward within a mesocycle."
-  - "Continuous threshold intervals (e.g., 1x40 min or 1x60 min) provide a superior physiological stimulus to fragmented intervals (e.g., 4x10 min or 3x20 min) at equivalent wattages."
-  - "Riding at 92–97% FTP yields virtually identical aerobic adaptations to 100% FTP with significantly reduced autonomic fatigue and glycogen depletion."
+- The canonical 2x20-minute workout is an effective baseline, but there is nothing physiologically unique or magical about exactly 20 minutes.
+- Oxygen kinetics cause a 2–3 minute metabolic lag at the onset of each interval, making 10 minutes the absolute minimum effective single-interval duration for threshold work.
+- Threshold progressive overload is best achieved by extending duration (time-in-zone / TTE) rather than forcing power upward within a mesocycle.
+- Continuous threshold intervals (e.g., 1x40 min or 1x60 min) provide a superior physiological stimulus to fragmented intervals (e.g., 4x10 min or 3x20 min) at equivalent wattages.
+- Riding at 92–97% FTP yields virtually identical aerobic adaptations to 100% FTP with significantly reduced autonomic fatigue and glycogen depletion.
 ---
 
 # The 2x20 Myth & Threshold Progression — Complete Guide

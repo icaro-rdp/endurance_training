@@ -1,19 +1,18 @@
 ---
-title: "Integrating Physiology into Coaching & Training Philosophy — Complete Guide"
-category: "physiology"
+title: Integrating Physiology into Coaching & Training Philosophy — Complete Guide
+category: physiology
 topics:
-  - "LT1_VT1"
-  - "LT2_VT2"
-  - "FTP"
-source: "Empirical Cycling Podcast — Kolie Moore (Ten Minute Tips #11)"
-author: "Kolie Moore"
-date: "2021-02-24"
-summary: "A masterclass in bridging bottom-up cellular exercise physiology with top-down coaching reality, exposing the population-average fallacy of lactate thresholds and establishing a rigorous coaching diagnostic model."
+- Thresholds_and_metabolic_domains
+- FTP_and_functional_metrics
+source: 'Empirical Cycling Podcast — Kolie Moore (Ten Minute Tips #11)'
+author: Kolie Moore
+date: '2021-02-24'
+summary: A masterclass in bridging bottom-up cellular exercise physiology with top-down coaching reality, exposing the population-average fallacy of lactate thresholds and establishing a rigorous coaching diagnostic model.
 key_takeaways:
-  - "Coaching requires a dual approach: bottom-up cellular physiology informs the stimulus, but top-down empirical athlete feedback ALWAYS overrides theoretical models."
-  - "The 4.0 mmol/L lactate fallacy: fixed population blood lactate benchmarks frequently misidentify individual MLSS, causing athletes to train chronically over-threshold."
-  - "Scientific literacy hierarchy: master cell biology and enzyme biochemistry first to critically evaluate exercise physiology literature and recognize flawed study designs."
-  - "The 70/30 coaching rule: 70% of coaching success comes from lifestyle fundamentals (fueling, sleep, stress management), while advanced physiological tuning provides the final 5–10% refinement."
+- 'Coaching requires a dual approach: bottom-up cellular physiology informs the stimulus, but top-down empirical athlete feedback ALWAYS overrides theoretical models.'
+- 'The 4.0 mmol/L lactate fallacy: fixed population blood lactate benchmarks frequently misidentify individual MLSS, causing athletes to train chronically over-threshold.'
+- 'Scientific literacy hierarchy: master cell biology and enzyme biochemistry first to critically evaluate exercise physiology literature and recognize flawed study designs.'
+- 'The 70/30 coaching rule: 70% of coaching success comes from lifestyle fundamentals (fueling, sleep, stress management), while advanced physiological tuning provides the final 5–10% refinement.'
 ---
 
 # Integrating Physiology into Coaching & Training Philosophy — Complete Guide

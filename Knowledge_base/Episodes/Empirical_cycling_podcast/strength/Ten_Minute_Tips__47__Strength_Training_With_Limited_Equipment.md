@@ -1,22 +1,22 @@
 ---
-title: "Ten Minute Tips #47: Strength Training With Limited Equipment — Complete Guide"
+title: 'Ten Minute Tips #47: Strength Training With Limited Equipment — Complete Guide'
 category: training
 topics:
-  - "Heavy_torque"
-  - "Unilateral"
-  - "Sprint_performance"
-  - "Periodization"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Helson (Ten Minute Tips #47)"
-author: "Kolie Moore"
-date: "2025-01-12"
-summary: "A practical guide to executing effective strength and hypertrophy training at home with minimal equipment, detailing bodyweight biomechanics, intensifier techniques (lengthened partials, heel elevation, rest-pause), budget equipment selection, and the Kordi on-bike isometric sprint protocol."
+- Torque_and_cadence_drills
+- Strength_and_resistance_training
+- Sprint_and_anaerobic_intervals
+- Periodization_models_and_macrocycles
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Helson (Ten Minute Tips #47)'
+author: Kolie Moore
+date: '2025-01-12'
+summary: A practical guide to executing effective strength and hypertrophy training at home with minimal equipment, detailing bodyweight biomechanics, intensifier techniques (lengthened partials, heel elevation, rest-pause), budget equipment selection, and the Kordi on-bike isometric sprint protocol.
 key_takeaways:
-  - "Equipment investment hierarchy: Start with heavy-loop resistance bands and loadable threaded dumbbells (Tier 1 & 2), which provide 90% of home training utility at a fraction of the cost and footprint of a full squat rack."
-  - "Long-length quad isolation: Sissy squats and Reverse Nordic curls provide intense knee-extensor hypertrophy stimulus without spinal compression, but carry high muscle damage risk—start with 1–2 submaximal sets."
-  - "Biomechanical intensifiers: Maximize submaximal loads by using heel wedges (forcing acute knee angles for quads), front-foot elevation (deep hip flexion for glutes), and slow eccentrics."
-  - "Rest-pause efficiency: Execute an activation set of 10–15 reps followed by 3–4 micro-sets of 3–5 reps with 20–30s rest to recruit high-threshold motor units rapidly without massive absolute loads."
-  - "Bone mineral density limitations: Low-load home lifting does not provide the osteogenic impact forces of high-velocity ground contacts; cyclists should supplement with jump rope, jogging, or low-dose plyometrics."
-  - "Kordi on-bike isometric protocol: Elite sprint force transfer can be achieved on a locked trainer by performing 3-second maximal isometric contractions across three crank angles ($45^ deg, 90^ deg, 135^ deg$ past TDC)."
+- 'Equipment investment hierarchy: Start with heavy-loop resistance bands and loadable threaded dumbbells (Tier 1 & 2), which provide 90% of home training utility at a fraction of the cost and footprint of a full squat rack.'
+- 'Long-length quad isolation: Sissy squats and Reverse Nordic curls provide intense knee-extensor hypertrophy stimulus without spinal compression, but carry high muscle damage risk—start with 1–2 submaximal sets.'
+- 'Biomechanical intensifiers: Maximize submaximal loads by using heel wedges (forcing acute knee angles for quads), front-foot elevation (deep hip flexion for glutes), and slow eccentrics.'
+- 'Rest-pause efficiency: Execute an activation set of 10–15 reps followed by 3–4 micro-sets of 3–5 reps with 20–30s rest to recruit high-threshold motor units rapidly without massive absolute loads.'
+- 'Bone mineral density limitations: Low-load home lifting does not provide the osteogenic impact forces of high-velocity ground contacts; cyclists should supplement with jump rope, jogging, or low-dose plyometrics.'
+- 'Kordi on-bike isometric protocol: Elite sprint force transfer can be achieved on a locked trainer by performing 3-second maximal isometric contractions across three crank angles ($45^ deg, 90^ deg, 135^ deg$ past TDC).'
 ---
 
 # Ten Minute Tips #47: Strength Training With Limited Equipment — Complete Guide

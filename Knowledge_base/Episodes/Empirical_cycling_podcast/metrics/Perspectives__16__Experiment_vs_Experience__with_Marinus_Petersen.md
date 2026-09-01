@@ -1,21 +1,19 @@
 ---
-title: "Perspectives #16: Experiment vs Experience — Complete Guide"
+title: 'Perspectives #16: Experiment vs Experience — Complete Guide'
 category: physiology
 topics:
-  - "CP"
-  - "LT1_VT1"
-  - "LT2_VT2"
-  - "W_prime"
-source: "Empirical Cycling Podcast — Kolie Moore & Marinus Petersen"
-author: "Kolie Moore"
-date: "2022-07-21"
-summary: "Rigorous exploration of scientific research bias in exercise physiology, the 3-zone academic model vs. real-world coaching, Critical Power flaws, lactate shuttling mechanics, and W' reconstitution."
+- Critical_power_and_w_prime
+- Thresholds_and_metabolic_domains
+source: Empirical Cycling Podcast — Kolie Moore & Marinus Petersen
+author: Kolie Moore
+date: '2022-07-21'
+summary: Rigorous exploration of scientific research bias in exercise physiology, the 3-zone academic model vs. real-world coaching, Critical Power flaws, lactate shuttling mechanics, and W' reconstitution.
 key_takeaways:
-  - "Exercise science literature suffers from severe publication bias and p-hacking around $p=0.05$; registered reports reveal far fewer 'magic' short-term interval interventions."
-  - "The academic 3-zone model treats sub-CP work (Sweet Spot/Tempo) as 'junk miles,' yet long-duration subthreshold and threshold intervals reliably expand aerobic TTE and raise FTP in well-trained cyclists."
-  - "Critical Power (CP) calculated from short test pairs (e.g., 3-min and 12-min) systematically overestimates sustainable metabolic steady-state power by 15–30 W."
-  - "Lactate is not a metabolic poison requiring active mid-session 'clearance'; it is an essential carbohydrate fuel shuttled to oxidative muscle fibers."
-  - "W' reconstitution during interval recovery periods is driven by aerobic oxidative capacity; riding active recoveries too hard (e.g., at FatMax/LT1) impairs anaerobic recovery."
+- Exercise science literature suffers from severe publication bias and p-hacking around $p=0.05$; registered reports reveal far fewer 'magic' short-term interval interventions.
+- The academic 3-zone model treats sub-CP work (Sweet Spot/Tempo) as 'junk miles,' yet long-duration subthreshold and threshold intervals reliably expand aerobic TTE and raise FTP in well-trained cyclists.
+- Critical Power (CP) calculated from short test pairs (e.g., 3-min and 12-min) systematically overestimates sustainable metabolic steady-state power by 15–30 W.
+- Lactate is not a metabolic poison requiring active mid-session 'clearance'; it is an essential carbohydrate fuel shuttled to oxidative muscle fibers.
+- W' reconstitution during interval recovery periods is driven by aerobic oxidative capacity; riding active recoveries too hard (e.g., at FatMax/LT1) impairs anaerobic recovery.
 ---
 
 # Perspectives #16: Experiment vs Experience — Complete Guide

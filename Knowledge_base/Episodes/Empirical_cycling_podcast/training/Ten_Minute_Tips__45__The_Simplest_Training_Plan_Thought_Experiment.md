@@ -1,23 +1,23 @@
 ---
-title: "Ten Minute Tips #45: The Simplest Training Plan Thought Experiment — Complete Guide"
+title: 'Ten Minute Tips #45: The Simplest Training Plan Thought Experiment — Complete Guide'
 category: planning
 topics:
-  - "Microcycles"
-  - "Progressive_overload"
-  - "Aerobic_base"
-  - "VO2max"
-  - "TTA_TTE"
-source: "Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #45)"
-author: "Kolie Moore"
-date: "2024-11-17"
-summary: "Explores the fundamental architecture of the simplest, most effective universal training plan, contrasting a structured 12-week static periodization model against an autoregulated continuous rule-based framework built on progressive overload, strict recovery discipline, and aerobic base volume."
+- Microcycle_and_schedule_design
+- Periodization_models_and_macrocycles
+- Zone2_and_endurance_base
+- VO2max_and_aerobic_kinetics
+- FTP_and_functional_metrics
+source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #45)'
+author: Kolie Moore
+date: '2024-11-17'
+summary: Explores the fundamental architecture of the simplest, most effective universal training plan, contrasting a structured 12-week static periodization model against an autoregulated continuous rule-based framework built on progressive overload, strict recovery discipline, and aerobic base volume.
 key_takeaways:
-  - "Universal weekly architecture: all robust training plans require 2 dedicated recovery days, 2 high-quality overload sessions, 1 optional race-specific/group ride, and remaining volume in strict Zone 2."
-  - "Non-negotiable recovery rule: recovery days must be full rest or single-digit TSS (<10 TSS) active recovery; riding recovery spins at tempo ruins subsequent interval quality."
-  - "Distinct progressive overload mechanisms: progress Threshold/Sweet Spot by extending Time-in-Zone (TIZ), while progressing VO2max by increasing average power at maximal aerobic ventilation."
-  - "Autoregulation and session swaps: intermediate athletes must actively swap, shorten, or abort interval sessions when life stress or unrecovered fatigue impairs performance."
-  - "Post-deload diagnostic openers: inserting short neuromuscular openers at the end of a recovery week primes the motor system and provides diagnostic feedback on autonomic freshness."
-  - "Static canned plans vs. adaptive frameworks: linear 12-week plans provide excellent structure for novices but inevitably fail when unexpected illness, life disruption, or non-linear fatigue occurs."
+- 'Universal weekly architecture: all robust training plans require 2 dedicated recovery days, 2 high-quality overload sessions, 1 optional race-specific/group ride, and remaining volume in strict Zone 2.'
+- 'Non-negotiable recovery rule: recovery days must be full rest or single-digit TSS (<10 TSS) active recovery; riding recovery spins at tempo ruins subsequent interval quality.'
+- 'Distinct progressive overload mechanisms: progress Threshold/Sweet Spot by extending Time-in-Zone (TIZ), while progressing VO2max by increasing average power at maximal aerobic ventilation.'
+- 'Autoregulation and session swaps: intermediate athletes must actively swap, shorten, or abort interval sessions when life stress or unrecovered fatigue impairs performance.'
+- 'Post-deload diagnostic openers: inserting short neuromuscular openers at the end of a recovery week primes the motor system and provides diagnostic feedback on autonomic freshness.'
+- 'Static canned plans vs. adaptive frameworks: linear 12-week plans provide excellent structure for novices but inevitably fail when unexpected illness, life disruption, or non-linear fatigue occurs.'
 ---
 
 # Ten Minute Tips #45: The Simplest Training Plan Thought Experiment — Complete Guide

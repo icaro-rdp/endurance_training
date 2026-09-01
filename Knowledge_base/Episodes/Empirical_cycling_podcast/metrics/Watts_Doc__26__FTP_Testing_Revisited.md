@@ -1,21 +1,20 @@
 ---
-title: "FTP Testing Revisited: Power Curves, Critical Power, & Perceptual Ruts — Complete Guide"
+title: 'FTP Testing Revisited: Power Curves, Critical Power, & Perceptual Ruts — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "CP"
-  - "TTA_TTE"
-  - "Lab_vs_field"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #26)"
-author: "Kolie Moore"
-date: "2020-09-14"
-summary: "A deep revisit of FTP testing methodologies, examining the power-duration inflection point, mathematical vs. physiological limits of Critical Power (CP) models, how perceptual training ruts mask fitness gains, and robust field testing protocols."
+- FTP_and_functional_metrics
+- Critical_power_and_w_prime
+- Physiological_testing_and_diagnostics
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #26)'
+author: Kolie Moore
+date: '2020-09-14'
+summary: A deep revisit of FTP testing methodologies, examining the power-duration inflection point, mathematical vs. physiological limits of Critical Power (CP) models, how perceptual training ruts mask fitness gains, and robust field testing protocols.
 key_takeaways:
-  - "FTP is the distinct inflection point on the power-vs-log-time curve dividing slow, manageable aerobic fatigue from rapid, steep-sloped task failure."
-  - "Critical Power (CP) mathematical models overestimate sustainable steady-state power (MLSS/FTP) by assuming infinite duration sustainability below CP."
-  - "Athletes easily fall into 'perceptual ruts' when training extensively at a fixed wattage, anchoring their RPE to old numbers and masking genuine threshold improvements during open-ended tests."
-  - "Power meter accuracy limits ($+/- 1–2%$) make single-watt FTP micromanagement unscientific; threshold operates within a functional 5–10 Watt physiological window."
-  - "Continuous long, progressive open-ended tests (35–60+ min) and unstructured hard competitive efforts (Zwift races, KOMs) yield the highest-fidelity threshold data."
+- FTP is the distinct inflection point on the power-vs-log-time curve dividing slow, manageable aerobic fatigue from rapid, steep-sloped task failure.
+- Critical Power (CP) mathematical models overestimate sustainable steady-state power (MLSS/FTP) by assuming infinite duration sustainability below CP.
+- Athletes easily fall into 'perceptual ruts' when training extensively at a fixed wattage, anchoring their RPE to old numbers and masking genuine threshold improvements during open-ended tests.
+- Power meter accuracy limits ($+/- 1–2%$) make single-watt FTP micromanagement unscientific; threshold operates within a functional 5–10 Watt physiological window.
+- Continuous long, progressive open-ended tests (35–60+ min) and unstructured hard competitive efforts (Zwift races, KOMs) yield the highest-fidelity threshold data.
 ---
 
 # FTP Testing Revisited: Power Curves, Critical Power, & Perceptual Ruts — Complete Guide

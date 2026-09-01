@@ -1,20 +1,20 @@
 ---
-title: "Rotating Weight vs. Aerodynamics & Total Inertia in Cycling — Complete Guide"
+title: Rotating Weight vs. Aerodynamics & Total Inertia in Cycling — Complete Guide
 category: physiology
 topics:
-  - "Power_vs_HR"
-  - "Sprint_performance"
-  - "FTP"
-source: "Empirical Cycling Podcast — Kyle Helson & Kolie Moore (Ten Minute Tips #5)"
-author: "Kyle Helson & Kolie Moore"
-date: "2020-01-27"
-summary: "A physics-based mathematical evaluation of rotating weight (wheel rim inertia) versus translational inertia and aerodynamic drag during cycling accelerations, demonstrating why wheel weight savings yield negligible real-world power advantages compared to aerodynamics."
+- Autonomic_and_cardiac_monitoring
+- Sprint_and_anaerobic_intervals
+- FTP_and_functional_metrics
+source: 'Empirical Cycling Podcast — Kyle Helson & Kolie Moore (Ten Minute Tips #5)'
+author: Kyle Helson & Kolie Moore
+date: '2020-01-27'
+summary: A physics-based mathematical evaluation of rotating weight (wheel rim inertia) versus translational inertia and aerodynamic drag during cycling accelerations, demonstrating why wheel weight savings yield negligible real-world power advantages compared to aerodynamics.
 key_takeaways:
-  - "The popular claim that '1 gram of rotating weight equals 2 grams of frame weight' applies only to acceleration kinetics, but rim inertia represents a tiny fraction of total acceleration power."
-  - "In a realistic criterium acceleration (35 to 40 km/h in 1.5 seconds), accelerating an 80 kg total bike+rider system requires ~771 W of inertial power alone."
-  - "An extreme 1,000-gram difference in rim weight (1,000g vs. 2,000g wheelset) accounts for only ~11.6 W—representing a 1.5% difference in pure acceleration power before factoring in aerodynamic drag."
-  - "Realistic wheel upgrades saving 100–200 grams yield less than a 0.2–0.3% power difference during accelerations, an imperceptible margin in racing."
-  - "Aerodynamic drag ($P_{{aero}} proportional to v^3$) dominates energy expenditure at racing speeds (>35 km/h); investing in deeper aero rims, low-$C_{{rr}}$ tires, optimized rider position, and coaching provides vastly superior performance gains."
+- The popular claim that '1 gram of rotating weight equals 2 grams of frame weight' applies only to acceleration kinetics, but rim inertia represents a tiny fraction of total acceleration power.
+- In a realistic criterium acceleration (35 to 40 km/h in 1.5 seconds), accelerating an 80 kg total bike+rider system requires ~771 W of inertial power alone.
+- An extreme 1,000-gram difference in rim weight (1,000g vs. 2,000g wheelset) accounts for only ~11.6 W—representing a 1.5% difference in pure acceleration power before factoring in aerodynamic drag.
+- Realistic wheel upgrades saving 100–200 grams yield less than a 0.2–0.3% power difference during accelerations, an imperceptible margin in racing.
+- Aerodynamic drag ($P_{{aero}} proportional to v^3$) dominates energy expenditure at racing speeds (>35 km/h); investing in deeper aero rims, low-$C_{{rr}}$ tires, optimized rider position, and coaching provides vastly superior performance gains.
 ---
 
 # Rotating Weight vs. Aerodynamics & Total Inertia in Cycling — Complete Guide

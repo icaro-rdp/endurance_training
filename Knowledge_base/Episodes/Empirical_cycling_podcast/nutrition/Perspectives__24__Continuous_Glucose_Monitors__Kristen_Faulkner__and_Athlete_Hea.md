@@ -1,20 +1,20 @@
 ---
-title: "Continuous Glucose Monitors (CGMs), Athlete Health, and RED-S — Complete Guide"
-category: "nutrition"
+title: Continuous Glucose Monitors (CGMs), Athlete Health, and RED-S — Complete Guide
+category: nutrition
 topics:
-  - "Carbohydrate_ratio"
-  - "Durability"
-  - "Power_vs_HR"
-source: "Empirical Cycling Podcast — Kolie Moore, Dr. Traci Carson, Dr. Namrita Brooke, & Dr. Fabiano Araujo (Perspectives #24)"
-author: "Kolie Moore"
-date: "2023-03-30"
-summary: "A critical physiological evaluation of Continuous Glucose Monitors (CGMs) in cycling following Kristen Faulkner's Strade Bianche disqualification, examining interstitial vs. blood glucose kinetics, RED-S/LEA pathophysiology, and the risks of 'glucorexia'."
+- Carbohydrate_fueling_and_gut_training
+- Durability_and_fatigue_mechanisms
+- Autonomic_and_cardiac_monitoring
+source: 'Empirical Cycling Podcast — Kolie Moore, Dr. Traci Carson, Dr. Namrita Brooke, & Dr. Fabiano Araujo (Perspectives #24)'
+author: Kolie Moore
+date: '2023-03-30'
+summary: A critical physiological evaluation of Continuous Glucose Monitors (CGMs) in cycling following Kristen Faulkner's Strade Bianche disqualification, examining interstitial vs. blood glucose kinetics, RED-S/LEA pathophysiology, and the risks of 'glucorexia'.
 key_takeaways:
-  - "CGMs measure interstitial fluid glucose—not blood glucose—introducing a 5–15 minute physiological lag time that renders reactive in-race fueling adjustments largely ineffective."
-  - "Interstitial glucose reflects a dynamic multi-compartment equilibrium (gastric emptying, splanchnic absorption, hepatic output, and GLUT4 muscle uptake) and does not measure intramuscular or hepatic glycogen stores."
-  - "CGMs confer no direct competitive performance advantage in races; structured, proactive carbohydrate ingestion (60–100+ g/hr) vastly outperforms reactive biofeedback."
-  - "Low Energy Availability (LEA) and RED-S disrupt neuroendocrine signaling and ovarian function; while chronic LEA lowers baseline glucose, CGMs are not a validated diagnostic proxy for energy availability."
-  - "Misinterpreting acute postprandial glucose excursions can induce 'glucorexia' and orthorexic food avoidance, leading athletes to eliminate vital high-glycemic carbohydrates necessary for glycogen replenishment."
+- CGMs measure interstitial fluid glucose—not blood glucose—introducing a 5–15 minute physiological lag time that renders reactive in-race fueling adjustments largely ineffective.
+- Interstitial glucose reflects a dynamic multi-compartment equilibrium (gastric emptying, splanchnic absorption, hepatic output, and GLUT4 muscle uptake) and does not measure intramuscular or hepatic glycogen stores.
+- CGMs confer no direct competitive performance advantage in races; structured, proactive carbohydrate ingestion (60–100+ g/hr) vastly outperforms reactive biofeedback.
+- Low Energy Availability (LEA) and RED-S disrupt neuroendocrine signaling and ovarian function; while chronic LEA lowers baseline glucose, CGMs are not a validated diagnostic proxy for energy availability.
+- Misinterpreting acute postprandial glucose excursions can induce 'glucorexia' and orthorexic food avoidance, leading athletes to eliminate vital high-glycemic carbohydrates necessary for glycogen replenishment.
 ---
 
 # Continuous Glucose Monitors (CGMs), Athlete Health, and RED-S — Complete Guide

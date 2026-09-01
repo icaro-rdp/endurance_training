@@ -1,20 +1,20 @@
 ---
-title: "Coaching the Process, Individualization vs. The Average Fallacy, & Racecraft Physics — Complete Guide"
+title: Coaching the Process, Individualization vs. The Average Fallacy, & Racecraft Physics — Complete Guide
 category: planning
 topics:
-  - "Microcycles"
-  - "Volume_quantification"
-  - "Durability"
-  - "Aerobic_base"
-source: "Empirical Cycling Podcast — Kolie Moore & Cory Lockwood (Perspectives #5)"
-author: "Kolie Moore"
-date: "2021-11-30"
-summary: "An in-depth analysis of process-driven coaching, the ecological fallacy of average training responses, the cumulative pathophysiology of overtraining, and the technical mechanics of cornering and energy conservation in criterium and time trial racing."
+- Microcycle_and_schedule_design
+- Workload_quantification_and_modeling
+- Durability_and_fatigue_mechanisms
+- Zone2_and_endurance_base
+source: 'Empirical Cycling Podcast — Kolie Moore & Cory Lockwood (Perspectives #5)'
+author: Kolie Moore
+date: '2021-11-30'
+summary: An in-depth analysis of process-driven coaching, the ecological fallacy of average training responses, the cumulative pathophysiology of overtraining, and the technical mechanics of cornering and energy conservation in criterium and time trial racing.
 key_takeaways:
-  - "The Average Is Not the Individual: Group mean responses in scientific literature obscure wide inter-individual variance; training prescriptions must be iteratively tailored to individual phenotypic and systemic recovery capacities."
-  - "Survivor and High-Responder Bias in Coaching: Elite athletic success often occurs in spite of flawed training programs rather than because of them; duplicating a champion's personal training block frequently causes non-responders to overtrain or injure."
-  - "Overtraining Snowball Dynamics: Severe overtraining syndrome is rarely caused by a single session, but by consecutive micro-errors in communication, ignoring autonomic/perceptual fatigue signals, and stacking high-intensity load onto an under-recovered system."
-  - "Technical Energy Conservation in Criteriums: Maximizing exit velocity via wide entries and late apexes reduces explosive acceleration spikes from 800 W down to 400–500 W seated rolls, preserving finite neuromuscular work capacity and glycogen for race-deciding moves."
+- 'The Average Is Not the Individual: Group mean responses in scientific literature obscure wide inter-individual variance; training prescriptions must be iteratively tailored to individual phenotypic and systemic recovery capacities.'
+- 'Survivor and High-Responder Bias in Coaching: Elite athletic success often occurs in spite of flawed training programs rather than because of them; duplicating a champion''s personal training block frequently causes non-responders to overtrain or injure.'
+- 'Overtraining Snowball Dynamics: Severe overtraining syndrome is rarely caused by a single session, but by consecutive micro-errors in communication, ignoring autonomic/perceptual fatigue signals, and stacking high-intensity load onto an under-recovered system.'
+- 'Technical Energy Conservation in Criteriums: Maximizing exit velocity via wide entries and late apexes reduces explosive acceleration spikes from 800 W down to 400–500 W seated rolls, preserving finite neuromuscular work capacity and glycogen for race-deciding moves.'
 ---
 
 # Coaching the Process, Individualization vs. The Average Fallacy, & Racecraft Physics — Complete Guide

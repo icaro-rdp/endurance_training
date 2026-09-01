@@ -1,21 +1,21 @@
 ---
-title: "The Complicated Relationship Between Performance and Phenotype — Complete Guide"
-category: "physiology"
+title: The Complicated Relationship Between Performance and Phenotype — Complete Guide
+category: physiology
 topics:
-  - "Aerobic_base"
-  - "Fat_oxidation"
-  - "Mitochondrial_density"
-  - "Progressive_overload"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #51)"
-author: "Kolie Moore"
-date: "2024-11-03"
-summary: "An analysis of the skeletal muscle HIF-1α knockout paradox, revealing how biochemical markers of endurance phenotype (fat oxidation, fiber type, capillary density) can completely decouple from baseline functional athletic performance."
+- Zone2_and_endurance_base
+- Substrate_utilization_and_fat_oxidation
+- Mitochondrial_and_cellular_adaptation
+- Periodization_models_and_macrocycles
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #51)'
+author: Kolie Moore
+date: '2024-11-03'
+summary: An analysis of the skeletal muscle HIF-1α knockout paradox, revealing how biochemical markers of endurance phenotype (fat oxidation, fiber type, capillary density) can completely decouple from baseline functional athletic performance.
 key_takeaways:
-  - "Knocking out HIF-1α in skeletal muscle produces a 'pre-adapted' trained phenotype at baseline: higher Type 1 fibers, elevated capillary density, increased citrate synthase/HAD activity, and enhanced fat oxidation (RER 0.80)."
-  - "Despite possessing a fully 'trained' biochemical phenotype, untrained HIF-1α knockout mice display NO superior baseline endurance performance over untrained wild-type controls (44 min vs 41 min)."
-  - "Knockout mice still required 6 weeks of physical training to increase time to exhaustion (from 44 min to 78 min), proving that phenotypic markers are not 1:1 proxies for functional performance."
-  - "The pre-adapted phenotype in knockout mice is driven by chronic cellular energy deficit: lacking glycolytic hypoxic regulation, basal AMPK is constitutively elevated, forcing compensatory mitochondrial upregulation."
-  - "HIF-1α mediates the Pasteur effect by upregulating pyruvate dehydrogenase kinase 1 (PDK1), which inhibits pyruvate conversion into the Krebs cycle to protect cells during severe hypoxia."
+- 'Knocking out HIF-1α in skeletal muscle produces a ''pre-adapted'' trained phenotype at baseline: higher Type 1 fibers, elevated capillary density, increased citrate synthase/HAD activity, and enhanced fat oxidation (RER 0.80).'
+- Despite possessing a fully 'trained' biochemical phenotype, untrained HIF-1α knockout mice display NO superior baseline endurance performance over untrained wild-type controls (44 min vs 41 min).
+- Knockout mice still required 6 weeks of physical training to increase time to exhaustion (from 44 min to 78 min), proving that phenotypic markers are not 1:1 proxies for functional performance.
+- 'The pre-adapted phenotype in knockout mice is driven by chronic cellular energy deficit: lacking glycolytic hypoxic regulation, basal AMPK is constitutively elevated, forcing compensatory mitochondrial upregulation.'
+- HIF-1α mediates the Pasteur effect by upregulating pyruvate dehydrogenase kinase 1 (PDK1), which inhibits pyruvate conversion into the Krebs cycle to protect cells during severe hypoxia.
 ---
 
 # The Complicated Relationship Between Performance and Phenotype — Complete Guide

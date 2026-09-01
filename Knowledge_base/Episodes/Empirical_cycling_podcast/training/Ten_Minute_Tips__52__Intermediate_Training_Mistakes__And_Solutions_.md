@@ -1,21 +1,20 @@
 ---
-title: "Ten Minute Tips #52: Intermediate Training Mistakes (And Solutions) — Complete Guide"
+title: 'Ten Minute Tips #52: Intermediate Training Mistakes (And Solutions) — Complete Guide'
 category: planning
 topics:
-  - "Aerobic_base"
-  - "Progressive_overload"
-  - "Block_periodization"
-  - "FTP"
-source: "Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #52)"
-author: "Kolie Moore"
-date: "2025-03-23"
-summary: "Identifies the core training, nutritional, and psychological mistakes made by intermediate cyclists (2-5 years structured training) and provides actionable physiological solutions to overcome plateaus and sustain long-term progression."
+- Zone2_and_endurance_base
+- Periodization_models_and_macrocycles
+- FTP_and_functional_metrics
+source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #52)'
+author: Kolie Moore
+date: '2025-03-23'
+summary: Identifies the core training, nutritional, and psychological mistakes made by intermediate cyclists (2-5 years structured training) and provides actionable physiological solutions to overcome plateaus and sustain long-term progression.
 key_takeaways:
-  - "The Noob Gains Fallacy: Training plans that produced 40W jumps in years 1–2 will not work indefinitely; intermediate progression requires progressive overload in interval duration (TIZ) and overall aerobic volume."
-  - "Chasing W/kg through aggressive dieting frequently destroys absolute power and endocrine health; aerodynamic optimization and fueling for high power yield far greater race-speed dividends than losing 1–2 kg."
-  - "High-intensity intervals cannot substitute for missing recovery; when performance plateaus, the primary levers are total aerobic volume, sleep, and carbohydrate availability, not stacking more VO2max sessions."
-  - "Race execution and tactical efficiency trump isolated watts: practicing pack dynamics, cornering, pacing, and mid-race fueling ensures power is intact for decisive moments."
-  - "Periodize motivation and fun: rigidly adhering to indoor trainer plans while eliminating social group rides leads to psychological burnout and mid-season attrition."
+- 'The Noob Gains Fallacy: Training plans that produced 40W jumps in years 1–2 will not work indefinitely; intermediate progression requires progressive overload in interval duration (TIZ) and overall aerobic volume.'
+- Chasing W/kg through aggressive dieting frequently destroys absolute power and endocrine health; aerodynamic optimization and fueling for high power yield far greater race-speed dividends than losing 1–2 kg.
+- High-intensity intervals cannot substitute for missing recovery; when performance plateaus, the primary levers are total aerobic volume, sleep, and carbohydrate availability, not stacking more VO2max sessions.
+- 'Race execution and tactical efficiency trump isolated watts: practicing pack dynamics, cornering, pacing, and mid-race fueling ensures power is intact for decisive moments.'
+- 'Periodize motivation and fun: rigidly adhering to indoor trainer plans while eliminating social group rides leads to psychological burnout and mid-season attrition.'
 ---
 
 # Ten Minute Tips #52: Intermediate Training Mistakes (And Solutions) — Complete Guide

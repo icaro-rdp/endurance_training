@@ -1,20 +1,20 @@
 ---
-title: "Using Data In Coaching — Complete Guide"
+title: Using Data In Coaching — Complete Guide
 category: physiology
 topics:
-  - "Power_vs_HR"
-  - "Durability"
-  - "FTP"
-  - "Volume_quantification"
-source: "Empirical Cycling Podcast — Kolie Moore & Gediminas Bagdonas (Ten Minute Tips #68)"
-author: "Kolie Moore"
-date: "2025-12-11"
-summary: "An analytical examination of how data, analytics, and exercise science should be integrated into coaching. Explores the 'Holy Trinity' of metrics (Power, HR, RPE), pitfalls of algorithm-driven training, metric misuse (TSB, CTL, IF floors), and the necessity of logical decision frameworks."
+- Autonomic_and_cardiac_monitoring
+- Durability_and_fatigue_mechanisms
+- FTP_and_functional_metrics
+- Workload_quantification_and_modeling
+source: 'Empirical Cycling Podcast — Kolie Moore & Gediminas Bagdonas (Ten Minute Tips #68)'
+author: Kolie Moore
+date: '2025-12-11'
+summary: An analytical examination of how data, analytics, and exercise science should be integrated into coaching. Explores the 'Holy Trinity' of metrics (Power, HR, RPE), pitfalls of algorithm-driven training, metric misuse (TSB, CTL, IF floors), and the necessity of logical decision frameworks.
 key_takeaways:
-  - "Data does not provide answers in a vacuum; it serves as a shortcut to test specific hypotheses within a coherent logical framework."
-  - "The 'Holy Trinity' of monitoring metrics is Power (external load), Heart Rate (internal cardiovascular strain), and RPE (neuromuscular/autonomic fatigue integration)."
-  - "Beware of 'McScience' and over-interpreting immature exercise literature; small effect sizes and novel buzzwords (e.g., early durability metrics) cannot replace fundamental progressive overload."
-  - "High Intensity Factor (IF) floors ($>= 0.75$) on recovery/endurance rides reveal the 'fatigue security blanket,' trapping athletes in a middle-intensity black hole where hard days are blunted."
+- Data does not provide answers in a vacuum; it serves as a shortcut to test specific hypotheses within a coherent logical framework.
+- The 'Holy Trinity' of monitoring metrics is Power (external load), Heart Rate (internal cardiovascular strain), and RPE (neuromuscular/autonomic fatigue integration).
+- Beware of 'McScience' and over-interpreting immature exercise literature; small effect sizes and novel buzzwords (e.g., early durability metrics) cannot replace fundamental progressive overload.
+- High Intensity Factor (IF) floors ($>= 0.75$) on recovery/endurance rides reveal the 'fatigue security blanket,' trapping athletes in a middle-intensity black hole where hard days are blunted.
 ---
 
 # Using Data In Coaching — Complete Guide

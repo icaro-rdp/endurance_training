@@ -1,20 +1,20 @@
 ---
-title: "Fats vs. Carbs Part II: Carnitine Acetyl Buffering, CPT-1 Regulation, & VLamax Fallacies — Complete Guide"
+title: 'Fats vs. Carbs Part II: Carnitine Acetyl Buffering, CPT-1 Regulation, & VLamax Fallacies — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "Fat_oxidation"
-  - "Sprint_performance"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #33)"
-author: "Kolie Moore"
-date: "2021-09-27"
-summary: "An advanced physiological and biochemical examination of how increasing exercise intensity suppresses fat oxidation through mitochondrial carnitine acetyl buffering, alongside a rigorous critique of the VLamax model and why glycolytic sprint capacity does not dictate Functional Threshold Power."
+- FTP_and_functional_metrics
+- Substrate_utilization_and_fat_oxidation
+- Sprint_and_anaerobic_intervals
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #33)'
+author: Kolie Moore
+date: '2021-09-27'
+summary: An advanced physiological and biochemical examination of how increasing exercise intensity suppresses fat oxidation through mitochondrial carnitine acetyl buffering, alongside a rigorous critique of the VLamax model and why glycolytic sprint capacity does not dictate Functional Threshold Power.
 key_takeaways:
-  - "Fat oxidation suppression during high-intensity exercise is caused by mitochondrial carnitine trapping: surging glycolytic flux converts free carnitine into acetylcarnitine to preserve the Coenzyme A pool for PDH, leaving insufficient free carnitine for CPT-1 fatty acid transport."
-  - "AMPK activation during exercise shuts down Acetyl-CoA Carboxylase (ACC), ensuring the resting Malonyl-CoA inhibition pathway is inactive during exercise; substrate competition for carnitine dominates instead."
-  - "VLamax (maximal glycolytic rate) testing via short all-out sprints measures neuromuscular recruitment, total active muscle mass, and rapid ATP drawdown—not an intrinsic glycolytic 'leak' that undermines threshold power."
-  - "Sprint power (Pmax) and Functional Threshold Power (FTP) operate as largely independent physiological dials; elite athletes can simultaneously possess a 2,000 W sprint and a 400 W+ FTP without one compromising the other."
-  - "Substrate oxidation at FTP is highly individualized; well-trained endurance athletes can derive 30–50%+ of their energy from fat oxidation at MLSS, contradicting the VLamax theoretical assumption of 100% carbohydrate dependence at threshold."
+- 'Fat oxidation suppression during high-intensity exercise is caused by mitochondrial carnitine trapping: surging glycolytic flux converts free carnitine into acetylcarnitine to preserve the Coenzyme A pool for PDH, leaving insufficient free carnitine for CPT-1 fatty acid transport.'
+- AMPK activation during exercise shuts down Acetyl-CoA Carboxylase (ACC), ensuring the resting Malonyl-CoA inhibition pathway is inactive during exercise; substrate competition for carnitine dominates instead.
+- VLamax (maximal glycolytic rate) testing via short all-out sprints measures neuromuscular recruitment, total active muscle mass, and rapid ATP drawdown—not an intrinsic glycolytic 'leak' that undermines threshold power.
+- Sprint power (Pmax) and Functional Threshold Power (FTP) operate as largely independent physiological dials; elite athletes can simultaneously possess a 2,000 W sprint and a 400 W+ FTP without one compromising the other.
+- Substrate oxidation at FTP is highly individualized; well-trained endurance athletes can derive 30–50%+ of their energy from fat oxidation at MLSS, contradicting the VLamax theoretical assumption of 100% carbohydrate dependence at threshold.
 ---
 
 # Fats vs. Carbs Part II: Carnitine Acetyl Buffering, CPT-1 Regulation, & VLamax Fallacies — Complete Guide

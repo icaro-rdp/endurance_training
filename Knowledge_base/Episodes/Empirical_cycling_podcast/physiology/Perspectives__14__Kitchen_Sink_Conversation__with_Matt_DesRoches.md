@@ -1,20 +1,20 @@
 ---
-title: "Perspectives #14: Kitchen Sink Conversation — Complete Guide"
-category: "physiology"
+title: 'Perspectives #14: Kitchen Sink Conversation — Complete Guide'
+category: physiology
 topics:
-  - "VO2max"
-  - "Cardiac_hypertrophy"
-  - "Power_vs_HR"
-source: "Empirical Cycling Podcast — Kolie Moore & Matt DesRoches"
-author: "Kolie Moore"
-date: "2022-05-25"
-summary: "Wide-ranging physiological analysis spanning multi-sport principles, central vs. peripheral VO2max limitations, autonomic nervous system regulation, RPE calibration, and evidence-based strength integration."
+- VO2max_and_aerobic_kinetics
+- Cardiovascular_and_hemodynamics
+- Autonomic_and_cardiac_monitoring
+source: Empirical Cycling Podcast — Kolie Moore & Matt DesRoches
+author: Kolie Moore
+date: '2022-05-25'
+summary: Wide-ranging physiological analysis spanning multi-sport principles, central vs. peripheral VO2max limitations, autonomic nervous system regulation, RPE calibration, and evidence-based strength integration.
 key_takeaways:
-  - "VO2max in healthy trained individuals is limited centrally by cardiac output (stroke volume and blood delivery), as demonstrated by 1-leg vs. 2-leg knee extension and hemodilution models."
-  - "Training interventions must be categorized as 'Substitution' (modifying existing work) or 'Addition' (adding new systemic load); adding supplementary work without deloading causes recovery failure."
-  - "Sprint power at the end of an endurance race is limited by aerobic capacity and glycogen sparing during preceding surges, not pure gym-derived 1RM strength."
-  - "Autonomic nervous system (ANS) switching—moving rapidly from sympathetic drive to parasympathetic 'micro-recovery'—protects against chronic neuroendocrine fatigue."
-  - "Scientific papers showing rapid gains from novel interventions often capture 'noob gains' or plasma volume shifts that do not scale linearly in highly trained athletes."
+- VO2max in healthy trained individuals is limited centrally by cardiac output (stroke volume and blood delivery), as demonstrated by 1-leg vs. 2-leg knee extension and hemodilution models.
+- Training interventions must be categorized as 'Substitution' (modifying existing work) or 'Addition' (adding new systemic load); adding supplementary work without deloading causes recovery failure.
+- Sprint power at the end of an endurance race is limited by aerobic capacity and glycogen sparing during preceding surges, not pure gym-derived 1RM strength.
+- Autonomic nervous system (ANS) switching—moving rapidly from sympathetic drive to parasympathetic 'micro-recovery'—protects against chronic neuroendocrine fatigue.
+- Scientific papers showing rapid gains from novel interventions often capture 'noob gains' or plasma volume shifts that do not scale linearly in highly trained athletes.
 ---
 
 # Perspectives #14: Kitchen Sink Conversation — Complete Guide

@@ -1,20 +1,20 @@
 ---
-title: "Ten Minute Tips #53: Leveling Up Parenting And Training — Complete Guide"
+title: 'Ten Minute Tips #53: Leveling Up Parenting And Training — Complete Guide'
 category: planning
 topics:
-  - "Aerobic_base"
-  - "Microcycles"
-  - "Volume_quantification"
-source: "Empirical Cycling Podcast — Kolie Moore, Coach Fabiano, & Coach Giancarlo (Ten Minute Tips #53)"
-author: "Kolie Moore"
-date: "2025-03-30"
-summary: "A practical and physiological framework for balancing competitive endurance training with parenting, addressing allostatic off-bike stress, flexible microcycle scheduling, illness prevention, and parental guilt."
+- Zone2_and_endurance_base
+- Microcycle_and_schedule_design
+- Workload_quantification_and_modeling
+source: 'Empirical Cycling Podcast — Kolie Moore, Coach Fabiano, & Coach Giancarlo (Ten Minute Tips #53)'
+author: Kolie Moore
+date: '2025-03-30'
+summary: A practical and physiological framework for balancing competitive endurance training with parenting, addressing allostatic off-bike stress, flexible microcycle scheduling, illness prevention, and parental guilt.
 key_takeaways:
-  - "Total Stress Accounting: Family obligations, infant sleep fragmentation, and domestic work constitute real 'Off-Bike TSS' that elevates baseline allostatic load and slows physiological recovery rates."
-  - "Prescription for Sickness Waves: When children bring home viral infections, immediately remove all high-intensity intervals and convert the microcycle to easy Zone 1/2 spins to prevent opportunistic immunosuppression."
-  - "Pragmatic Availability vs. Fantasy Volume: Build weekly schedules around demonstrated, realistic time availability (e.g. 8 hrs/wk) rather than theoretical ideal volume (12 hrs/wk) to preserve mental momentum and high compliance."
-  - "The 'Pour From a Full Cup' Paradigm: Reframe personal training as essential psychological meditation and physical maintenance that directly enhances parental presence and resilience."
-  - "Flexible Microcycle Design: Abandon rigid 3:1 mesocycles in favor of stochastic microcycles, split daily sessions, and align planned recovery weeks with family travel, holidays, and school breaks."
+- 'Total Stress Accounting: Family obligations, infant sleep fragmentation, and domestic work constitute real ''Off-Bike TSS'' that elevates baseline allostatic load and slows physiological recovery rates.'
+- 'Prescription for Sickness Waves: When children bring home viral infections, immediately remove all high-intensity intervals and convert the microcycle to easy Zone 1/2 spins to prevent opportunistic immunosuppression.'
+- 'Pragmatic Availability vs. Fantasy Volume: Build weekly schedules around demonstrated, realistic time availability (e.g. 8 hrs/wk) rather than theoretical ideal volume (12 hrs/wk) to preserve mental momentum and high compliance.'
+- 'The ''Pour From a Full Cup'' Paradigm: Reframe personal training as essential psychological meditation and physical maintenance that directly enhances parental presence and resilience.'
+- 'Flexible Microcycle Design: Abandon rigid 3:1 mesocycles in favor of stochastic microcycles, split daily sessions, and align planned recovery weeks with family travel, holidays, and school breaks.'
 ---
 
 # Ten Minute Tips #53: Leveling Up Parenting And Training — Complete Guide

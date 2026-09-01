@@ -1,20 +1,20 @@
 ---
-title: "Ten Minute Tips #63: The Best And Worst Ways To Test FTP — Complete Guide"
+title: 'Ten Minute Tips #63: The Best And Worst Ways To Test FTP — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "CP"
-  - "LT2_VT2"
-source: "Empirical Cycling Podcast — Kolie Moore with Rory Porteous"
-author: "Kolie Moore"
-date: "2025-09-11"
-summary: "A rigorous breakdown of 10 methods for testing and estimating FTP, analyzing the mathematical and physiological flaws of ramp tests, 20-minute formulas, blood lactate protocols, and detailing the Kolie Moore long-format test."
+- FTP_and_functional_metrics
+- Critical_power_and_w_prime
+- Thresholds_and_metabolic_domains
+source: Empirical Cycling Podcast — Kolie Moore with Rory Porteous
+author: Kolie Moore
+date: '2025-09-11'
+summary: A rigorous breakdown of 10 methods for testing and estimating FTP, analyzing the mathematical and physiological flaws of ramp tests, 20-minute formulas, blood lactate protocols, and detailing the Kolie Moore long-format test.
 key_takeaways:
-  - "FTP is a physiological state—the inflection point of metabolic stability—not a mathematical formula or a fixed fraction of a short effort."
-  - "Ramp tests systematically overestimate FTP by an average of +17 to +18W (+7%), with individual errors reaching +45 to +50W for anaerobically gifted riders."
-  - "The standard 20-minute test ($95%$) has an error window of 88% to 98% of true FTP; the 5-minute pre-test 'clearing' blowout introduces excessive test variability."
-  - "Blood lactate lab testing is highly confounded by protocol design (step length, hydration, glycogen, baseline criteria); static markers like 4.0 mmol/L OBLA rarely equal true MLSS."
-  - "The Kolie Moore long-format progression test (35–60+ min quasi-steady-state ramp) eliminates mathematical inference, teaches interoceptive RPE at threshold, and directly measures TTE."
+- FTP is a physiological state—the inflection point of metabolic stability—not a mathematical formula or a fixed fraction of a short effort.
+- Ramp tests systematically overestimate FTP by an average of +17 to +18W (+7%), with individual errors reaching +45 to +50W for anaerobically gifted riders.
+- The standard 20-minute test ($95%$) has an error window of 88% to 98% of true FTP; the 5-minute pre-test 'clearing' blowout introduces excessive test variability.
+- Blood lactate lab testing is highly confounded by protocol design (step length, hydration, glycogen, baseline criteria); static markers like 4.0 mmol/L OBLA rarely equal true MLSS.
+- The Kolie Moore long-format progression test (35–60+ min quasi-steady-state ramp) eliminates mathematical inference, teaches interoceptive RPE at threshold, and directly measures TTE.
 ---
 
 # Ten Minute Tips #63: The Best And Worst Ways To Test FTP — Complete Guide

@@ -1,20 +1,20 @@
 ---
-title: "Why Low Glycogen Training Probably Doesn't Work — Complete Guide"
-category: "nutrition"
+title: Why Low Glycogen Training Probably Doesn't Work — Complete Guide
+category: nutrition
 topics:
-  - "Carbohydrate_ratio"
-  - "Fat_oxidation"
-  - "Aerobic_base"
-source: "Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Watts Doc #46)"
-author: "Kolie Moore"
-date: "2023-10-15"
-summary: "A rigorous dissection of the 'train low, compete high' paradigm, examining p38 MAPK and AMPK signaling, oxidative enzyme up-regulation versus real performance outcomes, and the systemic costs of glycogen-depleted training."
+- Carbohydrate_fueling_and_gut_training
+- Substrate_utilization_and_fat_oxidation
+- Zone2_and_endurance_base
+source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Watts Doc #46)'
+author: Kolie Moore
+date: '2023-10-15'
+summary: A rigorous dissection of the 'train low, compete high' paradigm, examining p38 MAPK and AMPK signaling, oxidative enzyme up-regulation versus real performance outcomes, and the systemic costs of glycogen-depleted training.
 key_takeaways:
-  - "The p38 MAPK pathway stimulates PGC-1α and mitochondrial biogenesis, but exercise with low glycogen does NOT significantly increase p38 MAPK activation compared to normal glycogen exercise."
-  - "While low-glycogen training increases fat oxidation markers (citrate synthase, β-HAD), these represent metabolic adaptation to substrate scarcity rather than improved endurance performance."
-  - "Human performance trials (e.g., Yeo et al.) show identical ~10% improvements in 60-minute time trial power between normal and low-glycogen groups, but low-glycogen training compromises interval power output."
-  - "Glycogen depletion carries severe physiological costs: elevated cortisol, impaired immune function, disrupted sleep from central nervous system energy deficit, and compromised muscular recovery."
-  - "Coaching data indicates that well-fueled progressive overload (increasing Time-in-Zone and endurance volume) produces equal or superior aerobic adaptations without the severe fatigue penalties of train-low protocols."
+- The p38 MAPK pathway stimulates PGC-1α and mitochondrial biogenesis, but exercise with low glycogen does NOT significantly increase p38 MAPK activation compared to normal glycogen exercise.
+- While low-glycogen training increases fat oxidation markers (citrate synthase, β-HAD), these represent metabolic adaptation to substrate scarcity rather than improved endurance performance.
+- Human performance trials (e.g., Yeo et al.) show identical ~10% improvements in 60-minute time trial power between normal and low-glycogen groups, but low-glycogen training compromises interval power output.
+- 'Glycogen depletion carries severe physiological costs: elevated cortisol, impaired immune function, disrupted sleep from central nervous system energy deficit, and compromised muscular recovery.'
+- Coaching data indicates that well-fueled progressive overload (increasing Time-in-Zone and endurance volume) produces equal or superior aerobic adaptations without the severe fatigue penalties of train-low protocols.
 ---
 
 # Why Low Glycogen Training Probably Doesn't Work — Complete Guide

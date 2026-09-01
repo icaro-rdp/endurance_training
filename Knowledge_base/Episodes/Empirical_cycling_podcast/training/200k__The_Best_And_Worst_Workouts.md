@@ -1,23 +1,23 @@
 ---
-title: "200k AMA: The Best and Worst Workouts — Complete Guide"
+title: '200k AMA: The Best and Worst Workouts — Complete Guide'
 category: training
 topics:
-  - "Progressive_overload"
-  - "FTP"
-  - "VO2max"
-  - "Short_intervals"
-  - "Durability"
-  - "Heavy_torque"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson"
-author: "Kolie Moore"
-date: "2021-11-22"
-summary: "A definitive breakdown of flawed vs. highly effective cycling interval designs, examining why prescriptive FTP percentages fail for VO2max, the fallacy of low-cadence 'strength endurance' on the bike, ramp test inaccuracy, and how to properly structure progressive threshold overload, microbursts, and durability rides."
+- Periodization_models_and_macrocycles
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+- VO2max_and_aerobic_hiit
+- Durability_and_fatigue_mechanisms
+- Torque_and_cadence_drills
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson
+author: Kolie Moore
+date: '2021-11-22'
+summary: A definitive breakdown of flawed vs. highly effective cycling interval designs, examining why prescriptive FTP percentages fail for VO2max, the fallacy of low-cadence 'strength endurance' on the bike, ramp test inaccuracy, and how to properly structure progressive threshold overload, microbursts, and durability rides.
 key_takeaways:
-  - "VO2max intervals must never be anchored to a fixed percentage of FTP (e.g., 110–120% FTP); wide variations in fractional utilization (FTP/VO2max) and W' require VO2max intervals to be ridden all-out with high cadence (105–120+ rpm) to maximize cardiac stroke volume and ventilation."
-  - "Low-cadence 'strength endurance' cycling (e.g., 5x5 min @ 50–60 rpm) generates pedal forces an order of magnitude below heavy gym lifting and cannot replace true resistance training."
-  - "Ramp tests for FTP estimation are confounded by anaerobic capacity (W') and ramp step rates, accurately reflecting true steady-state threshold in only ~40–55% of athletes without metabolic gas exchange or lactate validation."
-  - "Threshold progressive overload is best achieved by extending continuous Time-in-Zone (TiZ) at a stable power rather than arbitrarily raising wattage across fixed durations (e.g., perpetual 2x20 min)."
-  - "Interval quality requires appropriate rest intervals and self-pacing; workouts that force athletes to complete reps at severely degraded power (e.g., 16x1 min all-out with 1 min rest) induce excessive autonomic fatigue without target physiological stimulus."
+- VO2max intervals must never be anchored to a fixed percentage of FTP (e.g., 110–120% FTP); wide variations in fractional utilization (FTP/VO2max) and W' require VO2max intervals to be ridden all-out with high cadence (105–120+ rpm) to maximize cardiac stroke volume and ventilation.
+- Low-cadence 'strength endurance' cycling (e.g., 5x5 min @ 50–60 rpm) generates pedal forces an order of magnitude below heavy gym lifting and cannot replace true resistance training.
+- Ramp tests for FTP estimation are confounded by anaerobic capacity (W') and ramp step rates, accurately reflecting true steady-state threshold in only ~40–55% of athletes without metabolic gas exchange or lactate validation.
+- Threshold progressive overload is best achieved by extending continuous Time-in-Zone (TiZ) at a stable power rather than arbitrarily raising wattage across fixed durations (e.g., perpetual 2x20 min).
+- Interval quality requires appropriate rest intervals and self-pacing; workouts that force athletes to complete reps at severely degraded power (e.g., 16x1 min all-out with 1 min rest) induce excessive autonomic fatigue without target physiological stimulus.
 ---
 
 # 200k AMA: The Best and Worst Workouts — Complete Guide

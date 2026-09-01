@@ -1,22 +1,21 @@
 ---
-title: "Ten Minute Tips #23: How Much FTP Training Is Too Much? — Complete Guide"
+title: 'Ten Minute Tips #23: How Much FTP Training Is Too Much? — Complete Guide'
 category: planning
 topics:
-  - "FTP"
-  - "TTA_TTE"
-  - "VO2max"
-  - "Progressive_overload"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Houston"
-author: "Kolie Moore"
-date: "2022-08-29"
-summary: "Kolie Moore and Kyle Houston examine the boundaries of threshold training, exploring the three-legged stool of aerobic development (Base, VO2max, FTP), the signs of threshold overtraining, and why FTP is necessary but not sufficient for racing success."
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+- Periodization_models_and_macrocycles
+- Durability_and_fatigue_mechanisms
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Houston
+author: Kolie Moore
+date: '2022-08-29'
+summary: Kolie Moore and Kyle Houston examine the boundaries of threshold training, exploring the three-legged stool of aerobic development (Base, VO2max, FTP), the signs of threshold overtraining, and why FTP is necessary but not sufficient for racing success.
 key_takeaways:
-  - "FTP is necessary but not sufficient: an elite threshold allows an athlete to reach the final kilometers fresh, but does not guarantee the anaerobic punch, sprint, or tactical craft needed to win."
-  - "Aerobic fitness functions as a three-legged stool: Sub-LT1 Base (capillaries/mitochondria), VO2max (aerobic ceiling), and Threshold/TTE (fractional utilization)."
-  - "Attempting to compensate for low volume by stacking 3–4 threshold workouts per week leads to autonomic suppression and plateaued progress once the VO2 ceiling is reached."
-  - "Over-trained threshold symptoms include suppressed heart rate (inability to reach threshold HR), sudden cardiac runaway, and escalating RPE for standard wattages."
-  - "At elite genetic limits, a teeter-totter effect emerges: dedicated VO2max blocks expand top-end headroom while temporarily reducing TTE, whereas threshold blocks maximize TTE while compressing headroom."
+- 'FTP is necessary but not sufficient: an elite threshold allows an athlete to reach the final kilometers fresh, but does not guarantee the anaerobic punch, sprint, or tactical craft needed to win.'
+- 'Aerobic fitness functions as a three-legged stool: Sub-LT1 Base (capillaries/mitochondria), VO2max (aerobic ceiling), and Threshold/TTE (fractional utilization).'
+- Attempting to compensate for low volume by stacking 3–4 threshold workouts per week leads to autonomic suppression and plateaued progress once the VO2 ceiling is reached.
+- Over-trained threshold symptoms include suppressed heart rate (inability to reach threshold HR), sudden cardiac runaway, and escalating RPE for standard wattages.
+- 'At elite genetic limits, a teeter-totter effect emerges: dedicated VO2max blocks expand top-end headroom while temporarily reducing TTE, whereas threshold blocks maximize TTE while compressing headroom.'
 ---
 
 # Ten Minute Tips #23: How Much FTP Training Is Too Much? — Complete Guide

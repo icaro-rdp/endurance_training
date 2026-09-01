@@ -1,19 +1,19 @@
 ---
-title: "Strength Exercise Selection & The Bilateral Deficit — Complete Guide"
+title: Strength Exercise Selection & The Bilateral Deficit — Complete Guide
 category: training
 topics:
-  - "Unilateral"
-  - "Heavy_torque"
-  - "Sprint_performance"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Ten Minute Tips #13)"
-author: "Kolie Moore & Kyle Hanson"
-date: "2021-11-03"
-summary: "An in-depth breakdown of resistance exercise selection for cyclists, comparing high-bar, low-bar, and front squats, analyzing weight belts and heel elevation, and exploiting the bilateral deficit via unilateral training."
+- Strength_and_resistance_training
+- Torque_and_cadence_drills
+- Sprint_and_anaerobic_intervals
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Ten Minute Tips #13)'
+author: Kolie Moore & Kyle Hanson
+date: '2021-11-03'
+summary: An in-depth breakdown of resistance exercise selection for cyclists, comparing high-bar, low-bar, and front squats, analyzing weight belts and heel elevation, and exploiting the bilateral deficit via unilateral training.
 key_takeaways:
-  - "Squat variation selection depends on individual anatomy: low-bar favors longer femurs and posterior chain drive, while front squats and high-bar prioritize quad loading and an upright torso."
-  - "The Bilateral Deficit (BLD) allows cyclists to produce 70–75% of their bilateral maximal force on a single leg due to focused central neural drive."
-  - "Unilateral lifts (Bulgarian split squats, single-leg presses) provide sport-specific transfer and break neural recruitment plateaus once bilateral strength gains level off."
-  - "Keep gym programming minimalist: focus on 2–3 high-quality compound movements per 8–12 week mesocycle rather than bloated bodybuilding bro-splits."
+- 'Squat variation selection depends on individual anatomy: low-bar favors longer femurs and posterior chain drive, while front squats and high-bar prioritize quad loading and an upright torso.'
+- The Bilateral Deficit (BLD) allows cyclists to produce 70–75% of their bilateral maximal force on a single leg due to focused central neural drive.
+- Unilateral lifts (Bulgarian split squats, single-leg presses) provide sport-specific transfer and break neural recruitment plateaus once bilateral strength gains level off.
+- 'Keep gym programming minimalist: focus on 2–3 high-quality compound movements per 8–12 week mesocycle rather than bloated bodybuilding bro-splits.'
 ---
 
 # Strength Exercise Selection & The Bilateral Deficit — Complete Guide

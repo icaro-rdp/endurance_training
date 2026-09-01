@@ -1,20 +1,20 @@
 ---
-title: "The Origins of Newbie Gains: Central Hemodynamics vs. Peripheral Adaptations — Complete Guide"
-category: "physiology"
+title: 'The Origins of Newbie Gains: Central Hemodynamics vs. Peripheral Adaptations — Complete Guide'
+category: physiology
 topics:
-  - "VO2max"
-  - "Cardiac_hypertrophy"
-  - "Aerobic_base"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #53)"
-author: "Kolie Moore"
-date: "2025-04-28"
-summary: "An analytical breakdown of the physiological drivers behind rapid early endurance adaptations ('newbie gains'), demonstrating why hematological and central hemodynamic expansion govern early VO2max increases rather than peripheral mitochondrial changes."
+- VO2max_and_aerobic_kinetics
+- Cardiovascular_and_hemodynamics
+- Zone2_and_endurance_base
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #53)'
+author: Kolie Moore
+date: '2025-04-28'
+summary: An analytical breakdown of the physiological drivers behind rapid early endurance adaptations ('newbie gains'), demonstrating why hematological and central hemodynamic expansion govern early VO2max increases rather than peripheral mitochondrial changes.
 key_takeaways:
-  - "Early rapid increases in VO2max ('newbie gains') are overwhelmingly driven by central hematological adaptations—specifically rapid plasma volume expansion and increased cardiac stroke volume."
-  - "Removing training-induced blood volume via phlebotomy completely abolishes VO2peak gains, reverting performance to baseline despite a 40% increase in mitochondrial volume density (Montero et al., 2015)."
-  - "Skeletal muscle oxidative capacity vastly exceeds the cardiovascular system's capacity to deliver oxygen; whole-body VO2max is strictly limited by maximal cardiac output (Qmax) and stroke volume, not peripheral extraction."
-  - "Both low-intensity endurance training (65% VO2peak) and sprint interval training (3x30s sprints) elicit near-identical blood volume expansion (~5.5–5.8%) and VO2peak gains over 6 weeks in novices."
-  - "In well-trained athletes, expanding blood volume beyond normal physiological limits does not further improve VO2max due to the Frank-Starling cardiac distension ceiling."
+- Early rapid increases in VO2max ('newbie gains') are overwhelmingly driven by central hematological adaptations—specifically rapid plasma volume expansion and increased cardiac stroke volume.
+- Removing training-induced blood volume via phlebotomy completely abolishes VO2peak gains, reverting performance to baseline despite a 40% increase in mitochondrial volume density (Montero et al., 2015).
+- Skeletal muscle oxidative capacity vastly exceeds the cardiovascular system's capacity to deliver oxygen; whole-body VO2max is strictly limited by maximal cardiac output (Qmax) and stroke volume, not peripheral extraction.
+- Both low-intensity endurance training (65% VO2peak) and sprint interval training (3x30s sprints) elicit near-identical blood volume expansion (~5.5–5.8%) and VO2peak gains over 6 weeks in novices.
+- In well-trained athletes, expanding blood volume beyond normal physiological limits does not further improve VO2max due to the Frank-Starling cardiac distension ceiling.
 ---
 
 # The Origins of Newbie Gains: Central Hemodynamics vs. Peripheral Adaptations — Complete Guide

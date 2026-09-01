@@ -1,19 +1,15 @@
 ---
-title: Zone 2 Training is not Intrinsically Better Than Zone 3, 4 and 5 to Promote
-  Aerobic Adaptations!
+title: Zone 2 Training is not Intrinsically Better Than Zone 3, 4 and 5 to Promote Aerobic Adaptations!
 category: training
 topics:
-- FTP
-- CP
-- LT1_VT1
-- LT2_VT2
-- Aerobic_base
-source: 'knowledgeiswatt.substack.com/p/90-zone-2-training-is-not-intrinsically Date:
-  July'
+- FTP_and_functional_metrics
+- Critical_power_and_w_prime
+- Thresholds_and_metabolic_domains
+- Zone2_and_endurance_base
+source: 'knowledgeiswatt.substack.com/p/90-zone-2-training-is-not-intrinsically Date: July'
 author: Endurance Research
 date: 'Source: knowledgeiswatt.substack.com/p/90-zone-2-training-is-not-intrinsically  July'
-summary: 30, 2025 In the last years, there has been a lot of talk about ‘zone 2’ training,
-  which corresponds to a
+summary: 30, 2025 In the last years, there has been a lot of talk about ‘zone 2’ training, which corresponds to a
 ---
 
 # Zone 2 Training is not Intrinsically Better Than Zone 3, 4 and 5 to Promote Aerobic Adaptations!

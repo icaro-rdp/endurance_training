@@ -2,13 +2,12 @@
 title: An Effective Solution for Time Crunched Cyclists?
 category: planning
 topics:
-- VO2max
-- Periodization
+- VO2max_and_aerobic_kinetics
+- Periodization_models_and_macrocycles
 source: 'knowledgeiswatt.substack.com/p/44-block-hit-periodization-an-effective Date:'
 author: Endurance Research
 date: 'Source: knowledgeiswatt.substack.com/p/44-block-hit-periodization-an-effective'
-summary: November 20, 2024 When considering the annual training plan, linear classic
-  periodization (a progressive increase in
+summary: November 20, 2024 When considering the annual training plan, linear classic periodization (a progressive increase in
 ---
 
 # An Effective Solution for Time Crunched Cyclists?

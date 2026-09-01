@@ -1,22 +1,21 @@
 ---
-title: "Perspectives #18: Overcoming Historical Inertia, FTP, and Metabolic Regulation — Complete Guide"
+title: 'Perspectives #18: Overcoming Historical Inertia, FTP, and Metabolic Regulation — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "CP"
-  - "LT2_VT2"
-  - "TTA_TTE"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore with Andy Coggan"
-author: "Kolie Moore"
-date: "2022-09-16"
-summary: "A foundational exercise physiology masterclass on Functional Threshold Power (FTP) as an operational surrogate for Maximal Lactate Steady State (MLSS), ATP homeostasis and the debunking of VLa_max, and multifactorial threshold fatigue."
+- FTP_and_functional_metrics
+- Critical_power_and_w_prime
+- Thresholds_and_metabolic_domains
+- Durability_and_fatigue_mechanisms
+source: Empirical Cycling Podcast — Kolie Moore with Andy Coggan
+author: Kolie Moore
+date: '2022-09-16'
+summary: A foundational exercise physiology masterclass on Functional Threshold Power (FTP) as an operational surrogate for Maximal Lactate Steady State (MLSS), ATP homeostasis and the debunking of VLa_max, and multifactorial threshold fatigue.
 key_takeaways:
-  - "FTP is a pedagogical, functional surrogate for Maximal Lactate Steady State (MLSS) designed to bypass 20+ conflicting academic threshold definitions and focus on measurable power output."
-  - "The 'Hour of Power' is an operational rule of thumb, not a fixed biological constant; Time-to-Exhaustion (TTE) at MLSS spans ~40 to 70+ minutes in trained cyclists and expands as fitness improves."
-  - "'Lactate production is sucked, not blown': ATP levels in skeletal muscle are tightly defended; glycolytic flux is pulled by the rate of ATP hydrolysis rather than driven by an independent VLa_max engine."
-  - "Fatigue at maximal metabolic steady state is multifactorial: localized Type I motor unit glycogen depletion, recruitment of fatigable Type II fibers via Henneman's size principle, high-energy phosphate alterations (ADP/Pi buildup), and central motor drive limitations."
-  - "Training levels are descriptive, continuous, overlapping physiological spectra—'they are called levels, not zones, for a reason' to discourage rigid, binary intensity silos."
+- FTP is a pedagogical, functional surrogate for Maximal Lactate Steady State (MLSS) designed to bypass 20+ conflicting academic threshold definitions and focus on measurable power output.
+- The 'Hour of Power' is an operational rule of thumb, not a fixed biological constant; Time-to-Exhaustion (TTE) at MLSS spans ~40 to 70+ minutes in trained cyclists and expands as fitness improves.
+- '''Lactate production is sucked, not blown'': ATP levels in skeletal muscle are tightly defended; glycolytic flux is pulled by the rate of ATP hydrolysis rather than driven by an independent VLa_max engine.'
+- 'Fatigue at maximal metabolic steady state is multifactorial: localized Type I motor unit glycogen depletion, recruitment of fatigable Type II fibers via Henneman''s size principle, high-energy phosphate alterations (ADP/Pi buildup), and central motor drive limitations.'
+- Training levels are descriptive, continuous, overlapping physiological spectra—'they are called levels, not zones, for a reason' to discourage rigid, binary intensity silos.
 ---
 
 # Perspectives #18: Overcoming Historical Inertia, FTP, and Metabolic Regulation — Complete Guide

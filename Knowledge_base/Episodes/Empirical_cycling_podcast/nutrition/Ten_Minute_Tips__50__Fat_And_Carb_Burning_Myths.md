@@ -1,20 +1,19 @@
 ---
-title: "Ten Minute Tips #50: Fat And Carb Burning Myths — Complete Guide"
-category: "nutrition"
+title: 'Ten Minute Tips #50: Fat And Carb Burning Myths — Complete Guide'
+category: nutrition
 topics:
-  - "Carbohydrate_ratio"
-  - "Fat_oxidation"
-  - "FatMax"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hilson (Ten Minute Tips #50)"
-author: "Kolie Moore"
-date: "2025-02-17"
-summary: "Deconstructs three major metabolic myths regarding fat and carbohydrate burning in endurance training, explaining the endocrine role of adipose tissue, total daily energy expenditure realities, and how acute energy deficits impair recovery."
+- Carbohydrate_fueling_and_gut_training
+- Substrate_utilization_and_fat_oxidation
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hilson (Ten Minute Tips #50)'
+author: Kolie Moore
+date: '2025-02-17'
+summary: Deconstructs three major metabolic myths regarding fat and carbohydrate burning in endurance training, explaining the endocrine role of adipose tissue, total daily energy expenditure realities, and how acute energy deficits impair recovery.
 key_takeaways:
-  - "Substrate oxidation during exercise does not determine body composition or aerobic adaptation; 24-hour total energy balance governs fat loss, while muscular contraction (calcium flux/AMPK) drives mitochondrial remodeling."
-  - "Adipose tissue is an endocrine organ: severe acute energy deficits rapidly suppress leptin, thyroid hormones (T3/T4), and testosterone, impairing next-day power and recovery."
-  - "The standard formula Total Energy = BMR + Bike kJ significantly underestimates true energy needs; doubly labeled water studies show non-exercise expenditure often scales to 1.6–2.3× BMR in active athletes."
-  - "Consuming carbohydrates during endurance rides spares liver glycogen and supports blood glucose without blunting aerobic adaptations or fat oxidation capacity over time."
-  - "Safe fat loss for endurance athletes requires a modest deficit (~0.5 lb/week); aggressive deficits induce thermoregulatory failure, brain fog, and severe performance decline."
+- Substrate oxidation during exercise does not determine body composition or aerobic adaptation; 24-hour total energy balance governs fat loss, while muscular contraction (calcium flux/AMPK) drives mitochondrial remodeling.
+- 'Adipose tissue is an endocrine organ: severe acute energy deficits rapidly suppress leptin, thyroid hormones (T3/T4), and testosterone, impairing next-day power and recovery.'
+- The standard formula Total Energy = BMR + Bike kJ significantly underestimates true energy needs; doubly labeled water studies show non-exercise expenditure often scales to 1.6–2.3× BMR in active athletes.
+- Consuming carbohydrates during endurance rides spares liver glycogen and supports blood glucose without blunting aerobic adaptations or fat oxidation capacity over time.
+- Safe fat loss for endurance athletes requires a modest deficit (~0.5 lb/week); aggressive deficits induce thermoregulatory failure, brain fog, and severe performance decline.
 ---
 
 # Ten Minute Tips #50: Fat And Carb Burning Myths — Complete Guide

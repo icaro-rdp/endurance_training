@@ -1,21 +1,21 @@
 ---
-title: "Ten Minute Tips #51: RPE, Workout Feedback, Adaptation, and Health Outcomes — Complete Guide"
+title: 'Ten Minute Tips #51: RPE, Workout Feedback, Adaptation, and Health Outcomes — Complete Guide'
 category: physiology
 topics:
-  - "Power_vs_HR"
-  - "VO2max"
-  - "FTP"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore & Dr. Fabiano (Ten Minute Tips #51)"
-author: "Kolie Moore"
-date: "2025-03-02"
-summary: "An in-depth analysis of the physiological origins of RPE (Borg 6-20 vs CR10), the necessity of qualitative workout metadata, allostasis vs homeostasis in training adaptation, HRV tracking during high-strain blocks, and endurance training volume on the health J-curve."
+- Autonomic_and_cardiac_monitoring
+- VO2max_and_aerobic_kinetics
+- FTP_and_functional_metrics
+- Durability_and_fatigue_mechanisms
+source: 'Empirical Cycling Podcast — Kolie Moore & Dr. Fabiano (Ten Minute Tips #51)'
+author: Kolie Moore
+date: '2025-03-02'
+summary: An in-depth analysis of the physiological origins of RPE (Borg 6-20 vs CR10), the necessity of qualitative workout metadata, allostasis vs homeostasis in training adaptation, HRV tracking during high-strain blocks, and endurance training volume on the health J-curve.
 key_takeaways:
-  - "Borg 6–20 scale was engineered to linearly mirror heart rate in young males (60–200 bpm), whereas the Borg CR10 scale was created to capture exponential non-linear physiological phenomena like blood lactate accumulation and pain perception."
-  - "Data without subjective metadata is blind: algorithms fail in coaching because power and HR cannot capture thermal strain, sleep disruption, cognitive fatigue, or subtle mechanical compensations."
-  - "Homeostasis seeks equilibrium, while allostasis represents structural adaptation; well-trained athletes must apply severe, targeted training strain to disturb homeostasis enough to trigger positive allostatic remodeling."
-  - "HRV is ineffective for day-to-day micro-management, but multi-day rolling trends serve as a reliable early warning system for sympathetic overload and impending illness during high-density VO2max or double blocks."
-  - "The relationship between exercise volume and morbidity follows a J-shaped curve: health benefits peak around 150–300 minutes/week plus strength training, while higher volumes (10–20+ hrs/week) serve performance goals and require routine cardiovascular screening."
+- Borg 6–20 scale was engineered to linearly mirror heart rate in young males (60–200 bpm), whereas the Borg CR10 scale was created to capture exponential non-linear physiological phenomena like blood lactate accumulation and pain perception.
+- 'Data without subjective metadata is blind: algorithms fail in coaching because power and HR cannot capture thermal strain, sleep disruption, cognitive fatigue, or subtle mechanical compensations.'
+- Homeostasis seeks equilibrium, while allostasis represents structural adaptation; well-trained athletes must apply severe, targeted training strain to disturb homeostasis enough to trigger positive allostatic remodeling.
+- HRV is ineffective for day-to-day micro-management, but multi-day rolling trends serve as a reliable early warning system for sympathetic overload and impending illness during high-density VO2max or double blocks.
+- 'The relationship between exercise volume and morbidity follows a J-shaped curve: health benefits peak around 150–300 minutes/week plus strength training, while higher volumes (10–20+ hrs/week) serve performance goals and require routine cardiovascular screening.'
 ---
 
 # Ten Minute Tips #51: RPE, Workout Feedback, Adaptation, and Health Outcomes — Complete Guide

@@ -1,22 +1,22 @@
 ---
-title: "The Coaching and Training Behind a Paris-Roubaix Victory — Complete Guide"
+title: The Coaching and Training Behind a Paris-Roubaix Victory — Complete Guide
 category: planning
 topics:
-  - "Durability"
-  - "Block_periodization"
-  - "FTP"
-  - "Volume_quantification"
-  - "Aerobic_base"
-source: "Empirical Cycling Podcast — Kolie Moore & Adam Pulford (Perspectives #25)"
-author: "Kolie Moore"
-date: "2023-05-01"
-summary: "A deep dive into the physiological preparation and race analysis of Alison Jackson's 2023 Paris-Roubaix Femmes victory, exploring aerobic base periodization, CTL management, in-race energy conservation, and durability."
+- Durability_and_fatigue_mechanisms
+- Periodization_models_and_macrocycles
+- FTP_and_functional_metrics
+- Workload_quantification_and_modeling
+- Zone2_and_endurance_base
+source: 'Empirical Cycling Podcast — Kolie Moore & Adam Pulford (Perspectives #25)'
+author: Kolie Moore
+date: '2023-05-01'
+summary: A deep dive into the physiological preparation and race analysis of Alison Jackson's 2023 Paris-Roubaix Femmes victory, exploring aerobic base periodization, CTL management, in-race energy conservation, and durability.
 key_takeaways:
-  - "Winning Paris-Roubaix power files appear surprisingly 'ordinary' on paper; victory is driven by extreme durability (fatigue resistance) and tactical energy conservation rather than record-breaking peak wattages."
-  - "In a 3.5–4 hour WorldTour Classic, top performers accumulate only 30–40 minutes above FTP; victory requires minimizing non-essential surges and preserving anaerobic capacity (W') for the final kilometers."
-  - "Periodization strategy: Build absolute aerobic capacity (FTP and high Zone 2 volume) in the winter (CTL 150–160), then trim volume and allow CTL to decay during the Spring Classics to express freshness amidst travel and race stress."
-  - "Block periodization for high-volume athletes: 3-day descending load microcycles (Day 1: high volume + tempo/threshold; Day 2: moderate volume + intervals; Day 3: lower volume + intervals; Day 4: active recovery)."
-  - "Total Stress Management: Psychological motivation, fun, and open coach-athlete communication act as essential filters against the compounding fatigue of travel, media, and race pressure."
+- Winning Paris-Roubaix power files appear surprisingly 'ordinary' on paper; victory is driven by extreme durability (fatigue resistance) and tactical energy conservation rather than record-breaking peak wattages.
+- In a 3.5–4 hour WorldTour Classic, top performers accumulate only 30–40 minutes above FTP; victory requires minimizing non-essential surges and preserving anaerobic capacity (W') for the final kilometers.
+- 'Periodization strategy: Build absolute aerobic capacity (FTP and high Zone 2 volume) in the winter (CTL 150–160), then trim volume and allow CTL to decay during the Spring Classics to express freshness amidst travel and race stress.'
+- 'Block periodization for high-volume athletes: 3-day descending load microcycles (Day 1: high volume + tempo/threshold; Day 2: moderate volume + intervals; Day 3: lower volume + intervals; Day 4: active recovery).'
+- 'Total Stress Management: Psychological motivation, fun, and open coach-athlete communication act as essential filters against the compounding fatigue of travel, media, and race pressure.'
 ---
 
 # The Coaching and Training Behind a Paris-Roubaix Victory — Complete Guide

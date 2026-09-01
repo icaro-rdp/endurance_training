@@ -1,20 +1,20 @@
 ---
-title: "Ten Minute Tips #62: Why FTP Isn't For Setting Training Zones (And Alternative Approaches) — Complete Guide"
+title: 'Ten Minute Tips #62: Why FTP Isn''t For Setting Training Zones (And Alternative Approaches) — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "LT1_VT1"
-  - "VO2max"
-source: "Empirical Cycling Podcast — Kolie Moore with James and Gediminas"
-author: "Kolie Moore"
-date: "2025-08-25"
-summary: "Examines why anchoring training zones to fixed percentages of FTP fails across different physiological profiles, detailing individual variations at LT1/VT1, VO2max, and anaerobic capacity, along with physiological alternatives."
+- FTP_and_functional_metrics
+- Thresholds_and_metabolic_domains
+- VO2max_and_aerobic_kinetics
+source: Empirical Cycling Podcast — Kolie Moore with James and Gediminas
+author: Kolie Moore
+date: '2025-08-25'
+summary: Examines why anchoring training zones to fixed percentages of FTP fails across different physiological profiles, detailing individual variations at LT1/VT1, VO2max, and anaerobic capacity, along with physiological alternatives.
 key_takeaways:
-  - "Coggan power zones were created as descriptive classifications of training data, not rigid prescriptive targets."
-  - "FTP is valid for prescribing threshold (100%) and sweet spot (~90%) workouts, but fails above threshold (VO2max, anaerobic, sprint) and below threshold (LT1/VT1)."
-  - "The first threshold (LT1/VT1) varies from 45% to 85% of FTP across individuals; high training volume elevates LT1 independently of changes in FTP."
-  - "Above threshold, intervals must be prescribed by physiological intent, breathing dynamics, cadence, and maximal repeatable effort rather than static percentages of FTP."
-  - "Anaerobic capacity and neuromuscular sprint power ($P_{max}$, $W'$) are completely decoupled from FTP; prescribing them as % FTP leads to submaximal stimuli or impossible targets."
+- Coggan power zones were created as descriptive classifications of training data, not rigid prescriptive targets.
+- FTP is valid for prescribing threshold (100%) and sweet spot (~90%) workouts, but fails above threshold (VO2max, anaerobic, sprint) and below threshold (LT1/VT1).
+- The first threshold (LT1/VT1) varies from 45% to 85% of FTP across individuals; high training volume elevates LT1 independently of changes in FTP.
+- Above threshold, intervals must be prescribed by physiological intent, breathing dynamics, cadence, and maximal repeatable effort rather than static percentages of FTP.
+- Anaerobic capacity and neuromuscular sprint power ($P_{max}$, $W'$) are completely decoupled from FTP; prescribing them as % FTP leads to submaximal stimuli or impossible targets.
 ---
 
 # Ten Minute Tips #62: Why FTP Isn't For Setting Training Zones (And Alternative Approaches) — Complete Guide

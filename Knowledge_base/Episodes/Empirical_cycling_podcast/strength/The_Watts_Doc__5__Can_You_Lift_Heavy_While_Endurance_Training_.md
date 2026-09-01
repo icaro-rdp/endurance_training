@@ -1,20 +1,20 @@
 ---
-title: "Heavy Strength Training & The Interference Effect — Complete Guide"
+title: Heavy Strength Training & The Interference Effect — Complete Guide
 category: training
 topics:
-  - "Heavy_torque"
-  - "Periodization"
-  - "Sprint_performance"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #5)"
-author: "Kolie Moore"
-date: "2019-04-21"
-summary: "A rigorous examination of concurrent strength and endurance training, detailing neural drive vs. hypertrophy, the Hickson interference effect, AMPK-mTOR molecular signaling antagonisms, fiber type plasticity, and strategic periodization for cyclists."
+- Torque_and_cadence_drills
+- Periodization_models_and_macrocycles
+- Sprint_and_anaerobic_intervals
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #5)'
+author: Kolie Moore
+date: '2019-04-21'
+summary: A rigorous examination of concurrent strength and endurance training, detailing neural drive vs. hypertrophy, the Hickson interference effect, AMPK-mTOR molecular signaling antagonisms, fiber type plasticity, and strategic periodization for cyclists.
 key_takeaways:
-  - "Early strength gains (first 4–8 weeks) are primarily neural adaptations (enhanced motor unit recruitment and firing frequency) rather than significant muscle hypertrophy."
-  - "The Hickson (1980) interference effect demonstrates that high-volume endurance training blunts long-term strength and muscle mass gains after ~7–8 weeks, whereas strength training does not hinder VO2max development."
-  - "At the molecular level, endurance-activated AMPK and SIRT1 directly inhibit the mTORC1 pathway, turning off muscle protein synthesis."
-  - "For pure endurance road racers, heavy lifting in-season often acts as a systemic recovery limiter; dropping heavy weights during race preparation frequently unleashes rapid aerobic performance breakthroughs."
-  - "Athletes seeking strength gains without excess mass can strategically utilize post-lift endurance spinning (15–20 min) or AMPK activation to truncate mTOR signaling."
+- Early strength gains (first 4–8 weeks) are primarily neural adaptations (enhanced motor unit recruitment and firing frequency) rather than significant muscle hypertrophy.
+- The Hickson (1980) interference effect demonstrates that high-volume endurance training blunts long-term strength and muscle mass gains after ~7–8 weeks, whereas strength training does not hinder VO2max development.
+- At the molecular level, endurance-activated AMPK and SIRT1 directly inhibit the mTORC1 pathway, turning off muscle protein synthesis.
+- For pure endurance road racers, heavy lifting in-season often acts as a systemic recovery limiter; dropping heavy weights during race preparation frequently unleashes rapid aerobic performance breakthroughs.
+- Athletes seeking strength gains without excess mass can strategically utilize post-lift endurance spinning (15–20 min) or AMPK activation to truncate mTOR signaling.
 ---
 
 # Heavy Strength Training & The Interference Effect — Complete Guide

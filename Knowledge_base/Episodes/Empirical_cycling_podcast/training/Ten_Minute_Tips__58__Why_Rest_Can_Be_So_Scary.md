@@ -1,19 +1,19 @@
 ---
-title: "Ten Minute Tips #58: Why Rest Can Be So Scary — Complete Guide"
+title: 'Ten Minute Tips #58: Why Rest Can Be So Scary — Complete Guide'
 category: planning
 topics:
-  - "Microcycles"
-  - "Volume_quantification"
-  - "Block_periodization"
-source: "Empirical Cycling Podcast — Kolie Moore with Rory and Maeghan"
-author: "Kolie Moore"
-date: "2025-06-16"
-summary: "An in-depth coaching guide on overcoming the fear of rest, explaining the physiological causes of delayed recovery fatigue, nutrition during deloads, CTL fixation, and structuring effective recovery microcycles."
+- Microcycle_and_schedule_design
+- Workload_quantification_and_modeling
+- Periodization_models_and_macrocycles
+source: Empirical Cycling Podcast — Kolie Moore with Rory and Maeghan
+author: Kolie Moore
+date: '2025-06-16'
+summary: An in-depth coaching guide on overcoming the fear of rest, explaining the physiological causes of delayed recovery fatigue, nutrition during deloads, CTL fixation, and structuring effective recovery microcycles.
 key_takeaways:
-  - "Rest unmasks accumulated fatigue: feeling heavy, sluggish, and tired 2–3 days into a rest week is a normal physiological decompression sign, not a loss of fitness."
-  - "Do not restrict calories during recovery periods; cellular repair, tissue remodeling, and glycogen resynthesis require substantial caloric and carbohydrate support."
-  - "Recovery rides must be strictly low intensity (<50–60% FTP, e.g., 50–100W); riding at moderate endurance paces during a deload delays autonomic recovery."
-  - "Openers are a privilege for the well-rested; high-intensity primers only sharpen performance if systemic fatigue has already been cleared."
+- 'Rest unmasks accumulated fatigue: feeling heavy, sluggish, and tired 2–3 days into a rest week is a normal physiological decompression sign, not a loss of fitness.'
+- Do not restrict calories during recovery periods; cellular repair, tissue remodeling, and glycogen resynthesis require substantial caloric and carbohydrate support.
+- Recovery rides must be strictly low intensity (<50–60% FTP, e.g., 50–100W); riding at moderate endurance paces during a deload delays autonomic recovery.
+- Openers are a privilege for the well-rested; high-intensity primers only sharpen performance if systemic fatigue has already been cleared.
 ---
 
 # Ten Minute Tips #58: Why Rest Can Be So Scary — Complete Guide

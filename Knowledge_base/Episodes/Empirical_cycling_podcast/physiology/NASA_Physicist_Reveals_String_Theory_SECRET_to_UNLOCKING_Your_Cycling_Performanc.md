@@ -1,19 +1,19 @@
 ---
-title: "Physics Models, Falsifiability & First Principles in Cycling Science — Complete Guide"
-category: "physiology"
+title: Physics Models, Falsifiability & First Principles in Cycling Science — Complete Guide
+category: physiology
 topics:
-  - "Power_vs_HR"
-  - "Durability"
-  - "Aerobic_base"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson"
-author: "Kolie Moore"
-date: "2022-04-01"
-summary: "An analytical examination of theoretical modeling, scientific falsifiability, and reductionist mathematical abstractions versus biological first principles in endurance training and exercise physiology."
+- Autonomic_and_cardiac_monitoring
+- Durability_and_fatigue_mechanisms
+- Zone2_and_endurance_base
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson
+author: Kolie Moore
+date: '2022-04-01'
+summary: An analytical examination of theoretical modeling, scientific falsifiability, and reductionist mathematical abstractions versus biological first principles in endurance training and exercise physiology.
 key_takeaways:
-  - "Mathematical models in exercise science are descriptive abstractions, not immutable physical laws; applying hyper-complex formulas without biological grounding leads to false precision."
-  - "Scientific validity requires falsifiable predictions; training theories that cannot be tested or disproven operate as dogma rather than empirical science."
-  - "Biological systems are complex, dynamic networks where single-variable optimization (e.g., chasing isolated molecular targets) fails to predict systemic adaptation."
-  - "Endurance performance relies on observable, reproducible physiological fundamentals—progressive overload, sustainable aerobic volume, and full recovery—rather than theoretical shortcuts."
+- Mathematical models in exercise science are descriptive abstractions, not immutable physical laws; applying hyper-complex formulas without biological grounding leads to false precision.
+- Scientific validity requires falsifiable predictions; training theories that cannot be tested or disproven operate as dogma rather than empirical science.
+- Biological systems are complex, dynamic networks where single-variable optimization (e.g., chasing isolated molecular targets) fails to predict systemic adaptation.
+- Endurance performance relies on observable, reproducible physiological fundamentals—progressive overload, sustainable aerobic volume, and full recovery—rather than theoretical shortcuts.
 ---
 
 # Physics Models, Falsifiability & First Principles in Cycling Science — Complete Guide

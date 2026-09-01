@@ -1,23 +1,21 @@
 ---
-title: "Pragmatic Physiology, Fructose Metabolism, Substrate Adaptation, & Ergogenic Aids — Complete Guide"
-category: "nutrition"
+title: Pragmatic Physiology, Fructose Metabolism, Substrate Adaptation, & Ergogenic Aids — Complete Guide
+category: nutrition
 topics:
-  - "Carbohydrate_ratio"
-  - "Fat_oxidation"
-  - "Sodium_bicarbonate"
-  - "Beta_alanine"
-  - "LT1_VT1"
-  - "LT2_VT2"
-source: "Empirical Cycling Podcast — Kolie Moore & Tim Podlogar (Perspectives #9)"
-author: "Kolie Moore"
-date: "2022-02-21"
-summary: "An in-depth dialogue between Kolie Moore and Dr. Tim Podlogar on fructose biochemistry and liver glycogen kinetics, substrate utilization vs. aerobic adaptation, the physiological determinants of LT1 and LT2, delayed carbohydrate feeding protocols, and ergogenic supplementation (bicarbonate, beta-alanine, creatine)."
+- Carbohydrate_fueling_and_gut_training
+- Substrate_utilization_and_fat_oxidation
+- Ergogenic_supplements_and_buffers
+- Thresholds_and_metabolic_domains
+source: 'Empirical Cycling Podcast — Kolie Moore & Tim Podlogar (Perspectives #9)'
+author: Kolie Moore
+date: '2022-02-21'
+summary: An in-depth dialogue between Kolie Moore and Dr. Tim Podlogar on fructose biochemistry and liver glycogen kinetics, substrate utilization vs. aerobic adaptation, the physiological determinants of LT1 and LT2, delayed carbohydrate feeding protocols, and ergogenic supplementation (bicarbonate, beta-alanine, creatine).
 key_takeaways:
-  - "Fructose and Liver Glycogen Kinetics: Fructose bypasses intestinal SGLT1 saturation via the GLUT5 transporter and is primarily metabolized hepatically into glucose, lactate, and liver glycogen; a 1:0.8 maltodextrin-to-fructose ratio unlocks exogenous oxidation rates up to 120 g/h."
-  - "Substrate Utilization Is Not Adaptation: High fat oxidation rates are an emergent consequence of massive mitochondrial surface area and type 1 muscle fiber recruitment, not an isolated metric that should be artificially pursued via chronic carbohydrate restriction."
-  - "Delayed Carbohydrate Feeding: For time-crunched athletes (<15 h/wk), starting morning endurance rides fasted and introducing carbohydrates in the second hour maintains high cellular stress and fat oxidation while preventing liver glycogen depletion and subsequent rebound overeating."
-  - "Threshold Testing in Elite vs. Novice Athletes: VO2max testing is redundant in elite cyclists whose maximal oxygen uptake has plateaued; training prescriptions must be anchored to the heavy-to-severe boundary (LT2/CP/MLSS) and first threshold (LT1/VT1)."
-  - "Mechanisms of Ergogenic Aids: Sodium bicarbonate works primarily by expanding the extracellular buffering gradient (drawing H+ and lactate out of working myocytes); beta-alanine enhances intramuscular carnosine and myofilament calcium sensitivity."
+- 'Fructose and Liver Glycogen Kinetics: Fructose bypasses intestinal SGLT1 saturation via the GLUT5 transporter and is primarily metabolized hepatically into glucose, lactate, and liver glycogen; a 1:0.8 maltodextrin-to-fructose ratio unlocks exogenous oxidation rates up to 120 g/h.'
+- 'Substrate Utilization Is Not Adaptation: High fat oxidation rates are an emergent consequence of massive mitochondrial surface area and type 1 muscle fiber recruitment, not an isolated metric that should be artificially pursued via chronic carbohydrate restriction.'
+- 'Delayed Carbohydrate Feeding: For time-crunched athletes (<15 h/wk), starting morning endurance rides fasted and introducing carbohydrates in the second hour maintains high cellular stress and fat oxidation while preventing liver glycogen depletion and subsequent rebound overeating.'
+- 'Threshold Testing in Elite vs. Novice Athletes: VO2max testing is redundant in elite cyclists whose maximal oxygen uptake has plateaued; training prescriptions must be anchored to the heavy-to-severe boundary (LT2/CP/MLSS) and first threshold (LT1/VT1).'
+- 'Mechanisms of Ergogenic Aids: Sodium bicarbonate works primarily by expanding the extracellular buffering gradient (drawing H+ and lactate out of working myocytes); beta-alanine enhances intramuscular carnosine and myofilament calcium sensitivity.'
 ---
 
 # Pragmatic Physiology, Fructose Metabolism, Substrate Adaptation, & Ergogenic Aids — Complete Guide

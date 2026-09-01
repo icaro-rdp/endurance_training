@@ -1,20 +1,20 @@
 ---
-title: "Strength Training Strategies to Avoid Weight Gain: Neuromuscular Adaptation vs. Hypertrophy Dynamics — Complete Guide"
+title: 'Strength Training Strategies to Avoid Weight Gain: Neuromuscular Adaptation vs. Hypertrophy Dynamics — Complete Guide'
 category: training
 topics:
-  - "Periodization"
-  - "Sprint_performance"
-  - "Unilateral"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #56)"
-author: "Kolie Moore"
-date: "2025-09-17"
-summary: "A scientific breakdown of resistance training mechanics, analyzing eccentric vs. concentric stimulus, volume load, powerlifting minimum effective doses, and caloric balance to establish exact protocols for gaining cycling-specific strength without unwanted muscle mass."
+- Periodization_models_and_macrocycles
+- Sprint_and_anaerobic_intervals
+- Strength_and_resistance_training
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #56)'
+author: Kolie Moore
+date: '2025-09-17'
+summary: A scientific breakdown of resistance training mechanics, analyzing eccentric vs. concentric stimulus, volume load, powerlifting minimum effective doses, and caloric balance to establish exact protocols for gaining cycling-specific strength without unwanted muscle mass.
 key_takeaways:
-  - "Skipping the eccentric phase (e.g., dropping deadlifts) does not prevent muscle hypertrophy; lower-body meta-analyses show that concentric-only and eccentric training yield equivalent hypertrophy (effect size ~0.00)."
-  - "Energy balance is the primary gatekeeper of muscular hypertrophy: isocaloric maintenance allows neuromuscular strength gains while completely preventing mass accumulation, whereas hypercaloric diets drive hypertrophy regardless of macronutrient composition."
-  - "Maximal strength is a specific neuromuscular skill governed by mechanical intensity (>=80-90% 1RM), while hypertrophy is driven by total cumulative volume load (Sets x Reps x Load)."
-  - "The minimum effective dose to build and maintain strength is very small: 1–3 heavy sets per week (e.g., 1 heavy single/triple + 2 back-off sets at 2–3 RIR) provides significant strength gains with minimal hypertrophy."
-  - "Cyclists should prioritize unilateral lower-body exercises (split squats, step-ups) and strengthen neglected posterior chain muscles (hamstrings, glute medius) to resolve cycling imbalances."
+- Skipping the eccentric phase (e.g., dropping deadlifts) does not prevent muscle hypertrophy; lower-body meta-analyses show that concentric-only and eccentric training yield equivalent hypertrophy (effect size ~0.00).
+- 'Energy balance is the primary gatekeeper of muscular hypertrophy: isocaloric maintenance allows neuromuscular strength gains while completely preventing mass accumulation, whereas hypercaloric diets drive hypertrophy regardless of macronutrient composition.'
+- Maximal strength is a specific neuromuscular skill governed by mechanical intensity (>=80-90% 1RM), while hypertrophy is driven by total cumulative volume load (Sets x Reps x Load).
+- 'The minimum effective dose to build and maintain strength is very small: 1–3 heavy sets per week (e.g., 1 heavy single/triple + 2 back-off sets at 2–3 RIR) provides significant strength gains with minimal hypertrophy.'
+- Cyclists should prioritize unilateral lower-body exercises (split squats, step-ups) and strengthen neglected posterior chain muscles (hamstrings, glute medius) to resolve cycling imbalances.
 ---
 
 # Strength Training Strategies to Avoid Weight Gain: Neuromuscular Adaptation vs. Hypertrophy Dynamics — Complete Guide

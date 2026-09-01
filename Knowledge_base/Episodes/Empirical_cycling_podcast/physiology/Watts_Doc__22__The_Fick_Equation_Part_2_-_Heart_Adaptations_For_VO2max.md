@@ -1,19 +1,19 @@
 ---
-title: "Watts Doc #22: The Fick Equation Part 2 — Heart Adaptations For VO2max — Complete Guide"
-category: "physiology"
+title: 'Watts Doc #22: The Fick Equation Part 2 — Heart Adaptations For VO2max — Complete Guide'
+category: physiology
 topics:
-  - "Cardiac_hypertrophy"
-  - "VO2max"
-  - "Long_intervals"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Harrison"
-author: "Kolie Moore"
-date: "2020-07-15"
-summary: "A deep dive into cardiac mechanics, comparing concentric vs eccentric left ventricular remodeling, diastolic filling kinetics across heart rate domains, and why maximal cardiac preload drives VO2max adaptations in cyclists."
+- Cardiovascular_and_hemodynamics
+- VO2max_and_aerobic_kinetics
+- VO2max_and_aerobic_hiit
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Harrison
+author: Kolie Moore
+date: '2020-07-15'
+summary: A deep dive into cardiac mechanics, comparing concentric vs eccentric left ventricular remodeling, diastolic filling kinetics across heart rate domains, and why maximal cardiac preload drives VO2max adaptations in cyclists.
 key_takeaways:
-  - "Stroke volume is the ultimate long-term physiological ceiling of VO2max; untrained athletes plateau in stroke volume at ~120 BPM, while elite cyclists increase stroke volume up to 180–190 BPM."
-  - "The Frank-Starling mechanism dictates that increased end-diastolic filling (preload) mechanically stretches cardiac myocytes, increasing contractile force and stroke volume."
-  - "Eccentric hypertrophy (sarcomeres added in series, expanding ventricular chamber diameter) is driven by maximal cardiac preload and mechanical stretch of costameric integrins."
-  - "Cross-country skiing naturally maximizes preload via four-limb muscle pump; cycling requires maximal intensity (100% VO2max) and high cadence to overcome hip-angle afterload and maximize cardiac filling."
+- Stroke volume is the ultimate long-term physiological ceiling of VO2max; untrained athletes plateau in stroke volume at ~120 BPM, while elite cyclists increase stroke volume up to 180–190 BPM.
+- The Frank-Starling mechanism dictates that increased end-diastolic filling (preload) mechanically stretches cardiac myocytes, increasing contractile force and stroke volume.
+- Eccentric hypertrophy (sarcomeres added in series, expanding ventricular chamber diameter) is driven by maximal cardiac preload and mechanical stretch of costameric integrins.
+- Cross-country skiing naturally maximizes preload via four-limb muscle pump; cycling requires maximal intensity (100% VO2max) and high cadence to overcome hip-angle afterload and maximize cardiac filling.
 ---
 
 # Watts Doc #22: The Fick Equation Part 2 — Heart Adaptations For VO2max — Complete Guide

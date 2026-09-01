@@ -2,17 +2,14 @@
 title: Over/Unders — Complete Guide
 category: planning
 topics:
-- FTP
-- VO2max
-- LT1_VT1
-- Aerobic_base
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+- Thresholds_and_metabolic_domains
+- Zone2_and_endurance_base
 source: Empirical Cycling Podcast — Kelly Moore & James McKay (Episodes 43–44)
 author: Endurance Research
 date: '2025-01-01'
-summary: Over/unders are structured intervals that alternate between a power target
-  **above** threshold ("overs") and a recovery target **below** threshold ("unders").
-  The overs recruit large motor units and briefly stress the anaerobic system; the
-  unders let you recover enough to repeat the over without blo
+summary: Over/unders are structured intervals that alternate between a power target **above** threshold ("overs") and a recovery target **below** threshold ("unders"). The overs recruit large motor units and briefly stress the anaerobic system; the unders let you recover enough to repeat the over without blo
 ---
 
 # Over/Unders — Complete Guide

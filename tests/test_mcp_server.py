@@ -23,15 +23,15 @@ class TestMCPServer(unittest.IsolatedAsyncioTestCase):
 
         taxonomy_content = """# Taxonomy
 
-### 1. `hiit`
+### 1. `training`
 High intensity interval training.
-  - `Long_intervals`
-  - `VO2max`
+  - `VO2max_and_aerobic_hiit`
+  - `Threshold_intervals`
 
 ### 2. `physiology`
 Human exercise physiology.
-  - `Cardiac_hypertrophy`
-  - `VO2max`
+  - `Cardiovascular_and_hemodynamics`
+  - `VO2max_and_aerobic_kinetics`
 """
         (self.kb_dir / "TAXONOMY.md").write_text(taxonomy_content, encoding="utf-8")
 
@@ -39,10 +39,9 @@ Human exercise physiology.
         article_dir.mkdir(parents=True)
         doc_content = """---
 title: "HIIT Intervals for VO2max"
-category: "hiit"
+category: "training"
 topics:
-  - "VO2max"
-  - "Long_intervals"
+  - "VO2max_and_aerobic_hiit"
 summary: "Guide to interval prescription for maximizing aerobic power."
 author: "Empirical Cycling"
 language: "en"
@@ -143,13 +142,21 @@ These intervals promote eccentric cardiac hypertrophy and maximize stroke volume
         self.assertIn("HIIT Intervals for VO2max", text)
 
     async def test_search_passages_with_filters(self) -> None:
-        # Match category
+        # Match canonical category
         res = await self.server.call_tool(
             "search_passages",
-            {"query": "intervals", "category": "hiit"},
+            {"query": "intervals", "category": "training"},
         )
         text = _extract_text_result(res)
         self.assertIn("HIIT Intervals for VO2max", text)
+
+        # Match legacy alias category
+        res_alias = await self.server.call_tool(
+            "search_passages",
+            {"query": "intervals", "category": "hiit"},
+        )
+        text_alias = _extract_text_result(res_alias)
+        self.assertIn("HIIT Intervals for VO2max", text_alias)
 
         # Mismatched category
         res_empty = await self.server.call_tool(
@@ -231,9 +238,9 @@ These intervals promote eccentric cardiac hypertrophy and maximize stroke volume
         text = _extract_text_result(res)
         tax_data = json.loads(text)
         self.assertIn("categories", tax_data)
-        self.assertIn("hiit", tax_data["categories"])
+        self.assertIn("training", tax_data["categories"])
         self.assertIn("physiology", tax_data["categories"])
-        self.assertIn("VO2max", tax_data["topics_by_category"]["hiit"])
+        self.assertIn("VO2max_and_aerobic_hiit", tax_data["topics_by_category"]["training"])
 
     async def test_get_sitemap_and_validate_kb(self) -> None:
         res_sitemap = await self.server.call_tool("get_sitemap", {})
@@ -249,8 +256,8 @@ These intervals promote eccentric cardiac hypertrophy and maximize stroke volume
         (self.kb_dir / "Articles" / "new_article.md").write_text(
             """---
 title: "New"
-category: "hiit"
-topics: ["VO2max"]
+category: "training"
+topics: ["VO2max_and_aerobic_hiit"]
 summary: "Summary"
 author: "Author"
 language: "en"

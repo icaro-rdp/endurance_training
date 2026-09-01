@@ -1,20 +1,20 @@
 ---
-title: "Perspectives #29: Managing Fitness And Rest During Race Season — Complete Guide"
+title: 'Perspectives #29: Managing Fitness And Rest During Race Season — Complete Guide'
 category: planning
 topics:
-  - "Microcycles"
-  - "Aerobic_base"
-  - "Carbohydrate_ratio"
-  - "Volume_quantification"
-source: "Empirical Cycling Podcast — Kolie Moore with Taylor Warren"
-author: "Kolie Moore"
-date: "2023-10-01"
-summary: "A comprehensive reference guide on managing fitness, fatigue, and recovery across a dense competitive race season, emphasizing aggressive intra-ride fueling on endurance days, low-RPE base volume, mid-season resets, and tactical race craft."
+- Microcycle_and_schedule_design
+- Zone2_and_endurance_base
+- Carbohydrate_fueling_and_gut_training
+- Workload_quantification_and_modeling
+source: Empirical Cycling Podcast — Kolie Moore with Taylor Warren
+author: Kolie Moore
+date: '2023-10-01'
+summary: A comprehensive reference guide on managing fitness, fatigue, and recovery across a dense competitive race season, emphasizing aggressive intra-ride fueling on endurance days, low-RPE base volume, mid-season resets, and tactical race craft.
 key_takeaways:
-  - "Fueling endurance rides aggressively (90–100+ g/hr of carbohydrates) protects glycogen stores, lowers systemic cortisol, and enables consistent high-volume training day after day."
-  - "Endurance rides should feel 'suspiciously easy' (~60% FTP / low RPE); riding at ego-driven higher Zone 2 powers burns excessive kilojoules and impairs recovery without conferring extra aerobic adaptation."
-  - "During dense race blocks, racing supplies all necessary VO2max and anaerobic stimuli; supplemental training should focus exclusively on recovery, easy volume, and occasional threshold touches to preserve TTE."
-  - "A mid-season break (1 week off/unstructured) followed by a compressed 4–6 week high-volume base block can reboot fitness and prevent late-season stagnation or burnout."
+- Fueling endurance rides aggressively (90–100+ g/hr of carbohydrates) protects glycogen stores, lowers systemic cortisol, and enables consistent high-volume training day after day.
+- Endurance rides should feel 'suspiciously easy' (~60% FTP / low RPE); riding at ego-driven higher Zone 2 powers burns excessive kilojoules and impairs recovery without conferring extra aerobic adaptation.
+- During dense race blocks, racing supplies all necessary VO2max and anaerobic stimuli; supplemental training should focus exclusively on recovery, easy volume, and occasional threshold touches to preserve TTE.
+- A mid-season break (1 week off/unstructured) followed by a compressed 4–6 week high-volume base block can reboot fitness and prevent late-season stagnation or burnout.
 ---
 
 # Perspectives #29: Managing Fitness And Rest During Race Season — Complete Guide

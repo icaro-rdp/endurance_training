@@ -1,18 +1,16 @@
 ---
-title: Unilateral or Bilateral Gym Strength Training Exercises? Which is Better to
-  Improve Cycling Performance?
+title: Unilateral or Bilateral Gym Strength Training Exercises? Which is Better to Improve Cycling Performance?
 category: training
 topics:
-- VO2max
-- Durability
-- Long_intervals
-- Periodization
-- Unilateral
+- VO2max_and_aerobic_kinetics
+- Durability_and_fatigue_mechanisms
+- VO2max_and_aerobic_hiit
+- Periodization_models_and_macrocycles
+- Strength_and_resistance_training
 source: 'knowledgeiswatt.substack.com/p/41-unilateral-or-bilateral-gym-strength Date:'
 author: Endurance Research
 date: 'Source: knowledgeiswatt.substack.com/p/41-unilateral-or-bilateral-gym-strength'
-summary: November 1, 2024 In the previous KisW Research Notes we saw that heavy gym
-  strength training benefits cycling
+summary: November 1, 2024 In the previous KisW Research Notes we saw that heavy gym strength training benefits cycling
 ---
 
 # Unilateral or Bilateral Gym Strength Training Exercises? Which is Better to Improve Cycling Performance?

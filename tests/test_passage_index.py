@@ -57,7 +57,7 @@ class TestPassageIndex(unittest.TestCase):
             "Articles/alpha.md",
             title="Alpha Oxygen Study",
             category="physiology",
-            topics=("VO2max", "Shared"),
+            topics=("VO2max_and_aerobic_kinetics", "Shared"),
             marker="mitochondrialsignature",
         )
         self.alpha_extended_path = self._write_source(
@@ -71,7 +71,7 @@ class TestPassageIndex(unittest.TestCase):
             "Notes/beta.md",
             title="Beta Aerobic Study",
             category="physiology",
-            topics=("Aerobic_base", "Shared"),
+            topics=("Zone2_and_endurance_base", "Shared"),
             marker="capillarysignature",
         )
         self.index = PassageIndex(self.kb_dir, self.db_path)
@@ -711,11 +711,20 @@ source: Local test journal
             all(result.passage.category == "physiology" for result in by_category)
         )
 
-        by_topic = self.index.search("cadencemarker", topic="VO2max", limit=20)
+        # Canonical topic query
+        by_topic = self.index.search(
+            "cadencemarker", topic="VO2max_and_aerobic_kinetics", limit=20
+        )
         self.assertEqual(
             {result.passage.source_slug for result in by_topic}, {"Articles/alpha"}
         )
-        self.assertTrue(all("VO2max" in result.passage.topics for result in by_topic))
+        self.assertTrue(all("VO2max_and_aerobic_kinetics" in result.passage.topics for result in by_topic))
+
+        # Legacy alias topic query resolves to the same source
+        by_alias = self.index.search("cadencemarker", topic="VO2max", limit=20)
+        self.assertEqual(
+            {result.passage.source_slug for result in by_alias}, {"Articles/alpha"}
+        )
 
         by_source = self.index.search(
             "cadencemarker", source_slug="Articles/alpha", limit=20
@@ -737,7 +746,7 @@ source: Local test journal
         self.assertEqual(passage, result.passage)
         self.assertEqual(passage.title, "Alpha Oxygen Study")
         self.assertEqual(passage.category, "physiology")
-        self.assertEqual(passage.topics, ("VO2max", "Shared"))
+        self.assertEqual(passage.topics, ("VO2max_and_aerobic_kinetics", "Shared"))
         self.assertIn("mitochondrialsignature", passage.content)
         self.assertLessEqual(passage.start_line, passage.end_line)
         self.assertIn(f"#L{passage.start_line}-L{passage.end_line}", passage.citation)

@@ -1,19 +1,19 @@
 ---
-title: "Track Training Considerations — Complete Guide"
+title: Track Training Considerations — Complete Guide
 category: training
 topics:
-  - "Sprint_performance"
-  - "Heavy_torque"
-  - "Unilateral"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hilson (Ten Minute Tips #33)"
-author: "Kolie Moore"
-date: "2024-01-21"
-summary: "Comprehensive guide to physiological, tactical, and strength training considerations for track cycling across sprint (Match Sprint, Keirin, Team Sprint) and endurance (Kilo, Pursuit, Omnium) disciplines."
+- Sprint_and_anaerobic_intervals
+- Torque_and_cadence_drills
+- Strength_and_resistance_training
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hilson (Ten Minute Tips #33)'
+author: Kolie Moore
+date: '2024-01-21'
+summary: Comprehensive guide to physiological, tactical, and strength training considerations for track cycling across sprint (Match Sprint, Keirin, Team Sprint) and endurance (Kilo, Pursuit, Omnium) disciplines.
 key_takeaways:
-  - "The 1-kilometer time trial represents the physiological boundary where aerobic metabolism begins to dominate performance (~50-60% aerobic contribution)."
-  - "The 'big gear revolution' shifted track sprint demands from ultra-high cadence (160-180 RPM) to maximal torque production on massive gears (110-125+ gear inches), emphasizing force production over contraction velocity."
-  - "Track endurance riders (Omnium, Points, Scratch) require standard aerobic base development and high-cadence threshold/VO2max repeatability to withstand multiple high-intensity bunch races in a single session."
-  - "Strength training for track sprinting prioritizes heavy unilateral and bilateral compound loading (50-85% 1RM) over lightweight ballistic plyometrics, exploiting the ~200ms pedal stroke force window."
+- The 1-kilometer time trial represents the physiological boundary where aerobic metabolism begins to dominate performance (~50-60% aerobic contribution).
+- The 'big gear revolution' shifted track sprint demands from ultra-high cadence (160-180 RPM) to maximal torque production on massive gears (110-125+ gear inches), emphasizing force production over contraction velocity.
+- Track endurance riders (Omnium, Points, Scratch) require standard aerobic base development and high-cadence threshold/VO2max repeatability to withstand multiple high-intensity bunch races in a single session.
+- Strength training for track sprinting prioritizes heavy unilateral and bilateral compound loading (50-85% 1RM) over lightweight ballistic plyometrics, exploiting the ~200ms pedal stroke force window.
 ---
 
 # Track Training Considerations — Complete Guide

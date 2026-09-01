@@ -1,19 +1,19 @@
 ---
-title: "Watts Doc #20: The Fick Equation Part 1 — A-VO2 Difference — Complete Guide"
-category: "physiology"
+title: 'Watts Doc #20: The Fick Equation Part 1 — A-VO2 Difference — Complete Guide'
+category: physiology
 topics:
-  - "VO2max"
-  - "Mitochondrial_density"
-  - "Cardiac_hypertrophy"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Harrison"
-author: "Kolie Moore"
-date: "2020-06-02"
-summary: "Deconstructs the Fick equation with a focus on arterial-venous oxygen difference (a-vO2 diff), exploring passive diffusion mechanics, capillary density, and proving that central cardiac delivery, not peripheral extraction, limits VO2max."
+- VO2max_and_aerobic_kinetics
+- Mitochondrial_and_cellular_adaptation
+- Cardiovascular_and_hemodynamics
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Harrison
+author: Kolie Moore
+date: '2020-06-02'
+summary: Deconstructs the Fick equation with a focus on arterial-venous oxygen difference (a-vO2 diff), exploring passive diffusion mechanics, capillary density, and proving that central cardiac delivery, not peripheral extraction, limits VO2max.
 key_takeaways:
-  - "The Fick equation dictates VO2 = Cardiac Output (Q) x a-vO2 difference = (Stroke Volume x Heart Rate) x a-vO2 difference."
-  - "Oxygen diffusion from capillary to mitochondria is 100% passive, driven by the zero-PO2 sink created as mitochondria reduce O2 to H2O at Complex IV."
-  - "Capillary density improves mean transit time (MTT) and correlates strongly with fractional utilization (FTP as % of VO2max), but does not directly limit whole-body VO2max."
-  - "Skeletal muscle possesses massive overcapacity for oxygen extraction (up to 90–93%); central cardiac output (stroke volume), not peripheral utilization, is the primary limiter of VO2max."
+- The Fick equation dictates VO2 = Cardiac Output (Q) x a-vO2 difference = (Stroke Volume x Heart Rate) x a-vO2 difference.
+- Oxygen diffusion from capillary to mitochondria is 100% passive, driven by the zero-PO2 sink created as mitochondria reduce O2 to H2O at Complex IV.
+- Capillary density improves mean transit time (MTT) and correlates strongly with fractional utilization (FTP as % of VO2max), but does not directly limit whole-body VO2max.
+- Skeletal muscle possesses massive overcapacity for oxygen extraction (up to 90–93%); central cardiac output (stroke volume), not peripheral utilization, is the primary limiter of VO2max.
 ---
 
 # Watts Doc #20: The Fick Equation Part 1 — A-VO2 Difference — Complete Guide

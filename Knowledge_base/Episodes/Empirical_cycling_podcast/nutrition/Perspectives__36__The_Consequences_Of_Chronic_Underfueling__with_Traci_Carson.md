@@ -1,19 +1,19 @@
 ---
-title: "Perspectives #36: The Consequences Of Chronic Underfueling — Complete Guide"
-category: "nutrition"
+title: 'Perspectives #36: The Consequences Of Chronic Underfueling — Complete Guide'
+category: nutrition
 topics:
-  - "Underfueling_REDs"
-  - "Carbohydrate_ratio"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore with Dr. Traci Carson"
-author: "Kolie Moore"
-date: "2024-11-24"
-summary: "A definitive clinical and physiological guide to Low Energy Availability (LEA) and Relative Energy Deficiency in Sport (RED-S), exploring within-day energy deficits, endocrine suppression, bone demineralization, and differential diagnosis in endurance athletes."
+- Energy_availability_and_reds
+- Carbohydrate_fueling_and_gut_training
+- Durability_and_fatigue_mechanisms
+source: Empirical Cycling Podcast — Kolie Moore with Dr. Traci Carson
+author: Kolie Moore
+date: '2024-11-24'
+summary: A definitive clinical and physiological guide to Low Energy Availability (LEA) and Relative Energy Deficiency in Sport (RED-S), exploring within-day energy deficits, endocrine suppression, bone demineralization, and differential diagnosis in endurance athletes.
 key_takeaways:
-  - "Energy Availability (EA) is defined as (Energy Intake - Exercise Energy Expenditure) / Fat-Free Mass; values below 30 kcal/kg FFM/day induce rapid suppression of the HPG axis, thyroid hormones, and bone remodeling."
-  - "Within-day energy deficits trigger endocrine disruption even if total 24-hour calories appear balanced; backloading calories after fasting through hard morning workouts creates severe transient catabolic stress."
-  - "Weight stability does not rule out RED-S: the body aggressively suppresses resting metabolic rate (RMR), non-exercise activity thermogenesis (NEAT), and reproductive function to conserve energy."
-  - "Oral contraceptives induce artificial withdrawal bleeding, masking functional hypothalamic amenorrhea; true hormonal health requires tracking natural cycles or basal body temperature."
+- Energy Availability (EA) is defined as (Energy Intake - Exercise Energy Expenditure) / Fat-Free Mass; values below 30 kcal/kg FFM/day induce rapid suppression of the HPG axis, thyroid hormones, and bone remodeling.
+- Within-day energy deficits trigger endocrine disruption even if total 24-hour calories appear balanced; backloading calories after fasting through hard morning workouts creates severe transient catabolic stress.
+- 'Weight stability does not rule out RED-S: the body aggressively suppresses resting metabolic rate (RMR), non-exercise activity thermogenesis (NEAT), and reproductive function to conserve energy.'
+- Oral contraceptives induce artificial withdrawal bleeding, masking functional hypothalamic amenorrhea; true hormonal health requires tracking natural cycles or basal body temperature.
 ---
 
 # Perspectives #36: The Consequences Of Chronic Underfueling — Complete Guide

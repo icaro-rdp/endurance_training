@@ -2,9 +2,8 @@
 title: Ftp Vs Cp
 category: physiology
 topics:
-- FTP
-- CP
-- W_prime
+- FTP_and_functional_metrics
+- Critical_power_and_w_prime
 source: Knowledge Base
 author: Endurance Research
 date: '2025-01-01'

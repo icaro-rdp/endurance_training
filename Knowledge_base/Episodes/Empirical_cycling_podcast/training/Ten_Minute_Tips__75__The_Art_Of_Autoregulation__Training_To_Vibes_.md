@@ -1,21 +1,21 @@
 ---
-title: "The Art of Autoregulation (Training to Vibes) — Complete Guide"
+title: The Art of Autoregulation (Training to Vibes) — Complete Guide
 category: planning
 topics:
-  - "Microcycles"
-  - "Aerobic_base"
-  - "Durability"
-  - "Volume_quantification"
-source: "Empirical Cycling Podcast — Ten Minute Tips #75"
-author: "Kolie Moore"
-date: "2026-03-26"
-summary: "Kolie Moore, James, and Gediminas explore autoregulation ('vibes training'), balancing structured overload with physiological feedback, managing external life stress, and deploying diagnostic warm-up probes."
+- Microcycle_and_schedule_design
+- Zone2_and_endurance_base
+- Durability_and_fatigue_mechanisms
+- Workload_quantification_and_modeling
+source: 'Empirical Cycling Podcast — Ten Minute Tips #75'
+author: Kolie Moore
+date: '2026-03-26'
+summary: Kolie Moore, James, and Gediminas explore autoregulation ('vibes training'), balancing structured overload with physiological feedback, managing external life stress, and deploying diagnostic warm-up probes.
 key_takeaways:
-  - "Autoregulation is not formless training; it is the deliberate adjustment of training load based on real-time physiological feedback and environmental recovery capacity."
-  - "The 'Weather Forecast Principle': Long-term canned plans have wide predictive error; daily and weekly micro-adjustments yield far higher training precision."
-  - "Use low-fatigue diagnostic probes (3–5 min at FTP or 2 short seated sprints in warm-up) to objectively separate psychological 'rest inertia' from true systemic fatigue."
-  - "Under high external life stress, an athlete often has only one day of high-quality legs per week; deploying that day requires rigorous protection of recovery windows."
-  - "The 'Least Structured Viable Workout': Prescribing macro-stimuli (e.g., 60 min total FTP time-in-zone across natural climbs) achieves identical aerobic adaptation without rigid timer constraints."
+- Autoregulation is not formless training; it is the deliberate adjustment of training load based on real-time physiological feedback and environmental recovery capacity.
+- 'The ''Weather Forecast Principle'': Long-term canned plans have wide predictive error; daily and weekly micro-adjustments yield far higher training precision.'
+- Use low-fatigue diagnostic probes (3–5 min at FTP or 2 short seated sprints in warm-up) to objectively separate psychological 'rest inertia' from true systemic fatigue.
+- Under high external life stress, an athlete often has only one day of high-quality legs per week; deploying that day requires rigorous protection of recovery windows.
+- 'The ''Least Structured Viable Workout'': Prescribing macro-stimuli (e.g., 60 min total FTP time-in-zone across natural climbs) achieves identical aerobic adaptation without rigid timer constraints.'
 ---
 
 # The Art of Autoregulation (Training to Vibes) — Complete Guide

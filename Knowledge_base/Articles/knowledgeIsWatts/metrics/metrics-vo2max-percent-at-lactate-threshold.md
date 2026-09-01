@@ -2,16 +2,13 @@
 title: The % of VO2max at Lactate Threshold Doesn't Discriminate the Performance Level
 category: physiology
 topics:
-- FTP
-- VO2max
-- LT2_VT2
-source: 'knowledgeiswatt.substack.com/p/77-the-of-vo2max-at-lactate-threshold Date:
-  May 6,'
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+- Thresholds_and_metabolic_domains
+source: 'knowledgeiswatt.substack.com/p/77-the-of-vo2max-at-lactate-threshold Date: May 6,'
 author: Endurance Research
-date: 'Source: knowledgeiswatt.substack.com/p/77-the-of-vo2max-at-lactate-threshold  May
-  6,'
-summary: A widespread belief is that higher level athletes have a second threshold/FTP
-  at a higher percentage of the maximum oxygen consumption (VO2max).
+date: 'Source: knowledgeiswatt.substack.com/p/77-the-of-vo2max-at-lactate-threshold  May 6,'
+summary: A widespread belief is that higher level athletes have a second threshold/FTP at a higher percentage of the maximum oxygen consumption (VO2max).
 ---
 
 # The % of VO2max at Lactate Threshold Doesn't Discriminate the Performance Level

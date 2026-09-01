@@ -1,21 +1,21 @@
 ---
-title: "Ten Minute Tips #29: Training Myths, Part 3: Volume — Complete Guide"
+title: 'Ten Minute Tips #29: Training Myths, Part 3: Volume — Complete Guide'
 category: planning
 topics:
-  - "Aerobic_base"
-  - "Durability"
-  - "Volume_quantification"
-  - "Lab_vs_field"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Helson (Ten Minute Tips #29)"
-author: "Kolie Moore"
-date: "2023-07-10"
-summary: "Debunks five widespread endurance training myths regarding training volume, examining the biological asymmetry between volume and intensity, the reality of female training capacity, the myth of 'junk miles', and the genetic factors behind low-volume success."
+- Zone2_and_endurance_base
+- Durability_and_fatigue_mechanisms
+- Workload_quantification_and_modeling
+- Physiological_testing_and_diagnostics
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Helson (Ten Minute Tips #29)'
+author: Kolie Moore
+date: '2023-07-10'
+summary: Debunks five widespread endurance training myths regarding training volume, examining the biological asymmetry between volume and intensity, the reality of female training capacity, the myth of 'junk miles', and the genetic factors behind low-volume success.
 key_takeaways:
-  - "Overtraining on high intensity occurs rapidly and aggressively; overtraining on volume is almost always caused by riding base miles too hard (tempo) and chronic under-fueling."
-  - "There is no physiological barrier preventing female athletes from handling elite aerobic volume; historical volume discrepancies stemmed from socioeconomic factors (e.g. lack of living wages) rather than biology."
-  - "TSS creates a false physiological equivalence: 100 TSS from high-intensity intervals does not stimulate the same central hemodynamics, capillary density, and durability as 100 TSS from a long base ride."
-  - "Easy spinning (45–60% FTP, bike commuting, low-intensity recovery) is never 'junk miles'; true junk miles consist of unstructured, middle-intensity surges that generate fatigue without targeted adaptation."
-  - "Athletes with elite genetics or deep multi-year training histories can race competitively on 8–10 hours per week, but reaching one's ultimate physiological potential requires substantial aerobic volume."
+- Overtraining on high intensity occurs rapidly and aggressively; overtraining on volume is almost always caused by riding base miles too hard (tempo) and chronic under-fueling.
+- There is no physiological barrier preventing female athletes from handling elite aerobic volume; historical volume discrepancies stemmed from socioeconomic factors (e.g. lack of living wages) rather than biology.
+- 'TSS creates a false physiological equivalence: 100 TSS from high-intensity intervals does not stimulate the same central hemodynamics, capillary density, and durability as 100 TSS from a long base ride.'
+- Easy spinning (45–60% FTP, bike commuting, low-intensity recovery) is never 'junk miles'; true junk miles consist of unstructured, middle-intensity surges that generate fatigue without targeted adaptation.
+- Athletes with elite genetics or deep multi-year training histories can race competitively on 8–10 hours per week, but reaching one's ultimate physiological potential requires substantial aerobic volume.
 ---
 
 # Ten Minute Tips #29: Training Myths, Part 3: Volume — Complete Guide

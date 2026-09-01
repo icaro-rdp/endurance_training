@@ -1,20 +1,20 @@
 ---
-title: "The Roles Of Stimulus And Recovery In Plateaus — Complete Guide"
+title: The Roles Of Stimulus And Recovery In Plateaus — Complete Guide
 category: planning
 topics:
-  - "Microcycles"
-  - "Block_periodization"
-  - "Volume_quantification"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore, James Mackay, Rory (Ten Minute Tips #72)"
-author: "Kolie Moore"
-date: "2026-02-12"
-summary: "A practical, physiological framework for diagnosing performance plateaus. Analyzes the dynamic equilibrium between training stimulus and recovery bandwidth across low-volume and highly trained athletes, identifying overlapping physiological limiters, and avoiding the trap of over-indexing on consistency."
+- Microcycle_and_schedule_design
+- Periodization_models_and_macrocycles
+- Workload_quantification_and_modeling
+- Durability_and_fatigue_mechanisms
+source: 'Empirical Cycling Podcast — Kolie Moore, James Mackay, Rory (Ten Minute Tips #72)'
+author: Kolie Moore
+date: '2026-02-12'
+summary: A practical, physiological framework for diagnosing performance plateaus. Analyzes the dynamic equilibrium between training stimulus and recovery bandwidth across low-volume and highly trained athletes, identifying overlapping physiological limiters, and avoiding the trap of over-indexing on consistency.
 key_takeaways:
-  - "Performance adaptation exists in a dynamic equilibrium: adding training stimulus inherently reduces recovery bandwidth; when load exceeds recovery capacity, performance declines along an inverted-U curve."
-  - "Low-volume athletes (4–8 hrs/week) can be severely recovery-limited due to external life, work, and family stress; increasing training volume is counterproductive if it cuts into sleep or recovery."
-  - "Over-indexing on routine consistency without progressive overload (e.g., repeating static 2x20 workouts) leads to self-limiting stagnation."
-  - "Top-end power (sprinting, 1-minute surges) is acutely sensitive to systemic fatigue; when power over threshold decays, the primary solution is freshness and rest, not additional sprint intervals."
+- 'Performance adaptation exists in a dynamic equilibrium: adding training stimulus inherently reduces recovery bandwidth; when load exceeds recovery capacity, performance declines along an inverted-U curve.'
+- Low-volume athletes (4–8 hrs/week) can be severely recovery-limited due to external life, work, and family stress; increasing training volume is counterproductive if it cuts into sleep or recovery.
+- Over-indexing on routine consistency without progressive overload (e.g., repeating static 2x20 workouts) leads to self-limiting stagnation.
+- Top-end power (sprinting, 1-minute surges) is acutely sensitive to systemic fatigue; when power over threshold decays, the primary solution is freshness and rest, not additional sprint intervals.
 ---
 
 # The Roles Of Stimulus And Recovery In Plateaus — Complete Guide

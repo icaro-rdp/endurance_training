@@ -1,20 +1,20 @@
 ---
-title: "ATP Hydrolysis, Cellular Disequilibrium, & Bioenergetics — Complete Guide"
-category: "physiology"
+title: ATP Hydrolysis, Cellular Disequilibrium, & Bioenergetics — Complete Guide
+category: physiology
 topics:
-  - "Mitochondrial_density"
-  - "Lactate_shuttle"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore (Ten Minute Tips #6)"
-author: "Kolie Moore"
-date: "2020-02-14"
-summary: "A rigorous exploration of muscle bioenergetics, thermodynamics, and the biochemical reality of ATP hydrolysis, demonstrating why cellular disequilibrium—not 'high-energy phosphate bonds'—drives muscular contraction and training adaptation."
+- Mitochondrial_and_cellular_adaptation
+- Lactate_kinetics_and_metabolism
+- Durability_and_fatigue_mechanisms
+source: 'Empirical Cycling Podcast — Kolie Moore (Ten Minute Tips #6)'
+author: Kolie Moore
+date: '2020-02-14'
+summary: A rigorous exploration of muscle bioenergetics, thermodynamics, and the biochemical reality of ATP hydrolysis, demonstrating why cellular disequilibrium—not 'high-energy phosphate bonds'—drives muscular contraction and training adaptation.
 key_takeaways:
-  - "The term 'high-energy phosphate bond' is a chemical misnomer; breaking any chemical bond requires energy input, while energy is released when products form lower-energy states."
-  - "ATP hydrolysis yields large negative Gibbs free energy (ΔG ~ -50 to -65 kJ/mol) due to electrostatic repulsion relief, resonance stabilization of inorganic phosphate, and greater product solvation."
-  - "Living cells maintain the [ATP]/[ADP][Pi] ratio roughly 8 to 10 orders of magnitude out of chemical equilibrium; true equilibrium (ΔG = 0) represents biological death."
-  - "Muscular fatigue during high-intensity exercise occurs when the rate of ATP turnover outpaces resynthesis, causing ΔG_ATP to fall toward the minimum thermodynamic threshold required to power SERCA pumps and cross-bridge detachment."
-  - "Endurance adaptations (mitochondrial biogenesis, increased oxidative enzymes) serve fundamentally to defend cellular ATP disequilibrium at higher external power outputs."
+- The term 'high-energy phosphate bond' is a chemical misnomer; breaking any chemical bond requires energy input, while energy is released when products form lower-energy states.
+- ATP hydrolysis yields large negative Gibbs free energy (ΔG ~ -50 to -65 kJ/mol) due to electrostatic repulsion relief, resonance stabilization of inorganic phosphate, and greater product solvation.
+- Living cells maintain the [ATP]/[ADP][Pi] ratio roughly 8 to 10 orders of magnitude out of chemical equilibrium; true equilibrium (ΔG = 0) represents biological death.
+- Muscular fatigue during high-intensity exercise occurs when the rate of ATP turnover outpaces resynthesis, causing ΔG_ATP to fall toward the minimum thermodynamic threshold required to power SERCA pumps and cross-bridge detachment.
+- Endurance adaptations (mitochondrial biogenesis, increased oxidative enzymes) serve fundamentally to defend cellular ATP disequilibrium at higher external power outputs.
 ---
 
 # ATP Hydrolysis, Cellular Disequilibrium, & Bioenergetics — Complete Guide

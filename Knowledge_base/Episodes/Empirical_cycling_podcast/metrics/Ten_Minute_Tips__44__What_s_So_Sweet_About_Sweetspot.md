@@ -1,23 +1,22 @@
 ---
-title: "Ten Minute Tips #44: What's So Sweet About Sweetspot — Complete Guide"
+title: 'Ten Minute Tips #44: What''s So Sweet About Sweetspot — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "TTA_TTE"
-  - "Durability"
-  - "Long_intervals"
-  - "Volume_quantification"
-source: "Empirical Cycling Podcast — Kolie Moore & James McKay (Ten Minute Tips #44)"
-author: "Kolie Moore"
-date: "2024-11-11"
-summary: "An in-depth evaluation of Sweet Spot training, defining its physiological role at ~90% FTP, establishing time-in-zone (TIZ) progression rules, debunking the 'time-crunched magic bullet' myth, and prescribing fueling frameworks for extensive sub-threshold work."
+- FTP_and_functional_metrics
+- Durability_and_fatigue_mechanisms
+- VO2max_and_aerobic_hiit
+- Workload_quantification_and_modeling
+source: 'Empirical Cycling Podcast — Kolie Moore & James McKay (Ten Minute Tips #44)'
+author: Kolie Moore
+date: '2024-11-11'
+summary: An in-depth evaluation of Sweet Spot training, defining its physiological role at ~90% FTP, establishing time-in-zone (TIZ) progression rules, debunking the 'time-crunched magic bullet' myth, and prescribing fueling frameworks for extensive sub-threshold work.
 key_takeaways:
-  - "Target definition: Sweet Spot is pegged at ~90% FTP (88–92% range), stimulating mitochondrial and capillarization adaptations similar to threshold work with reduced acute internal strain."
-  - "Dose-equivalence requires extended duration: Sweet Spot is not a 1:1 substitute for threshold; achieving an equivalent aerobic training impulse requires substantially longer Time-in-Zone (60–120+ minutes) pushed toward individual muscular exhaustion."
-  - "The time-crunched paradox: Sweet Spot is inefficient for severely time-constrained athletes (<6 hrs/wk); short 45–60 minute sessions lack sufficient duration to trigger deep sub-threshold adaptations compared to pure threshold or VO2max work."
-  - "Session-level progression over weekly frequency: Progress Sweet Spot by extending single-session TIZ (e.g., from 2x20 min to 3x30 min to 2x45 min) rather than performing short, unchallenging Sweet Spot sessions 4–5 days per week."
-  - "Glycogen demand & fueling: Sweet Spot incurs massive kilojoule turnover and rapid glycogen depletion; high on-bike carbohydrate intake (60–90+ g/hr) is essential to achieve target durations and prevent post-workout autonomic fatigue."
-  - "Ideal foundation for race-specific over-unders: Sweet Spot provides the optimal physiological baseline (under) for lactate clearance and sustained motor unit recruitment during surging efforts."
+- 'Target definition: Sweet Spot is pegged at ~90% FTP (88–92% range), stimulating mitochondrial and capillarization adaptations similar to threshold work with reduced acute internal strain.'
+- 'Dose-equivalence requires extended duration: Sweet Spot is not a 1:1 substitute for threshold; achieving an equivalent aerobic training impulse requires substantially longer Time-in-Zone (60–120+ minutes) pushed toward individual muscular exhaustion.'
+- 'The time-crunched paradox: Sweet Spot is inefficient for severely time-constrained athletes (<6 hrs/wk); short 45–60 minute sessions lack sufficient duration to trigger deep sub-threshold adaptations compared to pure threshold or VO2max work.'
+- 'Session-level progression over weekly frequency: Progress Sweet Spot by extending single-session TIZ (e.g., from 2x20 min to 3x30 min to 2x45 min) rather than performing short, unchallenging Sweet Spot sessions 4–5 days per week.'
+- 'Glycogen demand & fueling: Sweet Spot incurs massive kilojoule turnover and rapid glycogen depletion; high on-bike carbohydrate intake (60–90+ g/hr) is essential to achieve target durations and prevent post-workout autonomic fatigue.'
+- 'Ideal foundation for race-specific over-unders: Sweet Spot provides the optimal physiological baseline (under) for lactate clearance and sustained motor unit recruitment during surging efforts.'
 ---
 
 # Ten Minute Tips #44: What's So Sweet About Sweetspot — Complete Guide

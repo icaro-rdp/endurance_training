@@ -1,19 +1,19 @@
 ---
-title: "Phosphocreatine as a Critical Aerobic Energy System — Complete Guide"
-category: "physiology"
+title: Phosphocreatine as a Critical Aerobic Energy System — Complete Guide
+category: physiology
 topics:
-  - "Aerobic_base"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #38)"
-author: "Kolie Moore"
-date: "2022-06-03"
-summary: "An in-depth physiological analysis of phosphocreatine (PCr) beyond sprinting, focusing on its role as a spatial and temporal energy shuttle from mitochondrial cristae to contracting myofibrils, and why repeated sprint performance is fundamentally governed by aerobic oxidative capacity."
+- Zone2_and_endurance_base
+- Durability_and_fatigue_mechanisms
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #38)'
+author: Kolie Moore
+date: '2022-06-03'
+summary: An in-depth physiological analysis of phosphocreatine (PCr) beyond sprinting, focusing on its role as a spatial and temporal energy shuttle from mitochondrial cristae to contracting myofibrils, and why repeated sprint performance is fundamentally governed by aerobic oxidative capacity.
 key_takeaways:
-  - "Phosphocreatine (PCr) acts as a critical spatial energy shuttle ('creatine conveyor belt'), transferring high-energy phosphates from the deep mitochondrial cristae to myofibrillar ATPases."
-  - "ATP concentrations in muscle cells are low (~5 mM) and free ADP is minute (~5 µM); PCr (~20 mM) diffuses 25–30% faster than ATP, maintaining the high Gibbs free energy of ATP hydrolysis throughout the cell."
-  - "Resynthesis of PCr post-effort is 100% aerobic and mitochondrial-dependent, with a half-life of 21–57 seconds that is directly determined by peripheral aerobic fitness (threshold/oxidative capacity)."
-  - "Repeated sprint ability (RSA) in criteriums and intermittent sports correlates far more strongly with peripheral aerobic markers (threshold velocity / FTP) than with VO2max."
-  - "Genetic knockout models of creatine kinase (CK) exhibit severe exercise intolerance, 50% reductions in net ATP synthesis, and profound lethargy despite compensatory multi-fold increases in mitochondrial enzymes."
+- Phosphocreatine (PCr) acts as a critical spatial energy shuttle ('creatine conveyor belt'), transferring high-energy phosphates from the deep mitochondrial cristae to myofibrillar ATPases.
+- ATP concentrations in muscle cells are low (~5 mM) and free ADP is minute (~5 µM); PCr (~20 mM) diffuses 25–30% faster than ATP, maintaining the high Gibbs free energy of ATP hydrolysis throughout the cell.
+- Resynthesis of PCr post-effort is 100% aerobic and mitochondrial-dependent, with a half-life of 21–57 seconds that is directly determined by peripheral aerobic fitness (threshold/oxidative capacity).
+- Repeated sprint ability (RSA) in criteriums and intermittent sports correlates far more strongly with peripheral aerobic markers (threshold velocity / FTP) than with VO2max.
+- Genetic knockout models of creatine kinase (CK) exhibit severe exercise intolerance, 50% reductions in net ATP synthesis, and profound lethargy despite compensatory multi-fold increases in mitochondrial enzymes.
 ---
 
 # Phosphocreatine as a Critical Aerobic Energy System — Complete Guide

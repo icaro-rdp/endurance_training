@@ -2,17 +2,12 @@
 title: Short Vs. Long Intervals in Pro Cyclists
 category: training
 topics:
-- VO2max
-- Short_intervals
-- Long_intervals
-source: 'knowledgeiswatt.substack.com/p/33-high-intensity-training-short Date: October
-  1,'
+- VO2max_and_aerobic_kinetics
+- VO2max_and_aerobic_hiit
+source: 'knowledgeiswatt.substack.com/p/33-high-intensity-training-short Date: October 1,'
 author: Endurance Research
-date: 'Source: knowledgeiswatt.substack.com/p/33-high-intensity-training-short  October
-  1,'
-summary: In the last post we saw that short intervals (3x13min 30s on-15s off) provides
-  superior physiological and performance improvements compared to long intervals (4x5min
-  on with 2.5 recovery).
+date: 'Source: knowledgeiswatt.substack.com/p/33-high-intensity-training-short  October 1,'
+summary: In the last post we saw that short intervals (3x13min 30s on-15s off) provides superior physiological and performance improvements compared to long intervals (4x5min on with 2.5 recovery).
 ---
 
 # Short Vs. Long Intervals in Pro Cyclists

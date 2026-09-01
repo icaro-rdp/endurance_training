@@ -1,21 +1,21 @@
 ---
-title: "Criterium Physiology & Repeated Sprint Performance — Complete Guide"
-category: "physiology"
+title: Criterium Physiology & Repeated Sprint Performance — Complete Guide
+category: physiology
 topics:
-  - "Mitochondrial_density"
-  - "Aerobic_base"
-  - "Fat_oxidation"
-  - "FTP"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #2)"
-author: "Kolie Moore"
-date: "2019-04-01"
-summary: "An in-depth physiological breakdown of why excessive anaerobic training impairs criterium and cyclocross performance, detailing the mitochondrial creatine kinase mechanism of phosphocreatine (PCr) resynthesis, glycogen-sparing kinetics, and in-season recovery periodization."
+- Mitochondrial_and_cellular_adaptation
+- Zone2_and_endurance_base
+- Substrate_utilization_and_fat_oxidation
+- FTP_and_functional_metrics
+- Durability_and_fatigue_mechanisms
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #2)'
+author: Kolie Moore
+date: '2019-04-01'
+summary: An in-depth physiological breakdown of why excessive anaerobic training impairs criterium and cyclocross performance, detailing the mitochondrial creatine kinase mechanism of phosphocreatine (PCr) resynthesis, glycogen-sparing kinetics, and in-season recovery periodization.
 key_takeaways:
-  - "Recovery between repeated sprints is approximately 80% aerobic; phosphocreatine (PCr) resynthesis occurs inside the mitochondria via mitochondrial creatine kinase."
-  - "Excessive anaerobic interval training shifts whole-body substrate utilization toward carbohydrate dependence at all intensities, depleting glycogen prematurely in races."
-  - "A higher FTP reduces the fractional metabolic strain of corner surges and preserves anaerobic work capacity (W') for the race finale."
-  - "During race season, weekend competitions provide sufficient high-intensity stimulus; mid-week training should prioritize aerobic maintenance, technical skills, and deep recovery."
+- Recovery between repeated sprints is approximately 80% aerobic; phosphocreatine (PCr) resynthesis occurs inside the mitochondria via mitochondrial creatine kinase.
+- Excessive anaerobic interval training shifts whole-body substrate utilization toward carbohydrate dependence at all intensities, depleting glycogen prematurely in races.
+- A higher FTP reduces the fractional metabolic strain of corner surges and preserves anaerobic work capacity (W') for the race finale.
+- During race season, weekend competitions provide sufficient high-intensity stimulus; mid-week training should prioritize aerobic maintenance, technical skills, and deep recovery.
 ---
 
 # Criterium Physiology & Repeated Sprint Performance — Complete Guide

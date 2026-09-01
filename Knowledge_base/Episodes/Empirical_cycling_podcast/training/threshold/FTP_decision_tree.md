@@ -2,17 +2,14 @@
 title: FTP Training Decision Tree — Complete Guide
 category: planning
 topics:
-- FTP
-- Mitochondrial_density
-- Periodization
-- Cardiac_hypertrophy
+- FTP_and_functional_metrics
+- Mitochondrial_and_cellular_adaptation
+- Periodization_models_and_macrocycles
+- Cardiovascular_and_hemodynamics
 source: Empirical Cycling Podcast — Kolie Moore & Rory Porteous
 author: Endurance Research
 date: '2025-01-01'
-summary: Functional Threshold Power (FTP) sets the upper limit for sustainable aerobic
-  power production. It integrates central cardiovascular capacity ($\text{VO}_2\text{max}$)
-  and peripheral muscular adaptations (oxidative capacity, capillary density, mitochondrial
-  density, and lactate clearance). The strat
+summary: Functional Threshold Power (FTP) sets the upper limit for sustainable aerobic power production. It integrates central cardiovascular capacity ($\text{VO}_2\text{max}$) and peripheral muscular adaptations (oxidative capacity, capillary density, mitochondrial density, and lactate clearance). The strat
 ---
 
 # FTP Training Decision Tree — Complete Guide

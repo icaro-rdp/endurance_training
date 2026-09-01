@@ -1,20 +1,20 @@
 ---
-title: "Does Overtraining Cause Mitochondrial Dysfunction? (Flockhart & Proteomics Analysis) — Complete Guide"
-category: "physiology"
+title: Does Overtraining Cause Mitochondrial Dysfunction? (Flockhart & Proteomics Analysis) — Complete Guide
+category: physiology
 topics:
-  - "Mitochondrial_density"
-  - "Durability"
-  - "Microcycles"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #41)"
-author: "Kolie Moore"
-date: "2023-01-09"
-summary: "A critical scientific appraisal of the Flockhart 'mitochondrial dysfunction' overtraining study, integrating high-resolution proteomics (Granata et al.) and the Hawley/Bishop critique to demonstrate why excessive training induces transient non-stoichiometric mitochondrial remodeling rather than cellular pathology."
+- Mitochondrial_and_cellular_adaptation
+- Durability_and_fatigue_mechanisms
+- Microcycle_and_schedule_design
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #41)'
+author: Kolie Moore
+date: '2023-01-09'
+summary: A critical scientific appraisal of the Flockhart 'mitochondrial dysfunction' overtraining study, integrating high-resolution proteomics (Granata et al.) and the Hawley/Bishop critique to demonstrate why excessive training induces transient non-stoichiometric mitochondrial remodeling rather than cellular pathology.
 key_takeaways:
-  - "The headline claim that excessive HIIT 'damages' mitochondria is a methodological artifact of measuring isolated mitochondria under saturated in vitro conditions rather than in situ muscle tissue."
-  - "High-intensity training triggers rapid expansion of mitochondrial volume and ribosomal translation machinery while electron transport chain (ETC) subunits temporarily lag, resulting in transiently lower intrinsic respiration per unit of mitochondrial mass."
-  - "Permeabilized muscle fiber assays (preserving cellular architecture) demonstrate that whole-tissue respiration and peak VO2 continue to rise or remain stable throughout excessive training blocks."
-  - "Athletic performance during excessive HIIT does not collapse—it stagnates, and following adequate recovery (deload), power output supercompensates significantly (+10%)."
-  - "True mitochondrial dysfunction is a clinical pathology (e.g., Leber Hereditary Optic Neuropathy, diabetes); transient athletic overreaching represents incomplete adaptive remodeling that resolves with proper recovery."
+- The headline claim that excessive HIIT 'damages' mitochondria is a methodological artifact of measuring isolated mitochondria under saturated in vitro conditions rather than in situ muscle tissue.
+- High-intensity training triggers rapid expansion of mitochondrial volume and ribosomal translation machinery while electron transport chain (ETC) subunits temporarily lag, resulting in transiently lower intrinsic respiration per unit of mitochondrial mass.
+- Permeabilized muscle fiber assays (preserving cellular architecture) demonstrate that whole-tissue respiration and peak VO2 continue to rise or remain stable throughout excessive training blocks.
+- Athletic performance during excessive HIIT does not collapse—it stagnates, and following adequate recovery (deload), power output supercompensates significantly (+10%).
+- True mitochondrial dysfunction is a clinical pathology (e.g., Leber Hereditary Optic Neuropathy, diabetes); transient athletic overreaching represents incomplete adaptive remodeling that resolves with proper recovery.
 ---
 
 # Does Overtraining Cause Mitochondrial Dysfunction? — Complete Guide

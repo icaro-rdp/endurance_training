@@ -1,20 +1,20 @@
 ---
-title: "Ten Minute Tips #20: Training Myths, Part 1 — Complete Guide"
-category: "physiology"
+title: 'Ten Minute Tips #20: Training Myths, Part 1 — Complete Guide'
+category: physiology
 topics:
-  - "Heavy_torque"
-  - "Fat_oxidation"
-  - "Aerobic_base"
-  - "Mitochondrial_density"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Houston"
-author: "Kolie Moore"
-date: "2022-06-14"
-summary: "Kolie Moore and Kyle Houston dismantle three pervasive endurance training myths: that low-cadence riding replaces gym strength training, that burning more fat via dietary manipulation improves fat oxidation capacity, and that base training must always be performed in the small chainring."
+- Torque_and_cadence_drills
+- Substrate_utilization_and_fat_oxidation
+- Zone2_and_endurance_base
+- Mitochondrial_and_cellular_adaptation
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Houston
+author: Kolie Moore
+date: '2022-06-14'
+summary: 'Kolie Moore and Kyle Houston dismantle three pervasive endurance training myths: that low-cadence riding replaces gym strength training, that burning more fat via dietary manipulation improves fat oxidation capacity, and that base training must always be performed in the small chainring.'
 key_takeaways:
-  - "Low-cadence pedaling is NOT strength training: cycling is purely concentric and generates far too little force per pedal stroke (<20-30% 1RM) without the loaded eccentric stretch required for mechanotransduction."
-  - "Burning fat via fasted/keto rides does not improve aerobic fitness: it increases fat transport enzymes simply due to substrate availability while downregulating carbohydrate oxidation enzymes and impairing high-intensity performance."
-  - "Mitochondrial biogenesis is driven by contractile energy flux (CaMK, AMPK, PGC-1α) through training volume and duration, not by forcing fat metabolism through caloric starvation."
-  - "The 'little ring base' rule originated from pros riding 25–30 hours/week; time-crunched athletes riding 6–10 hours will plateau unless they introduce progressive metabolic density."
+- 'Low-cadence pedaling is NOT strength training: cycling is purely concentric and generates far too little force per pedal stroke (<20-30% 1RM) without the loaded eccentric stretch required for mechanotransduction.'
+- 'Burning fat via fasted/keto rides does not improve aerobic fitness: it increases fat transport enzymes simply due to substrate availability while downregulating carbohydrate oxidation enzymes and impairing high-intensity performance.'
+- Mitochondrial biogenesis is driven by contractile energy flux (CaMK, AMPK, PGC-1α) through training volume and duration, not by forcing fat metabolism through caloric starvation.
+- The 'little ring base' rule originated from pros riding 25–30 hours/week; time-crunched athletes riding 6–10 hours will plateau unless they introduce progressive metabolic density.
 ---
 
 # Ten Minute Tips #20: Training Myths, Part 1 — Complete Guide

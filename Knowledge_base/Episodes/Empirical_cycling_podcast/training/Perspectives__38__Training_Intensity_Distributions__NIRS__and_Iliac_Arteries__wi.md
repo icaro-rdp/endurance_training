@@ -1,21 +1,20 @@
 ---
-title: "Perspectives #38: Training Intensity Distributions, NIRS, and Iliac Arteries — Complete Guide"
+title: 'Perspectives #38: Training Intensity Distributions, NIRS, and Iliac Arteries — Complete Guide'
 category: training
 topics:
-  - "Long_intervals"
-  - "VO2max"
-  - "LT1_VT1"
-  - "LT2_VT2"
-source: "Empirical Cycling Podcast — Kolie Moore with Jem Arnold"
-author: "Kolie Moore"
-date: "2025-02-23"
-summary: "An in-depth analysis of individual participant data (IPD) network meta-analyses on Training Intensity Distribution (TID), statistical nuances of VO2max and time-trial adaptations, near-infrared spectroscopy (NIRS) limitations, and the clinical pathophysiology of flow limitations in the iliac artery (FLIA)."
+- VO2max_and_aerobic_hiit
+- VO2max_and_aerobic_kinetics
+- Thresholds_and_metabolic_domains
+source: Empirical Cycling Podcast — Kolie Moore with Jem Arnold
+author: Kolie Moore
+date: '2025-02-23'
+summary: An in-depth analysis of individual participant data (IPD) network meta-analyses on Training Intensity Distribution (TID), statistical nuances of VO2max and time-trial adaptations, near-infrared spectroscopy (NIRS) limitations, and the clinical pathophysiology of flow limitations in the iliac artery (FLIA).
 key_takeaways:
-  - "Network meta-analyses using Individual Participant Data (IPD, ~350 athletes) reveal that across the entire cohort, no single Training Intensity Distribution (Polarized, Pyramidal, Threshold) produces a statistically superior global adaptation in VO2max or Time Trial performance."
-  - "Subgroup stratification demonstrates a distinct performance-level divergence: competitive/well-trained athletes experience a ~1–2% greater VO2max adaptation with Polarized models, whereas recreational athletes benefit slightly more from Pyramidal models."
-  - "The average global training intervention adaptation across 3–18 weeks is ~2% (range: -20% to +30%), which overlaps heavily with daily biological variability and laboratory measurement uncertainty (VO2max: ±1–5%, TT: ±1–3%)."
-  - "Near-Infrared Spectroscopy (NIRS) correlates well with respiratory compensation points at the group mean level, but shows individual agreement limits spanning ±20–40 W, precluding rigid standalone threshold prescription without systemic validation."
-  - "Flow Limitations in the Iliac Artery (FLIA / Iliac Endofibrosis) is a mechanical-vascular condition caused by repetitive psoas contraction and arterial kinking in aggressive aero postures, diagnosable via provocative cycling tests with bilateral NIRS, power balance asymmetry, and post-exercise ankle-brachial pressure indices."
+- Network meta-analyses using Individual Participant Data (IPD, ~350 athletes) reveal that across the entire cohort, no single Training Intensity Distribution (Polarized, Pyramidal, Threshold) produces a statistically superior global adaptation in VO2max or Time Trial performance.
+- 'Subgroup stratification demonstrates a distinct performance-level divergence: competitive/well-trained athletes experience a ~1–2% greater VO2max adaptation with Polarized models, whereas recreational athletes benefit slightly more from Pyramidal models.'
+- 'The average global training intervention adaptation across 3–18 weeks is ~2% (range: -20% to +30%), which overlaps heavily with daily biological variability and laboratory measurement uncertainty (VO2max: ±1–5%, TT: ±1–3%).'
+- Near-Infrared Spectroscopy (NIRS) correlates well with respiratory compensation points at the group mean level, but shows individual agreement limits spanning ±20–40 W, precluding rigid standalone threshold prescription without systemic validation.
+- Flow Limitations in the Iliac Artery (FLIA / Iliac Endofibrosis) is a mechanical-vascular condition caused by repetitive psoas contraction and arterial kinking in aggressive aero postures, diagnosable via provocative cycling tests with bilateral NIRS, power balance asymmetry, and post-exercise ankle-brachial pressure indices.
 ---
 
 # Perspectives #38: Training Intensity Distributions, NIRS, and Iliac Arteries — Complete Guide

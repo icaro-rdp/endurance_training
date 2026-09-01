@@ -2,13 +2,12 @@
 title: The 'pre-loaded' Short Intermittent Intervals
 category: training
 topics:
-- FTP
-- CP
-- VO2max
-- LT2_VT2
-- Short_intervals
-source: 'knowledgeiswatt.substack.com/p/7-optimizing-your-hit-aerobic-workouts Date:
-  January'
+- FTP_and_functional_metrics
+- Critical_power_and_w_prime
+- VO2max_and_aerobic_kinetics
+- Thresholds_and_metabolic_domains
+- VO2max_and_aerobic_hiit
+source: 'knowledgeiswatt.substack.com/p/7-optimizing-your-hit-aerobic-workouts Date: January'
 author: Endurance Research
 date: 'Source: knowledgeiswatt.substack.com/p/7-optimizing-your-hit-aerobic-workouts  January'
 summary: 23, 2026 1. THE SCIENTIFIC BACKGROUND

@@ -1,21 +1,20 @@
 ---
-title: "How Power Meters Make Lactate Testing Nearly Obsolete: MLSS, Ramp Flaws, & The Functional Threshold — Complete Guide"
+title: 'How Power Meters Make Lactate Testing Nearly Obsolete: MLSS, Ramp Flaws, & The Functional Threshold — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "LT1_VT1"
-  - "LT2_VT2"
-  - "Lab_vs_field"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #36)"
-author: "Kolie Moore"
-date: "2022-03-05"
-summary: "A definitive analysis of why direct mechanical power measurement renders laboratory lactate testing largely redundant for cycling training, exploring the history of lactate proxies, the fallacy of fixed 2.0/4.0 mmol thresholds, ramp test kinetics, and the true definition of Functional Threshold Power."
+- FTP_and_functional_metrics
+- Thresholds_and_metabolic_domains
+- Physiological_testing_and_diagnostics
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #36)'
+author: Kolie Moore
+date: '2022-03-05'
+summary: A definitive analysis of why direct mechanical power measurement renders laboratory lactate testing largely redundant for cycling training, exploring the history of lactate proxies, the fallacy of fixed 2.0/4.0 mmol thresholds, ramp test kinetics, and the true definition of Functional Threshold Power.
 key_takeaways:
-  - "Historically, blood lactate testing was developed as an indirect surrogate to estimate human mechanical work capacity; using direct power meter data to attempt to estimate lactate is conceptually backwards."
-  - "Fixed blood lactate concentration standards (e.g., 2.0 mmol for LT1, 4.0 mmol for LT2/OBLA) represent population averages that suffer from the fallacy of division; individual MLSS concentrations range widely from 2.5 to >6.5 mmol/L."
-  - "Short-stage ramp tests (3- to 5-minute steps) frequently produce severe errors in anaerobic or high-capacity athletes, as early motor unit recruitment floods the blood with lactate before oxidative equilibrium is established."
-  - "True physiological threshold is functionally defined as the inflection point on the power-duration curve above which fatigue accelerates exponentially and below which fatigue accumulates slowly."
-  - "Power meters allow continuous, non-invasive, day-to-day evaluation of the power-duration relationship (TTE, W', and FTP) under real-world conditions, outperforming periodic invasive lab pinpricks."
+- Historically, blood lactate testing was developed as an indirect surrogate to estimate human mechanical work capacity; using direct power meter data to attempt to estimate lactate is conceptually backwards.
+- Fixed blood lactate concentration standards (e.g., 2.0 mmol for LT1, 4.0 mmol for LT2/OBLA) represent population averages that suffer from the fallacy of division; individual MLSS concentrations range widely from 2.5 to >6.5 mmol/L.
+- Short-stage ramp tests (3- to 5-minute steps) frequently produce severe errors in anaerobic or high-capacity athletes, as early motor unit recruitment floods the blood with lactate before oxidative equilibrium is established.
+- True physiological threshold is functionally defined as the inflection point on the power-duration curve above which fatigue accelerates exponentially and below which fatigue accumulates slowly.
+- Power meters allow continuous, non-invasive, day-to-day evaluation of the power-duration relationship (TTE, W', and FTP) under real-world conditions, outperforming periodic invasive lab pinpricks.
 ---
 
 # How Power Meters Make Lactate Testing Nearly Obsolete: MLSS, Ramp Flaws, & The Functional Threshold — Complete Guide

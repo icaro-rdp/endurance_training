@@ -1,20 +1,20 @@
 ---
-title: "Muscle Fiber Types, Hybrid Continuum, & Substrate Oxidation — Complete Guide"
-category: "physiology"
+title: Muscle Fiber Types, Hybrid Continuum, & Substrate Oxidation — Complete Guide
+category: physiology
 topics:
-  - "Fat_oxidation"
-  - "Mitochondrial_density"
-  - "Aerobic_base"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #12)"
-author: "Kolie Moore"
-date: "2019-10-02"
-summary: "An exploration of muscle fiber typing methodologies (histochemical staining vs. single-fiber SDS-PAGE gel electrophoresis), the continuum of hybrid fibers, and why fiber type cannot reliably predict substrate oxidation (carbohydrate vs. fat) due to profound training-induced metabolic plasticity."
+- Substrate_utilization_and_fat_oxidation
+- Mitochondrial_and_cellular_adaptation
+- Zone2_and_endurance_base
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #12)'
+author: Kolie Moore
+date: '2019-10-02'
+summary: An exploration of muscle fiber typing methodologies (histochemical staining vs. single-fiber SDS-PAGE gel electrophoresis), the continuum of hybrid fibers, and why fiber type cannot reliably predict substrate oxidation (carbohydrate vs. fat) due to profound training-induced metabolic plasticity.
 key_takeaways:
-  - "Human skeletal muscle expresses Type 1, Type 2A, and Type 2X Myosin Heavy Chain (MHC) isoforms; Type 2B fibers do not exist in humans."
-  - "Between 10% and 70% of muscle fibers exist as hybrid fibers (Type 1/2A, Type 2A/2X) along a continuous functional continuum rather than rigid discrete classes."
-  - "Muscle fiber type does not inherently dictate fat vs. carbohydrate oxidation; metabolic enzyme expression and training stimulus determine substrate utilization."
-  - "Trained Type 2A fast-twitch fibers can achieve mitochondrial density, capillarization, and oxidative capacity equal to slow-twitch Type 1 fibers while retaining high mechanical force output."
-  - "Historical correlations linking slow-twitch fiber percentage directly to glycogen sparing were confounded by testing at fixed %VO2max rather than relative to individual FTP/MLSS."
+- Human skeletal muscle expresses Type 1, Type 2A, and Type 2X Myosin Heavy Chain (MHC) isoforms; Type 2B fibers do not exist in humans.
+- Between 10% and 70% of muscle fibers exist as hybrid fibers (Type 1/2A, Type 2A/2X) along a continuous functional continuum rather than rigid discrete classes.
+- Muscle fiber type does not inherently dictate fat vs. carbohydrate oxidation; metabolic enzyme expression and training stimulus determine substrate utilization.
+- Trained Type 2A fast-twitch fibers can achieve mitochondrial density, capillarization, and oxidative capacity equal to slow-twitch Type 1 fibers while retaining high mechanical force output.
+- Historical correlations linking slow-twitch fiber percentage directly to glycogen sparing were confounded by testing at fixed %VO2max rather than relative to individual FTP/MLSS.
 ---
 
 # Muscle Fiber Types, Hybrid Continuum, & Substrate Oxidation — Complete Guide

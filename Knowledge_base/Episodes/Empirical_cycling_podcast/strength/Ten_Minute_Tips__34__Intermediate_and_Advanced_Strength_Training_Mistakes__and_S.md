@@ -1,22 +1,22 @@
 ---
-title: "Ten Minute Tips #34: Intermediate and Advanced Strength Training Mistakes (and Solutions) — Complete Guide"
+title: 'Ten Minute Tips #34: Intermediate and Advanced Strength Training Mistakes (and Solutions) — Complete Guide'
 category: training
 topics:
-  - "Sprint_performance"
-  - "Heavy_torque"
-  - "Unilateral"
-  - "Periodization"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hilson (Ten Minute Tips #34)"
-author: "Kolie Moore"
-date: "2024-01-29"
-summary: "An in-depth analysis of intermediate and advanced resistance training errors for cyclists, covering lifting equipment utility, axial fatigue management, whole-muscle power mechanics, range of motion, bilateral deficits, and in-season integration."
+- Sprint_and_anaerobic_intervals
+- Torque_and_cadence_drills
+- Strength_and_resistance_training
+- Periodization_models_and_macrocycles
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hilson (Ten Minute Tips #34)'
+author: Kolie Moore
+date: '2024-01-29'
+summary: An in-depth analysis of intermediate and advanced resistance training errors for cyclists, covering lifting equipment utility, axial fatigue management, whole-muscle power mechanics, range of motion, bilateral deficits, and in-season integration.
 key_takeaways:
-  - "Lifting tools (belts, straps, raised-heel weightlifting shoes) remove extraneous neural and grip bottlenecks, allowing targeted muscles to receive full mechanical tension without excessive axial spinal fatigue."
-  - "Endurance athletes must avoid HIIT/circuit training in the gym; the gym's sole purpose is developing mechanical force and neuromuscular recruitment, not replicating metabolic conditioning already performed on the bike."
-  - "Power development in cycling relies on moving moderately heavy to heavy loads (50–85% 1RM) with maximal concentric velocity ('displaying strength quickly'), rather than swinging ultra-light kettlebells or doing high-risk plyometrics."
-  - "Full range of motion (ROM) provides maximal mechanical tension and muscle adaptation with lower absolute loads; heavy partials dramatically increase joint and spinal shear stress without superior athletic transfer."
-  - "Unilateral strength (single-leg squats and leg presses) exploits the bilateral deficit (~70–80% of bilateral 1RM per leg) and serves as the primary gym predictor of maximal cycling sprint power."
-  - "Strength training does not increase aerobic Functional Threshold Power (FTP); it enhances peak neuromuscular wattage, anaerobic work capacity ($W'$), and neuromuscular efficiency."
+- Lifting tools (belts, straps, raised-heel weightlifting shoes) remove extraneous neural and grip bottlenecks, allowing targeted muscles to receive full mechanical tension without excessive axial spinal fatigue.
+- Endurance athletes must avoid HIIT/circuit training in the gym; the gym's sole purpose is developing mechanical force and neuromuscular recruitment, not replicating metabolic conditioning already performed on the bike.
+- Power development in cycling relies on moving moderately heavy to heavy loads (50–85% 1RM) with maximal concentric velocity ('displaying strength quickly'), rather than swinging ultra-light kettlebells or doing high-risk plyometrics.
+- Full range of motion (ROM) provides maximal mechanical tension and muscle adaptation with lower absolute loads; heavy partials dramatically increase joint and spinal shear stress without superior athletic transfer.
+- Unilateral strength (single-leg squats and leg presses) exploits the bilateral deficit (~70–80% of bilateral 1RM per leg) and serves as the primary gym predictor of maximal cycling sprint power.
+- Strength training does not increase aerobic Functional Threshold Power (FTP); it enhances peak neuromuscular wattage, anaerobic work capacity ($W'$), and neuromuscular efficiency.
 ---
 
 # Ten Minute Tips #34: Intermediate and Advanced Strength Training Mistakes (and Solutions) — Complete Guide

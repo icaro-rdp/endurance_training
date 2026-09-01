@@ -1,19 +1,19 @@
 ---
-title: "Back Squat Biomechanics: Bar Placement, Stance Width, & Individual Anatomy — Complete Guide"
+title: 'Back Squat Biomechanics: Bar Placement, Stance Width, & Individual Anatomy — Complete Guide'
 category: training
 topics:
-  - "Heavy_torque"
-  - "Periodization"
-source: "Empirical Cycling Podcast — Kyle Helson & Kolie Moore (Ten Minute Tips #8)"
-author: "Kyle Helson & Kolie Moore"
-date: "2020-10-11"
-summary: "A practical guide to barbell back squat mechanics for endurance cyclists, covering high-bar versus low-bar positioning, the role of individual hip and ankle morphology in determining stance width, and EMG muscle recruitment realities."
+- Torque_and_cadence_drills
+- Periodization_models_and_macrocycles
+source: 'Empirical Cycling Podcast — Kyle Helson & Kolie Moore (Ten Minute Tips #8)'
+author: Kyle Helson & Kolie Moore
+date: '2020-10-11'
+summary: A practical guide to barbell back squat mechanics for endurance cyclists, covering high-bar versus low-bar positioning, the role of individual hip and ankle morphology in determining stance width, and EMG muscle recruitment realities.
 key_takeaways:
-  - "Bar placement exists on a continuous spectrum between High Bar (trapezius shelf) and Low Bar (posterior deltoid shelf); neither is universally superior for endurance athletes."
-  - "Foam barbell pads reduce bar stability, cover knurling, and increase slip risk under heavy loads; build a natural muscular shelf by retracting scapulae and flexing the upper back."
-  - "Squats primarily train quadriceps and glutes; EMG studies show negligible hamstring activation regardless of bar placement or torso forward lean."
-  - "Individual stance width and toe angle are fundamentally constrained by innate femoral neck angle and acetabular (hip socket) depth, not simply flexibility."
-  - "Strength training for cyclists is a non-sport-specific tool to build force capacity and bone density; do not sacrifice on-bike training quality to chase arbitrary powerlifter squat numbers."
+- Bar placement exists on a continuous spectrum between High Bar (trapezius shelf) and Low Bar (posterior deltoid shelf); neither is universally superior for endurance athletes.
+- Foam barbell pads reduce bar stability, cover knurling, and increase slip risk under heavy loads; build a natural muscular shelf by retracting scapulae and flexing the upper back.
+- Squats primarily train quadriceps and glutes; EMG studies show negligible hamstring activation regardless of bar placement or torso forward lean.
+- Individual stance width and toe angle are fundamentally constrained by innate femoral neck angle and acetabular (hip socket) depth, not simply flexibility.
+- Strength training for cyclists is a non-sport-specific tool to build force capacity and bone density; do not sacrifice on-bike training quality to chase arbitrary powerlifter squat numbers.
 ---
 
 # Back Squat Biomechanics: Bar Placement, Stance Width, & Individual Anatomy — Complete Guide

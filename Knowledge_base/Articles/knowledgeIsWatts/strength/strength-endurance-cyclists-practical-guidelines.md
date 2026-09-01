@@ -2,16 +2,12 @@
 title: 'Strength Training for Endurance Cyclists: Practical Guidelines'
 category: training
 topics:
-- Durability
-- Unilateral
-source: 'knowledgeiswatt.substack.com/p/42-strength-training-for-endurance Date: November
-  8,'
+- Durability_and_fatigue_mechanisms
+- Strength_and_resistance_training
+source: 'knowledgeiswatt.substack.com/p/42-strength-training-for-endurance Date: November 8,'
 author: Endurance Research
-date: 'Source: knowledgeiswatt.substack.com/p/42-strength-training-for-endurance  November
-  8,'
-summary: In the previous KisW Research Notes we saw that heavy gym strength training
-  improves cycling 1s W/kg and 40min W/Kg as well as durability both in pro and amateur
-  cyclists. We also saw that unilateral
+date: 'Source: knowledgeiswatt.substack.com/p/42-strength-training-for-endurance  November 8,'
+summary: In the previous KisW Research Notes we saw that heavy gym strength training improves cycling 1s W/kg and 40min W/Kg as well as durability both in pro and amateur cyclists. We also saw that unilateral
 ---
 
 # Strength Training for Endurance Cyclists: Practical Guidelines

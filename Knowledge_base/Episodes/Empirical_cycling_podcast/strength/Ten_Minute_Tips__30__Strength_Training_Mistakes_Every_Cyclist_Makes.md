@@ -1,21 +1,21 @@
 ---
-title: "Ten Minute Tips #30: Strength Training Mistakes Every Cyclist Makes — Complete Guide"
+title: 'Ten Minute Tips #30: Strength Training Mistakes Every Cyclist Makes — Complete Guide'
 category: training
 topics:
-  - "Sprint_performance"
-  - "Periodization"
-  - "Unilateral"
-  - "Heavy_torque"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Helson (Ten Minute Tips #30)"
-author: "Kolie Moore"
-date: "2023-10-22"
-summary: "Details the major programming, physiological, and execution errors cyclists commit when integrating resistance training, offering evidence-based frameworks for exercise selection, rep ranges, in-season periodization, and recovery management."
+- Sprint_and_anaerobic_intervals
+- Periodization_models_and_macrocycles
+- Strength_and_resistance_training
+- Torque_and_cadence_drills
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Helson (Ten Minute Tips #30)'
+author: Kolie Moore
+date: '2023-10-22'
+summary: Details the major programming, physiological, and execution errors cyclists commit when integrating resistance training, offering evidence-based frameworks for exercise selection, rep ranges, in-season periodization, and recovery management.
 key_takeaways:
-  - "Strength training does not raise FTP; FTP is constrained by aerobic mitochondrial and cardiovascular kinetics, whereas resistance training improves neuromuscular drive, RFD, peak sprint power, and injury resistance."
-  - "Cyclists should virtually never test true 1-Rep Maxes (1RM); autoregulate using Reps in Reserve (1–3 RIR) or submaximal load/rep progression to prevent catastrophic injury."
-  - "Limit lower-body session volume to 6–8 total heavy working sets across 2–3 exercises; excessive sets exhaust axial stabilizer muscles and compromise on-bike training."
-  - "Do not mimic cycling cadence with 50–100 rep light-weight sets; use 8–15 reps for initial hypertrophy/technique phases and 3–6 reps for maximal neural strength."
-  - "Maintain in-season strength via minimalist doses (1 session per week, 2–4 working sets at moderate RPE) to preserve motor unit recruitment without generating interference fatigue."
+- Strength training does not raise FTP; FTP is constrained by aerobic mitochondrial and cardiovascular kinetics, whereas resistance training improves neuromuscular drive, RFD, peak sprint power, and injury resistance.
+- Cyclists should virtually never test true 1-Rep Maxes (1RM); autoregulate using Reps in Reserve (1–3 RIR) or submaximal load/rep progression to prevent catastrophic injury.
+- Limit lower-body session volume to 6–8 total heavy working sets across 2–3 exercises; excessive sets exhaust axial stabilizer muscles and compromise on-bike training.
+- Do not mimic cycling cadence with 50–100 rep light-weight sets; use 8–15 reps for initial hypertrophy/technique phases and 3–6 reps for maximal neural strength.
+- Maintain in-season strength via minimalist doses (1 session per week, 2–4 working sets at moderate RPE) to preserve motor unit recruitment without generating interference fatigue.
 ---
 
 # Ten Minute Tips #30: Strength Training Mistakes Every Cyclist Makes — Complete Guide

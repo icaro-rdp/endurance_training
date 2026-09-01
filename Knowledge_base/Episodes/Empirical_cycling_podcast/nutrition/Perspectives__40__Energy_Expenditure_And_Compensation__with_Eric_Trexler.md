@@ -1,20 +1,20 @@
 ---
-title: "Perspectives #40: Energy Expenditure and Compensation — Complete Guide"
-category: "nutrition"
+title: 'Perspectives #40: Energy Expenditure and Compensation — Complete Guide'
+category: nutrition
 topics:
-  - "Volume_quantification"
-  - "Fat_oxidation"
-  - "Aerobic_base"
-source: "Empirical Cycling Podcast — Kolie Moore with Eric Trexler"
-author: "Kolie Moore"
-date: "2025-08-17"
-summary: "A rigorous scientific breakdown of energy expenditure methodologies, Pontzer's Constrained Energy Expenditure model, metabolic adaptation, doubly labeled water mechanics, the 2.5x BMR human metabolic ceiling, and the fallacy of 1:1 power meter calorie calculations."
+- Workload_quantification_and_modeling
+- Substrate_utilization_and_fat_oxidation
+- Zone2_and_endurance_base
+source: Empirical Cycling Podcast — Kolie Moore with Eric Trexler
+author: Kolie Moore
+date: '2025-08-17'
+summary: A rigorous scientific breakdown of energy expenditure methodologies, Pontzer's Constrained Energy Expenditure model, metabolic adaptation, doubly labeled water mechanics, the 2.5x BMR human metabolic ceiling, and the fallacy of 1:1 power meter calorie calculations.
 key_takeaways:
-  - "Pontzer's Constrained Total Energy Expenditure Model proves that physical activity does not increase Total Daily Energy Expenditure (TDEE) linearly; the human body compensates by downregulating Non-Exercise Activity Thermogenesis (NEAT) and Basal Metabolic Rate (BMR)."
-  - "The degree of energetic compensation is non-linear and context-dependent: athletes who are already lean and in a caloric deficit experience massive energetic suppression (up to a 30%+ 'tax' on added exercise volume)."
-  - "Human metabolic scope ($\text{TDEE} / \text{BMR}$) is bounded by a duration-dependent curve: while single-day ultra efforts can reach $5\text{–}10\times\text{ BMR}$ and Grand Tours reach $3.5\text{–}4.5\times\text{ BMR}$, long-term sustainable human energy expenditure over months/years plateaus at an alimentary ceiling of $\approx 2.5\times\text{ BMR}$."
-  - "The standard cycling equation ($\text{Dietary Calories} = \text{Calculated BMR} + \text{Power Meter kJ}$) is fundamentally flawed because it ignores the Thermic Effect of Food (TEF, 10–15%), NEAT suppression, and post-exercise tissue repair (EPOC)."
-  - "To prevent post-diet weight overshoot (hyperphagia driven by lean mass deficits), endurance athletes in caloric deficits must incorporate resistance training to preserve Fat-Free Mass (FFM)."
+- Pontzer's Constrained Total Energy Expenditure Model proves that physical activity does not increase Total Daily Energy Expenditure (TDEE) linearly; the human body compensates by downregulating Non-Exercise Activity Thermogenesis (NEAT) and Basal Metabolic Rate (BMR).
+- 'The degree of energetic compensation is non-linear and context-dependent: athletes who are already lean and in a caloric deficit experience massive energetic suppression (up to a 30%+ ''tax'' on added exercise volume).'
+- "Human metabolic scope ($\text{TDEE} / \text{BMR}$) is bounded by a duration-dependent curve: while single-day ultra efforts can reach $5\text{–}10\times\text{ BMR}$ and Grand Tours reach $3.5\text{–}4.5\times\text{ BMR}$, long-term sustainable human energy expenditure over months/years plateaus at an alimentary ceiling of $\approx 2.5\times\text{ BMR}$."
+- "The standard cycling equation ($\text{Dietary Calories} = \text{Calculated BMR} + \text{Power Meter kJ}$) is fundamentally flawed because it ignores the Thermic Effect of Food (TEF, 10–15%), NEAT suppression, and post-exercise tissue repair (EPOC)."
+- To prevent post-diet weight overshoot (hyperphagia driven by lean mass deficits), endurance athletes in caloric deficits must incorporate resistance training to preserve Fat-Free Mass (FFM).
 ---
 
 # Perspectives #40: Energy Expenditure and Compensation — Complete Guide

@@ -1,21 +1,21 @@
 ---
-title: "Ten Minute Tips #25: What's So Special About 'Zone 2'? — Complete Guide"
+title: 'Ten Minute Tips #25: What''s So Special About ''Zone 2''? — Complete Guide'
 category: training
 topics:
-  - "Aerobic_base"
-  - "Fat_oxidation"
-  - "Lab_vs_field"
-  - "Mitochondrial_density"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Helson (Ten Minute Tips #25)"
-author: "Kolie Moore"
-date: "2022-12-05"
-summary: "Deconstructs the physiology of 'Zone 2' endurance riding, explaining that endurance training operates on a continuous aerobic adaptation spectrum rather than producing unique, magic adaptations unavailable at other intensities. Its true power lies in delivering substantial aerobic stimulus with minimal fatigue accumulation."
+- Zone2_and_endurance_base
+- Substrate_utilization_and_fat_oxidation
+- Physiological_testing_and_diagnostics
+- Mitochondrial_and_cellular_adaptation
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Helson (Ten Minute Tips #25)'
+author: Kolie Moore
+date: '2022-12-05'
+summary: Deconstructs the physiology of 'Zone 2' endurance riding, explaining that endurance training operates on a continuous aerobic adaptation spectrum rather than producing unique, magic adaptations unavailable at other intensities. Its true power lies in delivering substantial aerobic stimulus with minimal fatigue accumulation.
 key_takeaways:
-  - "Endurance (Zone 2) training does not possess a unique, proprietary adaptive switch; all aerobic intensities stimulate mitochondrial density, capillarization, and enzyme upregulation along a dose-response continuum."
-  - "The defining characteristic of Zone 2 is its high stimulus-to-fatigue ratio, allowing athletes to accumulate massive volume without exceeding their maximum recoverable capacity."
-  - "Prescriptively pegging endurance rides at the upper boundary of Zone 2 (or LT1) turns aerobic base volume into fatiguing tempo, undermining recovery and interval quality."
-  - "Riding 20–30 Watts below LT1/Zone 2 ceiling yields essentially identical aerobic adaptations while drastically lowering metabolic fatigue and glycogen depletion."
-  - "Total riding/pedaling time is the primary driver of aerobic adaptation; over-quantifying time-in-zone or kilojoules within narrow boundaries leads to overtraining."
+- Endurance (Zone 2) training does not possess a unique, proprietary adaptive switch; all aerobic intensities stimulate mitochondrial density, capillarization, and enzyme upregulation along a dose-response continuum.
+- The defining characteristic of Zone 2 is its high stimulus-to-fatigue ratio, allowing athletes to accumulate massive volume without exceeding their maximum recoverable capacity.
+- Prescriptively pegging endurance rides at the upper boundary of Zone 2 (or LT1) turns aerobic base volume into fatiguing tempo, undermining recovery and interval quality.
+- Riding 20–30 Watts below LT1/Zone 2 ceiling yields essentially identical aerobic adaptations while drastically lowering metabolic fatigue and glycogen depletion.
+- Total riding/pedaling time is the primary driver of aerobic adaptation; over-quantifying time-in-zone or kilojoules within narrow boundaries leads to overtraining.
 ---
 
 # Ten Minute Tips #25: What's So Special About 'Zone 2'? — Complete Guide

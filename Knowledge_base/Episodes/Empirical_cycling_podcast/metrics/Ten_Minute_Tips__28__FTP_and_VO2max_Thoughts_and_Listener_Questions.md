@@ -1,22 +1,21 @@
 ---
-title: "Ten Minute Tips #28: FTP and VO2max Thoughts & Practical Frameworks — Q&A Guide"
+title: 'Ten Minute Tips #28: FTP and VO2max Thoughts & Practical Frameworks — Q&A Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "VO2max"
-  - "TTA_TTE"
-  - "Block_periodization"
-  - "Long_intervals"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Helson (Ten Minute Tips #28)"
-author: "Kolie Moore"
-date: "2023-05-14"
-summary: "Expert Q&A guide detailing the physiological hierarchy between VO2max and FTP, prerequisites for initiating VO2max shock blocks, recovery and adaptation realization timelines, hemodynamics of high cadence, and mixed microcycle alternatives."
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+- Periodization_models_and_macrocycles
+- VO2max_and_aerobic_hiit
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Helson (Ten Minute Tips #28)'
+author: Kolie Moore
+date: '2023-05-14'
+summary: Expert Q&A guide detailing the physiological hierarchy between VO2max and FTP, prerequisites for initiating VO2max shock blocks, recovery and adaptation realization timelines, hemodynamics of high cadence, and mixed microcycle alternatives.
 key_takeaways:
-  - "VO2max sets the absolute physiological ceiling on FTP; when fractional utilization approaches 80–85%, further FTP gains require expanding VO2max."
-  - "A successful VO2max block requires specific prerequisites: a robust aerobic base, high baseline volume, and an extended Time-to-Exhaustion (TTE >= 50–60 min) at FTP."
-  - "The adaptation realization lag post-VO2max block requires 2 to 6+ weeks of recovery; testing FTP immediately after a block frequently shows zero gain due to residual autonomic and peripheral fatigue."
-  - "High cadence (100–115+ RPM) during VO2max intervals maximizes the skeletal muscle pump, augmenting venous return, end-diastolic filling pressure, and stroke volume while sparing muscular torque fatigue."
-  - "Athletes unable to sustain dedicated shock blocks thrive on 'mixed microcycles' (1 VO2max session + 1 Threshold session per week) with ample recovery."
+- VO2max sets the absolute physiological ceiling on FTP; when fractional utilization approaches 80–85%, further FTP gains require expanding VO2max.
+- 'A successful VO2max block requires specific prerequisites: a robust aerobic base, high baseline volume, and an extended Time-to-Exhaustion (TTE >= 50–60 min) at FTP.'
+- The adaptation realization lag post-VO2max block requires 2 to 6+ weeks of recovery; testing FTP immediately after a block frequently shows zero gain due to residual autonomic and peripheral fatigue.
+- High cadence (100–115+ RPM) during VO2max intervals maximizes the skeletal muscle pump, augmenting venous return, end-diastolic filling pressure, and stroke volume while sparing muscular torque fatigue.
+- Athletes unable to sustain dedicated shock blocks thrive on 'mixed microcycles' (1 VO2max session + 1 Threshold session per week) with ample recovery.
 ---
 
 # Ten Minute Tips #28: FTP and VO2max Thoughts & Practical Frameworks — Q&A Guide

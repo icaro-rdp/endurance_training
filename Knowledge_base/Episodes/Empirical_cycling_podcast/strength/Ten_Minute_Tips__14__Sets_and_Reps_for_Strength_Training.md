@@ -1,19 +1,19 @@
 ---
-title: "Sets and Reps Programming for Strength Training — Complete Guide"
+title: Sets and Reps Programming for Strength Training — Complete Guide
 category: training
 topics:
-  - "Periodization"
-  - "Heavy_torque"
-  - "Sprint_performance"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Ten Minute Tips #14)"
-author: "Kolie Moore & Kyle Hanson"
-date: "2021-11-10"
-summary: "A definitive guide to set and repetition schemes for cyclists, defining optimal loading ranges for neural strength vs. hypertrophy, per-session volume caps, load progression rules, and in-season maintenance."
+- Periodization_models_and_macrocycles
+- Torque_and_cadence_drills
+- Sprint_and_anaerobic_intervals
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Ten Minute Tips #14)'
+author: Kolie Moore & Kyle Hanson
+date: '2021-11-10'
+summary: A definitive guide to set and repetition schemes for cyclists, defining optimal loading ranges for neural strength vs. hypertrophy, per-session volume caps, load progression rules, and in-season maintenance.
 key_takeaways:
-  - "The 4–6 repetition range (80–85% 1RM) is the 'bread-and-butter' for cycling strength: maximizing high-threshold motor unit recruitment with minimal metabolic and joint fatigue."
-  - "Avoid 1RM testing and 1–3 rep maxes: maximal singles carry extreme joint and CNS risk without providing superior strength adaptations over heavy 5s."
-  - "Cap lower-body working volume at 6–10 heavy sets per session: exceeding this volume generates non-functional fatigue that impairs on-bike interval quality."
-  - "Load progression should follow strict completion benchmarks: only increase weight (by 5–10 lbs) once all prescribed sets and reps are completed with clean, full-depth form."
+- 'The 4–6 repetition range (80–85% 1RM) is the ''bread-and-butter'' for cycling strength: maximizing high-threshold motor unit recruitment with minimal metabolic and joint fatigue.'
+- 'Avoid 1RM testing and 1–3 rep maxes: maximal singles carry extreme joint and CNS risk without providing superior strength adaptations over heavy 5s.'
+- 'Cap lower-body working volume at 6–10 heavy sets per session: exceeding this volume generates non-functional fatigue that impairs on-bike interval quality.'
+- 'Load progression should follow strict completion benchmarks: only increase weight (by 5–10 lbs) once all prescribed sets and reps are completed with clean, full-depth form.'
 ---
 
 # Sets and Reps Programming for Strength Training — Complete Guide

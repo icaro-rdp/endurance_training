@@ -1,21 +1,21 @@
 ---
-title: "Finding FTP by Feel: RPE Accuracy, MLSS Agreement, and The Perceptual Anchor Framework — Complete Guide"
+title: 'Finding FTP by Feel: RPE Accuracy, MLSS Agreement, and The Perceptual Anchor Framework — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "CP"
-  - "LT2_VT2"
-  - "Lab_vs_field"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #57)"
-author: "Kolie Moore"
-date: "2025-09-24"
-summary: "A rigorous examination of the scientific literature demonstrating that Rating of Perceived Exertion (RPE) accurately identifies Maximal Lactate Steady State (MLSS) within ~10 watts, paired with a critique of test abstractions and practical protocols for pacing FTP tests by feel."
+- FTP_and_functional_metrics
+- Critical_power_and_w_prime
+- Thresholds_and_metabolic_domains
+- Physiological_testing_and_diagnostics
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #57)'
+author: Kolie Moore
+date: '2025-09-24'
+summary: A rigorous examination of the scientific literature demonstrating that Rating of Perceived Exertion (RPE) accurately identifies Maximal Lactate Steady State (MLSS) within ~10 watts, paired with a critique of test abstractions and practical protocols for pacing FTP tests by feel.
 key_takeaways:
-  - "Rating of Perceived Exertion (RPE) tracks Maximal Lactate Steady State (MLSS) with near-perfect accuracy; blind self-selected pacing matches MLSS within ~10 watts (233 vs 233 W mean), while Critical Power models systematically overestimate MLSS by +20 watts."
-  - "'The Model is Not the Phenomenon': Conflating mathematical or testing abstractions (such as 95% of 20-minute power or ramp tests) with true biological thresholds creates severe pacing and training errors, particularly in anaerobic phenotypes."
-  - "Anchoring RPE around distinct physiological transitions (LT1/VT1 and LT2/VT2/FTP) provides a reliable, robust internal guidance system that outperforms rigid on-screen power targets."
-  - "The Kolie Moore FTP Test protocol leverages this perceptual reality: starting 10–15 watts below estimated threshold allows aerobic systems to equilibrate before the rider 'pokes the ceiling' to dial in exact wattage."
-  - "Ventilatory and peripheral muscular dissociation: At true FTP, pulmonary ventilation remains stable and rhythmic while leg musculature absorbs high metabolic strain. Ragged hyperventilation signals that the rider has exceeded MLSS into the severe domain."
+- Rating of Perceived Exertion (RPE) tracks Maximal Lactate Steady State (MLSS) with near-perfect accuracy; blind self-selected pacing matches MLSS within ~10 watts (233 vs 233 W mean), while Critical Power models systematically overestimate MLSS by +20 watts.
+- '''The Model is Not the Phenomenon'': Conflating mathematical or testing abstractions (such as 95% of 20-minute power or ramp tests) with true biological thresholds creates severe pacing and training errors, particularly in anaerobic phenotypes.'
+- Anchoring RPE around distinct physiological transitions (LT1/VT1 and LT2/VT2/FTP) provides a reliable, robust internal guidance system that outperforms rigid on-screen power targets.
+- 'The Kolie Moore FTP Test protocol leverages this perceptual reality: starting 10–15 watts below estimated threshold allows aerobic systems to equilibrate before the rider ''pokes the ceiling'' to dial in exact wattage.'
+- 'Ventilatory and peripheral muscular dissociation: At true FTP, pulmonary ventilation remains stable and rhythmic while leg musculature absorbs high metabolic strain. Ragged hyperventilation signals that the rider has exceeded MLSS into the severe domain.'
 ---
 
 # Finding FTP by Feel: RPE Accuracy, MLSS Agreement, and The Perceptual Anchor Framework — Complete Guide

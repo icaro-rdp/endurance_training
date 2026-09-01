@@ -1,21 +1,19 @@
 ---
-title: "The 'Right' VO2max Training and 30/15s Epilogue: De-Dogmatizing High-Cadence, Hard-Start, and Intermittent Protocols — Complete Guide"
+title: 'The ''Right'' VO2max Training and 30/15s Epilogue: De-Dogmatizing High-Cadence, Hard-Start, and Intermittent Protocols — Complete Guide'
 category: training
 topics:
-  - "Long_intervals"
-  - "Short_intervals"
-  - "Fast_start_intervals"
-  - "VO2max"
-source: "Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Watts Doc #55)"
-author: "Kolie Moore"
-date: "2025-07-24"
-summary: "A comprehensive re-evaluation of VO2max interval prescriptions, clarifying high-cadence preload mechanics, debunking the myth of a singular 'VO2max power', and re-analyzing the Rønnestad 30/15s study to show how short intervals build anaerobic capacity rather than superior aerobic gains."
+- VO2max_and_aerobic_hiit
+- VO2max_and_aerobic_kinetics
+source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Watts Doc #55)'
+author: Kolie Moore
+date: '2025-07-24'
+summary: A comprehensive re-evaluation of VO2max interval prescriptions, clarifying high-cadence preload mechanics, debunking the myth of a singular 'VO2max power', and re-analyzing the Rønnestad 30/15s study to show how short intervals build anaerobic capacity rather than superior aerobic gains.
 key_takeaways:
-  - "There is no singular 'right' VO2max protocol; interval selection (continuous vs. intermittent, long vs. short) must be matched to athlete phenotype, season phase, and specific adaptations."
-  - "High-cadence cycling (105–115+ RPM) elevates oxygen consumption and venous return (preload) while sparing muscular torque and peripheral fatigue, enabling higher interval density."
-  - "'Start-hard' pacing is a tool to break fixed-power mindsets and accelerate VO2 kinetics, but all-out maximal sprint starts induce excessive glycolytic fatigue that truncates total interval time."
-  - "Re-analysis of the Rønnestad 30/15s paper confirms no statistically significant difference in VO2max gains between short and long intervals (p = 0.28–0.49); superior 20-minute power gains in 30/15s were driven by expanded anaerobic work capacity (W')."
-  - "Dedicated VO2max shock blocks carry high risks of immunosuppression and ferritin depletion; over 90% of athletes progress best with 1–2 well-paced sessions per week with full recovery."
+- There is no singular 'right' VO2max protocol; interval selection (continuous vs. intermittent, long vs. short) must be matched to athlete phenotype, season phase, and specific adaptations.
+- High-cadence cycling (105–115+ RPM) elevates oxygen consumption and venous return (preload) while sparing muscular torque and peripheral fatigue, enabling higher interval density.
+- '''Start-hard'' pacing is a tool to break fixed-power mindsets and accelerate VO2 kinetics, but all-out maximal sprint starts induce excessive glycolytic fatigue that truncates total interval time.'
+- Re-analysis of the Rønnestad 30/15s paper confirms no statistically significant difference in VO2max gains between short and long intervals (p = 0.28–0.49); superior 20-minute power gains in 30/15s were driven by expanded anaerobic work capacity (W').
+- Dedicated VO2max shock blocks carry high risks of immunosuppression and ferritin depletion; over 90% of athletes progress best with 1–2 well-paced sessions per week with full recovery.
 ---
 
 # The 'Right' VO2max Training and 30/15s Epilogue: De-Dogmatizing High-Cadence, Hard-Start, and Intermittent Protocols — Complete Guide

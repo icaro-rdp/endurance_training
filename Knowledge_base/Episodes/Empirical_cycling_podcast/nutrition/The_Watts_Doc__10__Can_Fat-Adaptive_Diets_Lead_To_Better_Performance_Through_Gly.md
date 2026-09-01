@@ -1,20 +1,19 @@
 ---
-title: "Fat-Adaptive Diets, Glycogen Sparing, & High-Intensity Performance — Complete Guide"
-category: "nutrition"
+title: Fat-Adaptive Diets, Glycogen Sparing, & High-Intensity Performance — Complete Guide
+category: nutrition
 topics:
-  - "Fat_oxidation"
-  - "Carbohydrate_ratio"
-  - "FatMax"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #10)"
-author: "Kolie Moore"
-date: "2019-07-22"
-summary: "An analytical critique of fat-adaptive (LCHF/ketogenic) diets in endurance cycling, examining why theoretical glycogen sparing fails during high-intensity efforts, the enzymatic downregulation of carbohydrate oxidation, and the metabolic realities of race-specific power demands."
+- Substrate_utilization_and_fat_oxidation
+- Carbohydrate_fueling_and_gut_training
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #10)'
+author: Kolie Moore
+date: '2019-07-22'
+summary: An analytical critique of fat-adaptive (LCHF/ketogenic) diets in endurance cycling, examining why theoretical glycogen sparing fails during high-intensity efforts, the enzymatic downregulation of carbohydrate oxidation, and the metabolic realities of race-specific power demands.
 key_takeaways:
-  - "Fat-adaptive diets increase submaximal fat oxidation rates but fail to spare glycogen effectively during realistic road racing conditions."
-  - "High-intensity glycolytic power is severely impaired (losing 40–70 Watts on surge/climbing efforts) even when athletes carb-load prior to competition."
-  - "Downregulation of carbohydrate-processing enzymes (e.g., pyruvate dehydrogenase) cripples rapid glycolytic flux when surge demands occur."
-  - "True metabolic flexibility and high fat oxidation at high absolute power outputs are built through years of aerobic training volume, not dietary restriction."
-  - "Fat adaptation has utility only in niche, non-surging ultra-endurance events (>24 hours) where fueling logistics outweigh maximal power output."
+- Fat-adaptive diets increase submaximal fat oxidation rates but fail to spare glycogen effectively during realistic road racing conditions.
+- High-intensity glycolytic power is severely impaired (losing 40–70 Watts on surge/climbing efforts) even when athletes carb-load prior to competition.
+- Downregulation of carbohydrate-processing enzymes (e.g., pyruvate dehydrogenase) cripples rapid glycolytic flux when surge demands occur.
+- True metabolic flexibility and high fat oxidation at high absolute power outputs are built through years of aerobic training volume, not dietary restriction.
+- Fat adaptation has utility only in niche, non-surging ultra-endurance events (>24 hours) where fueling logistics outweigh maximal power output.
 ---
 
 # Fat-Adaptive Diets, Glycogen Sparing, & High-Intensity Performance — Complete Guide

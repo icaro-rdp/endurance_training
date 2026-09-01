@@ -1,21 +1,21 @@
 ---
-title: "Perspectives #3: USA Crits Season Review, In-Season Fatigue, & Criterium Physics — Complete Guide"
+title: 'Perspectives #3: USA Crits Season Review, In-Season Fatigue, & Criterium Physics — Complete Guide'
 category: planning
 topics:
-  - "W_prime"
-  - "Durability"
-  - "Microcycles"
-  - "Aerobic_base"
-source: "Empirical Cycling Podcast — Kolie Moore, Alex Carmona & Taylor Warren (Perspectives #3)"
-author: "Kolie Moore"
-date: "2021-10-09"
-summary: "An in-depth analysis of national-level criterium racing, team positioning dynamics, the physiological 'fitness reservoir', in-season fatigue management across consecutive race weekends, warmup physiology, and tire pressure physics."
+- Critical_power_and_w_prime
+- Durability_and_fatigue_mechanisms
+- Microcycle_and_schedule_design
+- Zone2_and_endurance_base
+source: 'Empirical Cycling Podcast — Kolie Moore, Alex Carmona & Taylor Warren (Perspectives #3)'
+author: Kolie Moore
+date: '2021-10-09'
+summary: An in-depth analysis of national-level criterium racing, team positioning dynamics, the physiological 'fitness reservoir', in-season fatigue management across consecutive race weekends, warmup physiology, and tire pressure physics.
 key_takeaways:
-  - "The Physics of the 'Accordion Effect': In criterium racing, riding at the back of the peloton amplifies braking and acceleration cycles; positioning in the top 15–20 wheels minimizes unnecessary $W'$ (anaerobic work capacity) expenditure."
-  - "The 'Fitness Reservoir' Concept: Sustainable in-season performance relies on a massive aerobic base that rapidly reconstitutes $W'$ between repeated 800–1200W surges; without this reservoir, high-intensity anaerobic form decays after 3–4 race weekends."
-  - "In-Season Microcycle Periodization: When competing weekly, athletes must eliminate mid-week glycolytic interval sessions, using the microcycle strictly for active recovery, short aerobic maintenance, and neurological openers."
-  - "Physiological Rationale of Criterium Warmups: Warmups must prime ${V}{O}_2$ kinetics and activate fast-twitch neuromuscular motor units without depleting precious muscle glycogen or generating excess lactic acidosis prior to the gun."
-  - "Tire Width and Pressure Optimization: Running wider tires (28mm+) at lower pneumatic pressures increases the tire contact patch and reduces high-frequency vibration impedance, dramatically increasing cornering traction and exit speeds."
+- 'The Physics of the ''Accordion Effect'': In criterium racing, riding at the back of the peloton amplifies braking and acceleration cycles; positioning in the top 15–20 wheels minimizes unnecessary $W''$ (anaerobic work capacity) expenditure.'
+- 'The ''Fitness Reservoir'' Concept: Sustainable in-season performance relies on a massive aerobic base that rapidly reconstitutes $W''$ between repeated 800–1200W surges; without this reservoir, high-intensity anaerobic form decays after 3–4 race weekends.'
+- 'In-Season Microcycle Periodization: When competing weekly, athletes must eliminate mid-week glycolytic interval sessions, using the microcycle strictly for active recovery, short aerobic maintenance, and neurological openers.'
+- 'Physiological Rationale of Criterium Warmups: Warmups must prime ${V}{O}_2$ kinetics and activate fast-twitch neuromuscular motor units without depleting precious muscle glycogen or generating excess lactic acidosis prior to the gun.'
+- 'Tire Width and Pressure Optimization: Running wider tires (28mm+) at lower pneumatic pressures increases the tire contact patch and reduces high-frequency vibration impedance, dramatically increasing cornering traction and exit speeds.'
 ---
 
 # Perspectives #3: USA Crits Season Review, In-Season Fatigue, & Criterium Physics — Complete Guide

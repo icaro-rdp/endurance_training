@@ -1,20 +1,20 @@
 ---
-title: "How High Intensity Aerobic Adaptations with AMPK Do (and Don't) Work — Complete Guide"
-category: "physiology"
+title: How High Intensity Aerobic Adaptations with AMPK Do (and Don't) Work — Complete Guide
+category: physiology
 topics:
-  - "Mitochondrial_density"
-  - "Aerobic_base"
-  - "Progressive_overload"
-source: "Empirical Cycling Podcast — Kolie Moore & Marinus Petersen (Watts Doc #45)"
-author: "Kolie Moore"
-date: "2023-09-04"
-summary: "An in-depth physiological examination of AMP-activated protein kinase (AMPK) as a cellular energy sensor, how absolute intensity and training status dictate mitochondrial biogenesis, and why attempting to 'hack' AMPK via fasted or low-glycogen training fails."
+- Mitochondrial_and_cellular_adaptation
+- Zone2_and_endurance_base
+- Periodization_models_and_macrocycles
+source: 'Empirical Cycling Podcast — Kolie Moore & Marinus Petersen (Watts Doc #45)'
+author: Kolie Moore
+date: '2023-09-04'
+summary: An in-depth physiological examination of AMP-activated protein kinase (AMPK) as a cellular energy sensor, how absolute intensity and training status dictate mitochondrial biogenesis, and why attempting to 'hack' AMPK via fasted or low-glycogen training fails.
 key_takeaways:
-  - "AMPK acts as a cellular energy sensor activated by elevated AMP:ATP and ADP:ATP ratios, switching the cell from anabolism to catabolism and triggering mitochondrial biogenesis via PGC-1α and NRF-1."
-  - "AMPK activation is driven by peripheral absolute metabolic rate within the working muscle, not central arterial desaturation or heart rate alone."
-  - "Training status significantly blunts AMPK activation: well-trained athletes experience minimal AMPK activation during submaximal tempo/endurance work (<85% FTP) due to superior cellular energy charge maintenance."
-  - "End-exercise muscle glycogen correlates with AMPK activation solely as a proxy for cumulative high metabolic flux; starting exercise with low glycogen or fasting does not enhance AMPK signaling and impairs workload capacity."
-  - "Post-exercise AMPK activity rapidly drops back to baseline within hours; delaying post-ride carbohydrate refueling provides zero adaptive benefit while sabotaging subsequent training quality."
+- AMPK acts as a cellular energy sensor activated by elevated AMP:ATP and ADP:ATP ratios, switching the cell from anabolism to catabolism and triggering mitochondrial biogenesis via PGC-1α and NRF-1.
+- AMPK activation is driven by peripheral absolute metabolic rate within the working muscle, not central arterial desaturation or heart rate alone.
+- 'Training status significantly blunts AMPK activation: well-trained athletes experience minimal AMPK activation during submaximal tempo/endurance work (<85% FTP) due to superior cellular energy charge maintenance.'
+- End-exercise muscle glycogen correlates with AMPK activation solely as a proxy for cumulative high metabolic flux; starting exercise with low glycogen or fasting does not enhance AMPK signaling and impairs workload capacity.
+- Post-exercise AMPK activity rapidly drops back to baseline within hours; delaying post-ride carbohydrate refueling provides zero adaptive benefit while sabotaging subsequent training quality.
 ---
 
 # How High Intensity Aerobic Adaptations with AMPK Do (and Don't) Work — Complete Guide

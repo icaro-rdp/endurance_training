@@ -1,23 +1,23 @@
 ---
-title: "Ten Minute Tips #43: Off Season Breaks and Massive Listener Q&A — Complete Guide"
+title: 'Ten Minute Tips #43: Off Season Breaks and Massive Listener Q&A — Complete Guide'
 category: planning
 topics:
-  - "Periodization"
-  - "Volume_quantification"
-  - "Microcycles"
-  - "Durability"
-  - "Sprint_performance"
-source: "Empirical Cycling Podcast — Kolie Moore & Empirical Cycling Coaches (Ten Minute Tips #43)"
-author: "Kolie Moore"
-date: "2024-10-28"
-summary: "Synthesizes coaching frameworks from seven Empirical Cycling coaches on designing off-season transitions, overcoming psychological fear of fitness loss, structuring volume versus intensity, executing strict recovery rides, and balancing race density against dedicated fitness builds."
+- Periodization_models_and_macrocycles
+- Workload_quantification_and_modeling
+- Microcycle_and_schedule_design
+- Durability_and_fatigue_mechanisms
+- Sprint_and_anaerobic_intervals
+source: 'Empirical Cycling Podcast — Kolie Moore & Empirical Cycling Coaches (Ten Minute Tips #43)'
+author: Kolie Moore
+date: '2024-10-28'
+summary: Synthesizes coaching frameworks from seven Empirical Cycling coaches on designing off-season transitions, overcoming psychological fear of fitness loss, structuring volume versus intensity, executing strict recovery rides, and balancing race density against dedicated fitness builds.
 key_takeaways:
-  - "Off-season breaks require total mental and systemic reset: incorporate unstructured riding, hiking, or strength onboarding rather than rigid interval schedules."
-  - "Retraining is faster than building: previously achieved aerobic adaptations return rapidly upon resuming structured training; athletes rarely lose meaningful threshold power during planned 1–3 week deloads."
-  - "The 'What Not to Do' principle: long-term athletic progression is dictated as much by avoiding catastrophic errors (overtraining, mid-season burnout, illness) as by executing key interval sessions."
-  - "Strict Zone 1 recovery discipline: the most frequent training error is riding active recovery days at Zone 2/tempo power, which preserves chronic autonomic fatigue."
-  - "High volume builds durable capacity: disciplined aerobic base volume expands glycogen storage, mitochondrial density, and recovery tolerance; high-intensity/low-volume shortcuts inevitably plateau."
-  - "Race density destroys adaptation runway: racing produces high fatigue without progressive overload; building significant threshold improvements requires intentionally skipping non-priority races."
+- 'Off-season breaks require total mental and systemic reset: incorporate unstructured riding, hiking, or strength onboarding rather than rigid interval schedules.'
+- 'Retraining is faster than building: previously achieved aerobic adaptations return rapidly upon resuming structured training; athletes rarely lose meaningful threshold power during planned 1–3 week deloads.'
+- 'The ''What Not to Do'' principle: long-term athletic progression is dictated as much by avoiding catastrophic errors (overtraining, mid-season burnout, illness) as by executing key interval sessions.'
+- 'Strict Zone 1 recovery discipline: the most frequent training error is riding active recovery days at Zone 2/tempo power, which preserves chronic autonomic fatigue.'
+- 'High volume builds durable capacity: disciplined aerobic base volume expands glycogen storage, mitochondrial density, and recovery tolerance; high-intensity/low-volume shortcuts inevitably plateau.'
+- 'Race density destroys adaptation runway: racing produces high fatigue without progressive overload; building significant threshold improvements requires intentionally skipping non-priority races.'
 ---
 
 # Ten Minute Tips #43: Off Season Breaks and Massive Listener Q&A — Complete Guide

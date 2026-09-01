@@ -2,16 +2,12 @@
 title: A 7-day Medium Intensity Block Microcycle Boosts Aerobic Adaptations and Performance!
 category: planning
 topics:
-- LT1_VT1
-- LT2_VT2
-- Periodization
-source: 'knowledgeiswatt.substack.com/p/119-a-7-day-medium-intensity-block Date: December
-  2,'
+- Thresholds_and_metabolic_domains
+- Periodization_models_and_macrocycles
+source: 'knowledgeiswatt.substack.com/p/119-a-7-day-medium-intensity-block Date: December 2,'
 author: Endurance Research
-date: 'Source: knowledgeiswatt.substack.com/p/119-a-7-day-medium-intensity-block  December
-  2,'
-summary: 'An important note before reading this KIW Research Note: Low intensity training:
-  below the first threshold;'
+date: 'Source: knowledgeiswatt.substack.com/p/119-a-7-day-medium-intensity-block  December 2,'
+summary: 'An important note before reading this KIW Research Note: Low intensity training: below the first threshold;'
 ---
 
 # A 7-day Medium Intensity Block Microcycle Boosts Aerobic Adaptations and Performance!

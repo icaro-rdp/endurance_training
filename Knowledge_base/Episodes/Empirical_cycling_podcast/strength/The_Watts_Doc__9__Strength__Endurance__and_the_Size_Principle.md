@@ -1,20 +1,20 @@
 ---
-title: "Strength, Endurance, & Henneman's Size Principle — Complete Guide"
+title: Strength, Endurance, & Henneman's Size Principle — Complete Guide
 category: training
 topics:
-  - "Heavy_torque"
-  - "Periodization"
-  - "Sprint_performance"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #9)"
-author: "Kolie Moore"
-date: "2019-06-28"
-summary: "An advanced neuromuscular breakdown of concurrent strength and endurance training, analyzing Henneman's Size Principle, motor unit recruitment hierarchies, neural drive fatigue resistance, and why heavy lifting improves sustained time trial power without altering VO2max or FTP."
+- Torque_and_cadence_drills
+- Periodization_models_and_macrocycles
+- Sprint_and_anaerobic_intervals
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #9)'
+author: Kolie Moore
+date: '2019-06-28'
+summary: An advanced neuromuscular breakdown of concurrent strength and endurance training, analyzing Henneman's Size Principle, motor unit recruitment hierarchies, neural drive fatigue resistance, and why heavy lifting improves sustained time trial power without altering VO2max or FTP.
 key_takeaways:
-  - "In elite U23 cyclists, 16 weeks of heavy resistance training (5–6 RM) improved 45-minute time trial power by 8% (~25W) without changing VO2max, FTP, or muscle cross-sectional area."
-  - "The popular theory that lifting makes pedaling 'easier' by lowering the percentage of maximal pedal force is mathematically flawed; sub-maximal cycling force requirements are a negligible fraction of peak force (~15–16% MVC)."
-  - "Henneman's Size Principle dictates that motor units are recruited in an orderly hierarchy from smallest (slow-twitch Type I) to largest (fast-twitch Type II) based on force demand and local fiber fatigue."
-  - "As slow-twitch motor units deplete glycogen during prolonged riding, elevated central neural drive is required to recruit higher-threshold motor units possessing fresh glycogen stores."
-  - "Heavy strength training enhances the capacity and fatigue resistance of central neural drive, allowing endurance athletes to access and sustain recruitment of high-threshold Type IIa motor units during prolonged submaximal work."
+- In elite U23 cyclists, 16 weeks of heavy resistance training (5–6 RM) improved 45-minute time trial power by 8% (~25W) without changing VO2max, FTP, or muscle cross-sectional area.
+- The popular theory that lifting makes pedaling 'easier' by lowering the percentage of maximal pedal force is mathematically flawed; sub-maximal cycling force requirements are a negligible fraction of peak force (~15–16% MVC).
+- Henneman's Size Principle dictates that motor units are recruited in an orderly hierarchy from smallest (slow-twitch Type I) to largest (fast-twitch Type II) based on force demand and local fiber fatigue.
+- As slow-twitch motor units deplete glycogen during prolonged riding, elevated central neural drive is required to recruit higher-threshold motor units possessing fresh glycogen stores.
+- Heavy strength training enhances the capacity and fatigue resistance of central neural drive, allowing endurance athletes to access and sustain recruitment of high-threshold Type IIa motor units during prolonged submaximal work.
 ---
 
 # Strength, Endurance, & Henneman's Size Principle — Complete Guide

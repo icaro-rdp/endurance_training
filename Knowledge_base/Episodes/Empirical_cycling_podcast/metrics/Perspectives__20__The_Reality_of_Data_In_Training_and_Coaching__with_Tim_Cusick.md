@@ -1,22 +1,21 @@
 ---
-title: "Perspectives #20: The Reality of Data In Training and Coaching — Complete Guide"
+title: 'Perspectives #20: The Reality of Data In Training and Coaching — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "Volume_quantification"
-  - "TTA_TTE"
-  - "Durability"
-  - "Progressive_overload"
-source: "Empirical Cycling Podcast — Kolie Moore with Tim Cusick"
-author: "Kolie Moore"
-date: "2022-11-15"
-summary: "A masterclass on the application of data analytics in endurance cycling, exploring descriptive vs. prescriptive modeling in WKO5, training volume vs. intensity distribution, TTE vs. FTP prioritization, and neuromuscular cadence manipulation."
+- FTP_and_functional_metrics
+- Workload_quantification_and_modeling
+- Durability_and_fatigue_mechanisms
+- Periodization_models_and_macrocycles
+source: Empirical Cycling Podcast — Kolie Moore with Tim Cusick
+author: Kolie Moore
+date: '2022-11-15'
+summary: A masterclass on the application of data analytics in endurance cycling, exploring descriptive vs. prescriptive modeling in WKO5, training volume vs. intensity distribution, TTE vs. FTP prioritization, and neuromuscular cadence manipulation.
 key_takeaways:
-  - "'Data helps you make better decisions. Period.' Data analytics are descriptive, diagnostic, and actionable—never prescriptive or an autonomous training solution."
-  - "'Training volume dictates the depth and magnitude of adaptation; training intensity distribution dictates the specificity of adaptation.' Athletes training 10–12 hours per week hit a training-volume ceiling, not a genetic ceiling."
-  - "Prioritizing a 10-minute extension in Time-to-Exhaustion (TTE) and fatigue resistance under race conditions yields vastly superior competitive results compared to pursuing a marginal 5–10 W increase in raw FTP."
-  - "Chronic indoor training in ERG mode narrows the athlete's functional cadence range (e.g., locked into 85–90 rpm), reducing physiological efficiency on varied terrain; foundational training must include deliberate high-torque and high-velocity cadence manipulation."
-  - "Automated AI coaching systems remain fundamentally limited because human physiology is a complex, open system governed by unmeasured variables (life stress budgets, sleep quality, autonomic tone, nutritional status) that cannot be captured by simple power/HR sensors."
+- '''Data helps you make better decisions. Period.'' Data analytics are descriptive, diagnostic, and actionable—never prescriptive or an autonomous training solution.'
+- '''Training volume dictates the depth and magnitude of adaptation; training intensity distribution dictates the specificity of adaptation.'' Athletes training 10–12 hours per week hit a training-volume ceiling, not a genetic ceiling.'
+- Prioritizing a 10-minute extension in Time-to-Exhaustion (TTE) and fatigue resistance under race conditions yields vastly superior competitive results compared to pursuing a marginal 5–10 W increase in raw FTP.
+- Chronic indoor training in ERG mode narrows the athlete's functional cadence range (e.g., locked into 85–90 rpm), reducing physiological efficiency on varied terrain; foundational training must include deliberate high-torque and high-velocity cadence manipulation.
+- Automated AI coaching systems remain fundamentally limited because human physiology is a complex, open system governed by unmeasured variables (life stress budgets, sleep quality, autonomic tone, nutritional status) that cannot be captured by simple power/HR sensors.
 ---
 
 # Perspectives #20: The Reality of Data In Training and Coaching — Complete Guide

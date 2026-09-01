@@ -1,21 +1,19 @@
 ---
-title: "FTP vs. Critical Power: Models vs. Physiology — Complete Guide"
+title: 'FTP vs. Critical Power: Models vs. Physiology — Complete Guide'
 category: physiology
 topics:
-  - "FTP"
-  - "CP"
-  - "W_prime"
-  - "TTA_TTE"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #8)"
-author: "Kolie Moore"
-date: "2019-06-04"
-summary: "A critical comparative analysis between Functional Threshold Power (FTP) and Critical Power (CP), dissecting mathematical modeling versus biological quasi-steady states, the Monod-Scherrer work-time equation, and why CP systematically overestimates MLSS."
+- FTP_and_functional_metrics
+- Critical_power_and_w_prime
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #8)'
+author: Kolie Moore
+date: '2019-06-04'
+summary: A critical comparative analysis between Functional Threshold Power (FTP) and Critical Power (CP), dissecting mathematical modeling versus biological quasi-steady states, the Monod-Scherrer work-time equation, and why CP systematically overestimates MLSS.
 key_takeaways:
-  - "FTP is a physiological metric representing power at Maximal Lactate Steady State (MLSS), whereas Critical Power (CP) is a mathematical parameter derived from curve-fitting."
-  - "The 2-parameter CP model (Work = W' + CP * t) mathematically assumes CP can be held for infinite duration, violating human biological fatigue constraints."
-  - "In athletic populations—especially punchy riders with large anaerobic capacity (W')—CP frequently overestimates true FTP/MLSS by 15 to 40 Watts."
-  - "CP is highly valid for interpolating performance between 2 and 20 minutes, but invalid for extrapolating extended endurance or setting sustainable sub-threshold training zones."
-  - "Prescribing threshold intervals (e.g., 3x20 min) using an unadjusted mathematical CP number leads to premature task failure and excessive autonomic fatigue."
+- FTP is a physiological metric representing power at Maximal Lactate Steady State (MLSS), whereas Critical Power (CP) is a mathematical parameter derived from curve-fitting.
+- The 2-parameter CP model (Work = W' + CP * t) mathematically assumes CP can be held for infinite duration, violating human biological fatigue constraints.
+- In athletic populations—especially punchy riders with large anaerobic capacity (W')—CP frequently overestimates true FTP/MLSS by 15 to 40 Watts.
+- CP is highly valid for interpolating performance between 2 and 20 minutes, but invalid for extrapolating extended endurance or setting sustainable sub-threshold training zones.
+- Prescribing threshold intervals (e.g., 3x20 min) using an unadjusted mathematical CP number leads to premature task failure and excessive autonomic fatigue.
 ---
 
 # FTP vs. Critical Power: Models vs. Physiology — Complete Guide

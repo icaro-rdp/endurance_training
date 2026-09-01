@@ -1,20 +1,20 @@
 ---
-title: "Over-Unders Are Not Special (Lactate Kinetics & Shuttling) — Complete Guide"
+title: Over-Unders Are Not Special (Lactate Kinetics & Shuttling) — Complete Guide
 category: training
 topics:
-  - "Lactate_shuttle"
-  - "FTP"
-  - "Long_intervals"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #43)"
-author: "Kolie Moore"
-date: "2023-03-12"
-summary: "A rigorous physiological deconstruction of the popular belief that over-under intervals possess unique metabolic properties for lactate clearance and MCT transporter upregulation, clarifying the true mechanics of lactate shuttling and the specific role of over-unders in race preparation."
+- Lactate_kinetics_and_metabolism
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_hiit
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #43)'
+author: Kolie Moore
+date: '2023-03-12'
+summary: A rigorous physiological deconstruction of the popular belief that over-under intervals possess unique metabolic properties for lactate clearance and MCT transporter upregulation, clarifying the true mechanics of lactate shuttling and the specific role of over-unders in race preparation.
 key_takeaways:
-  - "Over-unders do not possess unique adaptive properties for mitochondrial biogenesis or lactate clearance compared to steady sweet spot or continuous threshold training."
-  - "Lactate clearance and oxidation are rate-limited by total mitochondrial surface area and Krebs cycle flux, not by monocarboxylate transporters (MCT1/MCT4)."
-  - "Peak systemic lactate clearance occurs during active recovery at ~80% of threshold/LT, driven by trans-sarcolemmal concentration gradients and active muscular energy demand."
-  - "MCT1 expression correlates strongly (r² ≈ 0.80) with mitochondrial density (citrate synthase activity); building more mitochondria naturally expands lactate transport and oxidation machinery."
-  - "Over-unders are best utilized as race-specific preparation (simulating surges, breakaways, and punchy climbs) rather than a foundational method for building baseline aerobic capacity."
+- Over-unders do not possess unique adaptive properties for mitochondrial biogenesis or lactate clearance compared to steady sweet spot or continuous threshold training.
+- Lactate clearance and oxidation are rate-limited by total mitochondrial surface area and Krebs cycle flux, not by monocarboxylate transporters (MCT1/MCT4).
+- Peak systemic lactate clearance occurs during active recovery at ~80% of threshold/LT, driven by trans-sarcolemmal concentration gradients and active muscular energy demand.
+- MCT1 expression correlates strongly (r² ≈ 0.80) with mitochondrial density (citrate synthase activity); building more mitochondria naturally expands lactate transport and oxidation machinery.
+- Over-unders are best utilized as race-specific preparation (simulating surges, breakaways, and punchy climbs) rather than a foundational method for building baseline aerobic capacity.
 ---
 
 # Over-Unders Are Not Special (Lactate Kinetics & Shuttling) — Complete Guide

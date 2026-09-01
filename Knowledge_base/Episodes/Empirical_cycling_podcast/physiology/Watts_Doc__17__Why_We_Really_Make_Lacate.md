@@ -1,18 +1,17 @@
 ---
-title: "Watts Doc #17: Why We Really Make Lactate — Complete Guide"
-category: "physiology"
+title: 'Watts Doc #17: Why We Really Make Lactate — Complete Guide'
+category: physiology
 topics:
-  - "Lactate_shuttle"
-  - "LT1_VT1"
-  - "LT2_VT2"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Harrison"
-author: "Kolie Moore"
-date: "2020-04-07"
-summary: "An in-depth biochemical breakdown of why cells produce lactate, detailing enzyme kinetics (Michaelis-Menten, Km, Vmax), the essential role of LDH in regenerating NAD+ for glycolytic flux, and debunking hypoxia myths."
+- Lactate_kinetics_and_metabolism
+- Thresholds_and_metabolic_domains
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Harrison
+author: Kolie Moore
+date: '2020-04-07'
+summary: An in-depth biochemical breakdown of why cells produce lactate, detailing enzyme kinetics (Michaelis-Menten, Km, Vmax), the essential role of LDH in regenerating NAD+ for glycolytic flux, and debunking hypoxia myths.
 key_takeaways:
-  - "Lactate is produced continuously in fully oxygenated cells at rest and during exercise, not because of oxygen deprivation (hypoxia)."
-  - "The Lactate Dehydrogenase (LDH) reaction strongly favors lactate formation (K_eq ~ 1.6 x 10^11), maintaining a resting 10:1 and exercise >500:1 lactate-to-pyruvate ratio."
-  - "The primary evolutionary role of lactate formation is the instantaneous regeneration of cytoplasmic NAD+ from NADH to sustain glycolytic flux during rapid energy demand."
+- Lactate is produced continuously in fully oxygenated cells at rest and during exercise, not because of oxygen deprivation (hypoxia).
+- The Lactate Dehydrogenase (LDH) reaction strongly favors lactate formation (K_eq ~ 1.6 x 10^11), maintaining a resting 10:1 and exercise >500:1 lactate-to-pyruvate ratio.
+- The primary evolutionary role of lactate formation is the instantaneous regeneration of cytoplasmic NAD+ from NADH to sustain glycolytic flux during rapid energy demand.
 ---
 
 # Watts Doc #17: Why We Really Make Lactate — Complete Guide

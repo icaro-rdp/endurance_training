@@ -1,21 +1,21 @@
 ---
-title: "Ten Minute Tips #31: How To Take A Rest Day (And How To Avoid Screwing It Up) — Complete Guide"
+title: 'Ten Minute Tips #31: How To Take A Rest Day (And How To Avoid Screwing It Up) — Complete Guide'
 category: planning
 topics:
-  - "Microcycles"
-  - "Volume_quantification"
-  - "Durability"
-  - "Aerobic_base"
-source: "Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #31)"
-author: "Kolie Moore"
-date: "2023-11-26"
-summary: "Examines the physiological principles and psychological traps of rest and recovery days, offering actionable frameworks to prevent common mistakes such as riding too hard, lifting heavy on off-days, under-fueling, and delaying rest until catastrophic exhaustion."
+- Microcycle_and_schedule_design
+- Workload_quantification_and_modeling
+- Durability_and_fatigue_mechanisms
+- Zone2_and_endurance_base
+source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #31)'
+author: Kolie Moore
+date: '2023-11-26'
+summary: Examines the physiological principles and psychological traps of rest and recovery days, offering actionable frameworks to prevent common mistakes such as riding too hard, lifting heavy on off-days, under-fueling, and delaying rest until catastrophic exhaustion.
 key_takeaways:
-  - "The Golden Rule of Recovery: Never do anything on an active recovery day that you would not do between hard intervals on a workout day."
-  - "Active recovery requires 'glass cranks' (<100 Watts or <45–50% FTP, RPE 1–2/10); pedaling at mid-Zone 2 turns recovery into chronic, un-cleared metabolic stress."
-  - "Rest days require ample caloric and carbohydrate fueling; restricting calories while the body is synthesizing mitochondria, repairing tissue, and replenishing glycogen induces chronic catabolism."
-  - "Heavy resistance training or intense cross-training on recovery days generates severe central nervous system (CNS) fatigue, sabotaging subsequent on-bike intervals."
-  - "Rest must be taken preemptively; waiting until you are completely shattered forces multi-week slumps instead of rapid adaptation rebounds."
+- 'The Golden Rule of Recovery: Never do anything on an active recovery day that you would not do between hard intervals on a workout day.'
+- Active recovery requires 'glass cranks' (<100 Watts or <45–50% FTP, RPE 1–2/10); pedaling at mid-Zone 2 turns recovery into chronic, un-cleared metabolic stress.
+- Rest days require ample caloric and carbohydrate fueling; restricting calories while the body is synthesizing mitochondria, repairing tissue, and replenishing glycogen induces chronic catabolism.
+- Heavy resistance training or intense cross-training on recovery days generates severe central nervous system (CNS) fatigue, sabotaging subsequent on-bike intervals.
+- Rest must be taken preemptively; waiting until you are completely shattered forces multi-week slumps instead of rapid adaptation rebounds.
 ---
 
 # Ten Minute Tips #31: How To Take A Rest Day (And How To Avoid Screwing It Up) — Complete Guide

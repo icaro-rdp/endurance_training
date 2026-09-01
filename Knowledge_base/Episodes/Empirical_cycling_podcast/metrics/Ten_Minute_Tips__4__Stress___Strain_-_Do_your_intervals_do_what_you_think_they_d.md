@@ -1,21 +1,21 @@
 ---
-title: "Stress vs. Strain: Matching Interval Prescription to Internal Physiology — Complete Guide"
+title: 'Stress vs. Strain: Matching Interval Prescription to Internal Physiology — Complete Guide'
 category: physiology
 topics:
-  - "Power_vs_HR"
-  - "VO2max"
-  - "TTA_TTE"
-  - "Progressive_overload"
-source: "Empirical Cycling Podcast — Kolie Moore (Ten Minute Tips #4)"
-author: "Kolie Moore"
-date: "2019-11-26"
-summary: "An in-depth analysis of the distinction between external stress (power, cadence, duration) and internal physiological strain (oxygen kinetics, ATP demand, metabolic perturbation), explaining why interval prescriptions should target biological mechanisms rather than rigid power percentages."
+- Autonomic_and_cardiac_monitoring
+- VO2max_and_aerobic_kinetics
+- FTP_and_functional_metrics
+- Periodization_models_and_macrocycles
+source: 'Empirical Cycling Podcast — Kolie Moore (Ten Minute Tips #4)'
+author: Kolie Moore
+date: '2019-11-26'
+summary: An in-depth analysis of the distinction between external stress (power, cadence, duration) and internal physiological strain (oxygen kinetics, ATP demand, metabolic perturbation), explaining why interval prescriptions should target biological mechanisms rather than rigid power percentages.
 key_takeaways:
-  - "External stress (power output on a meter) does not correlate 1:1 with internal strain (metabolic state and cellular signaling)."
-  - "VO2max is a physiological rate of oxygen uptake, not a power output; during the initial 60–90 seconds of a target power interval, VO2 is rising and oxidative pathways are not yet fully taxed."
-  - "Sweet spot and threshold intervals must be scaled relative to individual Time-to-Exhaustion (TTE); 2x20 minutes provides only a maintenance stimulus for an athlete with an 80+ minute sweet spot capacity."
-  - "Anaerobic capacity and sprint training require maximal all-out effort (RPE 10/10) with complete rest intervals (3–5+ minutes) to target full motor unit recruitment and phosphocreatine resynthesis."
-  - "Fatigue alters the stress-strain relationship: under systemic fatigue, power output may drop while internal metabolic and cardiorespiratory strain remain high."
+- External stress (power output on a meter) does not correlate 1:1 with internal strain (metabolic state and cellular signaling).
+- VO2max is a physiological rate of oxygen uptake, not a power output; during the initial 60–90 seconds of a target power interval, VO2 is rising and oxidative pathways are not yet fully taxed.
+- Sweet spot and threshold intervals must be scaled relative to individual Time-to-Exhaustion (TTE); 2x20 minutes provides only a maintenance stimulus for an athlete with an 80+ minute sweet spot capacity.
+- Anaerobic capacity and sprint training require maximal all-out effort (RPE 10/10) with complete rest intervals (3–5+ minutes) to target full motor unit recruitment and phosphocreatine resynthesis.
+- 'Fatigue alters the stress-strain relationship: under systemic fatigue, power output may drop while internal metabolic and cardiorespiratory strain remain high.'
 ---
 
 # Stress vs. Strain: Matching Interval Prescription to Internal Physiology — Complete Guide

@@ -1,19 +1,18 @@
 ---
-title: "Watts Doc #19: The VO2max Slow Component Explained — Complete Guide"
+title: 'Watts Doc #19: The VO2max Slow Component Explained — Complete Guide'
 category: training
 topics:
-  - "Fast_start_intervals"
-  - "Long_intervals"
-  - "Power_vs_HR"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Harrison"
-author: "Kolie Moore"
-date: "2020-05-06"
-summary: "An in-depth examination of the VO2 slow component, exploring muscle thermodynamic efficiency, Henneman's size principle, motor unit recruitment mechanics, and how fast-start intervals maximize time at VO2max."
+- VO2max_and_aerobic_hiit
+- Autonomic_and_cardiac_monitoring
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Harrison
+author: Kolie Moore
+date: '2020-05-06'
+summary: An in-depth examination of the VO2 slow component, exploring muscle thermodynamic efficiency, Henneman's size principle, motor unit recruitment mechanics, and how fast-start intervals maximize time at VO2max.
 key_takeaways:
-  - "The VO2 slow component represents a progressive loss in muscular efficiency during sustained work, driving oxygen uptake toward 100% VO2max."
-  - "Under Henneman's size principle, fatiguing Type I fibers force the recruitment of larger, less efficient Type II motor units with higher oxygen cost per watt."
-  - "Fast-start / all-out intervals reach 100% VO2max in 50–70 seconds, yielding double the time at maximal aerobic flux compared to steady-power intervals."
-  - "Heart rate and VO2 drift at or below FTP reflect progressive neuromuscular recruitment and thermal strain, not a sudden shift to 'anaerobic' metabolism."
+- The VO2 slow component represents a progressive loss in muscular efficiency during sustained work, driving oxygen uptake toward 100% VO2max.
+- Under Henneman's size principle, fatiguing Type I fibers force the recruitment of larger, less efficient Type II motor units with higher oxygen cost per watt.
+- Fast-start / all-out intervals reach 100% VO2max in 50–70 seconds, yielding double the time at maximal aerobic flux compared to steady-power intervals.
+- Heart rate and VO2 drift at or below FTP reflect progressive neuromuscular recruitment and thermal strain, not a sudden shift to 'anaerobic' metabolism.
 ---
 
 # Watts Doc #19: The VO2max Slow Component Explained — Complete Guide

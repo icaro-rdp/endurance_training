@@ -2,19 +2,15 @@
 title: 4x8' Better Than 4x4' or 4x16'
 category: training
 topics:
-- FTP
-- CP
-- VO2max
-- LT2_VT2
-- Short_intervals
-source: 'knowledgeiswatt.substack.com/p/42-hit-long-intervals-4x8-better Date: November
-  5,'
+- FTP_and_functional_metrics
+- Critical_power_and_w_prime
+- VO2max_and_aerobic_kinetics
+- Thresholds_and_metabolic_domains
+- VO2max_and_aerobic_hiit
+source: 'knowledgeiswatt.substack.com/p/42-hit-long-intervals-4x8-better Date: November 5,'
 author: Endurance Research
-date: 'Source: knowledgeiswatt.substack.com/p/42-hit-long-intervals-4x8-better  November
-  5,'
-summary: High intensity training (HIT, that is doing intervals above second threshold/FTP/critical
-  power) is a powerful stimulus to improve endurance performance. However, it requires
-  a great physical and
+date: 'Source: knowledgeiswatt.substack.com/p/42-hit-long-intervals-4x8-better  November 5,'
+summary: High intensity training (HIT, that is doing intervals above second threshold/FTP/critical power) is a powerful stimulus to improve endurance performance. However, it requires a great physical and
 ---
 
 # 4x8' Better Than 4x4' or 4x16'

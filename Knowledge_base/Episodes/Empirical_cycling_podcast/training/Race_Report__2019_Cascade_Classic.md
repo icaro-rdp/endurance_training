@@ -1,19 +1,19 @@
 ---
-title: "Race Report: 2019 Cascade Classic & Multi-Day Stage Race Execution — Complete Guide"
+title: 'Race Report: 2019 Cascade Classic & Multi-Day Stage Race Execution — Complete Guide'
 category: planning
 topics:
-  - "Durability"
-  - "Aerobic_base"
-  - "TTA_TTE"
-source: "Empirical Cycling Podcast — Kolie Moore, Kyle Harrison & Emma Edwards"
-author: "Kolie Moore"
-date: "2019-08-01"
-summary: "An analytical breakdown of 5-day stage racing, exploring durability, tactical GC preservation, gravel pinch points, team breakaway dynamics, and quick-turnaround recovery."
+- Durability_and_fatigue_mechanisms
+- Zone2_and_endurance_base
+- FTP_and_functional_metrics
+source: Empirical Cycling Podcast — Kolie Moore, Kyle Harrison & Emma Edwards
+author: Kolie Moore
+date: '2019-08-01'
+summary: An analytical breakdown of 5-day stage racing, exploring durability, tactical GC preservation, gravel pinch points, team breakaway dynamics, and quick-turnaround recovery.
 key_takeaways:
-  - "Stage racing success depends on durability (fatigue resistance over consecutive days) and meticulous energy conservation rather than single-day maximal efforts."
-  - "Gravel sectors and technical bottlenecks in road stages act as high-risk selection points requiring aggressive front-positioning prior to the pinch point."
-  - "Defending a General Classification (GC) standing demands dynamic tactical alliances and relying on experienced road captains to limit time gaps."
-  - "Short recovery turnarounds between afternoon stages and morning starts require rapid glycogen replenishment, hydration, and sleep prioritization."
+- Stage racing success depends on durability (fatigue resistance over consecutive days) and meticulous energy conservation rather than single-day maximal efforts.
+- Gravel sectors and technical bottlenecks in road stages act as high-risk selection points requiring aggressive front-positioning prior to the pinch point.
+- Defending a General Classification (GC) standing demands dynamic tactical alliances and relying on experienced road captains to limit time gaps.
+- Short recovery turnarounds between afternoon stages and morning starts require rapid glycogen replenishment, hydration, and sleep prioritization.
 ---
 
 # Race Report: 2019 Cascade Classic & Multi-Day Stage Race Execution — Complete Guide

@@ -1,19 +1,19 @@
 ---
-title: "Getting Started with Strength Training for Cyclists — Complete Guide"
+title: Getting Started with Strength Training for Cyclists — Complete Guide
 category: training
 topics:
-  - "Periodization"
-  - "Heavy_torque"
-  - "Sprint_performance"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Ten Minute Tips #12)"
-author: "Kolie Moore & Kyle Hanson"
-date: "2021-10-26"
-summary: "A practical guide to initiating resistance training for endurance cyclists, covering gym basics, range of motion, rate of force development, RPE-based loading, injury prevention, and on-bike scheduling."
+- Periodization_models_and_macrocycles
+- Torque_and_cadence_drills
+- Sprint_and_anaerobic_intervals
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Ten Minute Tips #12)'
+author: Kolie Moore & Kyle Hanson
+date: '2021-10-26'
+summary: A practical guide to initiating resistance training for endurance cyclists, covering gym basics, range of motion, rate of force development, RPE-based loading, injury prevention, and on-bike scheduling.
 key_takeaways:
-  - "Strength training serves a supportive role for cyclists: enhancing bone mineral density, neuromuscular motor unit recruitment, and posture rather than maximizing gym-specific 1RM numbers."
-  - "Full range of motion (ROM) with lighter weights provides equal or superior mechanical tension to heavy quarter squats while dramatically reducing joint injury risk."
-  - "Endurance athletes have skewed 1RM tables: standard strength charts fail because endurance physiology allows higher repetitions near max before abrupt neural failure."
-  - "Do not add heavy gym training on top of full cycling volume: cap on-bike intensity at Zone 2/Tempo during heavy lifting phases and schedule 3–4 hours between sessions."
+- 'Strength training serves a supportive role for cyclists: enhancing bone mineral density, neuromuscular motor unit recruitment, and posture rather than maximizing gym-specific 1RM numbers.'
+- Full range of motion (ROM) with lighter weights provides equal or superior mechanical tension to heavy quarter squats while dramatically reducing joint injury risk.
+- 'Endurance athletes have skewed 1RM tables: standard strength charts fail because endurance physiology allows higher repetitions near max before abrupt neural failure.'
+- 'Do not add heavy gym training on top of full cycling volume: cap on-bike intensity at Zone 2/Tempo during heavy lifting phases and schedule 3–4 hours between sessions.'
 ---
 
 # Getting Started with Strength Training for Cyclists — Complete Guide

@@ -1,22 +1,22 @@
 ---
-title: "Hypoxia and Muscular Adaptation — Complete Guide"
-category: "physiology"
+title: Hypoxia and Muscular Adaptation — Complete Guide
+category: physiology
 topics:
-  - "Aerobic_base"
-  - "Long_intervals"
-  - "Mitochondrial_density"
-  - "Durability"
-  - "Carbohydrate_ratio"
-source: "Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Watts Doc #50)"
-author: "Kolie Moore"
-date: "2024-09-04"
-summary: "A rigorous examination of Hypoxia-Inducible Factor 1 (HIF-1), the molecular oxygen sensor governing muscular angiogenesis, glycolytic upregulation, and the attenuation of transcriptional signaling during high-intensity training."
+- Zone2_and_endurance_base
+- VO2max_and_aerobic_hiit
+- Mitochondrial_and_cellular_adaptation
+- Durability_and_fatigue_mechanisms
+- Carbohydrate_fueling_and_gut_training
+source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Watts Doc #50)'
+author: Kolie Moore
+date: '2024-09-04'
+summary: A rigorous examination of Hypoxia-Inducible Factor 1 (HIF-1), the molecular oxygen sensor governing muscular angiogenesis, glycolytic upregulation, and the attenuation of transcriptional signaling during high-intensity training.
 key_takeaways:
-  - "HIF-1 operates as an oxygen-sensing transcription factor governed by constitutive synthesis and rapid proteasomal degradation (via VHL E3 ligase) during normoxia."
-  - "Under severe intramuscular hypoxia (O2 tension falling from ~40 Torr at rest to 1–4 Torr at VO2max), HIF-1α is stabilized and dimerizes with HIF-1β to drive gene transcription."
-  - "Key HIF-1 target adaptations include capillary angiogenesis (VEGF), nitric oxide-mediated vasodilation, glycolytic enzyme upregulation (hexokinase), and lactate/proton extrusion (MCT4)."
-  - "The skeletal muscle transcriptional response to high-intensity training undergoes rapid negative feedback attenuation; after 3 weeks of progressive HIIT, HIF-1 transcriptional surges drop dramatically as new capillary beds and enzymes alleviate cellular hypoxic stress."
-  - "Stimulating HIF-1 requires sustained intramuscular oxygen desaturation (e.g., 3–5 minute VO2max intervals or altitude exposure); short 30-second sprints during base rides provide insufficient hypoxic duration."
+- HIF-1 operates as an oxygen-sensing transcription factor governed by constitutive synthesis and rapid proteasomal degradation (via VHL E3 ligase) during normoxia.
+- Under severe intramuscular hypoxia (O2 tension falling from ~40 Torr at rest to 1–4 Torr at VO2max), HIF-1α is stabilized and dimerizes with HIF-1β to drive gene transcription.
+- Key HIF-1 target adaptations include capillary angiogenesis (VEGF), nitric oxide-mediated vasodilation, glycolytic enzyme upregulation (hexokinase), and lactate/proton extrusion (MCT4).
+- The skeletal muscle transcriptional response to high-intensity training undergoes rapid negative feedback attenuation; after 3 weeks of progressive HIIT, HIF-1 transcriptional surges drop dramatically as new capillary beds and enzymes alleviate cellular hypoxic stress.
+- Stimulating HIF-1 requires sustained intramuscular oxygen desaturation (e.g., 3–5 minute VO2max intervals or altitude exposure); short 30-second sprints during base rides provide insufficient hypoxic duration.
 ---
 
 # Hypoxia and Muscular Adaptation — Complete Guide

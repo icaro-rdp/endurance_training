@@ -1,21 +1,20 @@
 ---
-title: "FatMax Fallacies: Substrate Oxidation vs. Aerobic Signaling & Thermodynamics — Complete Guide"
+title: 'FatMax Fallacies: Substrate Oxidation vs. Aerobic Signaling & Thermodynamics — Complete Guide'
 category: training
 topics:
-  - "FatMax"
-  - "Fat_oxidation"
-  - "Aerobic_base"
-  - "Lab_vs_field"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #35)"
-author: "Kolie Moore"
-date: "2021-12-15"
-summary: "A thorough deconstruction of popular FatMax misconceptions, analyzing why FatMax represents a broad plateau rather than a sharp training point, why substrate oxidation does not drive aerobic signaling (calcium vs. AMPK pathways), and how thermodynamics governs body composition."
+- Substrate_utilization_and_fat_oxidation
+- Zone2_and_endurance_base
+- Physiological_testing_and_diagnostics
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #35)'
+author: Kolie Moore
+date: '2021-12-15'
+summary: A thorough deconstruction of popular FatMax misconceptions, analyzing why FatMax represents a broad plateau rather than a sharp training point, why substrate oxidation does not drive aerobic signaling (calcium vs. AMPK pathways), and how thermodynamics governs body composition.
 key_takeaways:
-  - "FatMax is a broad, diffuse plateau spanning 50–120+ Watts, not a narrow, razor-sharp training target; hunting for a single FatMax wattage is physiologically unnecessary."
-  - "Burning fat does not make you better at burning fat; aerobic adaptations (mitochondrial biogenesis, CPT-1 density, capillarization) are driven by muscle contraction signals (calcium transients) and energy status (AMPK activation), not by substrate selection."
-  - "Consuming carbohydrates during Zone 2 endurance rides does not blunt mitochondrial biogenesis or fat oxidation adaptations, but preserves training quality, immune function, and endocrine health."
-  - "Exercise substrate oxidation does not dictate long-term body fat loss; the first law of thermodynamics (net caloric balance) strictly governs adipose tissue reduction."
-  - "Zone 2 endurance training improves whole-body fat oxidation capacity over months and years by expanding total mitochondrial surface area, not by dietary carbohydrate deprivation."
+- FatMax is a broad, diffuse plateau spanning 50–120+ Watts, not a narrow, razor-sharp training target; hunting for a single FatMax wattage is physiologically unnecessary.
+- Burning fat does not make you better at burning fat; aerobic adaptations (mitochondrial biogenesis, CPT-1 density, capillarization) are driven by muscle contraction signals (calcium transients) and energy status (AMPK activation), not by substrate selection.
+- Consuming carbohydrates during Zone 2 endurance rides does not blunt mitochondrial biogenesis or fat oxidation adaptations, but preserves training quality, immune function, and endocrine health.
+- Exercise substrate oxidation does not dictate long-term body fat loss; the first law of thermodynamics (net caloric balance) strictly governs adipose tissue reduction.
+- Zone 2 endurance training improves whole-body fat oxidation capacity over months and years by expanding total mitochondrial surface area, not by dietary carbohydrate deprivation.
 ---
 
 # FatMax Fallacies: Substrate Oxidation vs. Aerobic Signaling & Thermodynamics — Complete Guide

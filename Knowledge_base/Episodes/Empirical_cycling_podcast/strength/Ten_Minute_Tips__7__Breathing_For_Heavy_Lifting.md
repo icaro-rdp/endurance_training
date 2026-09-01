@@ -1,19 +1,19 @@
 ---
-title: "Breathing Mechanics, Intra-Abdominal Pressure, & Bracing for Heavy Lifting — Complete Guide"
+title: Breathing Mechanics, Intra-Abdominal Pressure, & Bracing for Heavy Lifting — Complete Guide
 category: training
 topics:
-  - "Heavy_torque"
-  - "Periodization"
-source: "Empirical Cycling Podcast — Kyle Helson & Kolie Moore (Ten Minute Tips #7)"
-author: "Kyle Helson & Kolie Moore"
-date: "2020-10-07"
-summary: "A biomechanical and physiological guide to breathing, diaphragmatic expansion, intra-abdominal pressure (IAP), and the Valsalva maneuver for maximizing spinal rigidity and force transfer during heavy strength training."
+- Torque_and_cadence_drills
+- Periodization_models_and_macrocycles
+source: 'Empirical Cycling Podcast — Kyle Helson & Kolie Moore (Ten Minute Tips #7)'
+author: Kyle Helson & Kolie Moore
+date: '2020-10-07'
+summary: A biomechanical and physiological guide to breathing, diaphragmatic expansion, intra-abdominal pressure (IAP), and the Valsalva maneuver for maximizing spinal rigidity and force transfer during heavy strength training.
 key_takeaways:
-  - "Intra-abdominal pressure (IAP) acts as a hydraulic rigid cylinder around the lumbar spine, reducing spinal compressive and shear forces by up to 20–40%."
-  - "Proper bracing requires 360-degree radial expansion of the abdominal wall, obliques, and lower back—not 'stomach hollowing' (sucking the navel inward)."
-  - "The Valsalva maneuver (inhaling, closing the glottis, and pressurizing the torso) creates maximal trunk stiffness to eliminate force leakage during heavy compound lifts."
-  - "Lifting belts do not weaken the core; they provide a rigid external surface to push against, significantly increasing peak intra-abdominal pressure."
-  - "Inhale before the descent, maintain full pressure through the eccentric and sticking point, and exhale only upon completing or clearing the hardest part of the lift."
+- Intra-abdominal pressure (IAP) acts as a hydraulic rigid cylinder around the lumbar spine, reducing spinal compressive and shear forces by up to 20–40%.
+- Proper bracing requires 360-degree radial expansion of the abdominal wall, obliques, and lower back—not 'stomach hollowing' (sucking the navel inward).
+- The Valsalva maneuver (inhaling, closing the glottis, and pressurizing the torso) creates maximal trunk stiffness to eliminate force leakage during heavy compound lifts.
+- Lifting belts do not weaken the core; they provide a rigid external surface to push against, significantly increasing peak intra-abdominal pressure.
+- Inhale before the descent, maintain full pressure through the eccentric and sticking point, and exhale only upon completing or clearing the hardest part of the lift.
 ---
 
 # Breathing Mechanics, Intra-Abdominal Pressure, & Bracing for Heavy Lifting — Complete Guide

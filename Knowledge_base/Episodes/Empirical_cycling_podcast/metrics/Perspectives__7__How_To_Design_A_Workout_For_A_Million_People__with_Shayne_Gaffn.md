@@ -1,21 +1,21 @@
 ---
-title: "Designing Workouts for Mass Populations: Ramp Test Inflation, Sweetspot Buffering, & Time-Crunched Architecture — Complete Guide"
+title: 'Designing Workouts for Mass Populations: Ramp Test Inflation, Sweetspot Buffering, & Time-Crunched Architecture — Complete Guide'
 category: planning
 topics:
-  - "FTP"
-  - "Aerobic_base"
-  - "Progressive_overload"
-  - "Volume_quantification"
-  - "Microcycles"
-source: "Empirical Cycling Podcast — Kolie Moore & Shayne Gaffney (Perspectives #7)"
-author: "Kolie Moore"
-date: "2022-01-10"
-summary: "An analytical breakdown of macro-scale workout design for digital platforms, addressing ramp-test FTP overestimation, sweetspot intensity buffering, indoor monotony mitigation, and training architecture for time-crunched athletes."
+- FTP_and_functional_metrics
+- Zone2_and_endurance_base
+- Periodization_models_and_macrocycles
+- Workload_quantification_and_modeling
+- Microcycle_and_schedule_design
+source: 'Empirical Cycling Podcast — Kolie Moore & Shayne Gaffney (Perspectives #7)'
+author: Kolie Moore
+date: '2022-01-10'
+summary: An analytical breakdown of macro-scale workout design for digital platforms, addressing ramp-test FTP overestimation, sweetspot intensity buffering, indoor monotony mitigation, and training architecture for time-crunched athletes.
 key_takeaways:
-  - "The Ramp Test Inflation Dilemma: Short step/ramp tests frequently overestimate true Functional Threshold Power (FTP) by 10–15%+ due to high anaerobic work capacity ($W'$); mass-market workouts must use sub-threshold intensity buffers to prevent catastrophic failure."
-  - "Sweetspot as a Population Safety Margin: Prescribing sweetspot ($88{--}93%$ FTP) ensures athletes receive a robust threshold/sub-threshold metabolic stimulus without crossing critical power into unsustainable glycolytic acidosis."
-  - "Monotony Reduction via Neuromuscular Manipulation: Long static intervals on fixed indoor trainers cause severe mental and localized muscular fatigue; alternating cadence (e.g., 95 RPM spin vs. 65 RPM torque) preserves metabolic load while varying motor unit recruitment."
-  - "Time-Crunched Microcycle Design: For athletes limited to 4–6 hours per week, weekday sessions capped at 45–60 minutes and weekend sessions at 75–90 minutes maximize consistency, autonomic compliance, and progressive overload."
+- 'The Ramp Test Inflation Dilemma: Short step/ramp tests frequently overestimate true Functional Threshold Power (FTP) by 10–15%+ due to high anaerobic work capacity ($W''$); mass-market workouts must use sub-threshold intensity buffers to prevent catastrophic failure.'
+- 'Sweetspot as a Population Safety Margin: Prescribing sweetspot ($88{--}93%$ FTP) ensures athletes receive a robust threshold/sub-threshold metabolic stimulus without crossing critical power into unsustainable glycolytic acidosis.'
+- 'Monotony Reduction via Neuromuscular Manipulation: Long static intervals on fixed indoor trainers cause severe mental and localized muscular fatigue; alternating cadence (e.g., 95 RPM spin vs. 65 RPM torque) preserves metabolic load while varying motor unit recruitment.'
+- 'Time-Crunched Microcycle Design: For athletes limited to 4–6 hours per week, weekday sessions capped at 45–60 minutes and weekend sessions at 75–90 minutes maximize consistency, autonomic compliance, and progressive overload.'
 ---
 
 # Designing Workouts for Mass Populations: Ramp Test Inflation, Sweetspot Buffering, & Time-Crunched Architecture — Complete Guide

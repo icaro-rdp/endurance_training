@@ -1,20 +1,20 @@
 ---
-title: "Ten Minute Tips #36: How To Leave Your Coach (or Yourself) Workout Feedback — Complete Guide"
+title: 'Ten Minute Tips #36: How To Leave Your Coach (or Yourself) Workout Feedback — Complete Guide'
 category: planning
 topics:
-  - "Microcycles"
-  - "Power_vs_HR"
-  - "Volume_quantification"
-source: "Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #36)"
-author: "Kolie Moore"
-date: "2024-03-15"
-summary: "A practical and physiological framework for logging workout feedback, utilizing RPE-Power-HR triangulation, autoregulating microcycles, and identifying non-training fatigue limiters."
+- Microcycle_and_schedule_design
+- Autonomic_and_cardiac_monitoring
+- Workload_quantification_and_modeling
+source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #36)'
+author: Kolie Moore
+date: '2024-03-15'
+summary: A practical and physiological framework for logging workout feedback, utilizing RPE-Power-HR triangulation, autoregulating microcycles, and identifying non-training fatigue limiters.
 key_takeaways:
-  - "Training plans are dynamic hypotheses written in sand; rolling microcycles (1–2 weeks) must be continuously autoregulated based on athlete subjective feedback and physiological state."
-  - "The four primary non-training fatigue limiters that degrade adaptation: (1) Sickness/Immune Activation, (2) Sleep Debt, (3) Life/Work Stress, and (4) Off-Bike Nutritional Deficits."
-  - "On-bike fueling cannot rescue 'bad legs' caused by multi-day off-bike glycogen deficits; muscle glycogen synthesis occurs primarily during post-exercise resting states."
-  - "Triangulate three distinct data streams: Power (mechanical work), Heart Rate (cardiovascular/autonomic strain), and RPE (central perceptual effort) to diagnose physiological status."
-  - "Athletes must maintain complete agency to autoregulate sessions in real time: if power feels like 'pulling teeth' with depressed HR, downshift immediately to Zone 2, Active Recovery, or rest."
+- Training plans are dynamic hypotheses written in sand; rolling microcycles (1–2 weeks) must be continuously autoregulated based on athlete subjective feedback and physiological state.
+- 'The four primary non-training fatigue limiters that degrade adaptation: (1) Sickness/Immune Activation, (2) Sleep Debt, (3) Life/Work Stress, and (4) Off-Bike Nutritional Deficits.'
+- On-bike fueling cannot rescue 'bad legs' caused by multi-day off-bike glycogen deficits; muscle glycogen synthesis occurs primarily during post-exercise resting states.
+- 'Triangulate three distinct data streams: Power (mechanical work), Heart Rate (cardiovascular/autonomic strain), and RPE (central perceptual effort) to diagnose physiological status.'
+- 'Athletes must maintain complete agency to autoregulate sessions in real time: if power feels like ''pulling teeth'' with depressed HR, downshift immediately to Zone 2, Active Recovery, or rest.'
 ---
 
 # Ten Minute Tips #36: How To Leave Your Coach (or Yourself) Workout Feedback — Complete Guide

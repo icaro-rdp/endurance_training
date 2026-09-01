@@ -1,22 +1,22 @@
 ---
-title: "Ten Minute Tips #22: Training Myths, Part 2 — Complete Guide"
+title: 'Ten Minute Tips #22: Training Myths, Part 2 — Complete Guide'
 category: planning
 topics:
-  - "FTP"
-  - "Sprint_performance"
-  - "Lactate_shuttle"
-  - "Fast_start_intervals"
-  - "Durability"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Houston"
-author: "Kolie Moore"
-date: "2022-08-02"
-summary: "Kolie Moore and Kyle Houston deconstruct three major training myths centered around race specificity, showing why sprinters require high aerobic capacity, why crit racers fail when focusing solely on anaerobic bursts, and why FTP development is vital for all non-time trialists."
+- FTP_and_functional_metrics
+- Sprint_and_anaerobic_intervals
+- Lactate_kinetics_and_metabolism
+- VO2max_and_aerobic_hiit
+- Durability_and_fatigue_mechanisms
+source: Empirical Cycling Podcast — Kolie Moore & Kyle Houston
+author: Kolie Moore
+date: '2022-08-02'
+summary: Kolie Moore and Kyle Houston deconstruct three major training myths centered around race specificity, showing why sprinters require high aerobic capacity, why crit racers fail when focusing solely on anaerobic bursts, and why FTP development is vital for all non-time trialists.
 key_takeaways:
-  - "The biological mechanisms driving aerobic adaptation (mitochondrial biogenesis, capillarization, stroke volume) are identical across sprinters, diesels, and all muscle fiber distributions."
-  - "Fatigue is the ultimate power limiter: sprinters lose peak sprint wattage when overwhelmed by aerobic fatigue, requiring careful management of recovery rather than different aerobic physiology."
-  - "Criterium racing is predominantly aerobic; an elevated FTP allows riders to absorb surges sub-threshold, preserving the anaerobic reserve (W') strictly for the final sprint."
-  - "Sprint training must be performed fresh: executing sprints when power drops below 95% of maximum trains low force production rather than neuromuscular recruitment."
-  - "Sprinters performing VO2max intervals should avoid extreme all-out fast starts; their large anaerobic reserve will blow through energy stores in 45–60s, destroying the aerobic duration of the interval."
+- The biological mechanisms driving aerobic adaptation (mitochondrial biogenesis, capillarization, stroke volume) are identical across sprinters, diesels, and all muscle fiber distributions.
+- 'Fatigue is the ultimate power limiter: sprinters lose peak sprint wattage when overwhelmed by aerobic fatigue, requiring careful management of recovery rather than different aerobic physiology.'
+- Criterium racing is predominantly aerobic; an elevated FTP allows riders to absorb surges sub-threshold, preserving the anaerobic reserve (W') strictly for the final sprint.
+- 'Sprint training must be performed fresh: executing sprints when power drops below 95% of maximum trains low force production rather than neuromuscular recruitment.'
+- Sprinters performing VO2max intervals should avoid extreme all-out fast starts; their large anaerobic reserve will blow through energy stores in 45–60s, destroying the aerobic duration of the interval.
 ---
 
 # Ten Minute Tips #22: Training Myths, Part 2 — Complete Guide

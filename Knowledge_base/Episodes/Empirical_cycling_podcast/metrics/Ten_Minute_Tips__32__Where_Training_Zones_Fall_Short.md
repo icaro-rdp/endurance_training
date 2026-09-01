@@ -1,22 +1,21 @@
 ---
-title: "Ten Minute Tips #32: Where Training Zones Fall Short — Complete Guide"
+title: 'Ten Minute Tips #32: Where Training Zones Fall Short — Complete Guide'
 category: physiology
 topics:
-  - "Power_vs_HR"
-  - "FTP"
-  - "Lab_vs_field"
-  - "TTA_TTE"
-  - "Volume_quantification"
-source: "Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #32)"
-author: "Kolie Moore"
-date: "2024-01-09"
-summary: "Critiques the misuse of rigid power and heart rate training zones, illustrating why zones were created as descriptive rather than prescriptive tools, and presenting a practical 3-zone physiological framework based on muscular fatigue and progressive overload."
+- Autonomic_and_cardiac_monitoring
+- FTP_and_functional_metrics
+- Physiological_testing_and_diagnostics
+- Workload_quantification_and_modeling
+source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #32)'
+author: Kolie Moore
+date: '2024-01-09'
+summary: Critiques the misuse of rigid power and heart rate training zones, illustrating why zones were created as descriptive rather than prescriptive tools, and presenting a practical 3-zone physiological framework based on muscular fatigue and progressive overload.
 key_takeaways:
-  - "Training zones are descriptive categories designed to bin past data, not prescriptive rules that dictate optimal cellular adaptation."
-  - "Traditional zone models lack a duration component; doing 1 minute in a 'VO2 zone' does not stimulate VO2max, and repeating fixed-duration intervals (e.g. 2x20 min) without extending TTE fails to provide progressive overload."
-  - "Supra-FTP intensities cannot be accurately prescribed via rigid percentages of FTP (e.g. 120% FTP); individual anaerobic work capacity ($W'$) varies drastically (110% to 150%+), requiring maximal-effort / RPE-based execution ('Send it')."
-  - "Cellular adaptations (AMPK, CaMK, PGC-1α, mitochondrial enzymes) operate on a smooth physiological continuum dictated by motor unit recruitment and duration, not quantum jumps between arbitrary percentage boundaries."
-  - "The simplified 3-Zone Functional Framework: (1) Sub-LT1 Endurance (ride long, minimize fatigue), (2) LT1 to FTP Threshold (push duration to muscular fatigue limit / extend TTE), and (3) Supra-FTP (time-targeted maximal repeatable efforts)."
+- Training zones are descriptive categories designed to bin past data, not prescriptive rules that dictate optimal cellular adaptation.
+- Traditional zone models lack a duration component; doing 1 minute in a 'VO2 zone' does not stimulate VO2max, and repeating fixed-duration intervals (e.g. 2x20 min) without extending TTE fails to provide progressive overload.
+- Supra-FTP intensities cannot be accurately prescribed via rigid percentages of FTP (e.g. 120% FTP); individual anaerobic work capacity ($W'$) varies drastically (110% to 150%+), requiring maximal-effort / RPE-based execution ('Send it').
+- Cellular adaptations (AMPK, CaMK, PGC-1α, mitochondrial enzymes) operate on a smooth physiological continuum dictated by motor unit recruitment and duration, not quantum jumps between arbitrary percentage boundaries.
+- 'The simplified 3-Zone Functional Framework: (1) Sub-LT1 Endurance (ride long, minimize fatigue), (2) LT1 to FTP Threshold (push duration to muscular fatigue limit / extend TTE), and (3) Supra-FTP (time-targeted maximal repeatable efforts).'
 ---
 
 # Ten Minute Tips #32: Where Training Zones Fall Short — Complete Guide

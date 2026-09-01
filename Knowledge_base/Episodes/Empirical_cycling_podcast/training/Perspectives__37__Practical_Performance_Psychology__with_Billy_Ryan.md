@@ -1,19 +1,19 @@
 ---
-title: "Perspectives #37: Practical Performance Psychology — Complete Guide"
+title: 'Perspectives #37: Practical Performance Psychology — Complete Guide'
 category: planning
 topics:
-  - "Durability"
-  - "Microcycles"
-source: "Empirical Cycling Podcast — Kolie Moore with Billy Ryan"
-author: "Kolie Moore"
-date: "2024-12-02"
-summary: "An applied reference guide to modern performance psychology utilizing Acceptance and Commitment Training (ACT), detailing psychological flexibility, cognitive defusion ('dropping the rope'), attentional control, and managing the 'rigid flexibility' trap in endurance athletics."
+- Durability_and_fatigue_mechanisms
+- Microcycle_and_schedule_design
+source: Empirical Cycling Podcast — Kolie Moore with Billy Ryan
+author: Kolie Moore
+date: '2024-12-02'
+summary: An applied reference guide to modern performance psychology utilizing Acceptance and Commitment Training (ACT), detailing psychological flexibility, cognitive defusion ('dropping the rope'), attentional control, and managing the 'rigid flexibility' trap in endurance athletics.
 key_takeaways:
-  - "Modern Acceptance and Commitment Training (ACT) departs from traditional Cognitive Behavioral Therapy (CBT) by changing an athlete's functional relationship to thoughts and sensations rather than attempting to eliminate or dispute negative internal chatter."
-  - "Endurance athletes frequently suffer from 'rigid flexibility'—the capacity to push through severe physical nociception while remaining completely intolerant to emotional discomfort (e.g., fear of inadequacy, quitting a damaged workout, adhering to rest weeks)."
-  - "'Dropping the rope' halts the cognitive tug-of-war against unhelpful thoughts ('I'm not ready'), preserving precious attentional bandwidth for race tactics, technical bike handling, and pacing."
-  - "Actions of competence precede feelings of confidence: confidence acts merely as a performance lubricant, but peak athletic execution requires operating with courage regardless of whether internal sensations feel optimal."
-  - "Attentional relaxation is distinct from physiological relaxation: elite competitors manage high sympathetic nervous system arousal with a flexible, wide attentional field ('wise mind') by holding outcomes lightly while pursuing execution passionately."
+- Modern Acceptance and Commitment Training (ACT) departs from traditional Cognitive Behavioral Therapy (CBT) by changing an athlete's functional relationship to thoughts and sensations rather than attempting to eliminate or dispute negative internal chatter.
+- Endurance athletes frequently suffer from 'rigid flexibility'—the capacity to push through severe physical nociception while remaining completely intolerant to emotional discomfort (e.g., fear of inadequacy, quitting a damaged workout, adhering to rest weeks).
+- '''Dropping the rope'' halts the cognitive tug-of-war against unhelpful thoughts (''I''m not ready''), preserving precious attentional bandwidth for race tactics, technical bike handling, and pacing.'
+- 'Actions of competence precede feelings of confidence: confidence acts merely as a performance lubricant, but peak athletic execution requires operating with courage regardless of whether internal sensations feel optimal.'
+- 'Attentional relaxation is distinct from physiological relaxation: elite competitors manage high sympathetic nervous system arousal with a flexible, wide attentional field (''wise mind'') by holding outcomes lightly while pursuing execution passionately.'
 ---
 
 # Perspectives #37: Practical Performance Psychology — Complete Guide

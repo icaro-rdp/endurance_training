@@ -1,19 +1,19 @@
 ---
-title: "Perspectives #33: The Psychology Of Excellence — Complete Guide"
+title: 'Perspectives #33: The Psychology Of Excellence — Complete Guide'
 category: planning
 topics:
-  - "Microcycles"
-  - "Durability"
-  - "Progressive_overload"
-source: "Empirical Cycling Podcast — Kolie Moore with Prof. Patrick Smith"
-author: "Kolie Moore"
-date: "2024-05-26"
-summary: "An in-depth exploration of performance psychology, Acceptance and Commitment Therapy (ACT) frameworks, values clarification, somatic pre-race anxiety, and psychological feedback loops for sustained athletic excellence."
+- Microcycle_and_schedule_design
+- Durability_and_fatigue_mechanisms
+- Periodization_models_and_macrocycles
+source: Empirical Cycling Podcast — Kolie Moore with Prof. Patrick Smith
+author: Kolie Moore
+date: '2024-05-26'
+summary: An in-depth exploration of performance psychology, Acceptance and Commitment Therapy (ACT) frameworks, values clarification, somatic pre-race anxiety, and psychological feedback loops for sustained athletic excellence.
 key_takeaways:
-  - "Developing an athlete is an unglamorous process of 'stacking bricks and carrying water'—compounding mundane, repetitive behaviors held together by soft skills and recovery systems."
-  - "Pre-race nerves and emotional intensity are not flaws to be eliminated through toxic positivity, but evolutionary signals indicating that the upcoming event is deeply meaningful to the athlete."
-  - "Linguistic representations of internal states are inherently imprecise; athletes must learn to 'hold lightly' to negative critical self-talk while taking value-aligned committed actions."
-  - "Performance ecosystems function best with specialized domain experts (coaches, psychologists, nutritionists) rather than coaches attempting to be all-in-one 'Swiss Army knives.'"
+- Developing an athlete is an unglamorous process of 'stacking bricks and carrying water'—compounding mundane, repetitive behaviors held together by soft skills and recovery systems.
+- Pre-race nerves and emotional intensity are not flaws to be eliminated through toxic positivity, but evolutionary signals indicating that the upcoming event is deeply meaningful to the athlete.
+- Linguistic representations of internal states are inherently imprecise; athletes must learn to 'hold lightly' to negative critical self-talk while taking value-aligned committed actions.
+- Performance ecosystems function best with specialized domain experts (coaches, psychologists, nutritionists) rather than coaches attempting to be all-in-one 'Swiss Army knives.'
 ---
 
 # Perspectives #33: The Psychology Of Excellence — Complete Guide

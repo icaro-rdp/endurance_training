@@ -1,17 +1,12 @@
 ---
-title: How Environmental Temperature Influence Road Cycling Performance? Men vs Women
-  Differences?
+title: How Environmental Temperature Influence Road Cycling Performance? Men vs Women Differences?
 category: physiology
 topics:
-- Short_intervals
-source: 'knowledgeiswatt.substack.com/p/16-how-environmental-temperature Date: July
-  12, 2024'
+- VO2max_and_aerobic_hiit
+source: 'knowledgeiswatt.substack.com/p/16-how-environmental-temperature Date: July 12, 2024'
 author: Endurance Research
-date: 'Source: knowledgeiswatt.substack.com/p/16-how-environmental-temperature  July
-  12, 2024'
-summary: 'A road cycling’s unique features is to face all temperature conditions:
-  from the extreme cold typical of some Giro d’Italia’s alpine stages , to the scorching
-  heat of Tour de France and Vuelta'
+date: 'Source: knowledgeiswatt.substack.com/p/16-how-environmental-temperature  July 12, 2024'
+summary: 'A road cycling’s unique features is to face all temperature conditions: from the extreme cold typical of some Giro d’Italia’s alpine stages , to the scorching heat of Tour de France and Vuelta'
 ---
 
 # How Environmental Temperature Influence Road Cycling Performance? Men vs Women Differences?

@@ -1,19 +1,19 @@
 ---
-title: "Periodizing Strength Training for Cycling Performance — Complete Guide"
+title: Periodizing Strength Training for Cycling Performance — Complete Guide
 category: training
 topics:
-  - "Periodization"
-  - "Unilateral"
-  - "Sprint_performance"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Ten Minute Tips #15)"
-author: "Kolie Moore & Kyle Hanson"
-date: "2021-11-25"
-summary: "A complete periodization blueprint for cyclists across the annual macrocycle, detailing adaptation, hypertrophy, bilateral strength, unilateral neural drive, in-season maintenance, and plyometric critique."
+- Periodization_models_and_macrocycles
+- Strength_and_resistance_training
+- Sprint_and_anaerobic_intervals
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Ten Minute Tips #15)'
+author: Kolie Moore & Kyle Hanson
+date: '2021-11-25'
+summary: A complete periodization blueprint for cyclists across the annual macrocycle, detailing adaptation, hypertrophy, bilateral strength, unilateral neural drive, in-season maintenance, and plyometric critique.
 key_takeaways:
-  - "Structure strength into 4 distinct phases: Anatomical Adaptation (Wks 1–2), Hypertrophy/Base (Wks 3–6), Bilateral Strength (Wks 7–10), and Unilateral Neural Drive (Wks 11–14)."
-  - "The Unilateral Neural Drive Phase flips the exercise order: placing single-leg squats first when fresh to directly maximize cycling-specific force transfer and exploit the bilateral deficit."
-  - "In-season maintenance requires minimal volume: 1 session every 1–2 weeks with 2 sets of 5–8 submaximal reps (RPE 6–7) retains strength while preserving recovery for racing."
-  - "Plyometrics (box jumps, drop jumps) present high injury risk with minimal cycling transfer; use jump rope for low-impact bone density instead."
+- 'Structure strength into 4 distinct phases: Anatomical Adaptation (Wks 1–2), Hypertrophy/Base (Wks 3–6), Bilateral Strength (Wks 7–10), and Unilateral Neural Drive (Wks 11–14).'
+- 'The Unilateral Neural Drive Phase flips the exercise order: placing single-leg squats first when fresh to directly maximize cycling-specific force transfer and exploit the bilateral deficit.'
+- 'In-season maintenance requires minimal volume: 1 session every 1–2 weeks with 2 sets of 5–8 submaximal reps (RPE 6–7) retains strength while preserving recovery for racing.'
+- Plyometrics (box jumps, drop jumps) present high injury risk with minimal cycling transfer; use jump rope for low-impact bone density instead.
 ---
 
 # Periodizing Strength Training for Cycling Performance — Complete Guide

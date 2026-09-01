@@ -2,16 +2,13 @@
 title: VO2max Training — Complete Guide
 category: planning
 topics:
-- FTP
-- VO2max
-- Cardiac_hypertrophy
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+- Cardiovascular_and_hemodynamics
 source: Empirical Cycling Podcast — Kelly Moore & James McKay
 author: Endurance Research
 date: '2025-01-01'
-summary: 'VO2max is the ceiling on your FTP. You cannot have an FTP higher than your
-  VO2max, and for most athletes FTP sits somewhere around 80–86% of VO2max. If you
-  are already near your ceiling, hammering more FTP intervals returns almost nothing.
-  Raising VO2max by 10 W opens room to add far more than 10 W '
+summary: 'VO2max is the ceiling on your FTP. You cannot have an FTP higher than your VO2max, and for most athletes FTP sits somewhere around 80–86% of VO2max. If you are already near your ceiling, hammering more FTP intervals returns almost nothing. Raising VO2max by 10 W opens room to add far more than 10 W '
 ---
 
 # VO2max Training — Complete Guide

@@ -1,18 +1,18 @@
 ---
-title: "Sprint Technique Drills & Neuromuscular Coordination — Complete Guide"
+title: Sprint Technique Drills & Neuromuscular Coordination — Complete Guide
 category: training
 topics:
-  - "Sprint_performance"
-  - "Heavy_torque"
-source: "Empirical Cycling Podcast — Kolie Moore (Ten Minute Tips #9)"
-author: "Kolie Moore"
-date: "2020-10-20"
-summary: "A practical guide to mastering sprint biomechanics, force stabilization, and high-cadence neuromuscular coordination through targeted big-gear, small-gear, and high-speed sprint drills."
+- Sprint_and_anaerobic_intervals
+- Torque_and_cadence_drills
+source: 'Empirical Cycling Podcast — Kolie Moore (Ten Minute Tips #9)'
+author: Kolie Moore
+date: '2020-10-20'
+summary: A practical guide to mastering sprint biomechanics, force stabilization, and high-cadence neuromuscular coordination through targeted big-gear, small-gear, and high-speed sprint drills.
 key_takeaways:
-  - "Newton's Third Law governs sprinting: pushing down with maximal force requires equal and opposite stabilization through the arms, handlebars, and core to prevent force leakage."
-  - "Sprint power at high cadence relies on muscle relaxation kinetics: muscles must relax instantly between strokes to contract rapidly on the next downstroke."
-  - "A 3-part drill progression (Big Gear Stomps, Small Gear Spin-Ups, and Max Power High-Speed Roll-Ins) isolates and integrates force stabilization and cadence fluency."
-  - "Sprint technique drills require maximal freshness and low total volume (60–90 seconds total sprint time per session) to reinforce neural patterning without inducing metabolic fatigue."
+- 'Newton''s Third Law governs sprinting: pushing down with maximal force requires equal and opposite stabilization through the arms, handlebars, and core to prevent force leakage.'
+- 'Sprint power at high cadence relies on muscle relaxation kinetics: muscles must relax instantly between strokes to contract rapidly on the next downstroke.'
+- A 3-part drill progression (Big Gear Stomps, Small Gear Spin-Ups, and Max Power High-Speed Roll-Ins) isolates and integrates force stabilization and cadence fluency.
+- Sprint technique drills require maximal freshness and low total volume (60–90 seconds total sprint time per session) to reinforce neural patterning without inducing metabolic fatigue.
 ---
 
 # Sprint Technique Drills & Neuromuscular Coordination — Complete Guide

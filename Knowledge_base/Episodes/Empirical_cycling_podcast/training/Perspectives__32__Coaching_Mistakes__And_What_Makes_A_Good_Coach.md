@@ -1,20 +1,20 @@
 ---
-title: "Perspectives #32: Coaching Mistakes, And What Makes A Good Coach — Complete Guide"
+title: 'Perspectives #32: Coaching Mistakes, And What Makes A Good Coach — Complete Guide'
 category: planning
 topics:
-  - "Microcycles"
-  - "Progressive_overload"
-  - "TTA_TTE"
-  - "Volume_quantification"
-source: "Empirical Cycling Podcast — Kolie Moore with Adam Pulford"
-author: "Kolie Moore"
-date: "2024-04-24"
-summary: "An unfiltered masterclass on endurance coaching methodology, detailing critical coaching mistakes—excessive intensity frequency, flawed threshold testing, over-reliance on power zones, communication failures—and the core principles of effective coach-athlete partnerships."
+- Microcycle_and_schedule_design
+- Periodization_models_and_macrocycles
+- FTP_and_functional_metrics
+- Workload_quantification_and_modeling
+source: Empirical Cycling Podcast — Kolie Moore with Adam Pulford
+author: Kolie Moore
+date: '2024-04-24'
+summary: An unfiltered masterclass on endurance coaching methodology, detailing critical coaching mistakes—excessive intensity frequency, flawed threshold testing, over-reliance on power zones, communication failures—and the core principles of effective coach-athlete partnerships.
 key_takeaways:
-  - "Effective coaching balances objective data analysis with deep human empathy; athletes require clear communication, emotional alignment, and a collaborative partnership rather than an authoritarian prescription."
-  - "Prescribing more than 2–3 high-intensity sessions per week for non-full-time athletes leads to chronic autonomic overreaching; survival of high intensity is often confused with adaptive success."
-  - "Short field tests (e.g., 2x8 min or 20 min) systematically overestimate threshold in glycolytic/anaerobic athletes; extensive tests and subjective RPE calibration are required for accurate zone prescription."
-  - "Coaches must 'trust but verify' athlete recovery and nutrition metrics rather than assuming reported compliance matches biological reality."
+- Effective coaching balances objective data analysis with deep human empathy; athletes require clear communication, emotional alignment, and a collaborative partnership rather than an authoritarian prescription.
+- Prescribing more than 2–3 high-intensity sessions per week for non-full-time athletes leads to chronic autonomic overreaching; survival of high intensity is often confused with adaptive success.
+- Short field tests (e.g., 2x8 min or 20 min) systematically overestimate threshold in glycolytic/anaerobic athletes; extensive tests and subjective RPE calibration are required for accurate zone prescription.
+- Coaches must 'trust but verify' athlete recovery and nutrition metrics rather than assuming reported compliance matches biological reality.
 ---
 
 # Perspectives #32: Coaching Mistakes, And What Makes A Good Coach — Complete Guide

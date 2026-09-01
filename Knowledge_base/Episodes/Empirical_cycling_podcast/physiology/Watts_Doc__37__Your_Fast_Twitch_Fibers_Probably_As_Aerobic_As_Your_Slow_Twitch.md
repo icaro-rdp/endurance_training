@@ -1,21 +1,21 @@
 ---
-title: "Your Fast-Twitch Fibers Are Probably As Aerobic As Your Slow-Twitch: Motor Unit Recruitment, Cross-Country Skiers, & Metabolic Plasticity — Complete Guide"
-category: "physiology"
+title: 'Your Fast-Twitch Fibers Are Probably As Aerobic As Your Slow-Twitch: Motor Unit Recruitment, Cross-Country Skiers, & Metabolic Plasticity — Complete Guide'
+category: physiology
 topics:
-  - "Aerobic_base"
-  - "Mitochondrial_density"
-  - "Lactate_shuttle"
-  - "Sprint_performance"
-source: "Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #37)"
-author: "Kolie Moore"
-date: "2022-03-17"
-summary: "An advanced investigation into skeletal muscle fiber plasticity, analyzing elite cross-country skier biopsy data, single-fiber metabolic changes with increasing work rates, and why fast-twitch (Type IIa) fibers in trained endurance athletes develop massive aerobic and oxidative capacities."
+- Zone2_and_endurance_base
+- Mitochondrial_and_cellular_adaptation
+- Lactate_kinetics_and_metabolism
+- Sprint_and_anaerobic_intervals
+source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #37)'
+author: Kolie Moore
+date: '2022-03-17'
+summary: An advanced investigation into skeletal muscle fiber plasticity, analyzing elite cross-country skier biopsy data, single-fiber metabolic changes with increasing work rates, and why fast-twitch (Type IIa) fibers in trained endurance athletes develop massive aerobic and oxidative capacities.
 key_takeaways:
-  - "The textbook belief that fast-twitch fibers are strictly anaerobic originated from 1970s animal studies on domestic cats; in endurance-trained humans, Type IIa fast-twitch fibers develop oxidative capacities virtually identical to Type I slow-twitch fibers."
-  - "Biopsy data from elite cross-country skiers reveals that arm triceps (predominantly fast-twitch) possess the exact same Citrate Synthase (CS) mitochondrial enzyme activity as leg vastus lateralis (predominantly slow-twitch)."
-  - "Single-fiber metabolic analysis (Coggan, 1987) proves that fast-twitch motor units are recruited and actively oxidizing fuel even at low endurance intensities two stages below lactate threshold."
-  - "Motor unit recruitment is strictly governed by Henneman's Size Principle (force and velocity demand), not by an athlete's metabolic preference or training zone."
-  - "Endurance cycling adaptations transform Type IIx fibers into highly oxidative Type IIa and hybrid fibers, capable of rapidly oxidizing lactate and blood glucose via the Krebs cycle and electron transport chain."
+- The textbook belief that fast-twitch fibers are strictly anaerobic originated from 1970s animal studies on domestic cats; in endurance-trained humans, Type IIa fast-twitch fibers develop oxidative capacities virtually identical to Type I slow-twitch fibers.
+- Biopsy data from elite cross-country skiers reveals that arm triceps (predominantly fast-twitch) possess the exact same Citrate Synthase (CS) mitochondrial enzyme activity as leg vastus lateralis (predominantly slow-twitch).
+- Single-fiber metabolic analysis (Coggan, 1987) proves that fast-twitch motor units are recruited and actively oxidizing fuel even at low endurance intensities two stages below lactate threshold.
+- Motor unit recruitment is strictly governed by Henneman's Size Principle (force and velocity demand), not by an athlete's metabolic preference or training zone.
+- Endurance cycling adaptations transform Type IIx fibers into highly oxidative Type IIa and hybrid fibers, capable of rapidly oxidizing lactate and blood glucose via the Krebs cycle and electron transport chain.
 ---
 
 # Your Fast-Twitch Fibers Are Probably As Aerobic As Your Slow-Twitch: Motor Unit Recruitment, Cross-Country Skiers, & Metabolic Plasticity — Complete Guide

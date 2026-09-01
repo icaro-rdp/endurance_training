@@ -2,19 +2,15 @@
 title: Training at Fatmax Without Any Lab Test
 category: training
 topics:
-- FTP
-- VO2max
-- FatMax
-- LT2_VT2
-- Durability
-source: 'knowledgeiswatt.substack.com/p/67-training-at-fatmax-without-any Date: March
-  17,'
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+- Substrate_utilization_and_fat_oxidation
+- Thresholds_and_metabolic_domains
+- Durability_and_fatigue_mechanisms
+source: 'knowledgeiswatt.substack.com/p/67-training-at-fatmax-without-any Date: March 17,'
 author: Endurance Research
-date: 'Source: knowledgeiswatt.substack.com/p/67-training-at-fatmax-without-any  March
-  17,'
-summary: ‘Fatmax is the intensity at which the maximum rate of fat oxidation is elicited’.
-  This is usually expressed in power output or heart rate range (for example 220-240
-  W or 130140 bpm).
+date: 'Source: knowledgeiswatt.substack.com/p/67-training-at-fatmax-without-any  March 17,'
+summary: ‘Fatmax is the intensity at which the maximum rate of fat oxidation is elicited’. This is usually expressed in power output or heart rate range (for example 220-240 W or 130140 bpm).
 ---
 
 # Training at Fatmax Without Any Lab Test
