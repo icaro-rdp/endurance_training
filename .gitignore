@@ -53,3 +53,4 @@ __pycache__/
 # Podcast transcripts
 **/raw_transcripts/
 transcripts/
+:memory:.ses

@@ -48,6 +48,8 @@ def handle_search(engine: KBEngine, args: argparse.Namespace) -> None:
 
 
 def handle_build_index(engine: KBEngine, _args: argparse.Namespace) -> None:
+    print("Rebuilding Sitemap and Taxonomy...")
+    engine.build_sitemap()
     print("Synchronizing Knowledge Sources into the passage index...")
     status = engine.build_index()
     print(
@@ -75,10 +77,6 @@ def handle_build_index(engine: KBEngine, _args: argparse.Namespace) -> None:
             f"validation {metrics.validation_seconds:.2f}s, "
             f"replacement {metrics.replacement_seconds:.2f}s)."
         )
-
-    print("\nRebuilding Sitemap...")
-    engine.build_sitemap()
-    print("Sitemap rebuilt successfully!")
 
 
 def handle_status(engine: KBEngine, _args: argparse.Namespace) -> None:

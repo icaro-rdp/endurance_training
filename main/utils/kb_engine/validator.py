@@ -90,7 +90,9 @@ class KBValidator:
 
         sitemap_content = "\n".join(lines)
         try:
-            self.index_file.write_text(sitemap_content, encoding="utf-8")
+            if not self.index_file.exists() or self.index_file.read_text(encoding="utf-8") != sitemap_content:
+                self.index_file.write_text(sitemap_content, encoding="utf-8")
+            self.taxonomy.generate_taxonomy_markdown(self.kb_dir)
         except OSError as error:
             raise InvalidKnowledgeSourceError(
                 "INDEX.md", f"sitemap could not be written: {error}"

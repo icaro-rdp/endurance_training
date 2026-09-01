@@ -111,4 +111,3 @@ Rules:
 The passage layer derives `source_type`, repository-relative path,
 `source_slug`, passage identifiers and boundaries, citation line ranges, and
 size diagnostics. Those values do not belong in source frontmatter.
-
