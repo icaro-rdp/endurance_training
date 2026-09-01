@@ -12,7 +12,14 @@ import urllib.request
 from pathlib import Path
 from typing import Any, Protocol
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    Field,
+    GetCoreSchemaHandler,
+    field_validator,
+)
+from pydantic_core import CoreSchema, core_schema
 
 from main.utils.kb_engine.errors import (
     MissingDependencyError,
@@ -25,15 +32,51 @@ from main.utils.kb_engine.taxonomy import TaxonomyRegistry
 logger = logging.getLogger(__name__)
 
 DEFAULT_LOCAL_MODEL = "mlx-community/Qwen2.5-7B-Instruct-4bit"
+# Model backends return untyped JSON; Pydantic validates it at the classifier seam.
+ModelPayload = dict[str, Any]
+
+
+class CanonicalCategory(str):
+    """Category value constrained by the canonical taxonomy."""
+
+    @classmethod
+    def __get_pydantic_core_schema__(
+        cls,
+        _source_type: object,
+        _handler: GetCoreSchemaHandler,
+    ) -> CoreSchema:
+        """Build validation and JSON Schema from the taxonomy registry."""
+        return core_schema.no_info_after_validator_function(
+            cls,
+            core_schema.literal_schema(TaxonomyRegistry.CANONICAL_CATEGORIES),
+        )
+
+
+class CanonicalTopic(str):
+    """Topic value constrained by the canonical taxonomy."""
+
+    @classmethod
+    def __get_pydantic_core_schema__(
+        cls,
+        _source_type: object,
+        _handler: GetCoreSchemaHandler,
+    ) -> CoreSchema:
+        """Build validation and JSON Schema from the taxonomy registry."""
+        return core_schema.no_info_after_validator_function(
+            cls,
+            core_schema.literal_schema(list(TaxonomyRegistry.CANONICAL_TOPICS)),
+        )
 
 
 class DocumentTaggingResult(BaseModel):
     """Structured data contract for model topic auto-tagging output."""
 
-    category: str = Field(
+    model_config = ConfigDict(extra="forbid")
+
+    category: CanonicalCategory = Field(
         description="The primary operational macro-category (resolved bottom-up)."
     )
-    topics: list[str] = Field(
+    topics: list[CanonicalTopic] = Field(
         description="All specific canonical topics discussed substantively in depth.",
         min_length=1,
         max_length=8,
@@ -42,98 +85,43 @@ class DocumentTaggingResult(BaseModel):
         description=(
             "One or two faithful, high-density English sentences summarizing "
             "key takeaways."
-        )
+        ),
+        min_length=1,
     )
     confidence_score: float = Field(default=1.0, ge=0.0, le=1.0)
     topic_evidence: dict[str, str] = Field(default_factory=dict)
 
-    @field_validator("category")
-    @classmethod
-    def validate_category(cls, value: str) -> str:
-        """Validate category strictly against canonical 4-pillar categories."""
-        if value not in TaxonomyRegistry.CANONICAL_CATEGORIES:
-            raise ValueError(
-                f"Category '{value}' is not a valid canonical category: "
-                f"{TaxonomyRegistry.CANONICAL_CATEGORIES}"
-            )
-        return value
-
     @field_validator("topics")
     @classmethod
-    def validate_topics(cls, topics: list[str]) -> list[str]:
-        """Validate topics strictly against canonical 36 topics."""
-        if not topics:
-            raise ValueError("Topics list cannot be empty.")
-        if len(topics) > 8:
-            raise ValueError(f"Topics list cannot exceed 8 topics (got {len(topics)}).")
+    def deduplicate_topics(
+        cls,
+        topics: list[CanonicalTopic],
+    ) -> list[CanonicalTopic]:
+        """Deduplicate canonical topics while preserving their order."""
+        deduped: list[CanonicalTopic] = []
         for topic in topics:
-            if topic not in TaxonomyRegistry.CANONICAL_TOPICS:
-                raise ValueError(
-                    f"Topic '{topic}' is not a valid canonical topic in taxonomy."
-                )
-        # Deduplicate while preserving order
-        deduped: list[str] = []
-        for t in topics:
-            if t not in deduped:
-                deduped.append(t)
+            if topic not in deduped:
+                deduped.append(topic)
         return deduped
 
+    @field_validator("summary")
     @classmethod
-    def json_schema_for_taxonomy(
-        cls, taxonomy: TaxonomyRegistry | None = None
-    ) -> dict[str, Any]:
-        """Export dynamic JSON schema constrained by canonical taxonomy enums."""
-        categories = (
-            taxonomy.categories()
-            if taxonomy
-            else list(TaxonomyRegistry.CANONICAL_CATEGORIES)
-        )
-        topics = (
-            taxonomy.topics()
-            if taxonomy
-            else list(TaxonomyRegistry.CANONICAL_TOPICS.keys())
-        )
-        return {
-            "type": "object",
-            "properties": {
-                "category": {
-                    "type": "string",
-                    "enum": categories,
-                    "description": "Primary macro-category resolved bottom-up.",
-                },
-                "topics": {
-                    "type": "array",
-                    "items": {"type": "string", "enum": topics},
-                    "minItems": 1,
-                    "maxItems": 8,
-                    "description": "Canonical topics substantively discussed.",
-                },
-                "summary": {
-                    "type": "string",
-                    "description": "One or two concise English summary sentences.",
-                },
-                "confidence_score": {
-                    "type": "number",
-                    "minimum": 0.0,
-                    "maximum": 1.0,
-                    "default": 1.0,
-                },
-                "topic_evidence": {
-                    "type": "object",
-                    "additionalProperties": {"type": "string"},
-                },
-            },
-            "required": ["category", "topics", "summary"],
-            "additionalProperties": False,
-        }
+    def validate_summary(cls, summary: str) -> str:
+        """Require a non-empty summary containing no more than two sentences."""
+        normalized_summary = summary.strip()
+        if not normalized_summary:
+            raise ValueError("summary must not be blank")
+
+        sentences = re.split(r"(?<=[.!?])\s+(?=[A-Z0-9])", normalized_summary)
+        if len(sentences) > 2:
+            raise ValueError("summary must contain no more than two sentences")
+        return normalized_summary
 
 
 class ModelAdapter(Protocol):
     """Protocol seam for local LLM inference backends."""
 
-    def generate(
-        self, prompt: str, schema: type[BaseModel] | dict[str, Any]
-    ) -> dict[str, Any]:
+    def generate(self, prompt: str, schema: type[BaseModel]) -> ModelPayload:
         """Generate structured JSON response adhering to schema."""
         ...
 
@@ -143,8 +131,8 @@ class FakeModelAdapter:
 
     def __init__(
         self,
-        default_response: dict[str, Any] | None = None,
-        responses_by_keyword: dict[str, dict[str, Any]] | None = None,
+        default_response: ModelPayload | None = None,
+        responses_by_keyword: dict[str, ModelPayload] | None = None,
     ) -> None:
         self.default_response = default_response or {
             "category": "training",
@@ -158,11 +146,10 @@ class FakeModelAdapter:
         self.responses_by_keyword = responses_by_keyword or {}
         self.call_count = 0
         self.last_prompt = ""
-        self.last_schema: Any = None
+        self.last_schema: type[BaseModel] | None = None
 
-    def generate(
-        self, prompt: str, schema: type[BaseModel] | dict[str, Any]
-    ) -> dict[str, Any]:
+    def generate(self, prompt: str, schema: type[BaseModel]) -> ModelPayload:
+        """Return the configured deterministic response."""
         self.call_count += 1
         self.last_prompt = prompt
         self.last_schema = schema
@@ -180,48 +167,45 @@ class MLXAdapter:
         self,
         model_name: str = DEFAULT_LOCAL_MODEL,
         max_tokens: int = 1024,
-        temperature: float = 0.0,
     ) -> None:
         self.model_name = model_name
         self.max_tokens = max_tokens
-        self.temperature = temperature
+        # Optional MLX/Outlines packages do not expose a stable shared model type.
         self._model: Any = None
         self._tokenizer: Any = None
+        self._structured_model: Any = None
 
     def _ensure_loaded(self) -> None:
-        if self._model is not None and self._tokenizer is not None:
+        if self._structured_model is not None:
             return
 
         try:
             import mlx_lm
+            import outlines
         except ImportError as exc:
             raise MissingDependencyError(
-                "mlx-lm",
-                "Install using: uv add --optional local-ai 'mlx-lm>=0.21.0'",
+                "mlx-lm and outlines",
+                "Install using: uv sync --extra local-ai",
             ) from exc
 
         try:
             loaded = mlx_lm.load(self.model_name)
-            self._model = loaded[0]
-            self._tokenizer = loaded[1]
-        except Exception as exc:
+            model = loaded[0]
+            tokenizer = loaded[1]
+            structured_model = outlines.from_mlxlm(model, tokenizer)
+        except (OSError, RuntimeError, ValueError) as exc:
             raise ModelInferenceError(
                 f"Failed to load MLX model '{self.model_name}': {exc}"
             ) from exc
 
-    def generate(
-        self, prompt: str, schema: type[BaseModel] | dict[str, Any]
-    ) -> dict[str, Any]:
+        self._model = model
+        self._tokenizer = tokenizer
+        self._structured_model = structured_model
+
+    def generate(self, prompt: str, schema: type[BaseModel]) -> ModelPayload:
+        """Generate JSON while masking tokens that violate a Pydantic schema."""
         self._ensure_loaded()
-        import mlx_lm
-        import mlx_lm.sample_utils
-
-        if isinstance(schema, type) and issubclass(schema, BaseModel):
-            schema_json = schema.model_json_schema()
-        else:
-            schema_json = schema
-
-        schema_str = json.dumps(schema_json)
+        schema_str = json.dumps(schema.model_json_schema())
         system_content = (
             "You are a rigorous sports science taxonomy classifier. "
             "You MUST respond ONLY with a valid JSON object conforming to "
@@ -243,28 +227,22 @@ class MLXAdapter:
                 f"System: {system_content}\n\nUser: {prompt}\n\nAssistant: "
             )
 
-        sampler = mlx_lm.sample_utils.make_sampler(temp=self.temperature)
-        logits_processors = mlx_lm.sample_utils.make_logits_processors()
-
         try:
-            raw_output = mlx_lm.generate(
-                self._model,
-                self._tokenizer,
-                prompt=formatted_prompt,
+            raw_output = self._structured_model(
+                formatted_prompt,
+                output_type=schema,
                 max_tokens=self.max_tokens,
-                sampler=sampler,
-                logits_processors=logits_processors,
-                verbose=False,
             )
-        except Exception as exc:
+        except (OSError, RuntimeError, ValueError) as exc:
             raise ModelInferenceError(f"MLX generation failed: {exc}") from exc
 
-        try:
-            return _extract_json_from_text(raw_output)
-        except Exception as exc:
+        if isinstance(raw_output, BaseModel):
+            return raw_output.model_dump()
+        if not isinstance(raw_output, str):
             raise ModelInferenceError(
-                f"Failed to parse MLX JSON output: {raw_output}"
-            ) from exc
+                f"MLX returned unsupported output type: {type(raw_output).__name__}"
+            )
+        return _extract_json_from_text(raw_output)
 
 
 class OllamaAdapter:
@@ -280,13 +258,9 @@ class OllamaAdapter:
         self.host = host.rstrip("/")
         self.timeout = timeout
 
-    def generate(
-        self, prompt: str, schema: type[BaseModel] | dict[str, Any]
-    ) -> dict[str, Any]:
-        if isinstance(schema, type) and issubclass(schema, BaseModel):
-            schema_json = schema.model_json_schema()
-        else:
-            schema_json = schema
+    def generate(self, prompt: str, schema: type[BaseModel]) -> ModelPayload:
+        """Generate a JSON response through Ollama's schema format contract."""
+        schema_json = schema.model_json_schema()
 
         payload = {
             "model": self.model_name,
@@ -318,22 +292,33 @@ class OllamaAdapter:
                 resp_data = json.loads(resp.read().decode("utf-8"))
         except urllib.error.URLError as exc:
             raise ModelConnectionError(self.host, str(exc)) from exc
-        except Exception as exc:
+        except (TimeoutError, UnicodeDecodeError, json.JSONDecodeError) as exc:
             raise ModelInferenceError(f"Ollama request error: {exc}") from exc
 
         content = resp_data.get("message", {}).get("content", "")
         if not content:
             raise ModelInferenceError("Empty response received from Ollama.")
 
-        try:
-            return _extract_json_from_text(content)
-        except Exception as exc:
-            raise ModelInferenceError(
-                f"Failed to parse Ollama JSON output: {content}"
-            ) from exc
+        return _extract_json_from_text(content)
 
 
-def _extract_json_from_text(text: str) -> dict[str, Any]:
+def create_model_adapter(
+    backend: str,
+    model_name: str | None = None,
+    ollama_host: str = "http://localhost:11434",
+) -> ModelAdapter:
+    """Create a supported local model adapter from CLI configuration."""
+    if backend == "mlx":
+        return MLXAdapter(model_name=model_name or DEFAULT_LOCAL_MODEL)
+    if backend == "ollama":
+        return OllamaAdapter(
+            model_name=model_name or "qwen2.5:7b",
+            host=ollama_host,
+        )
+    raise ValueError(f"Unsupported local model backend: {backend}")
+
+
+def _extract_json_from_text(text: str) -> ModelPayload:
     """Extract and parse JSON object from text or markdown code fence."""
     cleaned = text.strip()
     match = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", cleaned, re.DOTALL)
@@ -360,12 +345,16 @@ def _extract_json_from_text(text: str) -> dict[str, Any]:
 
 def _split_into_windows(full_text: str, max_window_chars: int = 12000) -> list[str]:
     """Split markdown into heading-aware windows covering all chars."""
+    if max_window_chars <= 0:
+        raise ValueError("max_window_chars must be positive")
     if len(full_text) <= max_window_chars:
         return [full_text]
 
     sections = re.split(r"(?=(?:\n|^)#{1,3}\s+)", full_text)
     windows: list[str] = []
     current_chunk = ""
+    overlap_chars = min(500, max_window_chars // 5)
+    window_step = max_window_chars - overlap_chars
 
     for section in sections:
         if not section:
@@ -376,7 +365,7 @@ def _split_into_windows(full_text: str, max_window_chars: int = 12000) -> list[s
             if current_chunk:
                 windows.append(current_chunk)
             if len(section) > max_window_chars:
-                for i in range(0, len(section), max_window_chars - 500):
+                for i in range(0, len(section), window_step):
                     part = section[i : i + max_window_chars]
                     if part:
                         windows.append(part)
@@ -388,102 +377,6 @@ def _split_into_windows(full_text: str, max_window_chars: int = 12000) -> list[s
         windows.append(current_chunk)
 
     return windows if windows else [full_text]
-
-
-def _consolidate_window_results(
-    window_results: list[DocumentTaggingResult],
-    taxonomy: TaxonomyRegistry,
-) -> DocumentTaggingResult:
-    """
-    Consolidate results across all document windows.
-    - Collects all candidate topics across every window.
-    - Ranks candidate topics by recurrence across windows and evidence.
-    - Retains up to 8 top topics.
-    - Merges evidence snippets for retained topics.
-    - Synthesizes summary sentences across windows into a cohesive summary.
-    - Resolves primary category bottom-up AFTER final topics are selected.
-    """
-    if len(window_results) == 1:
-        return window_results[0]
-
-    topic_window_counts: dict[str, int] = {}
-    topic_conf_sums: dict[str, float] = {}
-    topic_evidence_map: dict[str, list[str]] = {}
-
-    for wr in window_results:
-        for topic in wr.topics:
-            topic_window_counts[topic] = topic_window_counts.get(topic, 0) + 1
-            topic_conf_sums[topic] = (
-                topic_conf_sums.get(topic, 0.0) + wr.confidence_score
-            )
-            ev = wr.topic_evidence.get(topic)
-            if ev:
-                if topic not in topic_evidence_map:
-                    topic_evidence_map[topic] = []
-                if ev not in topic_evidence_map[topic]:
-                    topic_evidence_map[topic].append(ev)
-
-    sorted_topics = sorted(
-        topic_window_counts.keys(),
-        key=lambda t: (
-            -topic_window_counts[t],
-            -topic_conf_sums[t],
-            -len(" ".join(topic_evidence_map.get(t, []))),
-            t,
-        ),
-    )
-    final_topics = sorted_topics[:8]
-
-    final_evidence: dict[str, str] = {}
-    for t in final_topics:
-        snippets = topic_evidence_map.get(t, [])
-        if snippets:
-            final_evidence[t] = " ".join(snippets)
-
-    summary_sentences: list[str] = []
-    for wr in window_results:
-        if wr.summary:
-            for sent in re.split(r"(?<=[.!?])\s+", wr.summary.strip()):
-                sent_clean = sent.strip()
-                if sent_clean and sent_clean not in summary_sentences:
-                    summary_sentences.append(sent_clean)
-
-    final_summary = (
-        " ".join(summary_sentences[:3])
-        if summary_sentences
-        else "Consolidated document summary."
-    )
-
-    category_counts: dict[str, int] = {}
-    for t in final_topics:
-        defn = taxonomy.CANONICAL_TOPICS.get(t)
-        cat = defn.category if defn else None
-        if cat:
-            category_counts[cat] = category_counts.get(cat, 0) + 1
-
-    if not category_counts:
-        final_category = "training"
-    else:
-        sorted_cats = sorted(
-            category_counts.keys(),
-            key=lambda c: (
-                -category_counts[c],
-                0
-                if c == "training"
-                else (1 if c == "physiology" else (2 if c == "nutrition" else 3)),
-            ),
-        )
-        final_category = sorted_cats[0]
-
-    avg_conf = sum(wr.confidence_score for wr in window_results) / len(window_results)
-
-    return DocumentTaggingResult(
-        category=final_category,
-        topics=final_topics,
-        summary=final_summary,
-        confidence_score=round(avg_conf, 2),
-        topic_evidence=final_evidence,
-    )
 
 
 class LocalLLMClassifier:
@@ -517,8 +410,11 @@ class LocalLLMClassifier:
         taxonomy_lines = []
         for cat in categories:
             taxonomy_lines.append(f"### Category: `{cat}`")
+            category_definition = self.taxonomy.category_definition(cat)
+            if category_definition:
+                taxonomy_lines.append(f"  Definition: {category_definition}")
             for topic in topics_by_cat.get(cat, []):
-                defn = self.taxonomy.CANONICAL_TOPICS.get(topic)
+                defn = self.taxonomy.topic_definition(topic)
                 desc = defn.summary if defn else topic
                 taxonomy_lines.append(f"  - `{topic}`: {desc}")
             taxonomy_lines.append("")
@@ -534,18 +430,15 @@ class LocalLLMClassifier:
         return (
             "Analyze this endurance sports science document. "
             "Assign canonical topics and derive the macro-category bottom-up.\n\n"
-            f"CANONICAL TAXONOMY (36 Topics across 4 Categories):\n"
+            f"CANONICAL TAXONOMY ({len(self.taxonomy.topics())} Topics across "
+            f"{len(categories)} Categories):\n"
             f"{taxonomy_str}\n"
             "RULES:\n"
             "1. NON-HIERARCHICAL TOPIC SELECTION: Select 1 to 8 canonical topics "
             "from across the full vocabulary substantively discussed.\n"
             "2. BOTTOM-UP CATEGORY RESOLUTION: After assigning topics, derive the "
-            "single best primary category:\n"
-            "   - 'training' for workout protocols, pacing, strength, or drills.\n"
-            "   - 'physiology' for biological mechanisms, thresholds, cellular "
-            "adaptations, or testing.\n"
-            "   - 'nutrition' for fueling, hydration, or supplements.\n"
-            "   - 'planning' for periodization, microcycles, or workload modeling.\n"
+            "single category whose canonical definition best matches the document's "
+            "operational focus.\n"
             "3. CITE EVIDENCE: Provide brief rationale for each assigned topic.\n"
             "4. SUMMARY: Produce 1-2 concise, high-density English sentences.\n\n"
             f"DOCUMENT TITLE: {title}\n"
@@ -570,49 +463,45 @@ class LocalLLMClassifier:
         windows = _split_into_windows(full_text, self.max_window_chars)
         window_results: list[DocumentTaggingResult] = []
 
-        schema_dict = DocumentTaggingResult.json_schema_for_taxonomy(self.taxonomy)
-
         for window in windows:
             prompt = self.build_prompt(
                 title=doc_title,
                 content=window,
                 existing_summary=existing_summary,
             )
-            raw_result = self.adapter.generate(prompt, schema=schema_dict)
-
-            if isinstance(raw_result, dict):
-                if "topics" in raw_result and isinstance(raw_result["topics"], list):
-                    canonical_topics: list[str] = []
-                    for t in raw_result["topics"]:
-                        t_str = str(t).strip()
-                        if t_str in self.taxonomy.CANONICAL_TOPICS:
-                            if t_str not in canonical_topics:
-                                canonical_topics.append(t_str)
-                        else:
-                            norm = self.taxonomy.normalize_topic(t_str)
-                            if (
-                                norm
-                                and norm in self.taxonomy.CANONICAL_TOPICS
-                                and norm not in canonical_topics
-                            ):
-                                canonical_topics.append(norm)
-                    raw_result["topics"] = (
-                        canonical_topics[:8]
-                        if canonical_topics
-                        else raw_result["topics"]
-                    )
-
-                if "category" in raw_result:
-                    cat_str = str(raw_result["category"]).strip()
-                    if cat_str not in self.taxonomy.CANONICAL_CATEGORIES:
-                        norm_cat = self.taxonomy.normalize_category(cat_str)
-                        if norm_cat and norm_cat in self.taxonomy.CANONICAL_CATEGORIES:
-                            raw_result["category"] = norm_cat
-
+            raw_result = self.adapter.generate(prompt, schema=DocumentTaggingResult)
             parsed = DocumentTaggingResult.model_validate(raw_result)
             window_results.append(parsed)
 
-        return _consolidate_window_results(window_results, self.taxonomy)
+        if len(window_results) == 1:
+            return window_results[0]
+
+        consolidation_prompt = self._build_consolidation_prompt(window_results)
+        consolidated = self.adapter.generate(
+            consolidation_prompt,
+            schema=DocumentTaggingResult,
+        )
+        return DocumentTaggingResult.model_validate(consolidated)
+
+    def _build_consolidation_prompt(
+        self,
+        window_results: list[DocumentTaggingResult],
+    ) -> str:
+        serialized_results = json.dumps(
+            [result.model_dump(mode="json") for result in window_results],
+            indent=2,
+        )
+        return (
+            "CONSOLIDATE WINDOW RESULTS for one complete document.\n\n"
+            "Use every window result, including late-window evidence. Select the "
+            "1-8 strongest substantive canonical topics across the document. Then "
+            "derive the single primary category from the document's operational "
+            "focus; do not use a fixed category priority or a simple topic-count "
+            "tie-break. Produce one or two faithful summary sentences that cover "
+            "the document-wide conclusions, including material late conclusions. "
+            "Keep evidence only for selected topics.\n\n"
+            f"WINDOW RESULTS:\n{serialized_results}\n"
+        )
 
     def classify_source(
         self,
@@ -696,7 +585,3 @@ def apply_tags_to_file(
     """Classify and optionally apply tags to file on disk."""
     classifier = LocalLLMClassifier(adapter=adapter, taxonomy=taxonomy, kb_dir=kb_dir)
     return classifier.apply_tags_to_file(file_path, dry_run=dry_run, kb_dir=kb_dir)
-
-
-# Compatibility alias
-TopicTagger = LocalLLMClassifier

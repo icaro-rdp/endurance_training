@@ -2,21 +2,23 @@
 Knowledge Base Deep Engine Package
 """
 
-from .classifier import (
+from main.utils.kb_engine.classifier import (
     DEFAULT_LOCAL_MODEL,
+    CanonicalCategory,
+    CanonicalTopic,
     DocumentTaggingResult,
     FakeModelAdapter,
     LocalLLMClassifier,
     MLXAdapter,
     ModelAdapter,
     OllamaAdapter,
-    TopicTagger,
     apply_tags_to_file,
     classify_content,
     classify_document,
+    create_model_adapter,
 )
-from .engine import KBEngine
-from .errors import (
+from main.utils.kb_engine.engine import KBEngine
+from main.utils.kb_engine.errors import (
     CorpusChangedDuringSyncError,
     EmptyCorpusError,
     IndexNotBuiltError,
@@ -35,17 +37,19 @@ from .errors import (
     StaleIndexError,
     UnsupportedLanguageError,
 )
-from .frontmatter import KnowledgeSource
-from .models import (
+from main.utils.kb_engine.frontmatter import KnowledgeSource
+from main.utils.kb_engine.models import (
     EvidencePassage,
     EvidenceSearchResult,
     IndexBuildMetrics,
     IndexStatus,
 )
-from .taxonomy import TaxonomyRegistry
+from main.utils.kb_engine.taxonomy import TaxonomyRegistry
 
 __all__ = [
     "CorpusChangedDuringSyncError",
+    "CanonicalCategory",
+    "CanonicalTopic",
     "DEFAULT_LOCAL_MODEL",
     "DocumentTaggingResult",
     "EmptyCorpusError",
@@ -75,9 +79,9 @@ __all__ = [
     "OllamaAdapter",
     "StaleIndexError",
     "TaxonomyRegistry",
-    "TopicTagger",
     "UnsupportedLanguageError",
     "apply_tags_to_file",
     "classify_content",
     "classify_document",
+    "create_model_adapter",
 ]

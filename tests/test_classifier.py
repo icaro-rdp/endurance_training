@@ -23,7 +23,6 @@ from main.utils.kb_engine.classifier import (
     LocalLLMClassifier,
     MLXAdapter,
     OllamaAdapter,
-    _consolidate_window_results,
     _split_into_windows,
     apply_tags_to_file,
     classify_content,
@@ -81,7 +80,23 @@ class TestClassifierSuite(unittest.TestCase):
                 summary="Empty topic test.",
             )
 
-        schema = DocumentTaggingResult.json_schema_for_taxonomy(self.taxonomy)
+        with self.assertRaises(ValidationError):
+            DocumentTaggingResult(
+                category="training",
+                topics=["Zone2_and_endurance_base"],
+                summary="Unknown fields must not be silently discarded.",
+                invented_field="unexpected",
+            )
+
+        with self.assertRaises(ValidationError):
+            DocumentTaggingResult(
+                category="training",
+                topics=["Zone2_and_endurance_base"],
+                summary="First sentence. Second sentence. Third sentence.",
+            )
+
+        schema = DocumentTaggingResult.model_json_schema()
+        self.assertFalse(schema["additionalProperties"])
         self.assertEqual(
             set(schema["properties"]["category"]["enum"]),
             set(self.taxonomy.categories()),
@@ -93,6 +108,9 @@ class TestClassifierSuite(unittest.TestCase):
 
     def test_prompt_coverage_from_registry(self) -> None:
         """2. Prompt coverage derived from all 36 registry topics and 4 categories."""
+        self.assertEqual(len(self.taxonomy.categories()), 4)
+        self.assertEqual(len(self.taxonomy.topics()), 36)
+        self.assertNotIn("title", self.taxonomy.topics())
         classifier = LocalLLMClassifier(
             adapter=FakeModelAdapter(), taxonomy=self.taxonomy, kb_dir=self.kb_dir
         )
@@ -107,6 +125,51 @@ class TestClassifierSuite(unittest.TestCase):
 
         for topic in self.taxonomy.topics():
             self.assertIn(f"`{topic}`", prompt)
+
+    def test_prompt_definitions_come_from_taxonomy_markdown(self) -> None:
+        """Prompt definitions follow the canonical Markdown source."""
+        taxonomy_path = self.kb_dir / "TAXONOMY.md"
+        taxonomy_text = taxonomy_path.read_text(encoding="utf-8")
+        taxonomy_path.write_text(
+            taxonomy_text.replace(
+                "Low-intensity continuous endurance training volume, Zone 2, "
+                "LIT, LSD, base miles",
+                "CUSTOM DEFINITION FROM THE CANONICAL FILE",
+            ).replace(
+                "Training execution, interval protocol design, aerobic base, "
+                "resistance exercise, biomechanics, ergonomics, and pacing tactics.",
+                "CUSTOM CATEGORY DEFINITION FROM THE CANONICAL FILE",
+            ),
+            encoding="utf-8",
+        )
+        taxonomy = TaxonomyRegistry(self.kb_dir)
+        classifier = LocalLLMClassifier(
+            adapter=FakeModelAdapter(),
+            taxonomy=taxonomy,
+            kb_dir=self.kb_dir,
+        )
+
+        prompt = classifier.build_prompt("Title", "Body")
+
+        self.assertIn("CUSTOM DEFINITION FROM THE CANONICAL FILE", prompt)
+        self.assertIn("CUSTOM CATEGORY DEFINITION FROM THE CANONICAL FILE", prompt)
+
+    def test_classifier_rejects_noncanonical_model_aliases(self) -> None:
+        """Model aliases fail instead of being silently normalized."""
+        classifier = LocalLLMClassifier(
+            adapter=FakeModelAdapter(
+                default_response={
+                    "category": "metrics",
+                    "topics": ["FTP"],
+                    "summary": "Alias output must fail validation.",
+                }
+            ),
+            taxonomy=self.taxonomy,
+            kb_dir=self.kb_dir,
+        )
+
+        with self.assertRaises(ValidationError):
+            classifier.classify_content("Functional threshold power.")
 
     def test_cross_domain_bottom_up_categorization(self) -> None:
         """3. Cross-domain topics with bottom-up primary-category selection."""
@@ -155,6 +218,21 @@ class TestClassifierSuite(unittest.TestCase):
         self.assertIn("Sodium bicarbonate and electrolyte", combined_text)
 
         responses = {
+            "CONSOLIDATE WINDOW RESULTS": {
+                "category": "nutrition",
+                "topics": [
+                    "Zone2_and_endurance_base",
+                    "Hydration_and_electrolyte_balance",
+                    "Ergogenic_supplements_and_buffers",
+                ],
+                "summary": (
+                    "The guide covers endurance base riding. "
+                    "Its late section explains electrolyte and bicarbonate use."
+                ),
+                "topic_evidence": {
+                    "Hydration_and_electrolyte_balance": "Sodium loading."
+                },
+            },
             "Standard endurance background": {
                 "category": "training",
                 "topics": ["Zone2_and_endurance_base"],
@@ -185,77 +263,109 @@ class TestClassifierSuite(unittest.TestCase):
         self.assertIn("Hydration_and_electrolyte_balance", res.topics)
         self.assertIn("Zone2_and_endurance_base", res.topics)
 
-    def test_long_document_multi_window_consolidation_with_more_than_eight_topics(
-        self,
-    ) -> None:
-        """Test consolidation when candidate topics exceed 8 and synthesize summary."""
-        w1 = DocumentTaggingResult(
-            category="physiology",
-            topics=[
-                "Mitochondrial_and_cellular_adaptation",
-                "Lactate_kinetics_and_metabolism",
-                "Substrate_utilization_and_fat_oxidation",
-                "Cardiovascular_and_hemodynamics",
-            ],
-            summary="Window 1 examines cellular bioenergetics.",
-            confidence_score=0.9,
-            topic_evidence={
-                "Mitochondrial_and_cellular_adaptation": "PGC-1alpha activation.",
-                "Lactate_kinetics_and_metabolism": "MCT1 transporters.",
+    def test_small_window_size_still_splits_an_unheaded_section(self) -> None:
+        """Small configured windows retain late evidence without disabling splits."""
+        content = "Early evidence. " * 30 + "Late evidence marker."
+
+        windows = _split_into_windows(content, max_window_chars=160)
+
+        self.assertGreater(len(windows), 1)
+        self.assertTrue(all(len(window) <= 160 for window in windows))
+        self.assertIn("Late evidence marker.", windows[-1])
+
+    def test_long_document_uses_model_for_bottom_up_consolidation(self) -> None:
+        """Long documents receive one final synthesis over every window result."""
+        window_results = [
+            {
+                "category": "physiology",
+                "topics": [
+                    "Mitochondrial_and_cellular_adaptation",
+                    "Lactate_kinetics_and_metabolism",
+                    "Substrate_utilization_and_fat_oxidation",
+                    "Cardiovascular_and_hemodynamics",
+                ],
+                "summary": "Early sections explain cellular adaptation.",
+                "topic_evidence": {
+                    "Mitochondrial_and_cellular_adaptation": "PGC-1alpha rises."
+                },
             },
-        )
-        w2 = DocumentTaggingResult(
-            category="nutrition",
-            topics=[
+            {
+                "category": "training",
+                "topics": [
+                    "Threshold_intervals",
+                    "VO2max_and_aerobic_hiit",
+                    "Zone2_and_endurance_base",
+                    "Pacing_and_execution_dynamics",
+                ],
+                "summary": "Middle sections prescribe interval sessions.",
+                "topic_evidence": {"Threshold_intervals": "Four ten-minute reps."},
+            },
+            {
+                "category": "nutrition",
+                "topics": [
+                    "Carbohydrate_fueling_and_gut_training",
+                    "Hydration_and_electrolyte_balance",
+                    "Ergogenic_supplements_and_buffers",
+                    "Energy_availability_and_reds",
+                ],
+                "summary": "The final section makes fueling the operational focus.",
+                "topic_evidence": {
+                    "Carbohydrate_fueling_and_gut_training": "Take 90g/hr carbohydrate."
+                },
+            },
+        ]
+        consolidated_result = {
+            "category": "nutrition",
+            "topics": [
                 "Carbohydrate_fueling_and_gut_training",
                 "Hydration_and_electrolyte_balance",
                 "Ergogenic_supplements_and_buffers",
-                "Lactate_kinetics_and_metabolism",
-            ],
-            summary="Window 2 examines intra-workout fueling.",
-            confidence_score=0.95,
-            topic_evidence={
-                "Carbohydrate_fueling_and_gut_training": "90g/hr carbs.",
-                "Lactate_kinetics_and_metabolism": "Lactate clearance in liver.",
-            },
-        )
-        w3 = DocumentTaggingResult(
-            category="training",
-            topics=[
+                "Energy_availability_and_reds",
                 "Threshold_intervals",
                 "VO2max_and_aerobic_hiit",
-                "Zone2_and_endurance_base",
-                "Pacing_and_execution_dynamics",
+                "Mitochondrial_and_cellular_adaptation",
+                "Lactate_kinetics_and_metabolism",
             ],
-            summary="Window 3 details interval prescriptions.",
-            confidence_score=0.98,
-            topic_evidence={
-                "Threshold_intervals": "4x10min sweet spot.",
-                "VO2max_and_aerobic_hiit": "4x8min intervals.",
+            "summary": (
+                "The document connects cellular adaptation and interval execution. "
+                "Its practical focus is late-stage fueling at 90g/hr."
+            ),
+            "topic_evidence": {
+                "Carbohydrate_fueling_and_gut_training": "Take 90g/hr carbohydrate."
             },
+        }
+        adapter = MagicMock()
+        adapter.generate.side_effect = [*window_results, consolidated_result]
+        classifier = LocalLLMClassifier(
+            adapter=adapter,
+            taxonomy=self.taxonomy,
+            kb_dir=self.kb_dir,
+            max_window_chars=160,
+        )
+        content = "\n".join(
+            [
+                "# Early physiology\n" + "Cellular adaptation. " * 5,
+                "# Middle training\n" + "Interval prescription. " * 5,
+                "# Late nutrition\n" + "Fueling at 90g/hr. " * 5,
+            ]
         )
 
-        consolidated = _consolidate_window_results([w1, w2, w3], self.taxonomy)
+        result = classifier.classify_content(content, title="Whole Document")
 
-        # Maximum 8 topics enforced
-        self.assertLessEqual(len(consolidated.topics), 8)
-        # Recurring topic Lactate_kinetics_and_metabolism ranked at top
-        self.assertEqual(consolidated.topics[0], "Lactate_kinetics_and_metabolism")
-        # Merged evidence contains both window snippets
+        self.assertEqual(adapter.generate.call_count, 4)
+        consolidation_prompt = adapter.generate.call_args_list[-1].args[0]
         self.assertIn(
-            "MCT1 transporters",
-            consolidated.topic_evidence["Lactate_kinetics_and_metabolism"],
+            "Early sections explain cellular adaptation",
+            consolidation_prompt,
         )
-        self.assertIn(
-            "Lactate clearance in liver",
-            consolidated.topic_evidence["Lactate_kinetics_and_metabolism"],
-        )
-        # Document-wide synthesized summary incorporates takeaways across windows
-        self.assertIn("Window 1", consolidated.summary)
-        self.assertIn("Window 2", consolidated.summary)
+        self.assertIn("final section makes fueling", consolidation_prompt)
+        self.assertEqual(result.category, "nutrition")
+        self.assertEqual(len(result.topics), 8)
+        self.assertIn("90g/hr", result.summary)
+        self.assertEqual(result.summary.count("."), 2)
 
-    def test_mlx_adapter_schema_and_sampler_wiring(self) -> None:
-        """5. MLX schema and constrained sampler/logits_processor wiring."""
+    def test_mlx_adapter_uses_schema_constrained_generation(self) -> None:
+        """5. MLX generation receives the schema as an active constraint."""
         adapter = MLXAdapter(model_name=DEFAULT_LOCAL_MODEL)
         with (
             patch.dict("sys.modules", {"mlx_lm": None}),
@@ -263,38 +373,51 @@ class TestClassifierSuite(unittest.TestCase):
         ):
             adapter.generate("Test prompt", schema=DocumentTaggingResult)
 
-        mock_mlx = MagicMock()
+        mock_model = MagicMock()
         mock_tokenizer = MagicMock()
         mock_tokenizer.apply_chat_template.return_value = "Formatted Chat Prompt"
-        mock_mlx.load.return_value = (MagicMock(), mock_tokenizer)
-        mock_sample_utils = MagicMock()
-        mock_sampler = MagicMock()
-        mock_processors = MagicMock()
-        mock_sample_utils.make_sampler.return_value = mock_sampler
-        mock_sample_utils.make_logits_processors.return_value = mock_processors
-        mock_mlx.sample_utils = mock_sample_utils
-        mock_mlx.generate.return_value = json.dumps(
-            {
-                "category": "physiology",
-                "topics": ["FTP_and_functional_metrics"],
-                "summary": "Valid MLX output.",
-            }
+        mock_mlx = MagicMock()
+        mock_mlx.load.return_value = (mock_model, mock_tokenizer)
+        constrained_model = MagicMock(
+            return_value=json.dumps(
+                {
+                    "category": "physiology",
+                    "topics": ["FTP_and_functional_metrics"],
+                    "summary": "Valid MLX output.",
+                }
+            )
         )
+        mock_outlines = MagicMock()
+        mock_outlines.from_mlxlm.side_effect = [
+            RuntimeError("temporary Outlines setup failure"),
+            constrained_model,
+        ]
 
         with patch.dict(
             "sys.modules",
-            {"mlx_lm": mock_mlx, "mlx_lm.sample_utils": mock_sample_utils},
+            {
+                "mlx_lm": mock_mlx,
+                "outlines": mock_outlines,
+            },
         ):
             loaded_adapter = MLXAdapter(model_name="mock-model")
+            with self.assertRaises(ModelInferenceError):
+                loaded_adapter.generate("First attempt", schema=DocumentTaggingResult)
+
             res_dict = loaded_adapter.generate(
                 "Prompt text", schema=DocumentTaggingResult
             )
             self.assertEqual(res_dict["category"], "physiology")
-            mock_mlx.generate.assert_called_once()
-            # Verify sampler and logits_processors were passed
-            call_kwargs = mock_mlx.generate.call_args[1]
-            self.assertEqual(call_kwargs["sampler"], mock_sampler)
-            self.assertEqual(call_kwargs["logits_processors"], mock_processors)
+            self.assertEqual(mock_mlx.load.call_count, 2)
+            self.assertEqual(mock_outlines.from_mlxlm.call_count, 2)
+            mock_outlines.from_mlxlm.assert_called_with(
+                mock_model,
+                mock_tokenizer,
+            )
+            self.assertIs(
+                constrained_model.call_args.kwargs["output_type"],
+                DocumentTaggingResult,
+            )
 
     def test_ollama_adapter_and_error_translation(self) -> None:
         """6. Ollama JSON parsing, HTTP errors, and validation failures."""

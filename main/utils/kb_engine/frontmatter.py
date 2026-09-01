@@ -2,16 +2,21 @@
 Frontmatter parsing and KnowledgeSource domain module.
 """
 
+import contextlib
 import os
 import tempfile
+from collections.abc import Sequence
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
 import yaml
 
-from .errors import InvalidKnowledgeSourceError, InvalidTaxonomyError
-from .taxonomy import TaxonomyRegistry
+from main.utils.kb_engine.errors import (
+    InvalidKnowledgeSourceError,
+    InvalidTaxonomyError,
+)
+from main.utils.kb_engine.taxonomy import TaxonomyRegistry
 
 _STRING_FIELDS = ("title", "author", "language", "category", "source", "summary")
 _STANDARD_KEY_ORDER = (
@@ -25,13 +30,15 @@ _STANDARD_KEY_ORDER = (
     "summary",
     "key_takeaways",
 )
+# PyYAML yields recursively heterogeneous scalar, sequence, and mapping values.
+Frontmatter = dict[str, Any]
 
 
 @dataclass(frozen=True, slots=True)
 class ParsedDocument:
     """One consistently parsed Markdown source and its frontmatter boundary."""
 
-    metadata: dict[str, Any]
+    metadata: Frontmatter
     body: str
     content_start: int
     has_frontmatter: bool
@@ -60,7 +67,7 @@ def parse_frontmatter(content: str, rel_path: str) -> ParsedDocument:
             rel_path, f"YAML syntax error: {error}"
         ) from error
     if loaded is None:
-        metadata: dict[str, Any] = {}
+        metadata: Frontmatter = {}
     elif not isinstance(loaded, dict):
         raise InvalidKnowledgeSourceError(
             rel_path, "YAML frontmatter must be a mapping"
@@ -102,16 +109,18 @@ class KnowledgeSource:
     def __init__(
         self,
         rel_path: str,
-        metadata: dict[str, Any],
+        metadata: Frontmatter,
         body: str,
         file_path: Path | None = None,
         taxonomy: TaxonomyRegistry | None = None,
+        has_frontmatter: bool = True,
     ) -> None:
         self.rel_path = rel_path
         self.metadata = dict(metadata)
         self.body = body
         self.file_path = file_path
         self.taxonomy = taxonomy
+        self.has_frontmatter = has_frontmatter
 
     @classmethod
     def from_path(
@@ -130,6 +139,7 @@ class KnowledgeSource:
             body=parsed.body,
             file_path=file_path,
             taxonomy=taxonomy,
+            has_frontmatter=parsed.has_frontmatter,
         )
 
     @classmethod
@@ -147,14 +157,17 @@ class KnowledgeSource:
             body=parsed.body,
             file_path=None,
             taxonomy=taxonomy,
+            has_frontmatter=parsed.has_frontmatter,
         )
 
     @property
     def title(self) -> str:
+        """Return the source title or filename stem."""
         return str(self.metadata.get("title") or Path(self.rel_path).stem)
 
     @property
     def category(self) -> str:
+        """Return the normalized source category."""
         cat = self.metadata.get("category", "")
         if self.taxonomy and cat:
             return self.taxonomy.normalize_category(cat) or cat
@@ -162,6 +175,7 @@ class KnowledgeSource:
 
     @property
     def topics(self) -> list[str]:
+        """Return normalized source topics."""
         raw_topics = self.metadata.get("topics") or []
         if not isinstance(raw_topics, list):
             return []
@@ -175,29 +189,35 @@ class KnowledgeSource:
 
     @property
     def summary(self) -> str:
+        """Return the source summary."""
         return str(self.metadata.get("summary") or "")
 
     @property
     def language(self) -> str:
+        """Return the declared language, defaulting legacy sources to English."""
         return str(self.metadata.get("language") or "en")
 
     @property
     def author(self) -> str | None:
+        """Return the source author when present."""
         val = self.metadata.get("author")
         return str(val) if val is not None else None
 
     @property
     def source(self) -> str | None:
+        """Return the provenance source when present."""
         val = self.metadata.get("source")
         return str(val) if val is not None else None
 
     @property
     def date(self) -> str | None:
+        """Return the publication date when present."""
         val = self.metadata.get("date")
         return str(val) if val is not None else None
 
     @property
     def key_takeaways(self) -> list[str] | None:
+        """Return deliberately curated key takeaways when present."""
         val = self.metadata.get("key_takeaways")
         if isinstance(val, list):
             return [str(item) for item in val]
@@ -207,41 +227,31 @@ class KnowledgeSource:
         self,
         *,
         category: str | None = None,
-        topics: list[str] | None = None,
+        topics: Sequence[str] | None = None,
         summary: str | None = None,
         title: str | None = None,
         key_takeaways: list[str] | None = None,
     ) -> None:
         """Update frontmatter fields with normalization and validation."""
+        taxonomy = self._require_taxonomy()
         if category is not None:
-            norm_cat = (
-                self.taxonomy.normalize_category(category)
-                if self.taxonomy
-                else category
-            )
-            if self.taxonomy and (
-                not norm_cat or not self.taxonomy.valid_category(norm_cat)
-            ):
+            norm_cat = taxonomy.normalize_category(category)
+            if not norm_cat or not taxonomy.valid_category(norm_cat):
                 raise InvalidTaxonomyError(
                     f"Category '{category}' is not a valid canonical category."
                 )
-            self.metadata["category"] = norm_cat or category
+            self.metadata["category"] = norm_cat
 
         if topics is not None:
             normalized_topics: list[str] = []
             for topic in topics:
-                norm_topic = (
-                    self.taxonomy.normalize_topic(topic) if self.taxonomy else topic
-                )
-                if self.taxonomy and (
-                    not norm_topic or norm_topic not in self.taxonomy.topics()
-                ):
+                norm_topic = taxonomy.normalize_topic(topic)
+                if not norm_topic or norm_topic not in taxonomy.topics():
                     raise InvalidTaxonomyError(
                         f"Topic '{topic}' is not a valid canonical topic."
                     )
-                target = norm_topic or topic
-                if target not in normalized_topics:
-                    normalized_topics.append(target)
+                if norm_topic not in normalized_topics:
+                    normalized_topics.append(norm_topic)
             self.metadata["topics"] = normalized_topics
 
         if summary is not None:
@@ -255,7 +265,7 @@ class KnowledgeSource:
 
     def to_markdown(self) -> str:
         """Render frontmatter and Markdown body into canonical string."""
-        ordered_meta: dict[str, Any] = {}
+        ordered_meta: Frontmatter = {}
         for key in _STANDARD_KEY_ORDER:
             if key in self.metadata:
                 ordered_meta[key] = self.metadata[key]
@@ -280,6 +290,7 @@ class KnowledgeSource:
         dry_run: bool = False,
     ) -> None:
         """Atomically save the Knowledge Source to disk preserving permissions."""
+        self._validate_taxonomy_metadata()
         if dry_run:
             return
 
@@ -306,10 +317,34 @@ class KnowledgeSource:
             if original_mode is not None:
                 os.chmod(temp_name, original_mode)
             os.replace(temp_name, str(dest))
-        except Exception:
-            if os.path.exists(temp_name):
-                os.remove(temp_name)
+        except OSError:
+            with contextlib.suppress(OSError):
+                Path(temp_name).unlink(missing_ok=True)
             raise
+
+    def _require_taxonomy(self) -> TaxonomyRegistry:
+        if self.taxonomy is None:
+            raise InvalidTaxonomyError(
+                "Knowledge Source persistence requires a taxonomy registry."
+            )
+        return self.taxonomy
+
+    def _validate_taxonomy_metadata(self) -> None:
+        taxonomy = self._require_taxonomy()
+        category = self.metadata.get("category")
+        if not isinstance(category, str) or category not in taxonomy.categories():
+            raise InvalidTaxonomyError(
+                f"Category '{category}' is not a valid canonical category."
+            )
+
+        topics = self.metadata.get("topics")
+        valid_topics = set(taxonomy.topics())
+        if not isinstance(topics, list) or any(
+            not isinstance(topic, str) or topic not in valid_topics for topic in topics
+        ):
+            raise InvalidTaxonomyError(
+                "Knowledge Source topics must contain only canonical values."
+            )
 
     @staticmethod
     def _resolve_relative_path(file_path: Path, kb_dir: Path) -> str:
@@ -347,16 +382,13 @@ class KnowledgeSource:
 
 
 class FrontmatterManager:
-    """Compatibility adapter for legacy callers."""
+    """Compatibility reader backed by the KnowledgeSource domain module."""
 
-    def __init__(self, kb_dir: Path, taxonomy: TaxonomyRegistry):
+    def __init__(self, kb_dir: Path, taxonomy: TaxonomyRegistry) -> None:
         self.kb_dir = kb_dir
         self.taxonomy = taxonomy
 
-    def parse_document(self, file_path: Path) -> tuple[dict[str, Any], str]:
+    def parse_document(self, file_path: Path) -> tuple[Frontmatter, str]:
+        """Return metadata and body for one validated Knowledge Source."""
         source = KnowledgeSource.from_path(file_path, self.kb_dir, self.taxonomy)
-        return source.metadata, source.body
-
-    def read_source(self, file_path: Path) -> str:
-        source = KnowledgeSource.from_path(file_path, self.kb_dir, self.taxonomy)
-        return KnowledgeSource._read_file(file_path, source.rel_path)
+        return dict(source.metadata), source.body

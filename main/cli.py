@@ -10,10 +10,12 @@ from collections.abc import Sequence
 from pathlib import Path
 
 from main.utils.kb_engine import KBEngine
+from main.utils.kb_engine.classifier import create_model_adapter
 from main.utils.kb_engine.errors import KBEngineError
 
 
 def handle_search(engine: KBEngine, args: argparse.Namespace) -> None:
+    """Run a search command and render the selected output format."""
     if ";;" in args.query or "||" in args.query:
         delimiter = ";;" if ";;" in args.query else "||"
         sub_queries = [q.strip() for q in args.query.split(delimiter) if q.strip()]
@@ -48,6 +50,7 @@ def handle_search(engine: KBEngine, args: argparse.Namespace) -> None:
 
 
 def handle_build_index(engine: KBEngine, _args: argparse.Namespace) -> None:
+    """Synchronize the sitemap and Derived Index."""
     print("Rebuilding Sitemap and Taxonomy...")
     engine.build_sitemap()
     print("Synchronizing Knowledge Sources into the passage index...")
@@ -80,10 +83,12 @@ def handle_build_index(engine: KBEngine, _args: argparse.Namespace) -> None:
 
 
 def handle_status(engine: KBEngine, _args: argparse.Namespace) -> None:
+    """Render Derived Index freshness status."""
     print(json.dumps(engine.get_kb_status().to_dict(), indent=2))
 
 
 def handle_validate(engine: KBEngine, args: argparse.Namespace) -> int:
+    """Render Knowledge Base validation diagnostics."""
     res = engine.validate(source_rel_path=args.source)
 
     print("==========================================")
@@ -118,99 +123,29 @@ def handle_validate(engine: KBEngine, args: argparse.Namespace) -> int:
 
 
 def handle_tag(engine: KBEngine, args: argparse.Namespace) -> int:
-    from main.utils.kb_engine.classifier import (
-        DEFAULT_LOCAL_MODEL,
-        MLXAdapter,
-        ModelAdapter,
-        OllamaAdapter,
+    """Adapt tag arguments to the Knowledge Base facade and render results."""
+    adapter = create_model_adapter(args.backend, args.model, args.ollama_host)
+    is_dry_run = not args.apply
+    tagged_list = engine.tag_sources(
+        path=args.path,
+        recursive=args.all,
+        dry_run=is_dry_run,
+        adapter=adapter,
     )
 
-    adapter: ModelAdapter
-    if args.backend == "ollama":
-        adapter = OllamaAdapter(
-            model_name=args.model or "qwen2.5:7b",
-            host=args.ollama_host,
-        )
-    else:
-        adapter = MLXAdapter(
-            model_name=args.model or DEFAULT_LOCAL_MODEL,
-        )
-
-    is_dry_run = not args.apply
-
     if args.all:
-        target_dir: Path | None = None
-        if args.path:
-            raw_path = Path(args.path)
-            candidate = (
-                raw_path if raw_path.is_absolute() else (engine.kb_dir / raw_path)
-            )
-            if not candidate.exists():
-                print(f"Error: Path not found: {args.path}", file=sys.stderr)
-                return 1
-            if candidate.is_file():
-                print(
-                    f"Error: '{args.path}' is a file; omit --all or pass a directory",
-                    file=sys.stderr,
-                )
-                return 1
-            target_dir = candidate.resolve()
-
-        action_msg = "Dry-run preview" if is_dry_run else "Applying tags"
-        scope_msg = str(target_dir) if target_dir else "entire Knowledge Base"
-        print(f"[{action_msg}] Classifying curated documents in {scope_msg}...\n")
-
-        tagged_list = engine.apply_tags_all(
-            directory=target_dir, dry_run=is_dry_run, adapter=adapter
-        )
         print(f"Processed {len(tagged_list)} documents.")
-        for source, res in tagged_list:
-            status_symbol = "🔍 Dry-run" if is_dry_run else "💾 Applied"
-            print(f"\n{status_symbol}: {source.rel_path}")
-            print(f"  Category: {res.category}")
-            print(f"  Topics:   {', '.join(res.topics)}")
-            print(f"  Summary:  {res.summary}")
-    else:
-        if not args.path:
-            print("Error: Specify a document path or use --all", file=sys.stderr)
-            return 1
-
-        raw_path = Path(args.path)
-        if raw_path.is_file():
-            target_path = raw_path.resolve()
-        else:
-            target_path = (engine.kb_dir / raw_path).resolve()
-
-        if target_path.is_dir():
-            print(
-                f"Error: '{args.path}' is a directory; use --all to classify "
-                "documents under it",
-                file=sys.stderr,
-            )
-            return 1
-
-        if not target_path.is_file():
-            print(f"Error: File not found: {args.path}", file=sys.stderr)
-            return 1
-
-        source = engine.get_knowledge_source(target_path)
-        print(f"Classifying: {source.rel_path}...\n")
-        res = engine.apply_tags(target_path, dry_run=is_dry_run, adapter=adapter)
-
-        status_symbol = (
-            "🔍 Dry-run (use --apply to write)"
-            if is_dry_run
-            else "💾 Applied to frontmatter"
-        )
-        print(f"[{status_symbol}]")
+    for source, result in tagged_list:
+        status = "Dry-run" if is_dry_run else "Applied"
+        print(f"\n[{status}] {source.rel_path}")
         print(f"  Title:    {source.title}")
-        print(f"  Category: {res.category}")
-        print(f"  Topics:   {', '.join(res.topics)}")
-        print(f"  Summary:  {res.summary}")
-        if res.topic_evidence:
+        print(f"  Category: {result.category}")
+        print(f"  Topics:   {', '.join(result.topics)}")
+        print(f"  Summary:  {result.summary}")
+        if result.topic_evidence:
             print("  Evidence:")
-            for t, ev in res.topic_evidence.items():
-                print(f"    - {t}: {ev}")
+            for topic, evidence in result.topic_evidence.items():
+                print(f"    - {topic}: {evidence}")
     return 0
 
 
@@ -258,6 +193,7 @@ def _add_tag_arguments(p: argparse.ArgumentParser) -> None:
 
 
 def main(argv: Sequence[str] | None = None) -> int:
+    """Run the Endurance Knowledge Base command-line interface."""
     parser = argparse.ArgumentParser(
         description="Endurance Training Knowledge Base CLI"
     )

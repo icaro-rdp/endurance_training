@@ -4,43 +4,69 @@ Validator and Sitemap Builder sub-module.
 
 import re
 from pathlib import Path
-from typing import Any, TypedDict
+from typing import TypedDict
 
-from .errors import InvalidKnowledgeSourceError, KnowledgeSourceNotFoundError
-from .frontmatter import FrontmatterManager, parse_frontmatter
-from .taxonomy import TaxonomyRegistry
-from .walker import iter_kb_documents
+from main.utils.kb_engine.errors import (
+    InvalidKnowledgeSourceError,
+    KnowledgeSourceNotFoundError,
+)
+from main.utils.kb_engine.frontmatter import KnowledgeSource
+from main.utils.kb_engine.taxonomy import TaxonomyRegistry
+from main.utils.kb_engine.walker import iter_kb_documents
 
 REQUIRED_FM_KEYS = ["title", "category", "topics", "summary"]
 
 
 class ValidationReport(TypedDict):
+    """Structured Knowledge Base validation result."""
+
     total_docs: int
     errors: list[str]
     warnings: list[str]
     is_healthy: bool
 
 
+class SitemapDocument(TypedDict):
+    """Fields required to render one source in the sitemap."""
+
+    title: str
+    category: str
+    topics: list[str]
+    summary: str
+    rel_path: str
+
+
 class KBValidator:
+    """Validate Knowledge Sources and build their sitemap."""
+
     def __init__(self, kb_dir: Path, index_file: Path, taxonomy: TaxonomyRegistry):
         self.kb_dir = kb_dir
         self.index_file = index_file
         self.taxonomy = taxonomy
-        self.fm_manager = FrontmatterManager(kb_dir, taxonomy)
 
     def build_sitemap(self) -> str:
-        docs: list[dict[str, Any]] = []
+        """Build and persist the canonical Knowledge Base sitemap."""
+        docs: list[SitemapDocument] = []
         for file_path in iter_kb_documents(self.kb_dir):
-            fm, _ = self.fm_manager.parse_document(file_path)
-            if fm:
-                fm["file_path"] = file_path
-                fm["rel_path"] = str(file_path.relative_to(self.kb_dir))
-                docs.append(fm)
+            source = KnowledgeSource.from_path(
+                file_path,
+                self.kb_dir,
+                self.taxonomy,
+            )
+            if source.metadata:
+                docs.append(
+                    {
+                        "title": source.title,
+                        "category": source.category,
+                        "topics": source.topics,
+                        "summary": source.summary,
+                        "rel_path": file_path.relative_to(self.kb_dir).as_posix(),
+                    }
+                )
 
-        categories: dict[str, list[dict[str, Any]]] = {}
+        categories: dict[str, list[SitemapDocument]] = {}
         for doc in docs:
-            cat = doc.get("category", "general")
-            categories.setdefault(cat, []).append(doc)
+            categories.setdefault(doc["category"] or "general", []).append(doc)
 
         lines = [
             "# Master Knowledge Base Index",
@@ -71,11 +97,11 @@ class KBValidator:
             lines.append(f"Total documents: {len(cat_docs)}")
             lines.append("")
 
-            for doc in sorted(cat_docs, key=lambda d: d.get("title", "")):
+            for doc in sorted(cat_docs, key=lambda document: document["title"]):
                 rel = doc["rel_path"]
-                title = doc.get("title", doc["rel_path"])
-                topics = ", ".join(doc.get("topics", []))
-                summary = doc.get("summary", "")
+                title = doc["title"]
+                topics = ", ".join(doc["topics"])
+                summary = doc["summary"]
                 link_target = f"<{rel}>" if " " in rel else rel
 
                 lines.append(f"- **[{title}]({link_target})** (`{rel}`)")
@@ -104,6 +130,7 @@ class KBValidator:
         return sitemap_content
 
     def validate_health(self, source_rel_path: str | None = None) -> ValidationReport:
+        """Validate the corpus or one exact Knowledge Source."""
         errors: list[str] = []
         warnings: list[str] = []
         documents = tuple(iter_kb_documents(self.kb_dir))
@@ -131,15 +158,18 @@ class KBValidator:
             rel_path = file_path.relative_to(self.kb_dir)
 
             try:
-                content = self.fm_manager.read_source(file_path)
-                parsed = parse_frontmatter(content, rel_path.as_posix())
+                source = KnowledgeSource.from_path(
+                    file_path,
+                    self.kb_dir,
+                    self.taxonomy,
+                )
             except InvalidKnowledgeSourceError as error:
                 errors.append(str(error))
                 continue
-            if not parsed.has_frontmatter:
+            if not source.has_frontmatter:
                 errors.append(f"[{rel_path}] Missing YAML frontmatter header ('---').")
                 continue
-            fm, body = parsed.metadata, parsed.body
+            fm, body = source.metadata, source.body
 
             for key in REQUIRED_FM_KEYS:
                 if key not in fm or not fm[key]:

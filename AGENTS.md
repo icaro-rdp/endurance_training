@@ -4,7 +4,7 @@ start each response with "using custom instructions:"
 
 ## Exploring the repository
 
-When using an AI agent to explore the codebase, start with high-level questions about the project structure, main modules, and functionality. This is useful not to generate new code if not necessary, but to understand the context and existing code before making changes or additions. For instance, if a utility function is needed, first check if a similar function already exists in the codebase in `main/Utils` to avoid duplication. If you need to understand how a specific module works, look for its docstrings and any related documentation in the repository.
+When using an AI agent to explore the codebase, start with high-level questions about the project structure, main modules, and functionality. This is useful not to generate new code if not necessary, but to understand the context and existing code before making changes or additions. For instance, if a utility function is needed, first check if a similar function already exists in the codebase in `main/utils` to avoid duplication. If you need to understand how a specific module works, look for its docstrings and any related documentation in the repository.
 
 ## Setup & commands
 
@@ -134,4 +134,3 @@ The repository uses the default triage-label vocabulary. See `docs/agents/triage
 ### Domain docs
 
 This is a single-context repository using root `CONTEXT.md` and `docs/adr/`. See `docs/agents/domain.md`.
-

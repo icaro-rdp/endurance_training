@@ -10,7 +10,7 @@ When working on tasks, answering user questions, or generating training plans in
 
 Before generating endurance training guidance or answering questions about metrics, physiology, HIIT, Zone 2, strength, or periodization:
 
-- Run a hybrid search query using `python3 main/cli.py search "<query>"` or call the MCP tool `search_knowledge_base`.
+- Run a hybrid search query using `uv run endurance-kb search "<query>"` or call the MCP tool `search_passages`.
 - Reference the master sitemap at [`Knowledge_base/INDEX.md`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/INDEX.md) and taxonomy at [`Knowledge_base/TAXONOMY.md`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/TAXONOMY.md).
 
 ## 2. Formatting & Citation Standards
@@ -23,7 +23,5 @@ Before generating endurance training guidance or answering questions about metri
 When adding new research, articles, or podcast notes:
 
 1. Include valid YAML frontmatter header conforming to [`Knowledge_base/TAXONOMY.md`](file:///Users/icaroredepaolini/Personale/training/endurance_training/Knowledge_base/TAXONOMY.md).
-2. Run `python3 main/cli.py build-index` to update `INDEX.md`.
-3. Run `python3 main/cli.py search --reindex "<query>"` to update the FTS5 index.
-4. Run `python3 main/cli.py validate` to confirm zero schema or link errors.
-
+2. Run `uv run endurance-kb build-index` to update `INDEX.md` and synchronize the Derived Index.
+3. Run `uv run endurance-kb validate` to confirm zero schema or link errors.
