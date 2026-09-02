@@ -46,7 +46,7 @@ def create_mcp_server(
         instructions=(
             "Endurance Training Knowledge Base retriever. "
             "Use search_passages to retrieve citation-backed Evidence Passages "
-            "for training, physiology, nutrition, and planning. "
+            "for training, physiology, and nutrition. "
             "Passages contain exact source lines, section hierarchy, and source links."
         ),
     )
@@ -72,7 +72,7 @@ def create_mcp_server(
         Args:
             query: The search term or athlete question in English.
             category: Optional category filter (e.g. training, physiology,
-                nutrition, planning).
+                nutrition).
             topic: Optional topic filter (e.g. VO2max_and_aerobic_hiit,
                 FTP_and_functional_metrics, Carbohydrate_fueling_and_gut_training).
             source_slug: Optional source slug filter (e.g.

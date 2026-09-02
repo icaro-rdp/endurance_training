@@ -1,7 +1,7 @@
 ---
 title: 'How To Overcome “Coach’s Block”: 8 Tips For Getting Down To Planning'
 language: en
-category: planning
+category: training
 topics:
 - Periodization_models_and_macrocycles
 - Microcycle_and_schedule_design

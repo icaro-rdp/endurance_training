@@ -134,11 +134,11 @@ Worked scenarios applying the stimulus/recovery diagnosis above. Use these as te
 
 ### Example 2 — Threshold plateau → shift to VO2max
 
-**Profile:** FTP stuck for two full training blocks despite consistent progressive 2×20 → 3×20 progression (see [FTP_workout_2x20.md](../threshold/FTP_workout_2x20.md)).
+**Profile:** FTP stuck for two full training blocks despite consistent progressive 2×20 → 3×20 progression (see [FTP_workout_2x20.md](FTP_workout_2x20.md)).
 
 **Diagnosis:** progressive overload was applied correctly (time-in-zone increased block over block) and FTP still didn't move → per the diagnostic principle above, the central aerobic system is no longer the failing link; threshold-specific stimulus has run its course.
 
-**Adjustment:** swap the primary quality day from threshold to VO2max (see [VO2_training.md](../vo2/VO2_training.md)) for one block — e.g., 5×5 min at 118–130% FTP — while keeping the second quality day easy/moderate so recovery capacity isn't squeezed on two fronts at once. Retest FTP after the block, not mid-block.
+**Adjustment:** swap the primary quality day from threshold to VO2max (see [VO2_training.md](VO2_training.md)) for one block — e.g., 5×5 min at 118–130% FTP — while keeping the second quality day easy/moderate so recovery capacity isn't squeezed on two fronts at once. Retest FTP after the block, not mid-block.
 
 ### Example 3 — Compacting a high-volume block for a time-crunched athlete
 

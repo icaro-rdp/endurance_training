@@ -96,13 +96,13 @@ class TaxonomyRegistry:
         "training": "training",
         "physiology": "physiology",
         "nutrition": "nutrition",
-        "planning": "planning",
+        "planning": "training",
         "hiit": "training",
         "zone2": "training",
         "strength": "training",
         "metrics": "physiology",
         "testing": "physiology",
-        "periodization": "planning",
+        "periodization": "training",
     }
 
     TOPIC_MAP: ClassVar[dict[str, str]] = {

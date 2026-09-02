@@ -1,7 +1,7 @@
 ---
 title: Building An Annual Training Plan For Cycling
 language: en
-category: planning
+category: training
 topics:
 - Periodization_models_and_macrocycles
 - Training_intensity_distribution

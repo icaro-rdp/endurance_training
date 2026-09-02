@@ -1,6 +1,6 @@
 ---
 title: Over/Unders — Complete Guide
-category: planning
+category: training
 topics:
 - FTP_and_functional_metrics
 - VO2max_and_aerobic_kinetics

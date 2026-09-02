@@ -107,8 +107,8 @@ class TestClassifierSuite(unittest.TestCase):
         )
 
     def test_prompt_coverage_from_registry(self) -> None:
-        """2. Prompt coverage derived from all 36 registry topics and 4 categories."""
-        self.assertEqual(len(self.taxonomy.categories()), 4)
+        """2. Prompt coverage derived from all 36 registry topics and 3 categories."""
+        self.assertEqual(len(self.taxonomy.categories()), 3)
         self.assertEqual(len(self.taxonomy.topics()), 36)
         self.assertNotIn("title", self.taxonomy.topics())
         classifier = LocalLLMClassifier(
@@ -137,7 +137,10 @@ class TestClassifierSuite(unittest.TestCase):
                 "CUSTOM DEFINITION FROM THE CANONICAL FILE",
             ).replace(
                 "Training execution, interval protocol design, aerobic base, "
-                "resistance exercise, biomechanics, ergonomics, and pacing tactics.",
+                "resistance exercise, biomechanics, ergonomics, pacing tactics, "
+                "periodization models, training intensity distributions, "
+                "microcycle architecture, workload quantification, tapering, "
+                "and overtraining management.",
                 "CUSTOM CATEGORY DEFINITION FROM THE CANONICAL FILE",
             ),
             encoding="utf-8",

@@ -12,7 +12,7 @@ Welcome to the **Endurance Training Knowledge Base**. This document is the prima
 ## Document Catalog by Category
 
 ### Category: `TRAINING`
-Total documents: 189
+Total documents: 190
 
 - **[100k AMA: Zone 3 Rides, Anaerobic Capacity vs FTP, Heavy Lifting, and Indoor Equivalence — Q&A Guide](Episodes/Empirical_cycling_podcast/training/100k_AMA.md)** (`Episodes/Empirical_cycling_podcast/training/100k_AMA.md`)
   - **Topics**: Zone2_and_endurance_base, Threshold_intervals, Strength_and_resistance_training, Torque_and_cadence_drills, Pacing_and_execution_dynamics
@@ -301,6 +301,10 @@ Total documents: 189
 - **[Optimizing HIT Aerobic Workouts: the Decreasing Length Intervals](Articles/knowledgeIsWatts/training/optimizing-decreasing-length-intervals.md)** (`Articles/knowledgeIsWatts/training/optimizing-decreasing-length-intervals.md`)
   - **Topics**: VO2max_and_aerobic_hiit, Threshold_intervals, Lactate_kinetics_and_metabolism, Substrate_utilization_and_fat_oxidation, Durability_and_fatigue_mechanisms, Training_intensity_distribution, Workload_quantification_and_modeling, Tapering_and_peaking
   - **Summary**: The document discusses optimizing high-intensity interval training (HIT) sessions by using decreasing length intervals to maximize time spent at high percentages of VO2max, enhancing aerobic adaptations. It also explores the physiological principles behind recovery kinetics and their application in training design.
+
+- **[Over/Unders — Complete Guide](Episodes/Empirical_cycling_podcast/training/threshold/Over_unders.md)** (`Episodes/Empirical_cycling_podcast/training/threshold/Over_unders.md`)
+  - **Topics**: FTP_and_functional_metrics, VO2max_and_aerobic_kinetics, Thresholds_and_metabolic_domains, Zone2_and_endurance_base
+  - **Summary**: Over/unders are structured intervals that alternate between a power target **above** threshold ("overs") and a recovery target **below** threshold ("unders"). The overs recruit large motor units and briefly stress the anaerobic system; the unders let you recover enough to repeat the over without blo
 
 - **[Periodizing Strength Training for Cycling Performance — Complete Guide](Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__15__Periodizing_Strength_Training_for_Cycling_Performance.md)** (`Episodes/Empirical_cycling_podcast/training/Ten_Minute_Tips__15__Periodizing_Strength_Training_for_Cycling_Performance.md`)
   - **Topics**: Strength_and_resistance_training, Zone2_and_endurance_base, Threshold_intervals, Torque_and_cadence_drills, Pacing_and_execution_dynamics, Cross_training_and_multisport, Biomechanics_fit_and_equipment, Workload_quantification_and_modeling
@@ -1059,14 +1063,5 @@ Total documents: 11
 - **[Why Keto Is Not The Diet You're Looking For: Economy Penalties, Glycolytic Blunting, & The Burke Studies — Complete Guide](Episodes/Empirical_cycling_podcast/nutrition/Watts_Doc__34__Why_Keto_Is_Not_The_Diet_You_re_Looking_For.md)** (`Episodes/Empirical_cycling_podcast/nutrition/Watts_Doc__34__Why_Keto_Is_Not_The_Diet_You_re_Looking_For.md`)
   - **Topics**: Carbohydrate_fueling_and_gut_training, Energy_availability_and_reds, Substrate_utilization_and_fat_oxidation, VO2max_and_aerobic_hiit, Mitochondrial_and_cellular_adaptation, Lactate_kinetics_and_metabolism, Threshold_intervals, FTP_and_functional_metrics
   - **Summary**: The document discusses the limitations of the ketogenic diet in endurance sports, focusing on the oxygen economy penalty, downregulated glycolytic enzymes, and the lack of performance improvements in high-intensity efforts. It also explores the physiological mechanisms behind these effects and their implications for training and race performance.
-
----
-
-### Category: `PLANNING`
-Total documents: 1
-
-- **[Over/Unders — Complete Guide](Episodes/Empirical_cycling_podcast/training/threshold/Over_unders.md)** (`Episodes/Empirical_cycling_podcast/training/threshold/Over_unders.md`)
-  - **Topics**: FTP_and_functional_metrics, VO2max_and_aerobic_kinetics, Thresholds_and_metabolic_domains, Zone2_and_endurance_base
-  - **Summary**: Over/unders are structured intervals that alternate between a power target **above** threshold ("overs") and a recovery target **below** threshold ("unders"). The overs recruit large motor units and briefly stress the anaerobic system; the unders let you recover enough to repeat the over without blo
 
 ---

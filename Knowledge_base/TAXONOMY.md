@@ -6,10 +6,10 @@ listed here.
 
 ---
 
-## Categories & Topics (4-Pillar Taxonomy - 36 Canonical Topics)
+## Categories & Topics (3-Pillar Taxonomy - 36 Canonical Topics)
 
 ### 1. `training`
-Training execution, interval protocol design, aerobic base, resistance exercise, biomechanics, ergonomics, and pacing tactics.
+Training execution, interval protocol design, aerobic base, resistance exercise, biomechanics, ergonomics, pacing tactics, periodization models, training intensity distributions, microcycle architecture, workload quantification, tapering, and overtraining management.
 - **Topics**:
   - `Zone2_and_endurance_base` (Low-intensity continuous endurance training volume, Zone 2, LIT, LSD, base miles)
   - `Subthreshold_and_tempo` (Sweet Spot 88-94% FTP, Zone 3 tempo, extensive aerobic density)
@@ -21,6 +21,13 @@ Training execution, interval protocol design, aerobic base, resistance exercise,
   - `Pacing_and_execution_dynamics` (Pacing tactics, ERG vs slope mode, RPE auto-regulation, TT/climb power distribution)
   - `Cross_training_and_multisport` (Modality transfer, run-to-bike transfer, swimming, triathlon brick workouts)
   - `Biomechanics_fit_and_equipment` (Bike fit ergonomics, saddle pressure, aerodynamics CdA, rolling resistance Crr, drivetrain friction)
+  - `Periodization_models_and_macrocycles` (Linear, block periodization, reverse, phase potentiation, annual plan ATP, progressive overload)
+  - `Training_intensity_distribution` (TID: Polarized 80/20, pyramidal, threshold-centric distribution, session-goal vs time-in-zone)
+  - `Microcycle_and_schedule_design` (7-day/10-day microcycles, session sequencing, Norwegian double threshold scheduling, recovery weeks)
+  - `Workload_quantification_and_modeling` (PMC: CTL/ATL/TSB, TSS, NP, IF, Banister impulse-response model, TRIMP, mechanical kJ)
+  - `Tapering_and_peaking` (Exponential volume reduction 40-60%, intensity/frequency maintenance, taper duration, race openers)
+  - `Overtraining_and_recovery_management` (Functional/non-functional overreaching, OTS, sleep architecture, recovery modalities)
+  - `Psychology_and_cognitive_performance` (Psychobiological model of endurance, RPE governor, mental fatigue, ACT training, resilience)
 
 ### 2. `physiology`
 Underlying biological mechanisms, cardiovascular remodeling, cellular bioenergetics, metabolic thresholds, fatigue etiology, and diagnostic assessment.
@@ -48,17 +55,6 @@ Nutritional fueling, intra-workout carbohydrates, hydration/fluid balance, clini
   - `Energy_availability_and_reds` (Relative Energy Deficiency in Sport RED-S, Low Energy Availability LEA <30 kcal/kg, endocrine health)
   - `Ergogenic_supplements_and_buffers` (Sodium bicarbonate, beta-alanine, caffeine, dietary nitrates/beetroot, creatine, ketone esters)
   - `Micronutrients_and_biomarkers` (Iron metabolism, serum ferritin, hepcidin, Vitamin D3, antioxidant debate: Vitamin C/E, blood panels)
-
-### 4. `planning`
-Periodization models, training intensity distributions, microcycle architecture, workload quantification, tapering, and overtraining management.
-- **Topics**:
-  - `Periodization_models_and_macrocycles` (Linear, block periodization, reverse, phase potentiation, annual plan ATP, progressive overload)
-  - `Training_intensity_distribution` (TID: Polarized 80/20, pyramidal, threshold-centric distribution, session-goal vs time-in-zone)
-  - `Microcycle_and_schedule_design` (7-day/10-day microcycles, session sequencing, Norwegian double threshold scheduling, recovery weeks)
-  - `Workload_quantification_and_modeling` (PMC: CTL/ATL/TSB, TSS, NP, IF, Banister impulse-response model, TRIMP, mechanical kJ)
-  - `Tapering_and_peaking` (Exponential volume reduction 40-60%, intensity/frequency maintenance, taper duration, race openers)
-  - `Overtraining_and_recovery_management` (Functional/non-functional overreaching, OTS, sleep architecture, recovery modalities)
-  - `Psychology_and_cognitive_performance` (Psychobiological model of endurance, RPE governor, mental fatigue, ACT training, resilience)
 
 ---
 
@@ -100,7 +96,7 @@ key_takeaways:
 Rules:
 
 - `language` is exactly `en`; the complete source must be English.
-- `category` is exactly one of `training`, `physiology`, `nutrition`, or `planning`.
+- `category` is exactly one of `training`, `physiology`, or `nutrition`.
 - Every topic uses the exact spelling and case from this file. Do not introduce
   a near-synonym as a one-off tag.
 - `source`, `author`, and `date` record real provenance. A publication date uses
