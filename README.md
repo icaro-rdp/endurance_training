@@ -133,6 +133,29 @@ only the first 15 warnings, so a zero exit code does not mean there were no
 warnings. The add-source workflow below includes a targeted command that prints
 all warnings for the new file.
 
+### Podcast Transcript Ingestion & Translation
+
+Scrape podcast metadata, show notes, and time-synced spoken transcripts directly from Spotify into Markdown notes under `Knowledge_base/WIP/<Show_Name>/raw_transcripts/` with on-the-fly translation:
+
+```bash
+# Scrape a full show (downloads metadata + show notes + transcripts)
+uv run spotify-transcript-scraper --show-id "https://open.spotify.com/show/<show_id>"
+
+# Smart translation: Uses Microsoft Azure Translator (via AZURE_TRANSLATOR_KEY)
+# or DeepL API if available, automatically falling back
+# to local Apple Silicon MLX GPU upon reaching any rate or quota limits
+uv run spotify-transcript-scraper --show-id "https://open.spotify.com/show/<show_id>" --translate
+
+# Force translation directly with local Apple Silicon MLX GPU (offline)
+uv run spotify-transcript-scraper --show-id "https://open.spotify.com/show/<show_id>" --translate-local
+
+# Scrape and translate a specific episode
+uv run spotify-transcript-scraper --episode-id "https://open.spotify.com/episode/<episode_id>" --translate
+
+# Force re-download / re-translation
+uv run spotify-transcript-scraper --show-id "https://open.spotify.com/show/<show_id>" --translate --force
+```
+
 ## Testing changes
 
 Install the locked development environment with `uv sync --locked`, then run:

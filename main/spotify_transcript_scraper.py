@@ -4,7 +4,7 @@
 Fetches podcast episode metadata via Spotify Web API and extracts
 time-synced episode transcripts, generating clean Markdown files formatted
 with YAML frontmatter conforming to the knowledge base taxonomy.
-Supports on-the-fly local MLX / DeepL translation into English under WIP.
+Supports on-the-fly Azure, DeepL, or local MLX translation into English.
 """
 
 from __future__ import annotations
@@ -19,6 +19,7 @@ from pathlib import Path
 from typing import Any
 
 import requests
+from tqdm import tqdm
 
 
 def extract_spotify_id(value: str, expected_type: str | None = None) -> str:
@@ -38,40 +39,25 @@ def extract_spotify_id(value: str, expected_type: str | None = None) -> str:
     Raises:
         ValueError: If a valid Spotify ID cannot be parsed from the input.
     """
-    cleaned = value.strip()
+    cleaned = re.sub(r"\s+", "", value).replace("\\", "")
     if not cleaned:
         raise ValueError("Empty Spotify identifier provided.")
 
-    # 1. Typed Spotify URI: spotify:<expected_type>:<id>
-    if expected_type:
-        typed_uri_match = re.search(rf"spotify:{expected_type}:([a-zA-Z0-9]+)", cleaned)
-        if typed_uri_match:
-            return typed_uri_match.group(1)
-
-    # 2. General Spotify URI: spotify:(show|episode|track):<id>
-    uri_match = re.search(r"spotify:(?:[a-zA-Z]+:)?([a-zA-Z0-9]+)", cleaned)
-    if uri_match:
-        return uri_match.group(1)
-
-    # 3. Typed Spotify URL: open.spotify.com/(intl-[a-z-]+/)?<expected_type>/<id>
-    if expected_type:
-        typed_url_match = re.search(
-            rf"open\.spotify\.com/(?:intl-[a-zA-Z-]+/)?{expected_type}/([a-zA-Z0-9]+)(?:[/?#]|$)",
-            cleaned,
-        )
-        if typed_url_match:
-            return typed_url_match.group(1)
-
-    # 4. General Spotify URL: open.spotify.com/(intl-[a-z-]+/)?(show|episode|track)/<id>
-    url_match = re.search(
-        r"open\.spotify\.com/(?:intl-[a-zA-Z-]+/)?(?:[a-zA-Z_-]+/)?([a-zA-Z0-9]+)(?:[/?#]|$)",
+    entity_match = re.search(
+        r"(?:open\.spotify\.com/(?:intl-[a-zA-Z-]+/)?|spotify:)"
+        r"(?P<entity_type>show|episode|track)[/:]"
+        r"(?P<spotify_id>[a-zA-Z0-9]{22})(?:[/?#]|$)",
         cleaned,
     )
-    if url_match:
-        return url_match.group(1)
+    if entity_match:
+        entity_type = entity_match.group("entity_type")
+        if expected_type and entity_type != expected_type:
+            raise ValueError(
+                f"Expected a Spotify {expected_type}, received {entity_type}."
+            )
+        return entity_match.group("spotify_id")
 
-    # 5. Plain alphanumeric ID
-    if re.fullmatch(r"[a-zA-Z0-9]+", cleaned):
+    if re.fullmatch(r"[a-zA-Z0-9]{22}", cleaned):
         return cleaned
 
     raise ValueError(f"Unable to parse Spotify ID from: '{value}'")
@@ -112,7 +98,10 @@ def load_credentials() -> dict[str, str]:
         "SPOTIFY_CLIENT_ID",
         "SPOTIFY_CLIENT_SECRET",
         "SPOTIFY_SP_DC",
+        "AZURE_TRANSLATOR_KEY",
+        "AZURE_TRANSLATOR_REGION",
         "DEEPL_API_KEY",
+        "LOCAL_MLX_MODEL",
     ]:
         if key not in env_vars and key in os.environ:
             env_vars[key] = os.environ[key]
@@ -226,6 +215,57 @@ class SpotifyAPIClient:
             offset += batch_size
 
         return episodes
+
+
+def extract_title_from_markdown(
+    markdown_content: str, default: str = "Untitled"
+) -> str:
+    """Extracts title from YAML frontmatter or top header.
+
+    Args:
+        markdown_content: Document content.
+        default: Fallback title if none found.
+
+    Returns:
+        Extracted title string.
+    """
+    match = re.search(r'^title:\s*["\']?(.*?)["\']?$', markdown_content, re.MULTILINE)
+    if match and match.group(1).strip():
+        return match.group(1).strip()
+    match_h1 = re.search(r"^#\s+(.+)$", markdown_content, re.MULTILINE)
+    if match_h1 and match_h1.group(1).strip():
+        return match_h1.group(1).strip()
+    return default
+
+
+def sanitize_filename(name: str, max_length: int = 80) -> str:
+    """Sanitizes a title for safe filesystem filename generation.
+
+    Args:
+        name: Raw episode or document title.
+        max_length: Maximum character length for base filename.
+
+    Returns:
+        Sanitized filename string without extension.
+    """
+    clean = "".join(c if c.isalnum() or c in " ._-" else "_" for c in name).strip()
+    clean = clean.replace(" ", "_")[:max_length]
+    return clean or "Untitled"
+
+
+def build_episode_filename(episode_info: dict[str, Any], title: str) -> str:
+    """Build a sortable filename with a stable Spotify identity.
+
+    Args:
+        episode_info: Spotify episode metadata.
+        title: Translated or original episode title.
+
+    Returns:
+        Markdown filename containing release date, title, and episode ID.
+    """
+    release_date = str(episode_info.get("release_date") or "unknown")
+    episode_id = str(episode_info.get("id") or "unknown")
+    return f"{release_date}_{sanitize_filename(title)}_{episode_id}.md"
 
 
 def format_ms(ms: int) -> str:
@@ -426,20 +466,58 @@ def main() -> None:
             "(default: Knowledge_base/WIP/<show_name>/raw_transcripts)"
         ),
     )
-    parser.add_argument(
+    translation_group = parser.add_mutually_exclusive_group()
+    translation_group.add_argument(
+        "--translate",
+        action="store_true",
+        help=(
+            "Translate downloaded markdown to English using Azure, then DeepL, "
+            "then local Apple Silicon MLX as available"
+        ),
+    )
+    translation_group.add_argument(
         "--translate-local",
         action="store_true",
         help=(
             "Translate downloaded markdown to English using local "
-            "Apple Silicon MLX model"
+            "Apple Silicon MLX model directly"
+        ),
+    )
+    translation_group.add_argument(
+        "--translate-deepl",
+        action="store_true",
+        help=(
+            "Translate downloaded markdown to English using DeepL API "
+            "(with automatic local MLX fallback)"
         ),
     )
     parser.add_argument(
-        "--local-model",
-        default="mlx-community/Qwen2.5-7B-Instruct-4bit",
+        "--azure-key",
+        default=None,
         help=(
-            "Model ID for local MLX translation "
-            "(default: mlx-community/Qwen2.5-7B-Instruct-4bit)"
+            "Microsoft Azure Translator Key "
+            "(optional; reads AZURE_TRANSLATOR_KEY from .env)"
+        ),
+    )
+    parser.add_argument(
+        "--azure-region",
+        default=None,
+        help=(
+            "Microsoft Azure Service Region "
+            "(optional; reads AZURE_TRANSLATOR_REGION from .env)"
+        ),
+    )
+    parser.add_argument(
+        "--deepl-key",
+        default=None,
+        help="DeepL Authentication Key (optional; reads DEEPL_API_KEY from .env)",
+    )
+    parser.add_argument(
+        "--local-model",
+        default=None,
+        help=(
+            "Model ID for local MLX translation fallback "
+            "(reads LOCAL_MLX_MODEL from .env when omitted)"
         ),
     )
     parser.add_argument(
@@ -562,39 +640,51 @@ def main() -> None:
         except (requests.RequestException, OSError, ValueError, RuntimeError) as e:
             print(f"Warning: Failed to initialize SpotifyClient scraper ({e}).")
 
-    # Initialize local translator if requested
-    local_translator = None
-    if args.translate_local:
-        from main.utils.translator import LocalMLXTranslator
+    # Initialize translator if requested
+    translator = None
+    if args.translate or args.translate_local or args.translate_deepl:
+        from main.utils.translator import DEFAULT_LOCAL_MODEL_ID, HybridTranslator
 
-        local_translator = LocalMLXTranslator(model_id=args.local_model)
-
-    print(f"\nProcessing {len(episodes)} episode(s)...")
+        prefer_api = not args.translate_local
+        azure_key = args.azure_key or credentials.get("AZURE_TRANSLATOR_KEY")
+        azure_region = args.azure_region or credentials.get("AZURE_TRANSLATOR_REGION")
+        deepl_key = args.deepl_key or credentials.get("DEEPL_API_KEY")
+        local_model_id = (
+            args.local_model
+            or credentials.get("LOCAL_MLX_MODEL")
+            or DEFAULT_LOCAL_MODEL_ID
+        )
+        translator = HybridTranslator(
+            azure_key=azure_key,
+            azure_region=azure_region,
+            deepl_key=deepl_key,
+            local_model_id=local_model_id,
+            prefer_api=prefer_api,
+            enable_azure=not args.translate_deepl,
+        )
 
     success_count = 0
     skipped_count = 0
     no_transcript_count = 0
 
-    for i, ep in enumerate(episodes, 1):
-        ep_id = ep.get("id")
-        ep_name = ep.get("name", "Untitled")
-        clean_filename = "".join(
-            c if c.isalnum() or c in " ._-" else "_" for c in ep_name
-        ).strip()
-        clean_filename = clean_filename.replace(" ", "_")[:80]
-        base_name = f"{ep.get('release_date', 'unknown')}_{clean_filename}"
-        target_file = output_path / f"{base_name}.md"
+    progress_description = "Scraping & Translating" if translator else "Scraping"
+    progress_bar = tqdm(episodes, desc=progress_description, unit="ep")
+    for i, ep in enumerate(progress_bar, 1):
+        ep_id = str(ep.get("id") or "").strip()
+        ep_name = str(ep.get("name") or "Untitled")
 
-        # Check for existing download
-        if not args.force and (
-            ep_id in existing_downloads
-            or (target_file.exists() and target_file.stat().st_size > 100)
-        ):
-            print(f"[{i}/{len(episodes)}] (Skipping already downloaded) {ep_name}")
+        if not ep_id:
+            tqdm.write(f"[{i}/{len(episodes)}] Skipped episode without a Spotify ID")
             skipped_count += 1
             continue
 
-        print(f"\n[{i}/{len(episodes)}] {ep_name} (ID: {ep_id})")
+        # Check for existing download
+        if not args.force and ep_id in existing_downloads:
+            tqdm.write(f"[{i}/{len(episodes)}] (Skipped existing) {ep_name}")
+            skipped_count += 1
+            continue
+
+        progress_bar.set_postfix_str(f"{ep_name[:35]}...")
 
         transcript_lines = None
         if scraper_client:
@@ -605,7 +695,6 @@ def main() -> None:
                         {"start_ms": line.start_ms, "text": line.text}
                         for line in transcript_obj.lines
                     ]
-                    print(f"  -> Extracted {len(transcript_lines)} transcript lines!")
                     success_count += 1
             except (
                 requests.RequestException,
@@ -614,8 +703,7 @@ def main() -> None:
                 RuntimeError,
                 AttributeError,
                 KeyError,
-            ) as e:
-                print(f"  -> No transcript found on Spotify ({e})")
+            ):
                 no_transcript_count += 1
         else:
             no_transcript_count += 1
@@ -628,18 +716,18 @@ def main() -> None:
             author=show_publisher,
         )
 
-        # Translate locally if requested
-        if local_translator:
-            print("  -> Translating into English via local Apple Silicon MLX GPU...")
-            md_content = local_translator.translate_markdown(
-                md_content, target_lang="en"
-            )
+        # Translate with automatic API -> local MLX fallback
+        if translator:
+            md_content = translator.translate_markdown(md_content, target_lang="en")
+
+        final_title = extract_title_from_markdown(md_content, default=ep_name)
+        target_file = output_path / build_episode_filename(ep, final_title)
 
         target_file.parent.mkdir(parents=True, exist_ok=True)
         target_file.write_text(md_content, encoding="utf-8")
-        print(f"  Saved: {target_file.name}")
+        tqdm.write(f"[{i}/{len(episodes)}] Saved: {target_file.name}")
 
-        time.sleep(0.3)
+        time.sleep(0.1)
 
     if scraper_client:
         scraper_client.close()

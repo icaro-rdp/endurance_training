@@ -9,6 +9,8 @@ description = "Private, evidence-grounded endurance training knowledge base"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "azure-ai-translation-text>=2.0.0",
+    "deepl>=1.32.0",
     "fastembed>=0.8.0",
     "mcp>=2.0.0",
     "pydantic>=2.0.0",

@@ -179,6 +179,33 @@ wheels = [
 ]
 
 [[package]]
+name = "azure-ai-translation-text"
+version = "2.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "azure-core" },
+    { name = "isodate" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/59/10/ea00242bd7483e8a34ae58557f422d3c35088a7b3315493f269903bbdbf7/azure_ai_translation_text-2.0.0.tar.gz", hash = "sha256:a467c87a7c7a2602447fbc882b7ca8a93471b2957ec15b9b6c2b76dbed7dcc72", size = 103907, upload-time = "2026-05-29T01:17:12.538Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/88/c3/06ca8c3bb18cd666e4eadf05dcb5950ffce574068c60521366bacbbacc6b/azure_ai_translation_text-2.0.0-py3-none-any.whl", hash = "sha256:e07d0c90c11606b4f94f430b1ae75dc2f69e8fb4dfa06b666ec0a803db5c323f", size = 105231, upload-time = "2026-05-29T01:17:13.881Z" },
+]
+
+[[package]]
+name = "azure-core"
+version = "1.41.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "requests" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a6/f3/b416179e408990df5db0d516283022dde0f5d0111d98c1a848e41853e81c/azure_core-1.41.0.tar.gz", hash = "sha256:f46ff5dfcd230f25cf1c19e8a34b8dc08a337b2503e268bb600a16c00db8ad5a", size = 381042, upload-time = "2026-05-07T23:30:54.302Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5b/db/325c6d7312d2200251c52323878281045aaffcb5586612296484e4280eaa/azure_core-1.41.0-py3-none-any.whl", hash = "sha256:522b4011e8180b1a3dcd2024396a4e7fe9ac37fb8597db47163d230b5efe892d", size = 220920, upload-time = "2026-05-07T23:30:56.357Z" },
+]
+
+[[package]]
 name = "certifi"
 version = "2026.7.22"
 source = { registry = "https://pypi.org/simple" }
@@ -509,6 +536,18 @@ wheels = [
 ]
 
 [[package]]
+name = "deepl"
+version = "1.32.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d0/29/c54ffa32b73e91ca72f71be3ab282cb7d88521df96bc72865a3b75f33d17/deepl-1.32.0.tar.gz", hash = "sha256:3016bf86f1f53eb6e5fedb458746c6bf6579a840b57c54a2ed701b0344bc79e1", size = 68648, upload-time = "2026-08-13T12:58:46.587Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/10/e0/8cbb7c17012cc9a7f896c8c7aedc79fb58840e827c927b16cbbf49b1e8e7/deepl-1.32.0-py3-none-any.whl", hash = "sha256:36f2faadc79a64712489bfeab32f344536eab25b3c38ea2e39a72084a71e0a7e", size = 60623, upload-time = "2026-08-13T12:58:45.231Z" },
+]
+
+[[package]]
 name = "dill"
 version = "0.4.1"
 source = { registry = "https://pypi.org/simple" }
@@ -531,6 +570,8 @@ name = "endurance-training-kb"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "azure-ai-translation-text" },
+    { name = "deepl" },
     { name = "fastembed" },
     { name = "mcp" },
     { name = "pydantic" },
@@ -561,6 +602,8 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "azure-ai-translation-text", specifier = ">=2.0.0" },
+    { name = "deepl", specifier = ">=1.32.0" },
     { name = "fastembed", specifier = ">=0.8.0" },
     { name = "mcp", specifier = ">=2.0.0" },
     { name = "mlx-lm", marker = "extra == 'local-ai'", specifier = ">=0.21.0" },
@@ -870,6 +913,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/72/34/14ca021ce8e5dfedc35312d08ba8bf51fdd999c576889fc2c24cb97f4f10/iniconfig-2.3.0.tar.gz", hash = "sha256:c76315c77db068650d49c5b56314774a7804df16fee4402c1f19d6d15d8c4730", size = 20503, upload-time = "2025-10-18T21:55:43.219Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/cb/b1/3846dd7f199d53cb17f49cba7e651e9ce294d8497c8c150530ed11865bb8/iniconfig-2.3.0-py3-none-any.whl", hash = "sha256:f631c04d2c48c52b84d0d0549c99ff3859c98df65b3101406327ecc7d53fbf12", size = 7484, upload-time = "2025-10-18T21:55:41.639Z" },
+]
+
+[[package]]
+name = "isodate"
+version = "0.7.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/54/4d/e940025e2ce31a8ce1202635910747e5a87cc3a6a6bb2d00973375014749/isodate-0.7.2.tar.gz", hash = "sha256:4cd1aa0f43ca76f4a6c6c0292a85f40b35ec2e43e315b59f06e6d32171a953e6", size = 29705, upload-time = "2024-10-08T23:04:11.5Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/15/aa/0aca39a37d3c7eb941ba736ede56d689e7be91cab5d9ca846bde3999eba6/isodate-0.7.2-py3-none-any.whl", hash = "sha256:28009937d8031054830160fce6d409ed342816b543597cece116d966c6d99e15", size = 22320, upload-time = "2024-10-08T23:04:09.501Z" },
 ]
 
 [[package]]
