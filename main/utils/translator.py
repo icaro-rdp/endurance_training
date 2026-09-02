@@ -12,6 +12,7 @@ import json
 import logging
 import os
 import re
+import time
 from collections.abc import Callable
 from typing import Protocol
 
@@ -23,6 +24,8 @@ from azure.core.exceptions import AzureError, HttpResponseError
 logger = logging.getLogger(__name__)
 
 DEFAULT_LOCAL_MODEL_ID = "mlx-community/Qwen2.5-7B-Instruct-4bit"
+DEFAULT_AZURE_CHARACTERS_PER_MINUTE = 30_000
+AZURE_RATE_LIMIT_BACKOFF_SECONDS = 60.0
 
 ITALIAN_MARKERS = frozenset(
     {
@@ -97,8 +100,16 @@ class TranslationProviderError(TranslationError):
     """Raised when a cloud translation provider cannot complete a request."""
 
 
+class TranslationConfigurationError(TranslationProviderError):
+    """Raised when provider credentials or account configuration are invalid."""
+
+
 class TranslationLimitError(TranslationProviderError):
-    """Raised when a cloud provider rejects work due to quota or rate limits."""
+    """Raised when a cloud provider rejects work due to exhausted quota."""
+
+
+class TranslationRateLimitError(TranslationProviderError):
+    """Raised when a cloud provider temporarily throttles requests."""
 
 
 class MarkdownTranslator(Protocol):
@@ -465,6 +476,7 @@ class AzureTranslator:
         api_key: str | None = None,
         region: str | None = None,
         endpoint: str | None = None,
+        characters_per_minute: int | None = None,
     ) -> None:
         """Initializes official Azure TextTranslationClient.
 
@@ -472,6 +484,11 @@ class AzureTranslator:
             api_key: Azure Translator Subscription Key (AZURE_TRANSLATOR_KEY).
             region: Service Region (AZURE_TRANSLATOR_REGION, default: 'global').
             endpoint: Custom endpoint URL if specified.
+            characters_per_minute: Maximum translation pace. Defaults to a
+                conservative rate below the documented F0 allowance.
+
+        Raises:
+            ValueError: If the API key is absent or the translation pace is invalid.
         """
         self.api_key = api_key or os.environ.get("AZURE_TRANSLATOR_KEY", "")
         self.region = (
@@ -481,12 +498,31 @@ class AzureTranslator:
             raise ValueError(
                 "Azure Translator key required. Set AZURE_TRANSLATOR_KEY in .env."
             )
+        self.characters_per_minute = (
+            characters_per_minute
+            if characters_per_minute is not None
+            else DEFAULT_AZURE_CHARACTERS_PER_MINUTE
+        )
+        if self.characters_per_minute <= 0:
+            raise ValueError("Azure characters_per_minute must be positive.")
+        self._next_request_at = 0.0
         base = endpoint or "https://api.cognitive.microsofttranslator.com"
         credential = AzureKeyCredential(self.api_key)
         self.client = azure_translation.TextTranslationClient(
             endpoint=base,
             credential=credential,
             region=self.region if self.region != "global" else None,
+        )
+
+    def _wait_for_rate_capacity(self, character_count: int) -> None:
+        """Pace requests so translated characters are consumed evenly."""
+        current_time = time.monotonic()
+        wait_seconds = self._next_request_at - current_time
+        if wait_seconds > 0:
+            time.sleep(wait_seconds)
+        request_time = max(current_time, self._next_request_at)
+        self._next_request_at = request_time + (
+            character_count * 60 / self.characters_per_minute
         )
 
     def translate_text(
@@ -508,18 +544,34 @@ class AzureTranslator:
         if not text.strip():
             return text, source_lang or "unknown"
 
-        try:
-            response = self.client.translate(
-                body=[text],
-                to_language=[target_lang],
-                from_language=source_lang,
-            )
-        except HttpResponseError as exc:
-            if exc.status_code in {403, 429}:
-                raise TranslationLimitError(str(exc)) from exc
-            raise TranslationProviderError(str(exc)) from exc
-        except AzureError as exc:
-            raise TranslationProviderError(str(exc)) from exc
+        rate_limit_retry_count = 0
+        while True:
+            self._wait_for_rate_capacity(len(text))
+            try:
+                response = self.client.translate(
+                    body=[text],
+                    to_language=[target_lang],
+                    from_language=source_lang,
+                )
+                break
+            except HttpResponseError as exc:
+                if exc.status_code == 429 and rate_limit_retry_count == 0:
+                    rate_limit_retry_count += 1
+                    logger.warning(
+                        "Azure rate limit reached; retrying in %.0f seconds",
+                        AZURE_RATE_LIMIT_BACKOFF_SECONDS,
+                    )
+                    time.sleep(AZURE_RATE_LIMIT_BACKOFF_SECONDS)
+                    continue
+                if exc.status_code == 429:
+                    raise TranslationRateLimitError(str(exc)) from exc
+                if exc.status_code == 401:
+                    raise TranslationConfigurationError(str(exc)) from exc
+                if exc.status_code == 403:
+                    raise TranslationLimitError(str(exc)) from exc
+                raise TranslationProviderError(str(exc)) from exc
+            except AzureError as exc:
+                raise TranslationProviderError(str(exc)) from exc
         if not response:
             raise TranslationProviderError("Azure returned no response")
 
@@ -594,12 +646,12 @@ class DeepLTranslator:
                 target_lang=target_lang.upper(),
                 source_lang=source_lang.upper() if source_lang else None,
             )
-        except (
-            deepl.QuotaExceededException,
-            deepl.TooManyRequestsException,
-            deepl.AuthorizationException,
-        ) as exc:
+        except deepl.TooManyRequestsException as exc:
+            raise TranslationRateLimitError(str(exc)) from exc
+        except deepl.QuotaExceededException as exc:
             raise TranslationLimitError(str(exc)) from exc
+        except deepl.AuthorizationException as exc:
+            raise TranslationConfigurationError(str(exc)) from exc
         except deepl.DeepLException as exc:
             raise TranslationProviderError(str(exc)) from exc
 
@@ -713,9 +765,22 @@ class HybridTranslator:
                     target_lang=target_lang,
                     source_lang=cloud_source_language,
                 )
+            except TranslationRateLimitError as exc:
+                logger.warning(
+                    "%s temporarily rate-limited: %s",
+                    translator.name,
+                    exc,
+                )
+            except TranslationConfigurationError as exc:
+                logger.warning(
+                    "%s configuration is invalid: %s",
+                    translator.name,
+                    exc,
+                )
+                self._cloud_translators.remove(translator)
             except TranslationLimitError as exc:
                 logger.warning(
-                    "%s quota or rate limit reached: %s",
+                    "%s quota reached: %s",
                     translator.name,
                     exc,
                 )

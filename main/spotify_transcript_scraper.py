@@ -19,6 +19,7 @@ from pathlib import Path
 from typing import Any
 
 import requests
+from spotify_scraper import NotFoundError
 from tqdm import tqdm
 
 
@@ -697,6 +698,7 @@ def main() -> None:
                     ]
                     success_count += 1
             except (
+                NotFoundError,
                 requests.RequestException,
                 OSError,
                 ValueError,

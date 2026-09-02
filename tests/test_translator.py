@@ -3,11 +3,17 @@
 from __future__ import annotations
 
 import unittest
+from types import SimpleNamespace
 from unittest.mock import MagicMock, patch
 
+from azure.core.exceptions import HttpResponseError
+
 from main.utils.translator import (
+    AzureTranslator,
     HybridTranslator,
+    TranslationConfigurationError,
     TranslationLimitError,
+    TranslationRateLimitError,
     _translate_markdown_structured,
     detect_language,
 )
@@ -149,6 +155,62 @@ class TestTranslator(unittest.TestCase):
 
     @patch("main.utils.translator.DeepLTranslator")
     @patch("main.utils.translator.AzureTranslator")
+    def test_hybrid_translator_retains_azure_after_transient_rate_limit(
+        self,
+        mock_azure_class: MagicMock,
+        mock_deepl_class: MagicMock,
+    ) -> None:
+        azure = MagicMock(name="azure")
+        azure.name = "Microsoft Azure Translator"
+        azure.translate_markdown.side_effect = [
+            TranslationRateLimitError("retry later"),
+            "translated by Azure",
+        ]
+        mock_azure_class.return_value = azure
+
+        deepl = MagicMock(name="deepl")
+        deepl.name = "DeepL"
+        deepl.translate_markdown.return_value = "translated by DeepL"
+        mock_deepl_class.return_value = deepl
+
+        hybrid = HybridTranslator(azure_key="azure", deepl_key="deepl")
+        content = "Questo episodio parla di allenamento e ciclismo."
+
+        self.assertEqual(hybrid.translate_markdown(content), "translated by DeepL")
+        self.assertEqual(hybrid.translate_markdown(content), "translated by Azure")
+        self.assertEqual(azure.translate_markdown.call_count, 2)
+        deepl.translate_markdown.assert_called_once()
+
+    @patch("main.utils.translator.DeepLTranslator")
+    @patch("main.utils.translator.AzureTranslator")
+    def test_hybrid_translator_removes_provider_with_invalid_credentials(
+        self,
+        mock_azure_class: MagicMock,
+        mock_deepl_class: MagicMock,
+    ) -> None:
+        azure = MagicMock(name="azure")
+        azure.name = "Microsoft Azure Translator"
+        azure.translate_markdown.side_effect = TranslationConfigurationError(
+            "invalid credentials"
+        )
+        mock_azure_class.return_value = azure
+
+        deepl = MagicMock(name="deepl")
+        deepl.name = "DeepL"
+        deepl.translate_markdown.return_value = "translated by DeepL"
+        mock_deepl_class.return_value = deepl
+
+        hybrid = HybridTranslator(azure_key="azure", deepl_key="deepl")
+        content = "Questo episodio parla di allenamento e ciclismo."
+
+        hybrid.translate_markdown(content)
+        hybrid.translate_markdown(content)
+
+        azure.translate_markdown.assert_called_once()
+        self.assertEqual(deepl.translate_markdown.call_count, 2)
+
+    @patch("main.utils.translator.DeepLTranslator")
+    @patch("main.utils.translator.AzureTranslator")
     def test_hybrid_translator_can_disable_azure(
         self,
         mock_azure_class: MagicMock,
@@ -217,6 +279,57 @@ Note italiane
         self.assertIn("**[00:00]** Short transcript.", result)
         self.assertEqual(result.count("## Transcript"), 1)
         self.assertNotIn("\n---\n\n---\n\n## Transcript", result)
+
+    @patch("main.utils.translator.time.sleep")
+    @patch("main.utils.translator.time.monotonic", return_value=0.0)
+    @patch("main.utils.translator.azure_translation.TextTranslationClient")
+    def test_azure_translator_evenly_paces_characters(
+        self,
+        mock_client_class: MagicMock,
+        _mock_monotonic: MagicMock,
+        mock_sleep: MagicMock,
+    ) -> None:
+        response = SimpleNamespace(
+            detected_language=SimpleNamespace(language="it"),
+            translations=[SimpleNamespace(text="translated")],
+        )
+        mock_client_class.return_value.translate.return_value = [response]
+        translator = AzureTranslator(
+            api_key="azure",
+            characters_per_minute=60,
+        )
+
+        translator.translate_text("four")
+        translator.translate_text("two")
+
+        mock_sleep.assert_called_once_with(4.0)
+
+    @patch("main.utils.translator.time.sleep")
+    @patch("main.utils.translator.time.monotonic", side_effect=[0.0, 60.0])
+    @patch("main.utils.translator.azure_translation.TextTranslationClient")
+    def test_azure_translator_retries_once_after_429(
+        self,
+        mock_client_class: MagicMock,
+        _mock_monotonic: MagicMock,
+        mock_sleep: MagicMock,
+    ) -> None:
+        throttled_response = MagicMock(status_code=429)
+        translated_response = SimpleNamespace(
+            detected_language=SimpleNamespace(language="it"),
+            translations=[SimpleNamespace(text="translated")],
+        )
+        client = mock_client_class.return_value
+        client.translate.side_effect = [
+            HttpResponseError(response=throttled_response),
+            [translated_response],
+        ]
+        translator = AzureTranslator(api_key="azure")
+
+        translated, detected = translator.translate_text("testo")
+
+        self.assertEqual((translated, detected), ("translated", "it"))
+        self.assertEqual(client.translate.call_count, 2)
+        mock_sleep.assert_any_call(60.0)
 
 
 if __name__ == "__main__":
