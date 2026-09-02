@@ -1,21 +1,36 @@
 ---
 title: Listener Questions on FTP Training & Periodization — Q&A Guide
-category: planning
+category: training
 topics:
+- Threshold_intervals
 - FTP_and_functional_metrics
-- VO2max_and_aerobic_hiit
+- Training_intensity_distribution
+- Pacing_and_execution_dynamics
+- Workload_quantification_and_modeling
+- Tapering_and_peaking
+- Overtraining_and_recovery_management
+- Microcycle_and_schedule_design
 source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #16)'
 author: Kolie Moore
 date: '2020-03-02'
-summary: Analytical Q&A guide resolving 11 fundamental listener inquiries on FTP interval progression, target wattage calibration (95% vs 105%), TTE contraction dynamics, cadence selection, weekly frequency, and recognizing when an FTP block is complete.
+summary: The document comprehensively covers threshold interval training, FTP metrics,
+  pacing strategies, training intensity distribution, workload modeling, tapering,
+  overtraining management, and the design of microcycles, emphasizing the importance
+  of structured training and periodization.
 key_takeaways:
-- Target threshold work between 92% and 98% of FTP; riding slightly below MLSS produces identical aerobic mitochondrial adaptations with vastly lower central fatigue and failed workouts.
-- When FTP increases in wattage, Time-to-Exhaustion (TTE) temporarily contracts; the next training phase must rebuild duration ('out') before seeking further power ('up').
-- Two threshold workouts per week represent the optimal frequency for long-term consistency; three sessions weekly carries high autonomic fatigue risk.
-- Indoor vs. outdoor power discrepancies are driven by thermoregulation (insufficient fan cooling) and flywheel inertia, not different underlying metabolic thresholds.
-- A threshold block is complete when TTE reaches 60–75+ minutes or progress plateaus, signaling that fractional utilization is maximized and a VO2max block is needed to lift the aerobic ceiling.
+- Target threshold work between 92% and 98% of FTP; riding slightly below MLSS produces
+  identical aerobic mitochondrial adaptations with vastly lower central fatigue and
+  failed workouts.
+- When FTP increases in wattage, Time-to-Exhaustion (TTE) temporarily contracts; the
+  next training phase must rebuild duration ('out') before seeking further power ('up').
+- Two threshold workouts per week represent the optimal frequency for long-term consistency;
+  three sessions weekly carries high autonomic fatigue risk.
+- Indoor vs. outdoor power discrepancies are driven by thermoregulation (insufficient
+  fan cooling) and flywheel inertia, not different underlying metabolic thresholds.
+- A threshold block is complete when TTE reaches 60–75+ minutes or progress plateaus,
+  signaling that fractional utilization is maximized and a VO2max block is needed
+  to lift the aerobic ceiling.
 ---
-
 # Listener Questions on FTP Training & Periodization — Q&A Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #16)_
 

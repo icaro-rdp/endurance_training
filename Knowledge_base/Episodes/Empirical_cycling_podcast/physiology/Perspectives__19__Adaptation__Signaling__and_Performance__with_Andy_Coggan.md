@@ -2,22 +2,39 @@
 title: 'Perspectives #19: Adaptation, Signaling, and Performance — Complete Guide'
 category: physiology
 topics:
-- VO2max_and_aerobic_kinetics
-- VO2max_and_aerobic_hiit
-- Substrate_utilization_and_fat_oxidation
 - Mitochondrial_and_cellular_adaptation
+- Lactate_kinetics_and_metabolism
+- Substrate_utilization_and_fat_oxidation
+- Thresholds_and_metabolic_domains
+- Critical_power_and_w_prime
+- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+- Durability_and_fatigue_mechanisms
 source: Empirical Cycling Podcast — Kolie Moore with Andy Coggan
 author: Kolie Moore
 date: '2022-09-29'
-summary: An advanced exercise physiology masterclass on the biological mechanisms of training adaptation, the Hickson VO2max protocol, dietary nitrate kinetics, the fallacies of FatMax and acute signaling, and the bioenergetics of race openers.
+summary: The document comprehensively explores physiological adaptations to training,
+  including mitochondrial biogenesis, lactate kinetics, substrate utilization, and
+  fatigue mechanisms, with a focus on the Hickson VO2max protocol and the fallacies
+  of FatMax and fasted training, as well as pacing and tapering strategies for optimal
+  performance.
 key_takeaways:
-- 'All endurance adaptations boil down to two fundamental outcomes: increasing maximal force/power or increasing fatigue resistance; threshold training is endurance training on a continuous biological spectrum.'
-- Hickson's classic protocol (6x5 min @ iso-power, 3x/week) produced the largest documented longitudinal increase in VO2max (+44%); proper interval execution requires repeatable iso-power where the athlete cracks on the final repetition ~50% of the time.
-- '''Burning fat does not make you better at burning fat'': FatMax is a descriptive byproduct of the reciprocal carbohydrate/fat oxidation curve; fasted training compromises absolute workout intensity without improving mitochondrial respiratory capacity.'
-- Acute cellular signaling (mRNA expression, PGC-1α, acute muscle protein synthesis) fails to predict longitudinal phenotypic performance gains; coaches must program for functional performance rather than molecular proxies.
-- Race warm-ups and day-before openers render glycogen phosphorylase refractory, preventing a massive flash burst of glycogenolysis and localized acidosis during the opening minutes of a competition.
+- 'All endurance adaptations boil down to two fundamental outcomes: increasing maximal
+  force/power or increasing fatigue resistance; threshold training is endurance training
+  on a continuous biological spectrum.'
+- Hickson's classic protocol (6x5 min @ iso-power, 3x/week) produced the largest documented
+  longitudinal increase in VO2max (+44%); proper interval execution requires repeatable
+  iso-power where the athlete cracks on the final repetition ~50% of the time.
+- '''Burning fat does not make you better at burning fat'': FatMax is a descriptive
+  byproduct of the reciprocal carbohydrate/fat oxidation curve; fasted training compromises
+  absolute workout intensity without improving mitochondrial respiratory capacity.'
+- Acute cellular signaling (mRNA expression, PGC-1α, acute muscle protein synthesis)
+  fails to predict longitudinal phenotypic performance gains; coaches must program
+  for functional performance rather than molecular proxies.
+- Race warm-ups and day-before openers render glycogen phosphorylase refractory, preventing
+  a massive flash burst of glycogenolysis and localized acidosis during the opening
+  minutes of a competition.
 ---
-
 # Perspectives #19: Adaptation, Signaling, and Performance — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore with Andy Coggan_
 

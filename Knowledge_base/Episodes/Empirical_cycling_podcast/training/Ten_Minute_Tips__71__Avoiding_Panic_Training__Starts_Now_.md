@@ -1,22 +1,33 @@
 ---
 title: Avoiding Panic Training (Starts Now) — Complete Guide
-category: planning
+category: training
 topics:
-- Microcycle_and_schedule_design
-- Periodization_models_and_macrocycles
-- FTP_and_functional_metrics
-- Workload_quantification_and_modeling
-source: 'Empirical Cycling Podcast — Kolie Moore, Gediminas Bagdonas, Megan Heath (Ten Minute Tips #71)'
+- Zone2_and_endurance_base
+- Threshold_intervals
+- Subthreshold_and_tempo
+- Pacing_and_execution_dynamics
+- Psychology_and_cognitive_performance
+source: 'Empirical Cycling Podcast — Kolie Moore, Gediminas Bagdonas, Megan Heath
+  (Ten Minute Tips #71)'
 author: Kolie Moore
 date: '2026-01-23'
-summary: An analytical examination of 'panic training'—the physiological consequences of cramming missed workload, strategies for prevention using process milestones, managing seasonal disruptions, avoiding panic dieting, and executing high-ROI tactical pivots.
+summary: The document discusses the risks and strategies to avoid panic training,
+  focusing on physiological mechanisms, behavioral frameworks, and practical applications.
+  It emphasizes the importance of steady progression and process milestones over cramming,
+  and the psychological impact of social media on training decisions.
 key_takeaways:
-- Panic training—cramming volume or high intensity into a 2–4 week pre-event window—exceeds biological adaptation limits and results in an athlete arriving overcooked, glycogen-depleted, and unmotivated.
-- Seasonal planning must assume 2–4 weeks of friction (illness, injury, life stress); annual plans must be flexible frameworks rather than rigid, unchangeable 24-week blocks.
-- 'Enforce a strict ''No Make-Up Training'' rule: never stack missed interval sessions into later days of the microcycle, which compounds allostatic load.'
-- When facing an abridged pre-race runway, pivot to high-ROI, fast-responding physiological adaptations (e.g., FRC/anaerobic repeatability or sweet spot TTE) rather than deep multi-week VO2max overhauls.
+- Panic training—cramming volume or high intensity into a 2–4 week pre-event window—exceeds
+  biological adaptation limits and results in an athlete arriving overcooked, glycogen-depleted,
+  and unmotivated.
+- Seasonal planning must assume 2–4 weeks of friction (illness, injury, life stress);
+  annual plans must be flexible frameworks rather than rigid, unchangeable 24-week
+  blocks.
+- 'Enforce a strict ''No Make-Up Training'' rule: never stack missed interval sessions
+  into later days of the microcycle, which compounds allostatic load.'
+- When facing an abridged pre-race runway, pivot to high-ROI, fast-responding physiological
+  adaptations (e.g., FRC/anaerobic repeatability or sweet spot TTE) rather than deep
+  multi-week VO2max overhauls.
 ---
-
 # Avoiding Panic Training (Starts Now) — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore, Gediminas Bagdonas, Megan Heath (Ten Minute Tips #71)_
 

@@ -1,24 +1,41 @@
 ---
-title: 'Ten Minute Tips #38: Balancing Training And Rest During Race Season — Complete Guide'
-category: planning
+title: 'Ten Minute Tips #38: Balancing Training And Rest During Race Season — Complete
+  Guide'
+category: training
 topics:
+- Tapering_and_peaking
+- Training_intensity_distribution
 - Microcycle_and_schedule_design
+- Pacing_and_execution_dynamics
+- Threshold_intervals
+- FTP_and_functional_metrics
 - Periodization_models_and_macrocycles
-- Zone2_and_endurance_base
-- Durability_and_fatigue_mechanisms
-source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #38)'
+- Workload_quantification_and_modeling
+source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips
+  #38)'
 author: Kolie Moore
 date: '2024-06-17'
-summary: A practical periodization guide for managing the balance between competitive racing, in-season training, and strategic recovery, covering race prioritization (A/B/C), openers, and avoiding mid-season burnout.
+summary: The document focuses on in-season fatigue management and strategic recovery,
+  emphasizing tapering protocols, training intensity distribution, microcycle design,
+  and workload modeling to optimize performance during race season.
 key_takeaways:
-- Racing provides stochastic, unfocused high-intensity stress; athletes cannot expect linear increases in FTP or TTE while actively racing frequently.
-- 'Ruthlessly categorize events: A-events (1–3/year) receive full tapers; B-events serve as training milestones without tapers; C-events are used strictly for tactical drills and pack skills.'
-- 'The ''Blast Radius'' of Racing: High-intensity weekend racing incurs multi-day autonomic and glycogen recovery demands; cramming mid-week interval sessions between race weekends leads to rapid overtraining.'
-- '''Openers are a privilege of the well-rested.'' If an athlete carries residual fatigue, high-intensity openers on Friday before a Saturday race deplete glycogen and impair race-day central nervous system drive.'
-- Reduced race performance is almost always a symptom of accumulated fatigue, not a lack of fitness; doubling down on interval volume during a mid-season slump guarantees burnout.
-- Peak race form can only be maintained ('surfed') for 2 to 4 weeks before volume reduction causes aerobic decay and high-intensity fatigue forces a reset.
+- Racing provides stochastic, unfocused high-intensity stress; athletes cannot expect
+  linear increases in FTP or TTE while actively racing frequently.
+- 'Ruthlessly categorize events: A-events (1–3/year) receive full tapers; B-events
+  serve as training milestones without tapers; C-events are used strictly for tactical
+  drills and pack skills.'
+- 'The ''Blast Radius'' of Racing: High-intensity weekend racing incurs multi-day
+  autonomic and glycogen recovery demands; cramming mid-week interval sessions between
+  race weekends leads to rapid overtraining.'
+- '''Openers are a privilege of the well-rested.'' If an athlete carries residual
+  fatigue, high-intensity openers on Friday before a Saturday race deplete glycogen
+  and impair race-day central nervous system drive.'
+- Reduced race performance is almost always a symptom of accumulated fatigue, not
+  a lack of fitness; doubling down on interval volume during a mid-season slump guarantees
+  burnout.
+- Peak race form can only be maintained ('surfed') for 2 to 4 weeks before volume
+  reduction causes aerobic decay and high-intensity fatigue forces a reset.
 ---
-
 # Ten Minute Tips #38: Balancing Training And Rest During Race Season — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #38)_
 

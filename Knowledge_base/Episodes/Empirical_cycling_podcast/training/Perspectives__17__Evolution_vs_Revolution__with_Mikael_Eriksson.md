@@ -1,24 +1,40 @@
 ---
-title: 'Perspectives #17: Evolution vs Revolution in Endurance Training — Complete Guide'
-category: planning
+title: 'Perspectives #17: Evolution vs Revolution in Endurance Training — Complete
+  Guide'
+category: training
 topics:
 - Zone2_and_endurance_base
+- Subthreshold_and_tempo
+- Threshold_intervals
 - VO2max_and_aerobic_hiit
-- FTP_and_functional_metrics
+- Cross_training_and_multisport
+- Training_intensity_distribution
 - Workload_quantification_and_modeling
-- Durability_and_fatigue_mechanisms
+- Tapering_and_peaking
 source: Empirical Cycling Podcast — Kolie Moore with Mikael Eriksson
 author: Kolie Moore
 date: '2022-09-05'
-summary: A deep physiological and methodological exploration of multi-sport training load management, swim interval restructuring, extensive threshold running periodization, and the fallacy of rigid training trends.
+summary: The document comprehensively covers multi-sport training strategies, including
+  base building, interval training at various intensities, and workload management,
+  with a focus on tapering and overtraining management.
 key_takeaways:
-- Endurance training principles remain remarkably stable over time; coaching progression is driven by the nuanced, individual application of fundamentals rather than revolutionary fads.
-- In multi-discipline sports (triathlon), low-intensity sessions must remain strictly easy (RPE 2–3) and interval workouts conservative (RPE 7–8, 1–2 reps in reserve) to accommodate frequent high-intensity touches across three sports.
-- Traditional pool swimming sets (e.g., 40x100m on short rest) covertly accumulate high tempo/threshold lactate strain due to water immersion, hydrostatic pressure, and short bouts; endurance swimming should mirror cycling and running with continuous, low-intensity aerobic sets.
-- Extensive threshold and marathon-pace running (Canova methodology) build structural durability and metabolic efficiency while avoiding the high mechanical injury risks of high-intensity track intervals.
-- Cardiovascular and metabolic adaptations occur far faster than connective tissue (bone, tendon, ligament) remodeling; cyclists transitioning to running must progress volume extremely conservatively to prevent overuse injuries.
+- Endurance training principles remain remarkably stable over time; coaching progression
+  is driven by the nuanced, individual application of fundamentals rather than revolutionary
+  fads.
+- In multi-discipline sports (triathlon), low-intensity sessions must remain strictly
+  easy (RPE 2–3) and interval workouts conservative (RPE 7–8, 1–2 reps in reserve)
+  to accommodate frequent high-intensity touches across three sports.
+- Traditional pool swimming sets (e.g., 40x100m on short rest) covertly accumulate
+  high tempo/threshold lactate strain due to water immersion, hydrostatic pressure,
+  and short bouts; endurance swimming should mirror cycling and running with continuous,
+  low-intensity aerobic sets.
+- Extensive threshold and marathon-pace running (Canova methodology) build structural
+  durability and metabolic efficiency while avoiding the high mechanical injury risks
+  of high-intensity track intervals.
+- Cardiovascular and metabolic adaptations occur far faster than connective tissue
+  (bone, tendon, ligament) remodeling; cyclists transitioning to running must progress
+  volume extremely conservatively to prevent overuse injuries.
 ---
-
 # Perspectives #17: Evolution vs Revolution in Endurance Training — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore with Mikael Eriksson_
 

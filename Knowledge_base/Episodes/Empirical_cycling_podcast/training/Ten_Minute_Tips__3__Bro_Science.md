@@ -1,22 +1,32 @@
 ---
-title: Recognizing 'Bro Science', Scientific Literacy, & Training Dogma — Complete Guide
-category: planning
+title: Recognizing 'Bro Science', Scientific Literacy, & Training Dogma — Complete
+  Guide
+category: training
 topics:
 - Zone2_and_endurance_base
-- Periodization_models_and_macrocycles
-- Workload_quantification_and_modeling
+- Threshold_intervals
+- Biomechanics_fit_and_equipment
+- Training_intensity_distribution
+- Cross_training_and_multisport
 source: 'Empirical Cycling Podcast — Kyle Helson & Kolie Moore (Ten Minute Tips #3)'
 author: Kyle Helson & Kolie Moore
 date: '2019-11-07'
-summary: An analytical framework for identifying 'bro science', dogmatic training claims, and flawed interpretations of sports science, examining statistical thresholds, replication, industry bias, and individualization.
+summary: The document critiques 'bro science' in training and highlights the importance
+  of context, evidence, and individualization in exercise science, emphasizing the
+  need for a nuanced approach to training and periodization.
 key_takeaways:
-- Bro science typically wraps a tiny kernel of truth in broad, dogmatic, and absolute claims that fail when applied to individual athlete contexts.
-- The hallmark of genuine expertise in exercise science is 'it depends'—acknowledging context, constraints, and underlying mechanisms rather than universal silver bullets.
-- A p-value threshold of p <= 0.05 carries an inherent 5% false-positive risk; human exercise physiology studies with small sample sizes require independent replication across varied cohorts.
-- Single-study claims and industry-funded supplement trials frequently exploit marketing labels ('University Tested') without demonstrating robust physiological efficacy.
-- Effective training prescription balances physiological principles against athlete-specific constraints (available volume, recovery capacity, training history).
+- Bro science typically wraps a tiny kernel of truth in broad, dogmatic, and absolute
+  claims that fail when applied to individual athlete contexts.
+- The hallmark of genuine expertise in exercise science is 'it depends'—acknowledging
+  context, constraints, and underlying mechanisms rather than universal silver bullets.
+- A p-value threshold of p <= 0.05 carries an inherent 5% false-positive risk; human
+  exercise physiology studies with small sample sizes require independent replication
+  across varied cohorts.
+- Single-study claims and industry-funded supplement trials frequently exploit marketing
+  labels ('University Tested') without demonstrating robust physiological efficacy.
+- Effective training prescription balances physiological principles against athlete-specific
+  constraints (available volume, recovery capacity, training history).
 ---
-
 # Recognizing "Bro Science", Scientific Literacy, & Training Dogma — Complete Guide
 _Source: Empirical Cycling Podcast — Kyle Helson & Kolie Moore (Ten Minute Tips #3)_
 

@@ -1,22 +1,33 @@
 ---
-title: 'Student Union #1: Collegiate Nationals & The Art of the Team Time Trial — Complete Guide'
-category: planning
+title: 'Student Union #1: Collegiate Nationals & The Art of the Team Time Trial —
+  Complete Guide'
+category: training
 topics:
+- Threshold_intervals
+- Pacing_and_execution_dynamics
+- Biomechanics_fit_and_equipment
+- Cardiovascular_and_hemodynamics
 - Environmental_and_thermal_stress
-- Critical_power_and_w_prime
-- Durability_and_fatigue_mechanisms
-- Zone2_and_endurance_base
-source: Empirical Cycling Podcast — Kolie Moore, Liam Fenlon, Emma Edwards & Berk Ozturk
+- Torque_and_cadence_drills
+- Cross_training_and_multisport
+- Autonomic_and_cardiac_monitoring
+source: Empirical Cycling Podcast — Kolie Moore, Liam Fenlon, Emma Edwards & Berk
+  Ozturk
 author: Kolie Moore
 date: '2019-06-13'
-summary: A masterclass in Team Time Trial (TTT) mechanics, lineup optimization, intra-team drafting dynamics, thermal stress management, and mass-start race execution.
+summary: The document focuses on the physiological and tactical aspects of Team Time
+  Trial (TTT) execution, including pacing strategies, biomechanics, and environmental
+  stress management.
 key_takeaways:
-- A Team Time Trial is won through aerodynamic efficiency, disciplined pacing on climbs, and seamless intra-team communication rather than individual heroics.
-- Lineup sequencing must account for rider height, frontal surface area ($C_d A$), and individual anaerobic work capacity ($W'$) to protect weaker riders on key terrain.
-- Uphill sections must be paced strictly below the threshold of the most vulnerable scoring rider to prevent team disintegration.
-- High ambient heat and humidity induce severe cardiovascular drift and early performance degradation unless proactive heat acclimation and precooling are implemented.
+- A Team Time Trial is won through aerodynamic efficiency, disciplined pacing on climbs,
+  and seamless intra-team communication rather than individual heroics.
+- Lineup sequencing must account for rider height, frontal surface area ($C_d A$),
+  and individual anaerobic work capacity ($W'$) to protect weaker riders on key terrain.
+- Uphill sections must be paced strictly below the threshold of the most vulnerable
+  scoring rider to prevent team disintegration.
+- High ambient heat and humidity induce severe cardiovascular drift and early performance
+  degradation unless proactive heat acclimation and precooling are implemented.
 ---
-
 # Student Union #1: Collegiate Nationals & The Art of the Team Time Trial — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore, Liam Fenlon, Emma Edwards & Berk Ozturk_
 

@@ -1,15 +1,21 @@
 ---
-title: 'Quantifying Training Volume & Load: Hours vs. Kilojoules vs. TSS — Complete Guide'
-category: planning
+title: 'Quantifying Training Volume & Load: Hours vs. Kilojoules vs. TSS — Complete
+  Guide'
+category: training
 topics:
-- Thresholds_and_metabolic_domains
-- Mitochondrial_and_cellular_adaptation
+- Zone2_and_endurance_base
+- VO2max_and_aerobic_hiit
+- Threshold_intervals
+- Workload_quantification_and_modeling
+- Tapering_and_peaking
+- Psychology_and_cognitive_performance
 source: Empirical Cycling Podcast — Kolie Moore & Marinus Petersen
 author: Endurance Research
 date: '2025-01-01'
-summary: 'Training volume is universally acknowledged as a primary driver of endurance performance, yet coaches and athletes frequently debate the best metric to quantify it. The debate centers on three primary tools for measuring training load:'
+summary: The document comprehensively covers various aspects of training, including
+  sub-LT1 adaptations, VO2max and aerobic HIIT, pacing, workload quantification, tapering,
+  and psychological factors.
 ---
-
 # Quantifying Training Volume & Load: Hours vs. Kilojoules vs. TSS — Complete Guide
 
 _Source: Empirical Cycling Podcast — Kolie Moore & Marinus Petersen_

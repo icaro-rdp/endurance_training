@@ -1,21 +1,37 @@
 ---
-title: Why Training Or Racing Experience Shouldn't Determine Training Volume — Complete Guide
-category: planning
+title: Why Training Or Racing Experience Shouldn't Determine Training Volume — Complete
+  Guide
+category: training
 topics:
-- Workload_quantification_and_modeling
 - Zone2_and_endurance_base
+- Threshold_intervals
+- VO2max_and_aerobic_hiit
 - Durability_and_fatigue_mechanisms
-source: 'Empirical Cycling Podcast — Kolie Moore, James, Rory, Gediminas, Megan (Ten Minute Tips #65)'
+- Training_intensity_distribution
+- Microcycle_and_schedule_design
+- Workload_quantification_and_modeling
+- Tapering_and_peaking
+source: 'Empirical Cycling Podcast — Kolie Moore, James, Rory, Gediminas, Megan (Ten
+  Minute Tips #65)'
 author: Kolie Moore
 date: '2025-10-22'
-summary: An analysis of the relationship between training volume, race categories, genetics, and performance adaptations. Explains log-linear dose-response curves, survivorship bias, physiological drivers of durability, and why prescriptive category-based training caps are fundamentally flawed.
+summary: The document discusses the importance of sizing training volume based on
+  an athlete's life bandwidth and physiological capacity, rather than their race category.
+  It emphasizes the need for progressive interval duration, auto-regulation, and long-term
+  multi-year base building with structured recovery phases.
 key_takeaways:
-- 'Aerobic training volume follows a log-linear dose-response curve: initial increases yield substantial returns, but higher volumes yield diminishing gains in FTP while massively enhancing LT1, durability, and work capacity.'
-- Racing category, license level, and years of experience should never dictate training volume or time-in-zone caps; prescriptions must be driven by physiological capacity, recovery bandwidth, and progressive overload.
-- Survivorship bias and self-selection in cycling lead to false assumptions that high power outputs (e.g., 5 W/kg) or high volumes are universal prerequisites or automatic outcomes of training.
-- Baseline fitness off-the-couch and individual trainability are governed by distinct genetic factors; comparison against other athletes distorts objective assessment.
+- 'Aerobic training volume follows a log-linear dose-response curve: initial increases
+  yield substantial returns, but higher volumes yield diminishing gains in FTP while
+  massively enhancing LT1, durability, and work capacity.'
+- Racing category, license level, and years of experience should never dictate training
+  volume or time-in-zone caps; prescriptions must be driven by physiological capacity,
+  recovery bandwidth, and progressive overload.
+- Survivorship bias and self-selection in cycling lead to false assumptions that high
+  power outputs (e.g., 5 W/kg) or high volumes are universal prerequisites or automatic
+  outcomes of training.
+- Baseline fitness off-the-couch and individual trainability are governed by distinct
+  genetic factors; comparison against other athletes distorts objective assessment.
 ---
-
 # Why Training Or Racing Experience Shouldn't Determine Training Volume — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore, James, Rory, Gediminas, Megan (Ten Minute Tips #65)_
 

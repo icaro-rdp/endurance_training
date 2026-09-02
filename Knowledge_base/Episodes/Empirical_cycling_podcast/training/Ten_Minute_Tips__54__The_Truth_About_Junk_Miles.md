@@ -1,23 +1,39 @@
 ---
 title: 'Ten Minute Tips #54: The Truth About Junk Miles — Complete Guide'
-category: planning
+category: training
 topics:
 - Zone2_and_endurance_base
-- Workload_quantification_and_modeling
-- Durability_and_fatigue_mechanisms
-- Periodization_models_and_macrocycles
-source: 'Empirical Cycling Podcast — Kolie Moore, Coach Giancarlo, & Coach Gediminas (Ten Minute Tips #54)'
+- Threshold_intervals
+- Biomechanics_fit_and_equipment
+- Pacing_and_execution_dynamics
+- Cross_training_and_multisport
+- Torque_and_cadence_drills
+- Psychology_and_cognitive_performance
+source: 'Empirical Cycling Podcast — Kolie Moore, Coach Giancarlo, & Coach Gediminas
+  (Ten Minute Tips #54)'
 author: Kolie Moore
 date: '2025-04-06'
-summary: Provides a rigorous physiological and practical definition of junk miles, deconstructs the myth of 'too easy' riding, exposes the fatigue security blanket of middle-intensity endurance, and evaluates group rides and psychological rejuvenation.
+summary: The document discusses the concept of 'junk miles' in endurance cycling,
+  emphasizing the importance of low-intensity rides for aerobic durability and the
+  pitfalls of middle-intensity endurance training. It provides practical advice on
+  pacing, group rides, and mental health in training.
 key_takeaways:
-- 'True Definition of Junk Miles: Any riding that adds systemic or muscular fatigue without delivering a commensurate physiological stimulus, skill acquisition, or psychological benefit.'
-- 'Easy Riding is Not Junk: Very low-intensity riding (Zone 1 / easy Zone 2, commutes, recovery spins) drives baseline aerobic adaptation, capillarization, and durability without taxing recovery reserves.'
-- 'The Fatigue Security Blanket: The most common form of true junk miles is riding endurance rides too hard (e.g. pinned at 70–75%+ FTP), generating chronic low-grade fatigue that compromises high-intensity interval execution.'
-- 'Group Ride Context: Group rides are junk if an athlete sits passively in a flat peloton without purpose, but highly productive when utilized for pack dynamics, cornering repeatability, and race-specific surging.'
-- 'Mental Health & ''Periodizing Fun'': Unstructured exploration, social spins, and trail rides that restore motivation and reduce life stress are physiologically valid and essential for multi-year athlete longevity.'
+- 'True Definition of Junk Miles: Any riding that adds systemic or muscular fatigue
+  without delivering a commensurate physiological stimulus, skill acquisition, or
+  psychological benefit.'
+- 'Easy Riding is Not Junk: Very low-intensity riding (Zone 1 / easy Zone 2, commutes,
+  recovery spins) drives baseline aerobic adaptation, capillarization, and durability
+  without taxing recovery reserves.'
+- 'The Fatigue Security Blanket: The most common form of true junk miles is riding
+  endurance rides too hard (e.g. pinned at 70–75%+ FTP), generating chronic low-grade
+  fatigue that compromises high-intensity interval execution.'
+- 'Group Ride Context: Group rides are junk if an athlete sits passively in a flat
+  peloton without purpose, but highly productive when utilized for pack dynamics,
+  cornering repeatability, and race-specific surging.'
+- 'Mental Health & ''Periodizing Fun'': Unstructured exploration, social spins, and
+  trail rides that restore motivation and reduce life stress are physiologically valid
+  and essential for multi-year athlete longevity.'
 ---
-
 # Ten Minute Tips #54: The Truth About Junk Miles — Complete Guide
 
 _Source: Empirical Cycling Podcast — Kolie Moore, Coach Giancarlo, & Coach Gediminas (Ten Minute Tips #54)_

@@ -1,22 +1,35 @@
 ---
-title: Cyclocross Pre-Season Training, Specificity, & Intensity Management — Complete Guide
-category: planning
+title: Cyclocross Pre-Season Training, Specificity, & Intensity Management — Complete
+  Guide
+category: training
 topics:
-- Microcycle_and_schedule_design
+- Zone2_and_endurance_base
+- Threshold_intervals
+- Sprint_and_anaerobic_intervals
 - Torque_and_cadence_drills
-- VO2max_and_aerobic_hiit
-- FTP_and_functional_metrics
+- Pacing_and_execution_dynamics
+- Cross_training_and_multisport
+- Biomechanics_fit_and_equipment
+- Cardiovascular_and_hemodynamics
 source: 'Empirical Cycling Podcast — Kolie Moore (Ten Minute Tips #1)'
 author: Kolie Moore
 date: '2019-08-07'
-summary: A practical, physiology-backed guide to the critical 4–6 week pre-season cyclocross transition, covering high-torque sprint accelerations, running integration, race-pace over-under workouts, and weekly intensity management across a dense racing calendar.
+summary: The document focuses on cyclocross-specific training, emphasizing high-torque
+  accelerations, lactate clearance, and race-pace over-under workouts, integrating
+  running and technical skills to prepare athletes for the unique demands of cyclocross
+  racing.
 key_takeaways:
-- Cyclocross imposes high pedal force (torque) demands, stochastic repeated surges, non-drafting race dynamics, and eccentric running loads compared to road racing.
-- 'The final 4–6 weeks prior to the first race require condensing volume and ramping up race specificity: over-unders with micro-bursts, explosive standing starts, and off-road self-pacing.'
-- Cardiovascular capacity outstrips muscular tolerance for running impact; integrate easy post-ride transitional running and short in-workout hill sprints to prevent debilitating muscle damage.
-- In dense multi-race regional seasons, prioritize intensity management and steady-state threshold maintenance over mindless exhaustion.
+- Cyclocross imposes high pedal force (torque) demands, stochastic repeated surges,
+  non-drafting race dynamics, and eccentric running loads compared to road racing.
+- 'The final 4–6 weeks prior to the first race require condensing volume and ramping
+  up race specificity: over-unders with micro-bursts, explosive standing starts, and
+  off-road self-pacing.'
+- Cardiovascular capacity outstrips muscular tolerance for running impact; integrate
+  easy post-ride transitional running and short in-workout hill sprints to prevent
+  debilitating muscle damage.
+- In dense multi-race regional seasons, prioritize intensity management and steady-state
+  threshold maintenance over mindless exhaustion.
 ---
-
 # Cyclocross Pre-Season Training, Specificity, & Intensity Management — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore (Ten Minute Tips #1)_
 

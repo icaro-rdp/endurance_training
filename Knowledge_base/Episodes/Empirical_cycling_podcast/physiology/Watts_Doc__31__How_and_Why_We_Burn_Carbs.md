@@ -1,22 +1,40 @@
 ---
-title: 'How and Why We Burn Carbohydrates: Glycolysis, Redox Balance, & Metabolic Flux — Complete Guide'
+title: 'How and Why We Burn Carbohydrates: Glycolysis, Redox Balance, & Metabolic
+  Flux — Complete Guide'
 category: physiology
 topics:
 - Lactate_kinetics_and_metabolism
+- Mitochondrial_and_cellular_adaptation
 - Substrate_utilization_and_fat_oxidation
-- Carbohydrate_fueling_and_gut_training
+- Thresholds_and_metabolic_domains
+- VO2max_and_aerobic_kinetics
+- Cardiovascular_and_hemodynamics
+- Biomechanics_fit_and_equipment
+- Physiological_testing_and_diagnostics
 source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #31)'
 author: Kolie Moore
 date: '2021-03-02'
-summary: A comprehensive physiological and biochemical breakdown of glycolysis, examining the stepwise enzymatic dismantling of glucose and glycogen, cytosolic redox balance (NAD+/NADH), allosteric regulation, and why lactate production is essential for sustaining rapid glycolytic ATP flux during high-intensity cycling.
+summary: The document delves into the physiological mechanisms of glycolysis, lactate
+  kinetics, and metabolic flux, highlighting the role of lactate as a redox sink and
+  its importance in high-intensity exercise. It also discusses cardiovascular and
+  hemodynamic adaptations, substrate utilization, and VO2max kinetics.
 key_takeaways:
-- Glycolysis is a 10-step cytosolic pathway that yields 2 ATP net from blood glucose and 3 ATP net from muscle glycogen, providing ATP at rates up to 100 times faster than mitochondrial fat oxidation.
-- Phosphofructokinase-1 (PFK-1) acts as the primary committed rate-limiting gatekeeper of glycolysis, activated by rising AMP/ADP and inhibited by high ATP, citrate, and cellular acidosis.
-- Cytosolic NAD+ availability is the absolute bottleneck for the Glyceraldehyde-3-Phosphate Dehydrogenase (GAPDH) step; without rapid NAD+ regeneration, glycolysis instantly halts.
-- Lactate Dehydrogenase (LDH) functions as a vital cytosolic redox buffer, converting pyruvate and NADH into lactate and NAD+, allowing rapid anaerobic and aerobic glycolysis to proceed uninhibited.
-- Carbohydrate oxidation is indispensable for high-intensity race-winning efforts (surges, VO2max intervals, sprints) because fat oxidation kinetics cannot meet sudden or heavy ATP turnover rates.
+- Glycolysis is a 10-step cytosolic pathway that yields 2 ATP net from blood glucose
+  and 3 ATP net from muscle glycogen, providing ATP at rates up to 100 times faster
+  than mitochondrial fat oxidation.
+- Phosphofructokinase-1 (PFK-1) acts as the primary committed rate-limiting gatekeeper
+  of glycolysis, activated by rising AMP/ADP and inhibited by high ATP, citrate, and
+  cellular acidosis.
+- Cytosolic NAD+ availability is the absolute bottleneck for the Glyceraldehyde-3-Phosphate
+  Dehydrogenase (GAPDH) step; without rapid NAD+ regeneration, glycolysis instantly
+  halts.
+- Lactate Dehydrogenase (LDH) functions as a vital cytosolic redox buffer, converting
+  pyruvate and NADH into lactate and NAD+, allowing rapid anaerobic and aerobic glycolysis
+  to proceed uninhibited.
+- Carbohydrate oxidation is indispensable for high-intensity race-winning efforts
+  (surges, VO2max intervals, sprints) because fat oxidation kinetics cannot meet sudden
+  or heavy ATP turnover rates.
 ---
-
 # How and Why We Burn Carbohydrates: Glycolysis, Redox Balance, & Metabolic Flux — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #31)_
 

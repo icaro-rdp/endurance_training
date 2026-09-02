@@ -1,23 +1,40 @@
 ---
-title: 'Why HIT May Not Make You Faster: Ryanodine Receptors, ROS Signaling, & Adaptation Limits — Complete Guide'
+title: 'Why HIT May Not Make You Faster: Ryanodine Receptors, ROS Signaling, & Adaptation
+  Limits — Complete Guide'
 category: physiology
 topics:
 - Mitochondrial_and_cellular_adaptation
-- Micronutrients_and_biomarkers
-- VO2max_and_aerobic_hiit
-- Periodization_models_and_macrocycles
+- Lactate_kinetics_and_metabolism
+- Substrate_utilization_and_fat_oxidation
+- Thresholds_and_metabolic_domains
+- Critical_power_and_w_prime
+- FTP_and_functional_metrics
+- Cardiovascular_and_hemodynamics
+- Athlete_health_and_exercise_immunology
 source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #28)'
 author: Kolie Moore
 date: '2020-12-05'
-summary: An in-depth molecular examination of why High-Intensity Interval Training (HIIT/SIT) produces rapid aerobic gains in untrained athletes but quickly plateaus in trained athletes, focusing on Ryanodine Receptor (RyR1) fragmentation, Reactive Oxygen Species (ROS) signaling, endogenous antioxidant upregulation, and exogenous antioxidant interference.
+summary: The document delves into the physiological mechanisms behind why high-intensity
+  interval training (HIIT) may not drive continued aerobic adaptations in well-trained
+  athletes, focusing on mitochondrial remodeling, calcium signaling, and endogenous
+  antioxidant defense.
 key_takeaways:
-- In untrained athletes, all-out sprint interval training (e.g., 6x30s) produces a surge in Reactive Oxygen Species (ROS) that fragments Ryanodine Receptors (RyR1), causing prolonged sarcoplasmic reticulum calcium leak that upregulates PGC-1α and mitochondrial biogenesis.
-- Well-trained endurance athletes possess double the endogenous antioxidant enzymes (superoxide dismutase and catalase), effectively buffering ROS, preventing RyR1 cleavage/calcium leak, and diminishing the aerobic adaptive signal from HIIT.
-- Because the molecular stimulus diminishes as fitness rises, HIIT yields a rapid initial plateau in mitochondrial enzyme transcription (citrate synthase, HAD), making it incapable of indefinitely replacing aerobic volume.
-- High-dose exogenous antioxidants (e.g., >1g Vitamin C or Vitamin E) chemically neutralize the exercise-induced ROS trigger, blunting PGC-1α signaling and aerobic adaptations.
-- Advanced athletes cannot rely on HIIT for continuous aerobic expansion; progression requires extensive duration overload, progressive volume, or specific cardiac output/stroke volume stimuli.
+- In untrained athletes, all-out sprint interval training (e.g., 6x30s) produces a
+  surge in Reactive Oxygen Species (ROS) that fragments Ryanodine Receptors (RyR1),
+  causing prolonged sarcoplasmic reticulum calcium leak that upregulates PGC-1α and
+  mitochondrial biogenesis.
+- Well-trained endurance athletes possess double the endogenous antioxidant enzymes
+  (superoxide dismutase and catalase), effectively buffering ROS, preventing RyR1
+  cleavage/calcium leak, and diminishing the aerobic adaptive signal from HIIT.
+- Because the molecular stimulus diminishes as fitness rises, HIIT yields a rapid
+  initial plateau in mitochondrial enzyme transcription (citrate synthase, HAD), making
+  it incapable of indefinitely replacing aerobic volume.
+- High-dose exogenous antioxidants (e.g., >1g Vitamin C or Vitamin E) chemically neutralize
+  the exercise-induced ROS trigger, blunting PGC-1α signaling and aerobic adaptations.
+- Advanced athletes cannot rely on HIIT for continuous aerobic expansion; progression
+  requires extensive duration overload, progressive volume, or specific cardiac output/stroke
+  volume stimuli.
 ---
-
 # Why HIT May Not Make You Faster: Ryanodine Receptors, ROS Signaling, & Adaptation Limits — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #28)_
 

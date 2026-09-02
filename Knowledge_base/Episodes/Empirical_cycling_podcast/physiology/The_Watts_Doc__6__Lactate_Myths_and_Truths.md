@@ -3,20 +3,31 @@ title: Lactate Myths, Truths, & Metabolic Energetics — Complete Guide
 category: physiology
 topics:
 - Lactate_kinetics_and_metabolism
+- Mitochondrial_and_cellular_adaptation
+- Substrate_utilization_and_fat_oxidation
 - Thresholds_and_metabolic_domains
-- FTP_and_functional_metrics
+- Cardiovascular_and_hemodynamics
+- Physiological_testing_and_diagnostics
+- Athlete_health_and_exercise_immunology
 source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #6)'
 author: Kolie Moore
 date: '2019-05-07'
-summary: A definitive biochemical and historical debunking of common lactate myths, exploring acid-base chemistry, ATP hydrolysis proton release, the intracellular/extracellular lactate shuttle, and the reality of the maximal lactate steady state.
+summary: The document delves into the physiological mechanisms of lactate, debunking
+  myths and clarifying its role as a primary aerobic fuel and metabolic buffer, emphasizing
+  the importance of lactate kinetics and clearance in endurance performance.
 key_takeaways:
-- 'Lactate is not lactic acid: at physiological pH (7.0–7.4), >99.9% of the molecule exists in its dissociated conjugate base form (lactate).'
-- Lactate production does not cause acidosis; the lactate dehydrogenase (LDH) reaction actually consumes a cytosolic proton (H+), acting as an intracellular buffer.
-- Metabolic acidosis is caused by the non-mitochondrial hydrolysis of ATP (ATP -> ADP + Pi + H+), not the generation of lactate.
-- Lactate is not a metabolic dead-end or waste product; it is a primary oxidative fuel shuttled to oxidative fibers, the heart, and the brain via MCT1 and MCT4 transporters.
-- The 'anaerobic threshold' is a physiological misnomer; threshold represents the boundary where rate of lactate appearance exceeds rate of clearance, occurring in fully oxygenated tissue.
+- 'Lactate is not lactic acid: at physiological pH (7.0–7.4), >99.9% of the molecule
+  exists in its dissociated conjugate base form (lactate).'
+- Lactate production does not cause acidosis; the lactate dehydrogenase (LDH) reaction
+  actually consumes a cytosolic proton (H+), acting as an intracellular buffer.
+- Metabolic acidosis is caused by the non-mitochondrial hydrolysis of ATP (ATP ->
+  ADP + Pi + H+), not the generation of lactate.
+- Lactate is not a metabolic dead-end or waste product; it is a primary oxidative
+  fuel shuttled to oxidative fibers, the heart, and the brain via MCT1 and MCT4 transporters.
+- The 'anaerobic threshold' is a physiological misnomer; threshold represents the
+  boundary where rate of lactate appearance exceeds rate of clearance, occurring in
+  fully oxygenated tissue.
 ---
-
 # Lactate Myths, Truths, & Metabolic Energetics — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #6)_
 

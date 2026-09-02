@@ -1,21 +1,33 @@
 ---
 title: 'Effective FTP Training: Progressive Overload & Extending TTE — Complete Guide'
-category: planning
+category: training
 topics:
-- FTP_and_functional_metrics
+- Threshold_intervals
 - VO2max_and_aerobic_hiit
+- FTP_and_functional_metrics
+- Training_intensity_distribution
+- Workload_quantification_and_modeling
+- Tapering_and_peaking
+- Psychology_and_cognitive_performance
 source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #14)'
 author: Kolie Moore
 date: '2019-12-11'
-summary: A comprehensive coaching guide to effective FTP training based on the core principle of progressive overload, emphasizing the extension of Time-to-Exhaustion (TTE) before increasing wattage, interval design from 4x10 min to 1x60 min, and incorporating threshold bursts.
+summary: The document focuses on effective FTP training, emphasizing progressive overload
+  of duration before increasing wattage, with a detailed progression model and physiological
+  insights.
 key_takeaways:
-- 'Progressive overload is the fundamental driver of FTP development: progress total time-in-zone (''push out'') before attempting to increase interval wattage (''push up'').'
-- Static interval prescriptions (e.g., indefinitely repeating 2x20 min at 100% FTP) produce rapid adaptation plateaus because the physiological stimulus remains constant.
-- Threshold intervals must be performed strictly at or slightly below FTP (92–98%) to maximize time-in-zone without exhausting finite anaerobic capacity (W').
-- Time-to-Exhaustion (TTE) at FTP is highly trainable and expands from 35–45 minutes up to 60–90+ minutes through structured interval progression.
-- Over-at bursts (10-second seated surges every 3–5 minutes at FTP) elevate metabolic flux and race readiness while preserving total aerobic interval duration.
+- 'Progressive overload is the fundamental driver of FTP development: progress total
+  time-in-zone (''push out'') before attempting to increase interval wattage (''push
+  up'').'
+- Static interval prescriptions (e.g., indefinitely repeating 2x20 min at 100% FTP)
+  produce rapid adaptation plateaus because the physiological stimulus remains constant.
+- Threshold intervals must be performed strictly at or slightly below FTP (92–98%)
+  to maximize time-in-zone without exhausting finite anaerobic capacity (W').
+- Time-to-Exhaustion (TTE) at FTP is highly trainable and expands from 35–45 minutes
+  up to 60–90+ minutes through structured interval progression.
+- Over-at bursts (10-second seated surges every 3–5 minutes at FTP) elevate metabolic
+  flux and race readiness while preserving total aerobic interval duration.
 ---
-
 # Effective FTP Training: Progressive Overload & Extending TTE — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #14)_
 

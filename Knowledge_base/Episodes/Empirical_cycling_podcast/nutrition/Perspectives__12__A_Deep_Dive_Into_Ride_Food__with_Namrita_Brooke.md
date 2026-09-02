@@ -1,22 +1,41 @@
 ---
-title: 'A Deep Dive Into Ride Food: Carbohydrate Ratios, Gastric Emptying, Osmolality, & Intra-Ride Fueling Architecture — Complete Guide'
+title: 'A Deep Dive Into Ride Food: Carbohydrate Ratios, Gastric Emptying, Osmolality,
+  & Intra-Ride Fueling Architecture — Complete Guide'
 category: nutrition
 topics:
 - Carbohydrate_fueling_and_gut_training
-- Substrate_utilization_and_fat_oxidation
-- Durability_and_fatigue_mechanisms
-source: 'Empirical Cycling Podcast — Kolie Moore & Dr. Namrita Brooke (Perspectives #12)'
+- Daily_macronutrient_and_energy_periodization
+- Hydration_and_electrolyte_balance
+- Energy_availability_and_reds
+- Ergogenic_supplements_and_buffers
+source: 'Empirical Cycling Podcast — Kolie Moore & Dr. Namrita Brooke (Perspectives
+  #12)'
 author: Kolie Moore
 date: '2022-04-28'
-summary: A masterclass on intra-ride fueling biochemistry and gastrointestinal physiology by Dr. Namrita Brooke and Kolie Moore, covering intestinal transporters (SGLT1 and GLUT5), solution osmolality and gastric emptying kinetics, gut training protocols, whole-day energy balance, early-morning ride fueling, and solid vs. liquid carbohydrate strategies.
+summary: The document delves into the intricacies of intra-ride carbohydrate absorption,
+  hydration strategies, and the physiological mechanisms governing gastrointestinal
+  function during endurance sports, emphasizing the importance of balanced fueling
+  and hydration for optimal performance and recovery.
 key_takeaways:
-- 'Dual-Transporter Saturation: Glucose/maltodextrin alone saturates intestinal SGLT1 at ~60 g/h; adding fructose in a 1:0.8 to 2:1 ratio utilizes GLUT5, unlocking absorption rates up to 90–120 g/h without gastrointestinal distress.'
-- 'Solution Osmolality & Gastric Emptying: Hypertonic solutions (high simple sugars, dense gels without adequate water) draw fluid from systemic circulation into the intestinal lumen, causing bloating and delayed gastric transit; hypotonic solutions (< 280 mOsm/L) optimize gastric emptying and fluid absorption.'
-- 'Intra-Ride Fueling as a Recovery Head Start: Fueling on the bike is not an isolated caloric event—it preserves endogenous glycogen, accelerates recovery kinetics for subsequent sessions, and prevents evening rebound hyperphagia.'
-- 'Early-Morning Fueling & Rebound Hypoglycemia: Ingesting high-glycemic carbohydrates 15–30 minutes pre-ride triggers an insulin spike that coincides with exercise-induced GLUT4 translocation, causing rapid blood glucose drops; athletes should eat within 0–5 minutes of pedaling or fuel on the bike.'
-- 'Contextual Fueling Architecture: Daily carbohydrate targets must scale with training load (6–8 g/kg/day for moderate volume, 10–12 g/kg/day for heavy stage racing), with intra-ride targets scaling from 30–60 g/h on easy Z2 up to 90–120 g/h on demanding race days.'
+- 'Dual-Transporter Saturation: Glucose/maltodextrin alone saturates intestinal SGLT1
+  at ~60 g/h; adding fructose in a 1:0.8 to 2:1 ratio utilizes GLUT5, unlocking absorption
+  rates up to 90–120 g/h without gastrointestinal distress.'
+- 'Solution Osmolality & Gastric Emptying: Hypertonic solutions (high simple sugars,
+  dense gels without adequate water) draw fluid from systemic circulation into the
+  intestinal lumen, causing bloating and delayed gastric transit; hypotonic solutions
+  (< 280 mOsm/L) optimize gastric emptying and fluid absorption.'
+- 'Intra-Ride Fueling as a Recovery Head Start: Fueling on the bike is not an isolated
+  caloric event—it preserves endogenous glycogen, accelerates recovery kinetics for
+  subsequent sessions, and prevents evening rebound hyperphagia.'
+- 'Early-Morning Fueling & Rebound Hypoglycemia: Ingesting high-glycemic carbohydrates
+  15–30 minutes pre-ride triggers an insulin spike that coincides with exercise-induced
+  GLUT4 translocation, causing rapid blood glucose drops; athletes should eat within
+  0–5 minutes of pedaling or fuel on the bike.'
+- 'Contextual Fueling Architecture: Daily carbohydrate targets must scale with training
+  load (6–8 g/kg/day for moderate volume, 10–12 g/kg/day for heavy stage racing),
+  with intra-ride targets scaling from 30–60 g/h on easy Z2 up to 90–120 g/h on demanding
+  race days.'
 ---
-
 # A Deep Dive Into Ride Food: Carbohydrate Ratios, Gastric Emptying, Osmolality, & Intra-Ride Fueling Architecture — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Dr. Namrita Brooke (Perspectives #12)_
 

@@ -1,22 +1,42 @@
 ---
-title: 'Student Union #2: Collegiate Season Planning, Promoter Logistics, & Crisis Periodization — Complete Guide'
-category: planning
+title: 'Student Union #2: Collegiate Season Planning, Promoter Logistics, & Crisis
+  Periodization — Complete Guide'
+category: training
 topics:
 - Zone2_and_endurance_base
+- Threshold_intervals
+- VO2max_and_aerobic_hiit
 - Microcycle_and_schedule_design
-- Durability_and_fatigue_mechanisms
 - Workload_quantification_and_modeling
-source: 'Empirical Cycling Podcast — Kolie Moore, Nick Luther, Kyle Helson & Laura Ann Leaton (Student Union #2)'
+- Tapering_and_peaking
+- Cross_training_and_multisport
+- Psychology_and_cognitive_performance
+source: 'Empirical Cycling Podcast — Kolie Moore, Nick Luther, Kyle Helson & Laura
+  Ann Leaton (Student Union #2)'
 author: Kolie Moore
 date: '2020-07-13'
-summary: An analytical roundtable examining collegiate cycling conference governance, race promotion economics and risk mitigation, crisis-period training periodization without acute race targets, and the physiological vs tactical limitations of virtual racing (eSports) compared to mass-start outdoor competition.
+summary: The document emphasizes strategies for managing training during a collegiate
+  season, including aerobic base building, threshold interval progression, VO2max
+  workouts, microcycle design, workload modeling, tapering, cross-training, and psychological
+  resilience.
 key_takeaways:
-- 'Grassroots Race Economics & Solvency: Cycling event promotion operates on razor-thin margins with high upfront non-refundable sunk costs (permits, police, EMS, timing), making sudden cancellations financially catastrophic without multi-stakeholder risk sharing.'
-- 'Crisis & Hiatus Periodization: When target competitions are cancelled or postponed indefinitely, athletes must abandon glycolytic peaking cycles and transition into extended aerobic base building, progressive Time-to-Exhaustion (TTE) development, and foundational durability.'
-- 'eSports vs. Outdoor Racecraft Divergence: Virtual platforms (e.g., Zwift) provide potent steady-state cardiopulmonary stimuli and raw power benchmarks, but eliminate cornering physics, peloton braking dynamics, momentum conservation, and drafting nuances.'
-- 'Long-Term Athlete Development (LTAD) in Collegiate Cycling: Collegiate programs serve as the primary entry point for lifelong cycling development; sustaining rider engagement during disruptions requires emphasizing process mastery, team culture, and non-competitive technical skills over podium outcomes.'
+- 'Grassroots Race Economics & Solvency: Cycling event promotion operates on razor-thin
+  margins with high upfront non-refundable sunk costs (permits, police, EMS, timing),
+  making sudden cancellations financially catastrophic without multi-stakeholder risk
+  sharing.'
+- 'Crisis & Hiatus Periodization: When target competitions are cancelled or postponed
+  indefinitely, athletes must abandon glycolytic peaking cycles and transition into
+  extended aerobic base building, progressive Time-to-Exhaustion (TTE) development,
+  and foundational durability.'
+- 'eSports vs. Outdoor Racecraft Divergence: Virtual platforms (e.g., Zwift) provide
+  potent steady-state cardiopulmonary stimuli and raw power benchmarks, but eliminate
+  cornering physics, peloton braking dynamics, momentum conservation, and drafting
+  nuances.'
+- 'Long-Term Athlete Development (LTAD) in Collegiate Cycling: Collegiate programs
+  serve as the primary entry point for lifelong cycling development; sustaining rider
+  engagement during disruptions requires emphasizing process mastery, team culture,
+  and non-competitive technical skills over podium outcomes.'
 ---
-
 # Student Union #2: Collegiate Season Planning, Promoter Logistics, & Crisis Periodization — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore, Nick Luther, Kyle Helson & Laura Ann Leaton (Student Union #2)_
 

@@ -1,23 +1,39 @@
 ---
 title: 'Ten Minute Tips #41: How To Try New Training Methods — Complete Guide'
-category: planning
+category: training
 topics:
-- Periodization_models_and_macrocycles
-- FTP_and_functional_metrics
-- VO2max_and_aerobic_kinetics
-source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #41)'
+- Zone2_and_endurance_base
+- Threshold_intervals
+- VO2max_and_aerobic_hiit
+- Training_intensity_distribution
+- Microcycle_and_schedule_design
+- Workload_quantification_and_modeling
+- Tapering_and_peaking
+- Overtraining_and_recovery_management
+source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips
+  #41)'
 author: Kolie Moore
 date: '2024-08-05'
-summary: Provides a rigorous methodological framework for experimenting with new training modalities, utilizing diagnostic gap analyses, identifying minimum effective doses, isolating confounding variables, and managing fatigue across focused versus mixed mesocycles.
+summary: The document focuses on a methodical approach to introducing new training
+  methods, emphasizing diagnostic gap analysis, progressive overload, and controlled
+  experimentation to avoid overtraining and ensure adaptation.
 key_takeaways:
-- 'Conduct a rigorous gap analysis: identify specific race demands and individual fitness limiters before adopting novel training methods.'
-- 'Do not mess with success: if current training methods consistently drive adaptation, novelty offers no intrinsic advantage.'
-- 'Adopt the minimum effective dose: introduce unfamiliar stimuli at low frequency (e.g., 1 session per week) before committing to high-density focus blocks.'
-- 'Isolate training and lifestyle variables: avoid combining multiple novel stressors simultaneously (e.g., new lifting routines, caloric restriction, and high-intensity intervals).'
-- 'Never double down on fatigue: when interval quality stagnates or declines, prioritize recovery and diagnose root causes (fueling, sleep, life stress) rather than forcing more volume or intensity.'
-- 'Understand focus vs. mixed blocks: mixed blocks serve as the sustainable default for most athletes, while highly concentrated focus blocks are reserved for advanced athletes overcoming specific plateaus.'
+- 'Conduct a rigorous gap analysis: identify specific race demands and individual
+  fitness limiters before adopting novel training methods.'
+- 'Do not mess with success: if current training methods consistently drive adaptation,
+  novelty offers no intrinsic advantage.'
+- 'Adopt the minimum effective dose: introduce unfamiliar stimuli at low frequency
+  (e.g., 1 session per week) before committing to high-density focus blocks.'
+- 'Isolate training and lifestyle variables: avoid combining multiple novel stressors
+  simultaneously (e.g., new lifting routines, caloric restriction, and high-intensity
+  intervals).'
+- 'Never double down on fatigue: when interval quality stagnates or declines, prioritize
+  recovery and diagnose root causes (fueling, sleep, life stress) rather than forcing
+  more volume or intensity.'
+- 'Understand focus vs. mixed blocks: mixed blocks serve as the sustainable default
+  for most athletes, while highly concentrated focus blocks are reserved for advanced
+  athletes overcoming specific plateaus.'
 ---
-
 # Ten Minute Tips #41: How To Try New Training Methods — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #41)_
 

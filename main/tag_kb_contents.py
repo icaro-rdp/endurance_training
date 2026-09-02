@@ -27,8 +27,8 @@ from main.utils.kb_engine.taxonomy import TaxonomyRegistry
 # Paths are relative to Knowledge_base. Raw transcripts must remain excluded.
 # ---------------------------------------------------------------------------
 FOLDERS_TO_PROCESS = [
-    "Articles",
-    "Episodes",
+    # "Articles",
+    # "Episodes",
     "WIP",
 ]
 

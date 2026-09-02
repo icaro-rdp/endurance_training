@@ -1,21 +1,35 @@
 ---
-title: Why It's Hard to Rest, Athlete Psychology, & Behavioral Reactivity — Complete Guide
-category: planning
+title: Why It's Hard to Rest, Athlete Psychology, & Behavioral Reactivity — Complete
+  Guide
+category: training
 topics:
-- Microcycle_and_schedule_design
-- Workload_quantification_and_modeling
-- Durability_and_fatigue_mechanisms
+- Pacing_and_execution_dynamics
+- Psychology_and_cognitive_performance
+- Threshold_intervals
+- Subthreshold_and_tempo
+- Cross_training_and_multisport
 source: 'Empirical Cycling Podcast — Kolie Moore & Patrick Smith (Perspectives #8)'
 author: Kolie Moore
 date: '2022-02-15'
-summary: An in-depth behavioral and psychological analysis of why endurance athletes struggle to rest, examining behavioral reactivity ('what gets measured gets managed'), rule-governed behavior vs. contingency-shaped learning, cultural sport narratives, and structured workout journaling for self-coached athletes.
+summary: The document delves into the psychological and behavioral aspects of endurance
+  training, focusing on pacing, threshold intervals, and the impact of behavioral
+  reactivity on training behavior. It also discusses the importance of rest and recovery,
+  integrating psychological frameworks with practical training strategies.
 key_takeaways:
-- 'Behavioral Reactivity as an Intervention: Simply measuring a variable alters athlete behavior; coaches must intentionally direct attention toward process metrics (sleep, RPE, recovery compliance) rather than hyper-focusing on volume or TSS.'
-- 'The Pathology of Rule-Governed Training: Athletes frequently follow rigid cultural rules (''more is better'', ''rest equals lost fitness'') over internal physiological feedback (severe fatigue, elevated HR, high RPE), leading directly to non-functional overreaching.'
-- 'Reframing Rest in Athlete Language: Rest must be semantically linked to performance enhancement rather than passivity or stagnation, replacing coercive coaching mandates with values-aligned buy-in.'
-- 'Qualitative Workout Journaling: Self-coached athletes overcome cognitive bias and emotional blind spots by logging subjective post-workout comments and reviewing them longitudinally to identify chronic fatigue patterns.'
+- 'Behavioral Reactivity as an Intervention: Simply measuring a variable alters athlete
+  behavior; coaches must intentionally direct attention toward process metrics (sleep,
+  RPE, recovery compliance) rather than hyper-focusing on volume or TSS.'
+- 'The Pathology of Rule-Governed Training: Athletes frequently follow rigid cultural
+  rules (''more is better'', ''rest equals lost fitness'') over internal physiological
+  feedback (severe fatigue, elevated HR, high RPE), leading directly to non-functional
+  overreaching.'
+- 'Reframing Rest in Athlete Language: Rest must be semantically linked to performance
+  enhancement rather than passivity or stagnation, replacing coercive coaching mandates
+  with values-aligned buy-in.'
+- 'Qualitative Workout Journaling: Self-coached athletes overcome cognitive bias and
+  emotional blind spots by logging subjective post-workout comments and reviewing
+  them longitudinally to identify chronic fatigue patterns.'
 ---
-
 # Why It's Hard to Rest, Athlete Psychology, & Behavioral Reactivity — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Patrick Smith (Perspectives #8)_
 

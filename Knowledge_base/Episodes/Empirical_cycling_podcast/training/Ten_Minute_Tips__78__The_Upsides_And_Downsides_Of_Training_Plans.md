@@ -1,23 +1,33 @@
 ---
 title: The Upsides and Downsides of Training Plans — Complete Guide
-category: planning
+category: training
 topics:
-- Microcycle_and_schedule_design
 - Zone2_and_endurance_base
-- Workload_quantification_and_modeling
-- Periodization_models_and_macrocycles
+- Threshold_intervals
+- Training_intensity_distribution
+- Microcycle_and_schedule_design
+- Psychology_and_cognitive_performance
 source: 'Empirical Cycling Podcast — Ten Minute Tips #78'
 author: Kolie Moore
 date: '2026-07-21'
-summary: Kolie Moore and Gediminas evaluate the strengths and severe failure modes of training plans, addressing literal compliance, plan brittleness, post-hoc vs prescriptive intensity distributions, and training vs exercising under high stress.
+summary: The document discusses the importance of flexible training plans and the
+  fallacy of rigid intensity distributions, emphasizing the need to focus on physiological
+  limiters and dynamic autoregulation. It also highlights the psychological impact
+  of training plan adherence and suggests a hierarchy for prioritizing workouts.
 key_takeaways:
-- Training plans become toxic when treated as brittle, literal mandates; missing 1–2 sessions in an 8-week build produces an unmeasurable physiological difference.
-- Training Intensity Distribution (TID—polarized, pyramidal, threshold) is a descriptive post-hoc metric, not a prescriptive starting rule; training must start from athlete-specific limiters.
-- 'The ''Perfect Plan'' Paradox: The psychological anxiety of executing a plan with 100% mathematical perfection generates autonomic stress that degrades recovery and adaptation.'
-- Over-specified indoor workouts (micro-ramping power every 60 seconds) provide entertainment but add zero unique physiological value over clean, steady interval blocks.
-- When external life stress surges, reframe riding from 'Training' (demanding adaptation) to 'Exercising' (unstructured movement for mental health).
+- Training plans become toxic when treated as brittle, literal mandates; missing 1–2
+  sessions in an 8-week build produces an unmeasurable physiological difference.
+- Training Intensity Distribution (TID—polarized, pyramidal, threshold) is a descriptive
+  post-hoc metric, not a prescriptive starting rule; training must start from athlete-specific
+  limiters.
+- 'The ''Perfect Plan'' Paradox: The psychological anxiety of executing a plan with
+  100% mathematical perfection generates autonomic stress that degrades recovery and
+  adaptation.'
+- Over-specified indoor workouts (micro-ramping power every 60 seconds) provide entertainment
+  but add zero unique physiological value over clean, steady interval blocks.
+- When external life stress surges, reframe riding from 'Training' (demanding adaptation)
+  to 'Exercising' (unstructured movement for mental health).
 ---
-
 # The Upsides and Downsides of Training Plans — Complete Guide
 
 _Source: Empirical Cycling Podcast — Kolie Moore with Gediminas (Ten Minute Tips #78)_

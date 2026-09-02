@@ -1,22 +1,35 @@
 ---
-title: 'Ten Minute Tips #64: Diagnosing And Training Weaknesses In The Off-Season — Complete Guide'
-category: planning
+title: 'Ten Minute Tips #64: Diagnosing And Training Weaknesses In The Off-Season
+  — Complete Guide'
+category: training
 topics:
-- Periodization_models_and_macrocycles
+- Zone2_and_endurance_base
+- Threshold_intervals
+- Biomechanics_fit_and_equipment
+- Cross_training_and_multisport
+- Training_intensity_distribution
 - Workload_quantification_and_modeling
-- FTP_and_functional_metrics
+- Psychology_and_cognitive_performance
 source: Empirical Cycling Podcast — Kolie Moore with Megan, James, Erica
 author: Kolie Moore
 date: '2025-10-02'
-summary: Deconstructs the classic adage 'train your weaknesses, race your strengths' through the lens of opportunity cost, differential diagnosis of fatigue vs. skill limiters, and high-yield, low-cost off-season interventions.
+summary: The document focuses on diagnosing and addressing off-season weaknesses through
+  a structured approach, emphasizing the importance of differential diagnosis, opportunity
+  cost, and low-opportunity-cost interventions.
 key_takeaways:
-- Training a genetic or physiological weakness carries heavy opportunity costs; over-focusing on an untrainable limiter degrades core physiological strengths.
-- 'Diagnosing weaknesses requires ruling out chronic fatigue: riding Zone 2 too hard often suppresses sprinting and anaerobic surge power, mimicking a limiter.'
-- 'Apparent anaerobic deficits in races are frequently execution errors: poor pack positioning, bad cornering lines, or mashing a low cadence (40 RPM) out of turns.'
-- 'Prioritize low-opportunity-cost off-season gains: max strength lifting, TT/MTB positional adaptation on the trainer, blood panels (ferritin/iron), and practice tapers.'
-- The 'teeter-totter effect' in advanced athletes means gains in top-end anaerobic mass inevitably compromise climbing power-to-weight; program with event specificity in mind.
+- Training a genetic or physiological weakness carries heavy opportunity costs; over-focusing
+  on an untrainable limiter degrades core physiological strengths.
+- 'Diagnosing weaknesses requires ruling out chronic fatigue: riding Zone 2 too hard
+  often suppresses sprinting and anaerobic surge power, mimicking a limiter.'
+- 'Apparent anaerobic deficits in races are frequently execution errors: poor pack
+  positioning, bad cornering lines, or mashing a low cadence (40 RPM) out of turns.'
+- 'Prioritize low-opportunity-cost off-season gains: max strength lifting, TT/MTB
+  positional adaptation on the trainer, blood panels (ferritin/iron), and practice
+  tapers.'
+- The 'teeter-totter effect' in advanced athletes means gains in top-end anaerobic
+  mass inevitably compromise climbing power-to-weight; program with event specificity
+  in mind.
 ---
-
 # Ten Minute Tips #64: Diagnosing And Training Weaknesses In The Off-Season — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore with Megan, James, Erica_
 

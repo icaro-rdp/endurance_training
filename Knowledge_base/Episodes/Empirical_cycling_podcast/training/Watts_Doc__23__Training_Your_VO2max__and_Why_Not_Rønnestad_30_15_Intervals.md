@@ -1,22 +1,37 @@
 ---
-title: 'Watts Doc #23: Training Your VO2max, and Why Not Rønnestad 30/15 Intervals — Complete Guide'
+title: 'Watts Doc #23: Training Your VO2max, and Why Not Rønnestad 30/15 Intervals
+  — Complete Guide'
 category: training
 topics:
-- VO2max_and_aerobic_kinetics
 - VO2max_and_aerobic_hiit
+- Threshold_intervals
 - Cardiovascular_and_hemodynamics
+- Torque_and_cadence_drills
+- Pacing_and_execution_dynamics
+- Biomechanics_fit_and_equipment
+- Mitochondrial_and_cellular_adaptation
+- Physiological_testing_and_diagnostics
 source: Empirical Cycling Podcast — Kolie Moore & Kyle Harrison
 author: Kolie Moore
 date: '2020-07-21'
-summary: The definitive guide to VO2max interval prescription and periodization, explaining why maximizing cardiac preload via high cadence and all-out pacing drives eccentric left ventricular hypertrophy, alongside an exhaustive critique of Rønnestad 30/15 intermittent intervals.
+summary: The document comprehensively analyzes VO2max training, comparing Rønnestad
+  30/15s to continuous intervals, emphasizing the importance of high cadence, maximal
+  effort, and physiological adaptations for cardiac and muscular remodeling.
 key_takeaways:
-- Long-term VO2max improvement is driven by central stroke volume expansion (eccentric left ventricular hypertrophy), which requires maximal cardiac preload (diastolic filling volume).
-- Increasing cadence to 100–115+ RPM amplifies the skeletal muscle pump, increasing stroke volume by ~15–30 mL at lower muscular force and reduced peripheral fatigue.
-- VO2max intervals must be performed as maximal repeatable efforts (hard start, decaying power) guided by respiratory distress ('gasping like a fish'), completely ignoring rigid wattage targets.
-- Intermittent intervals (Rønnestad 30/15s) provide only ~6 minutes of intermittent cardiac stress across 24 minutes of work, while heavily taxing large motor units and anaerobic capacity (W').
-- Rønnestad's 4x5 min comparison group trained at ~72% VO2max (~FTP/sub-threshold), rendering the study's conclusions about continuous intervals methodologically invalid.
+- Long-term VO2max improvement is driven by central stroke volume expansion (eccentric
+  left ventricular hypertrophy), which requires maximal cardiac preload (diastolic
+  filling volume).
+- Increasing cadence to 100–115+ RPM amplifies the skeletal muscle pump, increasing
+  stroke volume by ~15–30 mL at lower muscular force and reduced peripheral fatigue.
+- VO2max intervals must be performed as maximal repeatable efforts (hard start, decaying
+  power) guided by respiratory distress ('gasping like a fish'), completely ignoring
+  rigid wattage targets.
+- Intermittent intervals (Rønnestad 30/15s) provide only ~6 minutes of intermittent
+  cardiac stress across 24 minutes of work, while heavily taxing large motor units
+  and anaerobic capacity (W').
+- Rønnestad's 4x5 min comparison group trained at ~72% VO2max (~FTP/sub-threshold),
+  rendering the study's conclusions about continuous intervals methodologically invalid.
 ---
-
 # Watts Doc #23: Training Your VO2max, and Why Not Rønnestad 30/15 Intervals — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Harrison_
 

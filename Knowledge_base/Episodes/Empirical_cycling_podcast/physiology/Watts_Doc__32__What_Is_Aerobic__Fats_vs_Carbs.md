@@ -1,23 +1,39 @@
 ---
-title: What Is Aerobic? Fats vs. Carbs, The Krebs Cycle, & The Electron Transport Chain — Complete Guide
+title: What Is Aerobic? Fats vs. Carbs, The Krebs Cycle, & The Electron Transport
+  Chain — Complete Guide
 category: physiology
 topics:
-- Substrate_utilization_and_fat_oxidation
+- Mitochondrial_and_cellular_adaptation
 - Lactate_kinetics_and_metabolism
-- FTP_and_functional_metrics
+- VO2max_and_aerobic_kinetics
+- Cardiovascular_and_hemodynamics
+- Substrate_utilization_and_fat_oxidation
+- Energy_availability_and_reds
 source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #32)'
 author: Kolie Moore
 date: '2021-08-03'
-summary: An in-depth biochemical and physiological investigation into what defines aerobic metabolism, detailing the Krebs cycle, mitochondrial electron transport chain proton pumping, ATP synthase mechanics, and why fats, carbohydrates, and lactate are all oxidized aerobically through identical terminal pathways.
+summary: The document comprehensively explores the physiological aspects of aerobic
+  metabolism, including cellular adaptations, lactate kinetics, VO2max kinetics, cardiovascular
+  responses, substrate utilization for fats and carbohydrates, and the impact of energy
+  availability on performance.
 key_takeaways:
-- Carbohydrates and fats are both oxidized aerobically; once broken down into Acetyl-CoA, the Krebs cycle and Electron Transport Chain process them identically without distinction of fuel origin.
-- The Krebs cycle produces minimal direct ATP (1 GTP/ATP per turn) but serves as a catalytic engine to strip high-energy electrons and protons, reducing NAD+ to NADH and FAD to FADH2.
-- The Electron Transport Chain (Complexes I–IV) uses electron transfer energy to pump protons across the inner mitochondrial membrane, establishing a steep electrochemical proton gradient (pH 7.7 matrix vs. pH 6.8 intermembrane space).
-- ATP Synthase (Complex V) operates as a rotary molecular turbine spinning at up to 7,800 RPM driven by proton influx, phosphorylating ADP into ATP.
-- Oxygen acts solely as the terminal electron acceptor at Complex IV, forming metabolic water (H2O); oxygen availability sets the absolute ceiling on whole-body oxidative phosphorylation.
-- Functional Threshold Power (FTP) represents the maximal steady-state rate of sustainable oxidative flux across the mitochondria before energy demand outpaces oxidative capacity.
+- Carbohydrates and fats are both oxidized aerobically; once broken down into Acetyl-CoA,
+  the Krebs cycle and Electron Transport Chain process them identically without distinction
+  of fuel origin.
+- The Krebs cycle produces minimal direct ATP (1 GTP/ATP per turn) but serves as a
+  catalytic engine to strip high-energy electrons and protons, reducing NAD+ to NADH
+  and FAD to FADH2.
+- The Electron Transport Chain (Complexes I–IV) uses electron transfer energy to pump
+  protons across the inner mitochondrial membrane, establishing a steep electrochemical
+  proton gradient (pH 7.7 matrix vs. pH 6.8 intermembrane space).
+- ATP Synthase (Complex V) operates as a rotary molecular turbine spinning at up to
+  7,800 RPM driven by proton influx, phosphorylating ADP into ATP.
+- Oxygen acts solely as the terminal electron acceptor at Complex IV, forming metabolic
+  water (H2O); oxygen availability sets the absolute ceiling on whole-body oxidative
+  phosphorylation.
+- Functional Threshold Power (FTP) represents the maximal steady-state rate of sustainable
+  oxidative flux across the mitochondria before energy demand outpaces oxidative capacity.
 ---
-
 # What Is Aerobic? Fats vs. Carbs, The Krebs Cycle, & The Electron Transport Chain — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #32)_
 

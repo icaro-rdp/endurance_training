@@ -1,24 +1,43 @@
 ---
-title: 'Ten Minute Tips #46: Pitfalls Of Science Interpretation And Communication — Complete Guide'
+title: 'Ten Minute Tips #46: Pitfalls Of Science Interpretation And Communication
+  — Complete Guide'
 category: physiology
 topics:
-- Durability_and_fatigue_mechanisms
+- Lactate_kinetics_and_metabolism
+- Substrate_utilization_and_fat_oxidation
+- Thresholds_and_metabolic_domains
+- Cardiovascular_and_hemodynamics
+- Mitochondrial_and_cellular_adaptation
 - Physiological_testing_and_diagnostics
-- FTP_and_functional_metrics
-- VO2max_and_aerobic_kinetics
-source: 'Empirical Cycling Podcast — Kolie Moore, Kyle Helson & Rory Porteous (Ten Minute Tips #46)'
+- Environmental_and_thermal_stress
+- Athlete_health_and_exercise_immunology
+source: 'Empirical Cycling Podcast — Kolie Moore, Kyle Helson & Rory Porteous (Ten
+  Minute Tips #46)'
 author: Kolie Moore
 date: '2024-12-08'
-summary: A rigorous methodological critique of sports science interpretation and media communication, examining small-sample statistical limitations, the Fallacy of Division in group averages, publication bias against null results, measurement error margins, and the true framework of evidence-based coaching as N=1 experimentation.
+summary: The document discusses the limitations of interpreting and communicating
+  scientific findings in endurance sports, focusing on physiological mechanisms, individual
+  variability, and the importance of evidence-based coaching.
 key_takeaways:
-- 'The ''Science Says'' fallacy: exercise science papers present narrow, probabilistic models under strict laboratory conditions, not universal, prescriptive training laws.'
-- 'The Fallacy of Division: a statistically significant group mean does not guarantee individual efficacy; population averages consistently conceal non-responders and hyper-responders.'
-- 'Statistical power & reproducibility constraints: small sample sizes ($N=8{--}15$), non-Gaussian distributions, and publication bias against null findings produce high rates of irreproducibility.'
-- 'Measurement error vs. true physiological change: laboratory metabolic carts and lactate analyzers often carry higher measurement error ($+/- 3{--}5%$) than calibrated on-bike power meters and longitudinal RPE tracking.'
-- 'Definition of evidence-based coaching: evidence-based practice is not blindly copying a published workout protocol, but using physiological mechanisms to form a hypothesis for controlled N=1 testing.'
-- 'Clickbait & influencer distortion: commercial interests and social media algorithms incentivize overstating effect sizes while stripping out study limitations, baseline training status, and recovery costs.'
+- 'The ''Science Says'' fallacy: exercise science papers present narrow, probabilistic
+  models under strict laboratory conditions, not universal, prescriptive training
+  laws.'
+- 'The Fallacy of Division: a statistically significant group mean does not guarantee
+  individual efficacy; population averages consistently conceal non-responders and
+  hyper-responders.'
+- 'Statistical power & reproducibility constraints: small sample sizes ($N=8{--}15$),
+  non-Gaussian distributions, and publication bias against null findings produce high
+  rates of irreproducibility.'
+- 'Measurement error vs. true physiological change: laboratory metabolic carts and
+  lactate analyzers often carry higher measurement error ($+/- 3{--}5%$) than calibrated
+  on-bike power meters and longitudinal RPE tracking.'
+- 'Definition of evidence-based coaching: evidence-based practice is not blindly copying
+  a published workout protocol, but using physiological mechanisms to form a hypothesis
+  for controlled N=1 testing.'
+- 'Clickbait & influencer distortion: commercial interests and social media algorithms
+  incentivize overstating effect sizes while stripping out study limitations, baseline
+  training status, and recovery costs.'
 ---
-
 # Ten Minute Tips #46: Pitfalls Of Science Interpretation And Communication — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore, Kyle Helson & Rory Porteous (Ten Minute Tips #46)_
 

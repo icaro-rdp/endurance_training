@@ -3,20 +3,32 @@ title: The Case For Riding Easier — Complete Guide
 category: training
 topics:
 - Zone2_and_endurance_base
-- Physiological_testing_and_diagnostics
-- Substrate_utilization_and_fat_oxidation
+- Threshold_intervals
 - Mitochondrial_and_cellular_adaptation
-source: 'Empirical Cycling Podcast — Kolie Moore, Gediminas Bagdonas, Megan Heath (Ten Minute Tips #69)'
+- Pacing_and_execution_dynamics
+- Cardiovascular_and_hemodynamics
+- Durability_and_fatigue_mechanisms
+- Environmental_and_thermal_stress
+- Physiological_testing_and_diagnostics
+source: 'Empirical Cycling Podcast — Kolie Moore, Gediminas Bagdonas, Megan Heath
+  (Ten Minute Tips #69)'
 author: Kolie Moore
 date: '2025-12-31'
-summary: An in-depth physiological and coaching analysis of why endurance and recovery rides should be paced easier (50–65% FTP, RPE 1–3). Details the 'hard work fallacy,' the 'fatigue security blanket,' protecting interval quality, and metabolic energy management.
+summary: The document emphasizes the benefits of pacing endurance rides at 50-65%
+  FTP to protect autonomic balance and ensure high-intensity interval sessions are
+  of maximal quality. It discusses physiological mechanisms, fatigue management, and
+  practical application in training.
 key_takeaways:
-- Riding endurance sessions at 50–65% FTP (RPE 1–3) preserves systemic recovery and glycogen stores while delivering full aerobic adaptations (mitochondrial biogenesis, capillarization).
-- Key interval success rate should exceed 90%; chronic high-end endurance riding (70–75%+ FTP) generates accumulated fatigue that blunts high-intensity interval execution.
-- Total training volume (hours/time) drives peripheral aerobic adaptations far more than micro-variations in endurance intensity.
-- Athletes chronically accustomed to low-grade fatigue often experience immediate FTP leaps (10–30+ watts) simply by dropping endurance intensity for 2–3 weeks.
+- Riding endurance sessions at 50–65% FTP (RPE 1–3) preserves systemic recovery and
+  glycogen stores while delivering full aerobic adaptations (mitochondrial biogenesis,
+  capillarization).
+- Key interval success rate should exceed 90%; chronic high-end endurance riding (70–75%+
+  FTP) generates accumulated fatigue that blunts high-intensity interval execution.
+- Total training volume (hours/time) drives peripheral aerobic adaptations far more
+  than micro-variations in endurance intensity.
+- Athletes chronically accustomed to low-grade fatigue often experience immediate
+  FTP leaps (10–30+ watts) simply by dropping endurance intensity for 2–3 weeks.
 ---
-
 # The Case For Riding Easier — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore, Gediminas Bagdonas, Megan Heath (Ten Minute Tips #69)_
 

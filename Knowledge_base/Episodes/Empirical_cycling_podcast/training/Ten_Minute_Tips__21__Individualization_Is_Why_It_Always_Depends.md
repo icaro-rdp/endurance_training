@@ -1,23 +1,36 @@
 ---
-title: 'Ten Minute Tips #21: Individualization Is Why It Always Depends — Complete Guide'
-category: planning
+title: 'Ten Minute Tips #21: Individualization Is Why It Always Depends — Complete
+  Guide'
+category: training
 topics:
-- Microcycle_and_schedule_design
-- Periodization_models_and_macrocycles
-- Durability_and_fatigue_mechanisms
-- FTP_and_functional_metrics
+- Zone2_and_endurance_base
+- Threshold_intervals
+- VO2max_and_aerobic_hiit
+- Biomechanics_fit_and_equipment
+- Pacing_and_execution_dynamics
+- Tapering_and_peaking
+- Psychology_and_cognitive_performance
 source: Empirical Cycling Podcast — Kolie Moore & Kyle Houston
 author: Kolie Moore
 date: '2022-07-08'
-summary: Kolie Moore and Kyle Houston explore the scientific rationale behind the coaching adage 'it depends,' outlining which physiological principles are universal absolutes versus which variables require rigorous individualization.
+summary: The document discusses the importance of individualizing training based on
+  physiological principles and life stress, emphasizing the need to adapt training
+  plans to individual recovery rates, stress levels, and biomechanics.
 key_takeaways:
-- '''It depends'' is not an evasive non-answer; it is the recognition that while biological mechanisms are universal, individual constraints, phenotypes, and recovery capacities govern specific prescriptions.'
-- Universal absolutes in endurance training include bioenergetic pathways, the necessity of carbohydrate fueling and sleep for recovery, and progressive overload via total mechanical work.
-- Highly individual variables include tapering kinetics, recovery rates from high-intensity blocks, optimal cadence, and autonomic resilience to life stress.
-- 'Training plans must be dynamic, living documents: when non-training life stress spikes, forcing planned high-intensity interval weeks creates non-functional overreaching.'
-- Sprinters and aerobic diesels require the same fundamental aerobic training principles (sustained metabolic flux and sub-LT1 volume) to develop threshold, but differ in torque tolerances and anaerobic buffering.
+- '''It depends'' is not an evasive non-answer; it is the recognition that while biological
+  mechanisms are universal, individual constraints, phenotypes, and recovery capacities
+  govern specific prescriptions.'
+- Universal absolutes in endurance training include bioenergetic pathways, the necessity
+  of carbohydrate fueling and sleep for recovery, and progressive overload via total
+  mechanical work.
+- Highly individual variables include tapering kinetics, recovery rates from high-intensity
+  blocks, optimal cadence, and autonomic resilience to life stress.
+- 'Training plans must be dynamic, living documents: when non-training life stress
+  spikes, forcing planned high-intensity interval weeks creates non-functional overreaching.'
+- Sprinters and aerobic diesels require the same fundamental aerobic training principles
+  (sustained metabolic flux and sub-LT1 volume) to develop threshold, but differ in
+  torque tolerances and anaerobic buffering.
 ---
-
 # Ten Minute Tips #21: Individualization Is Why It Always Depends — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Houston_
 

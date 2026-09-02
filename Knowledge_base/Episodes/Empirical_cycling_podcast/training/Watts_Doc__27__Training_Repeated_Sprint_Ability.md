@@ -1,23 +1,36 @@
 ---
-title: Training Repeated Sprint Ability & Motor Unit Oxidative Capacity — Complete Guide
+title: Training Repeated Sprint Ability & Motor Unit Oxidative Capacity — Complete
+  Guide
 category: training
 topics:
 - Sprint_and_anaerobic_intervals
+- Threshold_intervals
 - VO2max_and_aerobic_hiit
-- Zone2_and_endurance_base
-- Periodization_models_and_macrocycles
+- Biomechanics_fit_and_equipment
+- Pacing_and_execution_dynamics
 source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #27)'
 author: Kolie Moore
 date: '2020-11-26'
-summary: A comprehensive guide on physiological mechanisms governing Repeated Sprint Ability (RSA) and stochastic endurance, explaining how high-threshold motor units adapt aerobically, the limitations of Normalized Power, and practical interval architectures for road, cyclocross, and MTB.
+summary: The document focuses on training methods for repeated sprint ability, including
+  threshold interval training, VO2max workouts, and biomechanical adjustments, emphasizing
+  pacing and execution dynamics.
 key_takeaways:
-- 'Repeated Sprint Ability (RSA) is an aerobic quality of fast-twitch fibers: high oxidative capacity in Type II motor units accelerates phosphocreatine resynthesis and spares glycogen during repeated surges.'
-- Steady-state FTP training exclusively trains low-threshold motor units; without stochastic and intermittent torque demands, high-threshold units remain unadapted and fatigue rapidly during race surges.
-- 'Intermittent intervals (15/15s, 30/15s) and Repeated Sprint Training (RST: 5–10s max sprints every 30–60s) stimulate ATP flux in large motor units without inducing systemic neuromuscular exhaustion.'
-- Normalized Power (NP) is mathematically unsuited for tracking short stochastic efforts (<30s); progress is best evaluated via peak power decay tracking and fixed-course lap testing.
-- Sub-maximal sprint pacing (controlled surge at ~75–85% peak power) maximizes total work volume and oxidative stimulus across large motor units compared to blowing out in the first 3 reps.
+- 'Repeated Sprint Ability (RSA) is an aerobic quality of fast-twitch fibers: high
+  oxidative capacity in Type II motor units accelerates phosphocreatine resynthesis
+  and spares glycogen during repeated surges.'
+- Steady-state FTP training exclusively trains low-threshold motor units; without
+  stochastic and intermittent torque demands, high-threshold units remain unadapted
+  and fatigue rapidly during race surges.
+- 'Intermittent intervals (15/15s, 30/15s) and Repeated Sprint Training (RST: 5–10s
+  max sprints every 30–60s) stimulate ATP flux in large motor units without inducing
+  systemic neuromuscular exhaustion.'
+- Normalized Power (NP) is mathematically unsuited for tracking short stochastic efforts
+  (<30s); progress is best evaluated via peak power decay tracking and fixed-course
+  lap testing.
+- Sub-maximal sprint pacing (controlled surge at ~75–85% peak power) maximizes total
+  work volume and oxidative stimulus across large motor units compared to blowing
+  out in the first 3 reps.
 ---
-
 # Training Repeated Sprint Ability & Motor Unit Oxidative Capacity — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #27)_
 

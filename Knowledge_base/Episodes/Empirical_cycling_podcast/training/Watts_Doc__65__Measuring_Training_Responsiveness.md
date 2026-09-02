@@ -1,22 +1,40 @@
 ---
-title: 'Measuring Training Responsiveness: The Lillehammer Study, Intra-Class Correlation, and the Adaptation Differential Diagnosis — Complete Guide'
-category: planning
+title: 'Measuring Training Responsiveness: The Lillehammer Study, Intra-Class Correlation,
+  and the Adaptation Differential Diagnosis — Complete Guide'
+category: training
 topics:
-- Workload_quantification_and_modeling
-- Periodization_models_and_macrocycles
-- FTP_and_functional_metrics
+- Zone2_and_endurance_base
+- Threshold_intervals
+- Training_intensity_distribution
+- Tapering_and_peaking
+- Psychology_and_cognitive_performance
+- Pacing_and_execution_dynamics
+- Microcycle_and_schedule_design
+- Overtraining_and_recovery_management
 source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #65)'
 author: Kolie Moore
 date: '2026-06-30'
-summary: An in-depth analysis of the landmark Lillehammer study demonstrating the low reliability of individual training responses across repeated identical endurance blocks, highlighting the profound role of unstandardized recovery environments and establishing a coaching differential diagnosis.
+summary: The document emphasizes the importance of individualizing training intensity,
+  distribution, and recovery strategies, incorporating psychological factors, and
+  using precise pacing and execution dynamics to optimize training responses and manage
+  overtraining.
 key_takeaways:
-- While group-level endurance adaptations replicate reliably across repeated training blocks, individual-level response reliability is remarkably poor (ICC = 0.04 to 0.36 for VO2max and time trial power deltas).
-- Baseline physiological and performance states in untrained individuals are exceptionally stable (ICC = 0.96–0.98), but single-block training response magnitudes are highly unstable across time.
-- The apparent instability of individual training responsiveness ('Schrödinger's Responder') stems from unstandardized recovery environments—life stress, sleep deficits, and caloric restriction—rather than shifting genetics.
-- Tissue-level physiological adaptations (plasma volume, capillary density) exhibit massive measurement and biological variance, with standard deviations frequently exceeding the mean adaptation delta.
-- 'Coaches must apply a strict differential diagnosis for stalled athletes: audit and optimize recovery variables first before modifying training stimuli, and never label an athlete a ''non-responder'' based on an isolated block.'
+- While group-level endurance adaptations replicate reliably across repeated training
+  blocks, individual-level response reliability is remarkably poor (ICC = 0.04 to
+  0.36 for VO2max and time trial power deltas).
+- Baseline physiological and performance states in untrained individuals are exceptionally
+  stable (ICC = 0.96–0.98), but single-block training response magnitudes are highly
+  unstable across time.
+- The apparent instability of individual training responsiveness ('Schrödinger's Responder')
+  stems from unstandardized recovery environments—life stress, sleep deficits, and
+  caloric restriction—rather than shifting genetics.
+- Tissue-level physiological adaptations (plasma volume, capillary density) exhibit
+  massive measurement and biological variance, with standard deviations frequently
+  exceeding the mean adaptation delta.
+- 'Coaches must apply a strict differential diagnosis for stalled athletes: audit
+  and optimize recovery variables first before modifying training stimuli, and never
+  label an athlete a ''non-responder'' based on an isolated block.'
 ---
-
 # Measuring Training Responsiveness: The Lillehammer Study, Intra-Class Correlation, and the Adaptation Differential Diagnosis — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #65)_
 

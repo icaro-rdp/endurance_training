@@ -1,23 +1,36 @@
 ---
 title: Everesting Training, Physiology, and Preparation — Complete Guide
-category: planning
+category: training
 topics:
-- Durability_and_fatigue_mechanisms
-- Carbohydrate_fueling_and_gut_training
-- Workload_quantification_and_modeling
+- Zone2_and_endurance_base
+- Threshold_intervals
+- Strength_and_resistance_training
 - Torque_and_cadence_drills
+- Pacing_and_execution_dynamics
+- Cross_training_and_multisport
+- Biomechanics_fit_and_equipment
 source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #25)'
 author: Kolie Moore
 date: '2020-09-09'
-summary: A comprehensive guide to preparing for Everesting (8,848m climbing in a single ride), covering energy expenditure calculations, carbohydrate and protein fueling, low-cadence torque conditioning, bike fit, gearing mechanics, and pacing execution.
+summary: The document focuses on Everesting training, emphasizing pacing, torque endurance,
+  and biomechanics. It provides detailed training sessions, nutritional protocols,
+  and equipment setup for optimal performance.
 key_takeaways:
-- Everesting is an ultra-endurance time trial requiring strictly disciplined sub-threshold pacing (~65–75% FTP) and massive continuous carbohydrate intake (~80–100 g/hr).
-- Total energy expenditure typically reaches 7,500–10,000+ kJ; athletes must eat early, frequently, and include moderate solid protein to maintain satiety and prevent gastrointestinal breakdown.
-- 'Climb selection and gearing determine muscular survival: riders must gear for a minimum 1:1 ratio (or lower) to sustain 75–85+ RPM on steep gradients and avoid excessive high-torque fast-twitch motor unit fatigue.'
-- Steep climbing drastically closes the effective hip angle; bike fit adjustments (higher handlebar stack) and posterior-chain resistance training (RDLs, carries) prevent acute lower back failure.
-- Two structured reconnaissance rides (4–5h at 6–8 weeks out, and 60–75% duration at 3–4 weeks out) are mandatory to validate metabolic fueling, turnaround safety, and equipment durability.
+- Everesting is an ultra-endurance time trial requiring strictly disciplined sub-threshold
+  pacing (~65–75% FTP) and massive continuous carbohydrate intake (~80–100 g/hr).
+- Total energy expenditure typically reaches 7,500–10,000+ kJ; athletes must eat early,
+  frequently, and include moderate solid protein to maintain satiety and prevent gastrointestinal
+  breakdown.
+- 'Climb selection and gearing determine muscular survival: riders must gear for a
+  minimum 1:1 ratio (or lower) to sustain 75–85+ RPM on steep gradients and avoid
+  excessive high-torque fast-twitch motor unit fatigue.'
+- Steep climbing drastically closes the effective hip angle; bike fit adjustments
+  (higher handlebar stack) and posterior-chain resistance training (RDLs, carries)
+  prevent acute lower back failure.
+- Two structured reconnaissance rides (4–5h at 6–8 weeks out, and 60–75% duration
+  at 3–4 weeks out) are mandatory to validate metabolic fueling, turnaround safety,
+  and equipment durability.
 ---
-
 # Everesting Training, Physiology, and Preparation — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #25)_
 

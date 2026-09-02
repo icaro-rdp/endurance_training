@@ -3,17 +3,24 @@ title: The Fick Equation & Cardiac Remodeling for VO2max — Complete Guide
 category: physiology
 topics:
 - Cardiovascular_and_hemodynamics
+- Mitochondrial_and_cellular_adaptation
 - VO2max_and_aerobic_kinetics
+- Durability_and_fatigue_mechanisms
+- Physiological_testing_and_diagnostics
 source: 'Empirical Cycling Podcast — Kolie Moore (Watts Doc #20 & #22)'
 author: Kolie Moore
 date: '2020-07-15'
-summary: Comprehensive breakdown of the Fick Equation (VO2 = Cardiac Output x a-vO2 difference), eccentric vs concentric cardiac hypertrophy, preload mechanics, stroke volume limitations, and how endurance training remodels the heart.
+summary: The document delves into the Fick Equation, detailing the cardiovascular
+  and physiological mechanisms that limit and enhance VO2max, including cardiac remodeling
+  and stroke volume optimization.
 key_takeaways:
-- Stroke Volume (cardiac output) is the primary central limiter for VO2max in trained athletes.
-- Eccentric ventricular remodeling (chamber expansion) increases stroke volume without wall stiffening.
-- Arteriovenous oxygen difference (a-vO2 diff) reflects peripheral extraction via capillary density and mitochondrial volume.
+- Stroke Volume (cardiac output) is the primary central limiter for VO2max in trained
+  athletes.
+- Eccentric ventricular remodeling (chamber expansion) increases stroke volume without
+  wall stiffening.
+- Arteriovenous oxygen difference (a-vO2 diff) reflects peripheral extraction via
+  capillary density and mitochondrial volume.
 ---
-
 # The Fick Equation & Cardiac Remodeling for VO2max — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore (Watts Doc #20 & #22)_
 

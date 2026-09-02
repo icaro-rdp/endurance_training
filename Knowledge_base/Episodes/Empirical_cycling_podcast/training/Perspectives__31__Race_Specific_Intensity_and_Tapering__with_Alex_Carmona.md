@@ -1,23 +1,33 @@
 ---
 title: 'Perspectives #31: Race Specific Intensity and Tapering — Complete Guide'
-category: planning
+category: training
 topics:
-- Microcycle_and_schedule_design
+- Threshold_intervals
 - VO2max_and_aerobic_hiit
-- Periodization_models_and_macrocycles
-- FTP_and_functional_metrics
+- Pacing_and_execution_dynamics
 - Tapering_and_peaking
+- Cross_training_and_multisport
 source: Empirical Cycling Podcast — Kolie Moore with Alex Carmona
 author: Kolie Moore
 date: '2023-12-12'
-summary: A comprehensive guide on transitioning from general aerobic development to race-specific intensity and executing effective tapers for one-day and stage races, balancing physiological capacity with racecraft and stress management.
+summary: The document focuses on race-specific training and tapering strategies, emphasizing
+  threshold and VO2max interval work, pacing tactics, and event-specific preparation
+  frameworks. It also provides a detailed tapering architecture and common pitfalls
+  to avoid.
 key_takeaways:
-- Race-specific preparation progresses systematically from capacity (short intervals with incomplete rests) to power (maximal efforts with full rest) to event-specific pacing and simulation.
-- Soft skills and neuromuscular demands (cornering at 30+ mph, pack navigation, high-speed line choice) must be trained deliberately at race pace; fitness cannot overcome poor handling.
-- Tapering for cycling is best achieved by reducing training frequency and overall volume while maintaining intensity and race-specific power demands, avoiding prolonged complete rest that causes sluggishness.
-- Non-training allostatic load (travel, work deadlines, equipment panic) is the primary destroyer of race-day performance during tapers; mitigating logistical friction is as vital as managing watts.
+- Race-specific preparation progresses systematically from capacity (short intervals
+  with incomplete rests) to power (maximal efforts with full rest) to event-specific
+  pacing and simulation.
+- Soft skills and neuromuscular demands (cornering at 30+ mph, pack navigation, high-speed
+  line choice) must be trained deliberately at race pace; fitness cannot overcome
+  poor handling.
+- Tapering for cycling is best achieved by reducing training frequency and overall
+  volume while maintaining intensity and race-specific power demands, avoiding prolonged
+  complete rest that causes sluggishness.
+- Non-training allostatic load (travel, work deadlines, equipment panic) is the primary
+  destroyer of race-day performance during tapers; mitigating logistical friction
+  is as vital as managing watts.
 ---
-
 # Perspectives #31: Race Specific Intensity and Tapering — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore with Alex Carmona_
 

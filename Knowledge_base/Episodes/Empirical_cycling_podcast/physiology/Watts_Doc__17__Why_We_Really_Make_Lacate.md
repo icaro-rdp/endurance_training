@@ -3,17 +3,29 @@ title: 'Watts Doc #17: Why We Really Make Lactate — Complete Guide'
 category: physiology
 topics:
 - Lactate_kinetics_and_metabolism
+- Mitochondrial_and_cellular_adaptation
+- Cardiovascular_and_hemodynamics
+- Substrate_utilization_and_fat_oxidation
 - Thresholds_and_metabolic_domains
+- FTP_and_functional_metrics
+- Physiological_testing_and_diagnostics
+- Athlete_health_and_exercise_immunology
 source: Empirical Cycling Podcast — Kolie Moore & Kyle Harrison
 author: Kolie Moore
 date: '2020-04-07'
-summary: An in-depth biochemical breakdown of why cells produce lactate, detailing enzyme kinetics (Michaelis-Menten, Km, Vmax), the essential role of LDH in regenerating NAD+ for glycolytic flux, and debunking hypoxia myths.
+summary: The document delves into the physiological mechanisms of lactate production,
+  emphasizing its role in redox balance and glycolytic flux, and discusses the misconceptions
+  surrounding lactate, including its relationship with hypoxia and its role as a fuel
+  source.
 key_takeaways:
-- Lactate is produced continuously in fully oxygenated cells at rest and during exercise, not because of oxygen deprivation (hypoxia).
-- The Lactate Dehydrogenase (LDH) reaction strongly favors lactate formation (K_eq ~ 1.6 x 10^11), maintaining a resting 10:1 and exercise >500:1 lactate-to-pyruvate ratio.
-- The primary evolutionary role of lactate formation is the instantaneous regeneration of cytoplasmic NAD+ from NADH to sustain glycolytic flux during rapid energy demand.
+- Lactate is produced continuously in fully oxygenated cells at rest and during exercise,
+  not because of oxygen deprivation (hypoxia).
+- The Lactate Dehydrogenase (LDH) reaction strongly favors lactate formation (K_eq
+  ~ 1.6 x 10^11), maintaining a resting 10:1 and exercise >500:1 lactate-to-pyruvate
+  ratio.
+- The primary evolutionary role of lactate formation is the instantaneous regeneration
+  of cytoplasmic NAD+ from NADH to sustain glycolytic flux during rapid energy demand.
 ---
-
 # Watts Doc #17: Why We Really Make Lactate — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Harrison_
 

@@ -1,22 +1,36 @@
 ---
 title: 'Ten Minute Tips #56: Resetting Goals And Motivation — Complete Guide'
-category: planning
+category: training
 topics:
-- Zone2_and_endurance_base
+- Pacing_and_execution_dynamics
+- Threshold_intervals
+- Psychology_and_cognitive_performance
 - Microcycle_and_schedule_design
-- Durability_and_fatigue_mechanisms
-source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #56)'
+- Training_intensity_distribution
+source: 'Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips
+  #56)'
 author: Kolie Moore
 date: '2025-05-19'
-summary: A psychological and physiological guide to navigating post-event deflation, resetting season goals, replacing brittle outcome targets with process-driven metrics, and lowering activation energy to sustain multi-year consistency.
+summary: The document focuses on resetting goals and motivation post-event, emphasizing
+  pacing, threshold training, psychological strategies, microcycle design, and training
+  intensity distribution to maintain consistency and avoid burnout.
 key_takeaways:
-- 'The Post-Peak Void: Achieving a major lifetime athletic peak or completing an ''A'' event frequently triggers transient psychological deflation; navigating this requires accepting the deload phase without panic.'
-- 'Process Goals vs. Outcome Goals: Outcome goals (e.g., ''top-3 finish'' or ''+50W FTP'') depend heavily on external variables; process goals (e.g., nutrition execution, pacing discipline, pack positioning) build repeatable competence.'
-- 'Lowering Activation Energy: High training consistency relies on removing friction—setting out gear the night before, pre-packing nutrition, setting sleep alarms, and riding with accountability groups.'
-- 'Cross-Discipline Periodization: Reignite training enjoyment and motor recruitment post-event by switching modalities (gravel, mountain biking, cyclocross, or resistance training).'
-- 'Stepping-Stone Gap Analysis: Establish realistic multi-month targets by measuring the gap between race demands (kJ durability, climb W/kg) and current historical power curves, building progressive intermediate milestones.'
+- 'The Post-Peak Void: Achieving a major lifetime athletic peak or completing an ''A''
+  event frequently triggers transient psychological deflation; navigating this requires
+  accepting the deload phase without panic.'
+- 'Process Goals vs. Outcome Goals: Outcome goals (e.g., ''top-3 finish'' or ''+50W
+  FTP'') depend heavily on external variables; process goals (e.g., nutrition execution,
+  pacing discipline, pack positioning) build repeatable competence.'
+- 'Lowering Activation Energy: High training consistency relies on removing friction—setting
+  out gear the night before, pre-packing nutrition, setting sleep alarms, and riding
+  with accountability groups.'
+- 'Cross-Discipline Periodization: Reignite training enjoyment and motor recruitment
+  post-event by switching modalities (gravel, mountain biking, cyclocross, or resistance
+  training).'
+- 'Stepping-Stone Gap Analysis: Establish realistic multi-month targets by measuring
+  the gap between race demands (kJ durability, climb W/kg) and current historical
+  power curves, building progressive intermediate milestones.'
 ---
-
 # Ten Minute Tips #56: Resetting Goals And Motivation — Complete Guide
 
 _Source: Empirical Cycling Podcast — Kolie Moore & Rory Porteous (Ten Minute Tips #56)_

@@ -4,16 +4,21 @@ category: nutrition
 topics:
 - Carbohydrate_fueling_and_gut_training
 - Substrate_utilization_and_fat_oxidation
+- Energy_availability_and_reds
+- Micronutrients_and_biomarkers
 source: 'Empirical Cycling Podcast — Kolie Moore (Watts Doc #10 & #35)'
 author: Kolie Moore
 date: '2021-12-15'
-summary: Analyzes the biochemistry of fat oxidation, substrate competition, why keto/fat-adaptation impairs high-intensity glycolysis without improving endurance performance, and common FatMax testing fallacies.
+summary: This document discusses the biochemistry of fat oxidation, the fallacies
+  of glycogen sparing and FatMax testing, and provides practical fueling and training
+  recommendations for endurance athletes.
 key_takeaways:
 - High fat oxidation rates do not automatically improve high-intensity race performance.
-- Fat adaptation downregulates pyruvate dehydrogenase (PDH), impairing top-end power and glycolytic capacity.
-- FatMax is a diffuse plateau, not a sharp training peak; Zone 2 training should be paced by lactate/HR, not solely FatMax grams/min.
+- Fat adaptation downregulates pyruvate dehydrogenase (PDH), impairing top-end power
+  and glycolytic capacity.
+- FatMax is a diffuse plateau, not a sharp training peak; Zone 2 training should be
+  paced by lactate/HR, not solely FatMax grams/min.
 ---
-
 # Fat Oxidation, Glycogen Sparing, & FatMax Fallacies — Complete Guide
 
 _Source: Empirical Cycling Podcast — Kolie Moore (Watts Doc #10 & #35)_

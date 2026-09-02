@@ -3,21 +3,36 @@ title: 'Deconstructing Aerobic Base: The Plate vs. Pyramid Model — Complete Gu
 category: training
 topics:
 - Zone2_and_endurance_base
+- Threshold_intervals
+- VO2max_and_aerobic_hiit
+- Cardiovascular_and_hemodynamics
 - Mitochondrial_and_cellular_adaptation
+- Lactate_kinetics_and_metabolism
 - Substrate_utilization_and_fat_oxidation
-- Periodization_models_and_macrocycles
+- Pacing_and_execution_dynamics
 source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #7)'
 author: Kolie Moore
 date: '2019-05-24'
-summary: A critical physiological evaluation of aerobic base training, contrasting the traditional long-slow-distance pyramid model with a modern multi-domain 'food plate' framework, negative-split endurance execution, and progressive overload principles.
+summary: The document discusses the physiological mechanisms of aerobic base training,
+  contrasting traditional Zone 2 training with modern approaches that incorporate
+  threshold and VO2max work, emphasizing the importance of progressive overload and
+  negative-split pacing for optimal adaptation.
 key_takeaways:
-- Aerobic 'base' is not solely defined by slow Zone 2 miles; it is the cumulative capacity of all oxidative adaptations across the entire aerobic spectrum (mitochondrial density, capillarization, stroke volume, LT1, and FTP).
-- Riding the exact same 2-hour Zone 2 route at static wattage generates diminishing returns; endurance riding requires progressive overload via duration extension or negative-split power increases.
-- Starting long endurance rides conservatively (55–65% FTP) and building power across the final 2 hours (negative-splitting) recruits fatigued motor units and deepens mitochondrial signaling.
-- For time-crunched athletes (6–10 hrs/week), early-season threshold and VO2max blocks ('reverse periodization') raise absolute aerobic power, making subsequent endurance volume far more effective.
-- Exclusive winter Zone 2 often succeeds metaphorically by enforcing systemic rest and recovery from racing rather than possessing exclusive cellular magic.
+- Aerobic 'base' is not solely defined by slow Zone 2 miles; it is the cumulative
+  capacity of all oxidative adaptations across the entire aerobic spectrum (mitochondrial
+  density, capillarization, stroke volume, LT1, and FTP).
+- Riding the exact same 2-hour Zone 2 route at static wattage generates diminishing
+  returns; endurance riding requires progressive overload via duration extension or
+  negative-split power increases.
+- Starting long endurance rides conservatively (55–65% FTP) and building power across
+  the final 2 hours (negative-splitting) recruits fatigued motor units and deepens
+  mitochondrial signaling.
+- For time-crunched athletes (6–10 hrs/week), early-season threshold and VO2max blocks
+  ('reverse periodization') raise absolute aerobic power, making subsequent endurance
+  volume far more effective.
+- Exclusive winter Zone 2 often succeeds metaphorically by enforcing systemic rest
+  and recovery from racing rather than possessing exclusive cellular magic.
 ---
-
 # Deconstructing Aerobic Base: The Plate vs. Pyramid Model — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #7)_
 

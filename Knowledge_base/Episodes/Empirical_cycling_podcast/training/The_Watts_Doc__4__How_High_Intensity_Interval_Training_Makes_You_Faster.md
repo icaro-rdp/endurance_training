@@ -3,21 +3,33 @@ title: Physiological Mechanisms of HIIT & The Tabata Paradox — Complete Guide
 category: training
 topics:
 - VO2max_and_aerobic_hiit
-- VO2max_and_aerobic_kinetics
-- Mitochondrial_and_cellular_adaptation
-- Periodization_models_and_macrocycles
+- Threshold_intervals
+- Sprint_and_anaerobic_intervals
+- Pacing_and_execution_dynamics
+- Thresholds_and_metabolic_domains
+- Critical_power_and_w_prime
+- FTP_and_functional_metrics
+- Training_intensity_distribution
 source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #4)'
 author: Kolie Moore
 date: '2019-04-12'
-summary: A critical physiological breakdown of High-Intensity Interval Training (HIIT) and Sprint Interval Training (SIT), reviewing the 1996 Tabata study, ryanodine receptor calcium leaks, PGC-1α signaling, and why HIIT acts as an enzymatic finishing polish rather than a foundational aerobic base builder in trained athletes.
+summary: The document delves into the physiological mechanisms of HIIT and SIT, focusing
+  on their effects on aerobic and anaerobic capacity, and provides practical guidelines
+  for their application in training.
 key_takeaways:
-- The seminal 1996 Tabata study showed VO2max improvements in untrained subjects because any high-energy stimulus drives cardiorespiratory adaptations in novice athletes.
-- In untrained individuals, SIT (30s all-out sprints) causes ryanodine receptor (RyR1) fragmentation and sarcoplasmic reticulum calcium leaks, triggering CaMK-mediated mitochondrial biogenesis.
-- Well-trained endurance athletes (VO2max >65 mL/kg/min) exhibit no RyR1 fragmentation from SIT, proving that sprint intervals fail to provide a primary mitochondrial biogenesis stimulus in adapted athletes.
-- HIIT adaptations are predominantly rapid, short-term enzymatic upregulations (e.g., glycolytic flux, buffering) rather than deep structural aerobic remodeling.
-- Excessive HIIT elevates glycolytic power (VLaMax), accelerating glycogen depletion and impairing sub-threshold durability and sustained threshold power.
+- The seminal 1996 Tabata study showed VO2max improvements in untrained subjects because
+  any high-energy stimulus drives cardiorespiratory adaptations in novice athletes.
+- In untrained individuals, SIT (30s all-out sprints) causes ryanodine receptor (RyR1)
+  fragmentation and sarcoplasmic reticulum calcium leaks, triggering CaMK-mediated
+  mitochondrial biogenesis.
+- Well-trained endurance athletes (VO2max >65 mL/kg/min) exhibit no RyR1 fragmentation
+  from SIT, proving that sprint intervals fail to provide a primary mitochondrial
+  biogenesis stimulus in adapted athletes.
+- HIIT adaptations are predominantly rapid, short-term enzymatic upregulations (e.g.,
+  glycolytic flux, buffering) rather than deep structural aerobic remodeling.
+- Excessive HIIT elevates glycolytic power (VLaMax), accelerating glycogen depletion
+  and impairing sub-threshold durability and sustained threshold power.
 ---
-
 # Physiological Mechanisms of HIIT & The Tabata Paradox — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #4)_
 

@@ -1,24 +1,35 @@
 ---
-title: '400k AMA: Metabolic Signaling, Periodization Models, Pacing Dynamics & Nutrition — Q&A Guide'
-category: planning
+title: '400k AMA: Metabolic Signaling, Periodization Models, Pacing Dynamics & Nutrition
+  — Q&A Guide'
+category: training
 topics:
-- Periodization_models_and_macrocycles
 - Zone2_and_endurance_base
+- Threshold_intervals
+- Pacing_and_execution_dynamics
 - Carbohydrate_fueling_and_gut_training
-- Durability_and_fatigue_mechanisms
-- Torque_and_cadence_drills
+- Microcycle_and_schedule_design
+- Workload_quantification_and_modeling
+- Tapering_and_peaking
+- Psychology_and_cognitive_performance
 source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson
 author: Kolie Moore
 date: '2022-11-03'
-summary: Comprehensive Q&A guide resolving listener questions on negative-split endurance pacing and lipolysis kinetics, fresh vs durability interval placement, the continuous interval rule vs split sessions, protein requirements for endurance biogenesis, double-day gym sequencing, and post-rest week openers.
+summary: The document discusses pacing strategies, interval placement, and training
+  adaptations, emphasizing the importance of negative-split rides, early interval
+  placement, continuous interval sessions, and proper nutrition and microcycle planning.
 key_takeaways:
-- Negative-splitting endurance rides aligns with lipolysis kinetics and circulating free fatty acid availability while preventing premature glycogen depletion.
-- High-intensity intervals must be performed early in rides or fresh to recruit fast-twitch motor units at peak power, rather than compromised at the end of exhaustive base rides.
-- Splitting intervals across multiple sessions (e.g., 20 min morning + 20 min evening) is not metabolically or adaptively equivalent to 40 minutes of continuous Time-in-Zone.
-- Endurance athletes require ~1.5 g/kg protein daily to support cellular protein synthesis, mitochondrial biogenesis, capillary growth, and plasma volume expansion.
-- Sluggishness following rest weeks is best alleviated with an energy system round-robin opener rather than an exhausting all-out time trial.
+- Negative-splitting endurance rides aligns with lipolysis kinetics and circulating
+  free fatty acid availability while preventing premature glycogen depletion.
+- High-intensity intervals must be performed early in rides or fresh to recruit fast-twitch
+  motor units at peak power, rather than compromised at the end of exhaustive base
+  rides.
+- Splitting intervals across multiple sessions (e.g., 20 min morning + 20 min evening)
+  is not metabolically or adaptively equivalent to 40 minutes of continuous Time-in-Zone.
+- Endurance athletes require ~1.5 g/kg protein daily to support cellular protein synthesis,
+  mitochondrial biogenesis, capillary growth, and plasma volume expansion.
+- Sluggishness following rest weeks is best alleviated with an energy system round-robin
+  opener rather than an exhausting all-out time trial.
 ---
-
 # 400k AMA: Metabolic Signaling, Periodization Models, Pacing Dynamics & Nutrition — Q&A Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson_
 

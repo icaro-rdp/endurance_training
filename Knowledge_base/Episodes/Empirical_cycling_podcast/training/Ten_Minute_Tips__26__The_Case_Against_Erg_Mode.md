@@ -2,21 +2,30 @@
 title: 'Ten Minute Tips #26: The Case Against Erg Mode — Complete Guide'
 category: training
 topics:
-- VO2max_and_aerobic_hiit
-- Autonomic_and_cardiac_monitoring
-- Physiological_testing_and_diagnostics
+- Zone2_and_endurance_base
+- Threshold_intervals
+- Pacing_and_execution_dynamics
+- Biomechanics_fit_and_equipment
 source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Helson (Ten Minute Tips #26)'
 author: Kolie Moore
 date: '2023-02-06'
-summary: Examines the severe physiological and pedagogical drawbacks of relying on ERG mode for indoor training, explaining why self-regulated pacing via RPE produces superior interval execution, accurate threshold tracking, and robust race skills compared to automated smart-trainer resistance.
+summary: The document discusses the drawbacks of using ERG mode for training, emphasizing
+  the importance of self-regulated pacing and the physiological and pedagogical benefits
+  of traditional resistance mode training.
 key_takeaways:
-- ERG mode disconnects the athlete's central nervous system from the internal RPE-power feedback loop, blunting neuromuscular pacing sensitivity and daily fatigue awareness.
-- High-intensity intervals (VO2max, anaerobic capacity, sprints) require maximal, unconstrained power delivery; constraining them to fixed percentages of FTP in ERG mode blunts stroke volume and aerobic stimuli.
-- ERG mode creates a dangerous 'pass/fail' mentality, compelling athletes to muscle through unsustainable wattages when fatigued, leading to disproportionate autonomic stress.
-- Dynamic daily shifts in LT1 and FTP (±20–30W) mean fixed ERG targets frequently turn endurance rides into tempo and threshold sessions into anaerobic blowouts.
-- Valid applications of ERG/smart trainers are limited to low-inertia hill climb simulation, structured active recovery capping, and virtual fartlek tempo courses.
+- ERG mode disconnects the athlete's central nervous system from the internal RPE-power
+  feedback loop, blunting neuromuscular pacing sensitivity and daily fatigue awareness.
+- High-intensity intervals (VO2max, anaerobic capacity, sprints) require maximal,
+  unconstrained power delivery; constraining them to fixed percentages of FTP in ERG
+  mode blunts stroke volume and aerobic stimuli.
+- ERG mode creates a dangerous 'pass/fail' mentality, compelling athletes to muscle
+  through unsustainable wattages when fatigued, leading to disproportionate autonomic
+  stress.
+- Dynamic daily shifts in LT1 and FTP (±20–30W) mean fixed ERG targets frequently
+  turn endurance rides into tempo and threshold sessions into anaerobic blowouts.
+- Valid applications of ERG/smart trainers are limited to low-inertia hill climb simulation,
+  structured active recovery capping, and virtual fartlek tempo courses.
 ---
-
 # Ten Minute Tips #26: The Case Against Erg Mode — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Helson (Ten Minute Tips #26)_
 

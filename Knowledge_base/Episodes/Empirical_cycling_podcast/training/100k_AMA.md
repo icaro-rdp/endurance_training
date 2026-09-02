@@ -1,23 +1,33 @@
 ---
-title: '100k AMA: Zone 3 Rides, Anaerobic Capacity vs FTP, Heavy Lifting, and Indoor Equivalence — Q&A Guide'
-category: physiology
+title: '100k AMA: Zone 3 Rides, Anaerobic Capacity vs FTP, Heavy Lifting, and Indoor
+  Equivalence — Q&A Guide'
+category: training
 topics:
-- FTP_and_functional_metrics
-- Critical_power_and_w_prime
 - Zone2_and_endurance_base
+- Threshold_intervals
+- Strength_and_resistance_training
 - Torque_and_cadence_drills
-- Sprint_and_anaerobic_intervals
+- Pacing_and_execution_dynamics
 source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson
 author: Kolie Moore
 date: '2020-10-26'
-summary: In-depth Q&A reference resolving listener questions on why FTP dictates anaerobic surge repeatability, the targeted utility vs fatigue risks of Zone 3 tempo riding, heavy strength training mechanics for endurance cyclists, sprint neuromuscular development, and indoor vs outdoor training conversion.
+summary: The document focuses on training tactics, including the impact of FTP on
+  anaerobic surge repeatability, the utility of Zone 3 rides for building aerobic
+  base, heavy strength training for cycling economy, sprint development, and the differences
+  between indoor and outdoor training.
 key_takeaways:
-- FTP is the primary limiter even in punchy/anaerobic racing because a higher FTP reduces the fractional depletion of W' during surges and accelerates W' reconstitution below threshold.
-- Steady Zone 3 (Tempo/Sweet Spot) is not 'junk miles' if dosed deliberately for durability and race specificity, but it creates high autonomic fatigue that can compromise higher-intensity interval quality if used indiscriminately.
-- Heavy strength training (3–6 RM) enhances cycling economy and rate of force development (RFD) via neural recruitment without unwanted mass gain or fiber type compromise.
-- Indoor training has a near 100% duty cycle (no micro-coasting or descending); 1 hour indoors often matches 1.15–1.25 hours outdoors in metabolic work, provided active cooling prevents thermal strain.
+- FTP is the primary limiter even in punchy/anaerobic racing because a higher FTP
+  reduces the fractional depletion of W' during surges and accelerates W' reconstitution
+  below threshold.
+- Steady Zone 3 (Tempo/Sweet Spot) is not 'junk miles' if dosed deliberately for durability
+  and race specificity, but it creates high autonomic fatigue that can compromise
+  higher-intensity interval quality if used indiscriminately.
+- Heavy strength training (3–6 RM) enhances cycling economy and rate of force development
+  (RFD) via neural recruitment without unwanted mass gain or fiber type compromise.
+- Indoor training has a near 100% duty cycle (no micro-coasting or descending); 1
+  hour indoors often matches 1.15–1.25 hours outdoors in metabolic work, provided
+  active cooling prevents thermal strain.
 ---
-
 # 100k AMA: Zone 3 Rides, Anaerobic Capacity vs FTP, Heavy Lifting, and Indoor Equivalence — Q&A Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson_
 

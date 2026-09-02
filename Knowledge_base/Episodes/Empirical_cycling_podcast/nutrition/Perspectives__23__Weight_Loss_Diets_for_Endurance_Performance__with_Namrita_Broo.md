@@ -3,21 +3,33 @@ title: Weight Loss Diets for Endurance Performance — Complete Guide
 category: nutrition
 topics:
 - Carbohydrate_fueling_and_gut_training
-- Zone2_and_endurance_base
-- Substrate_utilization_and_fat_oxidation
-- Workload_quantification_and_modeling
-source: 'Empirical Cycling Podcast — Kolie Moore & Dr. Namrita Brooke (Perspectives #23)'
+- Daily_macronutrient_and_energy_periodization
+- Energy_availability_and_reds
+- Micronutrients_and_biomarkers
+source: 'Empirical Cycling Podcast — Kolie Moore & Dr. Namrita Brooke (Perspectives
+  #23)'
 author: Kolie Moore
 date: '2023-02-19'
-summary: A rigorous nutritional and physiological guide to achieving fat loss while preserving lean mass and aerobic power, detailing macronutrient thresholds, deficit periodization, and rest-day fueling.
+summary: The document focuses on performance-focused weight loss in endurance athletes,
+  emphasizing the strategic periodization of macronutrient intake, energy availability,
+  and micronutrient support to preserve lean mass and optimize performance.
 key_takeaways:
-- Thermodynamics governs weight loss (energy in vs. energy out), but neuroendocrine signaling (leptin, ghrelin, insulin, thyroid, cortisol) dictates appetite, NEAT, and metabolic adaptation.
-- Athletes must aim to lose weight as slowly as possible while eating as many calories as possible; a conservative deficit of 200–350 kcal/day (max 500 kcal/day) protects lean muscle mass and training quality.
-- Protein requirements increase to 2.0–2.4 g/kg/day during a caloric deficit to stimulate muscle protein synthesis (MPS) and mitigate lean mass catabolism, distributed evenly across 4–5 daily meals.
-- 'Never restrict carbohydrates around workouts: carbohydrate availability before, during (30–90+ g/hr), and after sessions must be preserved to maintain high glycogen flux and training intensity.'
-- Rest-day hunger is an adaptive physiological signal for tissue remodeling, mitochondrial protein synthesis, and glycogen replenishment; severe restriction on rest days impairs recovery.
+- Thermodynamics governs weight loss (energy in vs. energy out), but neuroendocrine
+  signaling (leptin, ghrelin, insulin, thyroid, cortisol) dictates appetite, NEAT,
+  and metabolic adaptation.
+- Athletes must aim to lose weight as slowly as possible while eating as many calories
+  as possible; a conservative deficit of 200–350 kcal/day (max 500 kcal/day) protects
+  lean muscle mass and training quality.
+- Protein requirements increase to 2.0–2.4 g/kg/day during a caloric deficit to stimulate
+  muscle protein synthesis (MPS) and mitigate lean mass catabolism, distributed evenly
+  across 4–5 daily meals.
+- 'Never restrict carbohydrates around workouts: carbohydrate availability before,
+  during (30–90+ g/hr), and after sessions must be preserved to maintain high glycogen
+  flux and training intensity.'
+- Rest-day hunger is an adaptive physiological signal for tissue remodeling, mitochondrial
+  protein synthesis, and glycogen replenishment; severe restriction on rest days impairs
+  recovery.
 ---
-
 # Weight Loss Diets for Endurance Performance — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Dr. Namrita Brooke (Perspectives #23)_
 

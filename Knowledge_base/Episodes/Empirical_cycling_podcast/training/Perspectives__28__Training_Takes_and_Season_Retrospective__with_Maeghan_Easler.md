@@ -1,23 +1,37 @@
 ---
 title: Training Takes and Season Retrospective — Complete Guide
-category: planning
+category: training
 topics:
 - Zone2_and_endurance_base
-- Workload_quantification_and_modeling
-- FTP_and_functional_metrics
+- Threshold_intervals
+- VO2max_and_aerobic_hiit
+- Mitochondrial_and_cellular_adaptation
 - Durability_and_fatigue_mechanisms
+- Athlete_health_and_exercise_immunology
+- Carbohydrate_fueling_and_gut_training
+- Training_intensity_distribution
 source: 'Empirical Cycling Podcast — Kolie Moore & Maeghan Easler (Perspectives #28)'
 author: Kolie Moore
 date: '2023-09-22'
-summary: An in-depth retrospective on elite race preparation, contrasting low-volume/high-intensity HIIT traps with high-volume aerobic progression, long VO2max adaptation latency, and endocrine recovery from RED-S.
+summary: The document focuses on the importance of high-volume aerobic base training
+  over high-intensity interval training for endurance athletes, emphasizing physiological
+  adaptations and recovery mechanisms. It also discusses the impact of RED-S on female
+  athletes and provides practical training prescriptions.
 key_takeaways:
-- Excessive anaerobic interval frequency (stacking multiple 30/30s or 40/20s weekly) leads to chronic autonomic overreaching and degrades stage race performance compared to high-volume aerobic base building.
-- Transitioning from 12–15 hrs/wk to 20–25 hrs/wk (including 6–7 hour endurance rides) expanded aerobic durability and drove a 30+ Watt increase in FTP.
-- 'VO2max adaptation kinetics are highly individual: while some athletes express fitness gains in days, others require a 3–6 week refractory recovery window before supercompensation manifests.'
-- 'Dietary fat intake is non-negotiable for female endocrine function: severe restriction of dietary fats directly triggers amenorrhea and disrupts sex hormone synthesis.'
-- European peloton racing demands massive sustained aerobic capacity and relentless positional fighting, rendering pure short-interval anaerobic training insufficient without a deep aerobic foundation.
+- Excessive anaerobic interval frequency (stacking multiple 30/30s or 40/20s weekly)
+  leads to chronic autonomic overreaching and degrades stage race performance compared
+  to high-volume aerobic base building.
+- Transitioning from 12–15 hrs/wk to 20–25 hrs/wk (including 6–7 hour endurance rides)
+  expanded aerobic durability and drove a 30+ Watt increase in FTP.
+- 'VO2max adaptation kinetics are highly individual: while some athletes express fitness
+  gains in days, others require a 3–6 week refractory recovery window before supercompensation
+  manifests.'
+- 'Dietary fat intake is non-negotiable for female endocrine function: severe restriction
+  of dietary fats directly triggers amenorrhea and disrupts sex hormone synthesis.'
+- European peloton racing demands massive sustained aerobic capacity and relentless
+  positional fighting, rendering pure short-interval anaerobic training insufficient
+  without a deep aerobic foundation.
 ---
-
 # Training Takes and Season Retrospective — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Maeghan Easler (Perspectives #28)_
 

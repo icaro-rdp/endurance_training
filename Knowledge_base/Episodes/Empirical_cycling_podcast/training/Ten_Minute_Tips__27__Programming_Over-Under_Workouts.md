@@ -2,21 +2,31 @@
 title: 'Ten Minute Tips #27: Programming Over-Under Workouts — Complete Guide'
 category: training
 topics:
-- FTP_and_functional_metrics
-- VO2max_and_aerobic_hiit
-- Lactate_kinetics_and_metabolism
+- Threshold_intervals
+- Pacing_and_execution_dynamics
+- Subthreshold_and_tempo
+- Cross_training_and_multisport
+- Biomechanics_fit_and_equipment
 source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Helson (Ten Minute Tips #27)'
 author: Kolie Moore
 date: '2023-03-20'
-summary: Details the practical programming, progression, and physiological reality of over-under interval sessions, establishing that while they do not possess proprietary lactate-shuttling adaptations over steady threshold work, they serve as powerful race-specific tools for high-threshold motor unit recruitment and pacing control.
+summary: The document focuses on programming over-under workouts, detailing their
+  physiological mechanisms, practical applications, and common pitfalls. It emphasizes
+  the importance of pacing and the role of these workouts in threshold interval training
+  and race preparation.
 key_takeaways:
-- Over-unders are not physiologically superior to steady-state threshold riding for lactate clearance or MCT upregulation; both stimulate the same aerobic continuum.
-- 'The primary value of over-unders lies in race-specific tactical prep: recruiting high-threshold motor units and learning to recover while maintaining high aerobic power.'
-- The optimal programming framework utilizes an asymmetric 1:4 over-to-under ratio (e.g., 30s over / 2 min under, or 1 min over / 4 min under at Sweet Spot).
-- Progress over-unders by increasing total time-in-zone (e.g., from 4x15 min to 3x20 min to 2x40 min), not by making the overs excessively anaerobic.
-- Race-specific execution requires starting the interval with an 'over' to simulate holeshots, hill surges, and breakaway accelerations.
+- Over-unders are not physiologically superior to steady-state threshold riding for
+  lactate clearance or MCT upregulation; both stimulate the same aerobic continuum.
+- 'The primary value of over-unders lies in race-specific tactical prep: recruiting
+  high-threshold motor units and learning to recover while maintaining high aerobic
+  power.'
+- The optimal programming framework utilizes an asymmetric 1:4 over-to-under ratio
+  (e.g., 30s over / 2 min under, or 1 min over / 4 min under at Sweet Spot).
+- Progress over-unders by increasing total time-in-zone (e.g., from 4x15 min to 3x20
+  min to 2x40 min), not by making the overs excessively anaerobic.
+- Race-specific execution requires starting the interval with an 'over' to simulate
+  holeshots, hill surges, and breakaway accelerations.
 ---
-
 # Ten Minute Tips #27: Programming Over-Under Workouts — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Helson (Ten Minute Tips #27)_
 

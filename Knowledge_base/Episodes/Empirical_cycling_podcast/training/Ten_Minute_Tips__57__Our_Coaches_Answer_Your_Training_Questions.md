@@ -1,21 +1,32 @@
 ---
-title: 'Ten Minute Tips #57: Coach Roundtable on Mid-Season Breaks, Stress Management, and Training Load — Q&A Guide'
-category: planning
+title: 'Ten Minute Tips #57: Coach Roundtable on Mid-Season Breaks, Stress Management,
+  and Training Load — Q&A Guide'
+category: training
 topics:
-- Microcycle_and_schedule_design
-- Workload_quantification_and_modeling
-- Periodization_models_and_macrocycles
-source: Empirical Cycling Podcast — Kolie Moore with Alex, James, Megan, Jeremiah, Erica
+- Zone2_and_endurance_base
+- Threshold_intervals
+- Durability_and_fatigue_mechanisms
+- Psychology_and_cognitive_performance
+- Training_intensity_distribution
+source: Empirical Cycling Podcast — Kolie Moore with Alex, James, Megan, Jeremiah,
+  Erica
 author: Kolie Moore
 date: '2025-06-09'
-summary: Coach roundtable Q&A guide analyzing mid-season deloading as proactive fatigue insurance, cumulative allostatic load management under life stress, youth and U23 overtraining risks, and pre- and post-workout habits for long-term consistency.
+summary: The document discusses mid-season breaks, stress management, and training
+  load, emphasizing the importance of structured rest, auto-regulation, and maintaining
+  quality over quantity during high-stress periods.
 key_takeaways:
-- Mid-season breaks (1-2 weeks of full rest and unstructured riding) act as an insurance policy against late-season burnout and physical stagnation; you cannot save training progress like a Word document.
-- Younger athletes (U23 and juniors) are highly vulnerable to overtraining and RED-S due to developmental energy demands, academic stress, and lack of self-regulation.
-- When work/life stress spikes, training stress must drop. Volume and intensity cannot compensate for non-training fatigue; auto-regulation and shifting to maintenance are vital.
-- Athletes must prioritize process goals and speed/tactics over pure watts, external race placement, or restrictive dieting.
+- Mid-season breaks (1-2 weeks of full rest and unstructured riding) act as an insurance
+  policy against late-season burnout and physical stagnation; you cannot save training
+  progress like a Word document.
+- Younger athletes (U23 and juniors) are highly vulnerable to overtraining and RED-S
+  due to developmental energy demands, academic stress, and lack of self-regulation.
+- When work/life stress spikes, training stress must drop. Volume and intensity cannot
+  compensate for non-training fatigue; auto-regulation and shifting to maintenance
+  are vital.
+- Athletes must prioritize process goals and speed/tactics over pure watts, external
+  race placement, or restrictive dieting.
 ---
-
 # Ten Minute Tips #57: Coach Roundtable on Mid-Season Breaks, Stress Management, and Training Load — Q&A Guide
 _Source: Empirical Cycling Podcast — Kolie Moore with Alex, James, Megan, Jeremiah, Erica_
 

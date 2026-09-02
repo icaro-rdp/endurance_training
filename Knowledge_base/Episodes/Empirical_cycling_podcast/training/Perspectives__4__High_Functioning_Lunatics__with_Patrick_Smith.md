@@ -1,22 +1,37 @@
 ---
-title: 'Perspectives #4: High-Functioning Lunatics, Athletic Psychology, & Rigid Rule-Following — Complete Guide'
-category: planning
+title: 'Perspectives #4: High-Functioning Lunatics, Athletic Psychology, & Rigid Rule-Following
+  — Complete Guide'
+category: training
 topics:
-- Microcycle_and_schedule_design
-- Durability_and_fatigue_mechanisms
-- Workload_quantification_and_modeling
+- Pacing_and_execution_dynamics
+- Threshold_intervals
+- Psychology_and_cognitive_performance
+- Tapering_and_peaking
+- Overtraining_and_recovery_management
 source: 'Empirical Cycling Podcast — Kolie Moore & Patrick Smith (Perspectives #4)'
 author: Kolie Moore
 date: '2021-10-19'
-summary: An analytical examination of the endurance athlete psychology, exploring the archetype of the 'high-functioning lunatic', the pathology of rigid rule-governed training ('rickrolling yourself'), the distinction between goals vs. core values, and why standard psychological evaluations fail in competitive sport.
+summary: The document focuses on the psychological and physiological aspects of endurance
+  training, emphasizing the importance of flexible pacing, threshold interval training,
+  cognitive resilience, tapering strategies, and managing overtraining.
 key_takeaways:
-- 'The ''High-Functioning Lunatic'' Archetype: The obsessive discipline, hyper-focus, and high distress tolerance that drive early athletic success frequently become liabilities when applied dogmatically against physiological recovery needs.'
-- '''Rickrolling Yourself'' via Rigid Rule-Following: Athletes construct inflexible verbal rules (e.g., ''never miss a workout'', ''always hit target numbers'') that override internal biofeedback, creating cognitive dissonance and self-inflicted overtraining.'
-- 'Goals vs. Core Values Framework: Goals are finite, outcome-dependent milestones vulnerable to race luck and external circumstances; core values are ongoing behavioral principles (mastery, health, curiosity) that maintain long-term athletic resilience.'
-- 'Failure of Standard Psychological Profiling in Sport: Generic clinical psychological tools often misclassify elite athletic dedication as pathology or fail to detect athletic burnout masked as high conscientiousness.'
-- 'Two-Stage Post-Race Emotional Processing: Debriefing competitive disappointment requires separating acute emotional expression from subsequent objective, data-driven tactical reviews.'
+- 'The ''High-Functioning Lunatic'' Archetype: The obsessive discipline, hyper-focus,
+  and high distress tolerance that drive early athletic success frequently become
+  liabilities when applied dogmatically against physiological recovery needs.'
+- '''Rickrolling Yourself'' via Rigid Rule-Following: Athletes construct inflexible
+  verbal rules (e.g., ''never miss a workout'', ''always hit target numbers'') that
+  override internal biofeedback, creating cognitive dissonance and self-inflicted
+  overtraining.'
+- 'Goals vs. Core Values Framework: Goals are finite, outcome-dependent milestones
+  vulnerable to race luck and external circumstances; core values are ongoing behavioral
+  principles (mastery, health, curiosity) that maintain long-term athletic resilience.'
+- 'Failure of Standard Psychological Profiling in Sport: Generic clinical psychological
+  tools often misclassify elite athletic dedication as pathology or fail to detect
+  athletic burnout masked as high conscientiousness.'
+- 'Two-Stage Post-Race Emotional Processing: Debriefing competitive disappointment
+  requires separating acute emotional expression from subsequent objective, data-driven
+  tactical reviews.'
 ---
-
 # Perspectives #4: High-Functioning Lunatics, Athletic Psychology, & Rigid Rule-Following — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Patrick Smith (Perspectives #4)_
 

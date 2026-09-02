@@ -3,21 +3,35 @@ title: The Redox Role in Adaptation, Recovery, and Nutrition — Complete Guide
 category: physiology
 topics:
 - Mitochondrial_and_cellular_adaptation
-- Zone2_and_endurance_base
-- Micronutrients_and_biomarkers
-- Carbohydrate_fueling_and_gut_training
+- Lactate_kinetics_and_metabolism
+- Substrate_utilization_and_fat_oxidation
+- Thresholds_and_metabolic_domains
+- Critical_power_and_w_prime
+- FTP_and_functional_metrics
+- Cardiovascular_and_hemodynamics
+- Athlete_health_and_exercise_immunology
 source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #47)'
 author: Kolie Moore
 date: '2023-12-04'
-summary: An in-depth biochemical exploration of cellular redox potential (NAD+/NADH), sirtuin signaling, and the dual role of mitochondria as both energetic engines during exercise and biosynthetic hubs during fueled recovery.
+summary: The document explores the physiological mechanisms of mitochondrial biogenesis,
+  redox signaling, and metabolic thresholds, highlighting their roles in exercise
+  performance and recovery. It also discusses the importance of balanced redox signaling
+  for athlete health and exercise immunology.
 key_takeaways:
-- Redox state—specifically the NAD+:NADH ratio—serves as an essential, inescapable metabolic signal for aerobic adaptation that persists across all fitness levels.
-- Sirtuins (SIRT1 in nucleus/cytosol, SIRT3 in mitochondria) act as primary redox sensors, activated by elevated NAD+ to deacetylate and stimulate PGC-1α and oxidative enzymes.
-- Exercise creates redox stress via high NADH utilization; caloric restriction creates redox stress via substrate starvation (lack of carbon to reduce NAD+).
-- 'Recovery is fundamentally biosynthetic: an abundance of food and rest restores a high NADH/NADPH reducing environment necessary to synthesize new mitochondrial membranes, DNA, heme, and proteins.'
-- Exogenous antioxidant mega-dosing provides no endurance benefit and can blunt necessary exercise-induced physiological signaling; true recovery requires adequate calories, sleep, and auto-regulated training.
+- Redox state—specifically the NAD+:NADH ratio—serves as an essential, inescapable
+  metabolic signal for aerobic adaptation that persists across all fitness levels.
+- Sirtuins (SIRT1 in nucleus/cytosol, SIRT3 in mitochondria) act as primary redox
+  sensors, activated by elevated NAD+ to deacetylate and stimulate PGC-1α and oxidative
+  enzymes.
+- Exercise creates redox stress via high NADH utilization; caloric restriction creates
+  redox stress via substrate starvation (lack of carbon to reduce NAD+).
+- 'Recovery is fundamentally biosynthetic: an abundance of food and rest restores
+  a high NADH/NADPH reducing environment necessary to synthesize new mitochondrial
+  membranes, DNA, heme, and proteins.'
+- Exogenous antioxidant mega-dosing provides no endurance benefit and can blunt necessary
+  exercise-induced physiological signaling; true recovery requires adequate calories,
+  sleep, and auto-regulated training.
 ---
-
 # The Redox Role in Adaptation, Recovery, and Nutrition — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #47)_
 

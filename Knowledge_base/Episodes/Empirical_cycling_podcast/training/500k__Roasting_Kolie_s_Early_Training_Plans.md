@@ -1,24 +1,36 @@
 ---
-title: '500k Special: Coaching Evolution, Training Plan Flaws & Periodization First Principles — Complete Guide'
-category: planning
+title: '500k Special: Coaching Evolution, Training Plan Flaws & Periodization First
+  Principles — Complete Guide'
+category: training
 topics:
-- Periodization_models_and_macrocycles
 - Zone2_and_endurance_base
-- FTP_and_functional_metrics
-- Torque_and_cadence_drills
-- Workload_quantification_and_modeling
+- Threshold_intervals
+- Strength_and_resistance_training
+- Pacing_and_execution_dynamics
+- Biomechanics_fit_and_equipment
 source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson
 author: Kolie Moore
 date: '2023-04-16'
-summary: An exhaustive retrospective and self-critique of early coaching mistakes (2014–2016 plans), detailing why stacking high-intensity workouts, eliminating rest days, misprescribing high-rep gym work, and relying on static power zones fail, and presenting modern empirical coaching frameworks based on daily feedback, progressive TiZ, and restorative rest.
+summary: The document critiques early flawed coaching methods and advocates for modern
+  empirical training practices, emphasizing the importance of rest, proper threshold
+  progression, strength training, and athlete feedback.
 key_takeaways:
-- Stacking high-intensity interval sessions across 4–5 consecutive days with zero full rest days (e.g., mandating daily 1-hour Zone 1 spins) leads directly to chronic autonomic burnout and power stagnation.
-- Prescribing high-rep 'endurance' lifting (e.g., 2x15–20 reps) in the gym generates severe metabolic fatigue and DOMS without delivering the neural drive, motor unit synchronization, or rate of force development (RFD) provided by heavy, low-rep sets (3–6 reps).
-- 'Survivorship bias and genetic outliers can mask flawed training methodologies: highly gifted athletes may improve initially despite over-dense training, creating the illusion of coaching efficacy until catastrophic burnout occurs.'
-- 'Dean Golich Coaching Maxim: ''Nine times out of ten, when something goes wrong with an athlete''s training, the solution is more rest—not more training.'''
-- Effective modern periodization requires a closed daily qualitative feedback loop, progressive Time-in-Zone (TiZ) extension at threshold, and dynamic autoregulation rather than rigid, static spreadsheet templates.
+- Stacking high-intensity interval sessions across 4–5 consecutive days with zero
+  full rest days (e.g., mandating daily 1-hour Zone 1 spins) leads directly to chronic
+  autonomic burnout and power stagnation.
+- Prescribing high-rep 'endurance' lifting (e.g., 2x15–20 reps) in the gym generates
+  severe metabolic fatigue and DOMS without delivering the neural drive, motor unit
+  synchronization, or rate of force development (RFD) provided by heavy, low-rep sets
+  (3–6 reps).
+- 'Survivorship bias and genetic outliers can mask flawed training methodologies:
+  highly gifted athletes may improve initially despite over-dense training, creating
+  the illusion of coaching efficacy until catastrophic burnout occurs.'
+- 'Dean Golich Coaching Maxim: ''Nine times out of ten, when something goes wrong
+  with an athlete''s training, the solution is more rest—not more training.'''
+- Effective modern periodization requires a closed daily qualitative feedback loop,
+  progressive Time-in-Zone (TiZ) extension at threshold, and dynamic autoregulation
+  rather than rigid, static spreadsheet templates.
 ---
-
 # 500k Special: Coaching Evolution, Training Plan Flaws & Periodization First Principles — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson_
 

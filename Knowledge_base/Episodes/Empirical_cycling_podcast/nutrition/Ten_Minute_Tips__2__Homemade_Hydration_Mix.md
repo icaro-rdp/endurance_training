@@ -1,23 +1,32 @@
 ---
-title: Homemade Hydration Mix Formulation, Osmolality, & Electrolyte Dynamics — Complete Guide
+title: Homemade Hydration Mix Formulation, Osmolality, & Electrolyte Dynamics — Complete
+  Guide
 category: nutrition
 topics:
 - Carbohydrate_fueling_and_gut_training
-- Ergogenic_supplements_and_buffers
-- Environmental_and_thermal_stress
 - Hydration_and_electrolyte_balance
+- Daily_macronutrient_and_energy_periodization
+- Ergogenic_supplements_and_buffers
+- Micronutrients_and_biomarkers
 source: 'Empirical Cycling Podcast — Kolie Moore (Ten Minute Tips #2)'
 author: Kolie Moore
 date: '2019-09-05'
-summary: A scientific and cost-effective guide to reverse-engineering commercial hydration drinks, detailing intestinal co-transport mechanisms (SGLT1), solution osmolality, the advantages of sodium citrate over sodium chloride, and precise DIY recipe formulation.
+summary: The document discusses the formulation of a homemade hydration mix, focusing
+  on carbohydrate and electrolyte balance, osmolality, and the use of sodium citrate
+  over sodium chloride for optimal absorption and performance.
 key_takeaways:
-- Hydration drinks must be slightly hypotonic (~3–5% total solute concentration, ~200–250 mOsm/kg) to maximize gastric emptying rate and water absorption.
-- Intestinal water absorption piggybacks on carbohydrate transport via the Sodium-Glucose Linked Transporter 1 (SGLT1), which moves 2 Na+ ions and 1 glucose molecule alongside ~260 water molecules.
-- Sodium is the primary electrolyte lost in sweat (500–1,500+ mg/L); losses of potassium, calcium, and magnesium are minimal (50–100 mg/L) and secondary during exercise.
-- Sodium citrate is vastly superior to table salt (sodium chloride) in drink mixes due to exceptional palatability, mild pH buffering, and elimination of gastric irritation.
-- DIY formulation allows exact adjustment of sodium concentration and bottle volume to match individual sweat rates and hot vs. cold environmental conditions.
+- Hydration drinks must be slightly hypotonic (~3–5% total solute concentration, ~200–250
+  mOsm/kg) to maximize gastric emptying rate and water absorption.
+- Intestinal water absorption piggybacks on carbohydrate transport via the Sodium-Glucose
+  Linked Transporter 1 (SGLT1), which moves 2 Na+ ions and 1 glucose molecule alongside
+  ~260 water molecules.
+- Sodium is the primary electrolyte lost in sweat (500–1,500+ mg/L); losses of potassium,
+  calcium, and magnesium are minimal (50–100 mg/L) and secondary during exercise.
+- Sodium citrate is vastly superior to table salt (sodium chloride) in drink mixes
+  due to exceptional palatability, mild pH buffering, and elimination of gastric irritation.
+- DIY formulation allows exact adjustment of sodium concentration and bottle volume
+  to match individual sweat rates and hot vs. cold environmental conditions.
 ---
-
 # Homemade Hydration Mix Formulation, Osmolality, & Electrolyte Dynamics — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore (Ten Minute Tips #2)_
 

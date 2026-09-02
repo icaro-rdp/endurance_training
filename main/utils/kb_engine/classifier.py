@@ -379,6 +379,20 @@ def _split_into_windows(full_text: str, max_window_chars: int = 12000) -> list[s
     return windows if windows else [full_text]
 
 
+def _sanitize_model_payload(raw_result: ModelPayload) -> ModelPayload:
+    """Clamp summary sentences to prevent strict schema failure on wordy output."""
+    if not isinstance(raw_result, dict):
+        return raw_result
+    summary = raw_result.get("summary")
+    if isinstance(summary, str) and summary.strip():
+        sentences = re.split(r"(?<=[.!?])\s+(?=[A-Z0-9])", summary.strip())
+        if len(sentences) > 2:
+            clamped = dict(raw_result)
+            clamped["summary"] = " ".join(sentences[:2]).strip()
+            return clamped
+    return raw_result
+
+
 class LocalLLMClassifier:
     """
     Topic Auto-Tagger and Bottom-Up Categorization engine.
@@ -470,7 +484,8 @@ class LocalLLMClassifier:
                 existing_summary=existing_summary,
             )
             raw_result = self.adapter.generate(prompt, schema=DocumentTaggingResult)
-            parsed = DocumentTaggingResult.model_validate(raw_result)
+            sanitized = _sanitize_model_payload(raw_result)
+            parsed = DocumentTaggingResult.model_validate(sanitized)
             window_results.append(parsed)
 
         if len(window_results) == 1:
@@ -481,7 +496,8 @@ class LocalLLMClassifier:
             consolidation_prompt,
             schema=DocumentTaggingResult,
         )
-        return DocumentTaggingResult.model_validate(consolidated)
+        sanitized_consolidated = _sanitize_model_payload(consolidated)
+        return DocumentTaggingResult.model_validate(sanitized_consolidated)
 
     def _build_consolidation_prompt(
         self,

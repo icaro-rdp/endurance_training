@@ -2,22 +2,32 @@
 title: Listener Questions on VO2max Training and Rønnestad 30/15s — Q&A Guide
 category: training
 topics:
-- VO2max_and_aerobic_kinetics
 - VO2max_and_aerobic_hiit
-- Cardiovascular_and_hemodynamics
-- Periodization_models_and_macrocycles
+- Threshold_intervals
+- Torque_and_cadence_drills
+- Pacing_and_execution_dynamics
+- Biomechanics_fit_and_equipment
 source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #24)'
 author: Kolie Moore
 date: '2020-08-02'
-summary: Comprehensive Q&A guide resolving listener questions on VO2max interval execution, cadence manipulation, cardiac preload mechanics, seated vs standing biomechanics, position specificity on TT bikes, and a critical methodological breakdown of Rønnestad 30/15 research.
+summary: The document discusses VO2max interval training, including cadence manipulation,
+  seated vs. standing mechanics, pacing strategies, and the specific benefits of different
+  interval structures. It also addresses the physiological mechanisms behind these
+  training techniques and their practical applications.
 key_takeaways:
-- High cadence (10–15+ RPM above preferred, ~105–120 RPM) is a training tool to maximize venous return, end-diastolic filling pressure, and stroke volume—not the most efficient racing cadence.
-- Standing during VO2max intervals should be avoided; lower cadence increases torque, recruiting larger, less-oxidative motor units that generate excessive central/peripheral fatigue and lower stroke volume.
-- VO2max training is best periodized in concentrated blocks with ample recovery between intervals and blocks, while FTP is maintained via shared oxidative pathways.
-- Intermittent intervals (30/15s) primarily build repeated sprint ability and neuromuscular tolerance rather than maximizing cardiac output adaptation.
-- Methodological critiques of Rønnestad's 4x5 min protocol reveal subjects executed 4x5m at or near FTP due to ambiguous Borg RPE cues and flawed lactate step testing.
+- High cadence (10–15+ RPM above preferred, ~105–120 RPM) is a training tool to maximize
+  venous return, end-diastolic filling pressure, and stroke volume—not the most efficient
+  racing cadence.
+- Standing during VO2max intervals should be avoided; lower cadence increases torque,
+  recruiting larger, less-oxidative motor units that generate excessive central/peripheral
+  fatigue and lower stroke volume.
+- VO2max training is best periodized in concentrated blocks with ample recovery between
+  intervals and blocks, while FTP is maintained via shared oxidative pathways.
+- Intermittent intervals (30/15s) primarily build repeated sprint ability and neuromuscular
+  tolerance rather than maximizing cardiac output adaptation.
+- Methodological critiques of Rønnestad's 4x5 min protocol reveal subjects executed
+  4x5m at or near FTP due to ambiguous Borg RPE cues and flawed lactate step testing.
 ---
-
 # Listener Questions on VO2max Training and Rønnestad 30/15s — Q&A Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #24)_
 

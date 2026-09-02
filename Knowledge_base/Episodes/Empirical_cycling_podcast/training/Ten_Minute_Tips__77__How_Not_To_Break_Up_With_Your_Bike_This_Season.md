@@ -1,23 +1,38 @@
 ---
-title: How Not to Break Up With Your Bike This Season (Managing the Summer Slump) — Complete Guide
-category: planning
+title: How Not to Break Up With Your Bike This Season (Managing the Summer Slump)
+  — Complete Guide
+category: training
 topics:
-- Microcycle_and_schedule_design
 - Zone2_and_endurance_base
+- Subthreshold_and_tempo
+- Threshold_intervals
+- Pacing_and_execution_dynamics
+- Cross_training_and_multisport
+- Biomechanics_fit_and_equipment
+- Cardiovascular_and_hemodynamics
 - Durability_and_fatigue_mechanisms
-- Workload_quantification_and_modeling
 source: 'Empirical Cycling Podcast — Ten Minute Tips #77'
 author: Kolie Moore
 date: '2026-06-09'
-summary: Kolie Moore and Gediminas dissect the mid-season 'summer slump'—exploring why chronic fatigue and allostatic load peak after 6 months of training, and presenting maintenance frameworks, fun blocks, and reset strategies.
+summary: The document focuses on managing the mid-season 'summer slump' through structured
+  training, physiological recovery, and psychological resilience, emphasizing maintenance
+  workouts, fun blocks, and fatigue assessment.
 key_takeaways:
-- The mid-season slump (May–July) occurs when medium-term bad habits (skipped meals, crept ride intensity, under-sleeping) finally catch up with the athlete after 5–6 months of continuous building.
-- "During peak race season, the top priority is recovery; maintenance training should utilize low-cost stimuli (e.g., $2 \times 10–15\text{ min}$ sub-FTP) rather than progressive overload."
-- Mid-season training plans must be heavily conditional (if-then branching), acknowledging that fresh legs cannot be forced on a rigid Tuesday/Thursday schedule.
-- "The 'Ontogeny Recapitulates Phylogeny' Reset: When returning from a mid-season break, execute a compressed micro-progression (base $\to$ threshold $\to$ openers) over 2–3 weeks."
-- Incorporate deliberate 'Fun Blocks' and experiential goals (destination gravel rides, fartlek terrain pacing) to counteract existential motivation crashes and rigid metric fatigue.
+- The mid-season slump (May–July) occurs when medium-term bad habits (skipped meals,
+  crept ride intensity, under-sleeping) finally catch up with the athlete after 5–6
+  months of continuous building.
+- "During peak race season, the top priority is recovery; maintenance training should\
+  \ utilize low-cost stimuli (e.g., $2 \times 10–15\text{ min}$ sub-FTP) rather than\
+  \ progressive overload."
+- Mid-season training plans must be heavily conditional (if-then branching), acknowledging
+  that fresh legs cannot be forced on a rigid Tuesday/Thursday schedule.
+- "The 'Ontogeny Recapitulates Phylogeny' Reset: When returning from a mid-season\
+  \ break, execute a compressed micro-progression (base $\to$ threshold $\to$ openers)\
+  \ over 2–3 weeks."
+- Incorporate deliberate 'Fun Blocks' and experiential goals (destination gravel rides,
+  fartlek terrain pacing) to counteract existential motivation crashes and rigid metric
+  fatigue.
 ---
-
 # How Not to Break Up With Your Bike This Season — Complete Guide
 
 _Source: Empirical Cycling Podcast — Kolie Moore with Gediminas (Ten Minute Tips #77)_

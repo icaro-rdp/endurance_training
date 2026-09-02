@@ -3,20 +3,37 @@ title: How PGC-1α Does and Doesn't Live Up to the Hype — Complete Guide
 category: physiology
 topics:
 - Mitochondrial_and_cellular_adaptation
-- Zone2_and_endurance_base
-- Periodization_models_and_macrocycles
+- Lactate_kinetics_and_metabolism
+- Substrate_utilization_and_fat_oxidation
+- Thresholds_and_metabolic_domains
+- Critical_power_and_w_prime
+- FTP_and_functional_metrics
+- Cardiovascular_and_hemodynamics
+- Physiological_testing_and_diagnostics
 source: 'Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #48)'
 author: Kolie Moore
 date: '2024-02-12'
-summary: A definitive physiological analysis of PGC-1α as a transcriptional coactivator, the surprising redundancy revealed by genetic knockout studies, and why real-world progressive overload matters far more than molecular surrogate markers.
+summary: The document comprehensively explores the physiological mechanisms of PGC-1α,
+  including mitochondrial adaptation, lactate kinetics, substrate utilization, metabolic
+  thresholds, critical power, functional metrics, cardiovascular function, and the
+  use of physiological tests to assess performance.
 key_takeaways:
-- PGC-1α acts as a master transcriptional coactivator that docks onto DNA-bound transcription factors (NRF-1, NRF-2, ERRα, PPARs) to initiate mitochondrial biogenesis, angiogenesis, and metabolic enzyme synthesis.
-- Muscle-specific knockout studies demonstrate that PGC-1α is technically dispensable for exercise-induced mitochondrial adaptations due to redundant parallel pathways (PGC-1β, PRC, p53).
-- Double knockout (PGC-1α + PGC-1β) mice exhibit lower baseline aerobic capacity (~30% of normal), yet still double their exercise performance in response to endurance training.
-- Transient spikes in PGC-1α mRNA do not linearly predict protein translation or athletic performance; total integrated stimulus (area under the curve of workload and duration) is the true driver of fitness.
-- Attempts to 'biohack' PGC-1α via cold baths, fasted riding, or extreme acute stress fail in well-trained athletes because they compromise training power output and elevate systemic fatigue.
+- PGC-1α acts as a master transcriptional coactivator that docks onto DNA-bound transcription
+  factors (NRF-1, NRF-2, ERRα, PPARs) to initiate mitochondrial biogenesis, angiogenesis,
+  and metabolic enzyme synthesis.
+- Muscle-specific knockout studies demonstrate that PGC-1α is technically dispensable
+  for exercise-induced mitochondrial adaptations due to redundant parallel pathways
+  (PGC-1β, PRC, p53).
+- Double knockout (PGC-1α + PGC-1β) mice exhibit lower baseline aerobic capacity (~30%
+  of normal), yet still double their exercise performance in response to endurance
+  training.
+- Transient spikes in PGC-1α mRNA do not linearly predict protein translation or athletic
+  performance; total integrated stimulus (area under the curve of workload and duration)
+  is the true driver of fitness.
+- Attempts to 'biohack' PGC-1α via cold baths, fasted riding, or extreme acute stress
+  fail in well-trained athletes because they compromise training power output and
+  elevate systemic fatigue.
 ---
-
 # How PGC-1α Does and Doesn't Live Up to the Hype — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore & Kyle Hanson (Watts Doc #48)_
 

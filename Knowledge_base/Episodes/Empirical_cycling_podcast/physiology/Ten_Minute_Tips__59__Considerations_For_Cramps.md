@@ -1,20 +1,36 @@
 ---
-title: 'Ten Minute Tips #59: Considerations For Cramps (EAMC Physiology & Interventions) — Complete Guide'
+title: 'Ten Minute Tips #59: Considerations For Cramps (EAMC Physiology & Interventions)
+  — Complete Guide'
 category: physiology
 topics:
+- Lactate_kinetics_and_metabolism
+- Substrate_utilization_and_fat_oxidation
+- Thresholds_and_metabolic_domains
+- Mitochondrial_and_cellular_adaptation
+- Cardiovascular_and_hemodynamics
+- Biomechanics_fit_and_equipment
+- Athlete_health_and_exercise_immunology
 - Environmental_and_thermal_stress
-- Durability_and_fatigue_mechanisms
 source: Empirical Cycling Podcast — Kolie Moore with Will and Giancarlo (GC)
 author: Kolie Moore
 date: '2025-06-30'
-summary: A rigorous exploration of Exercise-Associated Muscle Cramps (EAMC), debunking the dehydration/electrolyte myth, detailing the central and peripheral neuromuscular fatigue hypotheses, and outlining acute TRP-channel agonists and chronic training interventions.
+summary: The document delves into the physiological mechanisms of Exercise-Associated
+  Muscle Cramps (EAMC), debunking the dehydration/electrolyte myth and exploring central
+  and peripheral neuromuscular fatigue theories. It also provides practical acute
+  management and chronic training interventions.
 key_takeaways:
-- EAMC is a neuromuscular fatigue and reflex dysfunction, not a systemic electrolyte deficit or dehydration issue.
-- 'Central Origin Theory: Fatigue increases excitatory muscle spindle firing and suppresses inhibitory Golgi Tendon Organ (GTO) firing, resulting in uncontrolled alpha-motor neuron hyperactivity.'
-- Noxious substances (spicy capsaicin/Tabasco, acidic pickle juice, extreme sour/salt) stimulate oropharyngeal TRP channels, triggering a neural reflex that rapidly inhibits alpha-motor neuron discharge.
-- 'Prevention requires neuromuscular specificity: race-duration simulation, surge conditioning (e.g., 15s/15s, 30s/30s at 150% FTP), positional adaptation, and targeted strength work (e.g., Copenhagen planks).'
+- EAMC is a neuromuscular fatigue and reflex dysfunction, not a systemic electrolyte
+  deficit or dehydration issue.
+- 'Central Origin Theory: Fatigue increases excitatory muscle spindle firing and suppresses
+  inhibitory Golgi Tendon Organ (GTO) firing, resulting in uncontrolled alpha-motor
+  neuron hyperactivity.'
+- Noxious substances (spicy capsaicin/Tabasco, acidic pickle juice, extreme sour/salt)
+  stimulate oropharyngeal TRP channels, triggering a neural reflex that rapidly inhibits
+  alpha-motor neuron discharge.
+- 'Prevention requires neuromuscular specificity: race-duration simulation, surge
+  conditioning (e.g., 15s/15s, 30s/30s at 150% FTP), positional adaptation, and targeted
+  strength work (e.g., Copenhagen planks).'
 ---
-
 # Ten Minute Tips #59: Considerations For Cramps (EAMC Physiology & Interventions) — Complete Guide
 _Source: Empirical Cycling Podcast — Kolie Moore with Will and Giancarlo (GC)_
 
