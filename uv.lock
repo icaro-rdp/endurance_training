@@ -535,6 +535,7 @@ dependencies = [
     { name = "mcp" },
     { name = "pydantic" },
     { name = "pyyaml" },
+    { name = "spotifyscraper" },
     { name = "sqlite-vec" },
     { name = "tqdm" },
 ]
@@ -568,6 +569,7 @@ requires-dist = [
     { name = "python-dotenv", marker = "extra == 'scraping'", specifier = ">=1.0,<2" },
     { name = "pyyaml", specifier = ">=6.0,<7" },
     { name = "requests", marker = "extra == 'scraping'", specifier = ">=2.32,<3" },
+    { name = "spotifyscraper", specifier = ">=3.9.2" },
     { name = "sqlite-vec", specifier = ">=0.1.9" },
     { name = "tqdm", specifier = ">=4.70.0" },
 ]
@@ -2554,6 +2556,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz", hash = "sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81", size = 34031, upload-time = "2024-12-04T17:35:28.174Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274", size = 11050, upload-time = "2024-12-04T17:35:26.475Z" },
+]
+
+[[package]]
+name = "spotifyscraper"
+version = "3.9.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "httpx" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a3/24/0bfb1809b780f19924b070234e088ac887f4a7de7484890b4400eb414330/spotifyscraper-3.9.2.tar.gz", hash = "sha256:ea8cf2c745635406daa819e5504679cd4a1118f8d2f54feac27407d0334fb3ad", size = 463177, upload-time = "2026-06-26T09:59:05.446Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c4/95/22a70cadd41f73b95988a5818127ee80c9b83129418e960d089a712304a0/spotifyscraper-3.9.2-py3-none-any.whl", hash = "sha256:8a83af7f6569864f409e406110988adc58ae6d433b9527b4a25be5dfebcd148c", size = 129528, upload-time = "2026-06-26T09:59:04.251Z" },
 ]
 
 [[package]]

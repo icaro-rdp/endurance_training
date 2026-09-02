@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""
-Spotify Podcast Transcript Scraper & Markdown Generator
+"""Spotify Podcast Transcript Scraper & Markdown Generator.
 
 Fetches podcast episode metadata via Spotify Web API and extracts
 time-synced episode transcripts, generating clean Markdown files formatted
 with YAML frontmatter conforming to the knowledge base taxonomy.
-Includes robust duplicate detection to prevent redundant downloads.
+Supports on-the-fly local MLX / DeepL translation into English under WIP.
 """
+
+from __future__ import annotations
 
 import argparse
 import os
@@ -18,25 +19,101 @@ from pathlib import Path
 from typing import Any
 
 import requests
-from dotenv import dotenv_values
 
-DEFAULT_SHOW_ID = "5IHj4utnRlTNcCCoxyinkx"  # Empirical Cycling Podcast
+
+def extract_spotify_id(value: str, expected_type: str | None = None) -> str:
+    """Extracts a Spotify ID from a raw ID, Spotify URI, or Spotify URL.
+
+    Handles full URLs with query parameters (e.g. ?si=...), internationalized
+    Spotify URLs (e.g. /intl-it/show/...), URI schemes (spotify:show:...),
+    and plain alphanumeric IDs.
+
+    Args:
+        value: Input string containing a raw Spotify ID, URI, or URL.
+        expected_type: Optional expected entity type (e.g. 'show', 'episode').
+
+    Returns:
+        The extracted alphanumeric Spotify ID.
+
+    Raises:
+        ValueError: If a valid Spotify ID cannot be parsed from the input.
+    """
+    cleaned = value.strip()
+    if not cleaned:
+        raise ValueError("Empty Spotify identifier provided.")
+
+    # 1. Typed Spotify URI: spotify:<expected_type>:<id>
+    if expected_type:
+        typed_uri_match = re.search(rf"spotify:{expected_type}:([a-zA-Z0-9]+)", cleaned)
+        if typed_uri_match:
+            return typed_uri_match.group(1)
+
+    # 2. General Spotify URI: spotify:(show|episode|track):<id>
+    uri_match = re.search(r"spotify:(?:[a-zA-Z]+:)?([a-zA-Z0-9]+)", cleaned)
+    if uri_match:
+        return uri_match.group(1)
+
+    # 3. Typed Spotify URL: open.spotify.com/(intl-[a-z-]+/)?<expected_type>/<id>
+    if expected_type:
+        typed_url_match = re.search(
+            rf"open\.spotify\.com/(?:intl-[a-zA-Z-]+/)?{expected_type}/([a-zA-Z0-9]+)(?:[/?#]|$)",
+            cleaned,
+        )
+        if typed_url_match:
+            return typed_url_match.group(1)
+
+    # 4. General Spotify URL: open.spotify.com/(intl-[a-z-]+/)?(show|episode|track)/<id>
+    url_match = re.search(
+        r"open\.spotify\.com/(?:intl-[a-zA-Z-]+/)?(?:[a-zA-Z_-]+/)?([a-zA-Z0-9]+)(?:[/?#]|$)",
+        cleaned,
+    )
+    if url_match:
+        return url_match.group(1)
+
+    # 5. Plain alphanumeric ID
+    if re.fullmatch(r"[a-zA-Z0-9]+", cleaned):
+        return cleaned
+
+    raise ValueError(f"Unable to parse Spotify ID from: '{value}'")
 
 
 def load_credentials() -> dict[str, str]:
-    """Loads and sanitizes environment variables from .env file or environment."""
+    """Loads and sanitizes environment variables from .env file or environment.
+
+    Returns:
+        Dictionary containing mapped credential key-value pairs.
+    """
     env_path = Path(__file__).resolve().parent.parent / ".env"
-    env_vars = {}
+    env_vars: dict[str, str] = {}
+
     if env_path.exists():
-        raw_env = dotenv_values(env_path)
-        for k, v in raw_env.items():
-            if k and v:
+        try:
+            from dotenv import dotenv_values
+
+            raw_env = dotenv_values(env_path)
+            for k, v in raw_env.items():
+                if k and v:
+                    clean_k = k.strip("\"' ")
+                    clean_v = v.strip("\"' ")
+                    env_vars[clean_k] = clean_v
+        except ImportError:
+            for line in env_path.read_text(encoding="utf-8").splitlines():
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                k, v = line.split("=", 1)
                 clean_k = k.strip("\"' ")
                 clean_v = v.strip("\"' ")
-                env_vars[clean_k] = clean_v
+                if clean_k and clean_v:
+                    env_vars[clean_k] = clean_v
 
     # Fall back to os.environ if not in .env file
-    for key in ["SPOTIFY_CLIENT_ID", "SPOTIFY_CLIENT_SECRET", "SPOTIFY_SP_DC"]:
+    for key in [
+        "SPOTIFY_CLIENT_ID",
+        "SPOTIFY_CLIENT_SECRET",
+        "SPOTIFY_SP_DC",
+        "DEEPL_API_KEY",
+    ]:
         if key not in env_vars and key in os.environ:
             env_vars[key] = os.environ[key]
 
@@ -46,7 +123,13 @@ def load_credentials() -> dict[str, str]:
 class SpotifyAPIClient:
     """Handles interaction with official Spotify Web API."""
 
-    def __init__(self, client_id: str, client_secret: str):
+    def __init__(self, client_id: str, client_secret: str) -> None:
+        """Initializes API client and fetches access token.
+
+        Args:
+            client_id: Spotify Developer Application Client ID.
+            client_secret: Spotify Developer Application Client Secret.
+        """
         self.client_id = client_id
         self.client_secret = client_secret
         self.access_token = self._get_access_token()
@@ -72,23 +155,58 @@ class SpotifyAPIClient:
         return response.json()["access_token"]
 
     def get_show_info(self, show_id: str) -> dict[str, Any]:
-        """Gets show metadata."""
+        """Gets show metadata.
+
+        Args:
+            show_id: Spotify Show ID.
+
+        Returns:
+            Dictionary containing show details.
+        """
         headers = {"Authorization": f"Bearer {self.access_token}"}
         url = f"https://api.spotify.com/v1/shows/{show_id}?market=US"
         resp = requests.get(url, headers=headers, timeout=10)
         resp.raise_for_status()
         return resp.json()
 
-    def get_all_episodes(self, show_id: str, limit: int | None) -> list[dict[str, Any]]:
-        """Paginates through all episodes of a show."""
+    def get_episode_info(self, episode_id: str) -> dict[str, Any]:
+        """Gets episode metadata.
+
+        Args:
+            episode_id: Spotify Episode ID.
+
+        Returns:
+            Dictionary containing episode details.
+        """
         headers = {"Authorization": f"Bearer {self.access_token}"}
-        episodes = []
+        url = f"https://api.spotify.com/v1/episodes/{episode_id}?market=US"
+        resp = requests.get(url, headers=headers, timeout=10)
+        resp.raise_for_status()
+        return resp.json()
+
+    def get_all_episodes(
+        self, show_id: str, limit: int | None = None
+    ) -> list[dict[str, Any]]:
+        """Paginates through all episodes of a show.
+
+        Args:
+            show_id: Spotify Show ID.
+            limit: Maximum number of episodes to fetch.
+
+        Returns:
+            List of episode dictionaries.
+        """
+        headers = {"Authorization": f"Bearer {self.access_token}"}
+        episodes: list[dict[str, Any]] = []
         offset = 0
         batch_size = 50
 
         print(f"Fetching episode catalogue for show '{show_id}' via Web API...")
         while True:
-            url = f"https://api.spotify.com/v1/shows/{show_id}/episodes?limit={batch_size}&offset={offset}&market=US"
+            url = (
+                f"https://api.spotify.com/v1/shows/{show_id}/episodes"
+                f"?limit={batch_size}&offset={offset}&market=US"
+            )
             resp = requests.get(url, headers=headers, timeout=10)
             resp.raise_for_status()
             data = resp.json()
@@ -111,7 +229,14 @@ class SpotifyAPIClient:
 
 
 def format_ms(ms: int) -> str:
-    """Formats milliseconds into [MM:SS] or [HH:MM:SS]."""
+    """Formats milliseconds into [MM:SS] or [HH:MM:SS].
+
+    Args:
+        ms: Duration in milliseconds.
+
+    Returns:
+        Formatted string representation of the duration.
+    """
     td = timedelta(milliseconds=ms)
     total_seconds = int(td.total_seconds())
     hours = total_seconds // 3600
@@ -125,15 +250,20 @@ def format_ms(ms: int) -> str:
 def format_transcript_paragraphs(
     lines: list[dict[str, Any]], paragraph_interval_ms: int = 45000
 ) -> str:
-    """
-    Groups time-synced transcript lines into structured, readable paragraphs
-    with timestamps every ~45 seconds.
+    """Groups time-synced transcript lines into structured, readable paragraphs.
+
+    Args:
+        lines: List of transcript lines containing start_ms and text.
+        paragraph_interval_ms: Millisecond interval between paragraph markers.
+
+    Returns:
+        Formatted transcript text with timestamps.
     """
     if not lines:
         return "*Spoken transcript not available via Spotify for this episode.*"
 
-    paragraphs = []
-    current_para = []
+    paragraphs: list[str] = []
+    current_para: list[str] = []
     current_start_ms = 0
 
     for line in lines:
@@ -161,9 +291,13 @@ def format_transcript_paragraphs(
 
 
 def scan_existing_downloads(output_dir: Path) -> set[str]:
-    """
-    Scans the target directory and extracts existing Spotify episode IDs and URLs
-    to prevent redundant downloads.
+    """Scans target directory to index existing Spotify episode IDs and URLs.
+
+    Args:
+        output_dir: Directory to scan for existing markdown files.
+
+    Returns:
+        Set of existing episode IDs and stems to prevent redundant downloads.
     """
     existing_identifiers: set[str] = set()
     if not output_dir.exists():
@@ -172,14 +306,11 @@ def scan_existing_downloads(output_dir: Path) -> set[str]:
     for file_path in output_dir.glob("*.md"):
         if file_path.stat().st_size < 50:
             continue
-        # Add filename base
         existing_identifiers.add(file_path.stem.lower())
 
-        # Read header to find spotify_url or episode ID
         try:
             with open(file_path, encoding="utf-8") as f:
                 head = f.read(1500)
-                # Match spotify URL e.g. https://open.spotify.com/episode/<id>
                 match = re.search(r"open\.spotify\.com/episode/([a-zA-Z0-9]+)", head)
                 if match:
                     existing_identifiers.add(match.group(1))
@@ -192,9 +323,20 @@ def scan_existing_downloads(output_dir: Path) -> set[str]:
 def generate_markdown(
     episode_info: dict[str, Any],
     transcript_lines: list[dict[str, Any]] | None,
-    show_name: str = "Empirical Cycling Podcast",
+    show_name: str = "Podcast",
+    author: str = "",
 ) -> str:
-    """Generates a complete, structured Markdown document."""
+    """Generates a complete, structured Markdown document.
+
+    Args:
+        episode_info: Episode metadata dictionary from Spotify.
+        transcript_lines: Optional list of timestamped transcript segments.
+        show_name: Name of the podcast show.
+        author: Author or publisher name.
+
+    Returns:
+        Formatted markdown string with YAML frontmatter conforming to taxonomy.
+    """
     title = episode_info.get("name", "Untitled Episode").strip()
     release_date = episode_info.get("release_date", "")
     duration_ms = episode_info.get("duration_ms", 0)
@@ -203,7 +345,14 @@ def generate_markdown(
     desc = episode_info.get("description", "").strip()
 
     clean_desc = re.sub(r"\s+", " ", desc).replace('"', "'")
-    summary = clean_desc[:200] + ("..." if len(clean_desc) > 200 else "")
+    summary = clean_desc
+
+    author_val = author.strip()
+    if not author_val:
+        if "empirical cycling" in show_name.lower():
+            author_val = "Kolie Moore"
+        else:
+            author_val = episode_info.get("show", {}).get("publisher", "") or "Unknown"
 
     transcript_content = (
         format_transcript_paragraphs(transcript_lines)
@@ -213,10 +362,10 @@ def generate_markdown(
 
     md = f"""---
 title: "{title.replace('"', "'")}"
-category: NaN
-topics: NaN
+category: []
+topics: []
 source: "{show_name}"
-author: "Kolie Moore"
+author: "{author_val}"
 date: "{release_date}"
 spotify_url: "{spotify_url}"
 duration: "{duration_str}"
@@ -245,19 +394,22 @@ summary: "{summary}"
     return md
 
 
-def main():
+def main() -> None:
+    """Main CLI entrypoint for the Spotify transcript scraper."""
     parser = argparse.ArgumentParser(
-        description="Spotify Podcast Transcript Scraper (Markdown Only)"
+        description="Spotify Podcast Transcript Scraper (Markdown Generator)"
     )
     parser.add_argument(
         "--show-id",
-        default=DEFAULT_SHOW_ID,
-        help=f"Spotify Show ID (default: Empirical Cycling: {DEFAULT_SHOW_ID})",
+        "-s",
+        default=None,
+        help="Spotify Show ID or URL (e.g. https://open.spotify.com/show/5IHj4utnRlTNcCCoxyinkx)",
     )
     parser.add_argument(
         "--episode-id",
+        "-e",
         default=None,
-        help="Specific Spotify Episode ID (optional)",
+        help="Specific Spotify Episode ID or URL (optional)",
     )
     parser.add_argument(
         "--limit",
@@ -267,8 +419,28 @@ def main():
     )
     parser.add_argument(
         "--output-dir",
-        default="Knowledge_base/Episodes/Empirical_cycling_podcast/raw_transcripts",
-        help="Output directory for saved markdown files",
+        "-o",
+        default=None,
+        help=(
+            "Output directory for saved markdown files "
+            "(default: Knowledge_base/WIP/<show_name>/raw_transcripts)"
+        ),
+    )
+    parser.add_argument(
+        "--translate-local",
+        action="store_true",
+        help=(
+            "Translate downloaded markdown to English using local "
+            "Apple Silicon MLX model"
+        ),
+    )
+    parser.add_argument(
+        "--local-model",
+        default="mlx-community/Qwen2.5-7B-Instruct-4bit",
+        help=(
+            "Model ID for local MLX translation "
+            "(default: mlx-community/Qwen2.5-7B-Instruct-4bit)"
+        ),
     )
     parser.add_argument(
         "--force",
@@ -282,6 +454,12 @@ def main():
     )
 
     args = parser.parse_args()
+
+    if not args.show_id and not args.episode_id:
+        parser.error(
+            "Please provide a Spotify Show ID/URL via --show-id / -s "
+            "or a specific Episode ID/URL via --episode-id / -e."
+        )
 
     # Load credentials
     credentials = load_credentials()
@@ -302,12 +480,61 @@ def main():
 
     # Initialize Web API
     api = SpotifyAPIClient(client_id, client_secret)
-    show_info = api.get_show_info(args.show_id)
-    show_name = show_info.get("name", "Podcast")
-    total_episodes = show_info.get("total_episodes", "Unknown")
-    print(f"Target Show: {show_name} (Total episodes: {total_episodes})")
 
-    output_path = Path(args.output_dir)
+    show_id: str | None = None
+    show_name = "Podcast"
+    show_publisher = ""
+
+    if args.show_id:
+        try:
+            show_id = extract_spotify_id(args.show_id, expected_type="show")
+        except ValueError as exc:
+            print(f"Error parsing show identifier: {exc}")
+            sys.exit(1)
+
+        show_info = api.get_show_info(show_id)
+        show_name = show_info.get("name", "Podcast")
+        show_publisher = show_info.get("publisher", "")
+        total_episodes = show_info.get("total_episodes", "Unknown")
+        print(f"Target Show: {show_name} (Total episodes: {total_episodes})")
+
+    # Fetch episodes
+    episodes: list[dict[str, Any]] = []
+    if args.episode_id:
+        try:
+            episode_id = extract_spotify_id(args.episode_id, expected_type="episode")
+        except ValueError as exc:
+            print(f"Error parsing episode identifier: {exc}")
+            sys.exit(1)
+
+        ep = api.get_episode_info(episode_id)
+        episodes = [ep]
+        if not args.show_id:
+            show_obj = ep.get("show", {})
+            show_name = show_obj.get("name", show_name)
+            show_publisher = show_obj.get("publisher", show_publisher)
+    elif show_id:
+        limit_val = args.limit if args.limit > 0 else None
+        episodes = api.get_all_episodes(show_id, limit=limit_val)
+
+    # Determine default output directory under Knowledge_base/WIP/
+    if args.output_dir:
+        output_path = Path(args.output_dir)
+    else:
+        show_slug = re.sub(r"[^\w\-]+", "_", show_name).strip("_")
+        base_wip_dir = Path("Knowledge_base/WIP")
+        matched_dir = None
+        if base_wip_dir.exists():
+            for child in base_wip_dir.iterdir():
+                if child.is_dir() and child.name.lower() == show_slug.lower():
+                    matched_dir = child / "raw_transcripts"
+                    break
+        output_path = (
+            matched_dir
+            if matched_dir
+            else (base_wip_dir / show_slug / "raw_transcripts")
+        )
+
     output_path.mkdir(parents=True, exist_ok=True)
 
     # Scan existing downloads for duplicate prevention
@@ -327,22 +554,20 @@ def main():
             print(
                 "Successfully initialized Spotify Scraper client with session cookie."
             )
+        except ImportError:
+            print(
+                "Info: 'spotify_scraper' package not installed; "
+                "generating metadata and show notes only."
+            )
         except (requests.RequestException, OSError, ValueError, RuntimeError) as e:
             print(f"Warning: Failed to initialize SpotifyClient scraper ({e}).")
 
-    # Fetch episodes
-    episodes = []
-    if args.episode_id:
-        headers = {"Authorization": f"Bearer {api.access_token}"}
-        r = requests.get(
-            f"https://api.spotify.com/v1/episodes/{args.episode_id}?market=US",
-            headers=headers,
-        )
-        r.raise_for_status()
-        episodes = [r.json()]
-    else:
-        limit_val = args.limit if args.limit > 0 else None
-        episodes = api.get_all_episodes(args.show_id, limit=limit_val)
+    # Initialize local translator if requested
+    local_translator = None
+    if args.translate_local:
+        from main.utils.translator import LocalMLXTranslator
+
+        local_translator = LocalMLXTranslator(model_id=args.local_model)
 
     print(f"\nProcessing {len(episodes)} episode(s)...")
 
@@ -395,8 +620,22 @@ def main():
         else:
             no_transcript_count += 1
 
-        # Generate and save Markdown
-        md_content = generate_markdown(ep, transcript_lines, show_name)
+        # Generate Markdown
+        md_content = generate_markdown(
+            episode_info=ep,
+            transcript_lines=transcript_lines,
+            show_name=show_name,
+            author=show_publisher,
+        )
+
+        # Translate locally if requested
+        if local_translator:
+            print("  -> Translating into English via local Apple Silicon MLX GPU...")
+            md_content = local_translator.translate_markdown(
+                md_content, target_lang="en"
+            )
+
+        target_file.parent.mkdir(parents=True, exist_ok=True)
         target_file.write_text(md_content, encoding="utf-8")
         print(f"  Saved: {target_file.name}")
 

@@ -13,6 +13,7 @@ dependencies = [
     "mcp>=2.0.0",
     "pydantic>=2.0.0",
     "PyYAML>=6.0,<7",
+    "spotifyscraper>=3.9.2",
     "sqlite-vec>=0.1.9",
     "tqdm>=4.70.0",
 ]
@@ -39,6 +40,8 @@ dev = [
 [project.scripts]
 endurance-kb = "main.cli:main"
 endurance-kb-mcp = "main.mcp_server:main"
+spotify-transcript-scraper = "main.spotify_transcript_scraper:main"
+spotify-scraper = "main.spotify_transcript_scraper:main"
 
 [tool.setuptools.packages.find]
 include = ["main*"]
