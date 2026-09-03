@@ -18,6 +18,7 @@ from typing import Protocol
 
 import azure.ai.translation.text as azure_translation
 import deepl
+import requests
 from azure.core.credentials import AzureKeyCredential
 from azure.core.exceptions import AzureError, HttpResponseError
 
@@ -525,13 +526,72 @@ class AzureTranslator:
             character_count * 60 / self.characters_per_minute
         )
 
+    def _translate_rest(
+        self,
+        text: str,
+        target_lang: str = "en",
+        source_lang: str | None = None,
+    ) -> tuple[str, str]:
+        """Translates text via Azure Cognitive Services REST endpoint."""
+        headers = {
+            "Ocp-Apim-Subscription-Key": self.api_key,
+            "Content-Type": "application/json",
+        }
+        if self.region and self.region != "global":
+            headers["Ocp-Apim-Subscription-Region"] = self.region
+        params: dict[str, str] = {"to": target_lang}
+        if source_lang:
+            params["from"] = source_lang
+
+        endpoints = [
+            "https://api.cognitive.microsoft.com/translator/text/v3.0/translate",
+            "https://api.cognitive.microsofttranslator.com/translate?api-version=3.0",
+        ]
+        last_error = None
+        for ep in endpoints:
+            try:
+                resp = requests.post(
+                    ep,
+                    params=params,
+                    headers=headers,
+                    json=[{"Text": text}],
+                    timeout=30,
+                )
+                if resp.status_code == 200:
+                    data = resp.json()
+                    if data:
+                        first_item = data[0]
+                        detected = (
+                            first_item.get("detectedLanguage", {}).get("language")
+                            or source_lang
+                            or "unknown"
+                        )
+                        translations = first_item.get("translations", [])
+                        if translations:
+                            return str(translations[0].get("text", "")), str(detected)
+                elif resp.status_code == 429:
+                    raise TranslationRateLimitError(resp.text)
+                elif resp.status_code == 401:
+                    last_error = TranslationConfigurationError(resp.text)
+                elif resp.status_code == 403:
+                    raise TranslationLimitError(resp.text)
+                else:
+                    last_error = TranslationProviderError(
+                        f"Azure HTTP {resp.status_code}: {resp.text}"
+                    )
+            except requests.RequestException as exc:
+                last_error = TranslationProviderError(str(exc))
+        if last_error:
+            raise last_error
+        raise TranslationProviderError("Azure REST translation failed")
+
     def translate_text(
         self,
         text: str,
         target_lang: str = "en",
         source_lang: str | None = None,
     ) -> tuple[str, str]:
-        """Translates a text string via Azure Translator SDK.
+        """Translates a text string via Azure Translator SDK with REST fallback.
 
         Args:
             text: Text string to translate.
@@ -565,13 +625,27 @@ class AzureTranslator:
                     continue
                 if exc.status_code == 429:
                     raise TranslationRateLimitError(str(exc)) from exc
-                if exc.status_code == 401:
-                    raise TranslationConfigurationError(str(exc)) from exc
-                if exc.status_code == 403:
-                    raise TranslationLimitError(str(exc)) from exc
-                raise TranslationProviderError(str(exc)) from exc
+                try:
+                    return self._translate_rest(
+                        text, target_lang=target_lang, source_lang=source_lang
+                    )
+                except TranslationConfigurationError:
+                    if exc.status_code == 401:
+                        raise TranslationConfigurationError(str(exc)) from exc
+                    raise
+                except Exception:
+                    if exc.status_code == 401:
+                        raise TranslationConfigurationError(str(exc)) from exc
+                    if exc.status_code == 403:
+                        raise TranslationLimitError(str(exc)) from exc
+                    raise TranslationProviderError(str(exc)) from exc
             except AzureError as exc:
-                raise TranslationProviderError(str(exc)) from exc
+                try:
+                    return self._translate_rest(
+                        text, target_lang=target_lang, source_lang=source_lang
+                    )
+                except Exception:
+                    raise TranslationProviderError(str(exc)) from exc
         if not response:
             raise TranslationProviderError("Azure returned no response")
 
